@@ -52,3 +52,32 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+
+
+window.addEventListener("scroll", function(){
+
+    let navbar = document.getElementById("mainNav");
+
+    let logoWhite = document.getElementById("logoWhite");
+    let logoDark = document.getElementById("logoDark");
+
+    if(window.scrollY > 80){
+
+        navbar.classList.add("scrolled");
+
+        logoWhite.style.display="none";
+        logoDark.style.display="block";
+
+    }else{
+
+        navbar.classList.remove("scrolled");
+
+        logoWhite.style.display="block";
+        logoDark.style.display="none";
+
+    }
+
+});
+
+

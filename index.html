@@ -16,23 +16,135 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
+
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+                <!-- <a class="navbar-brand" href="#page-top">Start Bootstrap</a> -->
+
+                <a class="navbar-brand" href="#page-top">
+    <img src="assets/img/w-alpha.png" id="logoWhite" height="80">
+    <img src="assets/img/b-alpha.png" id="logoDark" height="80" style="display:none;">
+</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
-                    </ul>
+                   <ul class="navbar-nav ms-auto">
+
+    <li class="nav-item">
+        <a class="nav-link" href="#about">Home</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="#about">About</a>
+    </li>
+
+    <!-- Energy -->
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"
+           href="javascript:void(0);"
+           id="energyDropdown"
+           role="button"
+           data-bs-toggle="dropdown"
+           aria-expanded="false">
+            Energy
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="energyDropdown">
+            <li><a class="dropdown-item" href="solar.html">Solar Energy</a></li>
+            <li><a class="dropdown-item" href="wind.html">Wind Energy</a></li>
+            <li><a class="dropdown-item" href="hydro.html">Hydro Energy</a></li>
+            <li><a class="dropdown-item" href="battery.html">Battery Storage</a></li>
+            <li><a class="dropdown-item" href="green.html">Green Energy</a></li>
+        </ul>
+    </li>
+
+    <!-- Power -->
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"
+           href="javascript:void(0);"
+           id="powerDropdown"
+           role="button"
+           data-bs-toggle="dropdown"
+           aria-expanded="false">
+            Power
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="powerDropdown">
+            <li><a class="dropdown-item" href="#">Power Plants</a></li>
+            <li><a class="dropdown-item" href="#">Transmission</a></li>
+            <li><a class="dropdown-item" href="#">Distribution</a></li>
+            <li><a class="dropdown-item" href="#">Substations</a></li>
+            <li><a class="dropdown-item" href="#">Power Quality</a></li>
+        </ul>
+    </li>
+
+    <!-- Automation -->
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"
+           href="javascript:void(0);"
+           id="automationDropdown"
+           role="button"
+           data-bs-toggle="dropdown"
+           aria-expanded="false">
+            Automation
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="automationDropdown">
+            <li><a class="dropdown-item" href="#">PLC</a></li>
+            <li><a class="dropdown-item" href="#">SCADA</a></li>
+            <li><a class="dropdown-item" href="#">HMI</a></li>
+            <li><a class="dropdown-item" href="#">Industrial IoT</a></li>
+            <li><a class="dropdown-item" href="#">Robotics</a></li>
+        </ul>
+    </li>
+
+    <!-- R&D -->
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"
+           href="javascript:void(0);"
+           id="rdDropdown"
+           role="button"
+           data-bs-toggle="dropdown"
+           aria-expanded="false">
+            R & D
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="rdDropdown">
+            <li><a class="dropdown-item" href="#">Innovation</a></li>
+            <li><a class="dropdown-item" href="#">Research</a></li>
+            <li><a class="dropdown-item" href="#">Testing</a></li>
+            <li><a class="dropdown-item" href="#">Development</a></li>
+            <li><a class="dropdown-item" href="#">Prototypes</a></li>
+        </ul>
+    </li>
+
+    <!-- Products -->
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"
+           href="javascript:void(0);"
+           id="productsDropdown"
+           role="button"
+           data-bs-toggle="dropdown"
+           aria-expanded="false">
+            Products
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+            <li><a class="dropdown-item" href="#">Transformers</a></li>
+            <li><a class="dropdown-item" href="#">Panels</a></li>
+            <li><a class="dropdown-item" href="#">Switchgear</a></li>
+            <li><a class="dropdown-item" href="#">Controllers</a></li>
+            <li><a class="dropdown-item" href="#">Accessories</a></li>
+        </ul>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
+    </li>
+
+</ul>
                 </div>
             </div>
         </nav>
+
         <!-- Masthead-->
         <header class="masthead">
             <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
