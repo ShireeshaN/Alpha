@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Grayscale - Start Bootstrap Theme</title>
+        <title>Alpha</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -54,9 +54,8 @@
         <ul class="dropdown-menu" aria-labelledby="energyDropdown">
             <li><a class="dropdown-item" href="solar.html">Solar Energy</a></li>
             <li><a class="dropdown-item" href="wind.html">Wind Energy</a></li>
-            <li><a class="dropdown-item" href="hydro.html">Hydro Energy</a></li>
-            <li><a class="dropdown-item" href="battery.html">Battery Storage</a></li>
-            <li><a class="dropdown-item" href="green.html">Green Energy</a></li>
+            <li><a class="dropdown-item" href="hydro.html">Biomass Energy</a></li>
+            <li><a class="dropdown-item" href="battery.html">Hydel Energy</a></li>
         </ul>
     </li>
 
@@ -71,11 +70,11 @@
             Power
         </a>
         <ul class="dropdown-menu" aria-labelledby="powerDropdown">
-            <li><a class="dropdown-item" href="#">Power Plants</a></li>
+          
             <li><a class="dropdown-item" href="#">Transmission</a></li>
             <li><a class="dropdown-item" href="#">Distribution</a></li>
-            <li><a class="dropdown-item" href="#">Substations</a></li>
-            <li><a class="dropdown-item" href="#">Power Quality</a></li>
+            <li><a class="dropdown-item" href="#">Control Panels</a></li>
+            <li><a class="dropdown-item" href="#">Panel Boards</a></li>
         </ul>
     </li>
 
@@ -90,11 +89,11 @@
             Automation
         </a>
         <ul class="dropdown-menu" aria-labelledby="automationDropdown">
-            <li><a class="dropdown-item" href="#">PLC</a></li>
-            <li><a class="dropdown-item" href="#">SCADA</a></li>
-            <li><a class="dropdown-item" href="#">HMI</a></li>
-            <li><a class="dropdown-item" href="#">Industrial IoT</a></li>
-            <li><a class="dropdown-item" href="#">Robotics</a></li>
+            <li><a class="dropdown-item" href="#">Home</a></li>
+            <li><a class="dropdown-item" href="#">Commercial</a></li>
+            <li><a class="dropdown-item" href="#">Industrial</a></li>
+            <li><a class="dropdown-item" href="#">Hospital</a></li>
+            <li><a class="dropdown-item" href="#">Hotel</a></li>
         </ul>
     </li>
 
@@ -146,17 +145,75 @@
         </nav>
 
         <!-- Masthead-->
-        <header class="masthead">
-            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-                <div class="d-flex justify-content-center">
-                    <div class="text-center">
-                        <h1 class="mx-auto my-0 text-uppercase">Grayscale</h1>
-                        <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by Start Bootstrap.</h2>
-                        <a class="btn btn-primary" href="#about">Get Started</a>
-                    </div>
+     <header class="masthead">
+
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <img src="assets/img/energy/Energy-1.png" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                    <h1>Energy</h1>
+                    <h2>Renewable Energy Solutions</h2>
+                    <a class="btn btn-primary" href="#about">Read More</a>
                 </div>
             </div>
-        </header>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <img src="assets/img/energy/Energy-2.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                    <h1>Power</h1>
+                    <h2>Reliable Power Systems</h2>
+                    <a class="btn btn-primary" href="#about">Read More</a>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <img src="assets/img/energy/Energy-3.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                    <h1>Automation</h1>
+                    <h2>Industrial Automation</h2>
+                    <a class="btn btn-primary" href="#about">Read More</a>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+                <img src="assets/img/energy/Energy-4.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                    <h1>Innovation</h1>
+                    <h2>Research & Development</h2>
+                    <a class="btn btn-primary" href="#about">Read More</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Previous -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <!-- Next -->
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
+    </div>
+
+</header>
         <!-- About-->
         <section class="about-section text-center" id="about">
             <div class="container px-4 px-lg-5">
