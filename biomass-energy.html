@@ -1,0 +1,2560 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Biomass Energy | Energy Segment</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Inter",sans-serif;
+    background:#f4f7f5;
+    color:#183b2a;
+}
+
+.biomass-page{
+    width:100%;
+    overflow:hidden;
+    background:#fff;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header{
+    height:76px;
+    padding:0 7%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:#123c2a;
+    color:#fff;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.brand-icon{
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#83c96b;
+    color:#123c2a;
+
+    font-size:21px;
+    font-weight:800;
+}
+
+.brand h3{
+    font-size:17px;
+    letter-spacing:1px;
+}
+
+.brand span{
+    display:block;
+    margin-top:3px;
+
+    color:#c8d9cf;
+
+    font-size:9px;
+    letter-spacing:1.5px;
+}
+
+.page-no{
+    color:#c8d9cf;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:1.5px;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero{
+    min-height:620px;
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(12,52,36,.96) 0%,
+            rgba(12,52,36,.82) 38%,
+            rgba(12,52,36,.18) 100%
+        ),
+        url("images/biomass-hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    width:65%;
+    padding-left:8%;
+    color:#fff;
+}
+
+.eyebrow{
+    display:inline-block;
+
+    padding:8px 15px;
+    margin-bottom:21px;
+
+    border-left:4px solid #83c96b;
+
+    background:rgba(255,255,255,.08);
+
+    color:#e1ece5;
+
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+.hero h1{
+    font-size:clamp(44px,6vw,76px);
+    line-height:1.02;
+
+    text-transform:uppercase;
+
+    margin-bottom:23px;
+}
+
+.hero h1 span{
+    color:#83c96b;
+}
+
+.hero p{
+    max-width:630px;
+
+    color:#d8e5dd;
+
+    font-size:14px;
+    line-height:1.9;
+
+    margin-bottom:30px;
+}
+
+.hero-btn{
+    display:inline-block;
+
+    padding:14px 24px;
+
+    background:#83c96b;
+    color:#123c2a;
+
+    text-decoration:none;
+
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:1px;
+
+    border-radius:3px;
+
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-3px);
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.stats{
+    position:relative;
+
+    margin:-52px 7% 0;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    background:#fff;
+
+    box-shadow:0 15px 40px rgba(18,60,42,.13);
+
+    z-index:3;
+}
+
+.stat{
+    min-height:120px;
+
+    padding:22px;
+
+    display:flex;
+    align-items:center;
+
+    gap:15px;
+
+    border-right:1px solid #e1e9e4;
+}
+
+.stat:last-child{
+    border-right:none;
+}
+
+.stat-icon{
+    width:46px;
+    height:46px;
+
+    flex-shrink:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#edf7e9;
+    color:#4e9b3c;
+
+    font-size:19px;
+}
+
+.stat h4{
+    color:#183b2a;
+    font-size:11px;
+    margin-bottom:5px;
+}
+
+.stat p{
+    color:#74877c;
+    font-size:9px;
+    line-height:1.5;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro{
+    padding:95px 8% 80px;
+
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+
+    gap:75px;
+}
+
+.label{
+    color:#4e9b3c;
+
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:10px;
+}
+
+.title{
+    color:#123c2a;
+
+    font-size:35px;
+    line-height:1.2;
+
+    margin-bottom:18px;
+}
+
+.line{
+    width:50px;
+    height:4px;
+
+    background:#83c96b;
+
+    margin-bottom:23px;
+}
+
+.text{
+    color:#687d71;
+
+    font-size:12px;
+    line-height:1.9;
+}
+
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.services{
+    padding:85px 8%;
+    background:#f3f7f4;
+}
+
+.section-head{
+    max-width:730px;
+
+    margin:0 auto 48px;
+
+    text-align:center;
+}
+
+.section-head .line{
+    margin:0 auto 22px;
+}
+
+.section-head p{
+    color:#6d7e74;
+
+    font-size:12px;
+    line-height:1.8;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.service-card{
+    min-height:250px;
+
+    padding:30px;
+
+    position:relative;
+
+    background:#fff;
+
+    border:1px solid #e0e9e3;
+
+    overflow:hidden;
+
+    transition:.3s;
+}
+
+.service-card::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:#83c96b;
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.3s;
+}
+
+.service-card:hover{
+    background:#123c2a;
+
+    transform:translateY(-7px);
+
+    box-shadow:0 17px 35px rgba(18,60,42,.15);
+}
+
+.service-card:hover::before{
+    transform:scaleX(1);
+}
+
+.service-icon{
+    width:50px;
+    height:50px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:20px;
+
+    border-radius:7px;
+
+    background:#123c2a;
+    color:#83c96b;
+
+    font-size:19px;
+}
+
+.service-card:hover .service-icon{
+    background:#83c96b;
+    color:#123c2a;
+}
+
+.service-card h3{
+    color:#183b2a;
+
+    font-size:14px;
+
+    margin-bottom:11px;
+}
+
+.service-card p{
+    color:#718278;
+
+    font-size:10px;
+    line-height:1.75;
+}
+
+.service-card:hover h3{
+    color:#fff;
+}
+
+.service-card:hover p{
+    color:#cadbd1;
+}
+
+
+/* =========================================
+   BIOMASS TYPES
+========================================= */
+
+.biomass-types{
+    padding:90px 8%;
+    background:#fff;
+}
+
+.biomass-layout{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+.biomass-image{
+    min-height:460px;
+
+    position:relative;
+
+    background:
+        linear-gradient(
+            rgba(18,60,42,.08),
+            rgba(18,60,42,.08)
+        ),
+        url("images/biomass-plant.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.image-badge{
+    position:absolute;
+
+    left:25px;
+    bottom:25px;
+
+    padding:16px 20px;
+
+    background:#123c2a;
+
+    border-left:4px solid #83c96b;
+
+    color:#fff;
+}
+
+.image-badge strong{
+    display:block;
+
+    color:#83c96b;
+
+    font-size:12px;
+
+    margin-bottom:4px;
+}
+
+.image-badge span{
+    color:#c9d8cf;
+    font-size:9px;
+}
+
+.biomass-content p{
+    color:#687d71;
+
+    font-size:12px;
+    line-height:1.9;
+
+    margin-bottom:25px;
+}
+
+.biomass-list{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:11px;
+}
+
+.biomass-item{
+    padding:15px;
+
+    background:#f4f7f5;
+
+    border-left:3px solid #83c96b;
+
+    color:#2b4939;
+
+    font-size:10px;
+    font-weight:600;
+}
+
+
+/* =========================================
+   BIOMASS FEEDSTOCK
+========================================= */
+
+.feedstock{
+    padding:85px 8%;
+    background:#123c2a;
+    color:#fff;
+}
+
+.feedstock-head{
+    max-width:700px;
+    margin-bottom:48px;
+}
+
+.feedstock-head .label{
+    color:#83c96b;
+}
+
+.feedstock-head .title{
+    color:#fff;
+}
+
+.feedstock-head p{
+    color:#c8d8ce;
+
+    font-size:12px;
+    line-height:1.8;
+}
+
+.feedstock-grid{
+    display:grid;
+
+    grid-template-columns:repeat(6,1fr);
+
+    gap:10px;
+}
+
+.feedstock-card{
+    min-height:185px;
+
+    padding:24px 14px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.13);
+
+    background:rgba(255,255,255,.04);
+
+    transition:.3s;
+}
+
+.feedstock-card:hover{
+    transform:translateY(-6px);
+
+    background:rgba(255,255,255,.09);
+}
+
+.feedstock-icon{
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin:0 auto 17px;
+
+    border-radius:50%;
+
+    background:#83c96b;
+
+    color:#123c2a;
+
+    font-size:12px;
+    font-weight:800;
+}
+
+.feedstock-card h4{
+    font-size:10px;
+    margin-bottom:9px;
+}
+
+.feedstock-card p{
+    color:#b9cbbf;
+
+    font-size:9px;
+    line-height:1.6;
+}
+
+
+/* =========================================
+   ENERGY CONVERSION
+========================================= */
+
+.conversion{
+    padding:85px 8%;
+    background:#f3f7f4;
+}
+
+.conversion-grid{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:15px;
+
+    margin-top:42px;
+}
+
+.conversion-card{
+    min-height:205px;
+
+    padding:25px 20px;
+
+    background:#fff;
+
+    border:1px solid #e1e9e3;
+
+    position:relative;
+
+    transition:.3s;
+}
+
+.conversion-card:hover{
+    transform:translateY(-6px);
+
+    border-color:#83c96b;
+
+    box-shadow:0 12px 25px rgba(18,60,42,.09);
+}
+
+.conversion-number{
+    position:absolute;
+
+    top:14px;
+    right:17px;
+
+    color:#e0e9e3;
+
+    font-size:22px;
+    font-weight:800;
+}
+
+.conversion-card h4{
+    color:#183b2a;
+
+    font-size:12px;
+
+    margin-bottom:9px;
+}
+
+.conversion-card p{
+    color:#718278;
+
+    font-size:10px;
+
+    line-height:1.7;
+}
+
+
+/* =========================================
+   TECHNICAL CAPABILITIES
+========================================= */
+
+.capabilities{
+    padding:85px 8%;
+    background:#fff;
+}
+
+.capability-layout{
+    display:grid;
+
+    grid-template-columns:.9fr 1.1fr;
+
+    gap:75px;
+
+    align-items:center;
+}
+
+.capability-text p{
+    color:#687d71;
+
+    font-size:12px;
+    line-height:1.9;
+}
+
+.capability-list{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+}
+
+.capability{
+    padding:18px;
+
+    background:#f5f8f6;
+
+    border:1px solid #e2e9e4;
+}
+
+.capability strong{
+    display:block;
+
+    color:#183b2a;
+
+    font-size:11px;
+
+    margin-bottom:6px;
+}
+
+.capability span{
+    color:#76877d;
+
+    font-size:9px;
+
+    line-height:1.5;
+}
+
+
+/* =========================================
+   PROCESS
+========================================= */
+
+.process{
+    padding:85px 8%;
+
+    background:#f3f7f4;
+}
+
+.process-grid{
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:14px;
+
+    margin-top:42px;
+}
+
+.process-card{
+    min-height:210px;
+
+    padding:25px 18px;
+
+    background:#fff;
+
+    border-top:3px solid #83c96b;
+
+    transition:.3s;
+}
+
+.process-card:hover{
+    transform:translateY(-6px);
+
+    box-shadow:0 12px 27px rgba(18,60,42,.09);
+}
+
+.process-no{
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:18px;
+
+    border-radius:50%;
+
+    background:#123c2a;
+    color:#83c96b;
+
+    font-size:11px;
+    font-weight:800;
+}
+
+.process-card h4{
+    color:#183b2a;
+
+    font-size:11px;
+
+    margin-bottom:8px;
+}
+
+.process-card p{
+    color:#718278;
+
+    font-size:9px;
+
+    line-height:1.65;
+}
+
+
+/* =========================================
+   O&M
+========================================= */
+
+.om{
+    padding:85px 8%;
+    background:#fff;
+}
+
+.om-grid{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:16px;
+
+    margin-top:42px;
+}
+
+.om-card{
+    padding:25px 20px;
+
+    background:#f5f8f6;
+
+    border-left:3px solid #83c96b;
+
+    transition:.3s;
+}
+
+.om-card:hover{
+    transform:translateY(-6px);
+
+    box-shadow:0 12px 27px rgba(18,60,42,.09);
+}
+
+.om-card span{
+    display:block;
+
+    color:#4e9b3c;
+
+    font-size:21px;
+    font-weight:800;
+
+    margin-bottom:12px;
+}
+
+.om-card h4{
+    color:#183b2a;
+
+    font-size:12px;
+
+    margin-bottom:7px;
+}
+
+.om-card p{
+    color:#718278;
+
+    font-size:10px;
+
+    line-height:1.65;
+}
+
+
+/* =========================================
+   APPLICATIONS
+========================================= */
+
+.applications{
+    padding:85px 8%;
+    background:#f3f7f4;
+}
+
+.application-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:13px;
+
+    margin-top:40px;
+}
+
+.application{
+    padding:21px;
+
+    background:#fff;
+
+    border:1px solid #e1e9e3;
+
+    transition:.3s;
+}
+
+.application:hover{
+    border-color:#83c96b;
+
+    transform:translateX(5px);
+}
+
+.application strong{
+    display:block;
+
+    color:#183b2a;
+
+    font-size:11px;
+
+    margin-bottom:6px;
+}
+
+.application span{
+    color:#76877d;
+
+    font-size:9px;
+
+    line-height:1.5;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.cta{
+    margin:60px 8%;
+
+    min-height:245px;
+
+    display:grid;
+
+    grid-template-columns:1.2fr .8fr;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(18,60,42,1),
+            rgba(18,60,42,.72)
+        ),
+        url("images/biomass-cta.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.cta-content{
+    padding:45px;
+    color:#fff;
+}
+
+.cta-content h2{
+    font-size:27px;
+    margin-bottom:13px;
+}
+
+.cta-content p{
+    max-width:600px;
+
+    color:#cadbd1;
+
+    font-size:11px;
+    line-height:1.8;
+}
+
+.cta-side{
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-left:1px solid rgba(255,255,255,.13);
+}
+
+.cta-side strong{
+    display:block;
+
+    color:#83c96b;
+
+    font-size:18px;
+
+    margin-bottom:7px;
+}
+
+.cta-side span{
+    color:#fff;
+
+    font-size:9px;
+
+    letter-spacing:1.4px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer{
+    min-height:58px;
+
+    padding:0 8%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    background:#0b2b1e;
+
+    color:#b9c9bf;
+
+    font-size:9px;
+
+    letter-spacing:1px;
+}
+
+.footer strong{
+    color:#83c96b;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:1050px){
+
+    .conversion-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .om-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .process-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media(max-width:800px){
+
+    .hero-content{
+        width:90%;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .intro,
+    .biomass-layout,
+    .capability-layout{
+        grid-template-columns:1fr;
+    }
+
+    .cta{
+        grid-template-columns:1fr;
+    }
+
+    .cta-side{
+        min-height:120px;
+
+        border-left:none;
+
+        border-top:1px solid rgba(255,255,255,.13);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .header{
+        padding:0 5%;
+    }
+
+    .page-no{
+        display:none;
+    }
+
+    .hero{
+        min-height:540px;
+    }
+
+    .hero-content{
+        width:94%;
+        padding-left:6%;
+    }
+
+    .stats{
+        margin:0;
+        grid-template-columns:1fr;
+    }
+
+    .stat{
+        border-right:none;
+        border-bottom:1px solid #e4eae5;
+    }
+
+    .intro,
+    .services,
+    .biomass-types,
+    .feedstock,
+    .conversion,
+    .capabilities,
+    .process,
+    .om,
+    .applications{
+        padding-left:6%;
+        padding-right:6%;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .biomass-list,
+    .capability-list,
+    .application-grid{
+        grid-template-columns:1fr;
+    }
+
+    .feedstock-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .conversion-grid,
+    .om-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .cta{
+        margin:40px 6%;
+    }
+
+    .footer{
+        padding:15px 6%;
+
+        flex-direction:column;
+
+        gap:8px;
+
+        justify-content:center;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="biomass-page">
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="header">
+
+    <div class="brand">
+
+        <div class="brand-icon">
+            ♻
+        </div>
+
+        <div>
+
+            <h3>ENERGY SEGMENT</h3>
+
+            <span>
+                CLEAN ENERGY • SMARTER FUTURE
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="page-no">
+        ENERGY SOLUTIONS / 03
+    </div>
+
+</header>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            Renewable & Sustainable Energy
+        </div>
+
+        <h1>
+            Biomass
+            <br>
+            <span>Energy</span>
+        </h1>
+
+        <p>
+
+            Converting agricultural residues, organic waste
+            and renewable biomass resources into reliable,
+            sustainable and value-driven energy solutions.
+
+        </p>
+
+        <a href="#services" class="hero-btn">
+            EXPLORE BIOMASS SOLUTIONS →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     STATS
+========================================= -->
+
+<section class="stats">
+
+
+    <div class="stat">
+
+        <div class="stat-icon">
+            ♻
+        </div>
+
+        <div>
+
+            <h4>
+                Renewable Feedstock
+            </h4>
+
+            <p>
+                Utilizing sustainable organic biomass resources.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="stat">
+
+        <div class="stat-icon">
+            ⚡
+        </div>
+
+        <div>
+
+            <h4>
+                Power Generation
+            </h4>
+
+            <p>
+                Converting biomass into useful electrical energy.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="stat">
+
+        <div class="stat-icon">
+            ◉
+        </div>
+
+        <div>
+
+            <h4>
+                Waste To Energy
+            </h4>
+
+            <p>
+                Creating energy value from organic residues.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="stat">
+
+        <div class="stat-icon">
+            ✓
+        </div>
+
+        <div>
+
+            <h4>
+                Sustainable Operations
+            </h4>
+
+            <p>
+                Supporting cleaner and circular energy systems.
+            </p>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================================
+     INTRO
+========================================= -->
+
+<section class="intro">
+
+
+    <div>
+
+        <div class="label">
+            Biomass Energy Generation
+        </div>
+
+        <h2 class="title">
+
+            Turning Organic
+            <br>
+            Resources Into Energy
+
+        </h2>
+
+        <div class="line"></div>
+
+        <p class="text">
+
+            Biomass energy uses renewable organic materials
+            as a fuel source to produce electricity, heat or
+            other useful forms of energy.
+
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <div class="label">
+            Our Approach
+        </div>
+
+        <h2 class="title">
+            Sustainable Energy From Local Resources
+        </h2>
+
+        <div class="line"></div>
+
+        <p class="text">
+
+            Our biomass energy solutions focus on efficient
+            feedstock utilization, energy conversion,
+            electrical integration and reliable plant
+            operations.
+
+            <br><br>
+
+            We support projects designed to convert
+            agricultural residues, forestry waste and other
+            suitable biomass resources into dependable
+            renewable energy.
+
+        </p>
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================================
+     SERVICES
+========================================= -->
+
+<section class="services" id="services">
+
+
+    <div class="section-head">
+
+        <div class="label">
+            Our Biomass Energy Services
+        </div>
+
+        <h2 class="title">
+            Integrated Biomass Energy Solutions
+        </h2>
+
+        <div class="line"></div>
+
+        <p>
+
+            From biomass resource evaluation to energy
+            conversion, plant installation and operational
+            support, we provide complete project solutions.
+
+        </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                ♻
+            </div>
+
+            <h3>
+                Biomass Resource Assessment
+            </h3>
+
+            <p>
+
+                Evaluation of biomass availability, quality,
+                quantity and suitability for energy generation.
+
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                ◉
+            </div>
+
+            <h3>
+                Biomass Plant Development
+            </h3>
+
+            <p>
+
+                Project planning, process selection,
+                infrastructure planning and development
+                support.
+
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                ⚙
+            </div>
+
+            <h3>
+                Biomass Handling Systems
+            </h3>
+
+            <p>
+
+                Fuel receiving, storage, conveying and
+                feeding systems for continuous plant operation.
+
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🔥
+            </div>
+
+            <h3>
+                Energy Conversion
+            </h3>
+
+            <p>
+
+                Biomass combustion and thermal conversion
+                systems designed for efficient energy recovery.
+
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                ⚡
+            </div>
+
+            <h3>
+                Power Generation & Grid Integration
+            </h3>
+
+            <p>
+
+                Generator systems, transformers, switchgear
+                and electrical grid connectivity support.
+
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🛠
+            </div>
+
+            <h3>
+                Plant O&M Services
+            </h3>
+
+            <p>
+
+                Preventive maintenance, inspections,
+                troubleshooting and operational support.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     BIOMASS TYPES
+========================================= -->
+
+<section class="biomass-types">
+
+
+    <div class="biomass-layout">
+
+
+        <div class="biomass-image">
+
+            <div class="image-badge">
+
+                <strong>
+                    BIOMASS POWER GENERATION
+                </strong>
+
+                <span>
+                    RESOURCE • CONVERSION • GENERATION
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="biomass-content">
+
+            <div class="label">
+                Biomass Energy Capabilities
+            </div>
+
+            <h2 class="title">
+
+                Converting Biomass
+                <br>
+                Into Useful Energy
+
+            </h2>
+
+            <div class="line"></div>
+
+            <p>
+
+                Biomass can be sourced from a wide range of
+                renewable organic materials. Our solutions
+                support efficient collection, handling,
+                conversion and power generation.
+
+            </p>
+
+
+            <div class="biomass-list">
+
+                <div class="biomass-item">
+                    Agricultural Residues
+                </div>
+
+                <div class="biomass-item">
+                    Rice Husk & Straw
+                </div>
+
+                <div class="biomass-item">
+                    Bagasse
+                </div>
+
+                <div class="biomass-item">
+                    Wood & Forestry Residues
+                </div>
+
+                <div class="biomass-item">
+                    Organic Waste
+                </div>
+
+                <div class="biomass-item">
+                    Biomass Pellets
+                </div>
+
+                <div class="biomass-item">
+                    Biomass Briquettes
+                </div>
+
+                <div class="biomass-item">
+                    Energy Crops
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FEEDSTOCK
+========================================= -->
+
+<section class="feedstock">
+
+
+    <div class="feedstock-head">
+
+        <div class="label">
+            Biomass Feedstock
+        </div>
+
+        <h2 class="title">
+            Renewable Resources. Reliable Energy.
+        </h2>
+
+        <div class="line"></div>
+
+        <p>
+
+            Effective biomass projects begin with reliable
+            feedstock availability, appropriate fuel quality
+            and efficient resource management.
+
+        </p>
+
+    </div>
+
+
+    <div class="feedstock-grid">
+
+
+        <div class="feedstock-card">
+
+            <div class="feedstock-icon">
+                01
+            </div>
+
+            <h4>
+                Agricultural Waste
+            </h4>
+
+            <p>
+                Crop residues and agricultural by-products
+                suitable for energy recovery.
+            </p>
+
+        </div>
+
+
+        <div class="feedstock-card">
+
+            <div class="feedstock-icon">
+                02
+            </div>
+
+            <h4>
+                Rice Husk
+            </h4>
+
+            <p>
+                Rice processing residues utilized as
+                renewable biomass fuel.
+            </p>
+
+        </div>
+
+
+        <div class="feedstock-card">
+
+            <div class="feedstock-icon">
+                03
+            </div>
+
+            <h4>
+                Bagasse
+            </h4>
+
+            <p>
+                Sugar industry residue used for
+                cogeneration and power production.
+            </p>
+
+        </div>
+
+
+        <div class="feedstock-card">
+
+            <div class="feedstock-icon">
+                04
+            </div>
+
+            <h4>
+                Wood Residues
+            </h4>
+
+            <p>
+                Forestry and wood-processing residues
+                used as biomass fuel.
+            </p>
+
+        </div>
+
+
+        <div class="feedstock-card">
+
+            <div class="feedstock-icon">
+                05
+            </div>
+
+            <h4>
+                Pellets
+            </h4>
+
+            <p>
+                Densified biomass fuel for controlled
+                handling and combustion.
+            </p>
+
+        </div>
+
+
+        <div class="feedstock-card">
+
+            <div class="feedstock-icon">
+                06
+            </div>
+
+            <h4>
+                Briquettes
+            </h4>
+
+            <p>
+                Compressed biomass fuel designed for
+                convenient energy applications.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     ENERGY CONVERSION
+========================================= -->
+
+<section class="conversion">
+
+
+    <div class="section-head">
+
+        <div class="label">
+            Energy Conversion Process
+        </div>
+
+        <h2 class="title">
+            Biomass To Electricity
+        </h2>
+
+        <div class="line"></div>
+
+        <p>
+
+            A structured energy conversion process transforms
+            biomass feedstock into useful electrical power.
+
+        </p>
+
+    </div>
+
+
+    <div class="conversion-grid">
+
+
+        <div class="conversion-card">
+
+            <div class="conversion-number">
+                01
+            </div>
+
+            <h4>
+                Feedstock Collection
+            </h4>
+
+            <p>
+                Biomass materials are collected and prepared
+                for energy conversion.
+            </p>
+
+        </div>
+
+
+        <div class="conversion-card">
+
+            <div class="conversion-number">
+                02
+            </div>
+
+            <h4>
+                Storage & Handling
+            </h4>
+
+            <p>
+                Fuel is stored, conveyed and managed for
+                consistent plant operation.
+            </p>
+
+        </div>
+
+
+        <div class="conversion-card">
+
+            <div class="conversion-number">
+                03
+            </div>
+
+            <h4>
+                Thermal Conversion
+            </h4>
+
+            <p>
+                Biomass is converted through controlled
+                thermal processes to produce useful energy.
+            </p>
+
+        </div>
+
+
+        <div class="conversion-card">
+
+            <div class="conversion-number">
+                04
+            </div>
+
+            <h4>
+                Steam & Power
+            </h4>
+
+            <p>
+                Thermal energy can be used to generate steam
+                and drive electrical generation systems.
+            </p>
+
+        </div>
+
+
+        <div class="conversion-card">
+
+            <div class="conversion-number">
+                05
+            </div>
+
+            <h4>
+                Power Generation
+            </h4>
+
+            <p>
+                Turbine-generator systems convert mechanical
+                energy into electrical power.
+            </p>
+
+        </div>
+
+
+        <div class="conversion-card">
+
+            <div class="conversion-number">
+                06
+            </div>
+
+            <h4>
+                Electrical Integration
+            </h4>
+
+            <p>
+                Generated power is conditioned and integrated
+                into the required electrical network.
+            </p>
+
+        </div>
+
+
+        <div class="conversion-card">
+
+            <div class="conversion-number">
+                07
+            </div>
+
+            <h4>
+                Emission Management
+            </h4>
+
+            <p>
+                Appropriate environmental control systems
+                support responsible plant operation.
+            </p>
+
+        </div>
+
+
+        <div class="conversion-card">
+
+            <div class="conversion-number">
+                08
+            </div>
+
+            <h4>
+                Residue Management
+            </h4>
+
+            <p>
+                Ash and other process residues are handled
+                through appropriate management practices.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     TECHNICAL CAPABILITIES
+========================================= -->
+
+<section class="capabilities">
+
+
+    <div class="capability-layout">
+
+
+        <div class="capability-text">
+
+            <div class="label">
+                Technical Capabilities
+            </div>
+
+            <h2 class="title">
+
+                Engineering For
+                <br>
+                Efficient Biomass Power
+
+            </h2>
+
+            <div class="line"></div>
+
+            <p>
+
+                Our technical approach focuses on feedstock
+                utilization, thermal efficiency, electrical
+                reliability, environmental controls and
+                safe plant operations.
+
+            </p>
+
+        </div>
+
+
+        <div class="capability-list">
+
+
+            <div class="capability">
+
+                <strong>
+                    Feedstock Assessment
+                </strong>
+
+                <span>
+                    Evaluation of biomass availability,
+                    quality and fuel characteristics.
+                </span>
+
+            </div>
+
+
+            <div class="capability">
+
+                <strong>
+                    Fuel Handling Systems
+                </strong>
+
+                <span>
+                    Storage, conveying and controlled feeding
+                    systems.
+                </span>
+
+            </div>
+
+
+            <div class="capability">
+
+                <strong>
+                    Boiler & Thermal Systems
+                </strong>
+
+                <span>
+                    Thermal energy generation and process
+                    integration support.
+                </span>
+
+            </div>
+
+
+            <div class="capability">
+
+                <strong>
+                    Turbine Generator Systems
+                </strong>
+
+                <span>
+                    Mechanical-to-electrical energy conversion
+                    systems.
+                </span>
+
+            </div>
+
+
+            <div class="capability">
+
+                <strong>
+                    Electrical Systems
+                </strong>
+
+                <span>
+                    Transformers, switchgear, protection and
+                    grid integration.
+                </span>
+
+            </div>
+
+
+            <div class="capability">
+
+                <strong>
+                    Environmental Controls
+                </strong>
+
+                <span>
+                    Support for responsible emission and
+                    residue management systems.
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     PROJECT PROCESS
+========================================= -->
+
+<section class="process">
+
+
+    <div class="section-head">
+
+        <div class="label">
+            Project Execution
+        </div>
+
+        <h2 class="title">
+            From Biomass Resource To Energy
+        </h2>
+
+        <div class="line"></div>
+
+        <p>
+
+            A systematic project lifecycle ensures efficient
+            resource utilization and dependable power
+            generation.
+
+        </p>
+
+    </div>
+
+
+    <div class="process-grid">
+
+
+        <div class="process-card">
+
+            <div class="process-no">
+                01
+            </div>
+
+            <h4>
+                Resource Assessment
+            </h4>
+
+            <p>
+                Evaluate biomass availability, quality,
+                logistics and project feasibility.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-no">
+                02
+            </div>
+
+            <h4>
+                Plant Engineering
+            </h4>
+
+            <p>
+                Develop process, mechanical and electrical
+                engineering requirements.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-no">
+                03
+            </div>
+
+            <h4>
+                Equipment Installation
+            </h4>
+
+            <p>
+                Install biomass handling, thermal,
+                mechanical and electrical systems.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-no">
+                04
+            </div>
+
+            <h4>
+                Testing & Commissioning
+            </h4>
+
+            <p>
+                Test systems and verify safe and reliable
+                plant operation.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-no">
+                05
+            </div>
+
+            <h4>
+                O&M Support
+            </h4>
+
+            <p>
+                Provide ongoing maintenance and operational
+                performance support.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     O&M
+========================================= -->
+
+<section class="om">
+
+
+    <div class="section-head">
+
+        <div class="label">
+            Operation & Maintenance
+        </div>
+
+        <h2 class="title">
+            Keeping Biomass Plants Reliable
+        </h2>
+
+        <div class="line"></div>
+
+        <p>
+
+            Reliable operation requires regular inspection,
+            preventive maintenance and continuous monitoring
+            of critical plant systems.
+
+        </p>
+
+    </div>
+
+
+    <div class="om-grid">
+
+
+        <div class="om-card">
+
+            <span>
+                01
+            </span>
+
+            <h4>
+                Fuel Handling Inspection
+            </h4>
+
+            <p>
+                Inspection of storage, conveyors, feeders and
+                biomass handling systems.
+            </p>
+
+        </div>
+
+
+        <div class="om-card">
+
+            <span>
+                02
+            </span>
+
+            <h4>
+                Boiler & Thermal Maintenance
+            </h4>
+
+            <p>
+                Preventive maintenance of thermal and
+                combustion systems.
+            </p>
+
+        </div>
+
+
+        <div class="om-card">
+
+            <span>
+                03
+            </span>
+
+            <h4>
+                Electrical Maintenance
+            </h4>
+
+            <p>
+                Inspection and maintenance of generators,
+                transformers and switchgear.
+            </p>
+
+        </div>
+
+
+        <div class="om-card">
+
+            <span>
+                04
+            </span>
+
+            <h4>
+                Plant Performance Support
+            </h4>
+
+            <p>
+                Monitoring and troubleshooting to improve
+                availability and operating efficiency.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     APPLICATIONS
+========================================= -->
+
+<section class="applications">
+
+
+    <div class="section-head">
+
+        <div class="label">
+            Biomass Energy Applications
+        </div>
+
+        <h2 class="title">
+            Sustainable Energy Across Industries
+        </h2>
+
+        <div class="line"></div>
+
+    </div>
+
+
+    <div class="application-grid">
+
+
+        <div class="application">
+
+            <strong>
+                Sugar Industries
+            </strong>
+
+            <span>
+                Bagasse-based cogeneration and renewable
+                electricity generation.
+            </span>
+
+        </div>
+
+
+        <div class="application">
+
+            <strong>
+                Rice Processing Industries
+            </strong>
+
+            <span>
+                Energy generation using rice husk and
+                processing residues.
+            </span>
+
+        </div>
+
+
+        <div class="application">
+
+            <strong>
+                Food Processing
+            </strong>
+
+            <span>
+                Conversion of suitable organic residues into
+                useful energy.
+            </span>
+
+        </div>
+
+
+        <div class="application">
+
+            <strong>
+                Agro Industries
+            </strong>
+
+            <span>
+                Renewable power generation using agricultural
+                biomass resources.
+            </span>
+
+        </div>
+
+
+        <div class="application">
+
+            <strong>
+                Industrial Cogeneration
+            </strong>
+
+            <span>
+                Combined generation of useful heat and
+                electrical power.
+            </span>
+
+        </div>
+
+
+        <div class="application">
+
+            <strong>
+                Waste-to-Energy Projects
+            </strong>
+
+            <span>
+                Converting suitable organic waste streams
+                into useful energy.
+            </span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     CTA
+========================================= -->
+
+<section class="cta">
+
+
+    <div class="cta-content">
+
+        <h2>
+            Turning Biomass Into Opportunity.
+        </h2>
+
+        <p>
+
+            From feedstock assessment to plant engineering,
+            energy conversion, electrical integration and
+            ongoing maintenance, we support reliable
+            biomass energy generation.
+
+        </p>
+
+    </div>
+
+
+    <div class="cta-side">
+
+        <div>
+
+            <strong>
+                RECYCLE • CONVERT • GENERATE
+            </strong>
+
+            <span>
+                ENGINEERED BIOMASS ENERGY SOLUTIONS
+            </span>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="footer">
+
+    <span>
+        CLEAN ENERGY. SMARTER FUTURE.
+    </span>
+
+    <strong>
+        BIOMASS ENERGY GENERATION
+    </strong>
+
+</footer>
+
+
+</div>
+
+</body>
+</html>
+```

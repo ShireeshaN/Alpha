@@ -1,0 +1,2576 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hydel Power Generation | Energy Segment</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Inter",sans-serif;
+    background:#f4f7f9;
+    color:#16384a;
+}
+
+.hydel-page{
+    width:100%;
+    overflow:hidden;
+    background:#fff;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header{
+    height:76px;
+    padding:0 7%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:#083b52;
+    color:#fff;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.brand-icon{
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#5fc7e5;
+    color:#083b52;
+
+    font-size:20px;
+    font-weight:800;
+}
+
+.brand h3{
+    font-size:17px;
+    letter-spacing:1px;
+}
+
+.brand span{
+    display:block;
+    margin-top:3px;
+
+    color:#c5dbe3;
+
+    font-size:9px;
+    letter-spacing:1.5px;
+}
+
+.page-no{
+    color:#c5dbe3;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:1.5px;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero{
+    min-height:620px;
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5,45,62,.96) 0%,
+            rgba(5,45,62,.78) 40%,
+            rgba(5,45,62,.16) 100%
+        ),
+        url("images/hydel-hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    width:67%;
+    padding-left:8%;
+    color:#fff;
+}
+
+.eyebrow{
+    display:inline-block;
+
+    padding:8px 15px;
+    margin-bottom:21px;
+
+    border-left:4px solid #5fc7e5;
+
+    background:rgba(255,255,255,.08);
+
+    color:#d9eaf0;
+
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+.hero h1{
+    font-size:clamp(43px,6vw,76px);
+    line-height:1.02;
+
+    text-transform:uppercase;
+
+    margin-bottom:23px;
+}
+
+.hero h1 span{
+    color:#5fc7e5;
+}
+
+.hero p{
+    max-width:650px;
+
+    color:#d5e6ec;
+
+    font-size:14px;
+    line-height:1.9;
+
+    margin-bottom:30px;
+}
+
+.hero-btn{
+    display:inline-block;
+
+    padding:14px 24px;
+
+    background:#5fc7e5;
+    color:#083b52;
+
+    text-decoration:none;
+
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:1px;
+
+    border-radius:3px;
+
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-3px);
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.stats{
+    position:relative;
+
+    margin:-52px 7% 0;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    background:#fff;
+
+    box-shadow:0 15px 40px rgba(8,59,82,.13);
+
+    z-index:3;
+}
+
+.stat{
+    min-height:120px;
+
+    padding:22px;
+
+    display:flex;
+    align-items:center;
+
+    gap:15px;
+
+    border-right:1px solid #e0e9ed;
+}
+
+.stat:last-child{
+    border-right:none;
+}
+
+.stat-icon{
+    width:46px;
+    height:46px;
+
+    flex-shrink:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#e7f6fa;
+    color:#1685a5;
+
+    font-size:19px;
+}
+
+.stat h4{
+    color:#16384a;
+    font-size:11px;
+    margin-bottom:5px;
+}
+
+.stat p{
+    color:#71838c;
+    font-size:9px;
+    line-height:1.5;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro{
+    padding:95px 8% 80px;
+
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+
+    gap:75px;
+}
+
+.label{
+    color:#1685a5;
+
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:10px;
+}
+
+.title{
+    color:#083b52;
+
+    font-size:35px;
+    line-height:1.2;
+
+    margin-bottom:18px;
+}
+
+.line{
+    width:50px;
+    height:4px;
+
+    background:#5fc7e5;
+
+    margin-bottom:23px;
+}
+
+.text{
+    color:#687d86;
+
+    font-size:12px;
+    line-height:1.9;
+}
+
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.services{
+    padding:85px 8%;
+    background:#f2f7f9;
+}
+
+.section-head{
+    max-width:730px;
+
+    margin:0 auto 48px;
+
+    text-align:center;
+}
+
+.section-head .line{
+    margin:0 auto 22px;
+}
+
+.section-head p{
+    color:#6d7e85;
+
+    font-size:12px;
+    line-height:1.8;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.service-card{
+    min-height:255px;
+
+    padding:30px;
+
+    position:relative;
+
+    background:#fff;
+
+    border:1px solid #dfe9ed;
+
+    overflow:hidden;
+
+    transition:.3s;
+}
+
+.service-card::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:#5fc7e5;
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.3s;
+}
+
+.service-card:hover{
+    background:#083b52;
+
+    transform:translateY(-7px);
+
+    box-shadow:0 17px 35px rgba(8,59,82,.15);
+}
+
+.service-card:hover::before{
+    transform:scaleX(1);
+}
+
+.service-icon{
+    width:50px;
+    height:50px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:20px;
+
+    border-radius:7px;
+
+    background:#083b52;
+    color:#5fc7e5;
+
+    font-size:19px;
+}
+
+.service-card:hover .service-icon{
+    background:#5fc7e5;
+    color:#083b52;
+}
+
+.service-card h3{
+    color:#16384a;
+
+    font-size:14px;
+
+    margin-bottom:11px;
+}
+
+.service-card p{
+    color:#71828a;
+
+    font-size:10px;
+    line-height:1.75;
+}
+
+.service-card:hover h3{
+    color:#fff;
+}
+
+.service-card:hover p{
+    color:#c7dce4;
+}
+
+
+/* =========================================
+   HYDEL SYSTEM
+========================================= */
+
+.hydel-system{
+    padding:90px 8%;
+    background:#fff;
+}
+
+.system-layout{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+.system-image{
+    min-height:460px;
+
+    position:relative;
+
+    background:
+        linear-gradient(
+            rgba(8,59,82,.08),
+            rgba(8,59,82,.08)
+        ),
+        url("images/hydel-plant.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.image-badge{
+    position:absolute;
+
+    left:25px;
+    bottom:25px;
+
+    padding:16px 20px;
+
+    background:#083b52;
+
+    border-left:4px solid #5fc7e5;
+
+    color:#fff;
+}
+
+.image-badge strong{
+    display:block;
+
+    color:#5fc7e5;
+
+    font-size:12px;
+
+    margin-bottom:4px;
+}
+
+.image-badge span{
+    color:#c5dbe3;
+    font-size:9px;
+}
+
+.system-content p{
+    color:#687d86;
+
+    font-size:12px;
+    line-height:1.9;
+
+    margin-bottom:25px;
+}
+
+.system-list{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:11px;
+}
+
+.system-item{
+    padding:15px;
+
+    background:#f3f7f9;
+
+    border-left:3px solid #5fc7e5;
+
+    color:#2a4a58;
+
+    font-size:10px;
+    font-weight:600;
+}
+
+
+/* =========================================
+   HYDEL COMPONENTS
+========================================= */
+
+.components{
+    padding:85px 8%;
+    background:#083b52;
+    color:#fff;
+}
+
+.components-head{
+    max-width:720px;
+    margin-bottom:48px;
+}
+
+.components-head .label{
+    color:#5fc7e5;
+}
+
+.components-head .title{
+    color:#fff;
+}
+
+.components-head p{
+    color:#c5dbe3;
+
+    font-size:12px;
+    line-height:1.8;
+}
+
+.component-grid{
+    display:grid;
+
+    grid-template-columns:repeat(6,1fr);
+
+    gap:10px;
+}
+
+.component-card{
+    min-height:190px;
+
+    padding:24px 14px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.13);
+
+    background:rgba(255,255,255,.04);
+
+    transition:.3s;
+}
+
+.component-card:hover{
+    transform:translateY(-6px);
+
+    background:rgba(255,255,255,.09);
+}
+
+.component-icon{
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin:0 auto 17px;
+
+    border-radius:50%;
+
+    background:#5fc7e5;
+
+    color:#083b52;
+
+    font-size:11px;
+    font-weight:800;
+}
+
+.component-card h4{
+    font-size:10px;
+    margin-bottom:9px;
+}
+
+.component-card p{
+    color:#b9d0d9;
+
+    font-size:9px;
+    line-height:1.6;
+}
+
+
+/* =========================================
+   HYDRO POWER FLOW
+========================================= */
+
+.power-flow{
+    padding:85px 8%;
+    background:#f2f7f9;
+}
+
+.flow-grid{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:15px;
+
+    margin-top:42px;
+}
+
+.flow-card{
+    min-height:215px;
+
+    padding:25px 20px;
+
+    background:#fff;
+
+    border:1px solid #dfe9ed;
+
+    position:relative;
+
+    transition:.3s;
+}
+
+.flow-card:hover{
+    transform:translateY(-6px);
+
+    border-color:#5fc7e5;
+
+    box-shadow:0 12px 25px rgba(8,59,82,.09);
+}
+
+.flow-number{
+    position:absolute;
+
+    top:14px;
+    right:17px;
+
+    color:#dce8ec;
+
+    font-size:22px;
+    font-weight:800;
+}
+
+.flow-card h4{
+    color:#16384a;
+
+    font-size:12px;
+
+    margin-bottom:9px;
+}
+
+.flow-card p{
+    color:#71828a;
+
+    font-size:10px;
+
+    line-height:1.7;
+}
+
+
+/* =========================================
+   TECHNICAL CAPABILITIES
+========================================= */
+
+.capabilities{
+    padding:85px 8%;
+    background:#fff;
+}
+
+.capability-layout{
+    display:grid;
+
+    grid-template-columns:.9fr 1.1fr;
+
+    gap:75px;
+
+    align-items:center;
+}
+
+.capability-text p{
+    color:#687d86;
+
+    font-size:12px;
+    line-height:1.9;
+}
+
+.capability-list{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+}
+
+.capability{
+    padding:18px;
+
+    background:#f3f7f9;
+
+    border:1px solid #e1e9ed;
+}
+
+.capability strong{
+    display:block;
+
+    color:#16384a;
+
+    font-size:11px;
+
+    margin-bottom:6px;
+}
+
+.capability span{
+    color:#76878f;
+
+    font-size:9px;
+
+    line-height:1.5;
+}
+
+
+/* =========================================
+   PROJECT PROCESS
+========================================= */
+
+.process{
+    padding:85px 8%;
+
+    background:#f2f7f9;
+}
+
+.process-grid{
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:14px;
+
+    margin-top:42px;
+}
+
+.process-card{
+    min-height:215px;
+
+    padding:25px 18px;
+
+    background:#fff;
+
+    border-top:3px solid #5fc7e5;
+
+    transition:.3s;
+}
+
+.process-card:hover{
+    transform:translateY(-6px);
+
+    box-shadow:0 12px 27px rgba(8,59,82,.09);
+}
+
+.process-no{
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:18px;
+
+    border-radius:50%;
+
+    background:#083b52;
+    color:#5fc7e5;
+
+    font-size:11px;
+    font-weight:800;
+}
+
+.process-card h4{
+    color:#16384a;
+
+    font-size:11px;
+
+    margin-bottom:8px;
+}
+
+.process-card p{
+    color:#71828a;
+
+    font-size:9px;
+
+    line-height:1.65;
+}
+
+
+/* =========================================
+   E&M SERVICES
+========================================= */
+
+.em-services{
+    padding:85px 8%;
+    background:#fff;
+}
+
+.em-grid{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:16px;
+
+    margin-top:42px;
+}
+
+.em-card{
+    padding:25px 20px;
+
+    background:#f4f8f9;
+
+    border-left:3px solid #5fc7e5;
+
+    transition:.3s;
+}
+
+.em-card:hover{
+    transform:translateY(-6px);
+
+    box-shadow:0 12px 27px rgba(8,59,82,.09);
+}
+
+.em-card span{
+    display:block;
+
+    color:#1685a5;
+
+    font-size:21px;
+    font-weight:800;
+
+    margin-bottom:12px;
+}
+
+.em-card h4{
+    color:#16384a;
+
+    font-size:12px;
+
+    margin-bottom:7px;
+}
+
+.em-card p{
+    color:#71828a;
+
+    font-size:10px;
+
+    line-height:1.65;
+}
+
+
+/* =========================================
+   APPLICATIONS
+========================================= */
+
+.applications{
+    padding:85px 8%;
+    background:#f2f7f9;
+}
+
+.application-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:13px;
+
+    margin-top:40px;
+}
+
+.application{
+    padding:21px;
+
+    background:#fff;
+
+    border:1px solid #dfe9ed;
+
+    transition:.3s;
+}
+
+.application:hover{
+    border-color:#5fc7e5;
+
+    transform:translateX(5px);
+}
+
+.application strong{
+    display:block;
+
+    color:#16384a;
+
+    font-size:11px;
+
+    margin-bottom:6px;
+}
+
+.application span{
+    color:#76878f;
+
+    font-size:9px;
+
+    line-height:1.5;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.cta{
+    margin:60px 8%;
+
+    min-height:245px;
+
+    display:grid;
+
+    grid-template-columns:1.2fr .8fr;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8,59,82,1),
+            rgba(8,59,82,.72)
+        ),
+        url("images/hydel-cta.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.cta-content{
+    padding:45px;
+    color:#fff;
+}
+
+.cta-content h2{
+    font-size:27px;
+    margin-bottom:13px;
+}
+
+.cta-content p{
+    max-width:600px;
+
+    color:#c5dbe3;
+
+    font-size:11px;
+    line-height:1.8;
+}
+
+.cta-side{
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-left:1px solid rgba(255,255,255,.13);
+}
+
+.cta-side strong{
+    display:block;
+
+    color:#5fc7e5;
+
+    font-size:18px;
+
+    margin-bottom:7px;
+}
+
+.cta-side span{
+    color:#fff;
+
+    font-size:9px;
+
+    letter-spacing:1.4px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer{
+    min-height:58px;
+
+    padding:0 8%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    background:#052c3d;
+
+    color:#b8ced7;
+
+    font-size:9px;
+
+    letter-spacing:1px;
+}
+
+.footer strong{
+    color:#5fc7e5;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:1050px){
+
+    .flow-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .em-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .process-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media(max-width:800px){
+
+    .hero-content{
+        width:90%;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .intro,
+    .system-layout,
+    .capability-layout{
+        grid-template-columns:1fr;
+    }
+
+    .cta{
+        grid-template-columns:1fr;
+    }
+
+    .cta-side{
+        min-height:120px;
+
+        border-left:none;
+
+        border-top:1px solid rgba(255,255,255,.13);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .header{
+        padding:0 5%;
+    }
+
+    .page-no{
+        display:none;
+    }
+
+    .hero{
+        min-height:540px;
+    }
+
+    .hero-content{
+        width:94%;
+        padding-left:6%;
+    }
+
+    .stats{
+        margin:0;
+        grid-template-columns:1fr;
+    }
+
+    .stat{
+        border-right:none;
+        border-bottom:1px solid #e3eaed;
+    }
+
+    .intro,
+    .services,
+    .hydel-system,
+    .components,
+    .power-flow,
+    .capabilities,
+    .process,
+    .em-services,
+    .applications{
+        padding-left:6%;
+        padding-right:6%;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .system-list,
+    .capability-list,
+    .application-grid{
+        grid-template-columns:1fr;
+    }
+
+    .component-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .flow-grid,
+    .em-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .cta{
+        margin:40px 6%;
+    }
+
+    .footer{
+        padding:15px 6%;
+
+        flex-direction:column;
+
+        gap:8px;
+
+        justify-content:center;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="hydel-page">
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="header">
+
+    <div class="brand">
+
+        <div class="brand-icon">
+            ≋
+        </div>
+
+        <div>
+
+            <h3>ENERGY SEGMENT</h3>
+
+            <span>
+                CLEAN ENERGY • SMARTER FUTURE
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="page-no">
+        ENERGY SOLUTIONS / 04
+    </div>
+
+</header>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            Renewable & Water-Based Power
+        </div>
+
+        <h1>
+            Hydel
+            <br>
+            <span>Power</span>
+        </h1>
+
+        <p>
+
+            Harnessing the power of flowing and stored water
+            through efficient hydroelectric generation systems
+            designed for reliable and sustainable power.
+
+        </p>
+
+        <a href="#services" class="hero-btn">
+            EXPLORE HYDEL SOLUTIONS →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     STATS
+========================================= -->
+
+<section class="stats">
+
+
+    <div class="stat">
+
+        <div class="stat-icon">
+            ≋
+        </div>
+
+        <div>
+
+            <h4>
+                Hydro Resources
+            </h4>
+
+            <p>
+                Utilizing water flow and elevation for energy.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="stat">
+
+        <div class="stat-icon">
+            ⚡
+        </div>
+
+        <div>
+
+            <h4>
+                Power Generation
+            </h4>
+
+            <p>
+                Reliable electricity generation through turbines.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="stat">
+
+        <div class="stat-icon">
+            ⚙
+        </div>
+
+        <div>
+
+            <h4>
+                Electro-Mechanical
+            </h4>
+
+            <p>
+                Integrated turbine, generator and control systems.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="stat">
+
+        <div class="stat-icon">
+            ✓
+        </div>
+
+        <div>
+
+            <h4>
+                Sustainable Generation
+            </h4>
+
+            <p>
+                Long-term renewable and dependable power.
+            </p>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================================
+     INTRO
+========================================= -->
+
+<section class="intro">
+
+
+    <div>
+
+        <div class="label">
+            Hydel Power Generation
+        </div>
+
+        <h2 class="title">
+
+            Power From
+            <br>
+            Water Resources
+
+        </h2>
+
+        <div class="line"></div>
+
+        <p class="text">
+
+            Hydel power converts the energy of flowing or
+            falling water into mechanical energy and then
+            into electricity through turbine-generator systems.
+
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <div class="label">
+            Our Approach
+        </div>
+
+        <h2 class="title">
+            Engineering Reliable Hydro Power Systems
+        </h2>
+
+        <div class="line"></div>
+
+        <p class="text">
+
+            Our hydel power solutions cover project
+            assessment, hydro-mechanical systems,
+            electro-mechanical equipment, electrical
+            infrastructure and power evacuation.
+
+            <br><br>
+
+            We support projects with a focus on operational
+            reliability, safety, maintainability and efficient
+            utilization of available water resources.
+
+        </p>
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================================
+     SERVICES
+========================================= -->
+
+<section class="services" id="services">
+
+
+    <div class="section-head">
+
+        <div class="label">
+            Our Hydel Power Services
+        </div>
+
+        <h2 class="title">
+            Integrated Hydropower Solutions
+        </h2>
+
+        <div class="line"></div>
+
+        <p>
+
+            From hydro resource evaluation and project
+            engineering to electro-mechanical installation,
+            commissioning and O&M support.
+
+        </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                ≋
+            </div>
+
+            <h3>
+                Hydro Resource Assessment
+            </h3>
+
+            <p>
+
+                Assessment of water availability, flow,
+                head and site conditions for hydroelectric
+                generation.
+
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                ◉
+            </div>
+
+            <h3>
+                Hydro Project Engineering
+            </h3>
+
+            <p>
+
+                Engineering support for hydraulic,
+                hydro-mechanical and electrical systems.
+
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                ⚙
+            </div>
+
+            <h3>
+                Turbine & Generator Systems
+            </h3>
+
+            <p>
+
+                Installation and integration of turbine,
+                generator and associated equipment.
+
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                ▣
+            </div>
+
+            <h3>
+                Hydro-Mechanical Works
+            </h3>
+
+            <p>
+
+                Support for gates, valves, penstocks,
+                intake and water conductor systems.
+
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                ⚡
+            </div>
+
+            <h3>
+                Electrical & Grid Integration
+            </h3>
+
+            <p>
+
+                Transformers, switchgear, protection,
+                controls and power evacuation systems.
+
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🛠
+            </div>
+
+            <h3>
+                Hydel Plant O&M
+            </h3>
+
+            <p>
+
+                Preventive maintenance, inspection,
+                troubleshooting and operational support.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     HYDEL SYSTEM
+========================================= -->
+
+<section class="hydel-system">
+
+
+    <div class="system-layout">
+
+
+        <div class="system-image">
+
+            <div class="image-badge">
+
+                <strong>
+                    HYDRO POWER GENERATION
+                </strong>
+
+                <span>
+                    WATER • TURBINE • GENERATOR • POWER
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="system-content">
+
+            <div class="label">
+                Hydropower Capabilities
+            </div>
+
+            <h2 class="title">
+
+                From Water Flow
+                <br>
+                To Electrical Power
+
+            </h2>
+
+            <div class="line"></div>
+
+            <p>
+
+                Hydroelectric power plants use the potential
+                and kinetic energy of water to drive turbines
+                connected to electrical generators.
+
+            </p>
+
+
+            <div class="system-list">
+
+                <div class="system-item">
+                    Water Intake Systems
+                </div>
+
+                <div class="system-item">
+                    Dam & Reservoir Interface
+                </div>
+
+                <div class="system-item">
+                    Head Race / Water Conductor
+                </div>
+
+                <div class="system-item">
+                    Penstock Systems
+                </div>
+
+                <div class="system-item">
+                    Turbine Systems
+                </div>
+
+                <div class="system-item">
+                    Generator Systems
+                </div>
+
+                <div class="system-item">
+                    Control & Protection
+                </div>
+
+                <div class="system-item">
+                    Power Evacuation
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     COMPONENTS
+========================================= -->
+
+<section class="components">
+
+
+    <div class="components-head">
+
+        <div class="label">
+            Hydel Plant Components
+        </div>
+
+        <h2 class="title">
+            Integrated Hydro-Electric Infrastructure
+        </h2>
+
+        <div class="line"></div>
+
+        <p>
+
+            Hydropower generation depends on coordinated
+            hydraulic, mechanical, electrical and control
+            systems working together.
+
+        </p>
+
+    </div>
+
+
+    <div class="component-grid">
+
+
+        <div class="component-card">
+
+            <div class="component-icon">
+                01
+            </div>
+
+            <h4>
+                Intake
+            </h4>
+
+            <p>
+                Controls and directs water into the
+                water conductor system.
+            </p>
+
+        </div>
+
+
+        <div class="component-card">
+
+            <div class="component-icon">
+                02
+            </div>
+
+            <h4>
+                Penstock
+            </h4>
+
+            <p>
+                Carries pressurized water toward
+                the turbine.
+            </p>
+
+        </div>
+
+
+        <div class="component-card">
+
+            <div class="component-icon">
+                03
+            </div>
+
+            <h4>
+                Turbine
+            </h4>
+
+            <p>
+                Converts hydraulic energy into
+                mechanical rotational energy.
+            </p>
+
+        </div>
+
+
+        <div class="component-card">
+
+            <div class="component-icon">
+                04
+            </div>
+
+            <h4>
+                Generator
+            </h4>
+
+            <p>
+                Converts mechanical rotation into
+                electrical power.
+            </p>
+
+        </div>
+
+
+        <div class="component-card">
+
+            <div class="component-icon">
+                05
+            </div>
+
+            <h4>
+                Transformer
+            </h4>
+
+            <p>
+                Steps up generated voltage for
+                power transmission.
+            </p>
+
+        </div>
+
+
+        <div class="component-card">
+
+            <div class="component-icon">
+                06
+            </div>
+
+            <h4>
+                Switchyard
+            </h4>
+
+            <p>
+                Connects generated power to the
+                transmission network.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     POWER FLOW
+========================================= -->
+
+<section class="power-flow">
+
+
+    <div class="section-head">
+
+        <div class="label">
+            Hydropower Generation Process
+        </div>
+
+        <h2 class="title">
+            Water To Electricity
+        </h2>
+
+        <div class="line"></div>
+
+        <p>
+
+            A coordinated sequence converts the energy
+            of water into reliable electrical power.
+
+        </p>
+
+    </div>
+
+
+    <div class="flow-grid">
+
+
+        <div class="flow-card">
+
+            <div class="flow-number">
+                01
+            </div>
+
+            <h4>
+                Water Storage & Intake
+            </h4>
+
+            <p>
+
+                Water is stored or diverted and directed
+                toward the hydroelectric system through
+                controlled intake structures.
+
+            </p>
+
+        </div>
+
+
+        <div class="flow-card">
+
+            <div class="flow-number">
+                02
+            </div>
+
+            <h4>
+                Water Conduction
+            </h4>
+
+            <p>
+
+                Water flows through canals, tunnels,
+                penstocks or other conductor systems
+                toward the turbine.
+
+            </p>
+
+        </div>
+
+
+        <div class="flow-card">
+
+            <div class="flow-number">
+                03
+            </div>
+
+            <h4>
+                Turbine Rotation
+            </h4>
+
+            <p>
+
+                Hydraulic energy rotates the turbine
+                runner and produces mechanical energy.
+
+            </p>
+
+        </div>
+
+
+        <div class="flow-card">
+
+            <div class="flow-number">
+                04
+            </div>
+
+            <h4>
+                Electrical Generation
+            </h4>
+
+            <p>
+
+                The turbine drives the generator to
+                produce electrical power.
+
+            </p>
+
+        </div>
+
+
+        <div class="flow-card">
+
+            <div class="flow-number">
+                05
+            </div>
+
+            <h4>
+                Voltage Transformation
+            </h4>
+
+            <p>
+
+                Generated electricity is stepped up
+                through transformers for efficient
+                power transfer.
+
+            </p>
+
+        </div>
+
+
+        <div class="flow-card">
+
+            <div class="flow-number">
+                06
+            </div>
+
+            <h4>
+                Protection & Control
+            </h4>
+
+            <p>
+
+                Control, monitoring and protection systems
+                support safe and stable operation.
+
+            </p>
+
+        </div>
+
+
+        <div class="flow-card">
+
+            <div class="flow-number">
+                07
+            </div>
+
+            <h4>
+                Switchyard
+            </h4>
+
+            <p>
+
+                Electrical power is routed through the
+                switchyard and associated equipment.
+
+            </p>
+
+        </div>
+
+
+        <div class="flow-card">
+
+            <div class="flow-number">
+                08
+            </div>
+
+            <h4>
+                Grid Integration
+            </h4>
+
+            <p>
+
+                Generated electricity is evacuated and
+                integrated into the transmission network.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     TECHNICAL CAPABILITIES
+========================================= -->
+
+<section class="capabilities">
+
+
+    <div class="capability-layout">
+
+
+        <div class="capability-text">
+
+            <div class="label">
+                Technical Capabilities
+            </div>
+
+            <h2 class="title">
+
+                Engineering For
+                <br>
+                Reliable Hydropower
+
+            </h2>
+
+            <div class="line"></div>
+
+            <p>
+
+                Our technical capabilities span hydraulic,
+                hydro-mechanical, electro-mechanical,
+                electrical and control systems required
+                for dependable hydropower generation.
+
+            </p>
+
+        </div>
+
+
+        <div class="capability-list">
+
+
+            <div class="capability">
+
+                <strong>
+                    Hydro Resource Assessment
+                </strong>
+
+                <span>
+                    Water flow, head and site condition
+                    assessment support.
+                </span>
+
+            </div>
+
+
+            <div class="capability">
+
+                <strong>
+                    Hydro-Mechanical Systems
+                </strong>
+
+                <span>
+                    Gates, valves, penstocks and water
+                    conductor systems.
+                </span>
+
+            </div>
+
+
+            <div class="capability">
+
+                <strong>
+                    Turbine Systems
+                </strong>
+
+                <span>
+                    Turbine installation, alignment and
+                    associated mechanical systems.
+                </span>
+
+            </div>
+
+
+            <div class="capability">
+
+                <strong>
+                    Generator Systems
+                </strong>
+
+                <span>
+                    Generator installation and
+                    electro-mechanical integration.
+                </span>
+
+            </div>
+
+
+            <div class="capability">
+
+                <strong>
+                    Electrical Systems
+                </strong>
+
+                <span>
+                    Transformers, switchgear, protection
+                    and power evacuation.
+                </span>
+
+            </div>
+
+
+            <div class="capability">
+
+                <strong>
+                    Automation & Controls
+                </strong>
+
+                <span>
+                    Plant monitoring, control, protection
+                    and operational systems.
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     PROJECT PROCESS
+========================================= -->
+
+<section class="process">
+
+
+    <div class="section-head">
+
+        <div class="label">
+            Project Execution
+        </div>
+
+        <h2 class="title">
+            From Hydro Potential To Power
+        </h2>
+
+        <div class="line"></div>
+
+        <p>
+
+            A structured execution methodology supports
+            efficient project development and reliable
+            plant commissioning.
+
+        </p>
+
+    </div>
+
+
+    <div class="process-grid">
+
+
+        <div class="process-card">
+
+            <div class="process-no">
+                01
+            </div>
+
+            <h4>
+                Site & Hydro Assessment
+            </h4>
+
+            <p>
+                Evaluate water resources, head, flow,
+                site conditions and project feasibility.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-no">
+                02
+            </div>
+
+            <h4>
+                Engineering & Design
+            </h4>
+
+            <p>
+                Develop hydraulic, mechanical, electrical
+                and control engineering requirements.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-no">
+                03
+            </div>
+
+            <h4>
+                Equipment Installation
+            </h4>
+
+            <p>
+                Install turbine, generator, hydro-mechanical
+                and electrical equipment.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-no">
+                04
+            </div>
+
+            <h4>
+                Testing & Commissioning
+            </h4>
+
+            <p>
+                Test equipment, protection systems and
+                plant functionality before operation.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-no">
+                05
+            </div>
+
+            <h4>
+                O&M Support
+            </h4>
+
+            <p>
+                Provide maintenance, inspection and
+                operational performance support.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     E&M SERVICES
+========================================= -->
+
+<section class="em-services">
+
+
+    <div class="section-head">
+
+        <div class="label">
+            Electro-Mechanical Services
+        </div>
+
+        <h2 class="title">
+            Reliable Plant Equipment & Systems
+        </h2>
+
+        <div class="line"></div>
+
+        <p>
+
+            Integrated electro-mechanical services support
+            safe, efficient and dependable hydel plant
+            operation.
+
+        </p>
+
+    </div>
+
+
+    <div class="em-grid">
+
+
+        <div class="em-card">
+
+            <span>
+                01
+            </span>
+
+            <h4>
+                Turbine Installation
+            </h4>
+
+            <p>
+                Installation, alignment and inspection of
+                turbine assemblies.
+            </p>
+
+        </div>
+
+
+        <div class="em-card">
+
+            <span>
+                02
+            </span>
+
+            <h4>
+                Generator Installation
+            </h4>
+
+            <p>
+                Generator installation, assembly and
+                electrical integration.
+            </p>
+
+        </div>
+
+
+        <div class="em-card">
+
+            <span>
+                03
+            </span>
+
+            <h4>
+                Electrical Systems
+            </h4>
+
+            <p>
+                Transformers, switchgear, cabling,
+                protection and auxiliary systems.
+            </p>
+
+        </div>
+
+
+        <div class="em-card">
+
+            <span>
+                04
+            </span>
+
+            <h4>
+                Control & Protection
+            </h4>
+
+            <p>
+                Monitoring, control, automation and
+                protection system support.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     APPLICATIONS
+========================================= -->
+
+<section class="applications">
+
+
+    <div class="section-head">
+
+        <div class="label">
+            Hydel Power Applications
+        </div>
+
+        <h2 class="title">
+            Powering Diverse Energy Networks
+        </h2>
+
+        <div class="line"></div>
+
+    </div>
+
+
+    <div class="application-grid">
+
+
+        <div class="application">
+
+            <strong>
+                Large Hydropower Projects
+            </strong>
+
+            <span>
+                High-capacity hydroelectric generation
+                for regional and national power systems.
+            </span>
+
+        </div>
+
+
+        <div class="application">
+
+            <strong>
+                Small Hydel Projects
+            </strong>
+
+            <span>
+                Suitable hydro generation solutions for
+                smaller water resources and sites.
+            </span>
+
+        </div>
+
+
+        <div class="application">
+
+            <strong>
+                Mini & Micro Hydro
+            </strong>
+
+            <span>
+                Distributed renewable generation for
+                suitable local applications.
+            </span>
+
+        </div>
+
+
+        <div class="application">
+
+            <strong>
+                Dam-Based Generation
+            </strong>
+
+            <span>
+                Power generation using stored water and
+                controlled hydraulic flow.
+            </span>
+
+        </div>
+
+
+        <div class="application">
+
+            <strong>
+                Run-of-River Projects
+            </strong>
+
+            <span>
+                Hydropower generation using naturally
+                available river flow and elevation.
+            </span>
+
+        </div>
+
+
+        <div class="application">
+
+            <strong>
+                Grid-Connected Hydro
+            </strong>
+
+            <span>
+                Renewable power generation integrated
+                with transmission networks.
+            </span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     CTA
+========================================= -->
+
+<section class="cta">
+
+
+    <div class="cta-content">
+
+        <h2>
+            Harnessing Water. Powering Progress.
+        </h2>
+
+        <p>
+
+            From hydro resource assessment and project
+            engineering to turbine-generator installation,
+            electrical integration, commissioning and
+            maintenance, we support reliable hydel power
+            generation.
+
+        </p>
+
+    </div>
+
+
+    <div class="cta-side">
+
+        <div>
+
+            <strong>
+                WATER • ENERGY • FUTURE
+            </strong>
+
+            <span>
+                ENGINEERED HYDEL POWER SOLUTIONS
+            </span>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="footer">
+
+    <span>
+        CLEAN ENERGY. SMARTER FUTURE.
+    </span>
+
+    <strong>
+        HYDEL POWER GENERATION
+    </strong>
+
+</footer>
+
+
+</div>
+
+</body>
+</html>

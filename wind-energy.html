@@ -1,0 +1,2532 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wind Energy Generation | Energy Segment</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #f4f7fa;
+            color: #173552;
+        }
+
+        /* =========================================
+           PAGE
+        ========================================= */
+
+        .wind-page {
+            width: 100%;
+            overflow: hidden;
+            background: #fff;
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        .header {
+            height: 76px;
+
+            padding: 0 7%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            background: #082b57;
+
+            color: #fff;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-icon {
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #54b7d5;
+
+            color: #082b57;
+
+            font-size: 21px;
+            font-weight: 800;
+        }
+
+        .brand h3 {
+            font-size: 17px;
+            letter-spacing: 1px;
+        }
+
+        .brand span {
+            display: block;
+
+            margin-top: 3px;
+
+            color: #c9d8e7;
+
+            font-size: 9px;
+            letter-spacing: 1.5px;
+        }
+
+        .page-no {
+            color: #c9d8e7;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+
+            min-height: 620px;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(4, 31, 64, .96) 0%,
+                    rgba(4, 31, 64, .83) 38%,
+                    rgba(4, 31, 64, .20) 100%
+                ),
+                url("images/wind-hero.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+
+            width: 65%;
+
+            padding-left: 8%;
+
+            color: #fff;
+        }
+
+        .eyebrow {
+
+            display: inline-block;
+
+            padding: 8px 15px;
+
+            margin-bottom: 21px;
+
+            border-left: 4px solid #54b7d5;
+
+            background: rgba(255,255,255,.08);
+
+            color: #e0ebf3;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+
+            font-size: clamp(44px, 6vw, 76px);
+
+            line-height: 1.02;
+
+            text-transform: uppercase;
+
+            margin-bottom: 23px;
+        }
+
+        .hero h1 span {
+            color: #54b7d5;
+        }
+
+        .hero p {
+
+            max-width: 630px;
+
+            color: #d8e4ed;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            margin-bottom: 30px;
+        }
+
+        .hero-btn {
+
+            display: inline-block;
+
+            padding: 14px 24px;
+
+            background: #54b7d5;
+
+            color: #082b57;
+
+            text-decoration: none;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            border-radius: 3px;
+
+            transition: .3s;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================================
+           STATS
+        ========================================= */
+
+        .stats {
+
+            position: relative;
+
+            margin: -52px 7% 0;
+
+            display: grid;
+
+            grid-template-columns: repeat(4,1fr);
+
+            background: #fff;
+
+            box-shadow: 0 15px 40px rgba(8,43,87,.13);
+
+            z-index: 3;
+        }
+
+        .stat {
+
+            min-height: 120px;
+
+            padding: 22px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 15px;
+
+            border-right: 1px solid #e2e9ef;
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat-icon {
+
+            width: 46px;
+            height: 46px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #e8f6fa;
+
+            color: #3292b1;
+
+            font-size: 19px;
+        }
+
+        .stat h4 {
+
+            color: #193654;
+
+            font-size: 11px;
+
+            margin-bottom: 5px;
+        }
+
+        .stat p {
+
+            color: #748398;
+
+            font-size: 9px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================================
+           INTRO
+        ========================================= */
+
+        .intro {
+
+            padding: 95px 8% 80px;
+
+            display: grid;
+
+            grid-template-columns: .85fr 1.15fr;
+
+            gap: 75px;
+        }
+
+        .label {
+
+            color: #3292b1;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+        }
+
+        .title {
+
+            color: #082b57;
+
+            font-size: 35px;
+
+            line-height: 1.2;
+
+            margin-bottom: 18px;
+        }
+
+        .line {
+
+            width: 50px;
+            height: 4px;
+
+            background: #54b7d5;
+
+            margin-bottom: 23px;
+        }
+
+        .text {
+
+            color: #68788d;
+
+            font-size: 12px;
+
+            line-height: 1.9;
+        }
+
+
+        /* =========================================
+           SERVICES
+        ========================================= */
+
+        .services {
+
+            padding: 85px 8%;
+
+            background: #f3f7fb;
+        }
+
+        .section-head {
+
+            max-width: 730px;
+
+            margin: 0 auto 48px;
+
+            text-align: center;
+        }
+
+        .section-head .line {
+
+            margin: 0 auto 22px;
+        }
+
+        .section-head p {
+
+            color: #6d7c8f;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+        .service-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3,1fr);
+
+            gap: 18px;
+        }
+
+        .service-card {
+
+            min-height: 250px;
+
+            padding: 30px;
+
+            position: relative;
+
+            background: #fff;
+
+            border: 1px solid #e0e8ef;
+
+            overflow: hidden;
+
+            transition: .3s;
+        }
+
+        .service-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 4px;
+
+            background: #54b7d5;
+
+            transform: scaleX(0);
+
+            transform-origin: left;
+
+            transition: .3s;
+        }
+
+        .service-card:hover {
+
+            background: #082b57;
+
+            transform: translateY(-7px);
+
+            box-shadow: 0 17px 35px rgba(8,43,87,.15);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 20px;
+
+            border-radius: 7px;
+
+            background: #082b57;
+
+            color: #54b7d5;
+
+            font-size: 19px;
+        }
+
+        .service-card:hover .service-icon {
+
+            background: #54b7d5;
+
+            color: #082b57;
+        }
+
+        .service-card h3 {
+
+            color: #183653;
+
+            font-size: 14px;
+
+            margin-bottom: 11px;
+        }
+
+        .service-card p {
+
+            color: #718095;
+
+            font-size: 10px;
+
+            line-height: 1.75;
+        }
+
+        .service-card:hover h3 {
+            color: #fff;
+        }
+
+        .service-card:hover p {
+            color: #cbd8e7;
+        }
+
+
+        /* =========================================
+           WIND PROJECT TYPES
+        ========================================= */
+
+        .wind-types {
+
+            padding: 90px 8%;
+
+            background: #fff;
+        }
+
+        .wind-layout {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .wind-image {
+
+            min-height: 460px;
+
+            position: relative;
+
+            background:
+                linear-gradient(
+                    rgba(8,43,87,.08),
+                    rgba(8,43,87,.08)
+                ),
+                url("images/wind-turbines.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+        .image-badge {
+
+            position: absolute;
+
+            left: 25px;
+            bottom: 25px;
+
+            padding: 16px 20px;
+
+            background: #082b57;
+
+            border-left: 4px solid #54b7d5;
+
+            color: #fff;
+        }
+
+        .image-badge strong {
+
+            display: block;
+
+            color: #54b7d5;
+
+            font-size: 12px;
+
+            margin-bottom: 4px;
+        }
+
+        .image-badge span {
+
+            color: #c9d5e3;
+
+            font-size: 9px;
+        }
+
+        .wind-content p {
+
+            color: #68788d;
+
+            font-size: 12px;
+
+            line-height: 1.9;
+
+            margin-bottom: 25px;
+        }
+
+        .wind-list {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 11px;
+        }
+
+        .wind-item {
+
+            padding: 15px;
+
+            background: #f4f7fa;
+
+            border-left: 3px solid #54b7d5;
+
+            color: #2b425a;
+
+            font-size: 10px;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================================
+           PROJECT EXECUTION
+        ========================================= */
+
+        .process {
+
+            padding: 85px 8%;
+
+            background: #082b57;
+
+            color: #fff;
+        }
+
+        .process-head {
+
+            max-width: 700px;
+
+            margin-bottom: 48px;
+        }
+
+        .process-head .label {
+            color: #54b7d5;
+        }
+
+        .process-head .title {
+            color: #fff;
+        }
+
+        .process-head p {
+
+            color: #c9d6e4;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+        .process-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(6,1fr);
+
+            gap: 10px;
+        }
+
+        .process-card {
+
+            min-height: 195px;
+
+            padding: 24px 14px;
+
+            text-align: center;
+
+            border: 1px solid rgba(255,255,255,.13);
+
+            background: rgba(255,255,255,.04);
+
+            transition: .3s;
+        }
+
+        .process-card:hover {
+
+            transform: translateY(-6px);
+
+            background: rgba(255,255,255,.09);
+        }
+
+        .process-no {
+
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0 auto 17px;
+
+            border-radius: 50%;
+
+            background: #54b7d5;
+
+            color: #082b57;
+
+            font-size: 11px;
+
+            font-weight: 800;
+        }
+
+        .process-card h4 {
+
+            font-size: 10px;
+
+            margin-bottom: 9px;
+        }
+
+        .process-card p {
+
+            color: #b9c8d9;
+
+            font-size: 9px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================================
+           TURBINE COMPONENTS
+        ========================================= */
+
+        .components {
+
+            padding: 85px 8%;
+
+            background: #f3f7fb;
+        }
+
+        .component-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(4,1fr);
+
+            gap: 15px;
+
+            margin-top: 42px;
+        }
+
+        .component {
+
+            min-height: 185px;
+
+            padding: 25px 20px;
+
+            background: #fff;
+
+            border: 1px solid #e1e8ef;
+
+            position: relative;
+
+            transition: .3s;
+        }
+
+        .component:hover {
+
+            transform: translateY(-6px);
+
+            border-color: #54b7d5;
+
+            box-shadow: 0 12px 25px rgba(8,43,87,.09);
+        }
+
+        .component-number {
+
+            position: absolute;
+
+            top: 14px;
+            right: 17px;
+
+            color: #e0e7ee;
+
+            font-size: 22px;
+
+            font-weight: 800;
+        }
+
+        .component h4 {
+
+            color: #193654;
+
+            font-size: 12px;
+
+            margin-bottom: 9px;
+        }
+
+        .component p {
+
+            color: #718095;
+
+            font-size: 10px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================================
+           TECHNICAL CAPABILITIES
+        ========================================= */
+
+        .capabilities {
+
+            padding: 85px 8%;
+
+            background: #fff;
+        }
+
+        .capability-layout {
+
+            display: grid;
+
+            grid-template-columns: .9fr 1.1fr;
+
+            gap: 75px;
+
+            align-items: center;
+        }
+
+        .capability-text p {
+
+            color: #68788d;
+
+            font-size: 12px;
+
+            line-height: 1.9;
+        }
+
+        .capability-list {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 12px;
+        }
+
+        .capability {
+
+            padding: 18px;
+
+            background: #f5f8fb;
+
+            border: 1px solid #e2e9f0;
+        }
+
+        .capability strong {
+
+            display: block;
+
+            color: #193654;
+
+            font-size: 11px;
+
+            margin-bottom: 6px;
+        }
+
+        .capability span {
+
+            color: #768599;
+
+            font-size: 9px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================================
+           O&M
+        ========================================= */
+
+        .om {
+
+            padding: 85px 8%;
+
+            background: #f3f7fb;
+        }
+
+        .om-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(4,1fr);
+
+            gap: 16px;
+
+            margin-top: 42px;
+        }
+
+        .om-card {
+
+            padding: 25px 20px;
+
+            background: #fff;
+
+            border-top: 3px solid #54b7d5;
+
+            transition: .3s;
+        }
+
+        .om-card:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow: 0 12px 27px rgba(8,43,87,.09);
+        }
+
+        .om-card span {
+
+            display: block;
+
+            color: #3292b1;
+
+            font-size: 21px;
+
+            font-weight: 800;
+
+            margin-bottom: 12px;
+        }
+
+        .om-card h4 {
+
+            color: #193654;
+
+            font-size: 12px;
+
+            margin-bottom: 7px;
+        }
+
+        .om-card p {
+
+            color: #718095;
+
+            font-size: 10px;
+
+            line-height: 1.65;
+        }
+
+
+        /* =========================================
+           APPLICATIONS
+        ========================================= */
+
+        .applications {
+
+            padding: 85px 8%;
+
+            background: #fff;
+        }
+
+        .application-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 13px;
+
+            margin-top: 40px;
+        }
+
+        .application {
+
+            padding: 21px;
+
+            background: #f5f8fb;
+
+            border: 1px solid #e1e8ef;
+
+            transition: .3s;
+        }
+
+        .application:hover {
+
+            border-color: #54b7d5;
+
+            transform: translateX(5px);
+        }
+
+        .application strong {
+
+            display: block;
+
+            color: #183653;
+
+            font-size: 11px;
+
+            margin-bottom: 6px;
+        }
+
+        .application span {
+
+            color: #768599;
+
+            font-size: 9px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================================
+           CTA
+        ========================================= */
+
+        .cta {
+
+            margin: 60px 8%;
+
+            min-height: 245px;
+
+            display: grid;
+
+            grid-template-columns: 1.2fr .8fr;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(8,43,87,1),
+                    rgba(8,43,87,.72)
+                ),
+                url("images/wind-cta.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+        .cta-content {
+
+            padding: 45px;
+
+            color: #fff;
+        }
+
+        .cta-content h2 {
+
+            font-size: 27px;
+
+            margin-bottom: 13px;
+        }
+
+        .cta-content p {
+
+            max-width: 600px;
+
+            color: #cad6e4;
+
+            font-size: 11px;
+
+            line-height: 1.8;
+        }
+
+        .cta-side {
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-left: 1px solid rgba(255,255,255,.13);
+        }
+
+        .cta-side strong {
+
+            display: block;
+
+            color: #54b7d5;
+
+            font-size: 21px;
+
+            margin-bottom: 7px;
+        }
+
+        .cta-side span {
+
+            color: #fff;
+
+            font-size: 9px;
+
+            letter-spacing: 1.4px;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        .footer {
+
+            min-height: 58px;
+
+            padding: 0 8%;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            background: #061f40;
+
+            color: #b9c9dc;
+
+            font-size: 9px;
+
+            letter-spacing: 1px;
+        }
+
+        .footer strong {
+            color: #54b7d5;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media(max-width:1050px) {
+
+            .component-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .om-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(3,1fr);
+            }
+
+        }
+
+
+        @media(max-width:800px) {
+
+            .hero-content {
+                width: 90%;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .intro,
+            .wind-layout,
+            .capability-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .cta {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-side {
+
+                min-height: 120px;
+
+                border-left: none;
+
+                border-top: 1px solid rgba(255,255,255,.13);
+            }
+
+        }
+
+
+        @media(max-width:600px) {
+
+            .header {
+                padding: 0 5%;
+            }
+
+            .page-no {
+                display: none;
+            }
+
+            .hero {
+                min-height: 540px;
+            }
+
+            .hero-content {
+
+                width: 94%;
+
+                padding-left: 6%;
+            }
+
+            .stats {
+
+                margin: 0;
+
+                grid-template-columns: 1fr;
+            }
+
+            .stat {
+
+                border-right: none;
+
+                border-bottom: 1px solid #e4eaf0;
+            }
+
+            .intro,
+            .services,
+            .wind-types,
+            .process,
+            .components,
+            .capabilities,
+            .om,
+            .applications {
+
+                padding-left: 6%;
+                padding-right: 6%;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .wind-list,
+            .capability-list,
+            .application-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .component-grid,
+            .om-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta {
+                margin: 40px 6%;
+            }
+
+            .footer {
+
+                padding: 15px 6%;
+
+                flex-direction: column;
+
+                gap: 8px;
+
+                justify-content: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="wind-page">
+
+
+    <!-- =========================================
+         HEADER
+    ========================================= -->
+
+    <header class="header">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                ≋
+            </div>
+
+            <div>
+
+                <h3>ENERGY SEGMENT</h3>
+
+                <span>
+                    CLEAN ENERGY • SMARTER FUTURE
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="page-no">
+            ENERGY SOLUTIONS / 02
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         HERO
+    ========================================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                Renewable Energy Generation
+            </div>
+
+            <h1>
+
+                Wind
+                <br>
+
+                <span>Energy</span>
+
+            </h1>
+
+            <p>
+
+                Harnessing the power of wind through
+                engineered generation systems that deliver
+                clean, reliable and sustainable electricity
+                for modern energy infrastructure.
+
+            </p>
+
+            <a href="#services" class="hero-btn">
+                EXPLORE WIND SOLUTIONS →
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         STATS
+    ========================================= -->
+
+    <section class="stats">
+
+
+        <div class="stat">
+
+            <div class="stat-icon">
+                ≋
+            </div>
+
+            <div>
+
+                <h4>
+                    Renewable Power
+                </h4>
+
+                <p>
+                    Harnessing naturally available wind resources.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat">
+
+            <div class="stat-icon">
+                ⚡
+            </div>
+
+            <div>
+
+                <h4>
+                    Efficient Generation
+                </h4>
+
+                <p>
+                    Optimized wind power generation systems.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat">
+
+            <div class="stat-icon">
+                ◉
+            </div>
+
+            <div>
+
+                <h4>
+                    Smart Engineering
+                </h4>
+
+                <p>
+                    Site-specific wind project engineering.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat">
+
+            <div class="stat-icon">
+                ✓
+            </div>
+
+            <div>
+
+                <h4>
+                    Lifecycle Support
+                </h4>
+
+                <p>
+                    Installation, commissioning & O&M.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         INTRO
+    ========================================= -->
+
+    <section class="intro">
+
+
+        <div>
+
+            <div class="label">
+                Wind Energy Generation
+            </div>
+
+            <h2 class="title">
+
+                Turning Wind
+                <br>
+                Into Clean Power
+
+            </h2>
+
+            <div class="line"></div>
+
+            <p class="text">
+
+                Wind energy converts the kinetic energy of
+                moving air into electrical power through
+                advanced wind turbine technology.
+
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <div class="label">
+                Our Approach
+            </div>
+
+            <h2 class="title">
+                Engineered For Reliable Generation
+            </h2>
+
+            <div class="line"></div>
+
+            <p class="text">
+
+                Our wind energy capabilities cover the project
+                lifecycle from preliminary site assessment and
+                wind resource analysis to turbine installation,
+                electrical integration, commissioning and
+                long-term maintenance.
+
+                <br><br>
+
+                Every project is planned around site conditions,
+                wind characteristics, energy requirements,
+                grid connectivity and operational efficiency.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         SERVICES
+    ========================================= -->
+
+    <section class="services" id="services">
+
+
+        <div class="section-head">
+
+            <div class="label">
+                Our Wind Energy Services
+            </div>
+
+            <h2 class="title">
+                Complete Wind Power Solutions
+            </h2>
+
+            <div class="line"></div>
+
+            <p>
+
+                From wind resource evaluation to turbine
+                installation and lifecycle support, we provide
+                integrated wind energy solutions.
+
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ≋
+                </div>
+
+                <h3>
+                    Wind Resource Assessment
+                </h3>
+
+                <p>
+
+                    Evaluation of wind speed, direction,
+                    turbulence and site characteristics to
+                    determine project feasibility.
+
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ◉
+                </div>
+
+                <h3>
+                    Wind Farm Development
+                </h3>
+
+                <p>
+
+                    Site planning, turbine positioning,
+                    infrastructure planning and project
+                    development support.
+
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ⚙
+                </div>
+
+                <h3>
+                    Turbine Installation
+                </h3>
+
+                <p>
+
+                    Installation and erection of wind turbine
+                    towers, nacelles, hubs, blades and
+                    associated systems.
+
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Electrical Integration
+                </h3>
+
+                <p>
+
+                    Electrical collection systems, cabling,
+                    transformers, switchgear and grid
+                    interconnection support.
+
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ⇄
+                </div>
+
+                <h3>
+                    Grid Connectivity
+                </h3>
+
+                <p>
+
+                    Integration of generated wind power with
+                    electrical transmission and distribution
+                    infrastructure.
+
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🛠
+                </div>
+
+                <h3>
+                    Wind Farm O&M
+                </h3>
+
+                <p>
+
+                    Preventive maintenance, inspections,
+                    troubleshooting and performance support
+                    for wind generation assets.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         WIND TYPES
+    ========================================= -->
+
+    <section class="wind-types">
+
+
+        <div class="wind-layout">
+
+
+            <div class="wind-image">
+
+                <div class="image-badge">
+
+                    <strong>
+                        WIND POWER GENERATION
+                    </strong>
+
+                    <span>
+                        ASSESSMENT • INSTALLATION • GENERATION
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="wind-content">
+
+                <div class="label">
+                    Wind Energy Capabilities
+                </div>
+
+                <h2 class="title">
+
+                    Harnessing Wind
+                    <br>
+                    At Every Scale
+
+                </h2>
+
+                <div class="line"></div>
+
+                <p>
+
+                    We support wind power projects with
+                    engineering and execution capabilities
+                    designed around site-specific wind
+                    conditions and energy requirements.
+
+                </p>
+
+
+                <div class="wind-list">
+
+                    <div class="wind-item">
+                        Onshore Wind Projects
+                    </div>
+
+                    <div class="wind-item">
+                        Wind Farm Development
+                    </div>
+
+                    <div class="wind-item">
+                        Turbine Installation
+                    </div>
+
+                    <div class="wind-item">
+                        Tower Erection
+                    </div>
+
+                    <div class="wind-item">
+                        Electrical Collection Systems
+                    </div>
+
+                    <div class="wind-item">
+                        Grid Integration
+                    </div>
+
+                    <div class="wind-item">
+                        Wind Farm Monitoring
+                    </div>
+
+                    <div class="wind-item">
+                        Wind O&M Services
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         PROJECT PROCESS
+    ========================================= -->
+
+    <section class="process">
+
+
+        <div class="process-head">
+
+            <div class="label">
+                Wind Project Lifecycle
+            </div>
+
+            <h2 class="title">
+                From Wind Assessment To Power Generation
+            </h2>
+
+            <div class="line"></div>
+
+            <p>
+
+                A systematic project execution process helps
+                ensure safe installation, reliable operation
+                and optimized energy generation.
+
+            </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+
+            <div class="process-card">
+
+                <div class="process-no">
+                    01
+                </div>
+
+                <h4>
+                    Site Assessment
+                </h4>
+
+                <p>
+                    Evaluation of terrain, accessibility and
+                    wind characteristics.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-no">
+                    02
+                </div>
+
+                <h4>
+                    Wind Analysis
+                </h4>
+
+                <p>
+                    Wind resource analysis and energy
+                    generation assessment.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-no">
+                    03
+                </div>
+
+                <h4>
+                    Project Design
+                </h4>
+
+                <p>
+                    Turbine layout, infrastructure and
+                    electrical system planning.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-no">
+                    04
+                </div>
+
+                <h4>
+                    Installation
+                </h4>
+
+                <p>
+                    Foundation, tower, turbine and
+                    electrical system installation.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-no">
+                    05
+                </div>
+
+                <h4>
+                    Commissioning
+                </h4>
+
+                <p>
+                    Testing, synchronization and
+                    performance verification.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-no">
+                    06
+                </div>
+
+                <h4>
+                    O&M Support
+                </h4>
+
+                <p>
+                    Continuous monitoring, maintenance
+                    and performance optimization.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         TURBINE COMPONENTS
+    ========================================= -->
+
+    <section class="components">
+
+
+        <div class="section-head">
+
+            <div class="label">
+                Wind Turbine Systems
+            </div>
+
+            <h2 class="title">
+                Integrated Wind Generation Architecture
+            </h2>
+
+            <div class="line"></div>
+
+            <p>
+
+                A wind turbine combines mechanical and
+                electrical systems to convert wind energy
+                into usable electrical power.
+
+            </p>
+
+        </div>
+
+
+        <div class="component-grid">
+
+
+            <div class="component">
+
+                <div class="component-number">
+                    01
+                </div>
+
+                <h4>
+                    Rotor Blades
+                </h4>
+
+                <p>
+                    Aerodynamic blades capture kinetic energy
+                    from moving wind.
+                </p>
+
+            </div>
+
+
+            <div class="component">
+
+                <div class="component-number">
+                    02
+                </div>
+
+                <h4>
+                    Hub & Rotor
+                </h4>
+
+                <p>
+                    Transfers rotational movement from blades
+                    into the turbine drivetrain.
+                </p>
+
+            </div>
+
+
+            <div class="component">
+
+                <div class="component-number">
+                    03
+                </div>
+
+                <h4>
+                    Nacelle
+                </h4>
+
+                <p>
+                    Houses key mechanical and electrical
+                    turbine equipment.
+                </p>
+
+            </div>
+
+
+            <div class="component">
+
+                <div class="component-number">
+                    04
+                </div>
+
+                <h4>
+                    Gearbox / Drive System
+                </h4>
+
+                <p>
+                    Transfers and manages rotational energy
+                    for power generation.
+                </p>
+
+            </div>
+
+
+            <div class="component">
+
+                <div class="component-number">
+                    05
+                </div>
+
+                <h4>
+                    Generator
+                </h4>
+
+                <p>
+                    Converts mechanical rotational energy
+                    into electrical energy.
+                </p>
+
+            </div>
+
+
+            <div class="component">
+
+                <div class="component-number">
+                    06
+                </div>
+
+                <h4>
+                    Tower Structure
+                </h4>
+
+                <p>
+                    Supports the turbine at an elevated
+                    position for effective wind capture.
+                </p>
+
+            </div>
+
+
+            <div class="component">
+
+                <div class="component-number">
+                    07
+                </div>
+
+                <h4>
+                    Transformer
+                </h4>
+
+                <p>
+                    Steps up generated voltage for electrical
+                    collection and transmission.
+                </p>
+
+            </div>
+
+
+            <div class="component">
+
+                <div class="component-number">
+                    08
+                </div>
+
+                <h4>
+                    Control & Monitoring
+                </h4>
+
+                <p>
+                    Monitors turbine parameters and supports
+                    safe and efficient operation.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         TECHNICAL CAPABILITIES
+    ========================================= -->
+
+    <section class="capabilities">
+
+
+        <div class="capability-layout">
+
+
+            <div class="capability-text">
+
+                <div class="label">
+                    Technical Capabilities
+                </div>
+
+                <h2 class="title">
+
+                    Engineering For
+                    <br>
+                    Maximum Wind Yield
+
+                </h2>
+
+                <div class="line"></div>
+
+                <p>
+
+                    Our technical approach focuses on site
+                    optimization, turbine performance,
+                    electrical reliability and safe project
+                    execution.
+
+                </p>
+
+            </div>
+
+
+            <div class="capability-list">
+
+
+                <div class="capability">
+
+                    <strong>
+                        Wind Resource Analysis
+                    </strong>
+
+                    <span>
+                        Assessment of wind speed, direction and
+                        resource characteristics.
+                    </span>
+
+                </div>
+
+
+                <div class="capability">
+
+                    <strong>
+                        Turbine Layout Planning
+                    </strong>
+
+                    <span>
+                        Optimized turbine positioning for
+                        effective wind utilization.
+                    </span>
+
+                </div>
+
+
+                <div class="capability">
+
+                    <strong>
+                        Foundation Planning
+                    </strong>
+
+                    <span>
+                        Site-specific foundation and structural
+                        planning support.
+                    </span>
+
+                </div>
+
+
+                <div class="capability">
+
+                    <strong>
+                        Electrical System Design
+                    </strong>
+
+                    <span>
+                        Collection, protection and grid
+                        integration systems.
+                    </span>
+
+                </div>
+
+
+                <div class="capability">
+
+                    <strong>
+                        SCADA Monitoring
+                    </strong>
+
+                    <span>
+                        Monitoring of turbine and wind farm
+                        operational parameters.
+                    </span>
+
+                </div>
+
+
+                <div class="capability">
+
+                    <strong>
+                        Performance Optimization
+                    </strong>
+
+                    <span>
+                        Monitoring and analysis focused on
+                        improved energy yield.
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         O&M
+    ========================================= -->
+
+    <section class="om">
+
+
+        <div class="section-head">
+
+            <div class="label">
+                Wind Farm Operation & Maintenance
+            </div>
+
+            <h2 class="title">
+                Keeping Wind Assets Performing
+            </h2>
+
+            <div class="line"></div>
+
+            <p>
+
+                Preventive maintenance and continuous
+                monitoring help improve turbine availability,
+                reliability and long-term performance.
+
+            </p>
+
+        </div>
+
+
+        <div class="om-grid">
+
+
+            <div class="om-card">
+
+                <span>
+                    01
+                </span>
+
+                <h4>
+                    Turbine Inspection
+                </h4>
+
+                <p>
+                    Routine inspection of turbine structures,
+                    mechanical and electrical systems.
+                </p>
+
+            </div>
+
+
+            <div class="om-card">
+
+                <span>
+                    02
+                </span>
+
+                <h4>
+                    Preventive Maintenance
+                </h4>
+
+                <p>
+                    Scheduled maintenance to reduce
+                    unexpected equipment failures.
+                </p>
+
+            </div>
+
+
+            <div class="om-card">
+
+                <span>
+                    03
+                </span>
+
+                <h4>
+                    SCADA Monitoring
+                </h4>
+
+                <p>
+                    Continuous monitoring of turbine
+                    operating parameters and performance.
+                </p>
+
+            </div>
+
+
+            <div class="om-card">
+
+                <span>
+                    04
+                </span>
+
+                <h4>
+                    Breakdown Support
+                </h4>
+
+                <p>
+                    Troubleshooting and corrective support
+                    for turbine and electrical systems.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         APPLICATIONS
+    ========================================= -->
+
+    <section class="applications">
+
+
+        <div class="section-head">
+
+            <div class="label">
+                Wind Energy Applications
+            </div>
+
+            <h2 class="title">
+                Clean Power For Multiple Sectors
+            </h2>
+
+            <div class="line"></div>
+
+        </div>
+
+
+        <div class="application-grid">
+
+
+            <div class="application">
+
+                <strong>
+                    Utility Scale Wind Farms
+                </strong>
+
+                <span>
+                    Large-scale renewable generation projects
+                    connected to the electrical grid.
+                </span>
+
+            </div>
+
+
+            <div class="application">
+
+                <strong>
+                    Industrial Power Generation
+                </strong>
+
+                <span>
+                    Renewable energy solutions supporting
+                    industrial electricity requirements.
+                </span>
+
+            </div>
+
+
+            <div class="application">
+
+                <strong>
+                    Commercial Energy Systems
+                </strong>
+
+                <span>
+                    Sustainable wind power solutions for
+                    commercial energy applications.
+                </span>
+
+            </div>
+
+
+            <div class="application">
+
+                <strong>
+                    Hybrid Renewable Systems
+                </strong>
+
+                <span>
+                    Integration of wind generation with solar
+                    and other renewable energy sources.
+                </span>
+
+            </div>
+
+
+            <div class="application">
+
+                <strong>
+                    Grid Connected Projects
+                </strong>
+
+                <span>
+                    Wind generation systems integrated with
+                    transmission and distribution networks.
+                </span>
+
+            </div>
+
+
+            <div class="application">
+
+                <strong>
+                    Sustainable Infrastructure
+                </strong>
+
+                <span>
+                    Renewable power solutions supporting
+                    long-term energy transition initiatives.
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CTA
+    ========================================= -->
+
+    <section class="cta">
+
+
+        <div class="cta-content">
+
+            <h2>
+                Let The Wind Power Tomorrow.
+            </h2>
+
+            <p>
+
+                From wind resource assessment to turbine
+                installation, electrical integration and
+                ongoing maintenance, we deliver engineered
+                solutions for dependable renewable power.
+
+            </p>
+
+        </div>
+
+
+        <div class="cta-side">
+
+            <div>
+
+                <strong>
+                    CAPTURE • CONVERT • GENERATE
+                </strong>
+
+                <span>
+                    ENGINEERED WIND ENERGY SOLUTIONS
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer class="footer">
+
+        <span>
+            CLEAN ENERGY. SMARTER FUTURE.
+        </span>
+
+        <strong>
+            WIND ENERGY GENERATION
+        </strong>
+
+    </footer>
+
+
+</div>
+
+
+</body>
+
+</html>
+```
