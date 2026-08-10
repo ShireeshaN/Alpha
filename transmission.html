@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Transmission Services | Power Segment</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #f5f8fc;
+            color: #12233f;
+        }
+
+        /* =========================
+           MAIN PAGE
+        ========================== */
+
+        .power-page {
+            width: 100%;
+            min-height: 100vh;
+            background: #ffffff;
+            overflow: hidden;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        .header {
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 7%;
+
+            background: #082b57;
+            color: white;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #f5b82e;
+            color: #082b57;
+
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .logo-text h3 {
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+
+        .logo-text span {
+            font-size: 10px;
+            color: #d6e2f1;
+        }
+
+        .page-number {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+
+        /* =========================
+           HERO SECTION
+        ========================== */
+
+        .hero {
+            min-height: 470px;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(3, 29, 61, 0.98) 0%,
+                    rgba(3, 29, 61, 0.90) 42%,
+                    rgba(3, 29, 61, 0.20) 75%
+                ),
+                url("images/transmission.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            width: 55%;
+            padding-left: 8%;
+            color: white;
+        }
+
+        .small-title {
+            display: inline-block;
+
+            padding: 7px 15px;
+            margin-bottom: 20px;
+
+            border-left: 4px solid #f5b82e;
+
+            background: rgba(255,255,255,0.08);
+
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 5vw, 72px);
+            line-height: 1.05;
+
+            text-transform: uppercase;
+
+            margin-bottom: 18px;
+        }
+
+        .hero h1 span {
+            color: #f5b82e;
+        }
+
+        .hero-description {
+            max-width: 540px;
+
+            color: #e4edf7;
+
+            font-size: 16px;
+            line-height: 1.8;
+
+            margin-bottom: 28px;
+        }
+
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            padding: 13px 22px;
+
+            background: #f5b82e;
+            color: #082b57;
+
+            text-decoration: none;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            border-radius: 3px;
+        }
+
+
+        /* =========================
+           HIGHLIGHTS
+        ========================== */
+
+        .highlights {
+            position: relative;
+            margin: -50px 7% 0;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            background: #ffffff;
+
+            box-shadow: 0 12px 35px rgba(8, 43, 87, 0.12);
+
+            z-index: 2;
+        }
+
+        .highlight {
+            min-height: 115px;
+
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            padding: 20px;
+
+            border-right: 1px solid #e5eaf0;
+        }
+
+        .highlight:last-child {
+            border-right: none;
+        }
+
+        .highlight-icon {
+            width: 45px;
+            height: 45px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #eaf2fb;
+            color: #0a4a8a;
+
+            font-size: 20px;
+        }
+
+        .highlight h4 {
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .highlight p {
+            color: #718096;
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+
+        /* =========================
+           OVERVIEW + SERVICES
+        ========================== */
+
+        .content-section {
+            padding: 85px 8% 65px;
+
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+
+            gap: 80px;
+        }
+
+        .section-label {
+            color: #f0aa00;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 34px;
+            color: #082b57;
+
+            margin-bottom: 20px;
+        }
+
+        .section-line {
+            width: 50px;
+            height: 4px;
+
+            background: #f5b82e;
+
+            margin-bottom: 25px;
+        }
+
+        .overview-text {
+            color: #607086;
+
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+
+        /* =========================
+           SERVICES LIST
+        ========================== */
+
+        .services-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 15px;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            padding: 17px;
+
+            background: #f6f9fc;
+
+            border-left: 3px solid transparent;
+
+            transition: 0.3s;
+        }
+
+        .service-item:hover {
+            border-left-color: #f5b82e;
+            background: #edf4fb;
+            transform: translateX(4px);
+        }
+
+        .check {
+            width: 25px;
+            height: 25px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #082b57;
+            color: white;
+
+            font-size: 12px;
+        }
+
+        .service-item span {
+            font-size: 12px;
+            font-weight: 600;
+            color: #263b58;
+        }
+
+
+        /* =========================
+           BOTTOM IMAGE / INFO
+        ========================== */
+
+        .bottom-section {
+            margin: 0 8% 60px;
+
+            display: grid;
+            grid-template-columns: 1fr 0.8fr;
+
+            background: #082b57;
+
+            overflow: hidden;
+        }
+
+        .bottom-content {
+            padding: 35px 40px;
+            color: white;
+        }
+
+        .bottom-content h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .bottom-content p {
+            color: #c9d8e8;
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .bottom-points {
+            display: flex;
+            gap: 25px;
+        }
+
+        .point strong {
+            display: block;
+            color: #f5b82e;
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .point small {
+            color: #dce6f0;
+            font-size: 10px;
+        }
+
+        .bottom-image {
+            min-height: 230px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #082b57 0%,
+                    rgba(8,43,87,0.15) 35%
+                ),
+                url("images/transmission-worker.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        .footer {
+            min-height: 55px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 8%;
+
+            background: #061f40;
+
+            color: #b9c9dc;
+
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+
+        .footer strong {
+            color: #f5b82e;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            .hero-content {
+                width: 80%;
+            }
+
+            .highlights {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .content-section {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .bottom-section {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .header {
+                padding: 0 5%;
+            }
+
+            .hero {
+                min-height: 500px;
+            }
+
+            .hero-content {
+                width: 90%;
+                padding-left: 7%;
+            }
+
+            .highlights {
+                margin: 0;
+                grid-template-columns: 1fr;
+            }
+
+            .highlight {
+                border-right: none;
+                border-bottom: 1px solid #e5eaf0;
+            }
+
+            .content-section {
+                padding: 55px 6%;
+            }
+
+            .services-list {
+                grid-template-columns: 1fr;
+            }
+
+            .bottom-section {
+                margin: 0 6% 40px;
+            }
+
+            .bottom-points {
+                flex-wrap: wrap;
+            }
+
+        }
+
+
+        /* =========================================
+   TRANSMISSION LINE CAPABILITIES
+========================================= */
+
+.capability-section {
+    padding: 70px 8%;
+    background: #f4f7fb;
+    position: relative;
+    overflow: hidden;
+}
+
+.capability-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.capability-header .section-label {
+    margin-bottom: 10px;
+}
+
+.capability-header .section-title {
+    margin-bottom: 15px;
+}
+
+.capability-header p {
+    color: #66758a;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* Voltage Cards */
+
+.voltage-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 12px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.voltage-card {
+    min-height: 145px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e9f1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 5px 20px rgba(8, 43, 87, 0.05);
+}
+
+.voltage-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: #f5b82e;
+}
+
+.voltage-card:hover {
+    transform: translateY(-8px);
+
+    background: #082b57;
+
+    border-color: #082b57;
+
+    box-shadow: 0 15px 30px rgba(8, 43, 87, 0.20);
+}
+
+.voltage-icon {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf2fb;
+    color: #082b57;
+
+    font-size: 19px;
+
+    margin-bottom: 12px;
+
+    transition: 0.3s;
+}
+
+.voltage-card:hover .voltage-icon {
+    background: #f5b82e;
+}
+
+.voltage-value {
+    font-size: 21px;
+    font-weight: 800;
+
+    color: #082b57;
+
+    transition: 0.3s;
+}
+
+.voltage-card:hover .voltage-value {
+    color: white;
+}
+
+.voltage-label {
+    margin-top: 5px;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    color: #718096;
+
+    transition: 0.3s;
+}
+
+.voltage-card:hover .voltage-label {
+    color: #cbd8e7;
+}
+
+
+/* =========================================
+   TRANSMISSION LINE ERECTION WORKS
+========================================= */
+
+.erection-section {
+    padding: 80px 8%;
+    background: #ffffff;
+}
+
+.erection-heading {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 70px;
+
+    align-items: end;
+
+    margin-bottom: 45px;
+}
+
+.erection-heading p {
+    color: #66758a;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* Works Grid */
+
+.works-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.work-card {
+    position: relative;
+
+    padding: 28px 25px;
+
+    min-height: 170px;
+
+    background: #f6f9fc;
+
+    border: 1px solid #e5ebf2;
+
+    overflow: hidden;
+
+    transition: all 0.3s ease;
+}
+
+.work-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 65px;
+    height: 65px;
+
+    right: -25px;
+    bottom: -25px;
+
+    border-radius: 50%;
+
+    background: rgba(245, 184, 46, 0.12);
+}
+
+.work-card:hover {
+    transform: translateY(-6px);
+
+    background: #082b57;
+
+    box-shadow: 0 15px 30px rgba(8, 43, 87, 0.15);
+}
+
+.work-number {
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    color: #e8edf3;
+
+    transition: 0.3s;
+}
+
+.work-card:hover .work-number {
+    color: rgba(255,255,255,0.12);
+}
+
+.work-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #082b57;
+
+    color: #f5b82e;
+
+    border-radius: 6px;
+
+    font-size: 18px;
+
+    margin-bottom: 18px;
+
+    transition: 0.3s;
+}
+
+.work-card:hover .work-icon {
+    background: #f5b82e;
+    color: #082b57;
+}
+
+.work-card h3 {
+    font-size: 14px;
+
+    color: #183452;
+
+    margin-bottom: 8px;
+
+    transition: 0.3s;
+}
+
+.work-card p {
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    color: #748397;
+
+    transition: 0.3s;
+}
+
+.work-card:hover h3 {
+    color: white;
+}
+
+.work-card:hover p {
+    color: #cbd8e7;
+}
+
+
+/* =========================================
+   ERECTION HIGHLIGHT BAR
+========================================= */
+
+.erection-highlight {
+    margin-top: 35px;
+
+    padding: 22px 30px;
+
+    background: #082b57;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.erection-highlight-title {
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.erection-highlight-title span {
+    color: #f5b82e;
+}
+
+.safety-badge {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #dce6f0;
+
+    font-size: 11px;
+}
+
+.safety-badge strong {
+    color: #f5b82e;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .voltage-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .works-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .voltage-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .erection-heading {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .erection-highlight {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+    </style>
+</head>
+
+
+<body>
+
+<div class="power-page">
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                ⚡
+            </div>
+
+            <div class="logo-text">
+                <h3>POWER SEGMENT</h3>
+                <span>Powering a Stronger Tomorrow</span>
+            </div>
+
+        </div>
+
+        <div class="page-number">
+            POWER SOLUTIONS / 01
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="small-title">
+                Power Infrastructure Solutions
+            </div>
+
+            <h1>
+                Transmission
+                <br>
+                <span>Services</span>
+            </h1>
+
+            <p class="hero-description">
+                Reliable and efficient power transmission solutions
+                designed to deliver electricity safely and consistently
+                across long distances.
+            </p>
+
+            <a href="#services" class="hero-btn">
+                Explore Services →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- HIGHLIGHTS -->
+
+    <section class="highlights">
+
+        <div class="highlight">
+
+            <div class="highlight-icon">
+                ⚡
+            </div>
+
+            <div>
+                <h4>Reliable Power</h4>
+                <p>Stable and efficient transmission solutions.</p>
+            </div>
+
+        </div>
+
+
+        <div class="highlight">
+
+            <div class="highlight-icon">
+                🛡
+            </div>
+
+            <div>
+                <h4>Safety First</h4>
+                <p>Safety-focused engineering and execution.</p>
+            </div>
+
+        </div>
+
+
+        <div class="highlight">
+
+            <div class="highlight-icon">
+                ⚙
+            </div>
+
+            <div>
+                <h4>Advanced Technology</h4>
+                <p>Modern systems and engineering practices.</p>
+            </div>
+
+        </div>
+
+
+        <div class="highlight">
+
+            <div class="highlight-icon">
+                ✓
+            </div>
+
+            <div>
+                <h4>Quality Assured</h4>
+                <p>Quality-controlled project execution.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- OVERVIEW + SERVICES -->
+
+    <section class="content-section">
+
+        <!-- OVERVIEW -->
+
+        <div>
+
+            <div class="section-label">
+                About Our Service
+            </div>
+
+            <h2 class="section-title">
+                Transmission
+                <br>
+                Infrastructure
+            </h2>
+
+            <div class="section-line"></div>
+
+            <p class="overview-text">
+
+                Our Transmission Services provide dependable solutions
+                for the efficient transfer of electrical power from
+                generation facilities to distribution networks.
+
+                <br><br>
+
+                We deliver complete project support covering
+                engineering, supply, installation, testing,
+                commissioning and maintenance of transmission
+                infrastructure.
+
+            </p>
+
+        </div>
+
+
+        <!-- SERVICES -->
+
+        <div id="services">
+
+            <div class="section-label">
+                What We Do
+            </div>
+
+            <h2 class="section-title">
+                Our Services
+            </h2>
+
+            <div class="section-line"></div>
+
+
+            <div class="services-list">
+
+                <div class="service-item">
+
+                    <div class="check">✓</div>
+
+                    <span>
+                        Transmission Line Design & Engineering
+                    </span>
+
+                </div>
+
+
+                <div class="service-item">
+
+                    <div class="check">✓</div>
+
+                    <span>
+                        Supply & Erection of Transmission Lines
+                    </span>
+
+                </div>
+
+
+                <div class="service-item">
+
+                    <div class="check">✓</div>
+
+                    <span>
+                        Tower Installation & Stringing
+                    </span>
+
+                </div>
+
+
+                <div class="service-item">
+
+                    <div class="check">✓</div>
+
+                    <span>
+                        High Voltage Testing
+                    </span>
+
+                </div>
+
+
+                <div class="service-item">
+
+                    <div class="check">✓</div>
+
+                    <span>
+                        Testing & Commissioning
+                    </span>
+
+                </div>
+
+
+                <div class="service-item">
+
+                    <div class="check">✓</div>
+
+                    <span>
+                        Operation & Maintenance
+                    </span>
+
+                </div>
+
+
+                <div class="service-item">
+
+                    <div class="check">✓</div>
+
+                    <span>
+                        Line Upgradation & Rehabilitation
+                    </span>
+
+                </div>
+
+
+                <div class="service-item">
+
+                    <div class="check">✓</div>
+
+                    <span>
+                        Substation Connectivity Solutions
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================================
+     TRANSMISSION LINE CAPABILITIES
+========================================= -->
+
+<section class="capability-section">
+
+    <div class="capability-header">
+
+        <div class="section-label">
+            Our Expertise
+        </div>
+
+        <h2 class="section-title">
+            Transmission Line Capabilities
+        </h2>
+
+        <div class="section-line" style="margin: 0 auto 20px;"></div>
+
+        <p>
+            Our technical capabilities cover a wide range of transmission
+            voltage levels, enabling us to execute reliable power
+            transmission infrastructure for diverse project requirements.
+        </p>
+
+    </div>
+
+
+    <div class="voltage-grid">
+
+        <!-- 11KV -->
+
+        <div class="voltage-card">
+
+            <div class="voltage-icon">
+                ⚡
+            </div>
+
+            <div class="voltage-value">
+                11kV
+            </div>
+
+            <div class="voltage-label">
+                Transmission
+            </div>
+
+        </div>
+
+
+        <!-- 33KV -->
+
+        <div class="voltage-card">
+
+            <div class="voltage-icon">
+                ⚡
+            </div>
+
+            <div class="voltage-value">
+                33kV
+            </div>
+
+            <div class="voltage-label">
+                Transmission
+            </div>
+
+        </div>
+
+
+        <!-- 66KV -->
+
+        <div class="voltage-card">
+
+            <div class="voltage-icon">
+                ⚡
+            </div>
+
+            <div class="voltage-value">
+                66kV
+            </div>
+
+            <div class="voltage-label">
+                Transmission
+            </div>
+
+        </div>
+
+
+        <!-- 110KV -->
+
+        <div class="voltage-card">
+
+            <div class="voltage-icon">
+                ⚡
+            </div>
+
+            <div class="voltage-value">
+                110kV
+            </div>
+
+            <div class="voltage-label">
+                Transmission
+            </div>
+
+        </div>
+
+
+        <!-- 220KV -->
+
+        <div class="voltage-card">
+
+            <div class="voltage-icon">
+                ⚡
+            </div>
+
+            <div class="voltage-value">
+                220kV
+            </div>
+
+            <div class="voltage-label">
+                Transmission
+            </div>
+
+        </div>
+
+
+        <!-- 400KV -->
+
+        <div class="voltage-card">
+
+            <div class="voltage-icon">
+                ⚡
+            </div>
+
+            <div class="voltage-value">
+                400kV
+            </div>
+
+            <div class="voltage-label">
+                Transmission
+            </div>
+
+        </div>
+
+
+        <!-- 765KV -->
+
+        <div class="voltage-card">
+
+            <div class="voltage-icon">
+                ⚡
+            </div>
+
+            <div class="voltage-value">
+                765kV
+            </div>
+
+            <div class="voltage-label">
+                Transmission
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     TRANSMISSION LINE ERECTION WORKS
+========================================= -->
+
+<section class="erection-section">
+
+    <div class="erection-heading">
+
+        <div>
+
+            <div class="section-label">
+                Field Execution
+            </div>
+
+            <h2 class="section-title">
+                Transmission Line
+                <br>
+                Erection Works
+            </h2>
+
+            <div class="section-line"></div>
+
+        </div>
+
+
+        <div>
+
+            <p>
+                We provide complete transmission line erection services
+                with a strong focus on engineering accuracy, safety,
+                quality and efficient project execution.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="works-grid">
+
+
+        <!-- 01 -->
+
+        <div class="work-card">
+
+            <div class="work-number">
+                01
+            </div>
+
+            <div class="work-icon">
+                ⚙
+            </div>
+
+            <h3>
+                Tower / Pole Erection
+            </h3>
+
+            <p>
+                Safe and precise erection of transmission towers
+                and poles according to approved engineering
+                specifications.
+            </p>
+
+        </div>
+
+
+        <!-- 02 -->
+
+        <div class="work-card">
+
+            <div class="work-number">
+                02
+            </div>
+
+            <div class="work-icon">
+                ↗
+            </div>
+
+            <h3>
+                Conductor Stringing
+            </h3>
+
+            <p>
+                Controlled conductor stringing using suitable
+                equipment and approved installation practices.
+            </p>
+
+        </div>
+
+
+        <!-- 03 -->
+
+        <div class="work-card">
+
+            <div class="work-number">
+                03
+            </div>
+
+            <div class="work-icon">
+                🔩
+            </div>
+
+            <h3>
+                Insulator & Hardware Fixing
+            </h3>
+
+            <p>
+                Installation and fixing of insulators, fittings
+                and transmission line hardware with precision.
+            </p>
+
+        </div>
+
+
+        <!-- 04 -->
+
+        <div class="work-card">
+
+            <div class="work-number">
+                04
+            </div>
+
+            <div class="work-icon">
+                ⇆
+            </div>
+
+            <h3>
+                Sag Tensioning
+            </h3>
+
+            <p>
+                Accurate sag and tension control to maintain
+                required conductor clearances and line performance.
+            </p>
+
+        </div>
+
+
+        <!-- 05 -->
+
+        <div class="work-card">
+
+            <div class="work-number">
+                05
+            </div>
+
+            <div class="work-icon">
+                ⌖
+            </div>
+
+            <h3>
+                Line Alignment
+            </h3>
+
+            <p>
+                Precise line alignment and route positioning
+                to ensure structural accuracy and compliance.
+            </p>
+
+        </div>
+
+
+        <!-- 06 -->
+
+        <div class="work-card">
+
+            <div class="work-number">
+                06
+            </div>
+
+            <div class="work-icon">
+                🛡
+            </div>
+
+            <h3>
+                Safety Compliance
+            </h3>
+
+            <p>
+                Strict adherence to safety procedures, site
+                requirements and applicable electrical standards.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- SAFETY HIGHLIGHT -->
+
+    <div class="erection-highlight">
+
+        <div class="erection-highlight-title">
+            <span>OUR COMMITMENT:</span>
+            Safe Execution • Quality Workmanship • Reliable Delivery
+        </div>
+
+        <div class="safety-badge">
+            🛡
+            <strong>Safety First</strong>
+            Across Every Project
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- BOTTOM SECTION -->
+
+    <section class="bottom-section">
+
+        <div class="bottom-content">
+
+            <h2>
+                Built for Reliable Power Transmission
+            </h2>
+
+            <p>
+                From engineering and installation to testing and
+                commissioning, our transmission solutions are
+                designed for long-term reliability, operational
+                safety and efficient power delivery.
+            </p>
+
+
+            <div class="bottom-points">
+
+                <div class="point">
+                    <strong>11kV+</strong>
+                    <small>Transmission Solutions</small>
+                </div>
+
+                <div class="point">
+                    <strong>24/7</strong>
+                    <small>System Reliability</small>
+                </div>
+
+                <div class="point">
+                    <strong>100%</strong>
+                    <small>Quality Focus</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="bottom-image"></div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <span>
+            POWERING PROGRESS. CONNECTING COMMUNITIES.
+        </span>
+
+        <strong>
+            TRANSMISSION SERVICES
+        </strong>
+
+    </footer>
+
+</div>
+
+</body>
+</html>

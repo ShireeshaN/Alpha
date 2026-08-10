@@ -1,0 +1,2365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Panel Boards | Power Segment</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #f5f8fc;
+            color: #12233f;
+        }
+
+        .panel-page {
+            width: 100%;
+            overflow: hidden;
+            background: #fff;
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        .header {
+            height: 75px;
+
+            padding: 0 7%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            background: #082b57;
+            color: #fff;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #f5b82e;
+            color: #082b57;
+
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .logo-text h3 {
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+
+        .logo-text span {
+            display: block;
+
+            margin-top: 2px;
+
+            color: #d7e3f1;
+
+            font-size: 9px;
+
+            letter-spacing: 1px;
+        }
+
+        .page-number {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            min-height: 500px;
+
+            display: flex;
+            align-items: center;
+
+            position: relative;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(3, 29, 61, .98) 0%,
+                    rgba(3, 29, 61, .90) 42%,
+                    rgba(3, 29, 61, .25) 85%
+                ),
+                url("images/panel-board-hero.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            width: 65%;
+            padding-left: 8%;
+            color: #fff;
+        }
+
+        .hero-label {
+            display: inline-block;
+
+            padding: 8px 15px;
+
+            margin-bottom: 20px;
+
+            border-left: 4px solid #f5b82e;
+
+            background: rgba(255, 255, 255, .08);
+
+            color: #e7edf5;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 5.5vw, 70px);
+
+            line-height: 1.03;
+
+            text-transform: uppercase;
+
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: #f5b82e;
+        }
+
+        .hero p {
+            max-width: 590px;
+
+            color: #dce6f0;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            margin-bottom: 28px;
+        }
+
+        .hero-button {
+            display: inline-block;
+
+            padding: 14px 23px;
+
+            background: #f5b82e;
+
+            color: #082b57;
+
+            text-decoration: none;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: .5px;
+
+            border-radius: 3px;
+        }
+
+
+        /* =========================================
+           HIGHLIGHTS
+        ========================================= */
+
+        .highlights {
+            position: relative;
+
+            margin: -48px 7% 0;
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            background: #fff;
+
+            box-shadow: 0 15px 35px rgba(8, 43, 87, .12);
+
+            z-index: 3;
+        }
+
+        .highlight {
+            min-height: 115px;
+
+            padding: 20px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 14px;
+
+            border-right: 1px solid #e5eaf0;
+        }
+
+        .highlight:last-child {
+            border-right: none;
+        }
+
+        .highlight-icon {
+            width: 44px;
+            height: 44px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #edf3f9;
+
+            color: #082b57;
+
+            font-size: 17px;
+        }
+
+        .highlight h4 {
+            font-size: 11px;
+
+            color: #183452;
+
+            margin-bottom: 5px;
+        }
+
+        .highlight p {
+            color: #77869a;
+
+            font-size: 9px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================================
+           INTRO
+        ========================================= */
+
+        .intro {
+            padding: 90px 8% 75px;
+
+            display: grid;
+
+            grid-template-columns: .85fr 1.15fr;
+
+            gap: 75px;
+        }
+
+        .section-label {
+            color: #d49a08;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            color: #082b57;
+
+            font-size: 34px;
+
+            line-height: 1.2;
+
+            margin-bottom: 18px;
+        }
+
+        .section-line {
+            width: 50px;
+            height: 4px;
+
+            background: #f5b82e;
+
+            margin-bottom: 24px;
+        }
+
+        .intro-text {
+            color: #68778b;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+
+        /* =========================================
+           PANEL TYPES
+        ========================================= */
+
+        .panel-types {
+            padding: 80px 8%;
+
+            background: #f3f7fb;
+        }
+
+        .section-heading {
+            max-width: 720px;
+
+            margin: 0 auto 45px;
+
+            text-align: center;
+        }
+
+        .section-heading .section-line {
+            margin: 0 auto 22px;
+        }
+
+        .section-heading p {
+            color: #6c7b8e;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+        .panel-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .panel-card {
+            min-height: 230px;
+
+            padding: 28px;
+
+            position: relative;
+
+            background: #fff;
+
+            border: 1px solid #e1e8ef;
+
+            overflow: hidden;
+
+            transition: .3s;
+        }
+
+        .panel-card::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 4px;
+
+            background: #f5b82e;
+
+            transform: scaleX(0);
+
+            transform-origin: left;
+
+            transition: .3s;
+        }
+
+        .panel-card:hover {
+            transform: translateY(-7px);
+
+            background: #082b57;
+
+            box-shadow: 0 15px 30px rgba(8, 43, 87, .14);
+        }
+
+        .panel-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .panel-icon {
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #082b57;
+
+            color: #f5b82e;
+
+            border-radius: 6px;
+
+            font-size: 18px;
+
+            margin-bottom: 20px;
+        }
+
+        .panel-card:hover .panel-icon {
+            background: #f5b82e;
+            color: #082b57;
+        }
+
+        .panel-card h3 {
+            color: #193654;
+
+            font-size: 14px;
+
+            margin-bottom: 10px;
+
+            transition: .3s;
+        }
+
+        .panel-card p {
+            color: #718096;
+
+            font-size: 10px;
+
+            line-height: 1.75;
+
+            transition: .3s;
+        }
+
+        .panel-card:hover h3 {
+            color: #fff;
+        }
+
+        .panel-card:hover p {
+            color: #cbd8e7;
+        }
+
+
+        /* =========================================
+           DISTRIBUTION SYSTEM
+        ========================================= */
+
+        .distribution-section {
+            padding: 85px 8%;
+
+            background: #fff;
+        }
+
+        .distribution-header {
+            display: flex;
+
+            justify-content: space-between;
+            align-items: flex-end;
+
+            gap: 50px;
+
+            margin-bottom: 45px;
+        }
+
+        .distribution-header p {
+            max-width: 520px;
+
+            color: #68788d;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+        .distribution-grid {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 15px;
+        }
+
+        .distribution-card {
+            min-height: 175px;
+
+            padding: 25px 20px;
+
+            background: #f6f9fc;
+
+            border: 1px solid #e3eaf1;
+
+            position: relative;
+
+            transition: .3s;
+        }
+
+        .distribution-card:hover {
+            transform: translateY(-6px);
+
+            border-color: #082b57;
+
+            box-shadow: 0 12px 25px rgba(8, 43, 87, .10);
+        }
+
+        .distribution-number {
+            position: absolute;
+
+            top: 14px;
+            right: 17px;
+
+            color: #e1e7ee;
+
+            font-size: 23px;
+
+            font-weight: 800;
+        }
+
+        .distribution-card h4 {
+            color: #183653;
+
+            font-size: 12px;
+
+            margin-bottom: 9px;
+        }
+
+        .distribution-card p {
+            color: #718095;
+
+            font-size: 10px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================================
+           BUSBAR SECTION
+        ========================================= */
+
+        .busbar-section {
+            padding: 80px 8%;
+
+            background: #f3f7fb;
+        }
+
+        .busbar-layout {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .busbar-image {
+            min-height: 390px;
+
+            position: relative;
+
+            background:
+                linear-gradient(
+                    rgba(8, 43, 87, .18),
+                    rgba(8, 43, 87, .18)
+                ),
+                url("images/busbar-panel.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+        .image-tag {
+            position: absolute;
+
+            left: 25px;
+            bottom: 25px;
+
+            padding: 15px 20px;
+
+            background: #082b57;
+
+            color: #fff;
+
+            border-left: 4px solid #f5b82e;
+        }
+
+        .image-tag strong {
+            display: block;
+
+            color: #f5b82e;
+
+            font-size: 12px;
+
+            margin-bottom: 5px;
+        }
+
+        .image-tag span {
+            color: #d2dce8;
+
+            font-size: 9px;
+        }
+
+        .busbar-content p {
+            color: #68788d;
+
+            font-size: 12px;
+
+            line-height: 1.9;
+
+            margin-bottom: 25px;
+        }
+
+        .feature-list {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 10px;
+        }
+
+        .feature {
+            padding: 13px 14px;
+
+            background: #fff;
+
+            border-left: 3px solid #f5b82e;
+
+            color: #314861;
+
+            font-size: 10px;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================================
+           DESIGN CAPABILITIES
+        ========================================= */
+
+        .capability-section {
+            padding: 80px 8%;
+
+            background: #082b57;
+
+            color: #fff;
+        }
+
+        .capability-header {
+            max-width: 700px;
+
+            margin-bottom: 45px;
+        }
+
+        .capability-header .section-label {
+            color: #f5b82e;
+        }
+
+        .capability-header .section-title {
+            color: #fff;
+        }
+
+        .capability-header p {
+            color: #c9d6e4;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+        .capability-grid {
+            display: grid;
+
+            grid-template-columns: repeat(6, 1fr);
+
+            gap: 10px;
+        }
+
+        .capability-card {
+            min-height: 175px;
+
+            padding: 23px 15px;
+
+            text-align: center;
+
+            border: 1px solid rgba(255, 255, 255, .12);
+
+            background: rgba(255, 255, 255, .04);
+
+            transition: .3s;
+        }
+
+        .capability-card:hover {
+            background: rgba(255, 255, 255, .09);
+
+            transform: translateY(-5px);
+        }
+
+        .capability-number {
+            width: 40px;
+            height: 40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0 auto 15px;
+
+            border-radius: 50%;
+
+            background: #f5b82e;
+
+            color: #082b57;
+
+            font-size: 12px;
+
+            font-weight: 800;
+        }
+
+        .capability-card h4 {
+            font-size: 10px;
+
+            margin-bottom: 8px;
+        }
+
+        .capability-card p {
+            color: #b9c8d9;
+
+            font-size: 9px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================================
+           SAFETY
+        ========================================= */
+
+        .safety-section {
+            padding: 80px 8%;
+
+            background: #fff;
+        }
+
+        .safety-grid {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 16px;
+
+            margin-top: 40px;
+        }
+
+        .safety-card {
+            padding: 25px 20px;
+
+            border: 1px solid #e2e9f0;
+
+            background: #f8fafc;
+
+            transition: .3s;
+        }
+
+        .safety-card:hover {
+            transform: translateY(-5px);
+
+            border-color: #f5b82e;
+        }
+
+        .safety-card span {
+            display: block;
+
+            color: #d69d0c;
+
+            font-size: 21px;
+
+            font-weight: 800;
+
+            margin-bottom: 12px;
+        }
+
+        .safety-card h4 {
+            color: #183653;
+
+            font-size: 12px;
+
+            margin-bottom: 7px;
+        }
+
+        .safety-card p {
+            color: #718096;
+
+            font-size: 10px;
+
+            line-height: 1.65;
+        }
+
+
+        /* =========================================
+           APPLICATIONS
+        ========================================= */
+
+        .application-section {
+            padding: 80px 8%;
+
+            background: #f3f7fb;
+        }
+
+        .application-content {
+            display: grid;
+
+            grid-template-columns: .8fr 1.2fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .application-description {
+            color: #68788d;
+
+            font-size: 12px;
+
+            line-height: 1.9;
+        }
+
+        .application-list {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 12px;
+        }
+
+        .application-item {
+            padding: 20px;
+
+            background: #fff;
+
+            border: 1px solid #e2e9f0;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .application-item::after {
+            content: "";
+
+            position: absolute;
+
+            width: 55px;
+            height: 55px;
+
+            right: -25px;
+            bottom: -25px;
+
+            border-radius: 50%;
+
+            background: rgba(245, 184, 46, .12);
+        }
+
+        .application-item strong {
+            display: block;
+
+            color: #193654;
+
+            font-size: 11px;
+
+            margin-bottom: 6px;
+        }
+
+        .application-item span {
+            color: #78879a;
+
+            font-size: 9px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================================
+           CTA
+        ========================================= */
+
+        .cta {
+            margin: 60px 8%;
+
+            min-height: 230px;
+
+            display: grid;
+
+            grid-template-columns: 1.2fr .8fr;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(8, 43, 87, 1),
+                    rgba(8, 43, 87, .72)
+                ),
+                url("images/panel-board-cta.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+        .cta-content {
+            padding: 42px;
+
+            color: #fff;
+        }
+
+        .cta-content h2 {
+            font-size: 25px;
+
+            margin-bottom: 13px;
+        }
+
+        .cta-content p {
+            max-width: 590px;
+
+            color: #cbd7e4;
+
+            font-size: 11px;
+
+            line-height: 1.8;
+        }
+
+        .cta-side {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-left: 1px solid rgba(255,255,255,.13);
+        }
+
+        .cta-side strong {
+            color: #f5b82e;
+
+            font-size: 24px;
+
+            display: block;
+
+            margin-bottom: 5px;
+        }
+
+        .cta-side span {
+            color: #fff;
+
+            font-size: 9px;
+
+            letter-spacing: 1.5px;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        .footer {
+            min-height: 55px;
+
+            padding: 0 8%;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            background: #061f40;
+
+            color: #b9c9dc;
+
+            font-size: 9px;
+
+            letter-spacing: 1px;
+        }
+
+        .footer strong {
+            color: #f5b82e;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 1050px) {
+
+            .distribution-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .safety-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .capability-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 800px) {
+
+            .hero-content {
+                width: 90%;
+            }
+
+            .highlights {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .intro,
+            .busbar-layout,
+            .application-content {
+                grid-template-columns: 1fr;
+            }
+
+            .distribution-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .cta {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-side {
+                min-height: 120px;
+
+                border-left: none;
+
+                border-top: 1px solid rgba(255,255,255,.13);
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .header {
+                padding: 0 5%;
+            }
+
+            .page-number {
+                display: none;
+            }
+
+            .hero {
+                min-height: 500px;
+            }
+
+            .hero-content {
+                width: 94%;
+                padding-left: 6%;
+            }
+
+            .highlights {
+                margin: 0;
+
+                grid-template-columns: 1fr;
+            }
+
+            .highlight {
+                border-right: none;
+
+                border-bottom: 1px solid #e5eaf0;
+            }
+
+            .intro,
+            .panel-types,
+            .distribution-section,
+            .busbar-section,
+            .capability-section,
+            .safety-section,
+            .application-section {
+                padding-left: 6%;
+                padding-right: 6%;
+            }
+
+            .panel-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .distribution-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+
+            .capability-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .safety-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .application-list {
+                grid-template-columns: 1fr;
+            }
+
+            .cta {
+                margin: 40px 6%;
+            }
+
+            .footer {
+                padding: 15px 6%;
+
+                flex-direction: column;
+
+                gap: 8px;
+
+                justify-content: center;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<div class="panel-page">
+
+
+    <!-- =========================================
+         HEADER
+    ========================================= -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                ⚡
+            </div>
+
+            <div class="logo-text">
+
+                <h3>POWER SEGMENT</h3>
+
+                <span>
+                    POWERING A STRONGER TOMORROW
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="page-number">
+            POWER SOLUTIONS / 04
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         HERO
+    ========================================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                Power Distribution & Protection
+            </div>
+
+            <h1>
+                Panel
+                <br>
+                <span>Boards</span>
+            </h1>
+
+            <p>
+
+                Reliable and application-specific panel board
+                solutions designed for efficient power distribution,
+                feeder management, electrical protection and safe
+                power delivery across industrial and commercial
+                applications.
+
+            </p>
+
+            <a href="#panel-types" class="hero-button">
+                EXPLORE PANEL SOLUTIONS →
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         HIGHLIGHTS
+    ========================================= -->
+
+    <section class="highlights">
+
+
+        <div class="highlight">
+
+            <div class="highlight-icon">
+                ⚡
+            </div>
+
+            <div>
+
+                <h4>
+                    Efficient Distribution
+                </h4>
+
+                <p>
+                    Structured power distribution and feeder management.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="highlight">
+
+            <div class="highlight-icon">
+                🛡
+            </div>
+
+            <div>
+
+                <h4>
+                    Protection
+                </h4>
+
+                <p>
+                    Integrated circuit protection for safer operation.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="highlight">
+
+            <div class="highlight-icon">
+                ⚙
+            </div>
+
+            <div>
+
+                <h4>
+                    Custom Engineering
+                </h4>
+
+                <p>
+                    Application-specific panel board configurations.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="highlight">
+
+            <div class="highlight-icon">
+                ✓
+            </div>
+
+            <div>
+
+                <h4>
+                    Quality Tested
+                </h4>
+
+                <p>
+                    Inspection and testing before final delivery.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         INTRO
+    ========================================= -->
+
+    <section class="intro">
+
+
+        <div>
+
+            <div class="section-label">
+                Panel Board Solutions
+            </div>
+
+            <h2 class="section-title">
+
+                Safe Power.
+                <br>
+                Smarter Distribution.
+
+            </h2>
+
+            <div class="section-line"></div>
+
+            <p class="intro-text">
+
+                Our panel boards are designed to distribute electrical
+                power safely and efficiently from incoming sources
+                to multiple outgoing circuits and loads.
+
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <div class="section-label">
+                Engineering Approach
+            </div>
+
+            <h2 class="section-title">
+                Built Around Your Application
+            </h2>
+
+            <div class="section-line"></div>
+
+            <p class="intro-text">
+
+                We focus on proper component selection, busbar
+                configuration, circuit protection, cable management
+                and clear identification to deliver reliable,
+                maintainable and safe electrical distribution systems.
+
+                <br><br>
+
+                Panel boards can be configured according to load
+                requirements, number of feeders, protection needs
+                and site-specific electrical architecture.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         PANEL TYPES
+    ========================================= -->
+
+    <section class="panel-types" id="panel-types">
+
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                Our Panel Board Range
+            </div>
+
+            <h2 class="section-title">
+                Distribution Panel Solutions
+            </h2>
+
+            <div class="section-line"></div>
+
+            <p>
+
+                Engineered panel boards for reliable power
+                distribution, feeder control, protection and
+                electrical system management.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="panel-grid">
+
+
+            <!-- MDB -->
+
+            <div class="panel-card">
+
+                <div class="panel-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Main Distribution Boards
+                </h3>
+
+                <p>
+
+                    Centralized distribution boards designed to
+                    receive incoming power and distribute it
+                    safely across multiple outgoing feeders.
+
+                </p>
+
+            </div>
+
+
+            <!-- SDB -->
+
+            <div class="panel-card">
+
+                <div class="panel-icon">
+                    ⇩
+                </div>
+
+                <h3>
+                    Sub Distribution Boards
+                </h3>
+
+                <p>
+
+                    Compact distribution solutions for managing
+                    power distribution across individual areas,
+                    floors, departments or equipment sections.
+
+                </p>
+
+            </div>
+
+
+            <!-- Feeder -->
+
+            <div class="panel-card">
+
+                <div class="panel-icon">
+                    ⬡
+                </div>
+
+                <h3>
+                    Feeder Pillar Panels
+                </h3>
+
+                <p>
+
+                    Outdoor and indoor feeder solutions for
+                    controlled distribution, switching and
+                    protection of electrical circuits.
+
+                </p>
+
+            </div>
+
+
+            <!-- APFC -->
+
+            <div class="panel-card">
+
+                <div class="panel-icon">
+                    ◉
+                </div>
+
+                <h3>
+                    APFC Panel Boards
+                </h3>
+
+                <p>
+
+                    Power factor correction solutions designed
+                    to improve system efficiency and optimize
+                    electrical power utilization.
+
+                </p>
+
+            </div>
+
+
+            <!-- MCC -->
+
+            <div class="panel-card">
+
+                <div class="panel-icon">
+                    ⚙
+                </div>
+
+                <h3>
+                    Motor Distribution Boards
+                </h3>
+
+                <p>
+
+                    Dedicated distribution arrangements for
+                    motor loads with suitable protection and
+                    feeder control provisions.
+
+                </p>
+
+            </div>
+
+
+            <!-- Outdoor -->
+
+            <div class="panel-card">
+
+                <div class="panel-icon">
+                    ◫
+                </div>
+
+                <h3>
+                    Outdoor Panel Boards
+                </h3>
+
+                <p>
+
+                    Robust panel board solutions designed for
+                    outdoor installations with suitable enclosure
+                    and environmental protection.
+
+                </p>
+
+            </div>
+
+
+            <!-- Metering -->
+
+            <div class="panel-card">
+
+                <div class="panel-icon">
+                    ◌
+                </div>
+
+                <h3>
+                    Metering Panels
+                </h3>
+
+                <p>
+
+                    Electrical metering arrangements for
+                    monitoring voltage, current, energy and
+                    other important operating parameters.
+
+                </p>
+
+            </div>
+
+
+            <!-- Changeover -->
+
+            <div class="panel-card">
+
+                <div class="panel-icon">
+                    ⇄
+                </div>
+
+                <h3>
+                    Changeover Panels
+                </h3>
+
+                <p>
+
+                    Manual and automatic source changeover
+                    solutions for reliable switching between
+                    electrical power sources.
+
+                </p>
+
+            </div>
+
+
+            <!-- Customized -->
+
+            <div class="panel-card">
+
+                <div class="panel-icon">
+                    ✦
+                </div>
+
+                <h3>
+                    Customized Panel Boards
+                </h3>
+
+                <p>
+
+                    Application-specific panel boards engineered
+                    according to load requirements, feeder count,
+                    protection and installation conditions.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         DISTRIBUTION SYSTEM
+    ========================================= -->
+
+    <section class="distribution-section">
+
+
+        <div class="distribution-header">
+
+            <div>
+
+                <div class="section-label">
+                    Engineering Capabilities
+                </div>
+
+                <h2 class="section-title">
+
+                    Designed for
+                    <br>
+                    Reliable Distribution
+
+                </h2>
+
+                <div class="section-line"></div>
+
+            </div>
+
+
+            <p>
+
+                Our panel board engineering approach considers
+                electrical load, feeder arrangement, protection
+                coordination, busbar sizing, cable routing and
+                accessibility for safe and reliable operation.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="distribution-grid">
+
+
+            <div class="distribution-card">
+
+                <div class="distribution-number">
+                    01
+                </div>
+
+                <h4>
+                    Incoming Power
+                </h4>
+
+                <p>
+                    Proper incoming feeder arrangement and
+                    suitable main protection provisions.
+                </p>
+
+            </div>
+
+
+            <div class="distribution-card">
+
+                <div class="distribution-number">
+                    02
+                </div>
+
+                <h4>
+                    Feeder Management
+                </h4>
+
+                <p>
+                    Organized outgoing feeders for effective
+                    circuit distribution and isolation.
+                </p>
+
+            </div>
+
+
+            <div class="distribution-card">
+
+                <div class="distribution-number">
+                    03
+                </div>
+
+                <h4>
+                    Circuit Protection
+                </h4>
+
+                <p>
+                    MCB, MCCB and other protection devices
+                    selected according to application needs.
+                </p>
+
+            </div>
+
+
+            <div class="distribution-card">
+
+                <div class="distribution-number">
+                    04
+                </div>
+
+                <h4>
+                    Electrical Metering
+                </h4>
+
+                <p>
+                    Metering and indication provisions for
+                    electrical system monitoring.
+                </p>
+
+            </div>
+
+
+            <div class="distribution-card">
+
+                <div class="distribution-number">
+                    05
+                </div>
+
+                <h4>
+                    Cable Management
+                </h4>
+
+                <p>
+                    Structured cable entry, routing and
+                    termination for easy maintenance.
+                </p>
+
+            </div>
+
+
+            <div class="distribution-card">
+
+                <div class="distribution-number">
+                    06
+                </div>
+
+                <h4>
+                    Earthing Provisions
+                </h4>
+
+                <p>
+                    Suitable earthing arrangements to support
+                    electrical safety and system protection.
+                </p>
+
+            </div>
+
+
+            <div class="distribution-card">
+
+                <div class="distribution-number">
+                    07
+                </div>
+
+                <h4>
+                    Busbar Configuration
+                </h4>
+
+                <p>
+                    Engineered busbar arrangements for
+                    effective current distribution.
+                </p>
+
+            </div>
+
+
+            <div class="distribution-card">
+
+                <div class="distribution-number">
+                    08
+                </div>
+
+                <h4>
+                    Future Expansion
+                </h4>
+
+                <p>
+                    Provision for additional feeders and
+                    future electrical system requirements.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         BUSBAR SECTION
+    ========================================= -->
+
+    <section class="busbar-section">
+
+
+        <div class="busbar-layout">
+
+
+            <div class="busbar-image">
+
+                <div class="image-tag">
+
+                    <strong>
+                        PRECISION BUSBAR ENGINEERING
+                    </strong>
+
+                    <span>
+                        Distribution • Protection • Reliability
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="busbar-content">
+
+                <div class="section-label">
+                    Busbar & Internal Arrangement
+                </div>
+
+                <h2 class="section-title">
+
+                    Organized.
+                    <br>
+                    Accessible.
+                    <br>
+                    Reliable.
+
+                </h2>
+
+                <div class="section-line"></div>
+
+                <p>
+
+                    A well-designed internal arrangement improves
+                    electrical safety, maintenance accessibility
+                    and long-term system reliability.
+
+                </p>
+
+
+                <div class="feature-list">
+
+                    <div class="feature">
+                        Copper / Aluminium Busbars
+                    </div>
+
+                    <div class="feature">
+                        Proper Busbar Supports
+                    </div>
+
+                    <div class="feature">
+                        Clear Circuit Identification
+                    </div>
+
+                    <div class="feature">
+                        Neat Internal Wiring
+                    </div>
+
+                    <div class="feature">
+                        Cable Glanding Provisions
+                    </div>
+
+                    <div class="feature">
+                        Separate Neutral & Earth
+                    </div>
+
+                    <div class="feature">
+                        Easy Maintenance Access
+                    </div>
+
+                    <div class="feature">
+                        Modular Feeder Arrangement
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         DESIGN CAPABILITIES
+    ========================================= -->
+
+    <section class="capability-section">
+
+
+        <div class="capability-header">
+
+            <div class="section-label">
+                Technical Expertise
+            </div>
+
+            <h2 class="section-title">
+                Panel Board Engineering
+            </h2>
+
+            <div class="section-line"></div>
+
+            <p>
+
+                From electrical design to final testing, every
+                panel board is developed with attention to
+                functionality, safety, accessibility and
+                application requirements.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="capability-grid">
+
+
+            <div class="capability-card">
+
+                <div class="capability-number">
+                    01
+                </div>
+
+                <h4>
+                    Load Assessment
+                </h4>
+
+                <p>
+                    Evaluation of connected and operating loads.
+                </p>
+
+            </div>
+
+
+            <div class="capability-card">
+
+                <div class="capability-number">
+                    02
+                </div>
+
+                <h4>
+                    Circuit Design
+                </h4>
+
+                <p>
+                    Structured feeder and circuit configuration.
+                </p>
+
+            </div>
+
+
+            <div class="capability-card">
+
+                <div class="capability-number">
+                    03
+                </div>
+
+                <h4>
+                    Protection
+                </h4>
+
+                <p>
+                    Appropriate protection device integration.
+                </p>
+
+            </div>
+
+
+            <div class="capability-card">
+
+                <div class="capability-number">
+                    04
+                </div>
+
+                <h4>
+                    Busbar Design
+                </h4>
+
+                <p>
+                    Efficient busbar arrangement and support.
+                </p>
+
+            </div>
+
+
+            <div class="capability-card">
+
+                <div class="capability-number">
+                    05
+                </div>
+
+                <h4>
+                    Fabrication
+                </h4>
+
+                <p>
+                    Quality enclosure assembly and fabrication.
+                </p>
+
+            </div>
+
+
+            <div class="capability-card">
+
+                <div class="capability-number">
+                    06
+                </div>
+
+                <h4>
+                    Testing
+                </h4>
+
+                <p>
+                    Inspection and functional verification.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         SAFETY & QUALITY
+    ========================================= -->
+
+    <section class="safety-section">
+
+
+        <div class="section-label">
+            Quality & Safety
+        </div>
+
+        <h2 class="section-title">
+            Built for Safe Operation
+        </h2>
+
+        <div class="section-line"></div>
+
+
+        <div class="safety-grid">
+
+
+            <div class="safety-card">
+
+                <span>
+                    01
+                </span>
+
+                <h4>
+                    Visual Inspection
+                </h4>
+
+                <p>
+                    Inspection of enclosure, components,
+                    mounting and internal workmanship.
+                </p>
+
+            </div>
+
+
+            <div class="safety-card">
+
+                <span>
+                    02
+                </span>
+
+                <h4>
+                    Wiring Verification
+                </h4>
+
+                <p>
+                    Verification of cable routing,
+                    termination and circuit identification.
+                </p>
+
+            </div>
+
+
+            <div class="safety-card">
+
+                <span>
+                    03
+                </span>
+
+                <h4>
+                    Insulation Testing
+                </h4>
+
+                <p>
+                    Insulation resistance checks to support
+                    electrical safety and reliability.
+                </p>
+
+            </div>
+
+
+            <div class="safety-card">
+
+                <span>
+                    04
+                </span>
+
+                <h4>
+                    Functional Testing
+                </h4>
+
+                <p>
+                    Verification of switching, protection
+                    and metering functions.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         APPLICATIONS
+    ========================================= -->
+
+    <section class="application-section">
+
+
+        <div class="application-content">
+
+
+            <div>
+
+                <div class="section-label">
+                    Applications
+                </div>
+
+                <h2 class="section-title">
+                    Power Distribution
+                    <br>
+                    Across Industries
+                </h2>
+
+                <div class="section-line"></div>
+
+                <p class="application-description">
+
+                    Our panel board solutions can be engineered
+                    for a wide range of electrical distribution
+                    applications across industrial,
+                    commercial and infrastructure environments.
+
+                </p>
+
+            </div>
+
+
+            <div class="application-list">
+
+
+                <div class="application-item">
+
+                    <strong>
+                        Industrial Facilities
+                    </strong>
+
+                    <span>
+                        Manufacturing plants and production facilities.
+                    </span>
+
+                </div>
+
+
+                <div class="application-item">
+
+                    <strong>
+                        Commercial Buildings
+                    </strong>
+
+                    <span>
+                        Offices, commercial complexes and facilities.
+                    </span>
+
+                </div>
+
+
+                <div class="application-item">
+
+                    <strong>
+                        Infrastructure Projects
+                    </strong>
+
+                    <span>
+                        Infrastructure and utility applications.
+                    </span>
+
+                </div>
+
+
+                <div class="application-item">
+
+                    <strong>
+                        Data & Technology
+                    </strong>
+
+                    <span>
+                        Electrical distribution for technology environments.
+                    </span>
+
+                </div>
+
+
+                <div class="application-item">
+
+                    <strong>
+                        Water & Utilities
+                    </strong>
+
+                    <span>
+                        Utility plants and essential service facilities.
+                    </span>
+
+                </div>
+
+
+                <div class="application-item">
+
+                    <strong>
+                        Renewable Energy
+                    </strong>
+
+                    <span>
+                        Distribution arrangements for renewable projects.
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CTA
+    ========================================= -->
+
+    <section class="cta">
+
+
+        <div class="cta-content">
+
+            <h2>
+                Reliable Distribution Starts Here.
+            </h2>
+
+            <p>
+
+                From compact distribution boards to customized
+                industrial panel boards, we provide engineered
+                solutions focused on safe power distribution,
+                protection and dependable performance.
+
+            </p>
+
+        </div>
+
+
+        <div class="cta-side">
+
+            <div>
+
+                <strong>
+                    DISTRIBUTE • PROTECT • POWER
+                </strong>
+
+                <span>
+                    ENGINEERED PANEL BOARD SOLUTIONS
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer class="footer">
+
+        <span>
+            POWERING PROGRESS. CONNECTING COMMUNITIES.
+        </span>
+
+        <strong>
+            PANEL BOARDS
+        </strong>
+
+    </footer>
+
+
+</div>
+
+</body>
+
+</html>
