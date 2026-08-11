@@ -11173,7 +11173,6 @@ body {
 
 .about-section {
     position: relative;
-
     width: 100%;
     min-height: 620px;
 
@@ -11185,30 +11184,35 @@ body {
 
     overflow: hidden;
 
-    background-image: url("assets/img/banners/about-page-banner-1935x813.jpg");
+    background-image: url("../assets/img/all.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 }
 
-/* Dark gradient for readable content */
+
+/* =================================
+   DARK OVERLAY
+================================= */
 
 .about-overlay {
     position: absolute;
     inset: 0;
     z-index: 1;
 
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.95) 0%,
-            rgba(0, 0, 0, 0.83) 28%,
-            rgba(0, 0, 0, 0.35) 55%,
-            rgba(0, 0, 0, 0.05) 100%
-        );
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.95) 0%,
+        rgba(0, 0, 0, 0.82) 30%,
+        rgba(0, 0, 0, 0.45) 60%,
+        rgba(0, 0, 0, 0.15) 100%
+    );
 }
 
-/* Full-width content container */
+
+/* =================================
+   CONTAINER
+================================= */
 
 .about-container {
     position: relative;
@@ -11217,17 +11221,135 @@ body {
     width: 100%;
     min-height: 620px;
 
-    padding-right: clamp(24px, 6vw, 110px);
-    padding-left: clamp(24px, 6vw, 110px);
+    padding-left: clamp(30px, 7vw, 120px);
+    padding-right: clamp(30px, 7vw, 120px);
 }
 
-/* Content */
+
+/* =================================
+   ROW
+================================= */
+
+.about-container .row {
+    min-height: 620px;
+}
+
+
+/* =================================
+   LEFT SIDE
+   PARAGRAPH + BUTTON
+================================= */
 
 .about-content {
-    max-width: 650px;
-    padding: 80px 0;
+    width: 100%;
+    max-width: 520px;
+
+    padding: 40px 40px 40px 0;
+
     color: #ffffff;
 }
+
+
+/* Paragraph */
+
+.about-content p {
+    max-width: 500px;
+
+    margin: 0 0 38px;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: clamp(16px, 1.25vw, 19px);
+    font-weight: 400;
+
+    line-height: 1.75;
+}
+
+
+/* =================================
+   BUTTON
+================================= */
+
+.about-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    padding: 15px 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.20);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.1em;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* Arrow */
+
+.about-button span {
+    display: inline-flex;
+
+    font-size: 20px;
+    line-height: 1;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* Hover */
+
+.about-button:hover {
+    color: #071011;
+
+    background: #58c9c0;
+
+    border-color: #58c9c0;
+
+    transform: translateY(-2px);
+}
+
+.about-button:hover span {
+    transform: translate(3px, -3px);
+}
+
+
+/* =================================
+   RIGHT SIDE
+   HEADING
+================================= */
+
+.about-heading {
+    width: 100%;
+    max-width: 700px;
+
+    margin-left: auto;
+
+    padding: 40px 0 40px 50px;
+
+    color: #ffffff;
+}
+
+
+/* About label */
 
 .about-label {
     display: inline-block;
@@ -11238,99 +11360,134 @@ body {
 
     font-size: 13px;
     font-weight: 600;
+
     letter-spacing: 0.2em;
 }
 
-.about-content h2 {
-    margin: 0 0 28px;
+
+/* Main heading */
+
+.about-heading h2 {
+    margin: 0;
 
     color: #ffffff;
 
-    font-size: clamp(42px, 4.5vw, 74px);
+    font-size: clamp(42px, 5vw, 76px);
+
     font-weight: 400;
-    line-height: 1;
+
+    line-height: 1.02;
+
     letter-spacing: -0.045em;
 }
 
-.about-content p {
-    max-width: 560px;
 
-    margin: 0 0 38px;
+/* =================================
+   DESKTOP ALIGNMENT
+================================= */
 
-    color: rgba(255, 255, 255, 0.7);
+@media (min-width: 992px) {
 
-    font-size: clamp(16px, 1.2vw, 19px);               
-    line-height: 1.7;
+    .about-content {
+        margin-right: auto;
+    }
+
+    .about-heading {
+        margin-left: auto;
+    }
+
 }
 
-/* Button */
-
-.about-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 20px;
-
-    padding: 15px 22px;
-
-    border: 1px solid rgba(255, 255, 255, 0.45);
-
-    color: #ffffff;
-    background: rgba(0, 0, 0, 0.25);
-
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    backdrop-filter: blur(8px);
-
-    transition:
-        color 250ms ease,
-        background-color 250ms ease,
-        border-color 250ms ease;
-}
-
-.about-button span {
-    font-size: 20px;
-    line-height: 1;
-}
-
-.about-button:hover {
-    border-color: #58c9c0;
-    color: #071011;
-    background: #58c9c0;
-}
 
 /* =================================
    TABLET
 ================================= */
 
-@media (max-width: 991.98px) {
-    .about-section,
-    .about-container {
-        min-height: 600px;
-    }
+@media (max-width: 991px) {
 
     .about-section {
-        background-position: 62% center;
+        min-height: auto;
     }
 
-    .about-overlay {
-        background:
-            linear-gradient(
-                90deg,
-                rgba(0, 0, 0, 0.93) 0%,
-                rgba(0, 0, 0, 0.74) 55%,
-                rgba(0, 0, 0, 0.18) 100%
-            );
+    .about-container {
+        min-height: auto;
+
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .about-container .row {
+        min-height: auto;
     }
 
     .about-content {
-        padding: 70px 0;
+        max-width: 600px;
+
+        padding: 70px 0 25px;
     }
+
+    .about-heading {
+        max-width: 700px;
+
+        margin-left: 0;
+
+        padding: 25px 0 70px;
+    }
+
+    .about-heading h2 {
+        font-size: clamp(42px, 8vw, 64px);
+    }
+
 }
 
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 575px) {
+
+    .about-container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .about-content {
+        padding-top: 55px;
+        padding-bottom: 20px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+        line-height: 1.65;
+
+        margin-bottom: 30px;
+    }
+
+    .about-heading {
+        padding-top: 20px;
+        padding-bottom: 55px;
+    }
+
+    .about-label {
+        margin-bottom: 20px;
+
+        font-size: 11px;
+    }
+
+    .about-heading h2 {
+        font-size: clamp(40px, 12vw, 56px);
+
+        line-height: 1.03;
+    }
+
+    .about-button {
+        padding: 14px 18px;
+
+        font-size: 11px;
+    }
+
+}
 /* =================================
    MOBILE
 ================================= */
