@@ -1,0 +1,2782 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hospital Automation | Smart Healthcare Solutions</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Manrope",sans-serif;
+    background:#f5f8f7;
+    color:#182523;
+}
+
+a{
+    text-decoration:none;
+}
+
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+.navbar{
+    height:82px;
+    padding:0 7%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:#fff;
+    border-bottom:1px solid #e3e9e6;
+
+    position:relative;
+    z-index:20;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-mark{
+    width:42px;
+    height:42px;
+
+    background:#183a35;
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:4px;
+
+    font-size:20px;
+}
+
+.logo-text strong{
+    display:block;
+
+    font-size:14px;
+    letter-spacing:1.5px;
+}
+
+.logo-text span{
+    display:block;
+
+    margin-top:3px;
+
+    color:#84928d;
+
+    font-size:7px;
+    letter-spacing:1.7px;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.nav-links a{
+    color:#61706b;
+
+    font-size:10px;
+    font-weight:600;
+}
+
+.nav-links a:hover{
+    color:#183a35;
+}
+
+.nav-contact{
+    padding:12px 20px;
+
+    background:#183a35;
+
+    color:#fff !important;
+
+    border-radius:3px;
+}
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero{
+    min-height:670px;
+
+    padding:75px 7%;
+
+    display:grid;
+    grid-template-columns:46% 54%;
+
+    align-items:center;
+
+    background:#f5f8f7;
+}
+
+.hero-content{
+    padding-right:55px;
+}
+
+.eyebrow{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    margin-bottom:20px;
+
+    color:#5c8178;
+
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:2.5px;
+}
+
+.eyebrow::before{
+    content:"";
+
+    width:28px;
+    height:2px;
+
+    background:#5c8178;
+}
+
+.hero h1{
+    font-size:clamp(48px,5.4vw,76px);
+
+    line-height:1;
+
+    letter-spacing:-3.5px;
+
+    margin-bottom:28px;
+}
+
+.hero h1 span{
+    color:#5d8379;
+}
+
+.hero-description{
+    max-width:525px;
+
+    color:#71807b;
+
+    font-size:12px;
+    line-height:1.9;
+
+    margin-bottom:32px;
+}
+
+.buttons{
+    display:flex;
+    gap:12px;
+}
+
+.btn-primary{
+    padding:15px 25px;
+
+    background:#183a35;
+    color:#fff;
+
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:1px;
+
+    border-radius:3px;
+}
+
+.btn-secondary{
+    padding:14px 23px;
+
+    border:1px solid #ccd8d4;
+
+    color:#40534e;
+
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:1px;
+
+    border-radius:3px;
+}
+
+
+/* =====================================
+   HOSPITAL VISUAL
+===================================== */
+
+.hero-visual{
+    height:500px;
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.hospital{
+    width:82%;
+    height:390px;
+
+    position:relative;
+
+    background:#fff;
+
+    border:1px solid #dce6e2;
+
+    border-radius:6px;
+
+    overflow:hidden;
+
+    box-shadow:0 25px 60px rgba(24,58,53,.12);
+}
+
+.hospital-top{
+    height:58px;
+
+    background:#e9f1ee;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 25px;
+
+    border-bottom:1px solid #d4e0dc;
+}
+
+.hospital-cross{
+    width:34px;
+    height:34px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#183a35;
+    color:#fff;
+
+    border-radius:4px;
+
+    font-size:19px;
+    font-weight:700;
+}
+
+.hospital-name{
+    margin-left:12px;
+
+    color:#49635c;
+
+    font-size:8px;
+    font-weight:800;
+
+    letter-spacing:1.5px;
+}
+
+.hospital-body{
+    height:332px;
+
+    display:grid;
+    grid-template-columns:30% 70%;
+}
+
+.hospital-sidebar{
+    padding:20px;
+
+    background:#f2f6f4;
+
+    border-right:1px solid #dce6e2;
+}
+
+.side-line{
+    height:10px;
+
+    margin-bottom:15px;
+
+    background:#d6e2de;
+
+    border-radius:2px;
+}
+
+.side-line.active{
+    width:80%;
+
+    background:#71938a;
+}
+
+.hospital-main{
+    padding:25px;
+}
+
+.monitor-row{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:10px;
+
+    margin-bottom:18px;
+}
+
+.monitor{
+    padding:15px;
+
+    background:#f2f6f4;
+
+    border:1px solid #dce6e2;
+
+    border-radius:3px;
+}
+
+.monitor small{
+    display:block;
+
+    color:#879791;
+
+    font-size:6px;
+    letter-spacing:1px;
+
+    margin-bottom:8px;
+}
+
+.monitor strong{
+    font-size:15px;
+}
+
+.monitor-status{
+    display:flex;
+    align-items:center;
+
+    gap:5px;
+
+    margin-top:6px;
+
+    color:#668a80;
+
+    font-size:6px;
+}
+
+.monitor-status i{
+    width:5px;
+    height:5px;
+
+    background:#668a80;
+
+    border-radius:50%;
+}
+
+.patient-panel{
+    padding:18px;
+
+    background:#edf3f0;
+
+    border:1px solid #dce6e2;
+
+    border-radius:3px;
+}
+
+.patient-header{
+    display:flex;
+    justify-content:space-between;
+
+    margin-bottom:15px;
+
+    color:#64756f;
+
+    font-size:7px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.patient-bars{
+    display:grid;
+
+    gap:9px;
+}
+
+.patient-bar{
+    height:9px;
+
+    background:#d5e0dc;
+
+    border-radius:2px;
+}
+
+.patient-bar:nth-child(1){
+    width:90%;
+}
+
+.patient-bar:nth-child(2){
+    width:70%;
+}
+
+.patient-bar:nth-child(3){
+    width:82%;
+}
+
+.patient-bar:nth-child(4){
+    width:55%;
+}
+
+
+/* Floating cards */
+
+.floating-card{
+    position:absolute;
+
+    background:#fff;
+
+    padding:17px;
+
+    border-radius:5px;
+
+    box-shadow:0 15px 40px rgba(24,58,53,.13);
+}
+
+.floating-card small{
+    display:block;
+
+    color:#899691;
+
+    font-size:7px;
+
+    letter-spacing:1px;
+
+    margin-bottom:8px;
+}
+
+.floating-card strong{
+    font-size:11px;
+}
+
+.card-status{
+    display:flex;
+    align-items:center;
+
+    gap:6px;
+
+    margin-top:8px;
+
+    color:#63867d;
+
+    font-size:7px;
+}
+
+.card-status i{
+    width:6px;
+    height:6px;
+
+    background:#63867d;
+
+    border-radius:50%;
+}
+
+.card-bms{
+    left:0;
+    top:65px;
+}
+
+.card-hvac{
+    right:0;
+    bottom:60px;
+}
+
+.hvac-value{
+    display:flex;
+    align-items:end;
+    gap:3px;
+
+    margin-top:7px;
+}
+
+.hvac-value strong{
+    font-size:21px;
+}
+
+.hvac-value span{
+    color:#87948f;
+
+    font-size:7px;
+
+    margin-bottom:4px;
+}
+
+
+/* =====================================
+   FEATURE STRIP
+===================================== */
+
+.feature-strip{
+    background:#183a35;
+
+    padding:0 7%;
+}
+
+.feature-inner{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.feature{
+    padding:31px 25px;
+
+    border-right:1px solid rgba(255,255,255,.14);
+}
+
+.feature:last-child{
+    border-right:none;
+}
+
+.feature strong{
+    display:block;
+
+    color:#fff;
+
+    font-size:20px;
+
+    margin-bottom:6px;
+}
+
+.feature span{
+    color:#b1c2bd;
+
+    font-size:8px;
+
+    letter-spacing:1px;
+}
+
+
+/* =====================================
+   COMMON
+===================================== */
+
+.section{
+    padding:110px 7%;
+}
+
+.white{
+    background:#fff;
+}
+
+.section-label{
+    color:#60837a;
+
+    font-size:9px;
+    font-weight:800;
+
+    letter-spacing:2.5px;
+
+    margin-bottom:15px;
+}
+
+.section-title{
+    max-width:750px;
+
+    font-size:43px;
+
+    line-height:1.12;
+
+    letter-spacing:-1.7px;
+
+    margin-bottom:18px;
+}
+
+.section-text{
+    max-width:680px;
+
+    color:#74817d;
+
+    font-size:11px;
+
+    line-height:1.9;
+}
+
+
+/* =====================================
+   SMART HOSPITAL SYSTEM
+===================================== */
+
+.smart-system{
+    margin-top:65px;
+
+    display:grid;
+
+    grid-template-columns:35% 65%;
+
+    gap:60px;
+}
+
+.system-left{
+    padding-right:20px;
+}
+
+.system-left h3{
+    font-size:22px;
+
+    line-height:1.3;
+
+    margin-bottom:15px;
+}
+
+.system-left p{
+    color:#788580;
+
+    font-size:10px;
+    line-height:1.9;
+}
+
+.system-right{
+    display:flex;
+    flex-direction:column;
+
+    gap:10px;
+}
+
+.system-layer{
+    display:grid;
+
+    grid-template-columns:150px 1fr;
+
+    min-height:90px;
+
+    border:1px solid #dce5e2;
+
+    background:#f5f8f6;
+}
+
+.layer-title{
+    display:flex;
+    align-items:center;
+
+    padding:20px;
+
+    background:#183a35;
+
+    color:#fff;
+
+    font-size:9px;
+    font-weight:800;
+
+    letter-spacing:1px;
+}
+
+.layer-items{
+    padding:18px 24px;
+
+    display:flex;
+    align-items:center;
+
+    gap:9px;
+
+    flex-wrap:wrap;
+}
+
+.layer-tag{
+    padding:9px 12px;
+
+    background:#fff;
+
+    border:1px solid #dfe7e4;
+
+    color:#596a64;
+
+    font-size:8px;
+
+    border-radius:2px;
+}
+
+
+/* =====================================
+   AUTOMATION SERVICES
+===================================== */
+
+.services{
+    background:#f2f6f4;
+}
+
+.service-grid{
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+}
+
+.service{
+    min-height:300px;
+
+    padding:28px;
+
+    background:#fff;
+
+    position:relative;
+
+    border-radius:5px;
+
+    transition:.3s;
+}
+
+.service:hover{
+    transform:translateY(-6px);
+
+    box-shadow:0 20px 45px rgba(24,58,53,.08);
+}
+
+.service-number{
+    color:#a1afaa;
+
+    font-size:8px;
+
+    letter-spacing:1.5px;
+
+    margin-bottom:45px;
+}
+
+.service-icon{
+    width:48px;
+    height:48px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#eaf1ee;
+
+    color:#52756c;
+
+    font-size:18px;
+
+    margin-bottom:18px;
+
+    border-radius:4px;
+}
+
+.service h3{
+    font-size:13px;
+
+    margin-bottom:9px;
+}
+
+.service p{
+    color:#7a8782;
+
+    font-size:9px;
+
+    line-height:1.8;
+}
+
+.service-arrow{
+    position:absolute;
+
+    right:25px;
+    bottom:22px;
+
+    color:#64877d;
+}
+
+
+/* =====================================
+   HOSPITAL SYSTEMS
+===================================== */
+
+.systems-section{
+    background:#183a35;
+
+    color:#fff;
+}
+
+.systems-section .section-label{
+    color:#b5ccc5;
+}
+
+.systems-section .section-text{
+    color:#b4c4bf;
+}
+
+.systems-grid{
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:1px;
+
+    background:rgba(255,255,255,.14);
+}
+
+.system-card{
+    min-height:270px;
+
+    padding:27px;
+
+    background:#1e453f;
+
+    position:relative;
+}
+
+.system-number{
+    color:#92ada5;
+
+    font-size:8px;
+
+    letter-spacing:1px;
+}
+
+.system-card h3{
+    margin-top:55px;
+
+    font-size:14px;
+}
+
+.system-card p{
+    margin-top:10px;
+
+    color:#b1c3bd;
+
+    font-size:9px;
+
+    line-height:1.8;
+}
+
+.system-card-icon{
+    position:absolute;
+
+    right:25px;
+    top:25px;
+
+    width:38px;
+    height:38px;
+
+    border:1px solid rgba(255,255,255,.18);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#c5d7d1;
+
+    border-radius:3px;
+}
+
+
+/* =====================================
+   CONTROL ROOM
+===================================== */
+
+.control-room{
+    background:#fff;
+}
+
+.control-layout{
+    margin-top:65px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:16px;
+}
+
+.control-box{
+    min-height:390px;
+
+    padding:30px;
+
+    background:#f2f6f4;
+
+    border:1px solid #dce5e2;
+
+    border-radius:4px;
+}
+
+.control-box h3{
+    font-size:22px;
+
+    margin-bottom:10px;
+}
+
+.control-box > p{
+    color:#7a8782;
+
+    font-size:9px;
+
+    line-height:1.8;
+}
+
+
+/* BMS dashboard */
+
+.dashboard{
+    margin-top:30px;
+
+    padding:18px;
+
+    background:#fff;
+
+    border:1px solid #dce5e2;
+}
+
+.dashboard-header{
+    display:flex;
+
+    justify-content:space-between;
+
+    padding-bottom:14px;
+
+    border-bottom:1px solid #e1e8e5;
+
+    color:#657770;
+
+    font-size:7px;
+
+    letter-spacing:1px;
+}
+
+.dashboard-grid{
+    margin-top:18px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:8px;
+}
+
+.dashboard-item{
+    padding:13px;
+
+    background:#edf3f0;
+
+    border:1px solid #e0e8e4;
+}
+
+.dashboard-item small{
+    display:block;
+
+    color:#899791;
+
+    font-size:6px;
+
+    margin-bottom:6px;
+}
+
+.dashboard-item strong{
+    font-size:14px;
+}
+
+.dashboard-item span{
+    display:block;
+
+    margin-top:5px;
+
+    color:#63877d;
+
+    font-size:6px;
+}
+
+
+/* Hospital room */
+
+.room{
+    margin-top:30px;
+
+    height:190px;
+
+    position:relative;
+
+    background:#fff;
+
+    border:1px solid #dce5e2;
+}
+
+.room-bed{
+    position:absolute;
+
+    left:15%;
+    top:45%;
+
+    width:48%;
+    height:45px;
+
+    background:#e8efec;
+
+    border:1px solid #cfdcd7;
+}
+
+.room-pillow{
+    position:absolute;
+
+    left:18%;
+    top:40%;
+
+    width:14%;
+    height:27px;
+
+    background:#d9e5e0;
+
+    border-radius:3px;
+}
+
+.room-monitor{
+    position:absolute;
+
+    right:13%;
+    top:25%;
+
+    width:55px;
+    height:75px;
+
+    border:5px solid #c7d5d0;
+
+    background:#edf3f0;
+}
+
+.room-monitor::after{
+    content:"";
+
+    position:absolute;
+
+    width:26px;
+    height:2px;
+
+    left:10px;
+    top:31px;
+
+    background:#6c9186;
+
+    transform:rotate(-12deg);
+}
+
+.room-light{
+    position:absolute;
+
+    left:20%;
+    top:15%;
+
+    width:55%;
+
+    height:5px;
+
+    background:#dce6e2;
+
+    border-radius:10px;
+}
+
+
+/* =====================================
+   BENEFITS
+===================================== */
+
+.benefits{
+    background:#f4f7f5;
+}
+
+.benefit-grid{
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+}
+
+.benefit{
+    min-height:210px;
+
+    padding:30px;
+
+    background:#fff;
+
+    border-left:3px solid #6b8d84;
+
+    border-radius:4px;
+}
+
+.benefit span{
+    color:#899791;
+
+    font-size:8px;
+
+    letter-spacing:1px;
+}
+
+.benefit h3{
+    margin-top:40px;
+
+    font-size:17px;
+}
+
+.benefit p{
+    margin-top:9px;
+
+    max-width:450px;
+
+    color:#788580;
+
+    font-size:9px;
+
+    line-height:1.8;
+}
+
+
+/* =====================================
+   PROCESS
+===================================== */
+
+.process{
+    background:#fff;
+}
+
+.process-grid{
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+}
+
+.process-step{
+    min-height:220px;
+
+    padding:25px;
+
+    border-top:1px solid #cfdad6;
+
+    border-right:1px solid #cfdad6;
+}
+
+.process-step:last-child{
+    border-right:none;
+}
+
+.step-circle{
+    width:36px;
+    height:36px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid #aebcb7;
+
+    color:#5e8077;
+
+    font-size:8px;
+    font-weight:800;
+
+    border-radius:50%;
+
+    margin-bottom:35px;
+}
+
+.process-step h3{
+    font-size:11px;
+
+    margin-bottom:9px;
+}
+
+.process-step p{
+    color:#788580;
+
+    font-size:8px;
+
+    line-height:1.8;
+}
+
+
+/* =====================================
+   CTA
+===================================== */
+
+.cta{
+    padding:100px 7%;
+
+    background:#6b8d84;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:space-between;
+    align-items:center;
+
+    gap:50px;
+}
+
+.cta .section-label{
+    color:#d9e5e1;
+}
+
+.cta h2{
+    font-size:43px;
+
+    line-height:1.08;
+
+    letter-spacing:-1.5px;
+
+    margin-bottom:15px;
+}
+
+.cta p{
+    max-width:570px;
+
+    color:#d6e2de;
+
+    font-size:10px;
+
+    line-height:1.8;
+}
+
+.cta-button{
+    flex-shrink:0;
+
+    padding:17px 28px;
+
+    background:#183a35;
+
+    color:#fff;
+
+    border-radius:3px;
+
+    font-size:9px;
+    font-weight:800;
+
+    letter-spacing:1px;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer{
+    padding:28px 7%;
+
+    background:#10201d;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    color:#899994;
+
+    font-size:8px;
+
+    letter-spacing:1px;
+}
+
+.footer strong{
+    color:#fff;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media(max-width:1050px){
+
+    .nav-links a:not(.nav-contact){
+        display:none;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+    }
+
+    .hero-content{
+        padding-right:0;
+
+        margin-bottom:55px;
+    }
+
+    .smart-system{
+        grid-template-columns:1fr;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .systems-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .process-step{
+        border-bottom:1px solid #cfdad6;
+    }
+
+}
+
+
+@media(max-width:650px){
+
+    .navbar{
+        padding:0 5%;
+    }
+
+    .hero,
+    .section,
+    .cta{
+        padding-left:6%;
+        padding-right:6%;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .hero-visual{
+        height:400px;
+    }
+
+    .hospital{
+        width:88%;
+        height:330px;
+    }
+
+    .floating-card{
+        width:135px;
+
+        padding:12px;
+    }
+
+    .feature-inner{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .feature{
+        border-bottom:1px solid rgba(255,255,255,.12);
+    }
+
+    .section-title,
+    .cta h2{
+        font-size:32px;
+    }
+
+    .smart-system,
+    .control-layout{
+        grid-template-columns:1fr;
+    }
+
+    .service-grid,
+    .systems-grid,
+    .benefit-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-step{
+        border-right:none;
+    }
+
+    .cta{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .footer{
+        flex-direction:column;
+
+        gap:10px;
+
+        text-align:center;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================
+     NAVBAR
+===================================== -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-mark">
+            +
+        </div>
+
+        <div class="logo-text">
+
+            <strong>YOUR COMPANY</strong>
+
+            <span>SMART HEALTHCARE AUTOMATION</span>
+
+        </div>
+
+    </div>
+
+
+    <nav class="nav-links">
+
+        <a href="#overview">Overview</a>
+
+        <a href="#solutions">Solutions</a>
+
+        <a href="#systems">Systems</a>
+
+        <a href="#process">Process</a>
+
+        <a href="#contact" class="nav-contact">
+            Contact Us
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================
+     HERO
+===================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            Hospital Automation
+        </div>
+
+
+        <h1>
+
+            Smarter
+            <br>
+
+            Hospitals.
+            <br>
+
+            <span>Better Care.</span>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            Intelligent hospital automation solutions
+            connecting building systems, patient areas,
+            energy management, safety and critical
+            infrastructure into one coordinated environment.
+
+        </p>
+
+
+        <div class="buttons">
+
+            <a href="#solutions" class="btn-primary">
+                EXPLORE SOLUTIONS
+            </a>
+
+            <a href="#contact" class="btn-secondary">
+                PLAN YOUR PROJECT
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Hospital Visual -->
+
+    <div class="hero-visual">
+
+
+        <div class="hospital">
+
+
+            <div class="hospital-top">
+
+                <div class="hospital-cross">
+                    +
+                </div>
+
+                <div class="hospital-name">
+                    SMART HOSPITAL CONTROL
+                </div>
+
+            </div>
+
+
+            <div class="hospital-body">
+
+
+                <div class="hospital-sidebar">
+
+                    <div class="side-line active"></div>
+                    <div class="side-line"></div>
+                    <div class="side-line"></div>
+                    <div class="side-line"></div>
+                    <div class="side-line"></div>
+
+                </div>
+
+
+                <div class="hospital-main">
+
+
+                    <div class="monitor-row">
+
+
+                        <div class="monitor">
+
+                            <small>
+                                HVAC
+                            </small>
+
+                            <strong>
+                                22.4°
+                            </strong>
+
+                            <div class="monitor-status">
+                                <i></i>
+                                OPTIMAL
+                            </div>
+
+                        </div>
+
+
+                        <div class="monitor">
+
+                            <small>
+                                POWER
+                            </small>
+
+                            <strong>
+                                98.2%
+                            </strong>
+
+                            <div class="monitor-status">
+                                <i></i>
+                                NORMAL
+                            </div>
+
+                        </div>
+
+
+                        <div class="monitor">
+
+                            <small>
+                                AIR QUALITY
+                            </small>
+
+                            <strong>
+                                GOOD
+                            </strong>
+
+                            <div class="monitor-status">
+                                <i></i>
+                                MONITORED
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="patient-panel">
+
+                        <div class="patient-header">
+
+                            <span>
+                                PATIENT AREA
+                            </span>
+
+                            <span>
+                                LIVE
+                            </span>
+
+                        </div>
+
+
+                        <div class="patient-bars">
+
+                            <div class="patient-bar"></div>
+                            <div class="patient-bar"></div>
+                            <div class="patient-bar"></div>
+                            <div class="patient-bar"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="floating-card card-bms">
+
+            <small>
+                BUILDING MANAGEMENT
+            </small>
+
+            <strong>
+                BMS CONNECTED
+            </strong>
+
+            <div class="card-status">
+
+                <i></i>
+
+                ALL SYSTEMS ACTIVE
+
+            </div>
+
+        </div>
+
+
+        <div class="floating-card card-hvac">
+
+            <small>
+                CRITICAL HVAC
+            </small>
+
+            <div class="hvac-value">
+
+                <strong>
+                    22.4
+                </strong>
+
+                <span>
+                    °C
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     FEATURE STRIP
+===================================== -->
+
+<section class="feature-strip">
+
+    <div class="feature-inner">
+
+
+        <div class="feature">
+
+            <strong>
+                BMS
+            </strong>
+
+            <span>
+                BUILDING MANAGEMENT
+            </span>
+
+        </div>
+
+
+        <div class="feature">
+
+            <strong>
+                HVAC
+            </strong>
+
+            <span>
+                CLIMATE CONTROL
+            </span>
+
+        </div>
+
+
+        <div class="feature">
+
+            <strong>
+                EMS
+            </strong>
+
+            <span>
+                ENERGY MONITORING
+            </span>
+
+        </div>
+
+
+        <div class="feature">
+
+            <strong>
+                SAFETY
+            </strong>
+
+            <span>
+                SECURITY & FIRE SYSTEMS
+            </span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     OVERVIEW
+===================================== -->
+
+<section class="section white" id="overview">
+
+
+    <div class="section-label">
+        SMART HOSPITAL ARCHITECTURE
+    </div>
+
+
+    <h2 class="section-title">
+
+        One Connected
+        <br>
+
+        Healthcare Environment.
+
+    </h2>
+
+
+    <p class="section-text">
+
+        Our hospital automation solutions bring
+        building systems, critical infrastructure
+        and operational monitoring together to create
+        a safer, more efficient and responsive healthcare facility.
+
+    </p>
+
+
+    <div class="smart-system">
+
+
+        <div class="system-left">
+
+            <h3>
+                Integrated Control
+                Across Every Area.
+            </h3>
+
+            <p>
+
+                Centralize the monitoring and control
+                of essential hospital systems while
+                improving operational visibility,
+                energy efficiency and patient comfort.
+
+            </p>
+
+        </div>
+
+
+        <div class="system-right">
+
+
+            <div class="system-layer">
+
+                <div class="layer-title">
+                    CENTRAL
+                </div>
+
+                <div class="layer-items">
+
+                    <span class="layer-tag">
+                        BMS
+                    </span>
+
+                    <span class="layer-tag">
+                        EMS
+                    </span>
+
+                    <span class="layer-tag">
+                        CENTRAL MONITORING
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="system-layer">
+
+                <div class="layer-title">
+                    BUILDING
+                </div>
+
+                <div class="layer-items">
+
+                    <span class="layer-tag">
+                        HVAC
+                    </span>
+
+                    <span class="layer-tag">
+                        LIGHTING
+                    </span>
+
+                    <span class="layer-tag">
+                        LIFTS
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="system-layer">
+
+                <div class="layer-title">
+                    PATIENT AREA
+                </div>
+
+                <div class="layer-items">
+
+                    <span class="layer-tag">
+                        NURSE CALL
+                    </span>
+
+                    <span class="layer-tag">
+                        ROOM CONTROL
+                    </span>
+
+                    <span class="layer-tag">
+                        ACCESS
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="system-layer">
+
+                <div class="layer-title">
+                    SAFETY
+                </div>
+
+                <div class="layer-items">
+
+                    <span class="layer-tag">
+                        FIRE ALARM
+                    </span>
+
+                    <span class="layer-tag">
+                        CCTV
+                    </span>
+
+                    <span class="layer-tag">
+                        EMERGENCY
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     SOLUTIONS
+===================================== -->
+
+<section class="section services" id="solutions">
+
+
+    <div class="section-label">
+        HOSPITAL AUTOMATION SOLUTIONS
+    </div>
+
+
+    <h2 class="section-title">
+
+        Technology That
+        <br>
+
+        Supports Healthcare.
+
+    </h2>
+
+
+    <p class="section-text">
+
+        Integrated automation systems designed
+        around hospital infrastructure, patient
+        environments and operational requirements.
+
+    </p>
+
+
+    <div class="service-grid">
+
+
+        <div class="service">
+
+            <div class="service-number">
+                01 / BMS
+            </div>
+
+            <div class="service-icon">
+                ◫
+            </div>
+
+            <h3>
+                Building Management System
+            </h3>
+
+            <p>
+
+                Centralized monitoring and control
+                of HVAC, lighting, utilities and
+                essential building services.
+
+            </p>
+
+            <div class="service-arrow">
+                ↗
+            </div>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-number">
+                02 / HVAC
+            </div>
+
+            <div class="service-icon">
+                ◌
+            </div>
+
+            <h3>
+                HVAC Automation
+            </h3>
+
+            <p>
+
+                Intelligent climate control for
+                patient rooms, operation theatres,
+                ICUs and critical areas.
+
+            </p>
+
+            <div class="service-arrow">
+                ↗
+            </div>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-number">
+                03 / LIGHTING
+            </div>
+
+            <div class="service-icon">
+                ◇
+            </div>
+
+            <h3>
+                Lighting Automation
+            </h3>
+
+            <p>
+
+                Automated lighting control based on
+                occupancy, schedules and operational
+                requirements.
+
+            </p>
+
+            <div class="service-arrow">
+                ↗
+            </div>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-number">
+                04 / NURSE CALL
+            </div>
+
+            <div class="service-icon">
+                +
+            </div>
+
+            <h3>
+                Nurse Call Systems
+            </h3>
+
+            <p>
+
+                Efficient patient-to-nurse communication
+                and alert management for faster response.
+
+            </p>
+
+            <div class="service-arrow">
+                ↗
+            </div>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-number">
+                05 / ENERGY
+            </div>
+
+            <div class="service-icon">
+                ◉
+            </div>
+
+            <h3>
+                Energy Management
+            </h3>
+
+            <p>
+
+                Monitor energy consumption, identify
+                inefficiencies and optimize hospital
+                utility performance.
+
+            </p>
+
+            <div class="service-arrow">
+                ↗
+            </div>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-number">
+                06 / SECURITY
+            </div>
+
+            <div class="service-icon">
+                ▣
+            </div>
+
+            <h3>
+                Security & Access
+            </h3>
+
+            <p>
+
+                Integrated access control, CCTV
+                monitoring and secure movement
+                across critical hospital zones.
+
+            </p>
+
+            <div class="service-arrow">
+                ↗
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     SYSTEMS
+===================================== -->
+
+<section class="section systems-section" id="systems">
+
+
+    <div class="section-label">
+        CRITICAL HOSPITAL SYSTEMS
+    </div>
+
+
+    <h2 class="section-title">
+
+        Automation For
+        <br>
+
+        Every Critical Zone.
+
+    </h2>
+
+
+    <p class="section-text">
+
+        From operation theatres and ICUs to
+        patient rooms and utility areas, automation
+        can be configured according to the specific
+        requirements of each hospital environment.
+
+    </p>
+
+
+    <div class="systems-grid">
+
+
+        <div class="system-card">
+
+            <div class="system-number">
+                01 / OT
+            </div>
+
+            <div class="system-card-icon">
+                +
+            </div>
+
+            <h3>
+                Operation Theatres
+            </h3>
+
+            <p>
+
+                Environmental monitoring, HVAC
+                control, pressure management and
+                critical condition monitoring.
+
+            </p>
+
+        </div>
+
+
+        <div class="system-card">
+
+            <div class="system-number">
+                02 / ICU
+            </div>
+
+            <div class="system-card-icon">
+                ◉
+            </div>
+
+            <h3>
+                ICU & Critical Care
+            </h3>
+
+            <p>
+
+                Continuous monitoring of critical
+                environmental and infrastructure
+                parameters.
+
+            </p>
+
+        </div>
+
+
+        <div class="system-card">
+
+            <div class="system-number">
+                03 / PATIENT
+            </div>
+
+            <div class="system-card-icon">
+                □
+            </div>
+
+            <h3>
+                Patient Rooms
+            </h3>
+
+            <p>
+
+                Room automation, lighting, temperature
+                control and patient communication systems.
+
+            </p>
+
+        </div>
+
+
+        <div class="system-card">
+
+            <div class="system-number">
+                04 / UTILITY
+            </div>
+
+            <div class="system-card-icon">
+                ⚙
+            </div>
+
+            <h3>
+                Utility Areas
+            </h3>
+
+            <p>
+
+                Monitor electrical systems, pumps,
+                water systems, generators and
+                other essential infrastructure.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     CONTROL ROOM
+===================================== -->
+
+<section class="section control-room">
+
+
+    <div class="section-label">
+        CENTRAL MONITORING
+    </div>
+
+
+    <h2 class="section-title">
+
+        One View.
+        <br>
+
+        Complete Facility Control.
+
+    </h2>
+
+
+    <p class="section-text">
+
+        Centralized dashboards provide facility
+        teams with real-time information about
+        environmental conditions, energy usage
+        and building infrastructure.
+
+    </p>
+
+
+    <div class="control-layout">
+
+
+        <div class="control-box">
+
+            <h3>
+                Hospital BMS
+            </h3>
+
+            <p>
+
+                Monitor building conditions and
+                operational parameters from a
+                centralized interface.
+
+            </p>
+
+
+            <div class="dashboard">
+
+                <div class="dashboard-header">
+
+                    <span>
+                        FACILITY MONITOR
+                    </span>
+
+                    <span>
+                        LIVE
+                    </span>
+
+                </div>
+
+
+                <div class="dashboard-grid">
+
+
+                    <div class="dashboard-item">
+
+                        <small>
+                            HVAC
+                        </small>
+
+                        <strong>
+                            22.4°C
+                        </strong>
+
+                        <span>
+                            NORMAL
+                        </span>
+
+                    </div>
+
+
+                    <div class="dashboard-item">
+
+                        <small>
+                            ENERGY
+                        </small>
+
+                        <strong>
+                            84.6 kW
+                        </strong>
+
+                        <span>
+                            OPTIMIZED
+                        </span>
+
+                    </div>
+
+
+                    <div class="dashboard-item">
+
+                        <small>
+                            AIR QUALITY
+                        </small>
+
+                        <strong>
+                            GOOD
+                        </strong>
+
+                        <span>
+                            MONITORED
+                        </span>
+
+                    </div>
+
+
+                    <div class="dashboard-item">
+
+                        <small>
+                            SYSTEM STATUS
+                        </small>
+
+                        <strong>
+                            99.8%
+                        </strong>
+
+                        <span>
+                            AVAILABLE
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="control-box">
+
+            <h3>
+                Smart Patient Room
+            </h3>
+
+            <p>
+
+                Connected room environments designed
+                to improve patient comfort while
+                supporting hospital operations.
+
+            </p>
+
+
+            <div class="room">
+
+                <div class="room-light"></div>
+
+                <div class="room-bed"></div>
+
+                <div class="room-pillow"></div>
+
+                <div class="room-monitor"></div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     BENEFITS
+===================================== -->
+
+<section class="section benefits">
+
+
+    <div class="section-label">
+        HOSPITAL PERFORMANCE
+    </div>
+
+
+    <h2 class="section-title">
+
+        Designed Around
+        <br>
+
+        Safety & Efficiency.
+
+    </h2>
+
+
+    <div class="benefit-grid">
+
+
+        <div class="benefit">
+
+            <span>
+                BENEFIT / 01
+            </span>
+
+            <h3>
+                Improved Patient Comfort
+            </h3>
+
+            <p>
+
+                Maintain suitable temperature,
+                lighting and environmental conditions
+                across patient areas.
+
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <span>
+                BENEFIT / 02
+            </span>
+
+            <h3>
+                Better Energy Efficiency
+            </h3>
+
+            <p>
+
+                Monitor and optimize HVAC,
+                lighting and electrical energy
+                consumption.
+
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <span>
+                BENEFIT / 03
+            </span>
+
+            <h3>
+                Faster Response
+            </h3>
+
+            <p>
+
+                Connected alerts and monitoring
+                help facility teams respond to
+                important events faster.
+
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <span>
+                BENEFIT / 04
+            </span>
+
+            <h3>
+                Centralized Visibility
+            </h3>
+
+            <p>
+
+                Monitor multiple building systems
+                from one centralized platform.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     PROCESS
+===================================== -->
+
+<section class="section process" id="process">
+
+
+    <div class="section-label">
+        PROJECT EXECUTION
+    </div>
+
+
+    <h2 class="section-title">
+
+        From Facility Study
+        <br>
+
+        To Smart Operations.
+
+    </h2>
+
+
+    <p class="section-text">
+
+        A structured approach ensures every
+        automation system is designed around
+        the hospital's infrastructure and
+        operational requirements.
+
+    </p>
+
+
+    <div class="process-grid">
+
+
+        <div class="process-step">
+
+            <div class="step-circle">
+                01
+            </div>
+
+            <h3>
+                Facility Study
+            </h3>
+
+            <p>
+
+                Understand building layout,
+                departments and infrastructure.
+
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <div class="step-circle">
+                02
+            </div>
+
+            <h3>
+                System Design
+            </h3>
+
+            <p>
+
+                Define automation architecture,
+                equipment and control strategy.
+
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <div class="step-circle">
+                03
+            </div>
+
+            <h3>
+                Integration
+            </h3>
+
+            <p>
+
+                Connect HVAC, BMS, lighting,
+                safety and other systems.
+
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <div class="step-circle">
+                04
+            </div>
+
+            <h3>
+                Testing
+            </h3>
+
+            <p>
+
+                Test automation functions,
+                alarms and system communication.
+
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <div class="step-circle">
+                05
+            </div>
+
+            <h3>
+                Commissioning
+            </h3>
+
+            <p>
+
+                Validate performance and
+                hand over the integrated system.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     CTA
+===================================== -->
+
+<section class="cta" id="contact">
+
+
+    <div>
+
+        <div class="section-label">
+            SMART HOSPITAL PROJECTS
+        </div>
+
+        <h2>
+
+            Build A Smarter
+            <br>
+
+            Healthcare Facility.
+
+        </h2>
+
+        <p>
+
+            Let's create an integrated automation
+            solution that improves hospital efficiency,
+            patient comfort and operational visibility.
+
+        </p>
+
+    </div>
+
+
+    <a href="#" class="cta-button">
+        DISCUSS YOUR PROJECT →
+    </a>
+
+</section>
+
+
+
+<!-- =====================================
+     FOOTER
+===================================== -->
+
+<footer class="footer">
+
+    <span>
+        HOSPITAL AUTOMATION • BMS • HVAC • EMS
+    </span>
+
+    <strong>
+        YOUR COMPANY
+    </strong>
+
+</footer>
+
+
+</body>
+</html>
+```

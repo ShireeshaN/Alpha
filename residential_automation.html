@@ -1,0 +1,2214 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Residential Automation | Smart Living</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Manrope",sans-serif;
+    background:#f7f8f6;
+    color:#17211f;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar{
+    height:82px;
+    padding:0 7%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:#ffffff;
+
+    border-bottom:1px solid #e8ebe8;
+
+    position:relative;
+    z-index:20;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-mark{
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+
+    background:#173f35;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#fff;
+
+    font-size:19px;
+}
+
+.logo-text strong{
+    display:block;
+
+    font-size:14px;
+
+    letter-spacing:1.8px;
+}
+
+.logo-text span{
+    display:block;
+
+    margin-top:2px;
+
+    color:#7b8581;
+
+    font-size:7px;
+
+    letter-spacing:2px;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:32px;
+}
+
+.nav-links a{
+    color:#52605c;
+
+    font-size:10px;
+    font-weight:600;
+}
+
+.nav-links a:hover{
+    color:#173f35;
+}
+
+.nav-contact{
+    padding:12px 20px;
+
+    background:#173f35;
+
+    color:#fff !important;
+
+    border-radius:30px;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+    min-height:650px;
+
+    padding:70px 7%;
+
+    display:grid;
+
+    grid-template-columns:48% 52%;
+
+    align-items:center;
+
+    background:#f7f8f6;
+
+    overflow:hidden;
+}
+
+.hero-content{
+    padding-right:50px;
+}
+
+.hero-tag{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    margin-bottom:25px;
+
+    color:#52756b;
+
+    font-size:9px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+.hero-tag span{
+    width:28px;
+    height:2px;
+
+    background:#52756b;
+}
+
+.hero h1{
+    font-size:clamp(48px,5vw,75px);
+
+    line-height:1.02;
+
+    letter-spacing:-3px;
+
+    font-weight:800;
+
+    margin-bottom:25px;
+}
+
+.hero h1 em{
+    color:#52756b;
+
+    font-style:normal;
+}
+
+.hero-description{
+    max-width:530px;
+
+    color:#697570;
+
+    font-size:13px;
+
+    line-height:1.9;
+
+    margin-bottom:32px;
+}
+
+.hero-buttons{
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+}
+
+.btn-main{
+    padding:15px 25px;
+
+    background:#173f35;
+
+    color:#fff;
+
+    border-radius:4px;
+
+    font-size:9px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+}
+
+.btn-main:hover{
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    padding:14px 23px;
+
+    border:1px solid #ccd3cf;
+
+    color:#33423d;
+
+    border-radius:4px;
+
+    font-size:9px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+}
+
+
+/* =====================================================
+   HERO VISUAL
+===================================================== */
+
+.hero-visual{
+    height:500px;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+}
+
+.house-image{
+    width:78%;
+    height:420px;
+
+    border-radius:180px 180px 18px 18px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            #dfe7e2,
+            #8ea49b
+        );
+
+    box-shadow:
+        0 25px 70px rgba(24,50,43,.16);
+}
+
+.house-image::before{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.30),
+            transparent 45%
+        );
+}
+
+.house-architecture{
+    position:absolute;
+
+    width:78%;
+
+    height:58%;
+
+    left:11%;
+
+    bottom:0;
+
+    background:#eef1ed;
+
+    clip-path:polygon(
+        0 35%,
+        50% 0,
+        100% 35%,
+        100% 100%,
+        0 100%
+    );
+}
+
+.house-window{
+    position:absolute;
+
+    width:27%;
+
+    height:27%;
+
+    bottom:20%;
+
+    left:36%;
+
+    background:#385d55;
+
+    border:8px solid #f4f5f2;
+}
+
+.house-door{
+    position:absolute;
+
+    width:15%;
+
+    height:27%;
+
+    bottom:0;
+
+    left:43%;
+
+    background:#29483f;
+}
+
+.house-light{
+    position:absolute;
+
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    box-shadow:0 0 25px 8px rgba(255,255,255,.6);
+}
+
+.light-one{
+    left:28%;
+    bottom:30%;
+}
+
+.light-two{
+    right:26%;
+    bottom:28%;
+}
+
+
+/* Floating UI Cards */
+
+.float-card{
+    position:absolute;
+
+    padding:15px 18px;
+
+    background:#fff;
+
+    border-radius:10px;
+
+    box-shadow:0 15px 40px rgba(25,47,41,.12);
+
+    min-width:150px;
+}
+
+.float-card small{
+    display:block;
+
+    color:#8a9590;
+
+    font-size:7px;
+
+    letter-spacing:1px;
+
+    margin-bottom:7px;
+}
+
+.float-card strong{
+    font-size:11px;
+}
+
+.float-card span{
+    display:block;
+
+    margin-top:5px;
+
+    color:#52756b;
+
+    font-size:7px;
+}
+
+.card-light{
+    top:75px;
+    left:0;
+}
+
+.card-security{
+    right:0;
+    bottom:95px;
+}
+
+.hero-circle{
+    position:absolute;
+
+    width:90px;
+    height:90px;
+
+    right:12%;
+    top:20px;
+
+    border:1px solid #b8c8c1;
+
+    border-radius:50%;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro{
+    padding:0 7%;
+
+    background:#fff;
+}
+
+.intro-inner{
+    min-height:150px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    border-top:1px solid #e6ebe8;
+
+    border-bottom:1px solid #e6ebe8;
+}
+
+.intro-item{
+    padding:35px 35px;
+
+    border-right:1px solid #e6ebe8;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+}
+
+.intro-item:last-child{
+    border-right:none;
+}
+
+.intro-icon{
+    width:46px;
+    height:46px;
+
+    border-radius:50%;
+
+    background:#eef3ef;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#52756b;
+
+    font-size:17px;
+}
+
+.intro-item h4{
+    font-size:11px;
+
+    margin-bottom:6px;
+}
+
+.intro-item p{
+    color:#7b8581;
+
+    font-size:8px;
+
+    line-height:1.6;
+}
+
+
+/* =====================================================
+   SECTION COMMON
+===================================================== */
+
+.section{
+    padding:110px 7%;
+}
+
+.eyebrow{
+    color:#52756b;
+
+    font-size:9px;
+
+    font-weight:800;
+
+    letter-spacing:2.5px;
+
+    text-transform:uppercase;
+
+    margin-bottom:14px;
+}
+
+.section-heading{
+    max-width:700px;
+
+    font-size:42px;
+
+    line-height:1.15;
+
+    letter-spacing:-1.5px;
+
+    margin-bottom:18px;
+}
+
+.section-description{
+    max-width:650px;
+
+    color:#727e79;
+
+    font-size:12px;
+
+    line-height:1.9;
+}
+
+
+/* =====================================================
+   ECOSYSTEM SECTION
+===================================================== */
+
+.ecosystem{
+    background:#fff;
+}
+
+.ecosystem-layout{
+    margin-top:65px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+.ecosystem-visual{
+    min-height:490px;
+
+    background:#edf1ee;
+
+    border-radius:18px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.eco-center{
+    position:absolute;
+
+    width:145px;
+    height:145px;
+
+    border-radius:50%;
+
+    background:#173f35;
+
+    color:#fff;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    line-height:1.5;
+
+    box-shadow:
+        0 0 0 18px rgba(82,117,107,.08),
+        0 0 0 38px rgba(82,117,107,.05);
+}
+
+.eco-line{
+    position:absolute;
+
+    height:1px;
+
+    background:#b8c8c1;
+
+    transform-origin:left center;
+}
+
+.line1{
+    width:170px;
+
+    left:50%;
+
+    top:50%;
+
+    transform:rotate(-38deg);
+}
+
+.line2{
+    width:170px;
+
+    left:50%;
+
+    top:50%;
+
+    transform:rotate(38deg);
+}
+
+.line3{
+    width:170px;
+
+    left:50%;
+
+    top:50%;
+
+    transform:rotate(142deg);
+}
+
+.line4{
+    width:170px;
+
+    left:50%;
+
+    top:50%;
+
+    transform:rotate(-142deg);
+}
+
+.eco-node{
+    position:absolute;
+
+    width:100px;
+    height:100px;
+
+    background:#fff;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    box-shadow:0 10px 30px rgba(26,54,45,.08);
+
+    font-size:9px;
+
+    font-weight:700;
+}
+
+.eco-node i{
+    font-style:normal;
+
+    color:#52756b;
+
+    font-size:20px;
+}
+
+.node1{
+    top:50px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.node2{
+    right:35px;
+    top:50%;
+
+    transform:translateY(-50%);
+}
+
+.node3{
+    bottom:50px;
+    left:50%;
+
+    transform:translateX(-50%);
+}
+
+.node4{
+    left:35px;
+    top:50%;
+
+    transform:translateY(-50%);
+}
+
+
+.ecosystem-content{
+    padding-right:30px;
+}
+
+.eco-list{
+    margin-top:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+}
+
+.eco-list-item{
+    display:grid;
+
+    grid-template-columns:45px 1fr;
+
+    gap:15px;
+
+    padding-bottom:18px;
+
+    border-bottom:1px solid #e5e9e6;
+}
+
+.eco-number{
+    color:#9ba8a2;
+
+    font-size:10px;
+
+    font-weight:800;
+}
+
+.eco-list-item h4{
+    font-size:12px;
+
+    margin-bottom:5px;
+}
+
+.eco-list-item p{
+    color:#7a8580;
+
+    font-size:9px;
+
+    line-height:1.7;
+}
+
+
+/* =====================================================
+   SOLUTIONS
+===================================================== */
+
+.solutions{
+    background:#f1f4f1;
+}
+
+.solution-grid{
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+}
+
+.solution{
+    min-height:290px;
+
+    padding:30px;
+
+    background:#fff;
+
+    border-radius:10px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.3s;
+}
+
+.solution:hover{
+    transform:translateY(-7px);
+
+    box-shadow:0 20px 45px rgba(25,53,44,.09);
+}
+
+.solution-number{
+    color:#a6b1ac;
+
+    font-size:8px;
+
+    letter-spacing:2px;
+
+    margin-bottom:45px;
+}
+
+.solution-icon{
+    width:50px;
+    height:50px;
+
+    border-radius:50%;
+
+    background:#edf3ef;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    color:#52756b;
+
+    font-size:18px;
+
+    margin-bottom:20px;
+}
+
+.solution h3{
+    font-size:14px;
+
+    margin-bottom:10px;
+}
+
+.solution p{
+    color:#7b8581;
+
+    font-size:9px;
+
+    line-height:1.8;
+}
+
+.solution-arrow{
+    position:absolute;
+
+    right:25px;
+    bottom:25px;
+
+    color:#52756b;
+
+    font-size:15px;
+}
+
+
+/* =====================================================
+   HOW IT WORKS
+===================================================== */
+
+.process{
+    background:#fff;
+}
+
+.process-layout{
+    margin-top:65px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+}
+
+.process-image{
+    height:470px;
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #d9e2dd,
+            #82988e
+        );
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.process-house{
+    position:absolute;
+
+    width:65%;
+
+    height:55%;
+
+    bottom:0;
+
+    left:18%;
+
+    background:#f0f2ee;
+
+    clip-path:polygon(
+        0 30%,
+        50% 0,
+        100% 30%,
+        100% 100%,
+        0 100%
+    );
+}
+
+.process-glow{
+    position:absolute;
+
+    width:170px;
+    height:170px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.7);
+
+    left:50%;
+    top:40%;
+
+    transform:translate(-50%,-50%);
+}
+
+.process-content{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:0;
+}
+
+.step{
+    display:grid;
+
+    grid-template-columns:55px 1fr;
+
+    gap:20px;
+
+    padding:23px 0;
+
+    border-bottom:1px solid #e5e9e6;
+}
+
+.step:first-child{
+    border-top:1px solid #e5e9e6;
+}
+
+.step-number{
+    width:42px;
+    height:42px;
+
+    border:1px solid #cbd5d0;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    color:#52756b;
+
+    font-size:9px;
+
+    font-weight:800;
+}
+
+.step h4{
+    font-size:12px;
+
+    margin-bottom:6px;
+}
+
+.step p{
+    color:#7a8580;
+
+    font-size:9px;
+
+    line-height:1.7;
+}
+
+
+/* =====================================================
+   BENEFITS
+===================================================== */
+
+.benefits{
+    background:#173f35;
+
+    color:#fff;
+}
+
+.benefits .eyebrow{
+    color:#b8d1c7;
+}
+
+.benefits .section-description{
+    color:#b5c5bf;
+}
+
+.benefit-grid{
+    margin-top:55px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:1px;
+
+    background:rgba(255,255,255,.16);
+}
+
+.benefit{
+    min-height:200px;
+
+    padding:30px;
+
+    background:#173f35;
+}
+
+.benefit-number{
+    color:#9ab8ad;
+
+    font-size:8px;
+
+    margin-bottom:40px;
+}
+
+.benefit h3{
+    font-size:13px;
+
+    margin-bottom:10px;
+}
+
+.benefit p{
+    color:#b4c6bf;
+
+    font-size:9px;
+
+    line-height:1.8;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta{
+    padding:100px 7%;
+
+    background:#f7f8f6;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:50px;
+}
+
+.cta h2{
+    font-size:43px;
+
+    line-height:1.1;
+
+    letter-spacing:-1.5px;
+
+    margin-bottom:15px;
+}
+
+.cta p{
+    max-width:580px;
+
+    color:#707b76;
+
+    font-size:11px;
+
+    line-height:1.8;
+}
+
+.cta-button{
+    flex-shrink:0;
+
+    padding:17px 28px;
+
+    background:#173f35;
+
+    color:#fff;
+
+    border-radius:4px;
+
+    font-size:9px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer{
+    padding:28px 7%;
+
+    background:#102f28;
+
+    color:#aebdb7;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    font-size:8px;
+
+    letter-spacing:1px;
+}
+
+.footer strong{
+    color:#fff;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:1000px){
+
+    .nav-links a:not(.nav-contact){
+        display:none;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+    }
+
+    .hero-content{
+        padding-right:0;
+        margin-bottom:50px;
+    }
+
+    .hero-visual{
+        height:450px;
+    }
+
+    .ecosystem-layout,
+    .process-layout{
+        grid-template-columns:1fr;
+    }
+
+    .solution-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .benefit-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+
+@media(max-width:650px){
+
+    .navbar{
+        padding:0 5%;
+    }
+
+    .hero,
+    .section,
+    .cta{
+        padding-left:6%;
+        padding-right:6%;
+    }
+
+    .hero h1{
+        font-size:48px;
+
+        letter-spacing:-2px;
+    }
+
+    .hero-visual{
+        height:400px;
+    }
+
+    .house-image{
+        width:88%;
+        height:350px;
+    }
+
+    .float-card{
+        min-width:120px;
+
+        padding:11px;
+    }
+
+    .card-light{
+        left:-5px;
+    }
+
+    .card-security{
+        right:-5px;
+    }
+
+    .intro{
+        padding:0 6%;
+    }
+
+    .intro-inner{
+        grid-template-columns:1fr;
+    }
+
+    .intro-item{
+        border-right:none;
+
+        border-bottom:1px solid #e6ebe8;
+    }
+
+    .section-heading,
+    .cta h2{
+        font-size:32px;
+    }
+
+    .solution-grid,
+    .benefit-grid{
+        grid-template-columns:1fr;
+    }
+
+    .ecosystem-visual{
+        min-height:400px;
+    }
+
+    .eco-node{
+        width:80px;
+        height:80px;
+    }
+
+    .node2{
+        right:15px;
+    }
+
+    .node4{
+        left:15px;
+    }
+
+    .cta{
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+    .footer{
+        flex-direction:column;
+
+        gap:10px;
+
+        text-align:center;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-mark">
+            ⌂
+        </div>
+
+        <div class="logo-text">
+
+            <strong>YOUR COMPANY</strong>
+
+            <span>SMART AUTOMATION SOLUTIONS</span>
+
+        </div>
+
+    </div>
+
+
+    <nav class="nav-links">
+
+        <a href="#overview">Overview</a>
+
+        <a href="#solutions">Solutions</a>
+
+        <a href="#process">Process</a>
+
+        <a href="#contact" class="nav-contact">
+            Contact Us
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-tag">
+
+            <span></span>
+
+            Residential Automation
+
+        </div>
+
+
+        <h1>
+
+            A Smarter Way
+            <br>
+
+            To <em>Live.</em>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            Experience intelligent living with seamlessly
+            connected lighting, security, climate,
+            entertainment and energy systems — all
+            designed around the way you live.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="#solutions" class="btn-main">
+                EXPLORE SOLUTIONS
+            </a>
+
+            <a href="#process" class="btn-outline">
+                HOW IT WORKS
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+        <div class="hero-circle"></div>
+
+
+        <div class="house-image">
+
+            <div class="house-architecture"></div>
+
+            <div class="house-window"></div>
+
+            <div class="house-door"></div>
+
+            <div class="house-light light-one"></div>
+
+            <div class="house-light light-two"></div>
+
+        </div>
+
+
+        <div class="float-card card-light">
+
+            <small>SMART LIGHTING</small>
+
+            <strong>Ambient Control</strong>
+
+            <span>● SYSTEM ACTIVE</span>
+
+        </div>
+
+
+        <div class="float-card card-security">
+
+            <small>HOME SECURITY</small>
+
+            <strong>Protected 24/7</strong>
+
+            <span>● ALL SYSTEMS SECURE</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INTRO STRIP
+===================================================== -->
+
+<section class="intro">
+
+    <div class="intro-inner">
+
+
+        <div class="intro-item">
+
+            <div class="intro-icon">⌂</div>
+
+            <div>
+
+                <h4>Connected Living</h4>
+
+                <p>
+                    Every essential system connected
+                    through one intelligent ecosystem.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="intro-item">
+
+            <div class="intro-icon">◉</div>
+
+            <div>
+
+                <h4>Centralized Control</h4>
+
+                <p>
+                    Control your home through intuitive
+                    interfaces and smart devices.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="intro-item">
+
+            <div class="intro-icon">✦</div>
+
+            <div>
+
+                <h4>Personalized Automation</h4>
+
+                <p>
+                    Automation designed around your
+                    lifestyle, comfort and routines.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ECOSYSTEM
+===================================================== -->
+
+<section class="section ecosystem" id="overview">
+
+
+    <div class="eyebrow">
+        THE SMART HOME ECOSYSTEM
+    </div>
+
+
+    <h2 class="section-heading">
+        One Home.
+        <br>
+        Many Possibilities.
+    </h2>
+
+
+    <p class="section-description">
+
+        Residential automation brings your home's
+        essential systems together, creating a
+        coordinated environment that is easier,
+        safer and more efficient to manage.
+
+    </p>
+
+
+    <div class="ecosystem-layout">
+
+
+        <!-- Visual -->
+
+        <div class="ecosystem-visual">
+
+            <div class="eco-line line1"></div>
+            <div class="eco-line line2"></div>
+            <div class="eco-line line3"></div>
+            <div class="eco-line line4"></div>
+
+
+            <div class="eco-center">
+
+                SMART
+                <br>
+                HOME
+
+            </div>
+
+
+            <div class="eco-node node1">
+
+                <i>☼</i>
+
+                Lighting
+
+            </div>
+
+
+            <div class="eco-node node2">
+
+                <i>◉</i>
+
+                Security
+
+            </div>
+
+
+            <div class="eco-node node3">
+
+                <i>❄</i>
+
+                Climate
+
+            </div>
+
+
+            <div class="eco-node node4">
+
+                <i>⚡</i>
+
+                Energy
+
+            </div>
+
+        </div>
+
+
+        <!-- Content -->
+
+        <div class="ecosystem-content">
+
+
+            <div class="eco-list">
+
+
+                <div class="eco-list-item">
+
+                    <div class="eco-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Intelligent Lighting
+                        </h4>
+
+                        <p>
+                            Create the right lighting atmosphere
+                            for every moment of the day.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="eco-list-item">
+
+                    <div class="eco-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Advanced Security
+                        </h4>
+
+                        <p>
+                            Integrate surveillance, access,
+                            sensors and security alerts.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="eco-list-item">
+
+                    <div class="eco-number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Climate & Comfort
+                        </h4>
+
+                        <p>
+                            Manage temperature and climate
+                            settings according to your routine.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="eco-list-item">
+
+                    <div class="eco-number">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Energy Management
+                        </h4>
+
+                        <p>
+                            Monitor and automate electrical
+                            loads for efficient energy usage.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SOLUTIONS
+===================================================== -->
+
+<section class="section solutions" id="solutions">
+
+
+    <div class="eyebrow">
+        OUR SOLUTIONS
+    </div>
+
+
+    <h2 class="section-heading">
+        Everything Your Home
+        <br>
+        Needs To Be Smarter.
+    </h2>
+
+
+    <p class="section-description">
+
+        From everyday comfort to advanced security,
+        our automation solutions are designed to
+        integrate naturally into modern homes.
+
+    </p>
+
+
+    <div class="solution-grid">
+
+
+        <div class="solution">
+
+            <div class="solution-number">
+                01 / LIGHTING
+            </div>
+
+            <div class="solution-icon">
+                ☼
+            </div>
+
+            <h3>
+                Smart Lighting
+            </h3>
+
+            <p>
+                Dimming, scenes, scheduling, motion-based
+                control and automated lighting management.
+            </p>
+
+            <div class="solution-arrow">↗</div>
+
+        </div>
+
+
+        <div class="solution">
+
+            <div class="solution-number">
+                02 / SECURITY
+            </div>
+
+            <div class="solution-icon">
+                ◉
+            </div>
+
+            <h3>
+                Security & Surveillance
+            </h3>
+
+            <p>
+                CCTV, smart sensors, video doorbells,
+                intrusion detection and monitoring.
+            </p>
+
+            <div class="solution-arrow">↗</div>
+
+        </div>
+
+
+        <div class="solution">
+
+            <div class="solution-number">
+                03 / ACCESS
+            </div>
+
+            <div class="solution-icon">
+                ⚿
+            </div>
+
+            <h3>
+                Smart Access
+            </h3>
+
+            <p>
+                Smart locks, biometric access, digital
+                entry systems and visitor management.
+            </p>
+
+            <div class="solution-arrow">↗</div>
+
+        </div>
+
+
+        <div class="solution">
+
+            <div class="solution-number">
+                04 / CLIMATE
+            </div>
+
+            <div class="solution-icon">
+                ❄
+            </div>
+
+            <h3>
+                Climate Automation
+            </h3>
+
+            <p>
+                Intelligent HVAC and temperature control
+                for improved comfort and efficiency.
+            </p>
+
+            <div class="solution-arrow">↗</div>
+
+        </div>
+
+
+        <div class="solution">
+
+            <div class="solution-number">
+                05 / ENTERTAINMENT
+            </div>
+
+            <div class="solution-icon">
+                ♪
+            </div>
+
+            <h3>
+                Home Entertainment
+            </h3>
+
+            <p>
+                Home theatre, audio, video and
+                multi-room entertainment integration.
+            </p>
+
+            <div class="solution-arrow">↗</div>
+
+        </div>
+
+
+        <div class="solution">
+
+            <div class="solution-number">
+                06 / ENERGY
+            </div>
+
+            <div class="solution-icon">
+                ⚡
+            </div>
+
+            <h3>
+                Energy Management
+            </h3>
+
+            <p>
+                Smart monitoring and load management
+                for optimized energy consumption.
+            </p>
+
+            <div class="solution-arrow">↗</div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROCESS
+===================================================== -->
+
+<section class="section process" id="process">
+
+
+    <div class="eyebrow">
+        OUR APPROACH
+    </div>
+
+
+    <h2 class="section-heading">
+        Designed Around
+        <br>
+        The Way You Live.
+    </h2>
+
+
+    <p class="section-description">
+
+        We take your home from initial planning
+        through installation and commissioning
+        with a structured automation approach.
+
+    </p>
+
+
+    <div class="process-layout">
+
+
+        <div class="process-image">
+
+            <div class="process-glow"></div>
+
+            <div class="process-house"></div>
+
+        </div>
+
+
+        <div class="process-content">
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <div>
+
+                    <h4>
+                        Understand
+                    </h4>
+
+                    <p>
+                        We study your requirements,
+                        lifestyle and home infrastructure.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <div>
+
+                    <h4>
+                        Design
+                    </h4>
+
+                    <p>
+                        Our team develops an automation
+                        architecture tailored to your home.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <div>
+
+                    <h4>
+                        Integrate
+                    </h4>
+
+                    <p>
+                        Devices, controllers and systems
+                        are professionally integrated.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    04
+                </div>
+
+                <div>
+
+                    <h4>
+                        Commission
+                    </h4>
+
+                    <p>
+                        Every system is tested, configured
+                        and prepared for reliable operation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BENEFITS
+===================================================== -->
+
+<section class="section benefits">
+
+
+    <div class="eyebrow">
+        WHY AUTOMATE
+    </div>
+
+
+    <h2 class="section-heading">
+        More Comfort.
+        <br>
+        More Control.
+        <br>
+        Less Effort.
+    </h2>
+
+
+    <p class="section-description">
+
+        Smart automation brings technology together
+        to create a home that works intelligently
+        around you.
+
+    </p>
+
+
+    <div class="benefit-grid">
+
+
+        <div class="benefit">
+
+            <div class="benefit-number">
+                BENEFIT / 01
+            </div>
+
+            <h3>
+                Comfort
+            </h3>
+
+            <p>
+                Personalize lighting, climate,
+                entertainment and everyday routines.
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="benefit-number">
+                BENEFIT / 02
+            </div>
+
+            <h3>
+                Security
+            </h3>
+
+            <p>
+                Keep your home monitored and protected
+                with connected security systems.
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="benefit-number">
+                BENEFIT / 03
+            </div>
+
+            <h3>
+                Efficiency
+            </h3>
+
+            <p>
+                Automate electrical loads and reduce
+                unnecessary energy consumption.
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="benefit-number">
+                BENEFIT / 04
+            </div>
+
+            <h3>
+                Convenience
+            </h3>
+
+            <p>
+                Control multiple systems from one
+                simple and intuitive interface.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta" id="contact">
+
+
+    <div>
+
+        <div class="eyebrow">
+            START YOUR SMART HOME
+        </div>
+
+        <h2>
+            Ready To Make
+            <br>
+            Your Home Smarter?
+        </h2>
+
+        <p>
+            Talk to our automation specialists and
+            discover the right solution for your
+            residential project.
+        </p>
+
+    </div>
+
+
+    <a href="#" class="cta-button">
+        DISCUSS YOUR PROJECT →
+    </a>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <span>
+        RESIDENTIAL AUTOMATION • SMART LIVING
+    </span>
+
+    <strong>
+        YOUR COMPANY
+    </strong>
+
+</footer>
+
+
+</body>
+</html>
