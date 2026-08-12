@@ -163,7 +163,7 @@
             <div class="carousel-item active">
                 <img src="assets/img/banners/transmission lines.png" class="d-block w-100" alt="">
                 <div class="carousel-caption">
-                    <h1>Energy</h1>
+                    <h1>Power</h1>
                     <h2>Renewable Energy Solutions</h2>
                     <a class="btn btn-primary" href="#about">Read More</a>
                 </div>
@@ -173,7 +173,7 @@
             <div class="carousel-item">
                 <img src="assets/img/banners/wind.png" class="d-block w-100" alt="">
                 <div class="carousel-caption">
-                    <h1>Power</h1>
+                    <h1>Wind Energy</h1>
                     <h2>Reliable Power Systems</h2>
                     <a class="btn btn-primary" href="#about">Read More</a>
                 </div>
@@ -183,7 +183,7 @@
             <div class="carousel-item">
                 <img src="assets/img/banners/solar.png" class="d-block w-100" alt="">
                 <div class="carousel-caption">
-                    <h1>Automation</h1>
+                    <h1>Solar Energy</h1>
                     <h2>Industrial Automation</h2>
                     <a class="btn btn-primary" href="#about">Read More</a>
                 </div>
@@ -193,7 +193,7 @@
             <div class="carousel-item">
                 <img src="assets/img/banners/Energy-1.png" class="d-block w-100" alt="">
                 <div class="carousel-caption">
-                    <h1>Innovation</h1>
+                    <h1>Hydel Energy</h1>
                     <h2>Research & Development</h2>
                     <a class="btn btn-primary" href="#about">Read More</a>
                 </div>
@@ -269,7 +269,7 @@
     <!-- Top hero -->
     <article class="sector-card sector-hero">
       <img
-        src="assets/img/all.png"
+        src="assets/img/sectors/power-sector-1.png"
         alt="Engineer standing in front of industrial machinery"
         class="sector-image"
       >
@@ -277,9 +277,9 @@
       <div class="sector-overlay sector-hero-overlay"></div>
 
       <div class="sector-hero-content">
-        <h2>The Movement<br>Starts Here</h2>
+        <h2>Power</h2>
 
-        <p>Precision-engineered infinite motion.</p>
+        <!-- <p>Precision-engineered infinite motion.</p> -->
       </div>
     </article>
 
@@ -290,7 +290,7 @@
       <div class="col-12 col-lg-6">
         <article class="sector-card sector-engineer-card">
           <img
-            src="assets/img/banners/wind.png"
+            src="assets/img/sectors/energy-sector.png"
             alt="Engineer wearing a safety helmet"
             class="sector-image"
           >
@@ -299,8 +299,8 @@
 
           <div class="sector-engineer-content">
             <h3>
-              Not Just Parts, We<br>
-              Produce the Future
+              Energy
+              
             </h3>
 
             <p>
@@ -319,7 +319,7 @@
           <!-- Power card -->
           <article class="sector-card sector-power-card">
             <img
-              src="assets/img/banners/solar.png"
+              src="assets/img/sectors/automation-sector.png"
               alt="Industrial precision gears"
               class="sector-image"
             >
@@ -335,7 +335,7 @@
             </button>
 
             <div class="sector-power-title">
-              <h3>Power at the<br>Center of Light</h3>
+              <h3>Automation</h3>
             </div>
           </article>
 
@@ -363,7 +363,9 @@
 
         </div>
       </div>
+
     </div>
+    
 
     <!-- Bottom integration card -->
     <article class="sector-integration-card">
@@ -371,26 +373,21 @@
 
         <div class="col-12 col-md-4">
           <h3>
-            Seamless<br>
-            Integration in<br>
-            <span>Industry</span>
+           R and D<br>
+        
+            <span>Sector</span>
           </h3>
         </div>
 
         <div class="col-12 col-md-5">
           <img
-            src="images/sector-engine.png"
+            src="assets/img/sectors/randd-sector.png"
             alt="Exploded mechanical engine"
             class="sector-engine-image"
           >
         </div>
 
-        <div class="col-12 col-md-3">
-          <p>
-            Your reliable partner for<br>
-            mechanical systems.
-          </p>
-        </div>
+     
 
       </div>
     </article>
@@ -398,12 +395,11 @@
   </div>
 </section>
 
-
-<!-- Sector Section End -->
 <style>
-    /* ================================
+  /* =========================================================
    SECTOR SECTION
-================================ */
+   Clean • Premium • Smooth Overlay • No Borders • No Glass
+========================================================= */
 
 .sector-section {
   --sector-dark: #03090b;
@@ -412,7 +408,9 @@
 
   width: 100%;
   padding: 60px 0;
+
   background: var(--sector-light);
+
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -421,43 +419,96 @@
 }
 
 .sector-container {
-  max-width: 1440px;
-  padding-right: 24px;
-  padding-left: 24px;
+  width: 100%;
 }
 
-/* Common card */
+
+/* =========================================================
+   COMMON CARD
+========================================================= */
 
 .sector-card {
   position: relative;
+
   width: 100%;
+
   overflow: hidden;
+
   background: var(--sector-dark);
+
   color: #ffffff;
+
+  border: none !important;
+
+  outline: none;
+
+  box-shadow: none;
+
+  isolation: isolate;
 }
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
 
 .sector-image {
   position: absolute;
+
   inset: 0;
+
   width: 100%;
   height: 100%;
+
   object-fit: cover;
-  transition: transform 700ms ease;
+
+  transform: scale(1);
+
+  transition:
+    transform 800ms cubic-bezier(0.2, 0.65, 0.25, 1);
 }
 
 .sector-card:hover .sector-image {
   transform: scale(1.035);
 }
 
+
+/* =========================================================
+   COMMON OVERLAY
+   No glass / No blur / No border
+========================================================= */
+
 .sector-overlay {
   position: absolute;
+
   inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(3, 9, 11, 0.08) 0%,
+      rgba(3, 9, 11, 0.26) 50%,
+      rgba(3, 9, 11, 0.68) 100%
+    );
+
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+
+  border: none !important;
+
+  pointer-events: none;
 }
 
-/* Hero card */
+
+/* =========================================================
+   HERO CARD
+========================================================= */
 
 .sector-hero {
   height: clamp(420px, 48vw, 650px);
+
   margin-bottom: 16px;
 }
 
@@ -465,50 +516,106 @@
   object-position: center;
 }
 
+
+/* =========================================================
+   HERO OVERLAY
+   Smooth left-to-right gradient
+========================================================= */
+
 .sector-hero-overlay {
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.95) 0%,
-    rgba(0, 0, 0, 0.62) 38%,
-    rgba(0, 0, 0, 0.08) 75%
-  );
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 9, 11, 0.72) 0%,
+      rgba(3, 9, 11, 0.48) 35%,
+      rgba(3, 9, 11, 0.18) 68%,
+      rgba(3, 9, 11, 0.12) 100%
+    );
 }
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
 
 .sector-hero-content {
   position: absolute;
+
   top: 50%;
   left: clamp(30px, 8vw, 120px);
-  z-index: 2;
+
+  z-index: 3;
+
   transform: translateY(-50%);
 }
 
 .sector-hero-content h2 {
   margin: 0;
+
   color: #ffffff;
+
   font-size: clamp(46px, 6vw, 92px);
+
   font-weight: 400;
+
   line-height: 0.98;
+
   letter-spacing: -0.05em;
+
+  text-shadow:
+    0 3px 18px rgba(0, 0, 0, 0.45);
 }
+
+
+/* =========================================================
+   HERO SUBTITLE
+   Clean dark transparent box
+========================================================= */
 
 .sector-hero-content p {
   width: fit-content;
+
   max-width: 100%;
+
   margin: 40px 0 0;
-  padding: 18px 24px;
-  background: rgba(20, 20, 20, 0.62);
+
+  padding: 16px 22px;
+
+  background:
+    rgba(10, 15, 16, 0.58);
+
   color: #ffffff;
+
+  border: none;
+
+  box-shadow: none;
+
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+
   font-size: clamp(16px, 1.7vw, 26px);
-  backdrop-filter: blur(8px);
+
+  line-height: 1.3;
 }
 
-/* Middle layout */
+
+/* =========================================================
+   MIDDLE ROW
+========================================================= */
+
+.sector-middle-row {
+  --bs-gutter-x: 16px;
+  --bs-gutter-y: 16px;
+}
 
 .sector-middle-row > div {
   display: flex;
 }
 
-/* Engineer card */
+
+/* =========================================================
+   ENGINEER CARD
+========================================================= */
 
 .sector-engineer-card {
   min-height: 920px;
@@ -518,48 +625,90 @@
   object-position: center bottom;
 }
 
+
+/* =========================================================
+   ENGINEER OVERLAY
+========================================================= */
+
 .sector-engineer-overlay {
-  background: linear-gradient(
-    180deg,
-    rgba(1, 8, 10, 0.75) 0%,
-    rgba(1, 8, 10, 0.05) 55%,
-    rgba(1, 8, 10, 0.82) 100%
-  );
+  background:
+    linear-gradient(
+      180deg,
+      rgba(3, 9, 11, 0.48) 0%,
+      rgba(3, 9, 11, 0.12) 42%,
+      rgba(3, 9, 11, 0.72) 100%
+    );
 }
+
+
+/* =========================================================
+   ENGINEER CONTENT
+========================================================= */
 
 .sector-engineer-content {
   position: absolute;
+
   inset: 0;
-  z-index: 2;
+
+  z-index: 3;
+
   display: flex;
+
   flex-direction: column;
+
   padding: clamp(30px, 5vw, 70px);
 }
 
 .sector-engineer-content h3 {
   margin: 0;
+
   font-size: clamp(34px, 3.5vw, 58px);
+
   font-weight: 400;
+
   line-height: 1.05;
+
   letter-spacing: -0.04em;
+
+  text-shadow:
+    0 3px 18px rgba(0, 0, 0, 0.45);
 }
 
 .sector-engineer-content p {
   margin: auto 0 0;
+
+  color: rgba(255, 255, 255, 0.90);
+
   font-size: 17px;
-  line-height: 1.35;
+
+  line-height: 1.45;
+
+  text-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.40);
 }
 
-/* Right column */
+
+/* =========================================================
+   RIGHT COLUMN
+========================================================= */
 
 .sector-right-column {
   display: grid;
+
   width: 100%;
-  grid-template-rows: 440px auto 280px;
+
+  grid-template-rows:
+    440px
+    auto
+    280px;
+
   gap: 16px;
 }
 
-/* Power card */
+
+/* =========================================================
+   POWER CARD
+========================================================= */
 
 .sector-power-card {
   min-height: 440px;
@@ -569,146 +718,432 @@
   object-position: center;
 }
 
+
+/* =========================================================
+   POWER OVERLAY
+========================================================= */
+
 .sector-power-overlay {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.05) 30%,
-    rgba(0, 0, 0, 0.82) 100%
-  );
+  background:
+    linear-gradient(
+      180deg,
+      rgba(3, 9, 11, 0.08) 0%,
+      rgba(3, 9, 11, 0.22) 45%,
+      rgba(3, 9, 11, 0.72) 100%
+    );
 }
+
+
+/* =========================================================
+   POWER ICON
+========================================================= */
 
 .sector-icon-button {
   position: absolute;
+
   top: 34px;
   right: 34px;
-  z-index: 3;
+
+  z-index: 4;
+
   display: grid;
+
   width: 62px;
   height: 62px;
+
   padding: 0;
+
   place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: rgba(2, 8, 10, 0.9);
+
+  border: none !important;
+
+  outline: none;
+
+  background:
+    rgba(3, 9, 11, 0.78);
+
   color: #ffffff;
+
   font-size: 27px;
+
   cursor: pointer;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.28);
+
   transition:
-    color 250ms ease,
-    background 250ms ease;
+    transform 250ms ease,
+    background 250ms ease,
+    box-shadow 250ms ease;
 }
 
 .sector-icon-button:hover {
+  transform: translateY(-3px);
+
   background: var(--sector-orange);
-  color: #ffffff;
+
+  box-shadow:
+    0 10px 28px rgba(255, 75, 11, 0.20);
 }
+
+
+/* =========================================================
+   POWER TITLE
+========================================================= */
 
 .sector-power-title {
   position: absolute;
+
+  right: 30px;
   bottom: 28px;
   left: clamp(28px, 5vw, 70px);
-  z-index: 2;
+
+  z-index: 3;
 }
 
 .sector-power-title h3 {
   margin: 0;
+
   font-size: clamp(38px, 4vw, 64px);
+
   font-weight: 400;
+
   line-height: 1;
+
   letter-spacing: -0.045em;
+
+  text-shadow:
+    0 3px 20px rgba(0, 0, 0, 0.55);
 }
 
-/* Description card */
+
+/* =========================================================
+   DESCRIPTION CARD
+========================================================= */
 
 .sector-description-card {
+  position: relative;
+
   padding: clamp(30px, 4vw, 58px);
-  background: var(--sector-dark);
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #071013 0%,
+      #03090b 100%
+    );
+
   color: #ffffff;
+
+  border: none !important;
+
+  box-shadow: none;
+
+  outline: none;
 }
 
+
+/* Very subtle light movement */
+.sector-description-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -40%;
+  left: -20%;
+
+  width: 70%;
+  height: 180%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.025),
+      transparent
+    );
+
+  transform: rotate(20deg);
+
+  pointer-events: none;
+}
+
+
 .sector-description-card h4 {
+  position: relative;
+
+  z-index: 2;
+
   margin: 0 0 25px;
+
   font-size: clamp(25px, 2.5vw, 38px);
+
   font-weight: 300;
+
   line-height: 1.1;
+
+  letter-spacing: -0.02em;
 }
 
 .sector-description-card p {
+  position: relative;
+
+  z-index: 2;
+
   max-width: 650px;
+
   margin: 0;
+
   color: #aeb4b5;
+
   font-size: 14px;
-  line-height: 1.55;
+
+  line-height: 1.65;
 }
 
-/* Orange performance card */
+
+/* =========================================================
+   ORANGE PERFORMANCE CARD
+========================================================= */
 
 .sector-performance-card {
+  position: relative;
+
   display: flex;
+
   min-height: 280px;
+
   padding: clamp(35px, 5vw, 70px);
+
   align-items: center;
-  background: var(--sector-orange);
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff5a19 0%,
+      #ff4b0b 55%,
+      #e83f05 100%
+    );
+
   color: #ffffff;
+
+  border: none !important;
+
+  box-shadow: none;
 }
 
+
+/* Subtle orange shine */
+.sector-performance-card::after {
+  content: "";
+
+  position: absolute;
+
+  top: -100%;
+  left: -40%;
+
+  width: 70%;
+  height: 300%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.08),
+      transparent
+    );
+
+  transform: rotate(22deg);
+
+  pointer-events: none;
+}
+
+
 .sector-performance-card h3 {
+  position: relative;
+
+  z-index: 2;
+
   margin: 0;
+
   font-size: clamp(36px, 4vw, 60px);
+
   font-weight: 300;
+
   line-height: 1.05;
+
   letter-spacing: -0.04em;
 }
 
-/* Integration card */
+
+/* =========================================================
+   INTEGRATION CARD
+========================================================= */
 
 .sector-integration-card {
+  position: relative;
+
   min-height: 460px;
+
   margin-top: 16px;
+
   padding: clamp(35px, 5vw, 75px);
+
   overflow: hidden;
-  background: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f8f8f6 100%
+    );
+
   color: var(--sector-dark);
+
+  border: none !important;
+
+  outline: none;
+
+  box-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.06);
 }
 
+
+/* Very subtle background highlight */
+.sector-integration-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 45%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      110deg,
+      rgba(255, 255, 255, 0.65),
+      transparent
+    );
+
+  pointer-events: none;
+}
+
+
 .sector-integration-card h3 {
+  position: relative;
+
+  z-index: 2;
+
   margin: 0;
+
   font-size: clamp(38px, 4vw, 64px);
+
   font-weight: 400;
+
   line-height: 1.05;
+
   letter-spacing: -0.045em;
 }
 
 .sector-integration-card h3 span {
   display: inline-block;
+
   padding: 0 7px;
+
   background: var(--sector-orange);
+
   color: #ffffff;
+
+  box-shadow: none;
 }
 
+
+/* =========================================================
+   ENGINE IMAGE
+========================================================= */
+
 .sector-engine-image {
+  position: relative;
+
+  z-index: 2;
+
   display: block;
+
   width: 125%;
+
   max-height: 390px;
+
   margin-left: -12%;
+
   object-fit: contain;
-  transition: transform 600ms ease;
+
+  filter:
+    drop-shadow(
+      0 20px 25px rgba(0, 0, 0, 0.14)
+    );
+
+  transition:
+    transform 600ms cubic-bezier(0.2, 0.65, 0.25, 1),
+    filter 500ms ease;
 }
 
 .sector-integration-card:hover .sector-engine-image {
   transform: translateY(-8px);
+
+  filter:
+    drop-shadow(
+      0 28px 32px rgba(0, 0, 0, 0.18)
+    );
 }
 
+
 .sector-integration-card p {
+  position: relative;
+
+  z-index: 2;
+
   margin: 0;
+
+  color: #30383a;
+
   font-size: 17px;
+
   line-height: 1.45;
 }
 
-/* ================================
-   TABLET VIEW
-================================ */
+
+/* =========================================================
+   ACTIVE STATE
+========================================================= */
+
+.sector-power-card.sector-active .sector-image {
+  transform: scale(1.06);
+}
+
+.sector-power-card.sector-active .sector-overlay {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(3, 9, 11, 0.12) 0%,
+      rgba(3, 9, 11, 0.30) 50%,
+      rgba(3, 9, 11, 0.78) 100%
+    );
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media (max-width: 991.98px) {
+
   .sector-section {
     padding: 40px 0;
   }
@@ -723,7 +1158,10 @@
   }
 
   .sector-right-column {
-    grid-template-rows: 420px auto 270px;
+    grid-template-rows:
+      420px
+      auto
+      270px;
   }
 
   .sector-integration-card {
@@ -734,13 +1172,31 @@
     width: 110%;
     margin-left: -5%;
   }
+
+  .sector-hero-content {
+    left: 7vw;
+  }
+
+  .sector-hero-content h2 {
+    font-size: clamp(46px, 7vw, 76px);
+  }
+
+  .sector-engineer-content h3 {
+    font-size: clamp(36px, 5vw, 52px);
+  }
+
+  .sector-power-title h3 {
+    font-size: clamp(38px, 5vw, 56px);
+  }
 }
 
-/* ================================
-   MOBILE VIEW
-================================ */
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 767.98px) {
+
   .sector-section {
     padding: 24px 0;
   }
@@ -749,6 +1205,9 @@
     padding-right: 12px;
     padding-left: 12px;
   }
+
+
+  /* HERO */
 
   .sector-hero {
     height: 560px;
@@ -759,18 +1218,24 @@
   }
 
   .sector-hero-overlay {
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.82) 0%,
-      rgba(0, 0, 0, 0.2) 62%,
-      rgba(0, 0, 0, 0.72) 100%
-    );
+    background:
+      linear-gradient(
+        180deg,
+        rgba(3, 9, 11, 0.66) 0%,
+        rgba(3, 9, 11, 0.18) 48%,
+        rgba(3, 9, 11, 0.74) 100%
+      );
   }
+
+
+  /* HERO CONTENT */
 
   .sector-hero-content {
     top: 42px;
+
     right: 20px;
     left: 24px;
+
     transform: none;
   }
 
@@ -780,9 +1245,14 @@
 
   .sector-hero-content p {
     margin-top: 25px;
+
     padding: 14px 16px;
+
     font-size: 16px;
   }
+
+
+  /* ENGINEER */
 
   .sector-engineer-card {
     min-height: 670px;
@@ -796,9 +1266,22 @@
     font-size: 41px;
   }
 
-  .sector-right-column {
-    grid-template-rows: 370px auto 250px;
+  .sector-engineer-content p {
+    font-size: 15px;
   }
+
+
+  /* RIGHT COLUMN */
+
+  .sector-right-column {
+    grid-template-rows:
+      370px
+      auto
+      250px;
+  }
+
+
+  /* POWER TITLE */
 
   .sector-power-title {
     right: 24px;
@@ -810,26 +1293,49 @@
     font-size: 40px;
   }
 
+
+  /* ICON */
+
   .sector-icon-button {
     top: 18px;
     right: 18px;
+
     width: 48px;
     height: 48px;
+
     font-size: 22px;
   }
+
+
+  /* DESCRIPTION */
 
   .sector-description-card {
     padding: 30px 24px;
   }
 
+  .sector-description-card h4 {
+    font-size: 28px;
+  }
+
+  .sector-description-card p {
+    font-size: 14px;
+  }
+
+
+  /* ORANGE */
+
   .sector-performance-card {
     min-height: 250px;
+
     padding: 35px 24px;
   }
 
   .sector-performance-card h3 {
     font-size: 38px;
   }
+
+
+  /* INTEGRATION */
 
   .sector-integration-card {
     padding: 40px 24px;
@@ -841,20 +1347,129 @@
 
   .sector-engine-image {
     width: 115%;
-    margin: 20px 0 20px -7%;
+
+    margin:
+      20px 0 20px -7%;
+  }
+
+  .sector-integration-card p {
+    font-size: 15px;
+  }
+
+
+  /* MOBILE OVERLAY */
+
+  .sector-overlay {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 }
 
-/* Accessibility */
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .sector-section {
+    padding: 16px 0;
+  }
+
+  .sector-container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .sector-hero {
+    height: 500px;
+  }
+
+  .sector-hero-content {
+    left: 20px;
+    right: 16px;
+  }
+
+  .sector-hero-content h2 {
+    font-size: 44px;
+  }
+
+  .sector-hero-content p {
+    font-size: 14px;
+
+    padding: 12px 14px;
+  }
+
+  .sector-engineer-card {
+    min-height: 580px;
+  }
+
+  .sector-engineer-content {
+    padding: 26px 20px;
+  }
+
+  .sector-engineer-content h3 {
+    font-size: 34px;
+  }
+
+  .sector-right-column {
+    grid-template-rows:
+      320px
+      auto
+      220px;
+  }
+
+  .sector-power-title {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .sector-power-title h3 {
+    font-size: 34px;
+  }
+
+  .sector-description-card {
+    padding: 26px 20px;
+  }
+
+  .sector-description-card h4 {
+    font-size: 24px;
+  }
+
+  .sector-performance-card {
+    min-height: 220px;
+
+    padding: 28px 20px;
+  }
+
+  .sector-performance-card h3 {
+    font-size: 32px;
+  }
+
+  .sector-integration-card {
+    padding: 32px 20px;
+  }
+
+  .sector-integration-card h3 {
+    font-size: 36px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
+
   .sector-image,
-  .sector-engine-image {
+  .sector-engine-image,
+  .sector-icon-button {
     transition: none;
   }
 }
 </style>
-
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
