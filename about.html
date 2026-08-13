@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Transmission Services | Power Segment</title>
+    <title>About Us | Alpha Numeric</title>
 
+    <meta name="description"
+        content="Alpha Numeric is a technology-driven organization delivering intelligent lighting, smart automation, power infrastructure, renewable energy and industrial solutions.">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
 
     <style>
+
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
 
         * {
             margin: 0;
@@ -19,762 +39,2326 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: "Inter", sans-serif;
-            background: #f5f8fc;
-            color: #12233f;
-        }
-
-        /* =========================
-           MAIN PAGE
-        ========================== */
-
-        .power-page {
-            width: 100%;
-            min-height: 100vh;
             background: #ffffff;
-            overflow: hidden;
+            color: #111111;
+            overflow-x: hidden;
         }
 
-        /* =========================
-           HEADER
-        ========================== */
+        a {
+            text-decoration: none;
+        }
 
-        .header {
-            height: 75px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        img {
+            max-width: 100%;
+        }
 
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        .about-navbar {
+            height: 100px;
             padding: 0 7%;
-
-            background: #082b57;
-            color: white;
+            background: #ffffff !important;
+            border-bottom: 1px solid #eeeeee;
+            z-index: 9999;
+            transition: all .3s ease;
         }
 
-        .logo {
+        .about-logo {
             display: flex;
             align-items: center;
-            gap: 12px;
+            padding: 0;
+            margin: 0;
         }
 
-        .logo-icon {
-            width: 40px;
-            height: 40px;
+        .about-logo img {
+            height: 55px;
+            width: auto;
+            object-fit: contain;
+        }
 
-            display: flex;
+        .about-navbar .navbar-nav {
             align-items: center;
-            justify-content: center;
-
-            border-radius: 50%;
-
-            background: #f5b82e;
-            color: #082b57;
-
-            font-size: 22px;
-            font-weight: 800;
+            gap: 28px;
         }
 
-        .logo-text h3 {
-            font-size: 18px;
+        .about-navbar .nav-link {
+            color: #111111 !important;
+            font-size: 15px;
+            font-weight: 400;
             letter-spacing: 1px;
+            padding: 10px 0 !important;
+            transition: .3s;
         }
 
-        .logo-text span {
-            font-size: 10px;
-            color: #d6e2f1;
+        .about-navbar .nav-link:hover {
+            color: #666666 !important;
         }
 
-        .page-number {
+        .about-navbar .nav-link.active {
+            color: #111111 !important;
+            font-weight: 500;
+        }
+
+        .about-navbar .dropdown-toggle::after {
+            margin-left: 7px;
+            vertical-align: middle;
+            border-top: 5px solid #111111;
+            border-right: 4px solid transparent;
+            border-left: 4px solid transparent;
+        }
+
+        .about-navbar .dropdown-menu {
+            margin-top: 18px;
+            padding: 10px 0;
+            min-width: 215px;
+            border: 1px solid #eeeeee;
+            border-radius: 0;
+            background: #ffffff;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+        }
+
+        .about-navbar .dropdown-item {
+            padding: 11px 20px;
             font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 1px;
+            color: #222222;
+            transition: .25s ease;
+        }
+
+        .about-navbar .dropdown-item:hover {
+            background: #f5f5f5;
+            color: #000000;
+        }
+
+        .about-navbar .navbar-toggler {
+            border: none !important;
+            box-shadow: none !important;
+            color: #111111;
         }
 
 
-        /* =========================
-           HERO SECTION
-        ========================== */
+        /* =====================================================
+           HERO
+        ===================================================== */
 
-        .hero {
-            min-height: 470px;
+        .about-hero {
+
+            min-height: 620px;
 
             position: relative;
 
             display: flex;
             align-items: center;
 
+            overflow: hidden;
+
             background:
                 linear-gradient(
                     90deg,
-                    rgba(3, 29, 61, 0.98) 0%,
-                    rgba(3, 29, 61, 0.90) 42%,
-                    rgba(3, 29, 61, 0.20) 75%
+                    rgba(0, 0, 0, .94) 0%,
+                    rgba(0, 0, 0, .78) 42%,
+                    rgba(0, 0, 0, .18) 100%
                 ),
-                url("images/transmission.jpg");
+                url("assets/img/about-banner.jpg");
 
             background-size: cover;
             background-position: center;
         }
 
-        .hero-content {
-            width: 55%;
-            padding-left: 8%;
-            color: white;
+        .about-hero-content {
+
+            width: 100%;
+            max-width: 1250px;
+
+            margin: auto;
+
+            padding: 110px 6%;
+
+            color: #ffffff;
         }
 
-        .small-title {
-            display: inline-block;
-
-            padding: 7px 15px;
-            margin-bottom: 20px;
-
-            border-left: 4px solid #f5b82e;
-
-            background: rgba(255,255,255,0.08);
+        .hero-small-title {
 
             font-size: 12px;
             font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
 
-        .hero h1 {
-            font-size: clamp(42px, 5vw, 72px);
-            line-height: 1.05;
+            letter-spacing: 4px;
 
             text-transform: uppercase;
 
-            margin-bottom: 18px;
+            color: #cccccc;
+
+            margin-bottom: 22px;
         }
 
-        .hero h1 span {
-            color: #f5b82e;
-        }
+        .about-hero h1 {
 
-        .hero-description {
-            max-width: 540px;
+            font-size: clamp(48px, 7vw, 88px);
 
-            color: #e4edf7;
+            line-height: .98;
 
-            font-size: 16px;
-            line-height: 1.8;
+            font-weight: 700;
+
+            letter-spacing: -3px;
 
             margin-bottom: 28px;
         }
 
-        .hero-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-
-            padding: 13px 22px;
-
-            background: #f5b82e;
-            color: #082b57;
-
-            text-decoration: none;
-
-            font-size: 13px;
-            font-weight: 700;
-
-            border-radius: 3px;
+        .about-hero h1 span {
+            font-weight: 300;
         }
 
+        .hero-description {
 
-        /* =========================
-           HIGHLIGHTS
-        ========================== */
+            max-width: 650px;
 
-        .highlights {
-            position: relative;
-            margin: -50px 7% 0;
+            color: #dddddd;
 
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            font-size: 16px;
+
+            line-height: 1.9;
+
+            margin-bottom: 35px;
+        }
+
+        .hero-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 14px;
+
+            padding: 15px 25px;
 
             background: #ffffff;
 
-            box-shadow: 0 12px 35px rgba(8, 43, 87, 0.12);
-
-            z-index: 2;
-        }
-
-        .highlight {
-            min-height: 115px;
-
-            display: flex;
-            align-items: center;
-            gap: 15px;
-
-            padding: 20px;
-
-            border-right: 1px solid #e5eaf0;
-        }
-
-        .highlight:last-child {
-            border-right: none;
-        }
-
-        .highlight-icon {
-            width: 45px;
-            height: 45px;
-
-            flex-shrink: 0;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 50%;
-
-            background: #eaf2fb;
-            color: #0a4a8a;
-
-            font-size: 20px;
-        }
-
-        .highlight h4 {
-            font-size: 13px;
-            margin-bottom: 5px;
-        }
-
-        .highlight p {
-            color: #718096;
-            font-size: 11px;
-            line-height: 1.5;
-        }
-
-
-        /* =========================
-           OVERVIEW + SERVICES
-        ========================== */
-
-        .content-section {
-            padding: 85px 8% 65px;
-
-            display: grid;
-            grid-template-columns: 0.85fr 1.15fr;
-
-            gap: 80px;
-        }
-
-        .section-label {
-            color: #f0aa00;
+            color: #111111;
 
             font-size: 12px;
-            font-weight: 800;
 
-            letter-spacing: 2px;
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            transition: .3s;
+        }
+
+        .hero-button:hover {
+
+            background: #dddddd;
+
+            color: #000000;
+        }
+
+
+        /* =====================================================
+           SECTION COMMON
+        ===================================================== */
+
+        .section-container {
+
+            max-width: 1250px;
+
+            margin: auto;
+        }
+
+        .section-tag {
+
+            display: block;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
             text-transform: uppercase;
 
-            margin-bottom: 10px;
+            color: #777777;
+
+            margin-bottom: 15px;
         }
 
         .section-title {
-            font-size: 34px;
-            color: #082b57;
 
-            margin-bottom: 20px;
-        }
+            font-size: clamp(34px, 4vw, 55px);
 
-        .section-line {
-            width: 50px;
-            height: 4px;
+            font-weight: 600;
 
-            background: #f5b82e;
+            line-height: 1.1;
+
+            letter-spacing: -1.5px;
 
             margin-bottom: 25px;
         }
 
-        .overview-text {
-            color: #607086;
+        .section-title span {
+            font-weight: 300;
+        }
+
+        .section-text {
+
+            color: #666666;
 
             font-size: 14px;
+
             line-height: 1.9;
         }
 
 
-        /* =========================
-           SERVICES LIST
-        ========================== */
+        /* =====================================================
+           WHO WE ARE
+        ===================================================== */
 
-        .services-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+        .intro-section {
 
-            gap: 15px;
+            padding: 110px 8%;
         }
 
-        .service-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        .intro-left {
 
-            padding: 17px;
-
-            background: #f6f9fc;
-
-            border-left: 3px solid transparent;
-
-            transition: 0.3s;
+            padding-right: 50px;
         }
 
-        .service-item:hover {
-            border-left-color: #f5b82e;
-            background: #edf4fb;
-            transform: translateX(4px);
+        .intro-highlight {
+
+            border-left: 3px solid #111111;
+
+            padding-left: 25px;
+
+            margin-top: 30px;
+
+            color: #222222;
+
+            font-size: 17px;
+
+            line-height: 1.7;
+
+            font-weight: 500;
         }
 
-        .check {
-            width: 25px;
-            height: 25px;
+        .intro-box {
 
-            flex-shrink: 0;
+            padding: 30px;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: #f7f7f7;
 
-            border-radius: 50%;
+            height: 100%;
 
-            background: #082b57;
-            color: white;
-
-            font-size: 12px;
+            transition: .3s;
         }
 
-        .service-item span {
-            font-size: 12px;
+        .intro-box:hover {
+            background: #eeeeee;
+        }
+
+        .intro-box h4 {
+
+            font-size: 19px;
+
             font-weight: 600;
-            color: #263b58;
+
+            margin-top: 15px;
+
+            margin-bottom: 10px;
         }
 
 
-        /* =========================
-           BOTTOM IMAGE / INFO
-        ========================== */
+        /* =====================================================
+           STATS
+        ===================================================== */
 
-        .bottom-section {
-            margin: 0 8% 60px;
+        .stats-section {
 
-            display: grid;
-            grid-template-columns: 1fr 0.8fr;
+            background: #111111;
 
-            background: #082b57;
+            color: #ffffff;
+
+            padding: 55px 8%;
+        }
+
+        .stat-box {
+
+            text-align: center;
+
+            padding: 20px;
+
+            border-right: 1px solid rgba(255,255,255,.15);
+        }
+
+        .stat-box:last-child {
+            border-right: none;
+        }
+
+        .stat-number {
+
+            font-size: 38px;
+
+            font-weight: 600;
+
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+
+            color: #aaaaaa;
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =====================================================
+           WHAT WE DO
+        ===================================================== */
+
+        .services-section {
+
+            padding: 110px 8%;
+
+            background: #f7f7f7;
+        }
+
+        .services-heading {
+
+            max-width: 700px;
+
+            margin-bottom: 55px;
+        }
+
+        .service-card {
+
+            position: relative;
+
+            min-height: 315px;
+
+            background: #ffffff;
+
+            padding: 38px;
+
+            border: 1px solid #eeeeee;
+
+            transition: .4s;
 
             overflow: hidden;
         }
 
-        .bottom-content {
-            padding: 35px 40px;
-            color: white;
+        .service-card:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow: 0 20px 50px rgba(0,0,0,.08);
         }
 
-        .bottom-content h2 {
-            font-size: 24px;
-            margin-bottom: 15px;
+        .service-number {
+
+            position: absolute;
+
+            right: 25px;
+
+            top: 18px;
+
+            font-size: 55px;
+
+            font-weight: 700;
+
+            color: #f0f0f0;
         }
 
-        .bottom-content p {
-            color: #c9d8e8;
-            font-size: 13px;
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
+        .service-icon {
 
-        .bottom-points {
+            width: 52px;
+
+            height: 52px;
+
             display: flex;
-            gap: 25px;
-        }
 
-        .point strong {
-            display: block;
-            color: #f5b82e;
+            align-items: center;
+
+            justify-content: center;
+
+            background: #111111;
+
+            color: #ffffff;
+
+            margin-bottom: 25px;
+
             font-size: 18px;
-            margin-bottom: 4px;
         }
 
-        .point small {
-            color: #dce6f0;
-            font-size: 10px;
+        .service-card h3 {
+
+            font-size: 22px;
+
+            font-weight: 600;
+
+            margin-bottom: 14px;
         }
 
-        .bottom-image {
-            min-height: 230px;
+        .service-card p {
+
+            color: #707070;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+            margin-bottom: 18px;
+        }
+
+        .service-list {
+
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+        }
+
+        .service-list li {
+
+            color: #444444;
+
+            font-size: 12px;
+
+            margin-bottom: 8px;
+        }
+
+        .service-list li i {
+
+            margin-right: 8px;
+
+            font-size: 9px;
+        }
+
+
+        /* =====================================================
+           ENGINEERING CAPABILITY
+        ===================================================== */
+
+        .capability-section {
+
+            padding: 110px 8%;
+        }
+
+        .capability-image {
+
+            min-height: 520px;
 
             background:
                 linear-gradient(
-                    90deg,
-                    #082b57 0%,
-                    rgba(8,43,87,0.15) 35%
+                    rgba(0,0,0,.12),
+                    rgba(0,0,0,.12)
                 ),
-                url("images/transmission-worker.jpg");
+                url("assets/img/industrial.jpg");
 
             background-size: cover;
+
             background-position: center;
         }
 
+        .capability-content {
 
-        /* =========================
-           FOOTER
-        ========================== */
+            padding: 20px 0 20px 60px;
+        }
 
-        .footer {
-            min-height: 55px;
+        .capability-item {
 
             display: flex;
+
+            gap: 20px;
+
+            padding: 22px 0;
+
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .capability-item:last-child {
+            border-bottom: none;
+        }
+
+        .capability-icon {
+
+            width: 42px;
+
+            height: 42px;
+
+            flex-shrink: 0;
+
+            border: 1px solid #111111;
+
+            display: flex;
+
             align-items: center;
-            justify-content: space-between;
 
-            padding: 0 8%;
+            justify-content: center;
 
-            background: #061f40;
+            font-size: 13px;
+        }
 
-            color: #b9c9dc;
+        .capability-item h4 {
 
-            font-size: 10px;
+            font-size: 15px;
+
+            font-weight: 600;
+
+            margin-bottom: 7px;
+        }
+
+        .capability-item p {
+
+            margin: 0;
+
+            color: #777777;
+
+            font-size: 12px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           EPC
+        ===================================================== */
+
+        .epc-section {
+
+            background: #111111;
+
+            color: #ffffff;
+
+            padding: 110px 8%;
+        }
+
+        .epc-section .section-tag {
+            color: #999999;
+        }
+
+        .epc-section .section-title {
+            color: #ffffff;
+        }
+
+        .epc-section .section-text {
+            color: #aaaaaa;
+        }
+
+        .epc-step {
+
+            padding: 30px 20px 20px 0;
+        }
+
+        .epc-number {
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+
+            color: #888888;
+
+            margin-bottom: 15px;
+        }
+
+        .epc-step h4 {
+
+            font-size: 17px;
+
+            font-weight: 500;
+
+            margin-bottom: 10px;
+        }
+
+        .epc-step p {
+
+            color: #999999;
+
+            font-size: 12px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           TECHNOLOGY
+        ===================================================== */
+
+        .technology-section {
+
+            padding: 110px 8%;
+        }
+
+        .technology-box {
+
+            background: #f5f5f5;
+
+            padding: 55px;
+
+            height: 100%;
+        }
+
+        .technology-box h3 {
+
+            font-size: 30px;
+
+            margin-bottom: 18px;
+
+            font-weight: 600;
+        }
+
+        .technology-box p {
+
+            color: #666666;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+        .technology-points {
+
+            margin-top: 25px;
+        }
+
+        .technology-point {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 13px;
+
+            font-size: 12px;
+
+            color: #333333;
+        }
+
+        .technology-point i {
+
+            font-size: 8px;
+        }
+
+
+        /* =====================================================
+           R&D
+        ===================================================== */
+
+        .rd-section {
+
+            padding: 100px 8%;
+
+            background: #fafafa;
+        }
+
+        .rd-card {
+
+            background: #111111;
+
+            color: #ffffff;
+
+            padding: 45px;
+
+            min-height: 300px;
+
+            transition: .3s;
+        }
+
+        .rd-card:hover {
+
+            transform: translateY(-5px);
+        }
+
+        .rd-card h3 {
+
+            font-size: 21px;
+
+            margin-bottom: 15px;
+        }
+
+        .rd-card p {
+
+            color: #aaaaaa;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+        .rd-arrow {
+
+            margin-top: 30px;
+
+            font-size: 18px;
+        }
+
+
+        /* =====================================================
+           WHY ALPHA NUMERIC
+        ===================================================== */
+
+        .why-section {
+
+            padding: 110px 8%;
+        }
+
+        .why-card {
+
+            padding: 35px 30px;
+
+            border: 1px solid #eeeeee;
+
+            height: 100%;
+
+            transition: .3s;
+        }
+
+        .why-card:hover {
+
+            border-color: #111111;
+
+            transform: translateY(-4px);
+        }
+
+        .why-card i {
+
+            font-size: 22px;
+
+            margin-bottom: 22px;
+        }
+
+        .why-card h4 {
+
+            font-size: 17px;
+
+            margin-bottom: 12px;
+        }
+
+        .why-card p {
+
+            color: #777777;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           SECTORS
+        ===================================================== */
+
+        .sectors-section {
+
+            padding: 100px 8%;
+
+            background: #f5f5f5;
+        }
+
+        .sector-box {
+
+            background: #ffffff;
+
+            padding: 28px;
+
+            min-height: 135px;
+
+            border: 1px solid #eeeeee;
+
+            transition: .3s;
+        }
+
+        .sector-box:hover {
+
+            background: #111111;
+
+            color: #ffffff;
+        }
+
+        .sector-box h4 {
+
+            font-size: 16px;
+
+            margin-bottom: 8px;
+        }
+
+        .sector-box p {
+
+            color: #777777;
+
+            font-size: 11px;
+
+            line-height: 1.6;
+
+            margin: 0;
+        }
+
+        .sector-box:hover p {
+            color: #aaaaaa;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .cta-section {
+
+            padding: 105px 8%;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.88),
+                    rgba(0,0,0,.88)
+                ),
+                url("assets/img/about-cta.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            color: #ffffff;
+
+            text-align: center;
+        }
+
+        .cta-section h2 {
+
+            font-size: clamp(35px, 5vw, 60px);
+
+            font-weight: 500;
+
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+
+            max-width: 650px;
+
+            margin: auto auto 30px;
+
+            color: #bbbbbb;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+        }
+
+        .cta-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            background: #ffffff;
+
+            color: #111111;
+
+            padding: 15px 28px;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            transition: .3s;
+        }
+
+        .cta-button:hover {
+
+            background: #dddddd;
+
+            color: #111111;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .footer {
+
+            background: #050505;
+
+            color: #ffffff;
+
+            padding: 70px 8% 25px;
+        }
+
+        .footer-logo img {
+
+            height: 55px;
+
+            margin-bottom: 20px;
+        }
+
+        .footer-about {
+
+            color: #888888;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+            max-width: 350px;
+        }
+
+        .footer-title {
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            margin-bottom: 20px;
+
             letter-spacing: 1px;
         }
 
-        .footer strong {
-            color: #f5b82e;
+        .footer-links {
+
+            list-style: none;
+
+            padding: 0;
+        }
+
+        .footer-links li {
+
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+
+            color: #888888;
+
+            font-size: 12px;
+
+            transition: .3s;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-contact {
+
+            color: #888888;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+        .footer-contact i {
+
+            width: 20px;
+
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+
+            border-top: 1px solid #222222;
+
+            margin-top: 50px;
+
+            padding-top: 20px;
+
+            color: #666666;
+
+            font-size: 10px;
+
+            display: flex;
+
+            justify-content: space-between;
         }
 
 
-        /* =========================
+        /* =====================================================
            RESPONSIVE
-        ========================== */
+        ===================================================== */
 
-        @media (max-width: 900px) {
+        @media (max-width: 991px) {
 
-            .hero-content {
-                width: 80%;
+            .about-navbar {
+
+                height: auto;
+
+                min-height: 80px;
+
+                padding: 10px 5%;
             }
 
-            .highlights {
-                grid-template-columns: repeat(2, 1fr);
+            .about-logo img {
+                height: 48px;
             }
 
-            .content-section {
-                grid-template-columns: 1fr;
-                gap: 50px;
+            .about-navbar .navbar-collapse {
+
+                margin-top: 15px;
+
+                padding: 15px 0;
+
+                background: #ffffff;
             }
 
-            .bottom-section {
-                grid-template-columns: 1fr;
+            .about-navbar .navbar-nav {
+
+                align-items: flex-start;
+
+                gap: 0;
             }
 
+            .about-navbar .nav-item {
+                width: 100%;
+            }
+
+            .about-navbar .nav-link {
+                padding: 12px 5px !important;
+            }
+
+            .about-navbar .dropdown-menu {
+
+                margin-top: 0;
+
+                border: none;
+
+                box-shadow: none;
+            }
+
+            .about-hero {
+                min-height: 560px;
+            }
+
+            .intro-left {
+
+                padding-right: 0;
+
+                margin-bottom: 40px;
+            }
+
+            .capability-image {
+
+                min-height: 400px;
+
+                margin-bottom: 40px;
+            }
+
+            .capability-content {
+                padding: 0;
+            }
+
+            .stat-box {
+
+                border-right: none;
+
+                border-bottom: 1px solid rgba(255,255,255,.15);
+            }
+
+            .stat-box:last-child {
+                border-bottom: none;
+            }
         }
 
 
-        @media (max-width: 600px) {
+        @media (max-width: 767px) {
 
-            .header {
-                padding: 0 5%;
+            .about-hero-content {
+                padding: 100px 7%;
             }
 
-            .hero {
-                min-height: 500px;
+            .about-hero h1 {
+                font-size: 52px;
             }
 
-            .hero-content {
-                width: 90%;
-                padding-left: 7%;
+            .intro-section,
+            .services-section,
+            .capability-section,
+            .technology-section,
+            .why-section,
+            .sectors-section {
+                padding: 75px 7%;
             }
 
-            .highlights {
-                margin: 0;
-                grid-template-columns: 1fr;
+            .epc-section,
+            .rd-section {
+                padding: 75px 7%;
             }
 
-            .highlight {
-                border-right: none;
-                border-bottom: 1px solid #e5eaf0;
+            .cta-section {
+                padding: 75px 7%;
             }
 
-            .content-section {
-                padding: 55px 6%;
+            .technology-box {
+
+                padding: 35px;
+
+                margin-bottom: 25px;
             }
 
-            .services-list {
-                grid-template-columns: 1fr;
+            .service-card {
+                min-height: auto;
             }
 
-            .bottom-section {
-                margin: 0 6% 40px;
+            .footer {
+                padding: 55px 7% 20px;
             }
 
-            .bottom-points {
-                flex-wrap: wrap;
+            .footer-column {
+                margin-bottom: 35px;
             }
 
+            .footer-bottom {
+
+                flex-direction: column;
+
+                gap: 10px;
+            }
         }
 
     </style>
+
 </head>
 
 
 <body>
 
-<div class="power-page">
 
-    <!-- HEADER -->
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
 
-    <header class="header">
+<nav class="navbar navbar-expand-lg about-navbar fixed-top" id="mainNav">
 
-        <div class="logo">
+    <div class="container-fluid px-4 px-lg-5">
 
-            <div class="logo-icon">
-                ⚡
+
+        <!-- LOGO -->
+
+        <a class="navbar-brand about-logo" href="index.html">
+
+            <img src="assets/img/b-alpha.png"
+                 alt="Alpha Numeric Logo">
+
+        </a>
+
+
+        <!-- MOBILE BUTTON -->
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+            <span class="me-2">Menu</span>
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <div class="collapse navbar-collapse"
+             id="navbarResponsive">
+
+            <ul class="navbar-nav ms-auto">
+
+
+                <!-- HOME -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <!-- ABOUT -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link active"
+                       href="about.html">
+
+                        About
+
+                    </a>
+
+                </li>
+
+
+                <!-- ENERGY -->
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       id="energyDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+
+                        Energy
+
+                    </a>
+
+                    <ul class="dropdown-menu"
+                        aria-labelledby="energyDropdown">
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="solar-energy.html">
+                                Solar Energy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="wind-energy.html">
+                                Wind Energy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="biomass-energy.html">
+                                Biomass Energy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="hydel-energy.html">
+                                Hydel Energy
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- POWER -->
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       id="powerDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+
+                        Power
+
+                    </a>
+
+                    <ul class="dropdown-menu"
+                        aria-labelledby="powerDropdown">
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="transmission.html">
+                                Transmission
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="distribution.html">
+                                Distribution
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="control-panels.html">
+                                Control Panels
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="panel-boards.html">
+                                Panel Boards
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- AUTOMATION -->
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       id="automationDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+
+                        Automation
+
+                    </a>
+
+                    <ul class="dropdown-menu"
+                        aria-labelledby="automationDropdown">
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="home-automation.html">
+                                Home Automation
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="commercial-automation.html">
+                                Commercial Automation
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="industrial-automation.html">
+                                Industrial Automation
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="hospital-automation.html">
+                                Hospital Automation
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="hotel-automation.html">
+                                Hotel Automation
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- R&D -->
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       id="rdDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+
+                        R & D
+
+                    </a>
+
+                    <ul class="dropdown-menu"
+                        aria-labelledby="rdDropdown">
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="smart-pole.html">
+                                Smart Pole
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="smart-bollard.html">
+                                Smart Bollard
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="window-leaf-ac.html">
+                                Window Leaf AC
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="smart-conference-table.html">
+                                Smart Conference Table
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- PRODUCTS -->
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       id="productsDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+
+                        Products
+
+                    </a>
+
+                    <ul class="dropdown-menu"
+                        aria-labelledby="productsDropdown">
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="transformers.html">
+                                Transformers
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="panels.html">
+                                Panels
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="switchgear.html">
+                                Switchgear
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="controllers.html">
+                                Controllers
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="accessories.html">
+                                Accessories
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- CONTACT -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="index.html#contact">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="about-hero">
+
+    <div class="about-hero-content">
+
+        <div class="hero-small-title">
+            Alpha Numeric
+        </div>
+
+        <h1>
+            Engineering<br>
+            <span>What's Next.</span>
+        </h1>
+
+        <p class="hero-description">
+
+            A technology-driven organization delivering
+            intelligent, efficient and future-ready solutions
+            across energy, power, automation, industrial systems
+            and advanced engineering.
+
+        </p>
+
+        <a href="#who-we-are"
+           class="hero-button">
+
+            Discover Alpha Numeric
+
+            <i class="fa-solid fa-arrow-down"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHO WE ARE
+========================================================= -->
+
+<section class="intro-section"
+         id="who-we-are">
+
+    <div class="section-container">
+
+        <div class="row align-items-center">
+
+
+            <div class="col-lg-6 intro-left">
+
+                <span class="section-tag">
+                    Who We Are
+                </span>
+
+                <h2 class="section-title">
+
+                    Building smarter systems
+                    for a <span>connected future.</span>
+
+                </h2>
+
+
+                <p class="section-text">
+
+                    Alpha Numeric is a technology-driven
+                    organization focused on delivering innovative
+                    solutions across intelligent lighting,
+                    smart automation, power infrastructure,
+                    renewable energy and industrial systems.
+
+                </p>
+
+
+                <p class="section-text mt-3">
+
+                    We bring together advanced engineering,
+                    digital technologies, automation, IoT and
+                    innovative design to create solutions that
+                    improve efficiency, reliability, safety and
+                    operational intelligence.
+
+                </p>
+
+
+                <div class="intro-highlight">
+
+                    From concept and engineering to execution,
+                    commissioning and support, Alpha Numeric
+                    delivers integrated solutions designed
+                    around real-world requirements.
+
+                </div>
+
             </div>
 
-            <div class="logo-text">
-                <h3>POWER SEGMENT</h3>
-                <span>Powering a Stronger Tomorrow</span>
+
+            <div class="col-lg-6">
+
+                <div class="row g-3">
+
+
+                    <div class="col-6">
+
+                        <div class="intro-box">
+
+                            <span class="section-tag">
+                                01
+                            </span>
+
+                            <h4>
+                                Engineering
+                            </h4>
+
+                            <p class="section-text">
+
+                                Practical engineering solutions
+                                built around performance,
+                                reliability and efficiency.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-6">
+
+                        <div class="intro-box">
+
+                            <span class="section-tag">
+                                02
+                            </span>
+
+                            <h4>
+                                Technology
+                            </h4>
+
+                            <p class="section-text">
+
+                                IoT, automation and intelligent
+                                systems for connected environments.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-6">
+
+                        <div class="intro-box">
+
+                            <span class="section-tag">
+                                03
+                            </span>
+
+                            <h4>
+                                Execution
+                            </h4>
+
+                            <p class="section-text">
+
+                                Structured project execution
+                                from design through commissioning.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-6">
+
+                        <div class="intro-box">
+
+                            <span class="section-tag">
+                                04
+                            </span>
+
+                            <h4>
+                                Innovation
+                            </h4>
+
+                            <p class="section-text">
+
+                                Continuous development of
+                                smart and future-ready solutions.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
 
-        <div class="page-number">
-            POWER SOLUTIONS / 01
-        </div>
+    </div>
 
-    </header>
+</section>
 
 
-    <!-- HERO -->
 
-    <section class="hero">
+<!-- =========================================================
+     STATS
+========================================================= -->
 
-        <div class="hero-content">
+<section class="stats-section">
 
-            <div class="small-title">
-                Power Infrastructure Solutions
+    <div class="container-fluid">
+
+        <div class="row">
+
+
+            <div class="col-lg-3 col-6 stat-box">
+
+                <div class="stat-number">
+                    360°
+                </div>
+
+                <div class="stat-label">
+                    Engineering Approach
+                </div>
+
             </div>
 
-            <h1>
-                Transmission
-                <br>
-                <span>Services</span>
-            </h1>
 
-            <p class="hero-description">
-                Reliable and efficient power transmission solutions
-                designed to deliver electricity safely and consistently
-                across long distances.
-            </p>
+            <div class="col-lg-3 col-6 stat-box">
 
-            <a href="#services" class="hero-btn">
-                Explore Services →
-            </a>
+                <div class="stat-number">
+                    5+
+                </div>
 
-        </div>
+                <div class="stat-label">
+                    Core Solution Areas
+                </div>
 
-    </section>
-
-
-    <!-- HIGHLIGHTS -->
-
-    <section class="highlights">
-
-        <div class="highlight">
-
-            <div class="highlight-icon">
-                ⚡
             </div>
 
-            <div>
-                <h4>Reliable Power</h4>
-                <p>Stable and efficient transmission solutions.</p>
+
+            <div class="col-lg-3 col-6 stat-box">
+
+                <div class="stat-number">
+                    IoT
+                </div>
+
+                <div class="stat-label">
+                    Connected Technology
+                </div>
+
             </div>
 
-        </div>
 
+            <div class="col-lg-3 col-6 stat-box">
 
-        <div class="highlight">
+                <div class="stat-number">
+                    EPC
+                </div>
 
-            <div class="highlight-icon">
-                🛡
+                <div class="stat-label">
+                    End-to-End Execution
+                </div>
+
             </div>
 
-            <div>
-                <h4>Safety First</h4>
-                <p>Safety-focused engineering and execution.</p>
-            </div>
-
-        </div>
-
-
-        <div class="highlight">
-
-            <div class="highlight-icon">
-                ⚙
-            </div>
-
-            <div>
-                <h4>Advanced Technology</h4>
-                <p>Modern systems and engineering practices.</p>
-            </div>
 
         </div>
 
+    </div>
 
-        <div class="highlight">
-
-            <div class="highlight-icon">
-                ✓
-            </div>
-
-            <div>
-                <h4>Quality Assured</h4>
-                <p>Quality-controlled project execution.</p>
-            </div>
-
-        </div>
-
-    </section>
+</section>
 
 
-    <!-- OVERVIEW + SERVICES -->
 
-    <section class="content-section">
+<!-- =========================================================
+     WHAT WE DO
+========================================================= -->
 
-        <!-- OVERVIEW -->
+<section class="services-section"
+         id="services">
 
-        <div>
+    <div class="section-container">
 
-            <div class="section-label">
-                About Our Service
-            </div>
+
+        <div class="services-heading">
+
+            <span class="section-tag">
+                Our Capabilities
+            </span>
 
             <h2 class="section-title">
-                Transmission
+
+                One organization.
                 <br>
-                Infrastructure
+
+                <span>
+                    Multiple engineering capabilities.
+                </span>
+
             </h2>
 
-            <div class="section-line"></div>
+            <p class="section-text">
 
-            <p class="overview-text">
-
-                Our Transmission Services provide dependable solutions
-                for the efficient transfer of electrical power from
-                generation facilities to distribution networks.
-
-                <br><br>
-
-                We deliver complete project support covering
-                engineering, supply, installation, testing,
-                commissioning and maintenance of transmission
-                infrastructure.
+                Alpha Numeric combines multiple technology
+                and engineering disciplines to deliver
+                integrated solutions for residential,
+                commercial, industrial and infrastructure
+                environments.
 
             </p>
 
         </div>
 
 
-        <!-- SERVICES -->
+        <div class="row g-4">
 
-        <div id="services">
 
-            <div class="section-label">
-                What We Do
+            <!-- ENERGY -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-number">
+                        01
+                    </div>
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+
+                    <h3>
+                        Energy
+                    </h3>
+
+                    <p>
+
+                        Sustainable and renewable energy
+                        solutions designed to improve
+                        energy efficiency and support
+                        a cleaner future.
+
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Solar Energy
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Wind Energy
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Biomass Energy
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Hydel Energy
+                        </li>
+
+                    </ul>
+
+                </div>
+
             </div>
 
-            <h2 class="section-title">
-                Our Services
-            </h2>
 
-            <div class="section-line"></div>
+            <!-- POWER -->
 
+            <div class="col-lg-4 col-md-6">
 
-            <div class="services-list">
+                <div class="service-card">
 
-                <div class="service-item">
+                    <div class="service-number">
+                        02
+                    </div>
 
-                    <div class="check">✓</div>
+                    <div class="service-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
 
-                    <span>
-                        Transmission Line Design & Engineering
-                    </span>
+                    <h3>
+                        Power
+                    </h3>
 
-                </div>
+                    <p>
 
+                        Reliable power infrastructure
+                        solutions covering transmission,
+                        distribution and electrical
+                        control systems.
 
-                <div class="service-item">
+                    </p>
 
-                    <div class="check">✓</div>
+                    <ul class="service-list">
 
-                    <span>
-                        Supply & Erection of Transmission Lines
-                    </span>
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Transmission
+                        </li>
 
-                </div>
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Distribution
+                        </li>
 
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Control Panels
+                        </li>
 
-                <div class="service-item">
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Panel Boards
+                        </li>
 
-                    <div class="check">✓</div>
-
-                    <span>
-                        Tower Installation & Stringing
-                    </span>
-
-                </div>
-
-
-                <div class="service-item">
-
-                    <div class="check">✓</div>
-
-                    <span>
-                        High Voltage Testing
-                    </span>
-
-                </div>
-
-
-                <div class="service-item">
-
-                    <div class="check">✓</div>
-
-                    <span>
-                        Testing & Commissioning
-                    </span>
+                    </ul>
 
                 </div>
 
+            </div>
 
-                <div class="service-item">
 
-                    <div class="check">✓</div>
+            <!-- AUTOMATION -->
 
-                    <span>
-                        Operation & Maintenance
-                    </span>
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-number">
+                        03
+                    </div>
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+
+                    <h3>
+                        Automation
+                    </h3>
+
+                    <p>
+
+                        Intelligent automation solutions
+                        that connect systems, improve
+                        control and enhance operational
+                        efficiency.
+
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Home Automation
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Commercial Automation
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Industrial Automation
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Hospital & Hotel Automation
+                        </li>
+
+                    </ul>
 
                 </div>
 
+            </div>
 
-                <div class="service-item">
 
-                    <div class="check">✓</div>
+            <!-- R&D -->
 
-                    <span>
-                        Line Upgradation & Rehabilitation
-                    </span>
+            <div class="col-lg-6 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-number">
+                        04
+                    </div>
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+
+                    <h3>
+                        R & D
+                    </h3>
+
+                    <p>
+
+                        Our R&D focus is on developing
+                        innovative products and intelligent
+                        systems that solve emerging
+                        engineering challenges.
+
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Smart Pole
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Smart Bollard
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Window Leaf AC
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Smart Conference Table
+                        </li>
+
+                    </ul>
 
                 </div>
 
+            </div>
 
-                <div class="service-item">
 
-                    <div class="check">✓</div>
+            <!-- PRODUCTS -->
 
-                    <span>
-                        Substation Connectivity Solutions
+            <div class="col-lg-6 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-number">
+                        05
+                    </div>
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+
+                    <h3>
+                        Products
+                    </h3>
+
+                    <p>
+
+                        Engineered electrical and control
+                        products designed to support
+                        dependable and efficient
+                        infrastructure.
+
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Transformers
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Panels
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Switchgear
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Controllers & Accessories
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ENGINEERING
+========================================================= -->
+
+<section class="capability-section">
+
+    <div class="section-container">
+
+        <div class="row align-items-center">
+
+
+            <div class="col-lg-6">
+
+                <div class="capability-image"></div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="capability-content">
+
+                    <span class="section-tag">
+                        Engineering Excellence
                     </span>
+
+                    <h2 class="section-title">
+
+                        From idea to
+                        <span>execution.</span>
+
+                    </h2>
+
+                    <p class="section-text mb-4">
+
+                        Alpha Numeric brings engineering,
+                        technology and execution together
+                        under one integrated approach.
+
+                    </p>
+
+
+                    <div class="capability-item">
+
+                        <div class="capability-icon">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Concept & Planning
+                            </h4>
+
+                            <p>
+
+                                Understanding requirements
+                                and developing practical
+                                technical solutions.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="capability-item">
+
+                        <div class="capability-icon">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Engineering Design
+                            </h4>
+
+                            <p>
+
+                                Detailed engineering,
+                                system design, drawings,
+                                specifications and planning.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="capability-item">
+
+                        <div class="capability-icon">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Procurement & Integration
+                            </h4>
+
+                            <p>
+
+                                Coordinated sourcing,
+                                technology integration
+                                and system preparation.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="capability-item">
+
+                        <div class="capability-icon">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Installation & Commissioning
+                            </h4>
+
+                            <p>
+
+                                Professional installation,
+                                testing, commissioning and
+                                project handover.
+
+                            </p>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -782,69 +2366,1135 @@
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- BOTTOM SECTION -->
 
-    <section class="bottom-section">
+<!-- =========================================================
+     EPC
+========================================================= -->
 
-        <div class="bottom-content">
+<section class="epc-section">
 
-            <h2>
-                Built for Reliable Power Transmission
-            </h2>
-
-            <p>
-                From engineering and installation to testing and
-                commissioning, our transmission solutions are
-                designed for long-term reliability, operational
-                safety and efficient power delivery.
-            </p>
+    <div class="section-container">
 
 
-            <div class="bottom-points">
+        <div class="row mb-5">
 
-                <div class="point">
-                    <strong>11kV+</strong>
-                    <small>Transmission Solutions</small>
-                </div>
 
-                <div class="point">
-                    <strong>24/7</strong>
-                    <small>System Reliability</small>
-                </div>
+            <div class="col-lg-7">
 
-                <div class="point">
-                    <strong>100%</strong>
-                    <small>Quality Focus</small>
-                </div>
+                <span class="section-tag">
+                    EPC Solutions
+                </span>
+
+                <h2 class="section-title">
+
+                    A complete project
+                    <span>execution partner.</span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="col-lg-5">
+
+                <p class="section-text">
+
+                    Alpha Numeric supports projects through
+                    an integrated EPC approach, helping
+                    streamline engineering, procurement,
+                    construction, installation, testing
+                    and commissioning.
+
+                </p>
 
             </div>
 
         </div>
 
 
-        <div class="bottom-image"></div>
-
-    </section>
+        <div class="row">
 
 
-    <!-- FOOTER -->
+            <div class="col-lg-2 col-md-4 col-6">
 
-    <footer class="footer">
+                <div class="epc-step">
 
-        <span>
-            POWERING PROGRESS. CONNECTING COMMUNITIES.
-        </span>
+                    <div class="epc-number">
+                        01 / CONCEPT
+                    </div>
 
-        <strong>
-            TRANSMISSION SERVICES
-        </strong>
+                    <h4>
+                        Requirement
+                    </h4>
 
-    </footer>
+                    <p>
+                        Understand project objectives
+                        and technical needs.
+                    </p>
 
-</div>
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-2 col-md-4 col-6">
+
+                <div class="epc-step">
+
+                    <div class="epc-number">
+                        02 / DESIGN
+                    </div>
+
+                    <h4>
+                        Engineering
+                    </h4>
+
+                    <p>
+                        Develop technical designs
+                        and project documentation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-2 col-md-4 col-6">
+
+                <div class="epc-step">
+
+                    <div class="epc-number">
+                        03 / SOURCE
+                    </div>
+
+                    <h4>
+                        Procurement
+                    </h4>
+
+                    <p>
+                        Coordinate materials,
+                        equipment and technology.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-2 col-md-4 col-6">
+
+                <div class="epc-step">
+
+                    <div class="epc-number">
+                        04 / BUILD
+                    </div>
+
+                    <h4>
+                        Construction
+                    </h4>
+
+                    <p>
+                        Execute installation and
+                        project implementation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-2 col-md-4 col-6">
+
+                <div class="epc-step">
+
+                    <div class="epc-number">
+                        05 / TEST
+                    </div>
+
+                    <h4>
+                        Testing
+                    </h4>
+
+                    <p>
+                        Verify systems for safety
+                        and performance.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-2 col-md-4 col-6">
+
+                <div class="epc-step">
+
+                    <div class="epc-number">
+                        06 / DELIVER
+                    </div>
+
+                    <h4>
+                        Handover
+                    </h4>
+
+                    <p>
+                        Commission systems and
+                        complete project handover.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TECHNOLOGY
+========================================================= -->
+
+<section class="technology-section">
+
+    <div class="section-container">
+
+        <div class="row g-4">
+
+
+            <!-- TECHNOLOGY -->
+
+            <div class="col-lg-6">
+
+                <div class="technology-box">
+
+                    <span class="section-tag">
+                        Technology
+                    </span>
+
+                    <h3>
+                        Connecting engineering
+                        with intelligence.
+                    </h3>
+
+                    <p>
+
+                        Alpha Numeric integrates modern
+                        digital technologies with electrical
+                        and industrial engineering to create
+                        connected, measurable and intelligent
+                        environments.
+
+                    </p>
+
+
+                    <div class="technology-points">
+
+
+                        <div class="technology-point">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            IoT & Connected Systems
+
+                        </div>
+
+
+                        <div class="technology-point">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            Energy Monitoring & Management
+
+                        </div>
+
+
+                        <div class="technology-point">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            Smart Automation
+
+                        </div>
+
+
+                        <div class="technology-point">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            Intelligent Lighting
+
+                        </div>
+
+
+                        <div class="technology-point">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            Industrial Digitalization
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- APPROACH -->
+
+            <div class="col-lg-6">
+
+                <div class="technology-box">
+
+                    <span class="section-tag">
+                        Our Approach
+                    </span>
+
+                    <h3>
+                        Designed for
+                        performance.
+                    </h3>
+
+                    <p>
+
+                        Every Alpha Numeric solution is
+                        developed with a focus on efficiency,
+                        reliability, scalability and
+                        long-term operational value.
+
+                    </p>
+
+
+                    <div class="technology-points">
+
+
+                        <div class="technology-point">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            Energy Efficiency
+
+                        </div>
+
+
+                        <div class="technology-point">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            Operational Visibility
+
+                        </div>
+
+
+                        <div class="technology-point">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            System Reliability
+
+                        </div>
+
+
+                        <div class="technology-point">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            Safety & Quality
+
+                        </div>
+
+
+                        <div class="technology-point">
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            Future Scalability
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     R&D
+========================================================= -->
+
+<section class="rd-section">
+
+    <div class="section-container">
+
+
+        <div class="row align-items-end mb-5">
+
+
+            <div class="col-lg-7">
+
+                <span class="section-tag">
+                    Research & Development
+                </span>
+
+                <h2 class="section-title">
+
+                    Innovation is part of
+                    <span>what we build.</span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="col-lg-5">
+
+                <p class="section-text">
+
+                    Our R&D initiatives focus on creating
+                    smart, practical and technology-driven
+                    products for evolving environments.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- SMART POLE -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="rd-card">
+
+                    <h3>
+                        Smart Pole
+                    </h3>
+
+                    <p>
+
+                        Intelligent outdoor infrastructure
+                        designed to combine lighting,
+                        connectivity and smart monitoring.
+
+                    </p>
+
+                    <div class="rd-arrow">
+                        →
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SMART BOLLARD -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="rd-card">
+
+                    <h3>
+                        Smart Bollard
+                    </h3>
+
+                    <p>
+
+                        Smart architectural and outdoor
+                        lighting solutions designed for
+                        connected environments.
+
+                    </p>
+
+                    <div class="rd-arrow">
+                        →
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- WINDOW LEAF AC -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="rd-card">
+
+                    <h3>
+                        Window Leaf AC
+                    </h3>
+
+                    <p>
+
+                        Product innovation focused on
+                        intelligent and efficient
+                        environmental solutions.
+
+                    </p>
+
+                    <div class="rd-arrow">
+                        →
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONFERENCE TABLE -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="rd-card">
+
+                    <h3>
+                        Smart Conference Table
+                    </h3>
+
+                    <p>
+
+                        Technology-enabled collaboration
+                        solutions designed for modern
+                        professional spaces.
+
+                    </p>
+
+                    <div class="rd-arrow">
+                        →
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHY ALPHA NUMERIC
+========================================================= -->
+
+<section class="why-section">
+
+    <div class="section-container">
+
+
+        <div class="row mb-5">
+
+            <div class="col-lg-7">
+
+                <span class="section-tag">
+                    Why Alpha Numeric
+                </span>
+
+                <h2 class="section-title">
+
+                    Engineering with
+                    <span>purpose.</span>
+
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="why-card">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                    <h4>
+                        Integrated Expertise
+                    </h4>
+
+                    <p>
+
+                        Multiple engineering and technology
+                        capabilities brought together under
+                        one organization.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="why-card">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                    <h4>
+                        Smart Technology
+                    </h4>
+
+                    <p>
+
+                        IoT, automation, energy management
+                        and intelligent systems designed
+                        for connected operations.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="why-card">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <h4>
+                        Quality & Safety
+                    </h4>
+
+                    <p>
+
+                        Engineering and execution focused
+                        on quality, reliability, safety and
+                        long-term performance.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="why-card">
+
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+
+                    <h4>
+                        Future Ready
+                    </h4>
+
+                    <p>
+
+                        Solutions designed to adapt,
+                        scale and support the changing
+                        needs of modern infrastructure.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTORS
+========================================================= -->
+
+<section class="sectors-section">
+
+    <div class="section-container">
+
+
+        <div class="row mb-5">
+
+            <div class="col-lg-7">
+
+                <span class="section-tag">
+                    Applications
+                </span>
+
+                <h2 class="section-title">
+
+                    Solutions across
+                    <span>multiple environments.</span>
+
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="row g-3">
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="sector-box">
+
+                    <h4>
+                        Residential
+                    </h4>
+
+                    <p>
+
+                        Smart home, lighting and energy
+                        solutions for connected living spaces.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="sector-box">
+
+                    <h4>
+                        Commercial
+                    </h4>
+
+                    <p>
+
+                        Automation, lighting, power and
+                        energy management for commercial
+                        environments.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="sector-box">
+
+                    <h4>
+                        Industrial
+                    </h4>
+
+                    <p>
+
+                        Industrial automation, electrical
+                        infrastructure and monitoring solutions.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="sector-box">
+
+                    <h4>
+                        Infrastructure
+                    </h4>
+
+                    <p>
+
+                        Power, transmission, distribution
+                        and infrastructure engineering solutions.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="sector-box">
+
+                    <h4>
+                        Hospitality
+                    </h4>
+
+                    <p>
+
+                        Smart automation and energy solutions
+                        for hotels and hospitality environments.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="sector-box">
+
+                    <h4>
+                        Healthcare
+                    </h4>
+
+                    <p>
+
+                        Intelligent automation and
+                        infrastructure solutions for
+                        healthcare facilities.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="sector-box">
+
+                    <h4>
+                        Energy
+                    </h4>
+
+                    <p>
+
+                        Renewable energy and energy
+                        management solutions for
+                        sustainable operations.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="sector-box">
+
+                    <h4>
+                        Smart Infrastructure
+                    </h4>
+
+                    <p>
+
+                        Connected lighting, smart
+                        infrastructure and intelligent systems.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta-section">
+
+    <div class="section-container">
+
+        <h2>
+            Let's build what's next.
+        </h2>
+
+        <p>
+
+            Whether it is power infrastructure,
+            renewable energy, automation, intelligent
+            lighting, IoT or a new engineering concept,
+            Alpha Numeric brings technology and execution
+            together to create meaningful solutions.
+
+        </p>
+
+        <a href="index.html#contact"
+           class="cta-button">
+
+            TALK TO ALPHA NUMERIC
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <div class="container-fluid">
+
+        <div class="row g-5">
+
+
+            <!-- COMPANY -->
+
+            <div class="col-lg-4 footer-column">
+
+                <div class="footer-logo">
+
+                    <img src="assets/img/w-alpha.png"
+                         alt="Alpha Numeric Logo">
+
+                </div>
+
+                <p class="footer-about">
+
+                    Alpha Numeric is a technology-driven
+                    organization delivering intelligent
+                    solutions across energy, power,
+                    automation, IoT, lighting, R&D and
+                    industrial infrastructure.
+
+                </p>
+
+            </div>
+
+
+            <!-- SERVICES -->
+
+            <div class="col-lg-2 col-md-4 footer-column">
+
+                <div class="footer-title">
+                    SERVICES
+                </div>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="solar-energy.html">
+                            Energy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="transmission.html">
+                            Power
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="home-automation.html">
+                            Automation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="smart-pole.html">
+                            R & D
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="transformers.html">
+                            Products
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- COMPANY LINKS -->
+
+            <div class="col-lg-2 col-md-4 footer-column">
+
+                <div class="footer-title">
+                    COMPANY
+                </div>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#contact">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="col-lg-4 col-md-4 footer-column">
+
+                <div class="footer-title">
+                    CONTACT
+                </div>
+
+                <div class="footer-contact">
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        1st Floor, Raja Rajeswari Colony,
+                        Plot No. 343, Radhika Residency,
+                        Kondapur, Hyderabad,
+                        Telangana 500084
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        +91 XXXXX XXXXX
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        info@alphanumeric.com
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+            <span>
+
+                © 2026 Alpha Numeric.
+                All Rights Reserved.
+
+            </span>
+
+            <span>
+
+                ENGINEERED FOR THE FUTURE.
+
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     BOOTSTRAP JS
+========================================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- =========================================================
+     NAVBAR SCROLL EFFECT
+========================================================= -->
+
+<script>
+
+    window.addEventListener("scroll", function () {
+
+        const navbar =
+            document.querySelector(".about-navbar");
+
+        if (window.scrollY > 30) {
+
+            navbar.style.boxShadow =
+                "0 5px 25px rgba(0,0,0,0.06)";
+
+        } else {
+
+            navbar.style.boxShadow =
+                "none";
+
+        }
+
+    });
+
+</script>
+
 
 </body>
+
 </html>
