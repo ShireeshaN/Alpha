@@ -1,11 +1,10 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Hotel Automation | Smart Hospitality Solutions</title>
+<title>About Us | Engineering & Automation Solutions</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +13,7 @@
 <style>
 
 /* =========================================================
-   RESET
+   GLOBAL
 ========================================================= */
 
 *{
@@ -29,12 +28,13 @@ html{
 
 body{
     font-family:"Manrope",sans-serif;
-    background:#f7f5f0;
-    color:#20251f;
+    background:#f5f4ef;
+    color:#222720;
 }
 
 a{
     text-decoration:none;
+    color:inherit;
 }
 
 
@@ -52,10 +52,10 @@ a{
 
     background:#fff;
 
-    border-bottom:1px solid #e6e2d9;
+    border-bottom:1px solid #e5e2d9;
 
     position:relative;
-    z-index:50;
+    z-index:20;
 }
 
 .logo{
@@ -75,7 +75,8 @@ a{
     background:#252b24;
     color:#fff;
 
-    font-size:17px;
+    font-size:16px;
+    font-weight:800;
 
     border-radius:3px;
 }
@@ -84,7 +85,7 @@ a{
     display:block;
 
     font-size:14px;
-    letter-spacing:1.6px;
+    letter-spacing:1.7px;
 }
 
 .logo-text span{
@@ -92,7 +93,7 @@ a{
 
     margin-top:4px;
 
-    color:#9a9b91;
+    color:#999b91;
 
     font-size:7px;
     letter-spacing:1.7px;
@@ -101,11 +102,11 @@ a{
 .nav-links{
     display:flex;
     align-items:center;
-    gap:29px;
+    gap:28px;
 }
 
 .nav-links a{
-    color:#73766c;
+    color:#777970;
 
     font-size:9px;
     font-weight:700;
@@ -115,7 +116,7 @@ a{
     color:#252b24;
 }
 
-.nav-contact{
+.nav-btn{
     padding:12px 20px;
 
     background:#252b24;
@@ -131,20 +132,20 @@ a{
 ========================================================= */
 
 .hero{
-    min-height:690px;
+    min-height:620px;
 
-    padding:75px 7%;
+    padding:85px 7%;
 
     display:grid;
-    grid-template-columns:45% 55%;
+    grid-template-columns:48% 52%;
 
     align-items:center;
 
-    background:#f7f5f0;
+    background:#f5f4ef;
 }
 
 .hero-content{
-    padding-right:55px;
+    padding-right:60px;
 }
 
 .eyebrow{
@@ -152,29 +153,29 @@ a{
     align-items:center;
     gap:10px;
 
-    margin-bottom:22px;
+    margin-bottom:24px;
 
-    color:#9a7850;
+    color:#9b7950;
 
     font-size:9px;
     font-weight:800;
 
-    letter-spacing:2.7px;
+    letter-spacing:3px;
 }
 
 .eyebrow::before{
     content:"";
 
-    width:28px;
+    width:30px;
     height:1px;
 
-    background:#9a7850;
+    background:#9b7950;
 }
 
 .hero h1{
-    font-size:clamp(48px,5.4vw,77px);
+    font-size:clamp(52px,6vw,84px);
 
-    line-height:.99;
+    line-height:.98;
 
     letter-spacing:-4px;
 
@@ -182,27 +183,27 @@ a{
 }
 
 .hero h1 span{
-    color:#9a7850;
+    color:#9b7950;
 }
 
-.hero-description{
-    max-width:520px;
+.hero-text{
+    max-width:570px;
 
-    color:#77786f;
+    color:#777970;
 
     font-size:11px;
 
-    line-height:1.95;
+    line-height:2;
 
     margin-bottom:32px;
 }
 
-.buttons{
+.hero-buttons{
     display:flex;
     gap:12px;
 }
 
-.btn-primary{
+.btn-dark{
     padding:15px 25px;
 
     background:#252b24;
@@ -216,12 +217,12 @@ a{
     border-radius:3px;
 }
 
-.btn-secondary{
-    padding:14px 23px;
+.btn-outline{
+    padding:14px 24px;
 
-    color:#555a51;
+    border:1px solid #d1cec4;
 
-    border:1px solid #d6d2c8;
+    color:#5c6057;
 
     font-size:9px;
     font-weight:700;
@@ -233,261 +234,228 @@ a{
 
 
 /* =========================================================
-   HOTEL VISUAL
+   HERO VISUAL
 ========================================================= */
 
 .hero-visual{
-    height:510px;
+    height:470px;
 
     position:relative;
+}
+
+.visual-main{
+    position:absolute;
+
+    right:5%;
+    top:15px;
+
+    width:78%;
+    height:410px;
+
+    overflow:hidden;
+
+    background:#2d342d;
+
+    box-shadow:0 30px 70px rgba(25,30,25,.16);
+}
+
+
+/* Abstract engineering structure */
+
+.structure-lines{
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(90deg,
+        transparent 0 19%,
+        rgba(255,255,255,.09) 19% 20%,
+        transparent 20% 39%,
+        rgba(255,255,255,.07) 39% 40%,
+        transparent 40% 59%,
+        rgba(255,255,255,.08) 59% 60%,
+        transparent 60% 79%,
+        rgba(255,255,255,.07) 79% 80%,
+        transparent 80%
+        );
+}
+
+.structure-frame{
+    position:absolute;
+
+    left:13%;
+    right:13%;
+    top:20%;
+    bottom:13%;
+
+    border:1px solid rgba(207,184,145,.45);
+}
+
+.structure-frame::before,
+.structure-frame::after{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    right:0;
+
+    height:1px;
+
+    background:rgba(207,184,145,.35);
+}
+
+.structure-frame::before{
+    top:33%;
+}
+
+.structure-frame::after{
+    top:66%;
+}
+
+.vertical-line{
+    position:absolute;
+
+    top:0;
+    bottom:0;
+
+    width:1px;
+
+    background:rgba(207,184,145,.35);
+}
+
+.v1{
+    left:25%;
+}
+
+.v2{
+    left:50%;
+}
+
+.v3{
+    left:75%;
+}
+
+
+/* Center symbol */
+
+.center-symbol{
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:105px;
+    height:105px;
 
     display:flex;
     align-items:center;
     justify-content:center;
+
+    border:1px solid rgba(207,184,145,.7);
+
+    color:#d3b58a;
+
+    font-size:42px;
+
+    border-radius:50%;
 }
 
-.hotel-window{
-    width:80%;
-    height:430px;
+.center-symbol::before{
+    content:"";
 
-    position:relative;
-
-    overflow:hidden;
-
-    background:#e7e0d2;
-
-    border:8px solid #fff;
-
-    box-shadow:0 25px 60px rgba(40,40,30,.15);
-}
-
-
-/* Hotel building */
-
-.hotel-building{
     position:absolute;
 
-    left:17%;
-    bottom:0;
+    width:72px;
+    height:72px;
 
-    width:66%;
-    height:82%;
+    border:1px solid rgba(207,184,145,.45);
 
-    background:#34372f;
-
-    padding:28px 22px 20px;
+    border-radius:50%;
 }
 
-.hotel-roof{
+
+/* Visual label */
+
+.visual-label{
     position:absolute;
 
-    left:-12px;
-    right:-12px;
-    top:-13px;
+    left:0;
+    bottom:28px;
 
-    height:13px;
-
-    background:#252a24;
-}
-
-.hotel-title{
-    color:#d8c4a3;
-
-    font-size:9px;
-    font-weight:800;
-
-    letter-spacing:3px;
-
-    text-align:center;
-
-    margin-bottom:24px;
-}
-
-.hotel-grid{
-    display:grid;
-
-    grid-template-columns:repeat(5,1fr);
-
-    gap:9px;
-}
-
-.hotel-window-light{
-    height:48px;
-
-    background:#d8c49e;
-
-    border:3px solid #44483f;
-}
-
-.hotel-window-dark{
-    height:48px;
-
-    background:#1f2521;
-
-    border:3px solid #44483f;
-}
-
-
-/* Front entrance */
-
-.hotel-entrance{
-    position:absolute;
-
-    left:37%;
-    bottom:0;
-
-    width:26%;
-    height:24%;
-
-    background:#171c19;
-
-    border:5px solid #464b42;
-
-    border-bottom:none;
-}
-
-.entrance-light{
-    position:absolute;
-
-    left:20%;
-    right:20%;
-    top:13%;
-
-    height:3px;
-
-    background:#bba37d;
-}
-
-.entrance-door{
-    position:absolute;
-
-    bottom:0;
-    left:15%;
-
-    width:70%;
-    height:70%;
-
-    background:#687067;
-
-    border:2px solid #969a8f;
-}
-
-
-/* Floating cards */
-
-.floating-card{
-    position:absolute;
-
-    padding:17px;
+    padding:18px 22px;
 
     background:#fff;
 
-    box-shadow:0 18px 45px rgba(35,35,25,.13);
-
-    border-radius:4px;
+    box-shadow:0 20px 40px rgba(30,30,25,.12);
 }
 
-.floating-card small{
+.visual-label small{
     display:block;
 
-    color:#99998f;
+    color:#999a91;
 
     font-size:7px;
 
-    letter-spacing:1px;
-
-    margin-bottom:8px;
-}
-
-.floating-card strong{
-    font-size:11px;
-}
-
-.card-room{
-    top:65px;
-    left:0;
-}
-
-.card-room .status{
-    margin-top:8px;
-
-    color:#8b6d4a;
-
-    font-size:7px;
-}
-
-.card-energy{
-    right:0;
-    bottom:62px;
-}
-
-.energy-value{
-    display:flex;
-    align-items:end;
-    gap:3px;
-
-    margin-top:5px;
-}
-
-.energy-value strong{
-    font-size:22px;
-}
-
-.energy-value span{
-    color:#888a81;
-
-    font-size:7px;
-
-    margin-bottom:4px;
-}
-
-
-/* =========================================================
-   FEATURE BAR
-========================================================= */
-
-.feature-strip{
-    background:#252b24;
-
-    padding:0 7%;
-}
-
-.feature-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-}
-
-.feature{
-    padding:31px 25px;
-
-    border-right:1px solid rgba(255,255,255,.12);
-}
-
-.feature:last-child{
-    border-right:none;
-}
-
-.feature strong{
-    display:block;
-
-    color:#fff;
-
-    font-size:19px;
+    letter-spacing:1.5px;
 
     margin-bottom:6px;
 }
 
-.feature span{
-    color:#aeb1a5;
-
-    font-size:7px;
-
-    letter-spacing:1px;
+.visual-label strong{
+    font-size:12px;
 }
 
 
 /* =========================================================
-   COMMON SECTION
+   STATS
+========================================================= */
+
+.stats{
+    padding:0 7%;
+
+    background:#252b24;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.stat{
+    padding:32px 25px;
+
+    border-right:1px solid rgba(255,255,255,.1);
+}
+
+.stat:last-child{
+    border-right:none;
+}
+
+.stat strong{
+    display:block;
+
+    color:#d0b38a;
+
+    font-size:25px;
+
+    margin-bottom:6px;
+}
+
+.stat span{
+    color:#a8aca1;
+
+    font-size:7px;
+
+    letter-spacing:1.5px;
+}
+
+
+/* =========================================================
+   COMPANY STORY
 ========================================================= */
 
 .section{
@@ -499,32 +467,32 @@ a{
 }
 
 .section-label{
-    color:#9a7850;
+    color:#9b7950;
 
     font-size:9px;
     font-weight:800;
 
-    letter-spacing:2.5px;
+    letter-spacing:2.7px;
 
     margin-bottom:15px;
 }
 
 .section-title{
-    max-width:780px;
+    max-width:800px;
 
-    font-size:44px;
+    font-size:45px;
 
     line-height:1.1;
 
-    letter-spacing:-1.8px;
+    letter-spacing:-2px;
 
-    margin-bottom:18px;
+    margin-bottom:20px;
 }
 
 .section-text{
-    max-width:690px;
+    max-width:720px;
 
-    color:#7c7d73;
+    color:#777970;
 
     font-size:10px;
 
@@ -532,152 +500,202 @@ a{
 }
 
 
-/* =========================================================
-   SMART HOTEL ARCHITECTURE
-========================================================= */
+/* Story */
 
-.architecture{
+.story{
     margin-top:65px;
 
     display:grid;
+    grid-template-columns:1fr 1fr;
 
-    grid-template-columns:34% 66%;
-
-    gap:60px;
+    gap:70px;
 }
 
-.architecture-intro{
-    padding-right:20px;
-}
-
-.architecture-intro h3{
-    font-size:22px;
+.story-left h3{
+    font-size:26px;
 
     line-height:1.3;
+
+    margin-bottom:18px;
+}
+
+.story-left p{
+    color:#777970;
+
+    font-size:10px;
+
+    line-height:1.95;
+
+    margin-bottom:16px;
+}
+
+.story-right{
+    padding:35px;
+
+    background:#f4f2ec;
+
+    border-left:3px solid #9b7950;
+}
+
+.story-right span{
+    display:block;
+
+    color:#999a91;
+
+    font-size:7px;
+
+    letter-spacing:1.5px;
+
+    margin-bottom:20px;
+}
+
+.story-right h3{
+    font-size:24px;
+
+    line-height:1.35;
 
     margin-bottom:15px;
 }
 
-.architecture-intro p{
-    color:#7c7d73;
+.story-right p{
+    color:#777970;
 
-    font-size:10px;
+    font-size:9px;
 
     line-height:1.9;
 }
 
-.architecture-map{
-    display:flex;
-    flex-direction:column;
 
-    gap:10px;
-}
+/* =========================================================
+   VISION MISSION
+========================================================= */
 
-.arch-layer{
-    display:grid;
-
-    grid-template-columns:155px 1fr;
-
-    min-height:88px;
-
-    border:1px solid #dedbd2;
-
-    background:#f8f7f3;
-}
-
-.layer-title{
-    display:flex;
-    align-items:center;
-
-    padding:20px;
-
+.dark-section{
     background:#252b24;
-
     color:#fff;
-
-    font-size:9px;
-    font-weight:800;
-
-    letter-spacing:1px;
 }
 
-.layer-items{
-    padding:17px 23px;
-
-    display:flex;
-    align-items:center;
-
-    flex-wrap:wrap;
-
-    gap:8px;
+.dark-section .section-label{
+    color:#c8aa7d;
 }
 
-.layer-tag{
-    padding:9px 12px;
+.dark-section .section-text{
+    color:#afb3a8;
+}
 
-    background:#fff;
+.vm-grid{
+    margin-top:60px;
 
-    border:1px solid #e1ded5;
+    display:grid;
+    grid-template-columns:1fr 1fr;
 
-    color:#64675e;
+    gap:16px;
+}
+
+.vm-card{
+    min-height:285px;
+
+    padding:35px;
+
+    background:#30362e;
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.vm-number{
+    color:#9a9e94;
 
     font-size:8px;
 
-    border-radius:2px;
+    letter-spacing:2px;
+
+    margin-bottom:60px;
+}
+
+.vm-icon{
+    width:46px;
+    height:46px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid #8f7655;
+
+    color:#c6a97d;
+
+    font-size:18px;
+
+    margin-bottom:20px;
+}
+
+.vm-card h3{
+    font-size:20px;
+
+    margin-bottom:10px;
+}
+
+.vm-card p{
+    max-width:520px;
+
+    color:#adb1a7;
+
+    font-size:9px;
+
+    line-height:1.9;
 }
 
 
 /* =========================================================
-   HOTEL SERVICES
+   CORE CAPABILITIES
 ========================================================= */
 
-.services{
-    background:#f3f1eb;
+.capabilities{
+    background:#f4f2ec;
 }
 
-.service-grid{
+.capability-grid{
     margin-top:60px;
 
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
 
     gap:15px;
 }
 
-.service{
-    min-height:305px;
-
-    position:relative;
+.capability{
+    min-height:270px;
 
     padding:28px;
 
+    position:relative;
+
     background:#fff;
 
-    border-radius:4px;
+    border:1px solid #e1ded5;
 
     transition:.3s;
 }
 
-.service:hover{
+.capability:hover{
     transform:translateY(-6px);
 
-    box-shadow:0 20px 45px rgba(40,40,30,.09);
+    box-shadow:0 20px 45px rgba(30,35,30,.08);
 }
 
-.service-number{
-    color:#aaa99e;
+.capability-number{
+    color:#aaa99f;
 
     font-size:8px;
 
     letter-spacing:1.5px;
-
-    margin-bottom:43px;
 }
 
-.service-icon{
-    width:49px;
-    height:49px;
+.capability-icon{
+    margin-top:45px;
+
+    width:50px;
+    height:50px;
 
     display:flex;
     align-items:center;
@@ -685,229 +703,61 @@ a{
 
     background:#eee8dc;
 
-    color:#8b6d4a;
+    color:#8f704b;
 
     font-size:18px;
 
-    border-radius:4px;
-
-    margin-bottom:18px;
+    border-radius:3px;
 }
 
-.service h3{
-    font-size:13px;
+.capability h3{
+    margin-top:17px;
 
-    margin-bottom:9px;
+    font-size:14px;
 }
 
-.service p{
-    color:#7b7c73;
+.capability p{
+    margin-top:8px;
+
+    color:#777970;
 
     font-size:9px;
 
     line-height:1.85;
 }
 
-.service-arrow{
+.capability-arrow{
     position:absolute;
 
     right:25px;
     bottom:22px;
 
-    color:#98784f;
+    color:#9b7950;
 }
 
 
 /* =========================================================
-   GUEST ROOM AUTOMATION
+   SEGMENTS
 ========================================================= */
 
-.room-section{
-    background:#252b24;
-
-    color:#fff;
+.segments{
+    background:#fff;
 }
 
-.room-section .section-label{
-    color:#c6a980;
-}
-
-.room-section .section-text{
-    color:#b4b7ad;
-}
-
-.room-layout{
+.segment-wrapper{
     margin-top:65px;
 
     display:grid;
+    grid-template-columns:42% 58%;
 
-    grid-template-columns:55% 45%;
-
-    gap:20px;
+    gap:55px;
 }
 
-
-/* Room visual */
-
-.smart-room{
-    min-height:450px;
-
-    position:relative;
-
-    overflow:hidden;
-
-    background:#ded6c7;
-
-    border:8px solid rgba(255,255,255,.08);
+.segment-intro{
+    padding-right:30px;
 }
 
-.room-wall{
-    position:absolute;
-
-    inset:0;
-
-    background:
-        linear-gradient(90deg,
-        transparent 0 48%,
-        rgba(255,255,255,.35) 48% 49%,
-        transparent 49%),
-        #ddd5c6;
-}
-
-.room-headboard{
-    position:absolute;
-
-    left:12%;
-    top:29%;
-
-    width:50%;
-    height:32%;
-
-    background:#695f52;
-
-    border-radius:5px 5px 0 0;
-}
-
-.room-bed{
-    position:absolute;
-
-    left:15%;
-    top:54%;
-
-    width:57%;
-    height:20%;
-
-    background:#f5f1e9;
-
-    box-shadow:0 15px 20px rgba(0,0,0,.12);
-}
-
-.room-pillow{
-    position:absolute;
-
-    left:20%;
-    top:58%;
-
-    width:16%;
-    height:11%;
-
-    background:#d9d2c6;
-
-    border-radius:4px;
-}
-
-.room-side-table{
-    position:absolute;
-
-    left:74%;
-    top:54%;
-
-    width:13%;
-    height:17%;
-
-    background:#776b5d;
-}
-
-.room-lamp{
-    position:absolute;
-
-    left:76%;
-    top:43%;
-
-    width:8px;
-    height:45px;
-
-    background:#49463e;
-}
-
-.room-lamp::before{
-    content:"";
-
-    position:absolute;
-
-    left:-12px;
-    top:-16px;
-
-    width:32px;
-    height:20px;
-
-    background:#d2b990;
-
-    border-radius:50%;
-}
-
-.room-control{
-    position:absolute;
-
-    right:8%;
-    top:20%;
-
-    width:90px;
-    height:135px;
-
-    padding:12px;
-
-    background:#252b24;
-
-    border:1px solid rgba(255,255,255,.18);
-
-    box-shadow:0 10px 25px rgba(0,0,0,.18);
-}
-
-.control-title{
-    color:#c9b18b;
-
-    font-size:6px;
-
-    letter-spacing:1px;
-
-    margin-bottom:12px;
-}
-
-.control-button{
-    height:15px;
-
-    margin-bottom:7px;
-
-    background:#3c433b;
-
-    border:1px solid rgba(255,255,255,.12);
-}
-
-.control-button.active{
-    background:#8c7250;
-}
-
-
-/* Guest room info */
-
-.room-info{
-    padding:40px;
-
-    background:#30362e;
-}
-
-.room-info h3{
+.segment-intro h3{
     font-size:25px;
 
     line-height:1.3;
@@ -915,382 +765,115 @@ a{
     margin-bottom:15px;
 }
 
-.room-info > p{
-    color:#b4b7ad;
+.segment-intro p{
+    color:#777970;
 
     font-size:10px;
 
     line-height:1.9;
-
-    margin-bottom:30px;
 }
 
-.room-list{
+.segment-list{
     display:grid;
 
-    gap:11px;
+    grid-template-columns:1fr 1fr;
+
+    gap:10px;
 }
 
-.room-list-item{
-    padding:15px;
+.segment{
+    min-height:145px;
 
-    border:1px solid rgba(255,255,255,.11);
+    padding:23px;
 
-    display:flex;
+    background:#f5f3ed;
 
-    align-items:center;
-
-    justify-content:space-between;
-
-    color:#d6d8d0;
-
-    font-size:8px;
-}
-
-.room-list-item span{
-    color:#b89b70;
-}
-
-
-/* =========================================================
-   SMART HOTEL AREAS
-========================================================= */
-
-.areas{
-    background:#fff;
-}
-
-.area-grid{
-    margin-top:60px;
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:1px;
-
-    background:#dcd9cf;
-}
-
-.area-card{
-    min-height:280px;
+    border:1px solid #e1ded5;
 
     position:relative;
-
-    padding:27px;
-
-    background:#f8f7f3;
 }
 
-.area-number{
-    color:#aaa99e;
+.segment span{
+    color:#9a9b91;
 
-    font-size:8px;
+    font-size:7px;
 
     letter-spacing:1px;
 }
 
-.area-icon{
+.segment h4{
+    margin-top:35px;
+
+    font-size:12px;
+}
+
+.segment p{
+    margin-top:7px;
+
+    color:#777970;
+
+    font-size:8px;
+
+    line-height:1.7;
+}
+
+.segment-arrow{
     position:absolute;
 
-    right:25px;
-    top:25px;
+    right:18px;
+    top:18px;
 
-    width:39px;
-    height:39px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border:1px solid #d4d0c6;
-
-    color:#8f704c;
-
-    font-size:14px;
-}
-
-.area-card h3{
-    margin-top:55px;
-
-    font-size:14px;
-}
-
-.area-card p{
-    margin-top:10px;
-
-    color:#7b7c73;
-
-    font-size:9px;
-
-    line-height:1.8;
+    color:#9b7950;
 }
 
 
 /* =========================================================
-   CENTRAL HOTEL CONTROL
+   WHY US
 ========================================================= */
 
-.control-section{
-    background:#f3f1eb;
+.why-us{
+    background:#f4f2ec;
 }
 
-.control-layout{
-    margin-top:65px;
+.why-grid{
+    margin-top:60px;
 
     display:grid;
-
     grid-template-columns:1fr 1fr;
 
     gap:16px;
 }
 
-.control-box{
-    min-height:400px;
+.why-card{
+    min-height:190px;
 
-    padding:30px;
-
-    background:#fff;
-
-    border:1px solid #dedbd2;
-
-    border-radius:4px;
-}
-
-.control-box h3{
-    font-size:22px;
-
-    margin-bottom:10px;
-}
-
-.control-box > p{
-    color:#7b7c73;
-
-    font-size:9px;
-
-    line-height:1.85;
-}
-
-
-/* Dashboard */
-
-.dashboard{
-    margin-top:30px;
-
-    padding:18px;
-
-    background:#f8f7f3;
-
-    border:1px solid #e1ded5;
-}
-
-.dashboard-header{
-    display:flex;
-
-    justify-content:space-between;
-
-    padding-bottom:14px;
-
-    border-bottom:1px solid #e2dfd6;
-
-    color:#74776d;
-
-    font-size:7px;
-
-    letter-spacing:1px;
-}
-
-.dashboard-grid{
-    margin-top:18px;
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:8px;
-}
-
-.dashboard-item{
-    padding:14px;
+    padding:28px;
 
     background:#fff;
 
-    border:1px solid #e5e2d9;
+    border-top:2px solid #9b7950;
 }
 
-.dashboard-item small{
-    display:block;
-
-    color:#9a9b91;
-
-    font-size:6px;
-
-    margin-bottom:6px;
-}
-
-.dashboard-item strong{
-    font-size:14px;
-}
-
-.dashboard-item span{
-    display:block;
-
-    margin-top:5px;
-
-    color:#8c704e;
-
-    font-size:6px;
-}
-
-
-/* =========================================================
-   HOTEL ENERGY
-========================================================= */
-
-.energy-panel{
-    margin-top:30px;
-
-    padding:20px;
-
-    background:#252b24;
-
-    color:#fff;
-}
-
-.energy-header{
-    display:flex;
-
-    align-items:center;
-    justify-content:space-between;
-
-    margin-bottom:25px;
-}
-
-.energy-header span{
-    color:#aeb1a5;
-
-    font-size:7px;
-
-    letter-spacing:1px;
-}
-
-.energy-header strong{
-    color:#c8ab80;
-
-    font-size:10px;
-}
-
-.energy-bars{
-    height:150px;
-
-    display:flex;
-
-    align-items:end;
-
-    gap:10px;
-
-    padding:0 8px;
-}
-
-.energy-bar{
-    flex:1;
-
-    background:#927550;
-
-    opacity:.9;
-}
-
-.energy-bar:nth-child(1){
-    height:45%;
-}
-
-.energy-bar:nth-child(2){
-    height:67%;
-}
-
-.energy-bar:nth-child(3){
-    height:52%;
-}
-
-.energy-bar:nth-child(4){
-    height:81%;
-}
-
-.energy-bar:nth-child(5){
-    height:62%;
-}
-
-.energy-bar:nth-child(6){
-    height:91%;
-}
-
-.energy-bar:nth-child(7){
-    height:70%;
-}
-
-.energy-labels{
-    display:flex;
-
-    justify-content:space-between;
-
-    margin-top:10px;
-
-    color:#8f958b;
-
-    font-size:6px;
-}
-
-
-/* =========================================================
-   BENEFITS
-========================================================= */
-
-.benefits{
-    background:#fff;
-}
-
-.benefit-grid{
-    margin-top:60px;
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:15px;
-}
-
-.benefit{
-    min-height:210px;
-
-    padding:30px;
-
-    background:#f6f4ef;
-
-    border-left:3px solid #9a7850;
-
-    border-radius:3px;
-}
-
-.benefit span{
-    color:#99998f;
+.why-card-number{
+    color:#aaa99f;
 
     font-size:8px;
 
     letter-spacing:1px;
 }
 
-.benefit h3{
-    margin-top:40px;
+.why-card h3{
+    margin-top:38px;
 
     font-size:17px;
 }
 
-.benefit p{
-    margin-top:9px;
+.why-card p{
+    margin-top:8px;
 
-    max-width:450px;
+    max-width:500px;
 
-    color:#7b7c73;
+    color:#777970;
 
     font-size:9px;
 
@@ -1299,36 +882,35 @@ a{
 
 
 /* =========================================================
-   PROCESS
+   WORKFLOW
 ========================================================= */
 
-.process{
-    background:#f3f1eb;
+.workflow{
+    background:#fff;
 }
 
-.process-grid{
+.workflow-grid{
     margin-top:60px;
 
     display:grid;
-
     grid-template-columns:repeat(5,1fr);
 }
 
-.process-step{
-    min-height:220px;
+.workflow-step{
+    min-height:210px;
 
     padding:25px;
 
-    border-top:1px solid #d1cec4;
+    border-top:1px solid #d7d4cb;
 
-    border-right:1px solid #d1cec4;
+    border-right:1px solid #d7d4cb;
 }
 
-.process-step:last-child{
+.workflow-step:last-child{
     border-right:none;
 }
 
-.step-circle{
+.circle{
     width:36px;
     height:36px;
 
@@ -1338,7 +920,7 @@ a{
 
     border:1px solid #bcb8ad;
 
-    color:#8b6d4a;
+    color:#92724d;
 
     font-size:8px;
     font-weight:800;
@@ -1348,18 +930,87 @@ a{
     margin-bottom:35px;
 }
 
-.process-step h3{
+.workflow-step h3{
     font-size:11px;
 
     margin-bottom:9px;
 }
 
-.process-step p{
-    color:#7b7c73;
+.workflow-step p{
+    color:#777970;
 
     font-size:8px;
 
     line-height:1.8;
+}
+
+
+/* =========================================================
+   INDUSTRIES
+========================================================= */
+
+.industries{
+    background:#252b24;
+
+    color:#fff;
+}
+
+.industries .section-label{
+    color:#c8aa7d;
+}
+
+.industry-grid{
+    margin-top:60px;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:1px;
+
+    background:rgba(255,255,255,.1);
+}
+
+.industry{
+    min-height:220px;
+
+    padding:28px;
+
+    background:#30362e;
+
+    position:relative;
+}
+
+.industry-number{
+    color:#8e9489;
+
+    font-size:8px;
+
+    letter-spacing:1.5px;
+}
+
+.industry h3{
+    margin-top:65px;
+
+    font-size:14px;
+}
+
+.industry p{
+    margin-top:8px;
+
+    color:#adb1a7;
+
+    font-size:8px;
+
+    line-height:1.8;
+}
+
+.industry-arrow{
+    position:absolute;
+
+    right:22px;
+    top:22px;
+
+    color:#c3a77b;
 }
 
 
@@ -1377,13 +1028,13 @@ a{
 
     gap:50px;
 
-    background:#9a7850;
+    background:#9b7950;
 
     color:#fff;
 }
 
 .cta .section-label{
-    color:#e7d9c4;
+    color:#eadbc6;
 }
 
 .cta h2{
@@ -1397,13 +1048,13 @@ a{
 }
 
 .cta p{
-    max-width:580px;
+    max-width:600px;
 
     color:#eadfce;
 
     font-size:10px;
 
-    line-height:1.85;
+    line-height:1.9;
 }
 
 .cta-button{
@@ -1415,12 +1066,12 @@ a{
 
     color:#fff;
 
-    border-radius:3px;
-
     font-size:9px;
     font-weight:800;
 
     letter-spacing:1px;
+
+    border-radius:3px;
 }
 
 
@@ -1432,9 +1083,8 @@ a{
     padding:28px 7%;
 
     display:flex;
-
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
 
     background:#171b17;
 
@@ -1456,7 +1106,7 @@ a{
 
 @media(max-width:1050px){
 
-    .nav-links a:not(.nav-contact){
+    .nav-links a:not(.nav-btn){
         display:none;
     }
 
@@ -1466,32 +1116,24 @@ a{
 
     .hero-content{
         padding-right:0;
-
         margin-bottom:55px;
     }
 
-    .architecture{
+    .story,
+    .segment-wrapper{
         grid-template-columns:1fr;
     }
 
-    .service-grid{
+    .capability-grid{
         grid-template-columns:1fr 1fr;
     }
 
-    .area-grid{
+    .industry-grid{
         grid-template-columns:1fr 1fr;
     }
 
-    .room-layout{
-        grid-template-columns:1fr;
-    }
-
-    .process-grid{
+    .workflow-grid{
         grid-template-columns:1fr 1fr;
-    }
-
-    .process-step{
-        border-bottom:1px solid #d1cec4;
     }
 
 }
@@ -1511,30 +1153,24 @@ a{
     }
 
     .hero h1{
-        font-size:48px;
+        font-size:50px;
     }
 
     .hero-visual{
-        height:420px;
+        height:390px;
     }
 
-    .hotel-window{
-        width:90%;
-        height:350px;
+    .visual-main{
+        width:88%;
+        right:0;
     }
 
-    .floating-card{
-        width:140px;
-
-        padding:12px;
-    }
-
-    .feature-grid{
+    .stats-grid{
         grid-template-columns:1fr 1fr;
     }
 
-    .feature{
-        border-bottom:1px solid rgba(255,255,255,.12);
+    .stat{
+        border-bottom:1px solid rgba(255,255,255,.1);
     }
 
     .section-title,
@@ -1542,22 +1178,27 @@ a{
         font-size:32px;
     }
 
-    .service-grid,
-    .area-grid,
-    .benefit-grid{
+    .vm-grid,
+    .capability-grid,
+    .why-grid{
         grid-template-columns:1fr;
     }
 
-    .control-layout{
+    .segment-list{
         grid-template-columns:1fr;
     }
 
-    .process-grid{
+    .industry-grid{
         grid-template-columns:1fr;
     }
 
-    .process-step{
+    .workflow-grid{
+        grid-template-columns:1fr;
+    }
+
+    .workflow-step{
         border-right:none;
+        border-bottom:1px solid #d7d4cb;
     }
 
     .cta{
@@ -1567,9 +1208,7 @@ a{
 
     .footer{
         flex-direction:column;
-
         gap:10px;
-
         text-align:center;
     }
 
@@ -1591,14 +1230,14 @@ a{
     <div class="logo">
 
         <div class="logo-mark">
-            H
+            A
         </div>
 
         <div class="logo-text">
 
             <strong>YOUR COMPANY</strong>
 
-            <span>SMART HOSPITALITY AUTOMATION</span>
+            <span>ENGINEERING • ENERGY • AUTOMATION</span>
 
         </div>
 
@@ -1607,15 +1246,15 @@ a{
 
     <nav class="nav-links">
 
-        <a href="#overview">Overview</a>
+        <a href="index.html">Home</a>
 
-        <a href="#solutions">Solutions</a>
+        <a href="services.html">Services</a>
 
-        <a href="#rooms">Guest Rooms</a>
+        <a href="#about">About</a>
 
-        <a href="#systems">Systems</a>
+        <a href="#capabilities">Capabilities</a>
 
-        <a href="#contact" class="nav-contact">
+        <a href="#contact" class="nav-btn">
             Contact Us
         </a>
 
@@ -1629,47 +1268,45 @@ a{
      HERO
 ========================================================= -->
 
-<section class="hero">
+<section class="hero" id="about">
 
 
     <div class="hero-content">
 
         <div class="eyebrow">
-            HOTEL AUTOMATION
+            ABOUT OUR COMPANY
         </div>
 
 
         <h1>
 
-            Smarter
+            Engineering
             <br>
 
-            Hotels.
-            <br>
-
-            <span>Better Stays.</span>
+            <span>What Matters.</span>
 
         </h1>
 
 
-        <p class="hero-description">
+        <p class="hero-text">
 
-            Intelligent hotel automation solutions
-            designed to connect guest rooms, building
-            systems, energy management, security and
-            hospitality operations into one seamless ecosystem.
+            We deliver integrated engineering solutions
+            across power, energy and automation —
+            combining technical expertise, quality
+            execution and intelligent technologies to
+            build reliable infrastructure for the future.
 
         </p>
 
 
-        <div class="buttons">
+        <div class="hero-buttons">
 
-            <a href="#solutions" class="btn-primary">
-                EXPLORE SOLUTIONS
+            <a href="#story" class="btn-dark">
+                OUR STORY
             </a>
 
-            <a href="#contact" class="btn-secondary">
-                PLAN YOUR PROJECT
+            <a href="#capabilities" class="btn-outline">
+                OUR CAPABILITIES
             </a>
 
         </div>
@@ -1678,109 +1315,41 @@ a{
 
 
 
-    <!-- HOTEL VISUAL -->
+    <!-- ABSTRACT VISUAL -->
 
     <div class="hero-visual">
 
+        <div class="visual-main">
 
-        <div class="hotel-window">
+            <div class="structure-lines"></div>
 
+            <div class="structure-frame">
 
-            <div class="hotel-building">
+                <div class="vertical-line v1"></div>
+                <div class="vertical-line v2"></div>
+                <div class="vertical-line v3"></div>
 
-                <div class="hotel-roof"></div>
-
-                <div class="hotel-title">
-                    GRAND HOTEL
-                </div>
-
-
-                <div class="hotel-grid">
-
-                    <div class="hotel-window-light"></div>
-                    <div class="hotel-window-dark"></div>
-                    <div class="hotel-window-light"></div>
-                    <div class="hotel-window-dark"></div>
-                    <div class="hotel-window-light"></div>
-
-                    <div class="hotel-window-dark"></div>
-                    <div class="hotel-window-light"></div>
-                    <div class="hotel-window-dark"></div>
-                    <div class="hotel-window-light"></div>
-                    <div class="hotel-window-dark"></div>
-
-                    <div class="hotel-window-light"></div>
-                    <div class="hotel-window-dark"></div>
-                    <div class="hotel-window-light"></div>
-                    <div class="hotel-window-dark"></div>
-                    <div class="hotel-window-light"></div>
-
-                    <div class="hotel-window-dark"></div>
-                    <div class="hotel-window-light"></div>
-                    <div class="hotel-window-dark"></div>
-                    <div class="hotel-window-light"></div>
-                    <div class="hotel-window-dark"></div>
-
-                    <div class="hotel-window-light"></div>
-                    <div class="hotel-window-dark"></div>
-                    <div class="hotel-window-light"></div>
-                    <div class="hotel-window-dark"></div>
-                    <div class="hotel-window-light"></div>
-
-                </div>
+            </div>
 
 
-                <div class="hotel-entrance">
-
-                    <div class="entrance-light"></div>
-
-                    <div class="entrance-door"></div>
-
-                </div>
-
+            <div class="center-symbol">
+                +
             </div>
 
         </div>
 
 
-
-        <div class="floating-card card-room">
+        <div class="visual-label">
 
             <small>
-                GUEST ROOM
+                OUR APPROACH
             </small>
 
             <strong>
-                SMART ROOM ACTIVE
+                ENGINEERING × TECHNOLOGY
             </strong>
 
-            <div class="status">
-                ● ALL CONTROLS ONLINE
-            </div>
-
         </div>
-
-
-        <div class="floating-card card-energy">
-
-            <small>
-                ENERGY SAVING
-            </small>
-
-            <div class="energy-value">
-
-                <strong>
-                    32%
-                </strong>
-
-                <span>
-                    OPTIMIZED
-                </span>
-
-            </div>
-
-        </div>
-
 
     </div>
 
@@ -1789,61 +1358,61 @@ a{
 
 
 <!-- =========================================================
-     FEATURE STRIP
+     STATS
 ========================================================= -->
 
-<section class="feature-strip">
+<section class="stats">
 
-    <div class="feature-grid">
+    <div class="stats-grid">
 
 
-        <div class="feature">
+        <div class="stat">
 
             <strong>
-                GRMS
+                01
             </strong>
 
             <span>
-                GUEST ROOM MANAGEMENT
+                INTEGRATED ENGINEERING
             </span>
 
         </div>
 
 
-        <div class="feature">
+        <div class="stat">
 
             <strong>
-                BMS
+                03
             </strong>
 
             <span>
-                BUILDING MANAGEMENT
+                CORE BUSINESS SEGMENTS
             </span>
 
         </div>
 
 
-        <div class="feature">
+        <div class="stat">
 
             <strong>
-                EMS
+                360°
             </strong>
 
             <span>
-                ENERGY MANAGEMENT
+                PROJECT APPROACH
             </span>
 
         </div>
 
 
-        <div class="feature">
+        <div class="stat">
 
             <strong>
-                SECURITY
+                24/7
             </strong>
 
             <span>
-                ACCESS & SURVEILLANCE
+                SYSTEM RELIABILITY FOCUS
             </span>
 
         </div>
@@ -1856,167 +1425,97 @@ a{
 
 
 <!-- =========================================================
-     OVERVIEW
+     COMPANY STORY
 ========================================================= -->
 
-<section class="section white" id="overview">
+<section class="section white" id="story">
 
 
     <div class="section-label">
-        SMART HOTEL ARCHITECTURE
+        WHO WE ARE
     </div>
 
 
     <h2 class="section-title">
 
-        One Connected
+        Building Infrastructure
         <br>
 
-        Hospitality Ecosystem.
+        With Purpose.
 
     </h2>
 
 
     <p class="section-text">
 
-        Our hotel automation solutions integrate
-        guest room controls, HVAC, lighting,
-        energy systems, security and building
-        infrastructure to create a seamless
-        hospitality experience.
+        We are an engineering-focused organization
+        delivering solutions that connect electrical
+        infrastructure, renewable energy and intelligent
+        automation.
 
     </p>
 
 
-    <div class="architecture">
+    <div class="story">
 
 
-        <div class="architecture-intro">
+        <div class="story-left">
 
             <h3>
-                Intelligent Control
-                Across Every Hotel Area.
+                From Engineering
+                To Intelligent Infrastructure.
             </h3>
 
             <p>
 
-                From guest rooms and lobbies to
-                restaurants, conference areas and
-                utility spaces, automation helps
-                hotels improve comfort, efficiency
-                and operational visibility.
+                Our approach combines engineering
+                knowledge, project execution and
+                technology to deliver solutions
+                designed around real-world requirements.
+
+            </p>
+
+            <p>
+
+                From transmission and distribution
+                infrastructure to renewable energy
+                generation and smart automation,
+                we focus on creating dependable,
+                scalable and efficient systems.
+
+            </p>
+
+            <p>
+
+                Every project is approached with
+                attention to safety, quality,
+                performance and long-term value.
 
             </p>
 
         </div>
 
 
-        <div class="architecture-map">
+        <div class="story-right">
 
+            <span>
+                OUR CORE BELIEF
+            </span>
 
-            <div class="arch-layer">
+            <h3>
+                Technology should make
+                infrastructure smarter,
+                safer and more efficient.
+            </h3>
 
-                <div class="layer-title">
-                    CENTRAL
-                </div>
+            <p>
 
-                <div class="layer-items">
+                We continuously explore better
+                engineering methods and intelligent
+                technologies to deliver solutions
+                that are ready for tomorrow's needs.
 
-                    <span class="layer-tag">
-                        BMS
-                    </span>
-
-                    <span class="layer-tag">
-                        EMS
-                    </span>
-
-                    <span class="layer-tag">
-                        PMS INTEGRATION
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <div class="arch-layer">
-
-                <div class="layer-title">
-                    GUEST ROOM
-                </div>
-
-                <div class="layer-items">
-
-                    <span class="layer-tag">
-                        GRMS
-                    </span>
-
-                    <span class="layer-tag">
-                        HVAC
-                    </span>
-
-                    <span class="layer-tag">
-                        LIGHTING
-                    </span>
-
-                    <span class="layer-tag">
-                        CURTAINS
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <div class="arch-layer">
-
-                <div class="layer-title">
-                    PUBLIC AREAS
-                </div>
-
-                <div class="layer-items">
-
-                    <span class="layer-tag">
-                        LOBBY
-                    </span>
-
-                    <span class="layer-tag">
-                        RESTAURANT
-                    </span>
-
-                    <span class="layer-tag">
-                        CONFERENCE
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <div class="arch-layer">
-
-                <div class="layer-title">
-                    SECURITY
-                </div>
-
-                <div class="layer-items">
-
-                    <span class="layer-tag">
-                        ACCESS CONTROL
-                    </span>
-
-                    <span class="layer-tag">
-                        CCTV
-                    </span>
-
-                    <span class="layer-tag">
-                        FIRE SYSTEM
-                    </span>
-
-                </div>
-
-            </div>
-
+            </p>
 
         </div>
 
@@ -2027,209 +1526,78 @@ a{
 
 
 <!-- =========================================================
-     SOLUTIONS
+     VISION MISSION
 ========================================================= -->
 
-<section class="section services" id="solutions">
+<section class="section dark-section">
 
 
     <div class="section-label">
-        HOTEL AUTOMATION SOLUTIONS
+        VISION & MISSION
     </div>
 
 
     <h2 class="section-title">
 
-        Technology Designed
+        Driven By Purpose.
         <br>
 
-        Around Hospitality.
+        Built For The Future.
 
     </h2>
 
 
-    <p class="section-text">
-
-        Smart automation solutions that improve
-        guest comfort while helping hotel teams
-        manage energy, security and operations efficiently.
-
-    </p>
+    <div class="vm-grid">
 
 
-    <div class="service-grid">
+        <div class="vm-card">
 
-
-        <div class="service">
-
-            <div class="service-number">
-                01 / GRMS
+            <div class="vm-number">
+                01 / VISION
             </div>
 
-            <div class="service-icon">
-                ◈
-            </div>
-
-            <h3>
-                Guest Room Management
-            </h3>
-
-            <p>
-
-                Integrated control of lighting,
-                temperature, curtains, DND and
-                guest room functions.
-
-            </p>
-
-            <div class="service-arrow">
-                ↗
-            </div>
-
-        </div>
-
-
-        <div class="service">
-
-            <div class="service-number">
-                02 / HVAC
-            </div>
-
-            <div class="service-icon">
-                ◌
-            </div>
-
-            <h3>
-                HVAC Automation
-            </h3>
-
-            <p>
-
-                Smart temperature control with
-                occupancy-based HVAC operation
-                for improved comfort and efficiency.
-
-            </p>
-
-            <div class="service-arrow">
-                ↗
-            </div>
-
-        </div>
-
-
-        <div class="service">
-
-            <div class="service-number">
-                03 / LIGHTING
-            </div>
-
-            <div class="service-icon">
-                ◇
-            </div>
-
-            <h3>
-                Lighting Automation
-            </h3>
-
-            <p>
-
-                Automated lighting control for
-                guest rooms, corridors, lobbies,
-                restaurants and outdoor areas.
-
-            </p>
-
-            <div class="service-arrow">
-                ↗
-            </div>
-
-        </div>
-
-
-        <div class="service">
-
-            <div class="service-number">
-                04 / BMS
-            </div>
-
-            <div class="service-icon">
-                ▦
-            </div>
-
-            <h3>
-                Building Management
-            </h3>
-
-            <p>
-
-                Centralized monitoring and control
-                of HVAC, electrical systems,
-                utilities and building infrastructure.
-
-            </p>
-
-            <div class="service-arrow">
-                ↗
-            </div>
-
-        </div>
-
-
-        <div class="service">
-
-            <div class="service-number">
-                05 / ENERGY
-            </div>
-
-            <div class="service-icon">
+            <div class="vm-icon">
                 ◉
             </div>
 
             <h3>
-                Energy Management
+                Our Vision
             </h3>
 
             <p>
 
-                Track energy consumption and
-                optimize hotel operations to
-                reduce unnecessary energy usage.
+                To become a trusted engineering and
+                technology partner delivering innovative,
+                sustainable and intelligent infrastructure
+                solutions for industries and communities.
 
             </p>
-
-            <div class="service-arrow">
-                ↗
-            </div>
 
         </div>
 
 
-        <div class="service">
+        <div class="vm-card">
 
-            <div class="service-number">
-                06 / SECURITY
+            <div class="vm-number">
+                02 / MISSION
             </div>
 
-            <div class="service-icon">
-                ▣
+            <div class="vm-icon">
+                ↗
             </div>
 
             <h3>
-                Security & Access
+                Our Mission
             </h3>
 
             <p>
 
-                Integrated access control, CCTV,
-                visitor management and secure
-                access to restricted areas.
+                To deliver high-quality engineering
+                solutions through technical excellence,
+                responsible execution, safety and
+                continuous innovation.
 
             </p>
-
-            <div class="service-arrow">
-                ↗
-            </div>
 
         </div>
 
@@ -2241,574 +1609,208 @@ a{
 
 
 <!-- =========================================================
-     GUEST ROOM AUTOMATION
+     CORE CAPABILITIES
 ========================================================= -->
 
-<section class="section room-section" id="rooms">
+<section class="section capabilities" id="capabilities">
 
 
     <div class="section-label">
-        GUEST ROOM MANAGEMENT SYSTEM
+        CORE CAPABILITIES
     </div>
 
 
     <h2 class="section-title">
 
-        Every Room.
+        Engineering Strength
         <br>
 
-        Intelligently Connected.
+        Across Multiple Domains.
 
     </h2>
 
 
     <p class="section-text">
 
-        Give guests intuitive control over their
-        environment while enabling hotel teams
-        to manage room status, energy and
-        comfort from a centralized platform.
+        Our multidisciplinary capabilities allow us
+        to support projects from engineering and
+        installation to integration and commissioning.
 
     </p>
 
 
-    <div class="room-layout">
+    <div class="capability-grid">
 
 
-        <!-- ROOM VISUAL -->
+        <div class="capability">
 
-        <div class="smart-room">
-
-
-            <div class="room-wall"></div>
-
-            <div class="room-headboard"></div>
-
-            <div class="room-bed"></div>
-
-            <div class="room-pillow"></div>
-
-            <div class="room-side-table"></div>
-
-            <div class="room-lamp"></div>
-
-
-            <div class="room-control">
-
-                <div class="control-title">
-                    ROOM CONTROL
-                </div>
-
-                <div class="control-button active"></div>
-
-                <div class="control-button"></div>
-
-                <div class="control-button active"></div>
-
-                <div class="control-button"></div>
-
-                <div class="control-button"></div>
-
+            <div class="capability-number">
+                01 / POWER
             </div>
 
-        </div>
-
-
-
-        <!-- ROOM FEATURES -->
-
-        <div class="room-info">
+            <div class="capability-icon">
+                ⚡
+            </div>
 
             <h3>
-                A Personalized
-                Guest Experience.
+                Power Infrastructure
             </h3>
 
             <p>
 
-                Smart room automation allows guests
-                to control their environment while
-                hotel staff gain better visibility into
-                room occupancy and operational status.
+                Transmission, distribution, control
+                panels, panel boards and associated
+                electrical infrastructure.
 
             </p>
 
-
-            <div class="room-list">
-
-
-                <div class="room-list-item">
-
-                    <span>
-                        01
-                    </span>
-
-                    Lighting Control
-
-                    <span>
-                        →
-                    </span>
-
-                </div>
-
-
-                <div class="room-list-item">
-
-                    <span>
-                        02
-                    </span>
-
-                    Temperature Control
-
-                    <span>
-                        →
-                    </span>
-
-                </div>
-
-
-                <div class="room-list-item">
-
-                    <span>
-                        03
-                    </span>
-
-                    Curtain / Blind Control
-
-                    <span>
-                        →
-                    </span>
-
-                </div>
-
-
-                <div class="room-list-item">
-
-                    <span>
-                        04
-                    </span>
-
-                    DND & Make-Up-Room
-
-                    <span>
-                        →
-                    </span>
-
-                </div>
-
-
-                <div class="room-list-item">
-
-                    <span>
-                        05
-                    </span>
-
-                    Occupancy Detection
-
-                    <span>
-                        →
-                    </span>
-
-                </div>
-
-
-                <div class="room-list-item">
-
-                    <span>
-                        06
-                    </span>
-
-                    Energy Saving Mode
-
-                    <span>
-                        →
-                    </span>
-
-                </div>
-
-
+            <div class="capability-arrow">
+                ↗
             </div>
 
         </div>
 
-    </div>
 
-</section>
+        <div class="capability">
 
-
-
-<!-- =========================================================
-     HOTEL AREAS
-========================================================= -->
-
-<section class="section areas" id="systems">
-
-
-    <div class="section-label">
-        SMART HOTEL AREAS
-    </div>
-
-
-    <h2 class="section-title">
-
-        Automation Beyond
-        <br>
-
-        The Guest Room.
-
-    </h2>
-
-
-    <p class="section-text">
-
-        Extend intelligent automation across
-        every major area of your hotel to improve
-        guest experience and operational control.
-
-    </p>
-
-
-    <div class="area-grid">
-
-
-        <div class="area-card">
-
-            <div class="area-number">
-                01 / LOBBY
+            <div class="capability-number">
+                02 / ENERGY
             </div>
 
-            <div class="area-icon">
-                ◇
+            <div class="capability-icon">
+                ◒
             </div>
 
             <h3>
-                Smart Lobby
+                Renewable Energy
             </h3>
 
             <p>
 
-                Automated lighting, HVAC,
-                digital ambience and energy
-                control for welcoming spaces.
+                Solar, wind, biomass and hydel power
+                generation solutions supporting a
+                sustainable energy future.
 
             </p>
+
+            <div class="capability-arrow">
+                ↗
+            </div>
 
         </div>
 
 
-        <div class="area-card">
+        <div class="capability">
 
-            <div class="area-number">
-                02 / DINING
+            <div class="capability-number">
+                03 / AUTOMATION
             </div>
 
-            <div class="area-icon">
-                ◌
-            </div>
-
-            <h3>
-                Restaurant & Dining
-            </h3>
-
-            <p>
-
-                Lighting, HVAC and energy
-                automation for restaurants,
-                cafés and dining areas.
-
-            </p>
-
-        </div>
-
-
-        <div class="area-card">
-
-            <div class="area-number">
-                03 / MEETING
-            </div>
-
-            <div class="area-icon">
-                □
-            </div>
-
-            <h3>
-                Conference Rooms
-            </h3>
-
-            <p>
-
-                Smart lighting, climate control
-                and AV integration for meetings
-                and events.
-
-            </p>
-
-        </div>
-
-
-        <div class="area-card">
-
-            <div class="area-number">
-                04 / FACILITY
-            </div>
-
-            <div class="area-icon">
+            <div class="capability-icon">
                 ⚙
             </div>
 
             <h3>
-                Utility & Back-End
+                Smart Automation
             </h3>
 
             <p>
 
-                Monitor electrical systems,
-                pumps, generators and other
-                hotel infrastructure.
+                Residential, commercial, industrial,
+                hospital and hotel automation solutions
+                for connected environments.
 
             </p>
 
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     CENTRAL CONTROL
-========================================================= -->
-
-<section class="section control-section">
-
-
-    <div class="section-label">
-        CENTRAL HOTEL CONTROL
-    </div>
-
-
-    <h2 class="section-title">
-
-        Complete Visibility.
-        <br>
-
-        Smarter Operations.
-
-    </h2>
-
-
-    <p class="section-text">
-
-        Centralized dashboards help hotel
-        management monitor room status,
-        energy consumption and critical
-        building systems in real time.
-
-    </p>
-
-
-    <div class="control-layout">
-
-
-        <!-- HOTEL DASHBOARD -->
-
-        <div class="control-box">
-
-            <h3>
-                Hotel Operations
-            </h3>
-
-            <p>
-
-                Monitor building systems and
-                operational parameters from
-                a centralized interface.
-
-            </p>
-
-
-            <div class="dashboard">
-
-
-                <div class="dashboard-header">
-
-                    <span>
-                        HOTEL CONTROL CENTER
-                    </span>
-
-                    <span>
-                        LIVE
-                    </span>
-
-                </div>
-
-
-                <div class="dashboard-grid">
-
-
-                    <div class="dashboard-item">
-
-                        <small>
-                            OCCUPANCY
-                        </small>
-
-                        <strong>
-                            78%
-                        </strong>
-
-                        <span>
-                            ACTIVE
-                        </span>
-
-                    </div>
-
-
-                    <div class="dashboard-item">
-
-                        <small>
-                            HVAC
-                        </small>
-
-                        <strong>
-                            22.6°C
-                        </strong>
-
-                        <span>
-                            OPTIMAL
-                        </span>
-
-                    </div>
-
-
-                    <div class="dashboard-item">
-
-                        <small>
-                            ROOMS
-                        </small>
-
-                        <strong>
-                            126
-                        </strong>
-
-                        <span>
-                            MONITORED
-                        </span>
-
-                    </div>
-
-
-                    <div class="dashboard-item">
-
-                        <small>
-                            ENERGY
-                        </small>
-
-                        <strong>
-                            68.4 kW
-                        </strong>
-
-                        <span>
-                            OPTIMIZED
-                        </span>
-
-                    </div>
-
-
-                </div>
-
+            <div class="capability-arrow">
+                ↗
             </div>
 
         </div>
 
 
+        <div class="capability">
 
-        <!-- ENERGY MANAGEMENT -->
+            <div class="capability-number">
+                04 / EXECUTION
+            </div>
 
-        <div class="control-box">
+            <div class="capability-icon">
+                ◇
+            </div>
 
             <h3>
-                Energy Intelligence
+                Project Execution
             </h3>
 
             <p>
 
-                Track hotel energy performance
-                and identify opportunities to
-                reduce consumption.
+                Structured project planning,
+                installation, testing, commissioning
+                and handover.
 
             </p>
 
+            <div class="capability-arrow">
+                ↗
+            </div>
 
-            <div class="energy-panel">
-
-
-                <div class="energy-header">
-
-                    <span>
-                        WEEKLY CONSUMPTION
-                    </span>
-
-                    <strong>
-                        -18.4%
-                    </strong>
-
-                </div>
+        </div>
 
 
-                <div class="energy-bars">
+        <div class="capability">
 
-                    <div class="energy-bar"></div>
+            <div class="capability-number">
+                05 / INTEGRATION
+            </div>
 
-                    <div class="energy-bar"></div>
+            <div class="capability-icon">
+                ⊕
+            </div>
 
-                    <div class="energy-bar"></div>
+            <h3>
+                System Integration
+            </h3>
 
-                    <div class="energy-bar"></div>
+            <p>
 
-                    <div class="energy-bar"></div>
+                Integration of electrical,
+                automation, monitoring and
+                control systems.
 
-                    <div class="energy-bar"></div>
+            </p>
 
-                    <div class="energy-bar"></div>
+            <div class="capability-arrow">
+                ↗
+            </div>
 
-                </div>
-
-
-                <div class="energy-labels">
-
-                    <span>
-                        MON
-                    </span>
-
-                    <span>
-                        TUE
-                    </span>
-
-                    <span>
-                        WED
-                    </span>
-
-                    <span>
-                        THU
-                    </span>
-
-                    <span>
-                        FRI
-                    </span>
-
-                    <span>
-                        SAT
-                    </span>
-
-                    <span>
-                        SUN
-                    </span>
-
-                </div>
+        </div>
 
 
+        <div class="capability">
+
+            <div class="capability-number">
+                06 / SUPPORT
+            </div>
+
+            <div class="capability-icon">
+                +
+            </div>
+
+            <h3>
+                Technical Support
+            </h3>
+
+            <p>
+
+                Reliable technical support,
+                maintenance and lifecycle
+                assistance for installed systems.
+
+            </p>
+
+            <div class="capability-arrow">
+                ↗
             </div>
 
         </div>
@@ -2821,108 +1823,257 @@ a{
 
 
 <!-- =========================================================
-     BENEFITS
+     BUSINESS SEGMENTS
 ========================================================= -->
 
-<section class="section benefits">
+<section class="section segments">
 
 
     <div class="section-label">
-        HOTEL PERFORMANCE
+        OUR BUSINESS SEGMENTS
     </div>
 
 
     <h2 class="section-title">
 
-        Better Guest Experience.
+        Three Domains.
         <br>
 
-        Better Hotel Performance.
+        One Engineering Vision.
 
     </h2>
 
 
-    <div class="benefit-grid">
+    <div class="segment-wrapper">
 
 
-        <div class="benefit">
-
-            <span>
-                BENEFIT / 01
-            </span>
+        <div class="segment-intro">
 
             <h3>
-                Enhanced Guest Comfort
+                Integrated Solutions
+                For A Changing World.
             </h3>
 
             <p>
 
-                Give guests intuitive control over
-                temperature, lighting, curtains and
-                room ambience.
+                Our business is structured around
+                three complementary areas that enable
+                us to address electrical infrastructure,
+                clean energy and intelligent automation
+                requirements.
 
             </p>
 
         </div>
 
 
-        <div class="benefit">
+        <div class="segment-list">
 
-            <span>
-                BENEFIT / 02
-            </span>
+
+            <div class="segment">
+
+                <span>
+                    01
+                </span>
+
+                <h4>
+                    POWER
+                </h4>
+
+                <p>
+                    Transmission • Distribution • Panels
+                </p>
+
+                <div class="segment-arrow">
+                    →
+                </div>
+
+            </div>
+
+
+            <div class="segment">
+
+                <span>
+                    02
+                </span>
+
+                <h4>
+                    ENERGY
+                </h4>
+
+                <p>
+                    Solar • Wind • Biomass • Hydel
+                </p>
+
+                <div class="segment-arrow">
+                    →
+                </div>
+
+            </div>
+
+
+            <div class="segment">
+
+                <span>
+                    03
+                </span>
+
+                <h4>
+                    AUTOMATION
+                </h4>
+
+                <p>
+                    Home • Commercial • Industrial
+                </p>
+
+                <div class="segment-arrow">
+                    →
+                </div>
+
+            </div>
+
+
+            <div class="segment">
+
+                <span>
+                    04
+                </span>
+
+                <h4>
+                    SMART SYSTEMS
+                </h4>
+
+                <p>
+                    Hospital • Hotel • Integrated Control
+                </p>
+
+                <div class="segment-arrow">
+                    →
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHY CHOOSE US
+========================================================= -->
+
+<section class="section why-us">
+
+
+    <div class="section-label">
+        WHY CHOOSE US
+    </div>
+
+
+    <h2 class="section-title">
+
+        What Sets Our
+        <br>
+
+        Approach Apart.
+
+    </h2>
+
+
+    <p class="section-text">
+
+        We focus on delivering practical engineering
+        solutions that balance performance, safety,
+        quality and long-term reliability.
+
+    </p>
+
+
+    <div class="why-grid">
+
+
+        <div class="why-card">
+
+            <div class="why-card-number">
+                01 / EXPERTISE
+            </div>
 
             <h3>
-                Reduced Energy Consumption
+                Engineering-Led Approach
             </h3>
 
             <p>
 
-                Occupancy-based automation and
-                intelligent HVAC and lighting
-                control help reduce energy waste.
+                Our solutions are developed around
+                engineering fundamentals, site
+                requirements and practical execution.
 
             </p>
 
         </div>
 
 
-        <div class="benefit">
+        <div class="why-card">
 
-            <span>
-                BENEFIT / 03
-            </span>
+            <div class="why-card-number">
+                02 / QUALITY
+            </div>
 
             <h3>
-                Faster Operations
+                Quality-Focused Execution
             </h3>
 
             <p>
 
-                Centralized monitoring helps
-                engineering and facility teams
-                respond quickly to operational needs.
+                We maintain a strong focus on quality
+                throughout design, procurement,
+                installation and commissioning.
 
             </p>
 
         </div>
 
 
-        <div class="benefit">
+        <div class="why-card">
 
-            <span>
-                BENEFIT / 04
-            </span>
+            <div class="why-card-number">
+                03 / SAFETY
+            </div>
 
             <h3>
-                Centralized Visibility
+                Safety First
             </h3>
 
             <p>
 
-                Gain real-time visibility into
-                guest rooms, building systems,
-                energy and security.
+                Safety is considered at every stage
+                of project planning and execution to
+                protect people, assets and systems.
+
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-card-number">
+                04 / INNOVATION
+            </div>
+
+            <h3>
+                Technology & Innovation
+            </h3>
+
+            <p>
+
+                We adopt modern technologies and
+                intelligent systems to improve
+                efficiency, visibility and performance.
 
             </p>
 
@@ -2936,135 +2087,254 @@ a{
 
 
 <!-- =========================================================
-     PROJECT PROCESS
+     PROJECT APPROACH
 ========================================================= -->
 
-<section class="section process">
+<section class="section workflow">
 
 
     <div class="section-label">
-        PROJECT EXECUTION
+        OUR APPROACH
     </div>
 
 
     <h2 class="section-title">
 
-        From Hotel Study
+        A Structured Approach
         <br>
 
-        To Smart Operations.
+        To Every Project.
 
     </h2>
 
 
     <p class="section-text">
 
-        A structured implementation process ensures
-        the automation system aligns with the hotel's
-        architecture, operations and guest experience.
+        From understanding the requirement to
+        final commissioning, every project follows
+        a systematic execution approach.
 
     </p>
 
 
-    <div class="process-grid">
+    <div class="workflow-grid">
 
 
-        <div class="process-step">
+        <div class="workflow-step">
 
-            <div class="step-circle">
+            <div class="circle">
                 01
             </div>
 
             <h3>
-                Site Assessment
+                Understand
             </h3>
 
             <p>
 
-                Study hotel layout, guest rooms,
-                public areas and infrastructure.
+                Understand client requirements,
+                site conditions and project goals.
 
             </p>
 
         </div>
 
 
-        <div class="process-step">
+        <div class="workflow-step">
 
-            <div class="step-circle">
+            <div class="circle">
                 02
             </div>
 
             <h3>
-                System Design
+                Engineer
             </h3>
 
             <p>
 
-                Develop automation architecture
-                based on operational requirements.
+                Develop the appropriate technical
+                solution and execution plan.
 
             </p>
 
         </div>
 
 
-        <div class="process-step">
+        <div class="workflow-step">
 
-            <div class="step-circle">
+            <div class="circle">
                 03
             </div>
 
             <h3>
-                Integration
+                Execute
             </h3>
 
             <p>
 
-                Integrate GRMS, BMS, HVAC,
-                lighting, security and energy systems.
+                Implement the project with
+                quality and safety controls.
 
             </p>
 
         </div>
 
 
-        <div class="process-step">
+        <div class="workflow-step">
 
-            <div class="step-circle">
+            <div class="circle">
                 04
             </div>
 
             <h3>
-                Testing
+                Integrate
             </h3>
 
             <p>
 
-                Verify system communication,
-                controls, alerts and automation functions.
+                Connect systems and validate
+                complete project functionality.
 
             </p>
 
         </div>
 
 
-        <div class="process-step">
+        <div class="workflow-step">
 
-            <div class="step-circle">
+            <div class="circle">
                 05
             </div>
 
             <h3>
-                Commissioning
+                Deliver
             </h3>
 
             <p>
 
-                Validate performance and hand over
-                the complete smart hotel system.
+                Test, commission and hand over
+                reliable operational systems.
 
             </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INDUSTRIES
+========================================================= -->
+
+<section class="section industries">
+
+
+    <div class="section-label">
+        INDUSTRIES WE SERVE
+    </div>
+
+
+    <h2 class="section-title">
+
+        Solutions Across
+        <br>
+
+        Critical Industries.
+
+    </h2>
+
+
+    <div class="industry-grid">
+
+
+        <div class="industry">
+
+            <div class="industry-number">
+                01
+            </div>
+
+            <h3>
+                Infrastructure
+            </h3>
+
+            <p>
+                Power and electrical infrastructure
+                projects.
+            </p>
+
+            <div class="industry-arrow">
+                ↗
+            </div>
+
+        </div>
+
+
+        <div class="industry">
+
+            <div class="industry-number">
+                02
+            </div>
+
+            <h3>
+                Energy
+            </h3>
+
+            <p>
+                Renewable energy generation
+                and supporting systems.
+            </p>
+
+            <div class="industry-arrow">
+                ↗
+            </div>
+
+        </div>
+
+
+        <div class="industry">
+
+            <div class="industry-number">
+                03
+            </div>
+
+            <h3>
+                Industrial
+            </h3>
+
+            <p>
+                Industrial automation and
+                intelligent control systems.
+            </p>
+
+            <div class="industry-arrow">
+                ↗
+            </div>
+
+        </div>
+
+
+        <div class="industry">
+
+            <div class="industry-number">
+                04
+            </div>
+
+            <h3>
+                Smart Buildings
+            </h3>
+
+            <p>
+                Residential, commercial,
+                hospital and hotel automation.
+            </p>
+
+            <div class="industry-arrow">
+                ↗
+            </div>
 
         </div>
 
@@ -3085,25 +2355,24 @@ a{
     <div>
 
         <div class="section-label">
-            SMART HOSPITALITY PROJECTS
+            LET'S BUILD TOGETHER
         </div>
-
 
         <h2>
 
-            Build A Smarter
+            Have An Engineering
             <br>
 
-            Hotel Experience.
+            Challenge?
 
         </h2>
 
-
         <p>
 
-            Let's create a connected hospitality
-            environment that improves guest comfort,
-            energy efficiency and hotel operations.
+            Tell us about your project requirements.
+            Our team can help develop the right
+            power, energy or automation solution
+            for your application.
 
         </p>
 
@@ -3111,7 +2380,7 @@ a{
 
 
     <a href="#" class="cta-button">
-        DISCUSS YOUR PROJECT →
+        TALK TO OUR TEAM →
     </a>
 
 </section>
@@ -3125,7 +2394,7 @@ a{
 <footer class="footer">
 
     <span>
-        HOTEL AUTOMATION • GRMS • BMS • EMS
+        POWER • ENERGY • AUTOMATION
     </span>
 
     <strong>
