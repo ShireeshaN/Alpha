@@ -1,2576 +1,4195 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Hydel Power Generation | Energy Segment</title>
+    <meta charset="UTF-8">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-rel="stylesheet">
+    <title>Hydel Energy | Alpha Numeric</title>
 
-<style>
+    <meta name="description"
+          content="Alpha Numeric delivers intelligent and efficient hydel energy solutions for commercial, industrial, infrastructure and renewable energy applications.">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
 
-html{
-    scroll-behavior:smooth;
-}
+    <!-- =====================================================
+         BOOTSTRAP
+    ====================================================== -->
 
-body{
-    font-family:"Inter",sans-serif;
-    background:#f4f7f9;
-    color:#16384a;
-}
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
 
-.hydel-page{
-    width:100%;
-    overflow:hidden;
-    background:#fff;
-}
 
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
 
-/* =========================================
-   HEADER
-========================================= */
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-.header{
-    height:76px;
-    padding:0 7%;
 
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
 
-    background:#083b52;
-    color:#fff;
-}
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-.brand{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-.brand-icon{
-    width:42px;
-    height:42px;
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
 
-    border-radius:50%;
+    <!-- =====================================================
+         PAGE CSS
+    ====================================================== -->
 
-    background:#5fc7e5;
-    color:#083b52;
+    <style>
 
-    font-size:20px;
-    font-weight:800;
-}
+        /* =====================================================
+           GLOBAL
+        ====================================================== */
 
-.brand h3{
-    font-size:17px;
-    letter-spacing:1px;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.brand span{
-    display:block;
-    margin-top:3px;
+        html {
+            scroll-behavior: smooth;
+        }
 
-    color:#c5dbe3;
+        body {
 
-    font-size:9px;
-    letter-spacing:1.5px;
-}
+            font-family: "Inter", sans-serif;
 
-.page-no{
-    color:#c5dbe3;
-    font-size:10px;
-    font-weight:700;
-    letter-spacing:1.5px;
-}
+            background: #ffffff;
 
+            color: #111111;
 
-/* =========================================
-   HERO
-========================================= */
+            overflow-x: hidden;
 
-.hero{
-    min-height:620px;
+        }
 
-    position:relative;
+        img {
+            max-width: 100%;
+        }
 
-    display:flex;
-    align-items:center;
+        a {
+            text-decoration: none;
+        }
 
-    background:
-        linear-gradient(
-            90deg,
-            rgba(5,45,62,.96) 0%,
-            rgba(5,45,62,.78) 40%,
-            rgba(5,45,62,.16) 100%
-        ),
-        url("images/hydel-hero.jpg");
 
-    background-size:cover;
-    background-position:center;
-}
+        /* =====================================================
+           NAVBAR
+        ====================================================== */
 
-.hero-content{
-    width:67%;
-    padding-left:8%;
-    color:#fff;
-}
+        .main-navbar {
 
-.eyebrow{
-    display:inline-block;
+            height: 100px;
 
-    padding:8px 15px;
-    margin-bottom:21px;
+            padding: 0 7%;
 
-    border-left:4px solid #5fc7e5;
+            background: #ffffff !important;
 
-    background:rgba(255,255,255,.08);
+            border-bottom: 1px solid #eeeeee;
 
-    color:#d9eaf0;
+            z-index: 9999;
 
-    font-size:10px;
-    font-weight:700;
-    letter-spacing:2px;
+            transition: all .3s ease;
 
-    text-transform:uppercase;
-}
+        }
 
-.hero h1{
-    font-size:clamp(43px,6vw,76px);
-    line-height:1.02;
 
-    text-transform:uppercase;
+        .main-navbar .navbar-brand {
 
-    margin-bottom:23px;
-}
+            padding: 0;
 
-.hero h1 span{
-    color:#5fc7e5;
-}
+            margin: 0;
 
-.hero p{
-    max-width:650px;
+        }
 
-    color:#d5e6ec;
 
-    font-size:14px;
-    line-height:1.9;
+        .main-navbar .navbar-brand img {
 
-    margin-bottom:30px;
-}
+            height: 55px;
 
-.hero-btn{
-    display:inline-block;
+            width: auto;
 
-    padding:14px 24px;
+            object-fit: contain;
 
-    background:#5fc7e5;
-    color:#083b52;
+        }
 
-    text-decoration:none;
 
-    font-size:10px;
-    font-weight:800;
-    letter-spacing:1px;
+        .main-navbar .navbar-nav {
 
-    border-radius:3px;
+            align-items: center;
 
-    transition:.3s;
-}
+            gap: 28px;
 
-.hero-btn:hover{
-    transform:translateY(-3px);
-}
+        }
 
 
-/* =========================================
-   STATS
-========================================= */
+        .main-navbar .nav-link {
 
-.stats{
-    position:relative;
+            color: #111111 !important;
 
-    margin:-52px 7% 0;
+            font-size: 15px;
 
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
+            font-weight: 400;
 
-    background:#fff;
+            letter-spacing: 1px;
 
-    box-shadow:0 15px 40px rgba(8,59,82,.13);
+            padding: 10px 0 !important;
 
-    z-index:3;
-}
+            transition: .3s ease;
 
-.stat{
-    min-height:120px;
+        }
 
-    padding:22px;
 
-    display:flex;
-    align-items:center;
+        .main-navbar .nav-link:hover {
 
-    gap:15px;
+            color: #666666 !important;
 
-    border-right:1px solid #e0e9ed;
-}
+        }
 
-.stat:last-child{
-    border-right:none;
-}
 
-.stat-icon{
-    width:46px;
-    height:46px;
+        .main-navbar .nav-link.active {
 
-    flex-shrink:0;
+            color: #111111 !important;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+            font-weight: 600;
 
-    border-radius:50%;
+        }
 
-    background:#e7f6fa;
-    color:#1685a5;
 
-    font-size:19px;
-}
+        .main-navbar .dropdown-toggle::after {
 
-.stat h4{
-    color:#16384a;
-    font-size:11px;
-    margin-bottom:5px;
-}
+            margin-left: 7px;
 
-.stat p{
-    color:#71838c;
-    font-size:9px;
-    line-height:1.5;
-}
+            vertical-align: middle;
 
+            border-top: 5px solid #111111;
 
-/* =========================================
-   INTRO
-========================================= */
+            border-right: 4px solid transparent;
 
-.intro{
-    padding:95px 8% 80px;
+            border-left: 4px solid transparent;
 
-    display:grid;
-    grid-template-columns:.85fr 1.15fr;
+        }
 
-    gap:75px;
-}
 
-.label{
-    color:#1685a5;
+        .main-navbar .dropdown-menu {
 
-    font-size:10px;
-    font-weight:800;
-    letter-spacing:2px;
+            margin-top: 18px;
 
-    text-transform:uppercase;
+            padding: 10px 0;
 
-    margin-bottom:10px;
-}
+            min-width: 215px;
 
-.title{
-    color:#083b52;
+            border: 1px solid #eeeeee;
 
-    font-size:35px;
-    line-height:1.2;
+            border-radius: 0;
 
-    margin-bottom:18px;
-}
+            background: #ffffff;
 
-.line{
-    width:50px;
-    height:4px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
 
-    background:#5fc7e5;
+        }
 
-    margin-bottom:23px;
-}
 
-.text{
-    color:#687d86;
+        .main-navbar .dropdown-item {
 
-    font-size:12px;
-    line-height:1.9;
-}
+            padding: 11px 20px;
 
+            color: #222222;
 
-/* =========================================
-   SERVICES
-========================================= */
+            font-size: 13px;
 
-.services{
-    padding:85px 8%;
-    background:#f2f7f9;
-}
+            transition: .25s ease;
 
-.section-head{
-    max-width:730px;
+        }
 
-    margin:0 auto 48px;
 
-    text-align:center;
-}
+        .main-navbar .dropdown-item:hover {
 
-.section-head .line{
-    margin:0 auto 22px;
-}
+            background: #f5f5f5;
 
-.section-head p{
-    color:#6d7e85;
+            color: #000000;
 
-    font-size:12px;
-    line-height:1.8;
-}
+        }
 
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
 
-.service-card{
-    min-height:255px;
+        .main-navbar .dropdown-item.active {
 
-    padding:30px;
+            background: #111111;
 
-    position:relative;
+            color: #ffffff;
 
-    background:#fff;
+        }
 
-    border:1px solid #dfe9ed;
 
-    overflow:hidden;
+        .main-navbar .navbar-toggler {
 
-    transition:.3s;
-}
+            border: none !important;
 
-.service-card::before{
-    content:"";
+            box-shadow: none !important;
 
-    position:absolute;
+            color: #111111;
 
-    top:0;
-    left:0;
+        }
 
-    width:100%;
-    height:4px;
 
-    background:#5fc7e5;
+        .main-navbar .navbar-toggler span {
 
-    transform:scaleX(0);
+            font-size: 13px;
 
-    transform-origin:left;
+        }
 
-    transition:.3s;
-}
 
-.service-card:hover{
-    background:#083b52;
+        /* =====================================================
+           HYDEL HERO
+        ====================================================== */
 
-    transform:translateY(-7px);
+        .hydel-hero {
 
-    box-shadow:0 17px 35px rgba(8,59,82,.15);
-}
+            min-height: 720px;
 
-.service-card:hover::before{
-    transform:scaleX(1);
-}
+            margin-top: 100px;
 
-.service-icon{
-    width:50px;
-    height:50px;
+            position: relative;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+            display: flex;
 
-    margin-bottom:20px;
+            align-items: center;
 
-    border-radius:7px;
+            overflow: hidden;
 
-    background:#083b52;
-    color:#5fc7e5;
+            background:
 
-    font-size:19px;
-}
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,.94) 0%,
+                    rgba(0,0,0,.72) 43%,
+                    rgba(0,0,0,.16) 100%
+                ),
 
-.service-card:hover .service-icon{
-    background:#5fc7e5;
-    color:#083b52;
-}
+                url("assets/img/hydel-banner.jpg");
 
-.service-card h3{
-    color:#16384a;
+            background-size: cover;
 
-    font-size:14px;
+            background-position: center;
 
-    margin-bottom:11px;
-}
+        }
 
-.service-card p{
-    color:#71828a;
 
-    font-size:10px;
-    line-height:1.75;
-}
+        .hydel-hero-content {
 
-.service-card:hover h3{
-    color:#fff;
-}
+            width: 100%;
 
-.service-card:hover p{
-    color:#c7dce4;
-}
+            max-width: 1300px;
 
+            margin: auto;
 
-/* =========================================
-   HYDEL SYSTEM
-========================================= */
+            padding: 100px 7%;
 
-.hydel-system{
-    padding:90px 8%;
-    background:#fff;
-}
+            color: #ffffff;
 
-.system-layout{
-    display:grid;
+        }
 
-    grid-template-columns:1fr 1fr;
 
-    gap:70px;
+        .hero-label {
 
-    align-items:center;
-}
+            display: inline-flex;
 
-.system-image{
-    min-height:460px;
+            align-items: center;
 
-    position:relative;
+            gap: 12px;
 
-    background:
-        linear-gradient(
-            rgba(8,59,82,.08),
-            rgba(8,59,82,.08)
-        ),
-        url("images/hydel-plant.jpg");
+            font-size: 11px;
 
-    background-size:cover;
-    background-position:center;
-}
+            font-weight: 700;
 
-.image-badge{
-    position:absolute;
+            letter-spacing: 4px;
 
-    left:25px;
-    bottom:25px;
+            text-transform: uppercase;
 
-    padding:16px 20px;
+            color: #d6d6d6;
 
-    background:#083b52;
+            margin-bottom: 25px;
 
-    border-left:4px solid #5fc7e5;
+        }
 
-    color:#fff;
-}
 
-.image-badge strong{
-    display:block;
+        .hero-label::before {
 
-    color:#5fc7e5;
+            content: "";
 
-    font-size:12px;
+            display: block;
 
-    margin-bottom:4px;
-}
+            width: 38px;
 
-.image-badge span{
-    color:#c5dbe3;
-    font-size:9px;
-}
+            height: 1px;
 
-.system-content p{
-    color:#687d86;
+            background: #ffffff;
 
-    font-size:12px;
-    line-height:1.9;
+        }
 
-    margin-bottom:25px;
-}
 
-.system-list{
-    display:grid;
+        .hydel-hero h1 {
 
-    grid-template-columns:1fr 1fr;
+            font-size: clamp(48px, 7vw, 90px);
 
-    gap:11px;
-}
+            line-height: .95;
 
-.system-item{
-    padding:15px;
+            font-weight: 700;
 
-    background:#f3f7f9;
+            letter-spacing: -4px;
 
-    border-left:3px solid #5fc7e5;
+            margin-bottom: 30px;
 
-    color:#2a4a58;
+        }
 
-    font-size:10px;
-    font-weight:600;
-}
 
+        .hydel-hero h1 span {
 
-/* =========================================
-   HYDEL COMPONENTS
-========================================= */
+            font-weight: 300;
 
-.components{
-    padding:85px 8%;
-    background:#083b52;
-    color:#fff;
-}
+        }
 
-.components-head{
-    max-width:720px;
-    margin-bottom:48px;
-}
 
-.components-head .label{
-    color:#5fc7e5;
-}
+        .hero-text {
 
-.components-head .title{
-    color:#fff;
-}
+            max-width: 680px;
 
-.components-head p{
-    color:#c5dbe3;
+            color: #dddddd;
 
-    font-size:12px;
-    line-height:1.8;
-}
+            font-size: 15px;
 
-.component-grid{
-    display:grid;
+            line-height: 1.9;
 
-    grid-template-columns:repeat(6,1fr);
+            margin-bottom: 38px;
 
-    gap:10px;
-}
+        }
 
-.component-card{
-    min-height:190px;
 
-    padding:24px 14px;
+        .hero-buttons {
 
-    text-align:center;
+            display: flex;
 
-    border:1px solid rgba(255,255,255,.13);
+            flex-wrap: wrap;
 
-    background:rgba(255,255,255,.04);
+            gap: 12px;
 
-    transition:.3s;
-}
+        }
 
-.component-card:hover{
-    transform:translateY(-6px);
 
-    background:rgba(255,255,255,.09);
-}
+        .hero-button {
 
-.component-icon{
-    width:42px;
-    height:42px;
+            display: inline-flex;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+            align-items: center;
 
-    margin:0 auto 17px;
+            gap: 14px;
 
-    border-radius:50%;
+            padding: 15px 25px;
 
-    background:#5fc7e5;
+            background: #ffffff;
 
-    color:#083b52;
+            color: #111111;
 
-    font-size:11px;
-    font-weight:800;
-}
+            font-size: 11px;
 
-.component-card h4{
-    font-size:10px;
-    margin-bottom:9px;
-}
+            font-weight: 700;
 
-.component-card p{
-    color:#b9d0d9;
+            letter-spacing: 1px;
 
-    font-size:9px;
-    line-height:1.6;
-}
+            transition: .3s ease;
 
+        }
 
-/* =========================================
-   HYDRO POWER FLOW
-========================================= */
 
-.power-flow{
-    padding:85px 8%;
-    background:#f2f7f9;
-}
+        .hero-button:hover {
 
-.flow-grid{
-    display:grid;
+            background: #dddddd;
 
-    grid-template-columns:repeat(4,1fr);
+            color: #000000;
 
-    gap:15px;
+        }
 
-    margin-top:42px;
-}
 
-.flow-card{
-    min-height:215px;
+        .hero-button-outline {
 
-    padding:25px 20px;
+            display: inline-flex;
 
-    background:#fff;
+            align-items: center;
 
-    border:1px solid #dfe9ed;
+            gap: 14px;
 
-    position:relative;
+            padding: 14px 25px;
 
-    transition:.3s;
-}
+            border: 1px solid rgba(255,255,255,.55);
 
-.flow-card:hover{
-    transform:translateY(-6px);
+            color: #ffffff;
 
-    border-color:#5fc7e5;
+            font-size: 11px;
 
-    box-shadow:0 12px 25px rgba(8,59,82,.09);
-}
+            font-weight: 700;
 
-.flow-number{
-    position:absolute;
+            letter-spacing: 1px;
 
-    top:14px;
-    right:17px;
+            transition: .3s ease;
 
-    color:#dce8ec;
+        }
 
-    font-size:22px;
-    font-weight:800;
-}
 
-.flow-card h4{
-    color:#16384a;
+        .hero-button-outline:hover {
 
-    font-size:12px;
+            background: #ffffff;
 
-    margin-bottom:9px;
-}
+            color: #111111;
 
-.flow-card p{
-    color:#71828a;
+        }
 
-    font-size:10px;
 
-    line-height:1.7;
-}
+        /* =====================================================
+           COMMON SECTION
+        ====================================================== */
 
+        .section-container {
 
-/* =========================================
-   TECHNICAL CAPABILITIES
-========================================= */
+            max-width: 1250px;
 
-.capabilities{
-    padding:85px 8%;
-    background:#fff;
-}
+            margin: auto;
 
-.capability-layout{
-    display:grid;
+        }
 
-    grid-template-columns:.9fr 1.1fr;
 
-    gap:75px;
+        .section-tag {
 
-    align-items:center;
-}
+            display: block;
 
-.capability-text p{
-    color:#687d86;
+            font-size: 11px;
 
-    font-size:12px;
-    line-height:1.9;
-}
+            font-weight: 700;
 
-.capability-list{
-    display:grid;
+            letter-spacing: 3px;
 
-    grid-template-columns:1fr 1fr;
+            text-transform: uppercase;
 
-    gap:12px;
-}
+            color: #777777;
 
-.capability{
-    padding:18px;
+            margin-bottom: 15px;
 
-    background:#f3f7f9;
+        }
 
-    border:1px solid #e1e9ed;
-}
 
-.capability strong{
-    display:block;
+        .section-title {
 
-    color:#16384a;
+            font-size: clamp(35px, 4vw, 58px);
 
-    font-size:11px;
+            font-weight: 600;
 
-    margin-bottom:6px;
-}
+            line-height: 1.1;
 
-.capability span{
-    color:#76878f;
+            letter-spacing: -1.5px;
 
-    font-size:9px;
+            margin-bottom: 25px;
 
-    line-height:1.5;
-}
+        }
 
 
-/* =========================================
-   PROJECT PROCESS
-========================================= */
+        .section-title span {
 
-.process{
-    padding:85px 8%;
+            font-weight: 300;
 
-    background:#f2f7f9;
-}
+        }
 
-.process-grid{
-    display:grid;
 
-    grid-template-columns:repeat(5,1fr);
+        .section-text {
 
-    gap:14px;
+            color: #666666;
 
-    margin-top:42px;
-}
+            font-size: 14px;
 
-.process-card{
-    min-height:215px;
+            line-height: 1.9;
 
-    padding:25px 18px;
+        }
 
-    background:#fff;
 
-    border-top:3px solid #5fc7e5;
+        /* =====================================================
+           HYDEL INTRO
+        ====================================================== */
 
-    transition:.3s;
-}
+        .hydel-intro {
 
-.process-card:hover{
-    transform:translateY(-6px);
+            padding: 115px 8%;
 
-    box-shadow:0 12px 27px rgba(8,59,82,.09);
-}
+        }
 
-.process-no{
-    width:42px;
-    height:42px;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+        .intro-highlight {
 
-    margin-bottom:18px;
+            margin-top: 30px;
 
-    border-radius:50%;
+            padding-left: 25px;
 
-    background:#083b52;
-    color:#5fc7e5;
+            border-left: 3px solid #111111;
 
-    font-size:11px;
-    font-weight:800;
-}
+            color: #222222;
 
-.process-card h4{
-    color:#16384a;
+            font-size: 16px;
 
-    font-size:11px;
+            line-height: 1.8;
 
-    margin-bottom:8px;
-}
+            font-weight: 500;
 
-.process-card p{
-    color:#71828a;
+        }
 
-    font-size:9px;
 
-    line-height:1.65;
-}
+        .hydel-stat {
 
+            background: #f6f6f6;
 
-/* =========================================
-   E&M SERVICES
-========================================= */
+            padding: 35px;
 
-.em-services{
-    padding:85px 8%;
-    background:#fff;
-}
+            height: 100%;
 
-.em-grid{
-    display:grid;
+            position: relative;
 
-    grid-template-columns:repeat(4,1fr);
+            overflow: hidden;
 
-    gap:16px;
+            transition: .3s ease;
 
-    margin-top:42px;
-}
+        }
 
-.em-card{
-    padding:25px 20px;
 
-    background:#f4f8f9;
+        .hydel-stat::after {
 
-    border-left:3px solid #5fc7e5;
+            content: "";
 
-    transition:.3s;
-}
+            position: absolute;
 
-.em-card:hover{
-    transform:translateY(-6px);
+            width: 80px;
 
-    box-shadow:0 12px 27px rgba(8,59,82,.09);
-}
+            height: 80px;
 
-.em-card span{
-    display:block;
+            border: 1px solid #dddddd;
 
-    color:#1685a5;
+            border-radius: 50%;
 
-    font-size:21px;
-    font-weight:800;
+            right: -25px;
 
-    margin-bottom:12px;
-}
+            bottom: -25px;
 
-.em-card h4{
-    color:#16384a;
+        }
 
-    font-size:12px;
 
-    margin-bottom:7px;
-}
+        .hydel-stat:hover {
 
-.em-card p{
-    color:#71828a;
+            background: #eeeeee;
 
-    font-size:10px;
+            transform: translateY(-5px);
 
-    line-height:1.65;
-}
+        }
 
 
-/* =========================================
-   APPLICATIONS
-========================================= */
+        .hydel-stat i {
 
-.applications{
-    padding:85px 8%;
-    background:#f2f7f9;
-}
+            font-size: 25px;
 
-.application-grid{
-    display:grid;
+            margin-bottom: 22px;
 
-    grid-template-columns:1fr 1fr;
+        }
 
-    gap:13px;
 
-    margin-top:40px;
-}
+        .hydel-stat h3 {
 
-.application{
-    padding:21px;
+            font-size: 20px;
 
-    background:#fff;
+            margin-bottom: 10px;
 
-    border:1px solid #dfe9ed;
+        }
 
-    transition:.3s;
-}
 
-.application:hover{
-    border-color:#5fc7e5;
+        .hydel-stat p {
 
-    transform:translateX(5px);
-}
+            color: #777777;
 
-.application strong{
-    display:block;
+            font-size: 12px;
 
-    color:#16384a;
+            line-height: 1.8;
 
-    font-size:11px;
+            margin: 0;
 
-    margin-bottom:6px;
-}
+        }
 
-.application span{
-    color:#76878f;
 
-    font-size:9px;
+        /* =====================================================
+           HYDEL SOLUTIONS
+        ====================================================== */
 
-    line-height:1.5;
-}
+        .solutions-section {
 
+            background: #f5f5f5;
 
-/* =========================================
-   CTA
-========================================= */
+            padding: 115px 8%;
 
-.cta{
-    margin:60px 8%;
+        }
 
-    min-height:245px;
 
-    display:grid;
+        .solution-card {
 
-    grid-template-columns:1.2fr .8fr;
+            background: #ffffff;
 
-    background:
-        linear-gradient(
-            90deg,
-            rgba(8,59,82,1),
-            rgba(8,59,82,.72)
-        ),
-        url("images/hydel-cta.jpg");
+            border: 1px solid #eeeeee;
 
-    background-size:cover;
-    background-position:center;
-}
+            padding: 40px;
 
-.cta-content{
-    padding:45px;
-    color:#fff;
-}
+            min-height: 330px;
 
-.cta-content h2{
-    font-size:27px;
-    margin-bottom:13px;
-}
+            position: relative;
 
-.cta-content p{
-    max-width:600px;
+            overflow: hidden;
 
-    color:#c5dbe3;
+            transition: .4s ease;
 
-    font-size:11px;
-    line-height:1.8;
-}
+        }
 
-.cta-side{
-    display:flex;
 
-    align-items:center;
-    justify-content:center;
+        .solution-card::before {
 
-    border-left:1px solid rgba(255,255,255,.13);
-}
+            content: "";
 
-.cta-side strong{
-    display:block;
+            position: absolute;
 
-    color:#5fc7e5;
+            width: 100%;
 
-    font-size:18px;
+            height: 3px;
 
-    margin-bottom:7px;
-}
+            background: #111111;
 
-.cta-side span{
-    color:#fff;
+            left: -100%;
 
-    font-size:9px;
+            top: 0;
 
-    letter-spacing:1.4px;
-}
+            transition: .4s ease;
 
+        }
 
-/* =========================================
-   FOOTER
-========================================= */
 
-.footer{
-    min-height:58px;
+        .solution-card:hover::before {
 
-    padding:0 8%;
+            left: 0;
 
-    display:flex;
+        }
 
-    align-items:center;
-    justify-content:space-between;
 
-    background:#052c3d;
+        .solution-card:hover {
 
-    color:#b8ced7;
+            transform: translateY(-8px);
 
-    font-size:9px;
+            box-shadow: 0 20px 50px rgba(0,0,0,.08);
 
-    letter-spacing:1px;
-}
+        }
 
-.footer strong{
-    color:#5fc7e5;
-}
 
+        .solution-number {
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+            position: absolute;
 
-@media(max-width:1050px){
+            right: 20px;
 
-    .flow-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
+            top: 10px;
 
-    .em-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
+            font-size: 65px;
 
-    .process-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
+            font-weight: 700;
 
-}
+            color: #eeeeee;
 
-@media(max-width:800px){
+        }
 
-    .hero-content{
-        width:90%;
-    }
 
-    .stats{
-        grid-template-columns:repeat(2,1fr);
-    }
+        .solution-icon {
 
-    .intro,
-    .system-layout,
-    .capability-layout{
-        grid-template-columns:1fr;
-    }
+            width: 55px;
 
-    .cta{
-        grid-template-columns:1fr;
-    }
+            height: 55px;
 
-    .cta-side{
-        min-height:120px;
+            display: flex;
 
-        border-left:none;
+            align-items: center;
 
-        border-top:1px solid rgba(255,255,255,.13);
-    }
+            justify-content: center;
 
-}
+            background: #111111;
 
-@media(max-width:600px){
+            color: #ffffff;
 
-    .header{
-        padding:0 5%;
-    }
+            font-size: 19px;
 
-    .page-no{
-        display:none;
-    }
+            margin-bottom: 25px;
 
-    .hero{
-        min-height:540px;
-    }
+        }
 
-    .hero-content{
-        width:94%;
-        padding-left:6%;
-    }
 
-    .stats{
-        margin:0;
-        grid-template-columns:1fr;
-    }
+        .solution-card h3 {
 
-    .stat{
-        border-right:none;
-        border-bottom:1px solid #e3eaed;
-    }
+            font-size: 21px;
 
-    .intro,
-    .services,
-    .hydel-system,
-    .components,
-    .power-flow,
-    .capabilities,
-    .process,
-    .em-services,
-    .applications{
-        padding-left:6%;
-        padding-right:6%;
-    }
+            font-weight: 600;
 
-    .service-grid{
-        grid-template-columns:1fr;
-    }
+            margin-bottom: 14px;
 
-    .system-list,
-    .capability-list,
-    .application-grid{
-        grid-template-columns:1fr;
-    }
+        }
 
-    .component-grid{
-        grid-template-columns:1fr 1fr;
-    }
 
-    .flow-grid,
-    .em-grid{
-        grid-template-columns:1fr;
-    }
+        .solution-card p {
 
-    .process-grid{
-        grid-template-columns:1fr 1fr;
-    }
+            color: #707070;
 
-    .cta{
-        margin:40px 6%;
-    }
+            font-size: 13px;
 
-    .footer{
-        padding:15px 6%;
+            line-height: 1.8;
 
-        flex-direction:column;
+        }
 
-        gap:8px;
 
-        justify-content:center;
-    }
+        /* =====================================================
+           BENEFITS
+        ====================================================== */
 
-}
+        .benefits-section {
 
-</style>
+            padding: 115px 8%;
+
+        }
+
+
+        .benefit-image {
+
+            min-height: 560px;
+
+            background:
+
+                linear-gradient(
+                    rgba(0,0,0,.10),
+                    rgba(0,0,0,.10)
+                ),
+
+                url("assets/img/hydel-benefits.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+        }
+
+
+        .benefit-content {
+
+            padding-left: 60px;
+
+        }
+
+
+        .benefit-item {
+
+            display: flex;
+
+            gap: 18px;
+
+            padding: 22px 0;
+
+            border-bottom: 1px solid #e5e5e5;
+
+        }
+
+
+        .benefit-item:last-child {
+
+            border-bottom: none;
+
+        }
+
+
+        .benefit-icon {
+
+            width: 42px;
+
+            height: 42px;
+
+            flex-shrink: 0;
+
+            border: 1px solid #111111;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 13px;
+
+        }
+
+
+        .benefit-item h4 {
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            margin-bottom: 7px;
+
+        }
+
+
+        .benefit-item p {
+
+            margin: 0;
+
+            color: #777777;
+
+            font-size: 12px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =====================================================
+           HYDEL TECHNOLOGY
+        ====================================================== */
+
+        .technology-section {
+
+            background: #fafafa;
+
+            padding: 115px 8%;
+
+        }
+
+
+        .technology-main {
+
+            border-top: 1px solid #dddddd;
+
+        }
+
+
+        .technology-row {
+
+            display: grid;
+
+            grid-template-columns: 80px 1fr 2fr;
+
+            gap: 35px;
+
+            align-items: center;
+
+            padding: 30px 0;
+
+            border-bottom: 1px solid #dddddd;
+
+            transition: .3s ease;
+
+        }
+
+
+        .technology-row:hover {
+
+            padding-left: 15px;
+
+            background: #ffffff;
+
+        }
+
+
+        .technology-number {
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+
+            color: #888888;
+
+        }
+
+
+        .technology-row h4 {
+
+            font-size: 18px;
+
+            font-weight: 600;
+
+            margin: 0;
+
+        }
+
+
+        .technology-row p {
+
+            color: #777777;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+            margin: 0;
+
+        }
+
+
+        /* =====================================================
+           PROJECT PROCESS
+        ====================================================== */
+
+        .process-section {
+
+            background: #111111;
+
+            color: #ffffff;
+
+            padding: 115px 8%;
+
+        }
+
+
+        .process-section .section-tag {
+
+            color: #999999;
+
+        }
+
+
+        .process-section .section-title {
+
+            color: #ffffff;
+
+        }
+
+
+        .process-section .section-text {
+
+            color: #aaaaaa;
+
+        }
+
+
+        .process-card {
+
+            padding: 35px 25px 25px 0;
+
+            min-height: 230px;
+
+        }
+
+
+        .process-number {
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+
+            color: #777777;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .process-card h4 {
+
+            font-size: 18px;
+
+            font-weight: 500;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .process-card p {
+
+            color: #999999;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+            margin: 0;
+
+        }
+
+
+        /* =====================================================
+           APPLICATIONS
+        ====================================================== */
+
+        .applications-section {
+
+            padding: 115px 8%;
+
+            background: #ffffff;
+
+        }
+
+
+        .application-card {
+
+            position: relative;
+
+            background: #f8f8f8;
+
+            border: 1px solid #eeeeee;
+
+            padding: 32px;
+
+            min-height: 210px;
+
+            transition: .3s ease;
+
+            overflow: hidden;
+
+        }
+
+
+        .application-card::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 90px;
+
+            height: 90px;
+
+            border: 1px solid #dddddd;
+
+            border-radius: 50%;
+
+            right: -35px;
+
+            bottom: -35px;
+
+        }
+
+
+        .application-card:hover {
+
+            background: #111111;
+
+            color: #ffffff;
+
+            transform: translateY(-6px);
+
+        }
+
+
+        .application-card:hover p {
+
+            color: #aaaaaa;
+
+        }
+
+
+        .application-card:hover::after {
+
+            border-color: #444444;
+
+        }
+
+
+        .application-card i {
+
+            font-size: 20px;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .application-card h4 {
+
+            font-size: 17px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .application-card p {
+
+            color: #777777;
+
+            font-size: 12px;
+
+            line-height: 1.7;
+
+            margin: 0;
+
+        }
+
+
+        /* =====================================================
+           SMART HYDEL MONITORING
+        ====================================================== */
+
+        .monitoring-section {
+
+            background: #f5f5f5;
+
+            padding: 115px 8%;
+
+        }
+
+
+        .monitoring-box {
+
+            background: #111111;
+
+            color: #ffffff;
+
+            padding: 55px;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .monitoring-box::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 250px;
+
+            height: 250px;
+
+            border: 1px solid #333333;
+
+            border-radius: 50%;
+
+            right: -80px;
+
+            top: -80px;
+
+        }
+
+
+        .monitoring-box::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 150px;
+
+            height: 150px;
+
+            border: 1px solid #333333;
+
+            border-radius: 50%;
+
+            right: 20px;
+
+            bottom: -80px;
+
+        }
+
+
+        .monitoring-box .section-tag {
+
+            color: #888888;
+
+        }
+
+
+        .monitoring-box h3 {
+
+            font-size: clamp(30px, 4vw, 50px);
+
+            line-height: 1.1;
+
+            font-weight: 500;
+
+            letter-spacing: -1.5px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .monitoring-box h3 span {
+
+            font-weight: 300;
+
+        }
+
+
+        .monitoring-box p {
+
+            max-width: 700px;
+
+            color: #aaaaaa;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+
+            margin-bottom: 0;
+
+        }
+
+
+        .monitoring-features {
+
+            margin-top: 35px;
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+        }
+
+
+        .monitoring-feature {
+
+            border: 1px solid #333333;
+
+            padding: 11px 16px;
+
+            color: #cccccc;
+
+            font-size: 11px;
+
+            letter-spacing: .5px;
+
+        }
+
+
+        /* =====================================================
+           WHY ALPHA NUMERIC
+        ====================================================== */
+
+        .why-section {
+
+            padding: 115px 8%;
+
+        }
+
+
+        .why-card {
+
+            padding: 35px 30px;
+
+            border: 1px solid #eeeeee;
+
+            height: 100%;
+
+            transition: .3s ease;
+
+        }
+
+
+        .why-card:hover {
+
+            border-color: #111111;
+
+            transform: translateY(-5px);
+
+        }
+
+
+        .why-card i {
+
+            font-size: 22px;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .why-card h4 {
+
+            font-size: 17px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .why-card p {
+
+            color: #777777;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+            margin: 0;
+
+        }
+
+
+        /* =====================================================
+           CTA
+        ====================================================== */
+
+        .hydel-cta {
+
+            padding: 115px 8%;
+
+            text-align: center;
+
+            color: #ffffff;
+
+            background:
+
+                linear-gradient(
+                    rgba(0,0,0,.88),
+                    rgba(0,0,0,.88)
+                ),
+
+                url("assets/img/hydel-cta.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+        }
+
+
+        .hydel-cta h2 {
+
+            font-size: clamp(38px, 5vw, 62px);
+
+            font-weight: 500;
+
+            line-height: 1.05;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .hydel-cta h2 strong {
+
+            font-weight: 700;
+
+        }
+
+
+        .hydel-cta p {
+
+            max-width: 680px;
+
+            margin: 0 auto 30px;
+
+            color: #bbbbbb;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .cta-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 13px;
+
+            background: #ffffff;
+
+            color: #111111;
+
+            padding: 15px 28px;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            transition: .3s ease;
+
+        }
+
+
+        .cta-button:hover {
+
+            background: #dddddd;
+
+            color: #000000;
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        .main-footer {
+
+            background: #050505;
+
+            color: #ffffff;
+
+            padding: 75px 7% 25px;
+
+        }
+
+
+        .footer-logo img {
+
+            height: 55px;
+
+            width: auto;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .footer-description {
+
+            max-width: 370px;
+
+            color: #888888;
+
+            font-size: 12px;
+
+            line-height: 1.9;
+
+        }
+
+
+        .footer-heading {
+
+            color: #ffffff;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            letter-spacing: 1.5px;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .footer-links {
+
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+
+        }
+
+
+        .footer-links li {
+
+            margin-bottom: 11px;
+
+        }
+
+
+        .footer-links a {
+
+            color: #888888;
+
+            font-size: 12px;
+
+            transition: .3s ease;
+
+        }
+
+
+        .footer-links a:hover {
+
+            color: #ffffff;
+
+            padding-left: 4px;
+
+        }
+
+
+        .footer-contact {
+
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+
+        }
+
+
+        .footer-contact li {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 12px;
+
+            color: #888888;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .footer-contact i {
+
+            width: 18px;
+
+            color: #ffffff;
+
+            margin-top: 4px;
+
+        }
+
+
+        .footer-social {
+
+            display: flex;
+
+            gap: 9px;
+
+            margin-top: 24px;
+
+        }
+
+
+        .footer-social a {
+
+            width: 35px;
+
+            height: 35px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border: 1px solid #2b2b2b;
+
+            color: #999999;
+
+            font-size: 13px;
+
+            transition: .3s;
+
+        }
+
+
+        .footer-social a:hover {
+
+            background: #ffffff;
+
+            color: #000000;
+
+            border-color: #ffffff;
+
+        }
+
+
+        .footer-bottom {
+
+            margin-top: 55px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid #222222;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+            color: #666666;
+
+            font-size: 10px;
+
+            letter-spacing: .5px;
+
+        }
+
+
+        .footer-bottom strong {
+
+            color: #ffffff;
+
+            font-weight: 500;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ====================================================== */
+
+        @media(max-width: 991px) {
+
+            .main-navbar {
+
+                height: auto;
+
+                min-height: 80px;
+
+                padding: 10px 5%;
+
+            }
+
+
+            .main-navbar .navbar-brand img {
+
+                height: 48px;
+
+            }
+
+
+            .main-navbar .navbar-collapse {
+
+                margin-top: 15px;
+
+                padding: 15px 0;
+
+                background: #ffffff;
+
+            }
+
+
+            .main-navbar .navbar-nav {
+
+                align-items: flex-start;
+
+                gap: 0;
+
+            }
+
+
+            .main-navbar .nav-item {
+
+                width: 100%;
+
+            }
+
+
+            .main-navbar .nav-link {
+
+                padding: 12px 5px !important;
+
+            }
+
+
+            .main-navbar .dropdown-menu {
+
+                margin-top: 0;
+
+                border: none;
+
+                box-shadow: none;
+
+            }
+
+
+            .hydel-hero {
+
+                margin-top: 80px;
+
+                min-height: 620px;
+
+            }
+
+
+            .benefit-content {
+
+                padding-left: 0;
+
+                margin-top: 40px;
+
+            }
+
+
+            .technology-row {
+
+                grid-template-columns: 60px 1fr;
+
+                gap: 20px;
+
+            }
+
+
+            .technology-row p {
+
+                grid-column: 2;
+
+            }
+
+        }
+
+
+        @media(max-width: 767px) {
+
+            .hydel-hero-content {
+
+                padding: 90px 7%;
+
+            }
+
+
+            .hydel-hero h1 {
+
+                font-size: 52px;
+
+                letter-spacing: -2px;
+
+            }
+
+
+            .hero-buttons {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+            }
+
+
+            .hydel-intro,
+            .solutions-section,
+            .benefits-section,
+            .technology-section,
+            .applications-section,
+            .monitoring-section,
+            .why-section {
+
+                padding: 75px 7%;
+
+            }
+
+
+            .process-section {
+
+                padding: 75px 7%;
+
+            }
+
+
+            .hydel-cta {
+
+                padding: 75px 7%;
+
+            }
+
+
+            .benefit-image {
+
+                min-height: 350px;
+
+            }
+
+
+            .solution-card {
+
+                min-height: auto;
+
+            }
+
+
+            .monitoring-box {
+
+                padding: 35px 25px;
+
+            }
+
+
+            .technology-row {
+
+                display: block;
+
+                padding: 25px 0;
+
+            }
+
+
+            .technology-number {
+
+                margin-bottom: 10px;
+
+            }
+
+
+            .technology-row h4 {
+
+                margin-bottom: 10px;
+
+            }
+
+
+            .footer-column {
+
+                margin-bottom: 35px;
+
+            }
+
+
+            .footer-bottom {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 10px;
+
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
 <body>
 
-<div class="hydel-page">
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav class="navbar navbar-expand-lg main-navbar fixed-top"
+     id="mainNav">
+
+    <div class="container-fluid px-4 px-lg-5">
 
 
-<!-- =========================================
-     HEADER
-========================================= -->
+        <!-- LOGO -->
 
-<header class="header">
+        <a class="navbar-brand"
+           href="index.html">
 
-    <div class="brand">
+            <img src="assets/img/b-alpha.png"
+                 alt="Alpha Numeric Logo">
 
-        <div class="brand-icon">
-            ≋
-        </div>
-
-        <div>
-
-            <h3>ENERGY SEGMENT</h3>
-
-            <span>
-                CLEAN ENERGY • SMARTER FUTURE
-            </span>
-
-        </div>
-
-    </div>
-
-    <div class="page-no">
-        ENERGY SOLUTIONS / 04
-    </div>
-
-</header>
-
-
-<!-- =========================================
-     HERO
-========================================= -->
-
-<section class="hero">
-
-    <div class="hero-content">
-
-        <div class="eyebrow">
-            Renewable & Water-Based Power
-        </div>
-
-        <h1>
-            Hydel
-            <br>
-            <span>Power</span>
-        </h1>
-
-        <p>
-
-            Harnessing the power of flowing and stored water
-            through efficient hydroelectric generation systems
-            designed for reliable and sustainable power.
-
-        </p>
-
-        <a href="#services" class="hero-btn">
-            EXPLORE HYDEL SOLUTIONS →
         </a>
 
+
+        <!-- MOBILE MENU -->
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+            <span class="me-2">
+                Menu
+            </span>
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <div class="collapse navbar-collapse"
+             id="navbarResponsive">
+
+            <ul class="navbar-nav ms-auto">
+
+
+                <!-- HOME -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <!-- ABOUT -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="about.html">
+
+                        About
+
+                    </a>
+
+                </li>
+
+
+                <!-- ENERGY -->
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle active"
+                       href="#"
+                       id="energyDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+
+                        Energy
+
+                    </a>
+
+
+                    <ul class="dropdown-menu"
+                        aria-labelledby="energyDropdown">
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="solar-energy.html">
+
+                                Solar Energy
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="wind-energy.html">
+
+                                Wind Energy
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="biomass-energy.html">
+
+                                Biomass Energy
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a class="dropdown-item active"
+                               href="hydel-energy.html">
+
+                                Hydel Energy
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- POWER -->
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       id="powerDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+
+                        Power
+
+                    </a>
+
+
+                    <ul class="dropdown-menu"
+                        aria-labelledby="powerDropdown">
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="transmission.html">
+
+                                Transmission
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="distribution.html">
+
+                                Distribution
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="control-panels.html">
+
+                                Control Panels
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="panel-boards.html">
+
+                                Panel Boards
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- AUTOMATION -->
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       id="automationDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+
+                        Automation
+
+                    </a>
+
+
+                    <ul class="dropdown-menu"
+                        aria-labelledby="automationDropdown">
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="home-automation.html">
+
+                                Home Automation
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="commercial-automation.html">
+
+                                Commercial Automation
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="industrial-automation.html">
+
+                                Industrial Automation
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="hospital-automation.html">
+
+                                Hospital Automation
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="hotel-automation.html">
+
+                                Hotel Automation
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- R&D -->
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       id="rdDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+
+                        R & D
+
+                    </a>
+
+
+                    <ul class="dropdown-menu"
+                        aria-labelledby="rdDropdown">
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="smart-pole.html">
+
+                                Smart Pole
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="smart-bollard.html">
+
+                                Smart Bollard
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="window-leaf-ac.html">
+
+                                Window Leaf AC
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="smart-conference-table.html">
+
+                                Smart Conference Table
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- PRODUCTS -->
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       id="productsDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+
+                        Products
+
+                    </a>
+
+
+                    <ul class="dropdown-menu"
+                        aria-labelledby="productsDropdown">
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="transformers.html">
+
+                                Transformers
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="panels.html">
+
+                                Panels
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="switchgear.html">
+
+                                Switchgear
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="controllers.html">
+
+                                Controllers
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="accessories.html">
+
+                                Accessories
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- CONTACT -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="index.html#contact">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+        </div>
+
     </div>
 
-</section>
+</nav>
 
 
-<!-- =========================================
-     STATS
-========================================= -->
 
-<section class="stats">
+<!-- =========================================================
+     HERO
+========================================================= -->
 
+<section class="hydel-hero">
 
-    <div class="stat">
+    <div class="hydel-hero-content">
 
-        <div class="stat-icon">
-            ≋
-        </div>
-
-        <div>
-
-            <h4>
-                Hydro Resources
-            </h4>
-
-            <p>
-                Utilizing water flow and elevation for energy.
-            </p>
-
-        </div>
-
-    </div>
+        <span class="hero-label">
+            Renewable Energy
+        </span>
 
 
-    <div class="stat">
+        <h1>
 
-        <div class="stat-icon">
-            ⚡
-        </div>
-
-        <div>
-
-            <h4>
-                Power Generation
-            </h4>
-
-            <p>
-                Reliable electricity generation through turbines.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="stat">
-
-        <div class="stat-icon">
-            ⚙
-        </div>
-
-        <div>
-
-            <h4>
-                Electro-Mechanical
-            </h4>
-
-            <p>
-                Integrated turbine, generator and control systems.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="stat">
-
-        <div class="stat-icon">
-            ✓
-        </div>
-
-        <div>
-
-            <h4>
-                Sustainable Generation
-            </h4>
-
-            <p>
-                Long-term renewable and dependable power.
-            </p>
-
-        </div>
-
-    </div>
-
-
-</section>
-
-
-<!-- =========================================
-     INTRO
-========================================= -->
-
-<section class="intro">
-
-
-    <div>
-
-        <div class="label">
-            Hydel Power Generation
-        </div>
-
-        <h2 class="title">
-
-            Power From
+            Power from
             <br>
-            Water Resources
 
-        </h2>
+            <span>the flow of water.</span>
 
-        <div class="line"></div>
-
-        <p class="text">
-
-            Hydel power converts the energy of flowing or
-            falling water into mechanical energy and then
-            into electricity through turbine-generator systems.
-
-        </p>
-
-    </div>
+        </h1>
 
 
-    <div>
+        <p class="hero-text">
 
-        <div class="label">
-            Our Approach
-        </div>
-
-        <h2 class="title">
-            Engineering Reliable Hydro Power Systems
-        </h2>
-
-        <div class="line"></div>
-
-        <p class="text">
-
-            Our hydel power solutions cover project
-            assessment, hydro-mechanical systems,
-            electro-mechanical equipment, electrical
-            infrastructure and power evacuation.
-
-            <br><br>
-
-            We support projects with a focus on operational
-            reliability, safety, maintainability and efficient
-            utilization of available water resources.
+            Alpha Numeric delivers intelligent hydel
+            energy solutions that harness the natural
+            power of flowing water to generate reliable,
+            scalable and sustainable electricity for
+            modern infrastructure.
 
         </p>
 
-    </div>
+
+        <div class="hero-buttons">
+
+            <a href="#hydel-solutions"
+               class="hero-button">
+
+                EXPLORE HYDEL SOLUTIONS
+
+                <i class="fa-solid fa-arrow-down"></i>
+
+            </a>
 
 
-</section>
+            <a href="index.html#contact"
+               class="hero-button-outline">
 
+                DISCUSS YOUR PROJECT
 
-<!-- =========================================
-     SERVICES
-========================================= -->
+                <i class="fa-solid fa-arrow-right"></i>
 
-<section class="services" id="services">
-
-
-    <div class="section-head">
-
-        <div class="label">
-            Our Hydel Power Services
-        </div>
-
-        <h2 class="title">
-            Integrated Hydropower Solutions
-        </h2>
-
-        <div class="line"></div>
-
-        <p>
-
-            From hydro resource evaluation and project
-            engineering to electro-mechanical installation,
-            commissioning and O&M support.
-
-        </p>
-
-    </div>
-
-
-    <div class="service-grid">
-
-
-        <div class="service-card">
-
-            <div class="service-icon">
-                ≋
-            </div>
-
-            <h3>
-                Hydro Resource Assessment
-            </h3>
-
-            <p>
-
-                Assessment of water availability, flow,
-                head and site conditions for hydroelectric
-                generation.
-
-            </p>
+            </a>
 
         </div>
-
-
-        <div class="service-card">
-
-            <div class="service-icon">
-                ◉
-            </div>
-
-            <h3>
-                Hydro Project Engineering
-            </h3>
-
-            <p>
-
-                Engineering support for hydraulic,
-                hydro-mechanical and electrical systems.
-
-            </p>
-
-        </div>
-
-
-        <div class="service-card">
-
-            <div class="service-icon">
-                ⚙
-            </div>
-
-            <h3>
-                Turbine & Generator Systems
-            </h3>
-
-            <p>
-
-                Installation and integration of turbine,
-                generator and associated equipment.
-
-            </p>
-
-        </div>
-
-
-        <div class="service-card">
-
-            <div class="service-icon">
-                ▣
-            </div>
-
-            <h3>
-                Hydro-Mechanical Works
-            </h3>
-
-            <p>
-
-                Support for gates, valves, penstocks,
-                intake and water conductor systems.
-
-            </p>
-
-        </div>
-
-
-        <div class="service-card">
-
-            <div class="service-icon">
-                ⚡
-            </div>
-
-            <h3>
-                Electrical & Grid Integration
-            </h3>
-
-            <p>
-
-                Transformers, switchgear, protection,
-                controls and power evacuation systems.
-
-            </p>
-
-        </div>
-
-
-        <div class="service-card">
-
-            <div class="service-icon">
-                🛠
-            </div>
-
-            <h3>
-                Hydel Plant O&M
-            </h3>
-
-            <p>
-
-                Preventive maintenance, inspection,
-                troubleshooting and operational support.
-
-            </p>
-
-        </div>
-
 
     </div>
 
 </section>
 
 
-<!-- =========================================
-     HYDEL SYSTEM
-========================================= -->
 
-<section class="hydel-system">
+<!-- =========================================================
+     INTRODUCTION
+========================================================= -->
+
+<section class="hydel-intro"
+         id="hydel-solutions">
+
+    <div class="section-container">
+
+        <div class="row align-items-center">
 
 
-    <div class="system-layout">
+            <div class="col-lg-6">
 
-
-        <div class="system-image">
-
-            <div class="image-badge">
-
-                <strong>
-                    HYDRO POWER GENERATION
-                </strong>
-
-                <span>
-                    WATER • TURBINE • GENERATOR • POWER
+                <span class="section-tag">
+                    Hydel Energy
                 </span>
 
+
+                <h2 class="section-title">
+
+                    Turn flowing water
+                    <br>
+
+                    <span>into clean power.</span>
+
+                </h2>
+
+
+                <p class="section-text">
+
+                    Hydel energy, or hydroelectric power,
+                    uses the energy of flowing or falling
+                    water to generate electricity through
+                    turbines and generators.
+
+                </p>
+
+
+                <p class="section-text mt-3">
+
+                    Alpha Numeric combines energy engineering,
+                    electrical infrastructure, automation and
+                    intelligent monitoring to develop hydel
+                    energy solutions focused on reliable
+                    generation, efficient operation and
+                    sustainable power infrastructure.
+
+                </p>
+
+
+                <div class="intro-highlight">
+
+                    Harnessing the natural movement of water
+                    to create dependable renewable energy
+                    infrastructure for a cleaner future.
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="row g-3">
+
+
+                    <div class="col-6">
+
+                        <div class="hydel-stat">
+
+                            <i class="fa-solid fa-water"></i>
+
+                            <h3>
+                                Water Power
+                            </h3>
+
+                            <p>
+
+                                Utilize the natural energy
+                                available in flowing and
+                                falling water.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-6">
+
+                        <div class="hydel-stat">
+
+                            <i class="fa-solid fa-bolt"></i>
+
+                            <h3>
+                                Power Generation
+                            </h3>
+
+                            <p>
+
+                                Convert hydraulic energy into
+                                reliable electrical power
+                                through hydro systems.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-6">
+
+                        <div class="hydel-stat">
+
+                            <i class="fa-solid fa-gears"></i>
+
+                            <h3>
+                                Efficient Operation
+                            </h3>
+
+                            <p>
+
+                                Support efficient turbine,
+                                generator and electrical
+                                system operation.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-6">
+
+                        <div class="hydel-stat">
+
+                            <i class="fa-solid fa-earth-americas"></i>
+
+                            <h3>
+                                Sustainability
+                            </h3>
+
+                            <p>
+
+                                Generate renewable electricity
+                                while supporting long-term
+                                clean energy goals.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
             </div>
 
         </div>
-
-
-        <div class="system-content">
-
-            <div class="label">
-                Hydropower Capabilities
-            </div>
-
-            <h2 class="title">
-
-                From Water Flow
-                <br>
-                To Electrical Power
-
-            </h2>
-
-            <div class="line"></div>
-
-            <p>
-
-                Hydroelectric power plants use the potential
-                and kinetic energy of water to drive turbines
-                connected to electrical generators.
-
-            </p>
-
-
-            <div class="system-list">
-
-                <div class="system-item">
-                    Water Intake Systems
-                </div>
-
-                <div class="system-item">
-                    Dam & Reservoir Interface
-                </div>
-
-                <div class="system-item">
-                    Head Race / Water Conductor
-                </div>
-
-                <div class="system-item">
-                    Penstock Systems
-                </div>
-
-                <div class="system-item">
-                    Turbine Systems
-                </div>
-
-                <div class="system-item">
-                    Generator Systems
-                </div>
-
-                <div class="system-item">
-                    Control & Protection
-                </div>
-
-                <div class="system-item">
-                    Power Evacuation
-                </div>
-
-            </div>
-
-        </div>
-
 
     </div>
 
 </section>
 
 
-<!-- =========================================
-     COMPONENTS
-========================================= -->
 
-<section class="components">
+<!-- =========================================================
+     HYDEL SOLUTIONS
+========================================================= -->
 
+<section class="solutions-section">
 
-    <div class="components-head">
-
-        <div class="label">
-            Hydel Plant Components
-        </div>
-
-        <h2 class="title">
-            Integrated Hydro-Electric Infrastructure
-        </h2>
-
-        <div class="line"></div>
-
-        <p>
-
-            Hydropower generation depends on coordinated
-            hydraulic, mechanical, electrical and control
-            systems working together.
-
-        </p>
-
-    </div>
+    <div class="section-container">
 
 
-    <div class="component-grid">
+        <div class="row mb-5">
+
+            <div class="col-lg-7">
+
+                <span class="section-tag">
+                    Our Hydel Solutions
+                </span>
 
 
-        <div class="component-card">
+                <h2 class="section-title">
 
-            <div class="component-icon">
-                01
+                    From flowing water
+                    <span>to useful power.</span>
+
+                </h2>
+
             </div>
 
-            <h4>
-                Intake
-            </h4>
 
-            <p>
-                Controls and directs water into the
-                water conductor system.
-            </p>
+            <div class="col-lg-5">
 
-        </div>
+                <p class="section-text">
 
+                    Our hydel energy approach integrates
+                    hydraulic systems, turbines, generators,
+                    electrical infrastructure, automation,
+                    monitoring and project execution into
+                    a connected renewable energy solution.
 
-        <div class="component-card">
+                </p>
 
-            <div class="component-icon">
-                02
             </div>
 
-            <h4>
-                Penstock
-            </h4>
-
-            <p>
-                Carries pressurized water toward
-                the turbine.
-            </p>
-
         </div>
 
 
-        <div class="component-card">
+        <div class="row g-4">
 
-            <div class="component-icon">
-                03
+
+            <!-- 01 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="solution-card">
+
+                    <div class="solution-number">
+                        01
+                    </div>
+
+
+                    <div class="solution-icon">
+
+                        <i class="fa-solid fa-water"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Hydropower Systems
+                    </h3>
+
+
+                    <p>
+
+                        Engineered hydel power systems that
+                        convert hydraulic energy from flowing
+                        or falling water into useful electrical
+                        power.
+
+                    </p>
+
+                </div>
+
             </div>
 
-            <h4>
-                Turbine
-            </h4>
 
-            <p>
-                Converts hydraulic energy into
-                mechanical rotational energy.
-            </p>
+            <!-- 02 -->
 
-        </div>
+            <div class="col-lg-4 col-md-6">
+
+                <div class="solution-card">
+
+                    <div class="solution-number">
+                        02
+                    </div>
 
 
-        <div class="component-card">
+                    <div class="solution-icon">
 
-            <div class="component-icon">
-                04
+                        <i class="fa-solid fa-fan"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Turbine Systems
+                    </h3>
+
+
+                    <p>
+
+                        Supporting turbine systems designed
+                        to efficiently convert water flow and
+                        hydraulic head into mechanical energy.
+
+                    </p>
+
+                </div>
+
             </div>
 
-            <h4>
-                Generator
-            </h4>
 
-            <p>
-                Converts mechanical rotation into
-                electrical power.
-            </p>
+            <!-- 03 -->
 
-        </div>
+            <div class="col-lg-4 col-md-6">
+
+                <div class="solution-card">
+
+                    <div class="solution-number">
+                        03
+                    </div>
 
 
-        <div class="component-card">
+                    <div class="solution-icon">
 
-            <div class="component-icon">
-                05
+                        <i class="fa-solid fa-gears"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Generator Systems
+                    </h3>
+
+
+                    <p>
+
+                        Electrical generation systems designed
+                        to convert mechanical turbine power
+                        into dependable electrical energy.
+
+                    </p>
+
+                </div>
+
             </div>
 
-            <h4>
-                Transformer
-            </h4>
 
-            <p>
-                Steps up generated voltage for
-                power transmission.
-            </p>
+            <!-- 04 -->
 
-        </div>
+            <div class="col-lg-4 col-md-6">
+
+                <div class="solution-card">
+
+                    <div class="solution-number">
+                        04
+                    </div>
 
 
-        <div class="component-card">
+                    <div class="solution-icon">
 
-            <div class="component-icon">
-                06
+                        <i class="fa-solid fa-microchip"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Smart Monitoring
+                    </h3>
+
+
+                    <p>
+
+                        Connected monitoring systems for
+                        tracking water flow, turbine operation,
+                        generator status and energy generation.
+
+                    </p>
+
+                </div>
+
             </div>
 
-            <h4>
-                Switchyard
-            </h4>
 
-            <p>
-                Connects generated power to the
-                transmission network.
-            </p>
+            <!-- 05 -->
 
-        </div>
+            <div class="col-lg-4 col-md-6">
 
+                <div class="solution-card">
 
-    </div>
-
-</section>
+                    <div class="solution-number">
+                        05
+                    </div>
 
 
-<!-- =========================================
-     POWER FLOW
-========================================= -->
+                    <div class="solution-icon">
 
-<section class="power-flow">
+                        <i class="fa-solid fa-bolt"></i>
 
-
-    <div class="section-head">
-
-        <div class="label">
-            Hydropower Generation Process
-        </div>
-
-        <h2 class="title">
-            Water To Electricity
-        </h2>
-
-        <div class="line"></div>
-
-        <p>
-
-            A coordinated sequence converts the energy
-            of water into reliable electrical power.
-
-        </p>
-
-    </div>
+                    </div>
 
 
-    <div class="flow-grid">
+                    <h3>
+                        Electrical Systems
+                    </h3>
 
 
-        <div class="flow-card">
+                    <p>
 
-            <div class="flow-number">
-                01
+                        Supporting electrical infrastructure
+                        including control panels, protection,
+                        distribution and energy management
+                        systems.
+
+                    </p>
+
+                </div>
+
             </div>
 
-            <h4>
-                Water Storage & Intake
-            </h4>
 
-            <p>
+            <!-- 06 -->
 
-                Water is stored or diverted and directed
-                toward the hydroelectric system through
-                controlled intake structures.
+            <div class="col-lg-4 col-md-6">
 
-            </p>
+                <div class="solution-card">
 
-        </div>
+                    <div class="solution-number">
+                        06
+                    </div>
 
 
-        <div class="flow-card">
+                    <div class="solution-icon">
 
-            <div class="flow-number">
-                02
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                    </div>
+
+
+                    <h3>
+                        EPC Execution
+                    </h3>
+
+
+                    <p>
+
+                        Integrated engineering, procurement,
+                        installation, testing and commissioning
+                        support for hydel energy projects.
+
+                    </p>
+
+                </div>
+
             </div>
 
-            <h4>
-                Water Conduction
-            </h4>
-
-            <p>
-
-                Water flows through canals, tunnels,
-                penstocks or other conductor systems
-                toward the turbine.
-
-            </p>
 
         </div>
-
-
-        <div class="flow-card">
-
-            <div class="flow-number">
-                03
-            </div>
-
-            <h4>
-                Turbine Rotation
-            </h4>
-
-            <p>
-
-                Hydraulic energy rotates the turbine
-                runner and produces mechanical energy.
-
-            </p>
-
-        </div>
-
-
-        <div class="flow-card">
-
-            <div class="flow-number">
-                04
-            </div>
-
-            <h4>
-                Electrical Generation
-            </h4>
-
-            <p>
-
-                The turbine drives the generator to
-                produce electrical power.
-
-            </p>
-
-        </div>
-
-
-        <div class="flow-card">
-
-            <div class="flow-number">
-                05
-            </div>
-
-            <h4>
-                Voltage Transformation
-            </h4>
-
-            <p>
-
-                Generated electricity is stepped up
-                through transformers for efficient
-                power transfer.
-
-            </p>
-
-        </div>
-
-
-        <div class="flow-card">
-
-            <div class="flow-number">
-                06
-            </div>
-
-            <h4>
-                Protection & Control
-            </h4>
-
-            <p>
-
-                Control, monitoring and protection systems
-                support safe and stable operation.
-
-            </p>
-
-        </div>
-
-
-        <div class="flow-card">
-
-            <div class="flow-number">
-                07
-            </div>
-
-            <h4>
-                Switchyard
-            </h4>
-
-            <p>
-
-                Electrical power is routed through the
-                switchyard and associated equipment.
-
-            </p>
-
-        </div>
-
-
-        <div class="flow-card">
-
-            <div class="flow-number">
-                08
-            </div>
-
-            <h4>
-                Grid Integration
-            </h4>
-
-            <p>
-
-                Generated electricity is evacuated and
-                integrated into the transmission network.
-
-            </p>
-
-        </div>
-
 
     </div>
 
 </section>
 
 
-<!-- =========================================
-     TECHNICAL CAPABILITIES
-========================================= -->
 
-<section class="capabilities">
+<!-- =========================================================
+     BENEFITS
+========================================================= -->
+
+<section class="benefits-section">
+
+    <div class="section-container">
+
+        <div class="row align-items-center">
 
 
-    <div class="capability-layout">
+            <div class="col-lg-6">
 
+                <div class="benefit-image"></div>
 
-        <div class="capability-text">
-
-            <div class="label">
-                Technical Capabilities
             </div>
 
-            <h2 class="title">
 
-                Engineering For
-                <br>
-                Reliable Hydropower
+            <div class="col-lg-6">
 
-            </h2>
+                <div class="benefit-content">
 
-            <div class="line"></div>
+                    <span class="section-tag">
+                        Why Hydel Energy
+                    </span>
 
-            <p>
 
-                Our technical capabilities span hydraulic,
-                hydro-mechanical, electro-mechanical,
-                electrical and control systems required
-                for dependable hydropower generation.
+                    <h2 class="section-title">
 
-            </p>
+                        Water becomes power.
+                        <br>
+
+                        <span>Power becomes value.</span>
+
+                    </h2>
+
+
+                    <p class="section-text mb-4">
+
+                        Hydel energy provides an opportunity
+                        to utilize naturally available water
+                        resources for renewable electricity
+                        generation while supporting reliable
+                        and sustainable infrastructure.
+
+                    </p>
+
+
+                    <!-- ITEM -->
+
+                    <div class="benefit-item">
+
+                        <div class="benefit-icon">
+
+                            <i class="fa-solid fa-water"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h4>
+                                Renewable Water Resource
+                            </h4>
+
+                            <p>
+
+                                Utilize suitable flowing or
+                                falling water resources as
+                                renewable energy sources.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ITEM -->
+
+                    <div class="benefit-item">
+
+                        <div class="benefit-icon">
+
+                            <i class="fa-solid fa-bolt"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h4>
+                                Reliable Power Generation
+                            </h4>
+
+                            <p>
+
+                                Hydel systems can provide
+                                dependable renewable electricity
+                                when properly designed and
+                                operated.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ITEM -->
+
+                    <div class="benefit-item">
+
+                        <div class="benefit-icon">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h4>
+                                Operational Visibility
+                            </h4>
+
+                            <p>
+
+                                Intelligent monitoring helps
+                                provide visibility into water
+                                flow, equipment status and
+                                power generation.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ITEM -->
+
+                    <div class="benefit-item">
+
+                        <div class="benefit-icon">
+
+                            <i class="fa-solid fa-arrows-to-circle"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h4>
+                                Long-Term Infrastructure
+                            </h4>
+
+                            <p>
+
+                                Hydel systems can support
+                                long-term renewable power
+                                generation with appropriate
+                                engineering and maintenance.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
 
         </div>
-
-
-        <div class="capability-list">
-
-
-            <div class="capability">
-
-                <strong>
-                    Hydro Resource Assessment
-                </strong>
-
-                <span>
-                    Water flow, head and site condition
-                    assessment support.
-                </span>
-
-            </div>
-
-
-            <div class="capability">
-
-                <strong>
-                    Hydro-Mechanical Systems
-                </strong>
-
-                <span>
-                    Gates, valves, penstocks and water
-                    conductor systems.
-                </span>
-
-            </div>
-
-
-            <div class="capability">
-
-                <strong>
-                    Turbine Systems
-                </strong>
-
-                <span>
-                    Turbine installation, alignment and
-                    associated mechanical systems.
-                </span>
-
-            </div>
-
-
-            <div class="capability">
-
-                <strong>
-                    Generator Systems
-                </strong>
-
-                <span>
-                    Generator installation and
-                    electro-mechanical integration.
-                </span>
-
-            </div>
-
-
-            <div class="capability">
-
-                <strong>
-                    Electrical Systems
-                </strong>
-
-                <span>
-                    Transformers, switchgear, protection
-                    and power evacuation.
-                </span>
-
-            </div>
-
-
-            <div class="capability">
-
-                <strong>
-                    Automation & Controls
-                </strong>
-
-                <span>
-                    Plant monitoring, control, protection
-                    and operational systems.
-                </span>
-
-            </div>
-
-
-        </div>
-
 
     </div>
 
 </section>
 
 
-<!-- =========================================
+
+<!-- =========================================================
+     HYDEL TECHNOLOGY
+========================================================= -->
+
+<section class="technology-section">
+
+    <div class="section-container">
+
+
+        <div class="row mb-5">
+
+            <div class="col-lg-7">
+
+                <span class="section-tag">
+                    Hydel Technology
+                </span>
+
+
+                <h2 class="section-title">
+
+                    Every stage matters.
+                    <br>
+
+                    <span>Every flow creates power.</span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="col-lg-5">
+
+                <p class="section-text">
+
+                    Efficient hydel energy generation depends
+                    on coordinated water management, hydraulic
+                    systems, turbines, generators, electrical
+                    infrastructure and intelligent control.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="technology-main">
+
+
+            <!-- ROW -->
+
+            <div class="technology-row">
+
+                <div class="technology-number">
+                    01
+                </div>
+
+                <h4>
+                    Water Resource
+                </h4>
+
+                <p>
+
+                    Flowing or falling water provides the
+                    hydraulic resource required for renewable
+                    hydel power generation.
+
+                </p>
+
+            </div>
+
+
+            <!-- ROW -->
+
+            <div class="technology-row">
+
+                <div class="technology-number">
+                    02
+                </div>
+
+                <h4>
+                    Hydraulic System
+                </h4>
+
+                <p>
+
+                    Water intake, channels, penstocks and
+                    associated hydraulic infrastructure
+                    guide water toward the turbine system.
+
+                </p>
+
+            </div>
+
+
+            <!-- ROW -->
+
+            <div class="technology-row">
+
+                <div class="technology-number">
+                    03
+                </div>
+
+                <h4>
+                    Turbine Conversion
+                </h4>
+
+                <p>
+
+                    Hydraulic energy is converted into
+                    mechanical rotational energy through
+                    appropriately selected turbine systems.
+
+                </p>
+
+            </div>
+
+
+            <!-- ROW -->
+
+            <div class="technology-row">
+
+                <div class="technology-number">
+                    04
+                </div>
+
+                <h4>
+                    Generator & Protection
+                </h4>
+
+                <p>
+
+                    Generators, control systems and protection
+                    equipment convert turbine power into
+                    electrical energy while supporting safe
+                    operation.
+
+                </p>
+
+            </div>
+
+
+            <!-- ROW -->
+
+            <div class="technology-row">
+
+                <div class="technology-number">
+                    05
+                </div>
+
+                <h4>
+                    Energy Monitoring
+                </h4>
+
+                <p>
+
+                    Monitor water flow, turbine performance,
+                    generator output, energy flow, equipment
+                    status and operational performance through
+                    connected systems.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
      PROJECT PROCESS
-========================================= -->
+========================================================= -->
 
-<section class="process">
+<section class="process-section">
 
-
-    <div class="section-head">
-
-        <div class="label">
-            Project Execution
-        </div>
-
-        <h2 class="title">
-            From Hydro Potential To Power
-        </h2>
-
-        <div class="line"></div>
-
-        <p>
-
-            A structured execution methodology supports
-            efficient project development and reliable
-            plant commissioning.
-
-        </p>
-
-    </div>
+    <div class="section-container">
 
 
-    <div class="process-grid">
+        <div class="row mb-5">
+
+            <div class="col-lg-7">
+
+                <span class="section-tag">
+                    Project Execution
+                </span>
 
 
-        <div class="process-card">
+                <h2 class="section-title">
 
-            <div class="process-no">
-                01
+                    From flowing water
+                    <br>
+
+                    <span>to usable electricity.</span>
+
+                </h2>
+
             </div>
 
-            <h4>
-                Site & Hydro Assessment
-            </h4>
 
-            <p>
-                Evaluate water resources, head, flow,
-                site conditions and project feasibility.
-            </p>
+            <div class="col-lg-5">
 
-        </div>
+                <p class="section-text">
 
+                    A structured project methodology connects
+                    resource assessment, hydraulic planning,
+                    engineering, procurement, installation and
+                    commissioning into one integrated approach.
 
-        <div class="process-card">
+                </p>
 
-            <div class="process-no">
-                02
             </div>
 
-            <h4>
-                Engineering & Design
-            </h4>
-
-            <p>
-                Develop hydraulic, mechanical, electrical
-                and control engineering requirements.
-            </p>
-
         </div>
 
 
-        <div class="process-card">
+        <div class="row">
 
-            <div class="process-no">
-                03
+
+            <!-- 01 -->
+
+            <div class="col-lg-2 col-md-4 col-6">
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        01 / ASSESS
+                    </div>
+
+                    <h4>
+                        Site Assessment
+                    </h4>
+
+                    <p>
+
+                        Evaluate water availability, flow,
+                        hydraulic head, site conditions and
+                        project objectives.
+
+                    </p>
+
+                </div>
+
             </div>
 
-            <h4>
-                Equipment Installation
-            </h4>
 
-            <p>
-                Install turbine, generator, hydro-mechanical
-                and electrical equipment.
-            </p>
+            <!-- 02 -->
 
-        </div>
+            <div class="col-lg-2 col-md-4 col-6">
 
+                <div class="process-card">
 
-        <div class="process-card">
+                    <div class="process-number">
+                        02 / PLAN
+                    </div>
 
-            <div class="process-no">
-                04
+                    <h4>
+                        System Planning
+                    </h4>
+
+                    <p>
+
+                        Develop hydraulic architecture,
+                        capacity planning and technical
+                        execution strategy.
+
+                    </p>
+
+                </div>
+
             </div>
 
-            <h4>
-                Testing & Commissioning
-            </h4>
 
-            <p>
-                Test equipment, protection systems and
-                plant functionality before operation.
-            </p>
+            <!-- 03 -->
 
-        </div>
+            <div class="col-lg-2 col-md-4 col-6">
 
+                <div class="process-card">
 
-        <div class="process-card">
+                    <div class="process-number">
+                        03 / DESIGN
+                    </div>
 
-            <div class="process-no">
-                05
+                    <h4>
+                        Engineering
+                    </h4>
+
+                    <p>
+
+                        Prepare hydraulic, mechanical,
+                        electrical, automation and control
+                        system designs.
+
+                    </p>
+
+                </div>
+
             </div>
 
-            <h4>
-                O&M Support
-            </h4>
 
-            <p>
-                Provide maintenance, inspection and
-                operational performance support.
-            </p>
+            <!-- 04 -->
+
+            <div class="col-lg-2 col-md-4 col-6">
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        04 / SOURCE
+                    </div>
+
+                    <h4>
+                        Procurement
+                    </h4>
+
+                    <p>
+
+                        Coordinate turbines, generators,
+                        electrical equipment, materials
+                        and project requirements.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 05 -->
+
+            <div class="col-lg-2 col-md-4 col-6">
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        05 / INSTALL
+                    </div>
+
+                    <h4>
+                        Installation
+                    </h4>
+
+                    <p>
+
+                        Execute hydraulic, mechanical,
+                        electrical, automation and supporting
+                        infrastructure installation.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 06 -->
+
+            <div class="col-lg-2 col-md-4 col-6">
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        06 / COMMISSION
+                    </div>
+
+                    <h4>
+                        Commissioning
+                    </h4>
+
+                    <p>
+
+                        Test systems, validate performance
+                        and complete operational handover.
+
+                    </p>
+
+                </div>
+
+            </div>
+
 
         </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- =========================================
-     E&M SERVICES
-========================================= -->
-
-<section class="em-services">
-
-
-    <div class="section-head">
-
-        <div class="label">
-            Electro-Mechanical Services
-        </div>
-
-        <h2 class="title">
-            Reliable Plant Equipment & Systems
-        </h2>
-
-        <div class="line"></div>
-
-        <p>
-
-            Integrated electro-mechanical services support
-            safe, efficient and dependable hydel plant
-            operation.
-
-        </p>
-
-    </div>
-
-
-    <div class="em-grid">
-
-
-        <div class="em-card">
-
-            <span>
-                01
-            </span>
-
-            <h4>
-                Turbine Installation
-            </h4>
-
-            <p>
-                Installation, alignment and inspection of
-                turbine assemblies.
-            </p>
-
-        </div>
-
-
-        <div class="em-card">
-
-            <span>
-                02
-            </span>
-
-            <h4>
-                Generator Installation
-            </h4>
-
-            <p>
-                Generator installation, assembly and
-                electrical integration.
-            </p>
-
-        </div>
-
-
-        <div class="em-card">
-
-            <span>
-                03
-            </span>
-
-            <h4>
-                Electrical Systems
-            </h4>
-
-            <p>
-                Transformers, switchgear, cabling,
-                protection and auxiliary systems.
-            </p>
-
-        </div>
-
-
-        <div class="em-card">
-
-            <span>
-                04
-            </span>
-
-            <h4>
-                Control & Protection
-            </h4>
-
-            <p>
-                Monitoring, control, automation and
-                protection system support.
-            </p>
-
-        </div>
-
 
     </div>
 
 </section>
 
 
-<!-- =========================================
+
+<!-- =========================================================
      APPLICATIONS
-========================================= -->
+========================================================= -->
 
-<section class="applications">
+<section class="applications-section">
 
-
-    <div class="section-head">
-
-        <div class="label">
-            Hydel Power Applications
-        </div>
-
-        <h2 class="title">
-            Powering Diverse Energy Networks
-        </h2>
-
-        <div class="line"></div>
-
-    </div>
+    <div class="section-container">
 
 
-    <div class="application-grid">
+        <div class="row mb-5">
+
+            <div class="col-lg-7">
+
+                <span class="section-tag">
+                    Applications
+                </span>
 
 
-        <div class="application">
+                <h2 class="section-title">
 
-            <strong>
-                Large Hydropower Projects
-            </strong>
+                    Hydel energy for
+                    <span>evolving infrastructure.</span>
 
-            <span>
-                High-capacity hydroelectric generation
-                for regional and national power systems.
-            </span>
+                </h2>
+
+            </div>
 
         </div>
 
 
-        <div class="application">
+        <div class="row g-4">
 
-            <strong>
-                Small Hydel Projects
-            </strong>
 
-            <span>
-                Suitable hydro generation solutions for
-                smaller water resources and sites.
-            </span>
+            <!-- INDUSTRIAL -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="application-card">
+
+                    <i class="fa-solid fa-industry"></i>
+
+                    <h4>
+                        Industrial
+                    </h4>
+
+                    <p>
+
+                        Hydel energy solutions supporting
+                        industrial facilities with renewable
+                        electrical power requirements.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- RURAL -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="application-card">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <h4>
+                        Rural & Remote
+                    </h4>
+
+                    <p>
+
+                        Small and distributed hydel systems
+                        can support electricity requirements
+                        in suitable remote and rural locations.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- INFRASTRUCTURE -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="application-card">
+
+                    <i class="fa-solid fa-road"></i>
+
+                    <h4>
+                        Infrastructure
+                    </h4>
+
+                    <p>
+
+                        Renewable hydel power solutions can
+                        support infrastructure facilities
+                        with suitable water resources.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- COMMERCIAL -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="application-card">
+
+                    <i class="fa-solid fa-building"></i>
+
+                    <h4>
+                        Commercial
+                    </h4>
+
+                    <p>
+
+                        Hydel energy systems for commercial
+                        facilities and distributed renewable
+                        energy applications.
+
+                    </p>
+
+                </div>
+
+            </div>
+
 
         </div>
-
-
-        <div class="application">
-
-            <strong>
-                Mini & Micro Hydro
-            </strong>
-
-            <span>
-                Distributed renewable generation for
-                suitable local applications.
-            </span>
-
-        </div>
-
-
-        <div class="application">
-
-            <strong>
-                Dam-Based Generation
-            </strong>
-
-            <span>
-                Power generation using stored water and
-                controlled hydraulic flow.
-            </span>
-
-        </div>
-
-
-        <div class="application">
-
-            <strong>
-                Run-of-River Projects
-            </strong>
-
-            <span>
-                Hydropower generation using naturally
-                available river flow and elevation.
-            </span>
-
-        </div>
-
-
-        <div class="application">
-
-            <strong>
-                Grid-Connected Hydro
-            </strong>
-
-            <span>
-                Renewable power generation integrated
-                with transmission networks.
-            </span>
-
-        </div>
-
 
     </div>
 
 </section>
 
 
-<!-- =========================================
+
+<!-- =========================================================
+     SMART MONITORING
+========================================================= -->
+
+<section class="monitoring-section">
+
+    <div class="section-container">
+
+        <div class="monitoring-box">
+
+
+            <span class="section-tag">
+                Intelligent Energy Management
+            </span>
+
+
+            <h3>
+
+                Hydel energy,
+                <br>
+
+                <span>connected intelligence.</span>
+
+            </h3>
+
+
+            <p>
+
+                Hydel energy systems become more effective
+                when water flow, turbine operation, generator
+                performance, energy generation and equipment
+                status can be measured and managed. Alpha
+                Numeric combines hydel energy solutions with
+                automation, IoT and energy monitoring
+                capabilities to provide improved visibility
+                into plant operation and energy performance.
+
+            </p>
+
+
+            <div class="monitoring-features">
+
+                <div class="monitoring-feature">
+                    REAL-TIME MONITORING
+                </div>
+
+                <div class="monitoring-feature">
+                    ENERGY ANALYTICS
+                </div>
+
+                <div class="monitoring-feature">
+                    IoT CONNECTIVITY
+                </div>
+
+                <div class="monitoring-feature">
+                    REMOTE VISIBILITY
+                </div>
+
+                <div class="monitoring-feature">
+                    TURBINE MONITORING
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHY ALPHA NUMERIC
+========================================================= -->
+
+<section class="why-section">
+
+    <div class="section-container">
+
+
+        <div class="row mb-5">
+
+            <div class="col-lg-7">
+
+                <span class="section-tag">
+                    Why Alpha Numeric
+                </span>
+
+
+                <h2 class="section-title">
+
+                    Natural water resources.
+                    <br>
+
+                    <span>Engineered intelligently.</span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="col-lg-5">
+
+                <p class="section-text">
+
+                    We bring hydel energy together with
+                    electrical engineering, automation,
+                    monitoring and EPC execution to create
+                    connected renewable energy infrastructure.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- CARD -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="why-card">
+
+                    <i class="fa-solid fa-compass-drafting"></i>
+
+                    <h4>
+                        Engineering Expertise
+                    </h4>
+
+                    <p>
+
+                        Technical planning and system
+                        engineering aligned with water
+                        resources, site conditions and
+                        project requirements.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="why-card">
+
+                    <i class="fa-solid fa-microchip"></i>
+
+                    <h4>
+                        Connected Technology
+                    </h4>
+
+                    <p>
+
+                        IoT, automation and monitoring
+                        capabilities help create smarter
+                        hydel energy infrastructure.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="why-card">
+
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                    <h4>
+                        End-to-End Execution
+                    </h4>
+
+                    <p>
+
+                        Integrated project support from
+                        engineering and procurement through
+                        installation and commissioning.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="why-card">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <h4>
+                        Performance Focus
+                    </h4>
+
+                    <p>
+
+                        Solutions designed with emphasis
+                        on reliability, efficient water
+                        utilization, monitoring and
+                        long-term value.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
      CTA
-========================================= -->
+========================================================= -->
 
-<section class="cta">
+<section class="hydel-cta">
+
+    <div class="section-container">
 
 
-    <div class="cta-content">
+        <span class="section-tag"
+              style="color:#aaaaaa;">
+
+            Renewable Future
+
+        </span>
+
 
         <h2>
-            Harnessing Water. Powering Progress.
+
+            Turn water flow
+            <br>
+
+            <strong>into tomorrow's power.</strong>
+
         </h2>
+
 
         <p>
 
-            From hydro resource assessment and project
-            engineering to turbine-generator installation,
-            electrical integration, commissioning and
-            maintenance, we support reliable hydel power
-            generation.
+            Explore intelligent hydel energy solutions
+            designed to convert the natural power of
+            flowing water into useful electricity while
+            connecting renewable generation with modern
+            electrical infrastructure.
 
         </p>
 
+
+        <a href="index.html#contact"
+           class="cta-button">
+
+            DISCUSS YOUR PROJECT
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+
     </div>
 
+</section>
 
-    <div class="cta-side">
 
-        <div>
 
-            <strong>
-                WATER • ENERGY • FUTURE
-            </strong>
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="main-footer">
+
+    <div class="container-fluid">
+
+        <div class="row g-5">
+
+
+            <!-- COMPANY -->
+
+            <div class="col-lg-4 col-md-6 footer-column">
+
+                <div class="footer-logo">
+
+                    <img src="assets/img/w-alpha.png"
+                         alt="Alpha Numeric Logo">
+
+                </div>
+
+
+                <p class="footer-description">
+
+                    Alpha Numeric is a technology-driven
+                    organization delivering intelligent
+                    solutions across energy, power,
+                    automation, IoT, lighting, R&D and
+                    industrial infrastructure.
+
+                </p>
+
+
+                <div class="footer-social">
+
+                    <a href="#"
+                       aria-label="LinkedIn">
+
+                        <i class="fab fa-linkedin-in"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                       aria-label="Instagram">
+
+                        <i class="fab fa-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                       aria-label="Facebook">
+
+                        <i class="fab fa-facebook-f"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                       aria-label="YouTube">
+
+                        <i class="fab fa-youtube"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- SOLUTIONS -->
+
+            <div class="col-lg-2 col-md-6 footer-column">
+
+                <div class="footer-heading">
+                    SOLUTIONS
+                </div>
+
+
+                <ul class="footer-links">
+
+                    <li>
+
+                        <a href="solar-energy.html">
+                            Solar Energy
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="wind-energy.html">
+                            Wind Energy
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="biomass-energy.html">
+                            Biomass Energy
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="hydel-energy.html">
+                            Hydel Energy
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="transmission.html">
+                            Power
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- TECHNOLOGY -->
+
+            <div class="col-lg-2 col-md-6 footer-column">
+
+                <div class="footer-heading">
+                    TECHNOLOGY
+                </div>
+
+
+                <ul class="footer-links">
+
+                    <li>
+
+                        <a href="home-automation.html">
+                            Automation
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="smart-pole.html">
+                            R & D
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="transformers.html">
+                            Transformers
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="panels.html">
+                            Panels
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="switchgear.html">
+                            Switchgear
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="col-lg-4 col-md-6 footer-column">
+
+                <div class="footer-heading">
+                    CONTACT
+                </div>
+
+
+                <ul class="footer-contact">
+
+
+                    <li>
+
+                        <i class="fas fa-location-dot"></i>
+
+                        <span>
+
+                            1st Floor, Raja Rajeswari Colony,
+                            Plot No. 343, Radhika Residency,
+                            Kondapur, Hyderabad,
+                            Telangana 500084
+
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        <i class="fas fa-phone"></i>
+
+                        <span>
+                            +91 XXXXX XXXXX
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        <i class="fas fa-envelope"></i>
+
+                        <span>
+                            info@alphanumeric.com
+                        </span>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
 
             <span>
-                ENGINEERED HYDEL POWER SOLUTIONS
+
+                © 2026
+                <strong>Alpha Numeric</strong>.
+                All Rights Reserved.
+
+            </span>
+
+
+            <span>
+
+                CLEAN ENERGY • SMART TECHNOLOGY • ENGINEERED FUTURE
+
             </span>
 
         </div>
 
     </div>
-
-
-</section>
-
-
-<!-- =========================================
-     FOOTER
-========================================= -->
-
-<footer class="footer">
-
-    <span>
-        CLEAN ENERGY. SMARTER FUTURE.
-    </span>
-
-    <strong>
-        HYDEL POWER GENERATION
-    </strong>
 
 </footer>
 
 
-</div>
+
+<!-- =========================================================
+     BOOTSTRAP JS
+========================================================= -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+
+<!-- =========================================================
+     NAVBAR SCROLL
+========================================================= -->
+
+<script>
+
+    window.addEventListener("scroll", function () {
+
+        const navbar =
+            document.querySelector(".main-navbar");
+
+        if (window.scrollY > 30) {
+
+            navbar.style.boxShadow =
+                "0 5px 25px rgba(0,0,0,0.07)";
+
+        } else {
+
+            navbar.style.boxShadow =
+                "none";
+
+        }
+
+    });
+
+</script>
+
 
 </body>
+
 </html>

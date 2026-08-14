@@ -1,1766 +1,3179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Distribution Services | Alpha Numeric</title>
+
+<meta name="description"
+content="Alpha Numeric delivers reliable power distribution solutions covering substations, distribution lines, transformers, electrical networks, installation, testing and commissioning.">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Inter",sans-serif;
+    background:#fff;
+    color:#111;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.main-navbar{
+    height:100px;
+    padding:0 7%;
+    background:#fff !important;
+    border-bottom:1px solid #e8e8e8;
+    z-index:9999;
+    transition:.3s ease;
+}
+
+.main-navbar .navbar-brand{
+    padding:0;
+    margin:0;
+}
+
+.main-navbar .navbar-brand img{
+    height:55px;
+    width:auto;
+    object-fit:contain;
+}
+
+.main-navbar .navbar-nav{
+    align-items:center;
+    gap:28px;
+}
+
+.main-navbar .nav-link{
+    color:#111 !important;
+    font-size:15px;
+    font-weight:400;
+    letter-spacing:1px;
+    padding:10px 0 !important;
+    transition:.3s ease;
+}
+
+.main-navbar .nav-link:hover{
+    color:#666 !important;
+}
+
+.main-navbar .nav-link.active{
+    color:#111 !important;
+    font-weight:600;
+}
+
+.main-navbar .dropdown-toggle::after{
+    margin-left:7px;
+    vertical-align:middle;
+    border-top:5px solid #111;
+    border-right:4px solid transparent;
+    border-left:4px solid transparent;
+}
+
+.main-navbar .dropdown-menu{
+    margin-top:18px;
+    padding:10px 0;
+    min-width:215px;
+    border:1px solid #e5e5e5;
+    border-radius:0;
+    background:#fff;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.main-navbar .dropdown-item{
+    padding:11px 20px;
+    color:#222;
+    font-size:13px;
+    transition:.25s ease;
+}
+
+.main-navbar .dropdown-item:hover{
+    background:#f5f5f5;
+    color:#000;
+}
+
+.main-navbar .dropdown-item.active{
+    background:#111;
+    color:#fff;
+}
+
+.main-navbar .navbar-toggler{
+    border:none !important;
+    box-shadow:none !important;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.distribution-hero{
+    min-height:700px;
+    margin-top:100px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.94) 0%,
+            rgba(0,0,0,.82) 38%,
+            rgba(0,0,0,.43) 72%,
+            rgba(0,0,0,.12) 100%
+        ),
+        url("assets/img/distribution.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    width:100%;
+    max-width:1350px;
+    margin:auto;
+    padding:100px 7%;
+    position:relative;
+    z-index:2;
+}
+
+.hero-small{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:24px;
+
+    color:#bbb;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.hero-small::before{
+    content:"";
+    width:42px;
+    height:1px;
+    background:#fff;
+}
+
+.hero-content h1{
+    max-width:850px;
+
+    color:#fff;
+    font-size:clamp(50px,7vw,94px);
+    line-height:.96;
+    font-weight:700;
+    letter-spacing:-4px;
+
+    margin-bottom:30px;
+}
+
+.hero-content h1 span{
+    font-weight:300;
+}
+
+.hero-text{
+    max-width:650px;
+
+    color:#d4d4d4;
+    font-size:15px;
+    line-height:1.9;
+
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.hero-btn-primary{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+
+    padding:15px 25px;
+
+    background:#fff;
+    color:#111;
+
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1px;
+
+    transition:.3s ease;
+}
+
+.hero-btn-primary:hover{
+    background:#ddd;
+    color:#000;
+    transform:translateY(-3px);
+}
+
+.hero-btn-secondary{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:14px 22px;
+
+    border:1px solid rgba(255,255,255,.4);
+
+    color:#fff;
+
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:1px;
+
+    transition:.3s ease;
+}
+
+.hero-btn-secondary:hover{
+    background:#fff;
+    color:#111;
+}
+
+
+/* HERO DATA */
+
+.hero-data{
+    position:absolute;
+    right:7%;
+    bottom:55px;
+
+    display:flex;
+    gap:10px;
+
+    z-index:3;
+}
+
+.hero-data-item{
+    min-width:165px;
+    padding:16px 20px;
+
+    background:rgba(0,0,0,.65);
+    border:1px solid rgba(255,255,255,.18);
+    backdrop-filter:blur(10px);
+}
+
+.hero-data-item strong{
+    display:block;
+    color:#fff;
+    font-size:18px;
+    margin-bottom:5px;
+}
+
+.hero-data-item span{
+    color:#aaa;
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+
+/* =========================================================
+   INTRO STRIP
+========================================================= */
+
+.intro-strip{
+    width:86%;
+    margin:-45px auto 0;
+
+    position:relative;
+    z-index:10;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    background:#fff;
+
+    box-shadow:0 20px 55px rgba(0,0,0,.12);
+}
+
+.intro-box{
+    min-height:115px;
+
+    display:flex;
+    align-items:center;
+    gap:16px;
+
+    padding:20px 25px;
+
+    border-right:1px solid #e5e5e5;
+}
+
+.intro-box:last-child{
+    border-right:none;
+}
+
+.intro-icon{
+    width:44px;
+    height:44px;
+    flex-shrink:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#111;
+    color:#fff;
+
+    font-size:17px;
+}
+
+.intro-box h4{
+    color:#111;
+    font-size:12px;
+    font-weight:600;
+    margin-bottom:6px;
+}
+
+.intro-box p{
+    color:#777;
+    font-size:10px;
+    line-height:1.6;
+    margin:0;
+}
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.section{
+    padding:110px 8%;
+}
+
+.section-container{
+    max-width:1250px;
+    margin:auto;
+}
+
+.eyebrow{
+    color:#777;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:14px;
+}
+
+.section-title{
+    color:#111;
+    font-size:clamp(34px,4vw,58px);
+    line-height:1.08;
+    font-weight:600;
+    letter-spacing:-2px;
+}
+
+.section-title span{
+    font-weight:300;
+}
+
+.section-description{
+    color:#666;
+    font-size:13px;
+    line-height:1.9;
+}
+
+.black-line{
+    width:45px;
+    height:3px;
+    background:#111;
+    margin:20px 0 25px;
+}
+
+
+/* =========================================================
+   OVERVIEW
+========================================================= */
+
+.overview{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+    align-items:center;
+}
+
+.overview-visual{
+    min-height:510px;
+
+    position:relative;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.06),
+            rgba(0,0,0,.06)
+        ),
+        url("assets/img/distribution-worker.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.overview-visual::after{
+    content:"";
+
+    position:absolute;
+
+    width:85%;
+    height:85%;
+
+    right:-25px;
+    top:-25px;
+
+    border:1px solid #111;
+
+    z-index:-1;
+}
+
+.visual-label{
+    position:absolute;
+    left:25px;
+    bottom:25px;
+
+    padding:18px 22px;
+
+    background:#111;
+    color:#fff;
+}
+
+.visual-label strong{
+    display:block;
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:4px;
+}
+
+.visual-label span{
+    color:#aaa;
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.overview-content{
+    padding-right:4%;
+}
+
+.overview-content .section-title{
+    max-width:550px;
+}
+
+.overview-content .section-description{
+    max-width:600px;
+}
+
+.overview-points{
+    margin-top:30px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.overview-point{
+    padding:18px;
+
+    background:#f7f7f7;
+    border-left:3px solid #111;
+}
+
+.overview-point strong{
+    display:block;
+    color:#111;
+    font-size:11px;
+    margin-bottom:6px;
+}
+
+.overview-point span{
+    color:#777;
+    font-size:9px;
+    line-height:1.6;
+}
+
+
+/* =========================================================
+   DISTRIBUTION NETWORK
+========================================================= */
+
+.network-section{
+    padding:105px 8%;
+    background:#f5f5f5;
+}
+
+.network-top{
+    max-width:720px;
+    margin:0 auto 50px;
+    text-align:center;
+}
+
+.network-top .black-line{
+    margin:20px auto 25px;
+}
+
+.network-grid{
+    max-width:1250px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+}
+
+.network-card{
+    min-height:220px;
+
+    position:relative;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    padding:30px;
+
+    background:#fff;
+    border:1px solid #e5e5e5;
+
+    overflow:hidden;
+
+    transition:.35s ease;
+}
+
+.network-card::before{
+    content:"";
+
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:3px;
+
+    background:#111;
+}
+
+.network-card:hover{
+    background:#111;
+    color:#fff;
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.14);
+}
+
+.network-icon{
+    width:45px;
+    height:45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:20px;
+
+    background:#f0f0f0;
+    color:#111;
+
+    font-size:17px;
+}
+
+.network-card:hover .network-icon{
+    background:#fff;
+    color:#111;
+}
+
+.network-card h3{
+    color:#111;
+    font-size:15px;
+    font-weight:600;
+
+    margin-bottom:9px;
+}
+
+.network-card:hover h3{
+    color:#fff;
+}
+
+.network-card p{
+    color:#777;
+    font-size:10px;
+    line-height:1.7;
+    margin:0;
+}
+
+.network-card:hover p{
+    color:#aaa;
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.service-section{
+    padding:110px 8%;
+    background:#fff;
+}
 
-    <title>Distribution Services | Power Segment</title>
+.service-heading{
+    max-width:750px;
+    margin-bottom:50px;
+}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+.service-heading p{
+    max-width:650px;
+    margin-top:20px;
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    color:#666;
+    font-size:13px;
+    line-height:1.8;
+}
 
-    <style>
+.service-grid{
+    max-width:1250px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+.service-card{
+    min-height:245px;
 
-        body {
-            font-family: "Inter", sans-serif;
-            background: #f5f8fc;
-            color: #12233f;
-        }
+    position:relative;
 
-        .distribution-page {
-            width: 100%;
-            background: #ffffff;
-            overflow: hidden;
-        }
+    padding:32px;
 
+    background:#fafafa;
+    border:1px solid #e5e5e5;
 
-        /* =========================================
-           HEADER
-        ========================================= */
+    overflow:hidden;
 
-        .header {
-            height: 75px;
+    transition:.35s ease;
+}
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+.service-card::before{
+    content:"";
 
-            padding: 0 7%;
+    position:absolute;
+    left:0;
+    top:0;
 
-            background: #082b57;
-            color: white;
-        }
+    width:0;
+    height:3px;
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+    background:#111;
 
-        .logo-icon {
-            width: 40px;
-            height: 40px;
+    transition:.35s ease;
+}
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+.service-card:hover{
+    background:#111;
 
-            border-radius: 50%;
+    transform:translateY(-7px);
 
-            background: #f5b82e;
-            color: #082b57;
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
 
-            font-size: 21px;
-            font-weight: 800;
-        }
+.service-card:hover::before{
+    width:100%;
+}
 
-        .logo-text h3 {
-            font-size: 18px;
-            letter-spacing: 1px;
-        }
+.service-number{
+    position:absolute;
+    top:15px;
+    right:20px;
 
-        .logo-text span {
-            font-size: 10px;
-            color: #d6e2f1;
-        }
+    color:#e4e4e4;
 
-        .page-number {
-            font-size: 12px;
-            letter-spacing: 1px;
-            font-weight: 600;
-        }
+    font-size:30px;
+    font-weight:800;
 
+    transition:.3s ease;
+}
 
-        /* =========================================
-           HERO
-        ========================================= */
+.service-card:hover .service-number{
+    color:#333;
+}
 
-        .hero {
-            min-height: 475px;
+.service-icon{
+    width:48px;
+    height:48px;
 
-            display: flex;
-            align-items: center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-            position: relative;
+    margin-bottom:23px;
 
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(3, 29, 61, 0.98) 0%,
-                    rgba(3, 29, 61, 0.88) 40%,
-                    rgba(3, 29, 61, 0.20) 78%
-                ),
-                url("images/distribution.jpg");
+    background:#111;
+    color:#fff;
 
-            background-size: cover;
-            background-position: center;
-        }
+    font-size:18px;
+}
 
-        .hero-content {
-            width: 58%;
-            padding-left: 8%;
-            color: white;
-        }
+.service-card:hover .service-icon{
+    background:#fff;
+    color:#111;
+}
 
-        .small-title {
-            display: inline-block;
+.service-card h3{
+    color:#111;
+    font-size:15px;
+    font-weight:600;
 
-            padding: 7px 15px;
-            margin-bottom: 20px;
+    margin-bottom:10px;
 
-            border-left: 4px solid #f5b82e;
+    transition:.3s ease;
+}
 
-            background: rgba(255,255,255,0.08);
+.service-card p{
+    color:#777;
+    font-size:11px;
+    line-height:1.75;
 
-            font-size: 11px;
-            font-weight: 600;
+    transition:.3s ease;
+}
 
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
+.service-card:hover h3{
+    color:#fff;
+}
 
-        .hero h1 {
-            font-size: clamp(42px, 5vw, 70px);
-            line-height: 1.05;
+.service-card:hover p{
+    color:#aaa;
+}
 
-            text-transform: uppercase;
 
-            margin-bottom: 20px;
-        }
+/* =========================================================
+   PROCESS
+========================================================= */
 
-        .hero h1 span {
-            color: #f5b82e;
-        }
+.process-section{
+    padding:110px 8%;
 
-        .hero-description {
-            max-width: 550px;
+    background:#111;
+    color:#fff;
 
-            color: #e2ebf5;
+    position:relative;
+    overflow:hidden;
+}
 
-            font-size: 15px;
-            line-height: 1.8;
+.process-section::after{
+    content:"DISTRIBUTION";
 
-            margin-bottom: 28px;
-        }
+    position:absolute;
+    right:-130px;
+    top:100px;
 
-        .hero-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
+    color:rgba(255,255,255,.025);
 
-            padding: 13px 22px;
+    font-size:105px;
+    font-weight:800;
 
-            background: #f5b82e;
-            color: #082b57;
+    transform:rotate(90deg);
+}
 
-            text-decoration: none;
+.process-heading{
+    max-width:700px;
+    margin-bottom:60px;
+}
 
-            font-size: 12px;
-            font-weight: 800;
+.process-heading .eyebrow{
+    color:#888;
+}
 
-            border-radius: 3px;
-        }
+.process-heading .section-title{
+    color:#fff;
+}
 
+.process-heading .black-line{
+    background:#fff;
+}
 
-        /* =========================================
-           QUICK HIGHLIGHTS
-        ========================================= */
+.process-heading p{
+    color:#aaa;
+    font-size:13px;
+    line-height:1.8;
+}
 
-        .highlights {
-            position: relative;
+.process-track{
+    max-width:1250px;
+    margin:auto;
 
-            margin: -50px 7% 0;
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
 
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+    position:relative;
+}
 
-            background: white;
+.process-track::before{
+    content:"";
 
-            box-shadow: 0 12px 35px rgba(8, 43, 87, 0.12);
+    position:absolute;
 
-            z-index: 3;
-        }
+    left:30px;
+    right:30px;
+    top:25px;
 
-        .highlight {
-            min-height: 115px;
+    height:1px;
 
-            display: flex;
-            align-items: center;
+    background:#333;
+}
 
-            gap: 15px;
+.process-item{
+    position:relative;
+    padding-right:25px;
+}
 
-            padding: 20px;
+.process-circle{
+    width:50px;
+    height:50px;
 
-            border-right: 1px solid #e5eaf0;
-        }
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-        .highlight:last-child {
-            border-right: none;
-        }
+    position:relative;
+    z-index:2;
 
-        .highlight-icon {
-            width: 45px;
-            height: 45px;
+    margin-bottom:23px;
 
-            flex-shrink: 0;
+    background:#111;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    border:1px solid #fff;
 
-            border-radius: 50%;
+    color:#fff;
 
-            background: #eaf2fb;
-            color: #082b57;
+    border-radius:50%;
 
-            font-size: 19px;
-        }
+    font-size:11px;
+    font-weight:700;
+}
 
-        .highlight h4 {
-            font-size: 12px;
-            margin-bottom: 5px;
-        }
+.process-item h4{
+    color:#fff;
+    font-size:12px;
+    font-weight:600;
 
-        .highlight p {
-            color: #748297;
-            font-size: 10px;
-            line-height: 1.5;
-        }
+    margin-bottom:8px;
+}
 
+.process-item p{
+    max-width:160px;
 
-        /* =========================================
-           INTRO
-        ========================================= */
+    color:#888;
 
-        .intro {
-            padding: 85px 8% 70px;
+    font-size:9px;
+    line-height:1.7;
+}
 
-            display: grid;
-            grid-template-columns: 0.85fr 1.15fr;
 
-            gap: 75px;
-        }
+/* =========================================================
+   FIELD EXECUTION
+========================================================= */
 
-        .section-label {
-            color: #d99a00;
+.field-section{
+    padding:110px 8%;
+    background:#f6f6f6;
+}
 
-            font-size: 11px;
-            font-weight: 800;
+.field-layout{
+    max-width:1250px;
+    margin:auto;
 
-            letter-spacing: 2px;
-            text-transform: uppercase;
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
 
-            margin-bottom: 10px;
-        }
+    gap:80px;
 
-        .section-title {
-            color: #082b57;
+    align-items:center;
+}
 
-            font-size: 34px;
-            line-height: 1.2;
+.field-image{
+    min-height:500px;
 
-            margin-bottom: 18px;
-        }
+    position:relative;
 
-        .section-line {
-            width: 50px;
-            height: 4px;
+    background:
+        linear-gradient(
+            0deg,
+            rgba(0,0,0,.35),
+            transparent
+        ),
+        url("assets/img/distribution-worker.jpg");
 
-            background: #f5b82e;
+    background-size:cover;
+    background-position:center;
+}
 
-            margin-bottom: 25px;
-        }
+.field-image::before{
+    content:"";
 
-        .intro-text {
-            color: #637288;
+    position:absolute;
 
-            font-size: 14px;
-            line-height: 1.9;
-        }
+    left:-20px;
+    bottom:-20px;
 
+    width:70%;
+    height:70%;
 
-        /* =========================================
-           DISTRIBUTION SERVICES
-        ========================================= */
+    border:1px solid #111;
 
-        .service-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+    z-index:-1;
+}
 
-            gap: 14px;
-        }
+.field-image-tag{
+    position:absolute;
 
-        .service-box {
-            position: relative;
+    left:0;
+    bottom:0;
 
-            padding: 18px 16px;
+    padding:18px 24px;
 
-            display: flex;
-            align-items: center;
+    background:#111;
+    color:#fff;
 
-            gap: 13px;
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
 
-            background: #f6f9fc;
+.field-content{
+    padding-right:3%;
+}
 
-            border: 1px solid #e8edf3;
+.field-list{
+    margin-top:30px;
 
-            transition: 0.3s;
-        }
+    display:grid;
+    grid-template-columns:1fr 1fr;
 
-        .service-box:hover {
-            transform: translateY(-4px);
+    gap:14px;
+}
 
-            background: #082b57;
+.field-item{
+    padding:20px;
 
-            border-color: #082b57;
+    background:#fff;
+    border:1px solid #e5e5e5;
 
-            box-shadow: 0 10px 25px rgba(8,43,87,0.12);
-        }
+    transition:.3s ease;
+}
 
-        .service-number {
-            font-size: 10px;
-            font-weight: 800;
+.field-item:hover{
+    transform:translateX(5px);
 
-            color: #f0ad00;
-        }
+    border-left:3px solid #111;
+}
 
-        .service-box h4 {
-            color: #203a59;
-            font-size: 11px;
-            line-height: 1.5;
+.field-item strong{
+    display:block;
 
-            transition: 0.3s;
-        }
+    color:#111;
 
-        .service-box:hover h4 {
-            color: white;
-        }
+    font-size:11px;
 
+    margin-bottom:7px;
+}
 
-        /* =========================================
-           VOLTAGE CAPABILITIES
-        ========================================= */
+.field-item span{
+    color:#777;
 
-        .capability-section {
-            padding: 75px 8%;
+    font-size:9px;
 
-            background: #f3f7fb;
-        }
+    line-height:1.7;
+}
 
-        .capability-header {
-            max-width: 720px;
 
-            text-align: center;
+/* =========================================================
+   RELIABILITY BANNER
+========================================================= */
 
-            margin: 0 auto 45px;
-        }
+.quality-section{
+    max-width:1250px;
 
-        .capability-header .section-line {
-            margin: 0 auto 20px;
-        }
+    margin:0 auto 100px;
 
-        .capability-header p {
-            color: #69788d;
+    min-height:300px;
 
-            font-size: 13px;
-            line-height: 1.8;
-        }
+    display:grid;
+    grid-template-columns:1.4fr .6fr;
 
-        .voltage-grid {
-            max-width: 1100px;
+    background:#111;
 
-            margin: auto;
+    overflow:hidden;
+}
 
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+.quality-content{
+    padding:50px;
+}
 
-            gap: 16px;
-        }
+.quality-content .eyebrow{
+    color:#888;
+}
 
-        .voltage-card {
-            min-height: 145px;
+.quality-content h2{
+    max-width:650px;
 
-            position: relative;
+    color:#fff;
 
-            background: white;
+    font-size:31px;
+    line-height:1.2;
 
-            padding: 25px 15px;
+    margin-bottom:17px;
+}
 
-            text-align: center;
+.quality-content p{
+    max-width:650px;
 
-            border: 1px solid #e1e8f0;
+    color:#aaa;
 
-            box-shadow: 0 5px 20px rgba(8,43,87,0.04);
+    font-size:12px;
+    line-height:1.8;
+}
 
-            transition: 0.3s;
-        }
+.quality-points{
+    display:flex;
+    gap:35px;
 
-        .voltage-card::before {
-            content: "";
+    margin-top:27px;
+}
 
-            position: absolute;
+.quality-point strong{
+    display:block;
 
-            top: 0;
-            left: 0;
+    color:#fff;
 
-            width: 100%;
-            height: 4px;
+    font-size:17px;
 
-            background: #f5b82e;
-        }
+    margin-bottom:4px;
+}
 
-        .voltage-card:hover {
-            transform: translateY(-7px);
+.quality-point span{
+    color:#999;
 
-            background: #082b57;
+    font-size:9px;
+}
 
-            box-shadow: 0 15px 30px rgba(8,43,87,0.16);
-        }
+.quality-side{
+    min-height:300px;
 
-        .voltage-icon {
-            width: 42px;
-            height: 42px;
+    background:
+        linear-gradient(
+            90deg,
+            #111,
+            rgba(17,17,17,.15)
+        ),
+        url("assets/img/distribution.jpg");
 
-            margin: 0 auto 12px;
+    background-size:cover;
+    background-position:center;
+}
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
 
-            border-radius: 50%;
+/* =========================================================
+   CTA
+========================================================= */
 
-            background: #eaf2fb;
-            color: #082b57;
+.cta{
+    padding:100px 8%;
 
-            font-size: 18px;
+    background:#f7f7f7;
 
-            transition: 0.3s;
-        }
+    text-align:center;
+}
 
-        .voltage-card:hover .voltage-icon {
-            background: #f5b82e;
-        }
+.cta .eyebrow{
+    color:#777;
+}
 
-        .voltage-value {
-            color: #082b57;
+.cta h2{
+    color:#111;
 
-            font-size: 20px;
-            font-weight: 800;
+    font-size:clamp(34px,4vw,52px);
 
-            transition: 0.3s;
-        }
+    font-weight:500;
 
-        .voltage-card:hover .voltage-value {
-            color: white;
-        }
+    margin-bottom:18px;
+}
 
-        .voltage-label {
-            margin-top: 6px;
+.cta p{
+    max-width:680px;
 
-            color: #718096;
+    margin:0 auto 30px;
 
-            font-size: 9px;
+    color:#666;
 
-            text-transform: uppercase;
+    font-size:13px;
+    line-height:1.8;
+}
 
-            letter-spacing: 1px;
+.cta-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
 
-            transition: 0.3s;
-        }
+    padding:15px 28px;
 
-        .voltage-card:hover .voltage-label {
-            color: #cad7e6;
-        }
+    background:#111;
+    color:#fff;
 
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1px;
 
-        /* =========================================
-           DISTRIBUTION NETWORK
-        ========================================= */
+    transition:.3s ease;
+}
 
-        .network-section {
-            padding: 80px 8%;
+.cta-btn:hover{
+    background:#333;
+    color:#fff;
+    transform:translateY(-3px);
+}
 
-            background: white;
-        }
 
-        .network-header {
-            display: flex;
+/* =========================================================
+   FOOTER
+========================================================= */
 
-            align-items: flex-end;
-            justify-content: space-between;
+.main-footer{
+    background:#050505;
+    color:#fff;
 
-            gap: 50px;
+    padding:75px 7% 25px;
+}
 
-            margin-bottom: 45px;
-        }
+.footer-logo img{
+    height:55px;
+    width:auto;
 
-        .network-description {
-            max-width: 500px;
+    margin-bottom:22px;
+}
 
-            color: #68788d;
+.footer-description{
+    max-width:370px;
 
-            font-size: 13px;
-            line-height: 1.8;
-        }
+    color:#888;
 
-        .network-grid {
-            display: grid;
+    font-size:12px;
+    line-height:1.9;
+}
 
-            grid-template-columns: repeat(3, 1fr);
+.footer-heading{
+    color:#fff;
 
-            gap: 18px;
-        }
+    font-size:12px;
+    font-weight:600;
 
-        .network-card {
-            position: relative;
+    letter-spacing:1.5px;
 
-            min-height: 210px;
+    margin-bottom:22px;
+}
 
-            padding: 28px;
+.footer-links{
+    list-style:none;
 
-            background: #f6f9fc;
+    padding:0;
+    margin:0;
+}
 
-            border: 1px solid #e5ebf2;
+.footer-links li{
+    margin-bottom:11px;
+}
 
-            overflow: hidden;
+.footer-links a{
+    color:#888;
 
-            transition: 0.3s;
-        }
+    font-size:12px;
 
-        .network-card::after {
-            content: "";
+    transition:.3s ease;
+}
 
-            position: absolute;
+.footer-links a:hover{
+    color:#fff;
+    padding-left:4px;
+}
 
-            width: 100px;
-            height: 100px;
+.footer-contact{
+    list-style:none;
 
-            right: -45px;
-            bottom: -45px;
+    padding:0;
+    margin:0;
+}
 
-            border-radius: 50%;
+.footer-contact li{
+    display:flex;
+    align-items:flex-start;
 
-            background: rgba(245,184,46,0.13);
-        }
+    gap:12px;
 
-        .network-card:hover {
-            background: #082b57;
+    color:#888;
 
-            transform: translateY(-7px);
+    font-size:12px;
+    line-height:1.8;
 
-            box-shadow: 0 15px 30px rgba(8,43,87,0.14);
-        }
+    margin-bottom:15px;
+}
 
-        .network-icon {
-            width: 48px;
-            height: 48px;
+.footer-contact i{
+    width:18px;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    color:#fff;
 
-            background: #082b57;
-            color: #f5b82e;
+    margin-top:4px;
+}
 
-            border-radius: 6px;
+.footer-social{
+    display:flex;
+    gap:9px;
 
-            margin-bottom: 20px;
+    margin-top:24px;
+}
 
-            font-size: 20px;
+.footer-social a{
+    width:35px;
+    height:35px;
 
-            transition: 0.3s;
-        }
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-        .network-card:hover .network-icon {
-            background: #f5b82e;
-            color: #082b57;
-        }
+    border:1px solid #2b2b2b;
 
-        .network-card h3 {
-            color: #183452;
+    color:#999;
 
-            font-size: 14px;
+    font-size:13px;
 
-            margin-bottom: 9px;
+    transition:.3s ease;
+}
 
-            transition: 0.3s;
-        }
+.footer-social a:hover{
+    background:#fff;
+    color:#000;
 
-        .network-card p {
-            color: #728196;
+    border-color:#fff;
+}
 
-            font-size: 11px;
-            line-height: 1.7;
+.footer-bottom{
+    margin-top:55px;
 
-            transition: 0.3s;
-        }
+    padding-top:20px;
 
-        .network-card:hover h3 {
-            color: white;
-        }
+    border-top:1px solid #222;
 
-        .network-card:hover p {
-            color: #cbd8e7;
-        }
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
+    gap:20px;
 
-        /* =========================================
-           PROJECT EXECUTION
-        ========================================= */
+    color:#666;
 
-        .execution-section {
-            padding: 75px 8%;
+    font-size:10px;
+    letter-spacing:.5px;
+}
 
-            background: #082b57;
+.footer-bottom strong{
+    color:#fff;
+    font-weight:500;
+}
 
-            color: white;
-        }
 
-        .execution-header {
-            max-width: 700px;
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
-            margin-bottom: 45px;
-        }
+@media(max-width:1100px){
 
-        .execution-header .section-label {
-            color: #f5b82e;
-        }
+    .main-navbar .navbar-nav{
+        gap:18px;
+    }
 
-        .execution-header .section-title {
-            color: white;
-        }
+    .hero-data{
+        right:5%;
+    }
 
-        .execution-header .section-line {
-            background: #f5b82e;
-        }
+    .network-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-        .execution-header p {
-            color: #cbd8e7;
+    .process-track{
+        grid-template-columns:repeat(3,1fr);
+        row-gap:50px;
+    }
 
-            font-size: 13px;
-            line-height: 1.8;
-        }
+    .process-track::before{
+        display:none;
+    }
+}
 
-        .execution-grid {
-            display: grid;
 
-            grid-template-columns: repeat(5, 1fr);
+@media(max-width:991px){
 
-            gap: 12px;
-        }
+    .main-navbar{
+        height:auto;
+        min-height:80px;
+        padding:10px 5%;
+    }
 
-        .execution-step {
-            padding: 25px 18px;
+    .main-navbar .navbar-brand img{
+        height:48px;
+    }
 
-            border: 1px solid rgba(255,255,255,0.12);
+    .main-navbar .navbar-collapse{
+        margin-top:15px;
+        padding:15px 0;
+        background:#fff;
+    }
 
-            background: rgba(255,255,255,0.04);
+    .main-navbar .navbar-nav{
+        align-items:flex-start;
+        gap:0;
+    }
 
-            text-align: center;
+    .main-navbar .nav-item{
+        width:100%;
+    }
 
-            transition: 0.3s;
-        }
+    .main-navbar .nav-link{
+        padding:12px 5px !important;
+    }
 
-        .execution-step:hover {
-            background: rgba(255,255,255,0.09);
+    .main-navbar .dropdown-menu{
+        margin-top:0;
+        border:none;
+        box-shadow:none;
+    }
 
-            transform: translateY(-5px);
-        }
+    .distribution-hero{
+        margin-top:80px;
+    }
 
-        .step-number {
-            color: #f5b82e;
+    .overview{
+        grid-template-columns:1fr;
+        gap:60px;
+    }
 
-            font-size: 22px;
-            font-weight: 800;
+    .overview-visual{
+        min-height:450px;
+    }
 
-            margin-bottom: 12px;
-        }
+    .service-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-        .execution-step h4 {
-            font-size: 11px;
+    .field-layout{
+        grid-template-columns:1fr;
+        gap:60px;
+    }
 
-            margin-bottom: 7px;
-        }
+    .quality-section{
+        margin-left:6%;
+        margin-right:6%;
+        grid-template-columns:1fr;
+    }
 
-        .execution-step p {
-            color: #b9c9da;
+    .quality-side{
+        min-height:280px;
+    }
+}
 
-            font-size: 9px;
-            line-height: 1.6;
-        }
 
+@media(max-width:767px){
 
-        /* =========================================
-           BOTTOM CTA
-        ========================================= */
+    .distribution-hero{
+        min-height:650px;
+    }
 
-        .cta {
-            margin: 60px 8%;
+    .hero-content{
+        padding:90px 7%;
+    }
 
-            min-height: 230px;
+    .hero-content h1{
+        font-size:54px;
+        letter-spacing:-3px;
+    }
 
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
+    .hero-buttons{
+        flex-direction:column;
+        align-items:flex-start;
+    }
 
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(8,43,87,1),
-                    rgba(8,43,87,0.72)
-                ),
-                url("images/distribution-network.jpg");
+    .hero-data{
+        display:none;
+    }
 
-            background-size: cover;
-            background-position: center;
+    .intro-strip{
+        width:100%;
+        margin:0;
+        grid-template-columns:1fr;
+    }
 
-            overflow: hidden;
-        }
+    .intro-box{
+        border-right:none !important;
+        border-bottom:1px solid #e5e5e5;
+    }
 
-        .cta-content {
-            padding: 40px;
-            color: white;
-        }
+    .intro-box:last-child{
+        border-bottom:none;
+    }
 
-        .cta-content h2 {
-            font-size: 25px;
+    .section,
+    .service-section,
+    .field-section{
+        padding:75px 7%;
+    }
 
-            margin-bottom: 14px;
-        }
+    .network-section{
+        padding:75px 7%;
+    }
 
-        .cta-content p {
-            max-width: 570px;
+    .network-grid{
+        grid-template-columns:1fr;
+    }
 
-            color: #cfdae7;
+    .overview-points{
+        grid-template-columns:1fr;
+    }
 
-            font-size: 12px;
-            line-height: 1.8;
-        }
+    .service-grid{
+        grid-template-columns:1fr;
+    }
 
-        .cta-side {
-            display: flex;
+    .process-section{
+        padding:75px 7%;
+    }
 
-            align-items: center;
-            justify-content: center;
+    .process-track{
+        grid-template-columns:1fr 1fr;
+    }
 
-            border-left: 1px solid rgba(255,255,255,0.12);
-        }
+    .field-list{
+        grid-template-columns:1fr;
+    }
 
-        .cta-side strong {
-            color: #f5b82e;
+    .field-image{
+        min-height:370px;
+    }
 
-            font-size: 28px;
-        }
+    .quality-section{
+        margin:0 7% 60px;
+    }
 
-        .cta-side span {
-            display: block;
+    .quality-content{
+        padding:35px;
+    }
 
-            color: white;
+    .quality-content h2{
+        font-size:27px;
+    }
 
-            font-size: 10px;
+    .quality-points{
+        flex-wrap:wrap;
+        gap:22px;
+    }
 
-            letter-spacing: 1px;
-        }
+    .cta{
+        padding:75px 7%;
+    }
 
+    .main-footer{
+        padding:65px 7% 25px;
+    }
 
-        /* =========================================
-           FOOTER
-        ========================================= */
+    .footer-column{
+        margin-bottom:25px;
+    }
 
-        .footer {
-            min-height: 55px;
+    .footer-bottom{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+}
 
-            padding: 0 8%;
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+@media(max-width:430px){
 
-            background: #061f40;
+    .main-navbar .navbar-brand img{
+        height:42px;
+    }
 
-            color: #b9c9dc;
+    .hero-content h1{
+        font-size:43px;
+    }
 
-            font-size: 9px;
+    .hero-text{
+        font-size:13px;
+    }
 
-            letter-spacing: 1px;
-        }
+    .process-track{
+        grid-template-columns:1fr;
+    }
 
-        .footer strong {
-            color: #f5b82e;
-        }
+    .quality-content{
+        padding:28px;
+    }
 
+    .quality-content h2{
+        font-size:24px;
+    }
+}
 
-        /* =========================================
-           RESPONSIVE
-        ========================================= */
-
-        @media (max-width: 1000px) {
-
-            .voltage-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-
-            .network-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .execution-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-        }
-
-
-        @media (max-width: 800px) {
-
-            .hero-content {
-                width: 85%;
-            }
-
-            .highlights {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .intro {
-                grid-template-columns: 1fr;
-            }
-
-            .network-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .cta {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-side {
-                min-height: 120px;
-                border-left: none;
-                border-top: 1px solid rgba(255,255,255,0.12);
-            }
-
-        }
-
-
-        @media (max-width: 600px) {
-
-            .header {
-                padding: 0 5%;
-            }
-
-            .page-number {
-                display: none;
-            }
-
-            .hero {
-                min-height: 500px;
-            }
-
-            .hero-content {
-                width: 92%;
-                padding-left: 7%;
-            }
-
-            .highlights {
-                margin: 0;
-                grid-template-columns: 1fr;
-            }
-
-            .highlight {
-                border-right: none;
-                border-bottom: 1px solid #e5eaf0;
-            }
-
-            .intro,
-            .capability-section,
-            .network-section,
-            .execution-section {
-                padding-left: 6%;
-                padding-right: 6%;
-            }
-
-            .service-list {
-                grid-template-columns: 1fr;
-            }
-
-            .voltage-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .network-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .execution-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cta {
-                margin: 40px 6%;
-            }
-
-            .footer {
-                padding: 15px 6%;
-                flex-direction: column;
-                gap: 8px;
-                justify-content: center;
-            }
-
-        }
-
-    </style>
+</style>
 </head>
-
 
 <body>
 
-<div class="distribution-page">
 
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
 
-    <!-- =========================================
-         HEADER
-    ========================================= -->
+<nav class="navbar navbar-expand-lg main-navbar fixed-top">
 
-    <header class="header">
+<div class="container-fluid px-4 px-lg-5">
 
-        <div class="logo">
+<a class="navbar-brand" href="index.html">
 
-            <div class="logo-icon">
-                ⚡
-            </div>
+<img
+src="assets/img/b-alpha.png"
+alt="Alpha Numeric Logo">
 
-            <div class="logo-text">
+</a>
 
-                <h3>POWER SEGMENT</h3>
 
-                <span>
-                    Powering a Stronger Tomorrow
-                </span>
+<button
+class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarResponsive">
 
-            </div>
+<span class="me-2">Menu</span>
 
-        </div>
+<i class="fas fa-bars"></i>
 
+</button>
 
-        <div class="page-number">
-            POWER SOLUTIONS / 02
-        </div>
 
-    </header>
+<div
+class="collapse navbar-collapse"
+id="navbarResponsive">
 
+<ul class="navbar-nav ms-auto">
 
 
-    <!-- =========================================
-         HERO
-    ========================================= -->
+<li class="nav-item">
+<a class="nav-link" href="index.html">
+Home
+</a>
+</li>
 
-    <section class="hero">
 
-        <div class="hero-content">
+<li class="nav-item">
+<a class="nav-link" href="about.html">
+About
+</a>
+</li>
 
-            <div class="small-title">
-                Electrical Distribution Solutions
-            </div>
 
-            <h1>
+<li class="nav-item dropdown">
 
-                Distribution
-                <br>
+<a
+class="nav-link dropdown-toggle"
+href="#"
+data-bs-toggle="dropdown">
 
-                <span>Services</span>
+Energy
 
-            </h1>
+</a>
 
-            <p class="hero-description">
+<ul class="dropdown-menu">
 
-                Reliable electrical distribution solutions that connect
-                power infrastructure to industries, commercial facilities,
-                institutions and communities with safety and efficiency.
+<li>
+<a class="dropdown-item" href="solar-energy.html">
+Solar Energy
+</a>
+</li>
 
-            </p>
+<li>
+<a class="dropdown-item" href="wind-energy.html">
+Wind Energy
+</a>
+</li>
 
-            <a href="#services" class="hero-btn">
-                Explore Services →
-            </a>
+<li>
+<a class="dropdown-item" href="biomass-energy.html">
+Biomass Energy
+</a>
+</li>
 
-        </div>
+<li>
+<a class="dropdown-item" href="hydel-energy.html">
+Hydel Energy
+</a>
+</li>
 
-    </section>
+</ul>
 
+</li>
 
 
-    <!-- =========================================
-         HIGHLIGHTS
-    ========================================= -->
+<li class="nav-item dropdown">
 
-    <section class="highlights">
+<a
+class="nav-link dropdown-toggle active"
+href="#"
+data-bs-toggle="dropdown">
 
+Power
 
-        <div class="highlight">
+</a>
 
-            <div class="highlight-icon">
-                ⚡
-            </div>
+<ul class="dropdown-menu">
 
-            <div>
+<li>
+<a class="dropdown-item" href="transmission.html">
+Transmission
+</a>
+</li>
 
-                <h4>
-                    Reliable Distribution
-                </h4>
+<li>
+<a class="dropdown-item active" href="distribution.html">
+Distribution
+</a>
+</li>
 
-                <p>
-                    Stable and efficient power delivery.
-                </p>
+<li>
+<a class="dropdown-item" href="control-panels.html">
+Control Panels
+</a>
+</li>
 
-            </div>
+<li>
+<a class="dropdown-item" href="panel-boards.html">
+Panel Boards
+</a>
+</li>
 
-        </div>
+</ul>
 
+</li>
 
-        <div class="highlight">
 
-            <div class="highlight-icon">
-                🛡
-            </div>
+<li class="nav-item dropdown">
 
-            <div>
+<a
+class="nav-link dropdown-toggle"
+href="#"
+data-bs-toggle="dropdown">
 
-                <h4>
-                    Safety Focused
-                </h4>
+Automation
 
-                <p>
-                    Safe and compliant field execution.
-                </p>
+</a>
 
-            </div>
+<ul class="dropdown-menu">
 
-        </div>
+<li>
+<a class="dropdown-item" href="home-automation.html">
+Home Automation
+</a>
+</li>
 
+<li>
+<a class="dropdown-item" href="commercial-automation.html">
+Commercial Automation
+</a>
+</li>
 
-        <div class="highlight">
+<li>
+<a class="dropdown-item" href="industrial-automation.html">
+Industrial Automation
+</a>
+</li>
 
-            <div class="highlight-icon">
-                ⚙
-            </div>
+<li>
+<a class="dropdown-item" href="hospital-automation.html">
+Hospital Automation
+</a>
+</li>
 
-            <div>
+<li>
+<a class="dropdown-item" href="hotel-automation.html">
+Hotel Automation
+</a>
+</li>
 
-                <h4>
-                    Complete Solutions
-                </h4>
+</ul>
 
-                <p>
-                    HT, LT and distribution infrastructure.
-                </p>
+</li>
 
-            </div>
 
-        </div>
+<li class="nav-item dropdown">
 
+<a
+class="nav-link dropdown-toggle"
+href="#"
+data-bs-toggle="dropdown">
 
-        <div class="highlight">
+R & D
 
-            <div class="highlight-icon">
-                ✓
-            </div>
+</a>
 
-            <div>
+<ul class="dropdown-menu">
 
-                <h4>
-                    Quality Assured
-                </h4>
+<li>
+<a class="dropdown-item" href="smart-pole.html">
+Smart Pole
+</a>
+</li>
 
-                <p>
-                    Quality-driven project execution.
-                </p>
+<li>
+<a class="dropdown-item" href="smart-bollard.html">
+Smart Bollard
+</a>
+</li>
 
-            </div>
+<li>
+<a class="dropdown-item" href="window-leaf-ac.html">
+Window Leaf AC
+</a>
+</li>
 
-        </div>
+<li>
+<a class="dropdown-item" href="smart-conference-table.html">
+Smart Conference Table
+</a>
+</li>
 
+</ul>
 
-    </section>
+</li>
 
 
+<li class="nav-item dropdown">
 
-    <!-- =========================================
-         INTRO + SERVICES
-    ========================================= -->
+<a
+class="nav-link dropdown-toggle"
+href="#"
+data-bs-toggle="dropdown">
 
-    <section class="intro">
+Products
 
+</a>
 
-        <!-- INTRO -->
+<ul class="dropdown-menu">
 
-        <div>
+<li>
+<a class="dropdown-item" href="transformers.html">
+Transformers
+</a>
+</li>
 
-            <div class="section-label">
-                About Our Service
-            </div>
+<li>
+<a class="dropdown-item" href="panels.html">
+Panels
+</a>
+</li>
 
-            <h2 class="section-title">
+<li>
+<a class="dropdown-item" href="switchgear.html">
+Switchgear
+</a>
+</li>
 
-                Efficient Power
-                <br>
-                Distribution
+<li>
+<a class="dropdown-item" href="controllers.html">
+Controllers
+</a>
+</li>
 
-            </h2>
+<li>
+<a class="dropdown-item" href="accessories.html">
+Accessories
+</a>
+</li>
 
-            <div class="section-line"></div>
+</ul>
 
-            <p class="intro-text">
+</li>
 
-                Our Distribution Services focus on delivering reliable
-                electrical power from substations and distribution
-                points to end users across industrial, commercial
-                and infrastructure applications.
 
-                <br><br>
+<li class="nav-item">
+<a class="nav-link" href="index.html#contact">
+Contact
+</a>
+</li>
 
-                We provide end-to-end support covering distribution
-                line construction, poles, transformers, cables,
-                feeder systems, installation, testing, commissioning
-                and maintenance.
 
-            </p>
+</ul>
 
-        </div>
+</div>
 
+</div>
 
+</nav>
 
-        <!-- SERVICES -->
 
-        <div id="services">
 
-            <div class="section-label">
-                Our Expertise
-            </div>
+<!-- =========================================================
+     HERO
+========================================================= -->
 
-            <h2 class="section-title">
-                Distribution Services
-            </h2>
+<section class="distribution-hero">
 
-            <div class="section-line"></div>
+<div class="hero-content">
 
+<div class="hero-small">
+Power Distribution Infrastructure
+</div>
 
-            <div class="service-list">
 
+<h1>
 
-                <div class="service-box">
+Delivering
+<br>
 
-                    <span class="service-number">
-                        01
-                    </span>
+<span>Power.</span>
 
-                    <h4>
-                        HT & LT Distribution Lines
-                    </h4>
+Where It
+<br>
 
-                </div>
+Matters.
 
+</h1>
 
-                <div class="service-box">
 
-                    <span class="service-number">
-                        02
-                    </span>
+<p class="hero-text">
 
-                    <h4>
-                        Distribution Pole Erection
-                    </h4>
+Reliable power distribution solutions engineered to move
+electricity safely and efficiently from substations to homes,
+commercial facilities, industries and critical infrastructure.
 
-                </div>
+</p>
 
 
-                <div class="service-box">
+<div class="hero-buttons">
 
-                    <span class="service-number">
-                        03
-                    </span>
+<a
+href="#services"
+class="hero-btn-primary">
 
-                    <h4>
-                        Distribution Transformer Installation
-                    </h4>
+Explore Distribution Services
 
-                </div>
+<i class="fa-solid fa-arrow-right"></i>
 
+</a>
 
-                <div class="service-box">
 
-                    <span class="service-number">
-                        04
-                    </span>
+<a
+href="#network"
+class="hero-btn-secondary">
 
-                    <h4>
-                        ABC / Aerial Bunched Cable Works
-                    </h4>
+View Network
 
-                </div>
+<i class="fa-solid fa-arrow-down"></i>
 
+</a>
 
-                <div class="service-box">
+</div>
 
-                    <span class="service-number">
-                        05
-                    </span>
+</div>
 
-                    <h4>
-                        HT / LT Cable Laying & Termination
-                    </h4>
 
-                </div>
+<div class="hero-data">
 
+<div class="hero-data-item">
 
-                <div class="service-box">
+<strong>11–33 kV</strong>
 
-                    <span class="service-number">
-                        06
-                    </span>
+<span>
+Distribution Networks
+</span>
 
-                    <h4>
-                        Feeder & Distribution Network Works
-                    </h4>
+</div>
 
-                </div>
 
+<div class="hero-data-item">
 
-                <div class="service-box">
+<strong>24/7</strong>
 
-                    <span class="service-number">
-                        07
-                    </span>
+<span>
+Power Reliability
+</span>
 
-                    <h4>
-                        Testing & Commissioning
-                    </h4>
+</div>
 
-                </div>
 
+<div class="hero-data-item">
 
-                <div class="service-box">
+<strong>EPC</strong>
 
-                    <span class="service-number">
-                        08
-                    </span>
+<span>
+Complete Execution
+</span>
 
-                    <h4>
-                        Operation & Maintenance
-                    </h4>
+</div>
 
-                </div>
+</div>
 
+</section>
 
-            </div>
 
-        </div>
 
-    </section>
+<!-- =========================================================
+     INTRO STRIP
+========================================================= -->
 
+<section class="intro-strip">
 
 
-    <!-- =========================================
-         VOLTAGE CAPABILITIES
-    ========================================= -->
+<div class="intro-box">
 
-    <section class="capability-section">
+<div class="intro-icon">
+<i class="fa-solid fa-bolt"></i>
+</div>
 
+<div>
 
-        <div class="capability-header">
+<h4>
+Reliable Distribution
+</h4>
 
-            <div class="section-label">
-                Technical Capability
-            </div>
+<p>
+Efficient power delivery across distribution networks.
+</p>
 
-            <h2 class="section-title">
-                Distribution Voltage Range
-            </h2>
+</div>
 
-            <div class="section-line"></div>
+</div>
 
-            <p>
 
-                Our distribution infrastructure capabilities cover
-                multiple voltage levels to support diverse industrial,
-                commercial and utility requirements.
+<div class="intro-box">
 
-            </p>
+<div class="intro-icon">
+<i class="fa-solid fa-network-wired"></i>
+</div>
 
-        </div>
+<div>
 
+<h4>
+Network Solutions
+</h4>
 
-        <div class="voltage-grid">
+<p>
+Distribution infrastructure designed for dependable operation.
+</p>
 
+</div>
 
-            <div class="voltage-card">
+</div>
 
-                <div class="voltage-icon">
-                    ⚡
-                </div>
 
-                <div class="voltage-value">
-                    11kV
-                </div>
+<div class="intro-box">
 
-                <div class="voltage-label">
-                    HT Distribution
-                </div>
+<div class="intro-icon">
+<i class="fa-solid fa-shield-halved"></i>
+</div>
 
-            </div>
+<div>
 
+<h4>
+Safety Focused
+</h4>
 
-            <div class="voltage-card">
+<p>
+Safe installation and controlled field execution.
+</p>
 
-                <div class="voltage-icon">
-                    ⚡
-                </div>
+</div>
 
-                <div class="voltage-value">
-                    22kV
-                </div>
+</div>
 
-                <div class="voltage-label">
-                    HT Distribution
-                </div>
 
-            </div>
+<div class="intro-box">
 
+<div class="intro-icon">
+<i class="fa-solid fa-gauge-high"></i>
+</div>
 
-            <div class="voltage-card">
+<div>
 
-                <div class="voltage-icon">
-                    ⚡
-                </div>
+<h4>
+Efficient Power Flow
+</h4>
 
-                <div class="voltage-value">
-                    33kV
-                </div>
+<p>
+Optimized systems for stable and efficient power delivery.
+</p>
 
-                <div class="voltage-label">
-                    HT Distribution
-                </div>
+</div>
 
-            </div>
+</div>
 
 
-            <div class="voltage-card">
+</section>
 
-                <div class="voltage-icon">
-                    ⚡
-                </div>
 
-                <div class="voltage-value">
-                    415V
-                </div>
 
-                <div class="voltage-label">
-                    LT Distribution
-                </div>
+<!-- =========================================================
+     OVERVIEW
+========================================================= -->
 
-            </div>
+<section class="section">
 
+<div class="overview">
 
-        </div>
 
-    </section>
+<div class="overview-visual">
 
+<div class="visual-label">
 
+<strong>
+33kV
+</strong>
 
-    <!-- =========================================
-         DISTRIBUTION NETWORK SOLUTIONS
-    ========================================= -->
+<span>
+Distribution Network
+</span>
 
-    <section class="network-section">
+</div>
 
+</div>
 
-        <div class="network-header">
 
-            <div>
+<div class="overview-content">
 
-                <div class="section-label">
-                    Infrastructure Solutions
-                </div>
+<div class="eyebrow">
+Distribution Expertise
+</div>
 
-                <h2 class="section-title">
 
-                    Distribution Network
-                    <br>
-                    Solutions
+<h2 class="section-title">
 
-                </h2>
+Power That
+<br>
 
-                <div class="section-line"></div>
+<span>Reaches Every Point</span>
 
-            </div>
+</h2>
 
 
-            <p class="network-description">
+<div class="black-line"></div>
 
-                From overhead distribution networks to cable-based
-                systems and transformer installations, we deliver
-                integrated electrical infrastructure designed for
-                safe and dependable power distribution.
 
-            </p>
+<p class="section-description">
 
-        </div>
+Our power distribution solutions connect substations and
+distribution infrastructure with the consumers and facilities
+that depend on reliable electricity.
 
+<br><br>
 
+We provide complete support across distribution line
+installation, poles, transformers, feeders, cables, protection
+systems, testing and commissioning — helping create efficient,
+safe and dependable electrical networks.
 
-        <div class="network-grid">
+</p>
 
 
-            <!-- 01 -->
+<div class="overview-points">
 
-            <div class="network-card">
 
-                <div class="network-icon">
-                    ⚡
-                </div>
+<div class="overview-point">
 
-                <h3>
-                    HT Distribution
-                </h3>
+<strong>
+Distribution Lines
+</strong>
 
-                <p>
+<span>
+Installation and execution of overhead and underground distribution networks.
+</span>
 
-                    Installation and execution of high-voltage
-                    distribution networks for reliable power
-                    transmission to distribution points.
+</div>
 
-                </p>
 
-            </div>
+<div class="overview-point">
 
+<strong>
+Transformers
+</strong>
 
-            <!-- 02 -->
+<span>
+Transformer installation and distribution system integration.
+</span>
 
-            <div class="network-card">
+</div>
 
-                <div class="network-icon">
-                    ⬆
-                </div>
 
-                <h3>
-                    Pole & Line Systems
-                </h3>
+<div class="overview-point">
 
-                <p>
+<strong>
+Protection
+</strong>
 
-                    Erection of poles, cross arms, insulators,
-                    conductors and associated distribution
-                    line hardware.
+<span>
+Reliable protection and switching arrangements for network safety.
+</span>
 
-                </p>
+</div>
 
-            </div>
 
+<div class="overview-point">
 
-            <!-- 03 -->
+<strong>
+Testing
+</strong>
 
-            <div class="network-card">
+<span>
+Testing, inspection and commissioning of distribution systems.
+</span>
 
-                <div class="network-icon">
-                    ⚙
-                </div>
-
-                <h3>
-                    Transformer Installation
-                </h3>
-
-                <p>
-
-                    Installation, testing and commissioning of
-                    distribution transformers with proper
-                    electrical and safety procedures.
-
-                </p>
-
-            </div>
-
-
-            <!-- 04 -->
-
-            <div class="network-card">
-
-                <div class="network-icon">
-                    ⇆
-                </div>
-
-                <h3>
-                    LT Distribution
-                </h3>
-
-                <p>
-
-                    Reliable low-voltage distribution systems
-                    for industrial, commercial and infrastructure
-                    applications.
-
-                </p>
-
-            </div>
-
-
-            <!-- 05 -->
-
-            <div class="network-card">
-
-                <div class="network-icon">
-                    ◉
-                </div>
-
-                <h3>
-                    Cable Distribution
-                </h3>
-
-                <p>
-
-                    HT and LT cable laying, routing, termination
-                    and connection works with focus on safety
-                    and installation quality.
-
-                </p>
-
-            </div>
-
-
-            <!-- 06 -->
-
-            <div class="network-card">
-
-                <div class="network-icon">
-                    ✓
-                </div>
-
-                <h3>
-                    Testing & Commissioning
-                </h3>
-
-                <p>
-
-                    Comprehensive testing and commissioning
-                    support to ensure safe and reliable
-                    distribution system operation.
-
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================================
-         PROJECT EXECUTION
-    ========================================= -->
-
-    <section class="execution-section">
-
-
-        <div class="execution-header">
-
-            <div class="section-label">
-                Our Work Process
-            </div>
-
-            <h2 class="section-title">
-                Distribution Project Execution
-            </h2>
-
-            <div class="section-line"></div>
-
-            <p>
-
-                A structured execution approach ensures every
-                distribution project is delivered with engineering
-                accuracy, safety and quality at every stage.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="execution-grid">
-
-
-            <div class="execution-step">
-
-                <div class="step-number">
-                    01
-                </div>
-
-                <h4>
-                    Site Survey
-                </h4>
-
-                <p>
-                    Route inspection and site assessment.
-                </p>
-
-            </div>
-
-
-            <div class="execution-step">
-
-                <div class="step-number">
-                    02
-                </div>
-
-                <h4>
-                    Engineering
-                </h4>
-
-                <p>
-                    Planning, design and technical preparation.
-                </p>
-
-            </div>
-
-
-            <div class="execution-step">
-
-                <div class="step-number">
-                    03
-                </div>
-
-                <h4>
-                    Installation
-                </h4>
-
-                <p>
-                    Poles, cables, transformers and equipment.
-                </p>
-
-            </div>
-
-
-            <div class="execution-step">
-
-                <div class="step-number">
-                    04
-                </div>
-
-                <h4>
-                    Testing
-                </h4>
-
-                <p>
-                    Electrical testing and system verification.
-                </p>
-
-            </div>
-
-
-            <div class="execution-step">
-
-                <div class="step-number">
-                    05
-                </div>
-
-                <h4>
-                    Commissioning
-                </h4>
-
-                <p>
-                    Safe energization and project handover.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================================
-         CTA / BOTTOM SECTION
-    ========================================= -->
-
-    <section class="cta">
-
-
-        <div class="cta-content">
-
-            <h2>
-                Connecting Power. Delivering Reliability.
-            </h2>
-
-            <p>
-
-                Our distribution solutions are engineered to provide
-                safe, efficient and dependable electrical connectivity
-                across industrial, commercial and infrastructure
-                applications.
-
-            </p>
-
-        </div>
-
-
-        <div class="cta-side">
-
-            <div>
-
-                <strong>
-                    HT • LT
-                </strong>
-
-                <span>
-                    DISTRIBUTION SOLUTIONS
-                </span>
-
-            </div>
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- =========================================
-         FOOTER
-    ========================================= -->
-
-    <footer class="footer">
-
-        <span>
-            POWERING PROGRESS. CONNECTING COMMUNITIES.
-        </span>
-
-        <strong>
-            DISTRIBUTION SERVICES
-        </strong>
-
-    </footer>
+</div>
 
 
 </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     DISTRIBUTION NETWORK
+========================================================= -->
+
+<section
+class="network-section"
+id="network">
+
+
+<div class="network-top">
+
+<div class="eyebrow">
+Distribution Network
+</div>
+
+
+<h2 class="section-title">
+
+From Substation
+<br>
+
+<span>to Consumer</span>
+
+</h2>
+
+
+<div class="black-line"></div>
+
+
+<p class="section-description">
+
+Distribution networks form the final critical link between
+power generation and end users. Our solutions cover the
+infrastructure required for safe and efficient power delivery.
+
+</p>
+
+</div>
+
+
+<div class="network-grid">
+
+
+<div class="network-card">
+
+<div class="network-icon">
+<i class="fa-solid fa-industry"></i>
+</div>
+
+<h3>
+Substations
+</h3>
+
+<p>
+Distribution substations designed to transform and route
+electrical power to connected networks.
+</p>
+
+</div>
+
+
+<div class="network-card">
+
+<div class="network-icon">
+<i class="fa-solid fa-tower-cell"></i>
+</div>
+
+<h3>
+Distribution Feeders
+</h3>
+
+<p>
+Reliable feeder networks for delivering power across
+commercial, industrial and residential areas.
+</p>
+
+</div>
+
+
+<div class="network-card">
+
+<div class="network-icon">
+<i class="fa-solid fa-arrows-left-right-to-line"></i>
+</div>
+
+<h3>
+Overhead Lines
+</h3>
+
+<p>
+Pole and conductor systems engineered for safe and reliable
+overhead power distribution.
+</p>
+
+</div>
+
+
+<div class="network-card">
+
+<div class="network-icon">
+<i class="fa-solid fa-plug"></i>
+</div>
+
+<h3>
+Underground Networks
+</h3>
+
+<p>
+Cable-based distribution systems for urban and sensitive
+infrastructure environments.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SERVICES
+========================================================= -->
+
+<section
+class="service-section"
+id="services">
+
+
+<div class="service-heading">
+
+<div class="eyebrow">
+What We Deliver
+</div>
+
+
+<h2 class="section-title">
+
+Complete Power
+<br>
+
+<span>Distribution Services</span>
+
+</h2>
+
+
+<div class="black-line"></div>
+
+
+<p>
+
+From distribution line construction and transformer installation
+to protection systems, testing and commissioning, we deliver
+complete electrical distribution solutions.
+
+</p>
+
+</div>
+
+
+<div class="service-grid">
+
+
+<div class="service-card">
+
+<div class="service-number">
+01
+</div>
+
+<div class="service-icon">
+<i class="fa-solid fa-network-wired"></i>
+</div>
+
+<h3>
+Distribution Line Construction
+</h3>
+
+<p>
+Construction and installation of electrical distribution lines
+for dependable power delivery across connected networks.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">
+02
+</div>
+
+<div class="service-icon">
+<i class="fa-solid fa-tower-broadcast"></i>
+</div>
+
+<h3>
+Pole & Structure Installation
+</h3>
+
+<p>
+Installation of distribution poles, structures, cross arms and
+associated electrical hardware.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">
+03
+</div>
+
+<div class="service-icon">
+<i class="fa-solid fa-bolt"></i>
+</div>
+
+<h3>
+Transformer Installation
+</h3>
+
+<p>
+Installation, connection and commissioning of distribution
+transformers for reliable voltage transformation.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">
+04
+</div>
+
+<div class="service-icon">
+<i class="fa-solid fa-plug-circle-bolt"></i>
+</div>
+
+<h3>
+Cable & Feeder Systems
+</h3>
+
+<p>
+Execution of feeder systems, cables and associated equipment
+for stable power distribution.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">
+05
+</div>
+
+<div class="service-icon">
+<i class="fa-solid fa-shield-halved"></i>
+</div>
+
+<h3>
+Protection & Switching
+</h3>
+
+<p>
+Installation and integration of protection, switching and
+control equipment for network safety.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">
+06
+</div>
+
+<div class="service-icon">
+<i class="fa-solid fa-circle-check"></i>
+</div>
+
+<h3>
+Testing & Commissioning
+</h3>
+
+<p>
+Inspection, electrical testing and commissioning to ensure
+safe and dependable network operation.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROCESS
+========================================================= -->
+
+<section class="process-section">
+
+
+<div class="process-heading">
+
+<div class="eyebrow">
+Project Execution
+</div>
+
+
+<h2 class="section-title">
+
+Planning the Network.
+<br>
+
+<span>Powering the End User.</span>
+
+</h2>
+
+
+<div class="black-line"></div>
+
+
+<p>
+
+A structured approach to distribution projects ensures
+consistent quality from initial survey through installation,
+testing and final commissioning.
+
+</p>
+
+</div>
+
+
+<div class="process-track">
+
+
+<div class="process-item">
+
+<div class="process-circle">
+01
+</div>
+
+<h4>
+Survey & Planning
+</h4>
+
+<p>
+Site survey, load assessment and distribution network planning.
+</p>
+
+</div>
+
+
+<div class="process-item">
+
+<div class="process-circle">
+02
+</div>
+
+<h4>
+Engineering
+</h4>
+
+<p>
+Electrical design, route planning and technical coordination.
+</p>
+
+</div>
+
+
+<div class="process-item">
+
+<div class="process-circle">
+03
+</div>
+
+<h4>
+Civil & Foundation
+</h4>
+
+<p>
+Foundation, pole base and equipment installation preparation.
+</p>
+
+</div>
+
+
+<div class="process-item">
+
+<div class="process-circle">
+04
+</div>
+
+<h4>
+Electrical Installation
+</h4>
+
+<p>
+Poles, cables, transformers, feeders and equipment installation.
+</p>
+
+</div>
+
+
+<div class="process-item">
+
+<div class="process-circle">
+05
+</div>
+
+<h4>
+Testing
+</h4>
+
+<p>
+Electrical testing, protection checks and system verification.
+</p>
+
+</div>
+
+
+<div class="process-item">
+
+<div class="process-circle">
+06
+</div>
+
+<h4>
+Commissioning
+</h4>
+
+<p>
+Final inspection, energization and controlled handover.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FIELD EXECUTION
+========================================================= -->
+
+<section class="field-section">
+
+
+<div class="field-layout">
+
+
+<div class="field-image">
+
+<div class="field-image-tag">
+Distribution Field Execution
+</div>
+
+</div>
+
+
+<div class="field-content">
+
+<div class="eyebrow">
+Site Capabilities
+</div>
+
+
+<h2 class="section-title">
+
+Built for
+<br>
+
+<span>Reliable Delivery</span>
+
+</h2>
+
+
+<div class="black-line"></div>
+
+
+<p class="section-description">
+
+Distribution infrastructure operates close to communities,
+businesses and industries. Our execution approach therefore
+focuses on electrical safety, network reliability, quality
+installation and long-term maintainability.
+
+</p>
+
+
+<div class="field-list">
+
+
+<div class="field-item">
+
+<strong>
+Pole Erection
+</strong>
+
+<span>
+Safe erection and alignment of distribution poles and structures.
+</span>
+
+</div>
+
+
+<div class="field-item">
+
+<strong>
+Transformer Mounting
+</strong>
+
+<span>
+Installation and connection of distribution transformers.
+</span>
+
+</div>
+
+
+<div class="field-item">
+
+<strong>
+Cable Installation
+</strong>
+
+<span>
+Installation and routing of distribution cables and feeders.
+</span>
+
+</div>
+
+
+<div class="field-item">
+
+<strong>
+Conductor Stringing
+</strong>
+
+<span>
+Controlled installation of conductors and associated hardware.
+</span>
+
+</div>
+
+
+<div class="field-item">
+
+<strong>
+Protection Systems
+</strong>
+
+<span>
+Integration of protection and switching equipment.
+</span>
+
+</div>
+
+
+<div class="field-item">
+
+<strong>
+Safety Compliance
+</strong>
+
+<span>
+Safety procedures maintained throughout site activities.
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     QUALITY BANNER
+========================================================= -->
+
+<section class="quality-section">
+
+
+<div class="quality-content">
+
+<div class="eyebrow">
+Our Commitment
+</div>
+
+
+<h2>
+
+Reliable Distribution.
+Safe Networks.
+Consistent Power.
+
+</h2>
+
+
+<p>
+
+Every distribution project is executed with a focus on
+electrical safety, technical accuracy, quality workmanship
+and dependable power delivery.
+
+</p>
+
+
+<div class="quality-points">
+
+
+<div class="quality-point">
+
+<strong>
+01
+</strong>
+
+<span>
+Safety First
+</span>
+
+</div>
+
+
+<div class="quality-point">
+
+<strong>
+02
+</strong>
+
+<span>
+Quality Installation
+</span>
+
+</div>
+
+
+<div class="quality-point">
+
+<strong>
+03
+</strong>
+
+<span>
+Network Reliability
+</span>
+
+</div>
+
+
+<div class="quality-point">
+
+<strong>
+04
+</strong>
+
+<span>
+Efficient Delivery
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<div class="quality-side"></div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta">
+
+
+<div class="eyebrow">
+Power Distribution Solutions
+</div>
+
+
+<h2>
+
+Connecting Power
+<br>
+
+<span>to Every Requirement</span>
+
+</h2>
+
+
+<p>
+
+Partner with Alpha Numeric for dependable distribution
+engineering, installation, testing and commissioning solutions
+built around safety, efficiency and reliability.
+
+</p>
+
+
+<a
+href="index.html#contact"
+class="cta-btn">
+
+Discuss Your Project
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</a>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="main-footer">
+
+
+<div class="container-fluid">
+
+
+<div class="row g-5">
+
+
+<div class="col-lg-4 col-md-6 footer-column">
+
+<div class="footer-logo">
+
+<img
+src="assets/img/w-alpha.png"
+alt="Alpha Numeric Logo">
+
+</div>
+
+
+<p class="footer-description">
+
+Alpha Numeric is a technology-driven organization delivering
+intelligent solutions across energy, power, automation, IoT,
+lighting, R&D and industrial infrastructure.
+
+</p>
+
+
+<div class="footer-social">
+
+<a href="#" aria-label="LinkedIn">
+<i class="fab fa-linkedin-in"></i>
+</a>
+
+<a href="#" aria-label="Instagram">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="#" aria-label="Facebook">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+<a href="#" aria-label="YouTube">
+<i class="fab fa-youtube"></i>
+</a>
+
+</div>
+
+</div>
+
+
+<div class="col-lg-2 col-md-6 footer-column">
+
+<div class="footer-heading">
+SOLUTIONS
+</div>
+
+<ul class="footer-links">
+
+<li>
+<a href="solar-energy.html">
+Solar Energy
+</a>
+</li>
+
+<li>
+<a href="wind-energy.html">
+Wind Energy
+</a>
+</li>
+
+<li>
+<a href="biomass-energy.html">
+Biomass Energy
+</a>
+</li>
+
+<li>
+<a href="hydel-energy.html">
+Hydel Energy
+</a>
+</li>
+
+<li>
+<a href="transmission.html">
+Transmission
+</a>
+</li>
+
+<li>
+<a href="distribution.html">
+Distribution
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="col-lg-2 col-md-6 footer-column">
+
+<div class="footer-heading">
+TECHNOLOGY
+</div>
+
+<ul class="footer-links">
+
+<li>
+<a href="home-automation.html">
+Automation
+</a>
+</li>
+
+<li>
+<a href="smart-pole.html">
+R & D
+</a>
+</li>
+
+<li>
+<a href="transformers.html">
+Transformers
+</a>
+</li>
+
+<li>
+<a href="panels.html">
+Panels
+</a>
+</li>
+
+<li>
+<a href="switchgear.html">
+Switchgear
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="col-lg-4 col-md-6 footer-column">
+
+<div class="footer-heading">
+CONTACT
+</div>
+
+
+<ul class="footer-contact">
+
+<li>
+
+<i class="fas fa-location-dot"></i>
+
+<span>
+
+1st Floor, Raja Rajeswari Colony,
+Plot No. 343, Radhika Residency,
+Kondapur, Hyderabad,
+Telangana 500084
+
+</span>
+
+</li>
+
+
+<li>
+
+<i class="fas fa-phone"></i>
+
+<span>
++91 XXXXX XXXXX
+</span>
+
+</li>
+
+
+<li>
+
+<i class="fas fa-envelope"></i>
+
+<span>
+info@alphanumeric.com
+</span>
+
+</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+
+<div class="footer-bottom">
+
+<span>
+
+© 2026
+<strong>Alpha Numeric</strong>.
+All Rights Reserved.
+
+</span>
+
+
+<span>
+
+CLEAN ENERGY • SMART TECHNOLOGY • ENGINEERED FUTURE
+
+</span>
+
+</div>
+
+
+</div>
+
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+
+window.addEventListener("scroll",function(){
+
+const navbar=document.querySelector(".main-navbar");
+
+if(window.scrollY>30){
+
+navbar.style.boxShadow=
+"0 5px 25px rgba(0,0,0,0.07)";
+
+}else{
+
+navbar.style.boxShadow="none";
+
+}
+
+});
+
+</script>
+
 
 </body>
 </html>
