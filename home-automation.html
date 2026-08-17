@@ -1,0 +1,3170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home Automation | Alpha Numeric</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* =========================================================
+           GLOBAL
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #fff;
+            color: #111;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* =========================================================
+           NAVBAR
+        ========================================================= */
+
+        .main-navbar {
+            height: 100px;
+            padding: 0 7%;
+            background: #fff !important;
+            border-bottom: 1px solid #e8e8e8;
+            z-index: 9999;
+            transition: .3s ease;
+        }
+
+        .main-navbar .navbar-brand img {
+            height: 55px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .main-navbar .navbar-nav {
+            align-items: center;
+            gap: 28px;
+        }
+
+        .main-navbar .nav-link {
+            color: #111 !important;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            padding: 10px 0 !important;
+            transition: .3s ease;
+        }
+
+        .main-navbar .nav-link:hover {
+            color: #666 !important;
+        }
+
+        /*
+           ACTIVE MAIN CATEGORY
+           Automation remains active
+        */
+
+        .main-navbar .nav-link.main-active {
+            font-weight: 700;
+            color: #000 !important;
+        }
+
+        .main-navbar .dropdown-toggle::after {
+            margin-left: 7px;
+            vertical-align: middle;
+            border-top: 5px solid #111;
+            border-right: 4px solid transparent;
+            border-left: 4px solid transparent;
+        }
+
+        .main-navbar .dropdown-menu {
+            margin-top: 18px;
+            padding: 10px 0;
+            min-width: 225px;
+            border: 1px solid #e5e5e5;
+            border-radius: 0;
+            background: #fff;
+            box-shadow: 0 15px 40px rgba(0,0,0,.08);
+        }
+
+        .main-navbar .dropdown-item {
+            padding: 12px 20px;
+            color: #222;
+            font-size: 13px;
+            transition: .25s ease;
+        }
+
+        .main-navbar .dropdown-item:hover {
+            background: #f5f5f5;
+            color: #000;
+        }
+
+        /*
+           ACTIVE HOME AUTOMATION DROPDOWN ITEM
+        */
+
+        .main-navbar .dropdown-item.active {
+            background: #111 !important;
+            color: #fff !important;
+        }
+
+        .main-navbar .navbar-toggler {
+            border: none !important;
+            box-shadow: none !important;
+            color: #111;
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            min-height: 680px;
+            margin-top: 100px;
+
+            display: flex;
+            align-items: center;
+
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,.94) 0%,
+                    rgba(0,0,0,.80) 43%,
+                    rgba(0,0,0,.35) 78%,
+                    rgba(0,0,0,.10) 100%
+                ),
+                url("images/home-automation-hero.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 1350px;
+            margin: auto;
+            padding: 100px 7%;
+            color: #fff;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            margin-bottom: 24px;
+
+            color: #bbb;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .hero-label::before {
+            content: "";
+            width: 42px;
+            height: 1px;
+            background: #fff;
+        }
+
+        .hero h1 {
+            max-width: 900px;
+
+            color: #fff;
+
+            font-size: clamp(52px, 7vw, 96px);
+            line-height: .95;
+
+            font-weight: 700;
+            letter-spacing: -5px;
+
+            margin-bottom: 30px;
+
+            text-transform: uppercase;
+        }
+
+        .hero h1 span {
+            font-weight: 300;
+        }
+
+        .hero p {
+            max-width: 650px;
+
+            color: #d4d4d4;
+
+            font-size: 15px;
+            line-height: 1.9;
+
+            margin-bottom: 35px;
+        }
+
+        .hero-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+
+            padding: 15px 28px;
+
+            background: #fff;
+            color: #111;
+
+            border: 1px solid #fff;
+
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+
+            transition: .3s ease;
+        }
+
+        .hero-button:hover {
+            background: #111;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================================================
+           HERO FEATURES
+        ========================================================= */
+
+        .highlights {
+            width: 86%;
+            margin: -45px auto 0;
+
+            position: relative;
+            z-index: 10;
+
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+
+            background: #fff;
+
+            box-shadow: 0 20px 55px rgba(0,0,0,.12);
+        }
+
+        .highlight {
+            min-height: 115px;
+
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            padding: 20px 25px;
+
+            border-right: 1px solid #e5e5e5;
+        }
+
+        .highlight:last-child {
+            border-right: none;
+        }
+
+        .highlight-icon {
+            width: 44px;
+            height: 44px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #111;
+            color: #fff;
+
+            font-size: 17px;
+        }
+
+        .highlight h4 {
+            color: #111;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .highlight p {
+            color: #777;
+            font-size: 10px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+
+        /* =========================================================
+           COMMON
+        ========================================================= */
+
+        .section-label {
+            color: #777;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .section-title {
+            color: #111;
+            font-size: clamp(34px,4vw,58px);
+            line-height: 1.08;
+            font-weight: 600;
+            letter-spacing: -2px;
+            margin-bottom: 0;
+        }
+
+        .section-line {
+            width: 45px;
+            height: 3px;
+            background: #111;
+            margin: 20px 0 25px;
+        }
+
+
+        /* =========================================================
+           INTRO
+        ========================================================= */
+
+        .intro {
+            padding: 110px 8%;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 90px;
+            align-items: center;
+
+            background: #fff;
+        }
+
+        .intro-text {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+
+        /* =========================================================
+           SMART HOME SOLUTIONS
+        ========================================================= */
+
+        .solutions-section {
+            padding: 105px 8%;
+            background: #f5f5f5;
+        }
+
+        .section-heading {
+            max-width: 760px;
+            text-align: center;
+            margin: 0 auto 50px;
+        }
+
+        .section-heading .section-line {
+            margin: 20px auto 25px;
+        }
+
+        .section-heading p {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        .solution-grid {
+            max-width: 1250px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+
+            gap: 18px;
+        }
+
+        .solution-card {
+            min-height: 260px;
+
+            position: relative;
+
+            padding: 32px;
+
+            background: #fff;
+            border: 1px solid #e5e5e5;
+
+            overflow: hidden;
+
+            transition: .35s ease;
+        }
+
+        .solution-card::before {
+            content: "";
+
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            width: 0;
+            height: 3px;
+
+            background: #111;
+
+            transition: .35s ease;
+        }
+
+        .solution-card:hover {
+            background: #111;
+            transform: translateY(-7px);
+
+            box-shadow: 0 20px 40px rgba(0,0,0,.12);
+        }
+
+        .solution-card:hover::before {
+            width: 100%;
+        }
+
+        .solution-icon {
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 23px;
+
+            background: #111;
+            color: #fff;
+
+            font-size: 18px;
+
+            transition: .3s ease;
+        }
+
+        .solution-card:hover .solution-icon {
+            background: #fff;
+            color: #111;
+        }
+
+        .solution-card h3 {
+            color: #111;
+            font-size: 15px;
+            font-weight: 600;
+
+            margin-bottom: 10px;
+
+            transition: .3s ease;
+        }
+
+        .solution-card p {
+            color: #777;
+            font-size: 11px;
+            line-height: 1.75;
+
+            transition: .3s ease;
+        }
+
+        .solution-card:hover h3 {
+            color: #fff;
+        }
+
+        .solution-card:hover p {
+            color: #aaa;
+        }
+
+
+        /* =========================================================
+           SMART HOME EXPERIENCE
+        ========================================================= */
+
+        .experience-section {
+            padding: 110px 8%;
+            background: #fff;
+        }
+
+        .experience-layout {
+            max-width: 1250px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 80px;
+
+            align-items: center;
+        }
+
+        .experience-image {
+            min-height: 500px;
+
+            position: relative;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.15),
+                    rgba(0,0,0,.15)
+                ),
+                url("images/smart-home.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .image-tag {
+            position: absolute;
+
+            left: 25px;
+            bottom: 25px;
+
+            padding: 18px 22px;
+
+            background: #111;
+            color: #fff;
+
+            border-left: 4px solid #fff;
+        }
+
+        .image-tag strong {
+            display: block;
+            color: #fff;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .image-tag span {
+            color: #aaa;
+            font-size: 9px;
+            letter-spacing: 1px;
+        }
+
+        .experience-content p {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.9;
+            margin-bottom: 25px;
+        }
+
+        .experience-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .experience-item {
+            padding: 17px;
+
+            background: #f5f5f5;
+
+            border-left: 3px solid #111;
+
+            color: #222;
+
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+
+        /* =========================================================
+           AUTOMATION FLOW
+        ========================================================= */
+
+        .flow-section {
+            padding: 110px 8%;
+            background: #050505;
+            color: #fff;
+        }
+
+        .flow-header {
+            max-width: 760px;
+            margin: 0 auto 55px;
+            text-align: center;
+        }
+
+        .flow-header .section-label {
+            color: #aaa;
+        }
+
+        .flow-header .section-title {
+            color: #fff;
+        }
+
+        .flow-header .section-line {
+            background: #fff;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .flow-header p {
+            color: #aaa;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .flow-grid {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+
+            gap: 10px;
+        }
+
+        .flow-card {
+            min-height: 205px;
+
+            padding: 25px 15px;
+
+            text-align: center;
+
+            border: 1px solid #333;
+
+            background: rgba(255,255,255,.03);
+
+            transition: .3s ease;
+        }
+
+        .flow-card:hover {
+            background: #fff;
+            transform: translateY(-6px);
+        }
+
+        .flow-number {
+            width: 45px;
+            height: 45px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0 auto 16px;
+
+            background: #fff;
+            color: #111;
+
+            border-radius: 50%;
+
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .flow-card h4 {
+            color: #fff;
+            font-size: 10px;
+            margin-bottom: 8px;
+            transition: .3s;
+        }
+
+        .flow-card p {
+            color: #aaa;
+            font-size: 9px;
+            line-height: 1.6;
+            transition: .3s;
+        }
+
+        .flow-card:hover h4 {
+            color: #111;
+        }
+
+        .flow-card:hover p {
+            color: #555;
+        }
+
+
+        /* =========================================================
+           SMART FEATURES
+        ========================================================= */
+
+        .features-section {
+            padding: 105px 8%;
+            background: #f5f5f5;
+        }
+
+        .features-header {
+            max-width: 1250px;
+            margin: auto;
+        }
+
+        .features-grid {
+            max-width: 1250px;
+            margin: 45px auto 0;
+
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+
+            gap: 16px;
+        }
+
+        .feature-card {
+            padding: 28px 22px;
+
+            background: #fff;
+
+            border: 1px solid #e5e5e5;
+
+            transition: .3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+            border-color: #111;
+        }
+
+        .feature-card i {
+            color: #111;
+            font-size: 23px;
+            margin-bottom: 17px;
+        }
+
+        .feature-card h4 {
+            color: #111;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            color: #777;
+            font-size: 10px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================================================
+           BENEFITS
+        ========================================================= */
+
+        .benefits-section {
+            padding: 105px 8%;
+            background: #fff;
+        }
+
+        .benefits-layout {
+            max-width: 1250px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+
+            gap: 70px;
+            align-items: center;
+        }
+
+        .benefit-description {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        .benefit-list {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 12px;
+        }
+
+        .benefit-item {
+            padding: 22px;
+
+            background: #f7f7f7;
+
+            border: 1px solid #e5e5e5;
+
+            transition: .3s ease;
+        }
+
+        .benefit-item:hover {
+            background: #111;
+            transform: translateY(-5px);
+        }
+
+        .benefit-item i {
+            color: #111;
+            font-size: 17px;
+            margin-bottom: 12px;
+            transition: .3s;
+        }
+
+        .benefit-item strong {
+            display: block;
+            color: #111;
+            font-size: 11px;
+            margin-bottom: 6px;
+            transition: .3s;
+        }
+
+        .benefit-item span {
+            color: #777;
+            font-size: 9px;
+            line-height: 1.6;
+            transition: .3s;
+        }
+
+        .benefit-item:hover i,
+        .benefit-item:hover strong {
+            color: #fff;
+        }
+
+        .benefit-item:hover span {
+            color: #aaa;
+        }
+
+
+        /* =========================================================
+           APPLICATIONS
+        ========================================================= */
+
+        .applications-section {
+            padding: 105px 8%;
+            background: #f5f5f5;
+        }
+
+        .applications-content {
+            max-width: 1250px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+
+            gap: 70px;
+            align-items: center;
+        }
+
+        .application-description {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        .application-list {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 12px;
+        }
+
+        .application-item {
+            padding: 21px;
+
+            background: #fff;
+
+            border: 1px solid #e5e5e5;
+
+            transition: .3s ease;
+        }
+
+        .application-item:hover {
+            transform: translateY(-5px);
+            border-color: #111;
+        }
+
+        .application-item strong {
+            display: block;
+            color: #111;
+            font-size: 11px;
+            margin-bottom: 6px;
+        }
+
+        .application-item span {
+            color: #777;
+            font-size: 9px;
+            line-height: 1.5;
+        }
+
+
+        /* =========================================================
+           CTA
+        ========================================================= */
+
+        .cta {
+            max-width: 1250px;
+            margin: 80px auto;
+
+            min-height: 290px;
+
+            display: grid;
+            grid-template-columns: 1.3fr .7fr;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,1),
+                    rgba(0,0,0,.68)
+                ),
+                url("images/home-automation-cta.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .cta-content {
+            padding: 50px;
+            color: #fff;
+        }
+
+        .cta-content h2 {
+            color: #fff;
+            font-size: 32px;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .cta-content p {
+            max-width: 650px;
+            color: #ccc;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            margin-top: 15px;
+
+            padding: 13px 23px;
+
+            background: #fff;
+            color: #111;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            transition: .3s ease;
+        }
+
+        .cta-button:hover {
+            background: #111;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+
+        .cta-side {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-left: 1px solid #333;
+        }
+
+        .cta-side strong {
+            display: block;
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+
+        .cta-side span {
+            color: #aaa;
+            font-size: 9px;
+            letter-spacing: 1.5px;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        .main-footer {
+            background: #050505;
+            color: #fff;
+            padding: 75px 7% 25px;
+        }
+
+        .footer-logo img {
+            height: 55px;
+            width: auto;
+            margin-bottom: 22px;
+        }
+
+        .footer-description {
+            max-width: 370px;
+            color: #888;
+            font-size: 12px;
+            line-height: 1.9;
+        }
+
+        .footer-heading {
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            margin-bottom: 22px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 11px;
+        }
+
+        .footer-links a {
+            color: #888;
+            font-size: 12px;
+            transition: .3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+            padding-left: 4px;
+        }
+
+        .footer-contact {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+
+            color: #888;
+
+            font-size: 12px;
+            line-height: 1.8;
+
+            margin-bottom: 15px;
+        }
+
+        .footer-contact i {
+            width: 18px;
+            color: #fff;
+            margin-top: 4px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 9px;
+            margin-top: 24px;
+        }
+
+        .footer-social a {
+            width: 35px;
+            height: 35px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid #2b2b2b;
+
+            color: #999;
+
+            font-size: 13px;
+
+            transition: .3s ease;
+        }
+
+        .footer-social a:hover {
+            background: #fff;
+            color: #000;
+            border-color: #fff;
+        }
+
+        .footer-bottom {
+            margin-top: 55px;
+            padding-top: 20px;
+
+            border-top: 1px solid #222;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 20px;
+
+            color: #666;
+            font-size: 10px;
+        }
+
+        .footer-bottom strong {
+            color: #fff;
+            font-weight: 500;
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width:1100px) {
+
+            .main-navbar .navbar-nav {
+                gap: 18px;
+            }
+
+            .solution-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .flow-grid {
+                grid-template-columns: repeat(3,1fr);
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+
+
+        @media (max-width:991px) {
+
+            .main-navbar {
+                height: auto;
+                min-height: 80px;
+                padding: 10px 5%;
+            }
+
+            .main-navbar .navbar-brand img {
+                height: 48px;
+            }
+
+            .main-navbar .navbar-collapse {
+                margin-top: 15px;
+                padding: 15px 0;
+                background: #fff;
+            }
+
+            .main-navbar .navbar-nav {
+                align-items: flex-start;
+                gap: 0;
+            }
+
+            .main-navbar .nav-item {
+                width: 100%;
+            }
+
+            .main-navbar .nav-link {
+                padding: 12px 5px !important;
+            }
+
+            .main-navbar .dropdown-menu {
+                margin-top: 0;
+                border: none;
+                box-shadow: none;
+            }
+
+            .hero {
+                margin-top: 80px;
+            }
+
+            .intro,
+            .experience-layout,
+            .benefits-layout,
+            .applications-content {
+                grid-template-columns: 1fr;
+            }
+
+            .cta {
+                margin-left: 6%;
+                margin-right: 6%;
+            }
+        }
+
+
+        @media (max-width:767px) {
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .hero-content {
+                padding: 90px 7%;
+            }
+
+            .hero h1 {
+                font-size: 54px;
+                letter-spacing: -3px;
+            }
+
+            .highlights {
+                width: 100%;
+                margin: 0;
+                grid-template-columns: 1fr;
+            }
+
+            .highlight {
+                border-right: none;
+                border-bottom: 1px solid #e5e5e5;
+            }
+
+            .intro,
+            .solutions-section,
+            .experience-section,
+            .flow-section,
+            .features-section,
+            .benefits-section,
+            .applications-section {
+                padding-left: 7%;
+                padding-right: 7%;
+            }
+
+            .solution-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-list {
+                grid-template-columns: 1fr;
+            }
+
+            .flow-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefit-list,
+            .application-list {
+                grid-template-columns: 1fr;
+            }
+
+            .cta {
+                margin: 40px 6%;
+                grid-template-columns: 1fr;
+            }
+
+            .cta-side {
+                min-height: 120px;
+                border-left: none;
+                border-top: 1px solid #333;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+
+        @media (max-width:430px) {
+
+            .main-navbar .navbar-brand img {
+                height: 42px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .flow-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<nav class="navbar navbar-expand-lg main-navbar fixed-top">
+
+    <div class="container-fluid px-4 px-lg-5">
+
+
+        <!-- LOGO -->
+
+        <a class="navbar-brand" href="index.html">
+
+            <img
+                src="assets/img/b-alpha.png"
+                alt="Alpha Numeric Logo">
+
+        </a>
+
+
+        <!-- MOBILE -->
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="me-2">Menu</span>
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <div
+            class="collapse navbar-collapse"
+            id="navbarResponsive">
+
+            <ul class="navbar-nav ms-auto">
+
+
+                <!-- HOME -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <!-- ABOUT -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="about.html">
+
+                        About
+
+                    </a>
+
+                </li>
+
+
+                <!-- ENERGY -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown">
+
+                        Energy
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="solar-energy.html">
+                                Solar Energy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="wind-energy.html">
+                                Wind Energy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="biomass-energy.html">
+                                Biomass Energy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="hydel-energy.html">
+                                Hydel Energy
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- POWER -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown">
+
+                        Power
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="transmission.html">
+                                Transmission
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="distribution.html">
+                                Distribution
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="control-panels.html">
+                                Control Panels
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="panel-boards.html">
+                                Panel Boards
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================================
+                     AUTOMATION - ACTIVE
+                ================================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle main-active"
+                        href="#"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        Automation
+
+                    </a>
+
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- HOME AUTOMATION - ACTIVE -->
+
+                        <li>
+
+                            <a
+                                class="dropdown-item active"
+                                href="home-automation.html">
+
+                                Home Automation
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="commercial-automation.html">
+
+                                Commercial Automation
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="industrial-automation.html">
+
+                                Industrial Automation
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="hospital-automation.html">
+
+                                Hospital Automation
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="hotel-automation.html">
+
+                                Hotel Automation
+
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+                </li>
+
+
+                <!-- R&D -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown">
+
+                        R & D
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="smart-pole.html">
+                                Smart Pole
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="smart-bollard.html">
+                                Smart Bollard
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="window-leaf-ac.html">
+                                Window Leaf AC
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="smart-conference-table.html">
+                                Smart Conference Table
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- PRODUCTS -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown">
+
+                        Products
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="transformers.html">
+                                Transformers
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="panels.html">
+                                Panels
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="switchgear.html">
+                                Switchgear
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="controllers.html">
+                                Controllers
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="accessories.html">
+                                Accessories
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- CONTACT -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="index.html#contact">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+
+        <div class="hero-label">
+
+            Smart Living • Intelligent Control
+
+        </div>
+
+
+        <h1>
+
+            Home
+
+            <br>
+
+            <span>Automation</span>
+
+        </h1>
+
+
+        <p>
+
+            Transform your home into an intelligent, connected
+            environment with smart lighting, climate control,
+            security, entertainment and energy management —
+            designed around the way you live.
+
+        </p>
+
+
+        <a
+            href="#solutions"
+            class="hero-button">
+
+            EXPLORE SMART HOME
+
+            <i class="fas fa-arrow-right"></i>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     HIGHLIGHTS
+========================================================= -->
+
+<section class="highlights">
+
+
+    <div class="highlight">
+
+        <div class="highlight-icon">
+
+            <i class="fas fa-lightbulb"></i>
+
+        </div>
+
+        <div>
+
+            <h4>
+                Smart Lighting
+            </h4>
+
+            <p>
+                Intelligent lighting control for every space.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="highlight">
+
+        <div class="highlight-icon">
+
+            <i class="fas fa-temperature-half"></i>
+
+        </div>
+
+        <div>
+
+            <h4>
+                Climate Control
+            </h4>
+
+            <p>
+                Comfortable temperatures with intelligent control.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="highlight">
+
+        <div class="highlight-icon">
+
+            <i class="fas fa-shield-halved"></i>
+
+        </div>
+
+        <div>
+
+            <h4>
+                Smart Security
+            </h4>
+
+            <p>
+                Connected security and access management.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="highlight">
+
+        <div class="highlight-icon">
+
+            <i class="fas fa-mobile-screen-button"></i>
+
+        </div>
+
+        <div>
+
+            <h4>
+                Remote Control
+            </h4>
+
+            <p>
+                Manage your home from anywhere.
+            </p>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     INTRO
+========================================================= -->
+
+<section class="intro">
+
+
+    <div>
+
+        <div class="section-label">
+            Intelligent Living
+        </div>
+
+        <h2 class="section-title">
+
+            Your Home.
+
+            <br>
+
+            Your Control.
+
+        </h2>
+
+        <div class="section-line"></div>
+
+        <p class="intro-text">
+
+            Home automation connects lighting, climate,
+            security, entertainment and electrical systems
+            into one intelligent environment.
+
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <div class="section-label">
+            Connected Technology
+        </div>
+
+        <h2 class="section-title">
+
+            Technology That
+            Works Around You
+
+        </h2>
+
+        <div class="section-line"></div>
+
+        <p class="intro-text">
+
+            Smart devices, sensors and control systems work
+            together to create personalized experiences while
+            improving comfort, convenience, security and
+            energy efficiency.
+
+            <br><br>
+
+            Control your home through wall panels, mobile
+            applications, voice assistants, automated scenes
+            and intelligent schedules.
+
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     SOLUTIONS
+========================================================= -->
+
+<section
+    class="solutions-section"
+    id="solutions">
+
+
+    <div class="section-heading">
+
+        <div class="section-label">
+            Smart Home Solutions
+        </div>
+
+        <h2 class="section-title">
+            One Home. One Intelligent Ecosystem.
+        </h2>
+
+        <div class="section-line"></div>
+
+        <p>
+
+            Integrated automation solutions designed to
+            make everyday living simpler, safer and smarter.
+
+        </p>
+
+    </div>
+
+
+    <div class="solution-grid">
+
+
+        <!-- LIGHTING -->
+
+        <div class="solution-card">
+
+            <div class="solution-icon">
+                <i class="fas fa-lightbulb"></i>
+            </div>
+
+            <h3>
+                Smart Lighting
+            </h3>
+
+            <p>
+
+                Control lights individually or create complete
+                lighting scenes for different moods, activities
+                and times of day.
+
+            </p>
+
+        </div>
+
+
+        <!-- HVAC -->
+
+        <div class="solution-card">
+
+            <div class="solution-icon">
+                <i class="fas fa-temperature-half"></i>
+            </div>
+
+            <h3>
+                Smart Climate Control
+            </h3>
+
+            <p>
+
+                Manage air conditioning and temperature settings
+                intelligently for improved comfort and efficient
+                energy use.
+
+            </p>
+
+        </div>
+
+
+        <!-- CURTAINS -->
+
+        <div class="solution-card">
+
+            <div class="solution-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <h3>
+                Motorized Curtains
+            </h3>
+
+            <p>
+
+                Automate curtains and blinds using schedules,
+                scenes, sensors or simple mobile and voice
+                commands.
+
+            </p>
+
+        </div>
+
+
+        <!-- SECURITY -->
+
+        <div class="solution-card">
+
+            <div class="solution-icon">
+                <i class="fas fa-shield-halved"></i>
+            </div>
+
+            <h3>
+                Smart Security
+            </h3>
+
+            <p>
+
+                Integrate sensors, cameras, alarms and access
+                systems to provide intelligent monitoring
+                and security.
+
+            </p>
+
+        </div>
+
+
+        <!-- ACCESS -->
+
+        <div class="solution-card">
+
+            <div class="solution-icon">
+                <i class="fas fa-lock"></i>
+            </div>
+
+            <h3>
+                Smart Access
+            </h3>
+
+            <p>
+
+                Smart locks and access solutions provide
+                convenient and controlled entry while
+                supporting modern security requirements.
+
+            </p>
+
+        </div>
+
+
+        <!-- ENTERTAINMENT -->
+
+        <div class="solution-card">
+
+            <div class="solution-icon">
+                <i class="fas fa-tv"></i>
+            </div>
+
+            <h3>
+                Home Entertainment
+            </h3>
+
+            <p>
+
+                Bring lighting, audio, video and room scenes
+                together to create personalized entertainment
+                experiences.
+
+            </p>
+
+        </div>
+
+
+        <!-- SENSORS -->
+
+        <div class="solution-card">
+
+            <div class="solution-icon">
+                <i class="fas fa-wave-square"></i>
+            </div>
+
+            <h3>
+                Smart Sensors
+            </h3>
+
+            <p>
+
+                Motion, occupancy, temperature, light and
+                environmental sensors enable intelligent
+                automated responses.
+
+            </p>
+
+        </div>
+
+
+        <!-- ENERGY -->
+
+        <div class="solution-card">
+
+            <div class="solution-icon">
+                <i class="fas fa-bolt"></i>
+            </div>
+
+            <h3>
+                Energy Management
+            </h3>
+
+            <p>
+
+                Monitor and control energy-consuming systems
+                to improve visibility and encourage efficient
+                power usage.
+
+            </p>
+
+        </div>
+
+
+        <!-- CUSTOM -->
+
+        <div class="solution-card">
+
+            <div class="solution-icon">
+                <i class="fas fa-sliders"></i>
+            </div>
+
+            <h3>
+                Customized Automation
+            </h3>
+
+            <p>
+
+                Automation scenarios can be customized around
+                your lifestyle, home layout and individual
+                technology requirements.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EXPERIENCE
+========================================================= -->
+
+<section class="experience-section">
+
+
+    <div class="experience-layout">
+
+
+        <div class="experience-image">
+
+            <div class="image-tag">
+
+                <strong>
+                    INTELLIGENT HOME CONTROL
+                </strong>
+
+                <span>
+                    COMFORT • SECURITY • EFFICIENCY
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="experience-content">
+
+            <div class="section-label">
+                A Smarter Way To Live
+            </div>
+
+            <h2 class="section-title">
+
+                Automation That
+                Feels Natural
+
+            </h2>
+
+            <div class="section-line"></div>
+
+            <p>
+
+                The best automation is simple to use. Our
+                solutions are designed so that technology
+                quietly works in the background while giving
+                you complete control whenever you need it.
+
+            </p>
+
+
+            <div class="experience-list">
+
+                <div class="experience-item">
+                    One-Touch Scenes
+                </div>
+
+                <div class="experience-item">
+                    Mobile App Control
+                </div>
+
+                <div class="experience-item">
+                    Voice Control
+                </div>
+
+                <div class="experience-item">
+                    Scheduled Automation
+                </div>
+
+                <div class="experience-item">
+                    Sensor-Based Actions
+                </div>
+
+                <div class="experience-item">
+                    Remote Monitoring
+                </div>
+
+                <div class="experience-item">
+                    Centralized Control
+                </div>
+
+                <div class="experience-item">
+                    Energy Awareness
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     AUTOMATION FLOW
+========================================================= -->
+
+<section class="flow-section">
+
+
+    <div class="flow-header">
+
+        <div class="section-label">
+            How It Works
+        </div>
+
+        <h2 class="section-title">
+            From Sensor to Action
+        </h2>
+
+        <div class="section-line"></div>
+
+        <p>
+
+            Intelligent home automation combines sensors,
+            controllers and connected devices to respond
+            automatically to changing conditions.
+
+        </p>
+
+    </div>
+
+
+    <div class="flow-grid">
+
+
+        <div class="flow-card">
+
+            <div class="flow-number">
+                01
+            </div>
+
+            <h4>
+                Sense
+            </h4>
+
+            <p>
+                Sensors detect motion, temperature,
+                occupancy and environmental changes.
+            </p>
+
+        </div>
+
+
+        <div class="flow-card">
+
+            <div class="flow-number">
+                02
+            </div>
+
+            <h4>
+                Connect
+            </h4>
+
+            <p>
+                Devices communicate through the
+                automation network.
+            </p>
+
+        </div>
+
+
+        <div class="flow-card">
+
+            <div class="flow-number">
+                03
+            </div>
+
+            <h4>
+                Process
+            </h4>
+
+            <p>
+                The automation controller evaluates
+                configured rules and scenes.
+            </p>
+
+        </div>
+
+
+        <div class="flow-card">
+
+            <div class="flow-number">
+                04
+            </div>
+
+            <h4>
+                Act
+            </h4>
+
+            <p>
+                Connected devices automatically respond
+                to the required action.
+            </p>
+
+        </div>
+
+
+        <div class="flow-card">
+
+            <div class="flow-number">
+                05
+            </div>
+
+            <h4>
+                Control
+            </h4>
+
+            <p>
+                Users can monitor and control systems
+                through apps, panels or voice.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SMART FEATURES
+========================================================= -->
+
+<section class="features-section">
+
+
+    <div class="features-header">
+
+        <div class="section-label">
+            Intelligent Features
+        </div>
+
+        <h2 class="section-title">
+            Built Around Your Lifestyle
+        </h2>
+
+        <div class="section-line"></div>
+
+    </div>
+
+
+    <div class="features-grid">
+
+
+        <div class="feature-card">
+
+            <i class="fas fa-clock"></i>
+
+            <h4>
+                Automated Schedules
+            </h4>
+
+            <p>
+                Set systems to operate automatically
+                according to time and routine.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <i class="fas fa-moon"></i>
+
+            <h4>
+                Night Scenes
+            </h4>
+
+            <p>
+                Create personalized night-time lighting,
+                security and comfort settings.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <i class="fas fa-house"></i>
+
+            <h4>
+                Away Mode
+            </h4>
+
+            <p>
+                Secure and manage your home when nobody
+                is present.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <i class="fas fa-sun"></i>
+
+            <h4>
+                Daylight Response
+            </h4>
+
+            <p>
+                Automate lighting and shading based on
+                natural light conditions.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <i class="fas fa-mobile-screen"></i>
+
+            <h4>
+                Mobile Control
+            </h4>
+
+            <p>
+                Access connected home systems from
+                supported mobile devices.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <i class="fas fa-microphone"></i>
+
+            <h4>
+                Voice Commands
+            </h4>
+
+            <p>
+                Control supported devices using simple
+                voice commands.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <i class="fas fa-bell"></i>
+
+            <h4>
+                Smart Alerts
+            </h4>
+
+            <p>
+                Receive notifications based on selected
+                events and conditions.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <i class="fas fa-chart-line"></i>
+
+            <h4>
+                Energy Visibility
+            </h4>
+
+            <p>
+                Understand energy usage and improve
+                efficiency through intelligent control.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     BENEFITS
+========================================================= -->
+
+<section class="benefits-section">
+
+
+    <div class="benefits-layout">
+
+
+        <div>
+
+            <div class="section-label">
+                Why Home Automation
+            </div>
+
+            <h2 class="section-title">
+
+                More Comfort.
+
+                <br>
+
+                More Control.
+
+            </h2>
+
+            <div class="section-line"></div>
+
+            <p class="benefit-description">
+
+                Home automation brings multiple systems
+                together so everyday tasks become simpler
+                and more intuitive.
+
+                <br><br>
+
+                A properly designed system can enhance
+                convenience, security, comfort and energy
+                awareness without making the home complicated.
+
+            </p>
+
+        </div>
+
+
+        <div class="benefit-list">
+
+
+            <div class="benefit-item">
+
+                <i class="fas fa-couch"></i>
+
+                <strong>
+                    Comfort
+                </strong>
+
+                <span>
+                    Personalized environments for different
+                    activities and routines.
+                </span>
+
+            </div>
+
+
+            <div class="benefit-item">
+
+                <i class="fas fa-shield-halved"></i>
+
+                <strong>
+                    Security
+                </strong>
+
+                <span>
+                    Connected security and access management
+                    for greater visibility.
+                </span>
+
+            </div>
+
+
+            <div class="benefit-item">
+
+                <i class="fas fa-bolt"></i>
+
+                <strong>
+                    Efficiency
+                </strong>
+
+                <span>
+                    Smarter control of lighting, HVAC and
+                    electrical systems.
+                </span>
+
+            </div>
+
+
+            <div class="benefit-item">
+
+                <i class="fas fa-mobile-screen-button"></i>
+
+                <strong>
+                    Convenience
+                </strong>
+
+                <span>
+                    Control multiple systems from centralized
+                    interfaces.
+                </span>
+
+            </div>
+
+
+            <div class="benefit-item">
+
+                <i class="fas fa-clock"></i>
+
+                <strong>
+                    Automation
+                </strong>
+
+                <span>
+                    Let schedules and sensors handle repetitive
+                    everyday actions.
+                </span>
+
+            </div>
+
+
+            <div class="benefit-item">
+
+                <i class="fas fa-sliders"></i>
+
+                <strong>
+                    Personalization
+                </strong>
+
+                <span>
+                    Configure scenes and automation around
+                    individual preferences.
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     APPLICATIONS
+========================================================= -->
+
+<section class="applications-section">
+
+
+    <div class="applications-content">
+
+
+        <div>
+
+            <div class="section-label">
+                Home Automation Applications
+            </div>
+
+            <h2 class="section-title">
+
+                Intelligent Control
+                For Every Space
+
+            </h2>
+
+            <div class="section-line"></div>
+
+            <p class="application-description">
+
+                Automation can be introduced across individual
+                rooms or integrated throughout an entire home,
+                depending on the required level of control.
+
+            </p>
+
+        </div>
+
+
+        <div class="application-list">
+
+
+            <div class="application-item">
+
+                <strong>
+                    Living Rooms
+                </strong>
+
+                <span>
+                    Lighting, curtains, entertainment and
+                    personalized scenes.
+                </span>
+
+            </div>
+
+
+            <div class="application-item">
+
+                <strong>
+                    Bedrooms
+                </strong>
+
+                <span>
+                    Night scenes, climate control and
+                    automated lighting.
+                </span>
+
+            </div>
+
+
+            <div class="application-item">
+
+                <strong>
+                    Kitchens
+                </strong>
+
+                <span>
+                    Lighting, sensors and convenient
+                    device control.
+                </span>
+
+            </div>
+
+
+            <div class="application-item">
+
+                <strong>
+                    Home Offices
+                </strong>
+
+                <span>
+                    Lighting, climate and workspace
+                    automation.
+                </span>
+
+            </div>
+
+
+            <div class="application-item">
+
+                <strong>
+                    Entrance Areas
+                </strong>
+
+                <span>
+                    Smart access, lighting and security
+                    automation.
+                </span>
+
+            </div>
+
+
+            <div class="application-item">
+
+                <strong>
+                    Entire Home
+                </strong>
+
+                <span>
+                    Centralized control across multiple
+                    connected systems.
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta">
+
+
+    <div class="cta-content">
+
+        <h2>
+            Make Your Home Smarter.
+        </h2>
+
+        <p>
+
+            Create a connected home environment designed
+            around your lifestyle. From smart lighting and
+            climate control to security and energy management,
+            build an automation experience that works for you.
+
+        </p>
+
+        <a
+            href="index.html#contact"
+            class="cta-button">
+
+            DISCUSS YOUR SMART HOME
+
+            <i class="fas fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+
+    <div class="cta-side">
+
+        <div>
+
+            <strong>
+                CONNECT • CONTROL • AUTOMATE
+            </strong>
+
+            <span>
+                INTELLIGENT HOME SOLUTIONS
+            </span>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="main-footer">
+
+
+    <div class="container-fluid">
+
+
+        <div class="row g-5">
+
+
+            <!-- COMPANY -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="footer-logo">
+
+                    <img
+                        src="assets/img/w-alpha.png"
+                        alt="Alpha Numeric Logo">
+
+                </div>
+
+                <p class="footer-description">
+
+                    Alpha Numeric is a technology-driven
+                    organization delivering intelligent
+                    solutions across energy, power, automation,
+                    IoT, lighting, R&D and industrial
+                    infrastructure.
+
+                </p>
+
+
+                <div class="footer-social">
+
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- SOLUTIONS -->
+
+            <div class="col-lg-2 col-md-6">
+
+                <div class="footer-heading">
+                    SOLUTIONS
+                </div>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="solar-energy.html">
+                            Solar Energy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="wind-energy.html">
+                            Wind Energy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="biomass-energy.html">
+                            Biomass Energy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="hydel-energy.html">
+                            Hydel Energy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="transmission.html">
+                            Transmission
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="distribution.html">
+                            Distribution
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- TECHNOLOGY -->
+
+            <div class="col-lg-2 col-md-6">
+
+                <div class="footer-heading">
+                    TECHNOLOGY
+                </div>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="home-automation.html">
+                            Home Automation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="commercial-automation.html">
+                            Commercial Automation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="industrial-automation.html">
+                            Industrial Automation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="smart-pole.html">
+                            R & D
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="transformers.html">
+                            Transformers
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="footer-heading">
+                    CONTACT
+                </div>
+
+                <ul class="footer-contact">
+
+                    <li>
+
+                        <i class="fas fa-location-dot"></i>
+
+                        <span>
+                            Madhapur, Hyderabad
+                        </span>
+
+                    </li>
+
+                    <li>
+
+                        <i class="fas fa-phone"></i>
+
+                        <span>
+                            +91 XXXXX XXXXX
+                        </span>
+
+                    </li>
+
+                    <li>
+
+                        <i class="fas fa-envelope"></i>
+
+                        <span>
+                            info@alphanumeric.com
+                        </span>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+            <span>
+
+                © 2026
+
+                <strong>
+                    Alpha Numeric
+                </strong>.
+
+                All Rights Reserved.
+
+            </span>
+
+            <span>
+
+                SMART TECHNOLOGY • INTELLIGENT LIVING • CONNECTED FUTURE
+
+            </span>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     BOOTSTRAP JS
+========================================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- =========================================================
+     NAVBAR SCROLL EFFECT
+========================================================= -->
+
+<script>
+
+    window.addEventListener("scroll", function () {
+
+        const navbar =
+            document.querySelector(".main-navbar");
+
+        if (window.scrollY > 30) {
+
+            navbar.style.boxShadow =
+                "0 5px 25px rgba(0,0,0,.07)";
+
+        } else {
+
+            navbar.style.boxShadow =
+                "none";
+
+        }
+
+    });
+
+</script>
+
+
+</body>
+
+</html>

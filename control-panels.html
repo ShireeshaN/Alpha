@@ -1,1102 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Control Panels | Power Segment</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet">
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: "Inter", sans-serif;
-            background: #f5f8fc;
-            color: #12233f;
-        }
-
-        .control-page {
-            width: 100%;
-            background: #fff;
-            overflow: hidden;
-        }
-
-
-        /* =========================================
-           HEADER
-        ========================================= */
-
-        .header {
-            height: 75px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            padding: 0 7%;
-
-            background: #082b57;
-            color: #fff;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 50%;
-
-            background: #f5b82e;
-            color: #082b57;
-
-            font-size: 21px;
-            font-weight: 800;
-        }
-
-        .logo-text h3 {
-            font-size: 18px;
-            letter-spacing: 1px;
-        }
-
-        .logo-text span {
-            font-size: 10px;
-            color: #d6e2f1;
-        }
-
-        .page-number {
-            font-size: 12px;
-            letter-spacing: 1px;
-            font-weight: 600;
-        }
-
-
-        /* =========================================
-           HERO
-        ========================================= */
-
-        .hero {
-            min-height: 480px;
-
-            display: flex;
-            align-items: center;
-
-            position: relative;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(3,29,61,0.98) 0%,
-                    rgba(3,29,61,0.90) 43%,
-                    rgba(3,29,61,0.25) 80%
-                ),
-                url("images/control-panel.jpg");
-
-            background-size: cover;
-            background-position: center;
-        }
-
-        .hero-content {
-            width: 60%;
-            padding-left: 8%;
-            color: #fff;
-        }
-
-        .small-title {
-            display: inline-block;
-
-            padding: 7px 15px;
-            margin-bottom: 20px;
-
-            border-left: 4px solid #f5b82e;
-
-            background: rgba(255,255,255,0.08);
-
-            font-size: 11px;
-            font-weight: 600;
-
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .hero h1 {
-            font-size: clamp(40px, 5vw, 68px);
-
-            line-height: 1.05;
-
-            text-transform: uppercase;
-
-            margin-bottom: 20px;
-        }
-
-        .hero h1 span {
-            color: #f5b82e;
-        }
-
-        .hero-description {
-            max-width: 570px;
-
-            color: #e1eaf4;
-
-            font-size: 15px;
-
-            line-height: 1.8;
-
-            margin-bottom: 28px;
-        }
-
-        .hero-btn {
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 10px;
-
-            padding: 13px 22px;
-
-            background: #f5b82e;
-
-            color: #082b57;
-
-            text-decoration: none;
-
-            font-size: 12px;
-
-            font-weight: 800;
-
-            border-radius: 3px;
-        }
-
-
-        /* =========================================
-           HIGHLIGHTS
-        ========================================= */
-
-        .highlights {
-            position: relative;
-
-            margin: -50px 7% 0;
-
-            display: grid;
-
-            grid-template-columns: repeat(4, 1fr);
-
-            background: #fff;
-
-            box-shadow: 0 12px 35px rgba(8,43,87,0.12);
-
-            z-index: 3;
-        }
-
-        .highlight {
-            min-height: 115px;
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 15px;
-
-            padding: 20px;
-
-            border-right: 1px solid #e5eaf0;
-        }
-
-        .highlight:last-child {
-            border-right: none;
-        }
-
-        .highlight-icon {
-            width: 45px;
-            height: 45px;
-
-            flex-shrink: 0;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            border-radius: 50%;
-
-            background: #eaf2fb;
-
-            color: #082b57;
-
-            font-size: 19px;
-        }
-
-        .highlight h4 {
-            font-size: 12px;
-
-            margin-bottom: 5px;
-        }
-
-        .highlight p {
-            color: #748297;
-
-            font-size: 10px;
-
-            line-height: 1.5;
-        }
-
-
-        /* =========================================
-           INTRO
-        ========================================= */
-
-        .intro {
-            padding: 85px 8% 70px;
-
-            display: grid;
-
-            grid-template-columns: 0.8fr 1.2fr;
-
-            gap: 75px;
-        }
-
-        .section-label {
-            color: #d99a00;
-
-            font-size: 11px;
-
-            font-weight: 800;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-
-            margin-bottom: 10px;
-        }
-
-        .section-title {
-            color: #082b57;
-
-            font-size: 34px;
-
-            line-height: 1.2;
-
-            margin-bottom: 18px;
-        }
-
-        .section-line {
-            width: 50px;
-
-            height: 4px;
-
-            background: #f5b82e;
-
-            margin-bottom: 25px;
-        }
-
-        .intro-text {
-            color: #637288;
-
-            font-size: 14px;
-
-            line-height: 1.9;
-        }
-
-
-        /* =========================================
-           PANEL TYPES
-        ========================================= */
-
-        .panel-section {
-            padding: 75px 8%;
-
-            background: #f3f7fb;
-        }
-
-        .panel-heading {
-            max-width: 720px;
-
-            text-align: center;
-
-            margin: 0 auto 45px;
-        }
-
-        .panel-heading .section-line {
-            margin: 0 auto 20px;
-        }
-
-        .panel-heading p {
-            color: #69788d;
-
-            font-size: 13px;
-
-            line-height: 1.8;
-        }
-
-        .panel-grid {
-            display: grid;
-
-            grid-template-columns: repeat(3, 1fr);
-
-            gap: 18px;
-        }
-
-        .panel-card {
-            position: relative;
-
-            min-height: 210px;
-
-            padding: 28px;
-
-            background: #fff;
-
-            border: 1px solid #e2e9f1;
-
-            overflow: hidden;
-
-            transition: 0.3s;
-        }
-
-        .panel-card::after {
-            content: "";
-
-            position: absolute;
-
-            width: 100px;
-            height: 100px;
-
-            right: -45px;
-            bottom: -45px;
-
-            border-radius: 50%;
-
-            background: rgba(245,184,46,0.12);
-        }
-
-        .panel-card:hover {
-            background: #082b57;
-
-            transform: translateY(-7px);
-
-            box-shadow: 0 15px 30px rgba(8,43,87,0.15);
-        }
-
-        .panel-icon {
-            width: 48px;
-            height: 48px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            background: #082b57;
-
-            color: #f5b82e;
-
-            border-radius: 6px;
-
-            font-size: 19px;
-
-            margin-bottom: 20px;
-
-            transition: 0.3s;
-        }
-
-        .panel-card:hover .panel-icon {
-            background: #f5b82e;
-
-            color: #082b57;
-        }
-
-        .panel-card h3 {
-            color: #183452;
-
-            font-size: 14px;
-
-            margin-bottom: 9px;
-
-            transition: 0.3s;
-        }
-
-        .panel-card p {
-            color: #728196;
-
-            font-size: 11px;
-
-            line-height: 1.7;
-
-            transition: 0.3s;
-        }
-
-        .panel-card:hover h3 {
-            color: #fff;
-        }
-
-        .panel-card:hover p {
-            color: #cbd8e7;
-        }
-
-
-        /* =========================================
-           TECHNICAL CAPABILITIES
-        ========================================= */
-
-        .technical-section {
-            padding: 80px 8%;
-
-            background: #fff;
-        }
-
-        .technical-header {
-            display: flex;
-
-            align-items: flex-end;
-
-            justify-content: space-between;
-
-            gap: 50px;
-
-            margin-bottom: 45px;
-        }
-
-        .technical-description {
-            max-width: 500px;
-
-            color: #68788d;
-
-            font-size: 13px;
-
-            line-height: 1.8;
-        }
-
-        .technical-grid {
-            display: grid;
-
-            grid-template-columns: repeat(4, 1fr);
-
-            gap: 15px;
-        }
-
-        .technical-card {
-            min-height: 150px;
-
-            padding: 25px 20px;
-
-            background: #f6f9fc;
-
-            border: 1px solid #e4ebf2;
-
-            position: relative;
-
-            transition: 0.3s;
-        }
-
-        .technical-card:hover {
-            transform: translateY(-6px);
-
-            border-color: #082b57;
-
-            box-shadow: 0 12px 25px rgba(8,43,87,0.10);
-        }
-
-        .technical-number {
-            position: absolute;
-
-            right: 18px;
-            top: 14px;
-
-            color: #e2e8ef;
-
-            font-size: 25px;
-
-            font-weight: 800;
-        }
-
-        .technical-card h4 {
-            color: #173552;
-
-            font-size: 12px;
-
-            margin-bottom: 10px;
-        }
-
-        .technical-card p {
-            color: #748297;
-
-            font-size: 10px;
-
-            line-height: 1.7;
-        }
-
-
-        /* =========================================
-           COMPONENTS
-        ========================================= */
-
-        .components-section {
-            padding: 75px 8%;
-
-            background: #f3f7fb;
-        }
-
-        .components-layout {
-            display: grid;
-
-            grid-template-columns: 0.75fr 1.25fr;
-
-            gap: 70px;
-
-            align-items: center;
-        }
-
-        .components-text p {
-            color: #68788d;
-
-            font-size: 13px;
-
-            line-height: 1.8;
-
-            margin-bottom: 25px;
-        }
-
-        .component-list {
-            display: grid;
-
-            grid-template-columns: 1fr 1fr;
-
-            gap: 10px;
-        }
-
-        .component-item {
-            padding: 13px;
-
-            background: #fff;
-
-            border-left: 3px solid #f5b82e;
-
-            color: #314861;
-
-            font-size: 11px;
-
-            font-weight: 600;
-        }
-
-        .components-visual {
-            min-height: 330px;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(8,43,87,0.30),
-                    rgba(8,43,87,0.05)
-                ),
-                url("images/panel-components.jpg");
-
-            background-size: cover;
-
-            background-position: center;
-
-            position: relative;
-        }
-
-        .visual-label {
-            position: absolute;
-
-            left: 25px;
-
-            bottom: 25px;
-
-            padding: 15px 20px;
-
-            background: #082b57;
-
-            color: #fff;
-
-            border-left: 4px solid #f5b82e;
-        }
-
-        .visual-label strong {
-            display: block;
-
-            color: #f5b82e;
-
-            font-size: 13px;
-
-            margin-bottom: 4px;
-        }
-
-        .visual-label span {
-            font-size: 10px;
-
-            color: #d4dfeb;
-        }
-
-
-        /* =========================================
-           MANUFACTURING PROCESS
-        ========================================= */
-
-        .process-section {
-            padding: 80px 8%;
-
-            background: #082b57;
-
-            color: #fff;
-        }
-
-        .process-header {
-            max-width: 700px;
-
-            margin-bottom: 45px;
-        }
-
-        .process-header .section-label {
-            color: #f5b82e;
-        }
-
-        .process-header .section-title {
-            color: #fff;
-        }
-
-        .process-header p {
-            color: #cbd8e7;
-
-            font-size: 13px;
-
-            line-height: 1.8;
-        }
-
-        .process-grid {
-            display: grid;
-
-            grid-template-columns: repeat(6, 1fr);
-
-            gap: 10px;
-        }
-
-        .process-step {
-            min-height: 170px;
-
-            padding: 22px 15px;
-
-            text-align: center;
-
-            background: rgba(255,255,255,0.04);
-
-            border: 1px solid rgba(255,255,255,0.12);
-
-            transition: 0.3s;
-        }
-
-        .process-step:hover {
-            background: rgba(255,255,255,0.09);
-
-            transform: translateY(-5px);
-        }
-
-        .process-number {
-            width: 40px;
-            height: 40px;
-
-            margin: 0 auto 15px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            border-radius: 50%;
-
-            background: #f5b82e;
-
-            color: #082b57;
-
-            font-size: 13px;
-
-            font-weight: 800;
-        }
-
-        .process-step h4 {
-            font-size: 11px;
-
-            margin-bottom: 8px;
-        }
-
-        .process-step p {
-            color: #b9c9da;
-
-            font-size: 9px;
-
-            line-height: 1.6;
-        }
-
-
-        /* =========================================
-           TESTING
-        ========================================= */
-
-        .testing-section {
-            padding: 75px 8%;
-
-            background: #fff;
-        }
-
-        .testing-grid {
-            display: grid;
-
-            grid-template-columns: repeat(4, 1fr);
-
-            gap: 15px;
-
-            margin-top: 40px;
-        }
-
-        .test-card {
-            padding: 25px 20px;
-
-            border: 1px solid #e3eaf1;
-
-            background: #f8fafc;
-
-            transition: 0.3s;
-        }
-
-        .test-card:hover {
-            border-color: #f5b82e;
-
-            transform: translateY(-5px);
-        }
-
-        .test-card span {
-            display: block;
-
-            color: #f0ad00;
-
-            font-size: 20px;
-
-            font-weight: 800;
-
-            margin-bottom: 12px;
-        }
-
-        .test-card h4 {
-            color: #193755;
-
-            font-size: 12px;
-
-            margin-bottom: 7px;
-        }
-
-        .test-card p {
-            color: #748297;
-
-            font-size: 10px;
-
-            line-height: 1.6;
-        }
-
-
-        /* =========================================
-           CTA
-        ========================================= */
-
-        .cta {
-            margin: 60px 8%;
-
-            min-height: 230px;
-
-            display: grid;
-
-            grid-template-columns: 1.2fr 0.8fr;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(8,43,87,1),
-                    rgba(8,43,87,0.70)
-                ),
-                url("images/control-panel-cta.jpg");
-
-            background-size: cover;
-
-            background-position: center;
-        }
-
-        .cta-content {
-            padding: 40px;
-
-            color: #fff;
-        }
-
-        .cta-content h2 {
-            font-size: 25px;
-
-            margin-bottom: 14px;
-        }
-
-        .cta-content p {
-            max-width: 570px;
-
-            color: #cfdae7;
-
-            font-size: 12px;
-
-            line-height: 1.8;
-        }
-
-        .cta-side {
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            border-left: 1px solid rgba(255,255,255,0.12);
-        }
-
-        .cta-side strong {
-            color: #f5b82e;
-
-            font-size: 27px;
-        }
-
-        .cta-side span {
-            display: block;
-
-            color: #fff;
-
-            font-size: 10px;
-
-            letter-spacing: 1px;
-        }
-
-
-        /* =========================================
-           FOOTER
-        ========================================= */
-
-        .footer {
-            min-height: 55px;
-
-            padding: 0 8%;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            background: #061f40;
-
-            color: #b9c9dc;
-
-            font-size: 9px;
-
-            letter-spacing: 1px;
-        }
-
-        .footer strong {
-            color: #f5b82e;
-        }
-
-
-        /* =========================================
-           RESPONSIVE
-        ========================================= */
-
-        @media (max-width: 1050px) {
-
-            .technical-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .process-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .testing-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-        }
-
-
-        @media (max-width: 800px) {
-
-            .hero-content {
-                width: 85%;
-            }
-
-            .highlights {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .intro {
-                grid-template-columns: 1fr;
-            }
-
-            .technical-header {
-                flex-direction: column;
-
-                align-items: flex-start;
-            }
-
-            .components-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .cta {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-side {
-                min-height: 120px;
-
-                border-left: none;
-
-                border-top: 1px solid rgba(255,255,255,0.12);
-            }
-
-        }
-
-
-        @media (max-width: 600px) {
-
-            .header {
-                padding: 0 5%;
-            }
-
-            .page-number {
-                display: none;
-            }
-
-            .hero {
-                min-height: 500px;
-            }
-
-            .hero-content {
-                width: 92%;
-
-                padding-left: 7%;
-            }
-
-            .highlights {
-                margin: 0;
-
-                grid-template-columns: 1fr;
-            }
-
-            .highlight {
-                border-right: none;
-
-                border-bottom: 1px solid #e5eaf0;
-            }
-
-            .intro,
-            .panel-section,
-            .technical-section,
-            .components-section,
-            .process-section,
-            .testing-section {
-                padding-left: 6%;
-                padding-right: 6%;
-            }
-
-            .panel-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .technical-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .component-list {
-                grid-template-columns: 1fr;
-            }
-
-            .process-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .testing-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cta {
-                margin: 40px 6%;
-            }
-
-            .footer {
-                padding: 15px 6%;
-
-                flex-direction: column;
-
-                gap: 8px;
-
-                justify-content: center;
-            }
-
-        }
-
-    </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Control Panels | Power Segment</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Inter",sans-serif;background:#fff;color:#111;overflow-x:hidden}
+a{text-decoration:none} img{max-width:100%;display:block}
+.control-page{width:100%;background:#fff;overflow:hidden}
+
+/* FIRST FILE NAVBAR STYLE */
+.main-navbar{height:100px;padding:0 7%;background:#fff!important;border-bottom:1px solid #e8e8e8;z-index:9999;transition:.3s ease}
+.main-navbar .navbar-brand{padding:0;margin:0}.main-navbar .navbar-brand img{height:55px;width:auto;object-fit:contain}
+.main-navbar .navbar-nav{align-items:center;gap:28px}.main-navbar .nav-link{color:#111!important;font-size:15px;font-weight:400;letter-spacing:1px;padding:10px 0!important;transition:.3s ease}.main-navbar .nav-link:hover{color:#666!important}.main-navbar .nav-link.active{color:#111!important;font-weight:600}
+.main-navbar .dropdown-toggle::after{margin-left:7px;vertical-align:middle;border-top:5px solid #111;border-right:4px solid transparent;border-left:4px solid transparent}
+.main-navbar .dropdown-menu{margin-top:18px;padding:10px 0;min-width:215px;border:1px solid #e5e5e5;border-radius:0;background:#fff;box-shadow:0 15px 40px rgba(0,0,0,.08)}
+.main-navbar .dropdown-item{padding:11px 20px;color:#222;font-size:13px;transition:.25s ease}.main-navbar .dropdown-item:hover{background:#f5f5f5;color:#000}.main-navbar .dropdown-item.active{background:#111;color:#fff}.main-navbar .navbar-toggler{border:none!important;box-shadow:none!important}
+
+/* CONTROL PANEL PAGE — FIRST FILE VISUAL LANGUAGE */
+.hero{min-height:650px;margin-top:100px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.82) 40%,rgba(0,0,0,.35) 75%,rgba(0,0,0,.10) 100%),url("images/control-panel.jpg");background-size:cover;background-position:center}
+.hero-content{width:100%;max-width:1350px;margin:auto;padding:100px 7%;color:#fff;position:relative;z-index:2}.small-title{display:flex;align-items:center;gap:12px;margin-bottom:24px;color:#bbb;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase}.small-title:before{content:"";width:42px;height:1px;background:#fff;flex:0 0 auto}
+.hero h1{max-width:850px;color:#fff;font-size:clamp(50px,7vw,94px);line-height:.96;font-weight:700;letter-spacing:-4px;margin-bottom:30px;text-transform:none}.hero h1 span{font-weight:300;color:#fff}.hero-description{max-width:650px;color:#d4d4d4;font-size:15px;line-height:1.9;margin-bottom:35px}.hero-btn{display:inline-flex;align-items:center;gap:12px;padding:15px 25px;background:#fff;color:#111;font-size:11px;font-weight:700;letter-spacing:1px;transition:.3s ease;border-radius:0}.hero-btn:hover{background:#ddd;color:#000;transform:translateY(-3px)}
+.highlights{width:86%;margin:-45px auto 0;position:relative;z-index:10;display:grid;grid-template-columns:repeat(4,1fr);background:#fff;box-shadow:0 20px 55px rgba(0,0,0,.12)}.highlight{min-height:115px;display:flex;align-items:center;gap:16px;padding:20px 25px;border-right:1px solid #e5e5e5}.highlight:last-child{border-right:none}.highlight-icon{width:44px;height:44px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:#111;color:#fff;font-size:17px;border-radius:0}.highlight h4{color:#111;font-size:12px;font-weight:600;margin-bottom:6px}.highlight p{color:#777;font-size:10px;line-height:1.6;margin:0}
+.intro{padding:110px 8%;display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}.section-label{color:#777;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px}.section-title{color:#111;font-size:clamp(34px,4vw,58px);line-height:1.08;font-weight:600;letter-spacing:-2px;margin-bottom:0}.section-line{width:45px;height:3px;background:#111;margin:20px 0 25px}.intro-text{color:#666;font-size:13px;line-height:1.9}
+.panel-section{padding:105px 8%;background:#f5f5f5}.panel-heading{max-width:720px;text-align:center;margin:0 auto 50px}.panel-heading .section-line{margin:20px auto 25px}.panel-heading p{color:#666;font-size:13px;line-height:1.9}.panel-grid{max-width:1250px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.panel-card{min-height:245px;position:relative;padding:32px;background:#fafafa;border:1px solid #e5e5e5;overflow:hidden;transition:.35s ease}.panel-card:before{content:"";position:absolute;left:0;top:0;width:0;height:3px;background:#111;transition:.35s ease}.panel-card:after{display:none}.panel-card:hover{background:#111;transform:translateY(-7px);box-shadow:0 20px 40px rgba(0,0,0,.12)}.panel-card:hover:before{width:100%}.panel-icon{width:48px;height:48px;display:flex;align-items:center;justify-content:center;margin-bottom:23px;background:#111;color:#fff;font-size:18px;border-radius:0;transition:.3s}.panel-card:hover .panel-icon{background:#fff;color:#111}.panel-card h3{color:#111;font-size:15px;font-weight:600;margin-bottom:10px;transition:.3s}.panel-card p{color:#777;font-size:11px;line-height:1.75;transition:.3s}.panel-card:hover h3{color:#fff}.panel-card:hover p{color:#aaa}
+.technical-section{padding:110px 8%;background:#fff}.technical-header{display:flex;align-items:flex-end;justify-content:space-between;gap:50px;margin:0 auto 50px;max-width:1250px}.technical-description{max-width:500px;color:#666;font-size:13px;line-height:1.9}.technical-grid{max-width:1250px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.technical-card{min-height:170px;padding:25px 20px;background:#fafafa;border:1px solid #e5e5e5;position:relative;transition:.35s}.technical-card:hover{transform:translateY(-6px);border-color:#111;box-shadow:0 12px 25px rgba(0,0,0,.10)}.technical-number{position:absolute;right:18px;top:14px;color:#e4e4e4;font-size:25px;font-weight:800}.technical-card h4{color:#111;font-size:12px;margin-bottom:10px}.technical-card p{color:#777;font-size:10px;line-height:1.7}
+.components-section{padding:110px 8%;background:#f6f6f6}.components-layout{max-width:1250px;margin:auto;display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:center}.components-text p{color:#666;font-size:13px;line-height:1.9;margin-bottom:25px}.component-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}.component-item{padding:18px;background:#fff;border-left:3px solid #111;color:#111;font-size:11px;font-weight:600}.components-visual{min-height:500px;background:linear-gradient(rgba(0,0,0,.12),rgba(0,0,0,.12)),url("images/panel-components.jpg");background-size:cover;background-position:center;position:relative}.visual-label{position:absolute;left:25px;bottom:25px;padding:18px 22px;background:#111;color:#fff}.visual-label strong{display:block;color:#fff;font-size:18px;margin-bottom:4px}.visual-label span{font-size:9px;color:#aaa;text-transform:uppercase;letter-spacing:1px}
+.process-section{padding:110px 8%;background:#111;color:#fff;position:relative;overflow:hidden}.process-header{max-width:700px;margin:0 auto 60px;}.process-header .section-label{color:#888}.process-header .section-title{color:#fff}.process-header p{color:#aaa;font-size:13px;line-height:1.8}.process-grid{max-width:1250px;margin:auto;display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative}.process-grid:before{content:"";position:absolute;left:30px;right:30px;top:25px;height:1px;background:#333}.process-step{position:relative;padding-right:25px;min-height:170px;background:transparent;border:none;transition:.3s}.process-step:hover{background:transparent;transform:translateY(-5px)}.process-number{width:50px;height:50px;margin:0 0 23px;display:flex;align-items:center;justify-content:center;position:relative;z-index:2;background:#111;border:1px solid #fff;color:#fff;border-radius:50%;font-size:11px;font-weight:700}.process-step h4{color:#fff;font-size:12px;font-weight:600;margin-bottom:8px}.process-step p{max-width:160px;color:#888;font-size:9px;line-height:1.7}
+.testing-section{padding:110px 8%;background:#fff}.testing-grid{max-width:1250px;margin:40px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.test-card{padding:25px 20px;border:1px solid #e5e5e5;background:#fafafa;transition:.35s}.test-card:hover{border-color:#111;transform:translateY(-5px)}.test-card span{display:block;color:#111;font-size:20px;font-weight:800;margin-bottom:12px}.test-card h4{color:#111;font-size:12px;margin-bottom:7px}.test-card p{color:#777;font-size:10px;line-height:1.6}
+.cta{max-width:1250px;margin:0 auto 100px;min-height:300px;display:grid;grid-template-columns:1.4fr .6fr;background:linear-gradient(90deg,rgba(0,0,0,1),rgba(0,0,0,.35)),url("images/control-panel-cta.jpg");background-size:cover;background-position:center;overflow:hidden}.cta-content{padding:50px;color:#fff}.cta-content h2{font-size:31px;line-height:1.2;margin-bottom:17px}.cta-content p{max-width:650px;color:#aaa;font-size:12px;line-height:1.8}.cta-side{display:flex;align-items:center;justify-content:center;border-left:1px solid rgba(255,255,255,.18)}.cta-side strong{color:#fff;font-size:27px}.cta-side span{display:block;color:#999;font-size:9px;letter-spacing:1px}
+.main-footer{background:#050505;color:#fff;padding:75px 7% 25px}.footer-logo img{height:55px;width:auto;margin-bottom:22px}.footer-description{max-width:370px;color:#888;font-size:12px;line-height:1.9}.footer-heading{color:#fff;font-size:12px;font-weight:600;letter-spacing:1.5px;margin-bottom:22px}.footer-links{list-style:none;padding:0;margin:0}.footer-links li{margin-bottom:11px}.footer-links a{color:#888;font-size:12px;transition:.3s}.footer-links a:hover{color:#fff;padding-left:4px}.footer-contact{list-style:none;padding:0;margin:0}.footer-contact li{display:flex;align-items:flex-start;gap:12px;color:#888;font-size:12px;line-height:1.8;margin-bottom:15px}.footer-contact i{width:18px;color:#fff;margin-top:4px}.footer-social{display:flex;gap:9px;margin-top:24px}.footer-social a{width:35px;height:35px;display:flex;align-items:center;justify-content:center;border:1px solid #2b2b2b;color:#999;font-size:13px;transition:.3s}.footer-social a:hover{background:#fff;color:#000;border-color:#fff}.footer-bottom{margin-top:55px;padding-top:20px;border-top:1px solid #222;display:flex;justify-content:space-between;align-items:center;gap:20px;color:#666;font-size:10px;letter-spacing:.5px}.footer-bottom strong{color:#fff;font-weight:500}
+@media(max-width:1100px){.main-navbar .navbar-nav{gap:18px}.panel-grid{grid-template-columns:repeat(2,1fr)}.technical-grid{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:repeat(3,1fr);row-gap:50px}.process-grid:before{display:none}.testing-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:991px){.main-navbar{height:auto;min-height:80px;padding:10px 5%}.main-navbar .navbar-brand img{height:48px}.main-navbar .navbar-collapse{margin-top:15px;padding:15px 0;background:#fff}.main-navbar .navbar-nav{align-items:flex-start;gap:0}.main-navbar .nav-item{width:100%}.main-navbar .nav-link{padding:12px 0!important}.hero{margin-top:80px}.intro,.components-layout{grid-template-columns:1fr}.intro{gap:55px}.technical-header{flex-direction:column;align-items:flex-start}.cta{margin-left:6%;margin-right:6%}.main-footer{padding:65px 7% 25px}}
+@media(max-width:600px){.main-navbar{padding:10px 5%}.hero{min-height:600px}.hero-content{padding:80px 6%}.hero h1{font-size:48px;letter-spacing:-2px}.highlights{width:100%;margin:0;grid-template-columns:1fr}.highlight{border-right:none;border-bottom:1px solid #e5e5e5}.intro,.panel-section,.technical-section,.components-section,.process-section,.testing-section{padding-left:6%;padding-right:6%}.panel-grid,.technical-grid,.testing-grid{grid-template-columns:1fr}.component-list{grid-template-columns:1fr}.process-grid{grid-template-columns:1fr 1fr}.cta{margin:40px 6%;grid-template-columns:1fr}.cta-side{min-height:120px;border-left:none;border-top:1px solid rgba(255,255,255,.18)}.footer-bottom{flex-direction:column;align-items:flex-start;gap:10px}}
+</style>
 </head>
-
-
 <body>
-
 <div class="control-page">
+<nav class="navbar navbar-expand-lg main-navbar fixed-top">
+
+<div class="container-fluid px-4 px-lg-5">
+
+<a class="navbar-brand" href="index.html">
+
+<img
+src="assets/img/b-alpha.png"
+alt="Alpha Numeric Logo">
+
+</a>
 
 
-    <!-- =========================================
-         HEADER
-    ========================================= -->
+<button
+class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarResponsive">
 
-    <header class="header">
+<span class="me-2">Menu</span>
 
-        <div class="logo">
+<i class="fas fa-bars"></i>
 
-            <div class="logo-icon">
-                ⚡
-            </div>
-
-            <div class="logo-text">
-
-                <h3>POWER SEGMENT</h3>
-
-                <span>
-                    Powering a Stronger Tomorrow
-                </span>
-
-            </div>
-
-        </div>
+</button>
 
 
-        <div class="page-number">
-            POWER SOLUTIONS / 03
-        </div>
+<div
+class="collapse navbar-collapse"
+id="navbarResponsive">
 
-    </header>
+<ul class="navbar-nav ms-auto">
+
+
+<li class="nav-item">
+<a class="nav-link" href="index.html">
+Home
+</a>
+</li>
+
+
+<li class="nav-item">
+<a class="nav-link" href="about.html">
+About
+</a>
+</li>
+
+
+<li class="nav-item dropdown">
+
+<a
+class="nav-link dropdown-toggle"
+href="#"
+data-bs-toggle="dropdown">
+
+Energy
+
+</a>
+
+<ul class="dropdown-menu">
+
+<li>
+<a class="dropdown-item" href="solar-energy.html">
+Solar Energy
+</a>
+</li>
+
+<li>
+<a class="dropdown-item" href="wind-energy.html">
+Wind Energy
+</a>
+</li>
+
+<li>
+<a class="dropdown-item" href="biomass-energy.html">
+Biomass Energy
+</a>
+</li>
+
+<li>
+<a class="dropdown-item" href="hydel-energy.html">
+Hydel Energy
+</a>
+</li>
+
+</ul>
+
+</li>
+
+
+<li class="nav-item dropdown">
+
+<a
+class="nav-link dropdown-toggle active"
+href="#"
+data-bs-toggle="dropdown">
+
+Power
+
+</a>
+
+<ul class="dropdown-menu">
+
+<li>
+<a class="dropdown-item" href="transmission.html">
+Transmission
+</a>
+</li>
+
+<li>
+<a class="dropdown-item" href="distribution.html">
+Distribution
+</a>
+</li>
+
+<li>
+<a class="dropdown-item active" href="control-panels.html">
+Control Panels
+</a>
+</li>
+
+<li>
+<a class="dropdown-item" href="panel-boards.html">
+Panel Boards
+</a>
+</li>
+
+</ul>
+
+</li>
+
+
+<li class="nav-item dropdown">
+
+<a
+class="nav-link dropdown-toggle"
+href="#"
+data-bs-toggle="dropdown">
+
+Automation
+
+</a>
+
+<ul class="dropdown-menu">
+
+<li>
+<a class="dropdown-item" href="home-automation.html">
+Home Automation
+</a>
+</li>
+
+<li>
+<a class="dropdown-item" href="commercial-automation.html">
+Commercial Automation
+</a>
+</li>
+
+<li>
+<a class="dropdown-item" href="industrial-automation.html">
+Industrial Automation
+</a>
+</li>
+
+<li>
+<a class="dropdown-item" href="hospital-automation.html">
+Hospital Automation
+</a>
+</li>
+
+<li>
+<a class="dropdown-item" href="hotel-automation.html">
+Hotel Automation
+</a>
+</li>
+
+</ul>
+
+</li>
+
+
+<li class="nav-item dropdown">
+
+<a
+class="nav-link dropdown-toggle"
+href="#"
+data-bs-toggle="dropdown">
+
+R & D
+
+</a>
+
+<ul class="dropdown-menu">
+
+<li>
+<a class="dropdown-item" href="smart-pole.html">
+Smart Pole
+</a>
+</li>
+
+<li>
+<a class="dropdown-item" href="smart-bollard.html">
+Smart Bollard
+</a>
+</li>
+
+<li>
+<a class="dropdown-item" href="window-leaf-ac.html">
+Window Leaf AC
+</a>
+</li>
+
+<li>
+<a class="dropdown-item" href="smart-conference-table.html">
+Smart Conference Table
+</a>
+</li>
+
+</ul>
+
+</li>
+
+
+<li class="nav-item dropdown">
+
+<a
+class="nav-link dropdown-toggle"
+href="#"
+data-bs-toggle="dropdown">
+
+Products
+
+</a>
+
+<ul class="dropdown-menu">
+
+<li>
+<a class="dropdown-item" href="transformers.html">
+Transformers
+</a>
+</li>
+
+<li>
+<a class="dropdown-item" href="panels.html">
+Panels
+</a>
+</li>
+
+<li>
+<a class="dropdown-item" href="switchgear.html">
+Switchgear
+</a>
+</li>
+
+<li>
+<a class="dropdown-item" href="controllers.html">
+Controllers
+</a>
+</li>
+
+<li>
+<a class="dropdown-item" href="accessories.html">
+Accessories
+</a>
+</li>
+
+</ul>
+
+</li>
+
+
+<li class="nav-item">
+<a class="nav-link" href="index.html#contact">
+Contact
+</a>
+</li>
+
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
 
 
 
@@ -2137,20 +1368,227 @@
          FOOTER
     ========================================= -->
 
-    <footer class="footer">
+    
+<footer class="main-footer">
 
-        <span>
-            POWERING PROGRESS. CONNECTING COMMUNITIES.
-        </span>
 
-        <strong>
-            CONTROL PANELS
-        </strong>
+<div class="container-fluid">
 
-    </footer>
+
+<div class="row g-5">
+
+
+<div class="col-lg-4 col-md-6 footer-column">
+
+<div class="footer-logo">
+
+<img
+src="assets/img/w-alpha.png"
+alt="Alpha Numeric Logo">
+
+</div>
+
+
+<p class="footer-description">
+
+Alpha Numeric is a technology-driven organization delivering
+intelligent solutions across energy, power, automation, IoT,
+lighting, R&D and industrial infrastructure.
+
+</p>
+
+
+<div class="footer-social">
+
+<a href="#" aria-label="LinkedIn">
+<i class="fab fa-linkedin-in"></i>
+</a>
+
+<a href="#" aria-label="Instagram">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="#" aria-label="Facebook">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+<a href="#" aria-label="YouTube">
+<i class="fab fa-youtube"></i>
+</a>
+
+</div>
+
+</div>
+
+
+<div class="col-lg-2 col-md-6 footer-column">
+
+<div class="footer-heading">
+SOLUTIONS
+</div>
+
+<ul class="footer-links">
+
+<li>
+<a href="solar-energy.html">
+Solar Energy
+</a>
+</li>
+
+<li>
+<a href="wind-energy.html">
+Wind Energy
+</a>
+</li>
+
+<li>
+<a href="biomass-energy.html">
+Biomass Energy
+</a>
+</li>
+
+<li>
+<a href="hydel-energy.html">
+Hydel Energy
+</a>
+</li>
+
+<li>
+<a href="transmission.html">
+Transmission
+</a>
+</li>
+
+<li>
+<a href="distribution.html">
+Distribution
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="col-lg-2 col-md-6 footer-column">
+
+<div class="footer-heading">
+TECHNOLOGY
+</div>
+
+<ul class="footer-links">
+
+<li>
+<a href="home-automation.html">
+Automation
+</a>
+</li>
+
+<li>
+<a href="smart-pole.html">
+R & D
+</a>
+</li>
+
+<li>
+<a href="transformers.html">
+Transformers
+</a>
+</li>
+
+<li>
+<a href="panels.html">
+Panels
+</a>
+</li>
+
+<li>
+<a href="switchgear.html">
+Switchgear
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="col-lg-4 col-md-6 footer-column">
+
+<div class="footer-heading">
+CONTACT
+</div>
+
+
+<ul class="footer-contact">
+
+<li>
+
+<i class="fas fa-location-dot"></i>
+
+<span>
+
+ Madhapur, Hyderabad
+
+</span>
+
+</li>
+
+
+<li>
+
+<i class="fas fa-phone"></i>
+
+<span>
++91 XXXXX XXXXX
+</span>
+
+</li>
+
+
+<li>
+
+<i class="fas fa-envelope"></i>
+
+<span>
+info@alphanumeric.com
+</span>
+
+</li>
+
+</ul>
+
+</div>
 
 
 </div>
 
+
+<div class="footer-bottom">
+
+<span>
+
+© 2026
+<strong>Alpha Numeric</strong>.
+All Rights Reserved.
+
+</span>
+
+
+<span>
+
+CLEAN ENERGY • SMART TECHNOLOGY • ENGINEERED FUTURE
+
+</span>
+
+</div>
+
+
+</div>
+
+</footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>window.addEventListener("scroll",function(){const navbar=document.querySelector(".main-navbar");if(window.scrollY>30){navbar.style.boxShadow="0 5px 25px rgba(0,0,0,0.07)";}else{navbar.style.boxShadow="none";}});</script>
 </body>
 </html>

@@ -2,18 +2,41 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Panel Boards | Power Segment</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Panel Boards | Alpha Numeric</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet">
 
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
     <style>
+
+        /* =========================================================
+           GLOBAL
+        ========================================================= */
 
         * {
             margin: 0;
@@ -21,101 +44,165 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: "Inter", sans-serif;
-            background: #f5f8fc;
-            color: #12233f;
+            background: #ffffff;
+            color: #111111;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
         }
 
         .panel-page {
             width: 100%;
             overflow: hidden;
-            background: #fff;
+            background: #ffffff;
         }
 
 
-        /* =========================================
-           HEADER
-        ========================================= */
+        /* =========================================================
+           NAVBAR
+        ========================================================= */
 
-        .header {
-            height: 75px;
-
+        .main-navbar {
+            height: 100px;
             padding: 0 7%;
 
-            display: flex;
+            background: #ffffff !important;
+
+            border-bottom: 1px solid #e5e5e5;
+
+            z-index: 9999;
+
+            transition: 0.3s ease;
+        }
+
+        .main-navbar .navbar-brand {
+            padding: 0;
+            margin: 0;
+        }
+
+        .main-navbar .navbar-brand img {
+            height: 55px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .main-navbar .navbar-nav {
             align-items: center;
-            justify-content: space-between;
-
-            background: #082b57;
-            color: #fff;
+            gap: 28px;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+        .main-navbar .nav-link {
+            color: #111111 !important;
 
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 50%;
-
-            background: #f5b82e;
-            color: #082b57;
-
-            font-size: 20px;
-            font-weight: 800;
-        }
-
-        .logo-text h3 {
-            font-size: 18px;
-            letter-spacing: 1px;
-        }
-
-        .logo-text span {
-            display: block;
-
-            margin-top: 2px;
-
-            color: #d7e3f1;
-
-            font-size: 9px;
+            font-size: 15px;
+            font-weight: 400;
 
             letter-spacing: 1px;
+
+            padding: 10px 0 !important;
+
+            transition: 0.3s ease;
         }
 
-        .page-number {
-            font-size: 11px;
+        .main-navbar .nav-link:hover {
+            color: #777777 !important;
+        }
+
+        .main-navbar .nav-link.active {
             font-weight: 600;
-            letter-spacing: 1.5px;
+        }
+
+        .main-navbar .dropdown-toggle::after {
+            margin-left: 7px;
+
+            vertical-align: middle;
+
+            border-top: 5px solid #111111;
+            border-right: 4px solid transparent;
+            border-left: 4px solid transparent;
+        }
+
+        .main-navbar .dropdown-menu {
+            margin-top: 18px;
+
+            padding: 10px 0;
+
+            min-width: 215px;
+
+            border: 1px solid #dddddd;
+
+            border-radius: 0;
+
+            background: #ffffff;
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .main-navbar .dropdown-item {
+            padding: 11px 20px;
+
+            color: #222222;
+
+            font-size: 13px;
+
+            transition: 0.25s ease;
+        }
+
+        .main-navbar .dropdown-item:hover {
+            background: #000000;
+            color: #ffffff;
+        }
+
+        .main-navbar .dropdown-item.active {
+            background: #000000;
+            color: #ffffff;
+        }
+
+        .main-navbar .navbar-toggler {
+            border: none !important;
+            box-shadow: none !important;
+
+            color: #111111;
         }
 
 
-        /* =========================================
+        /* =========================================================
            HERO
-        ========================================= */
+        ========================================================= */
 
         .hero {
-            min-height: 500px;
+            min-height: 650px;
+
+            margin-top: 100px;
 
             display: flex;
             align-items: center;
 
             position: relative;
 
+            overflow: hidden;
+
             background:
                 linear-gradient(
                     90deg,
-                    rgba(3, 29, 61, .98) 0%,
-                    rgba(3, 29, 61, .90) 42%,
-                    rgba(3, 29, 61, .25) 85%
+                    rgba(0, 0, 0, 0.96) 0%,
+                    rgba(0, 0, 0, 0.88) 38%,
+                    rgba(0, 0, 0, 0.50) 68%,
+                    rgba(0, 0, 0, 0.15) 100%
                 ),
                 url("images/panel-board-hero.jpg");
 
@@ -124,111 +211,151 @@
         }
 
         .hero-content {
-            width: 65%;
-            padding-left: 8%;
-            color: #fff;
+            width: 100%;
+            max-width: 1350px;
+
+            margin: auto;
+
+            padding: 100px 7%;
+
+            color: #ffffff;
         }
 
         .hero-label {
-            display: inline-block;
+            display: flex;
 
-            padding: 8px 15px;
+            align-items: center;
 
-            margin-bottom: 20px;
+            gap: 12px;
 
-            border-left: 4px solid #f5b82e;
+            margin-bottom: 24px;
 
-            background: rgba(255, 255, 255, .08);
+            color: #cccccc;
 
-            color: #e7edf5;
-
-            font-size: 10px;
-
+            font-size: 11px;
             font-weight: 700;
 
-            letter-spacing: 2px;
+            letter-spacing: 3px;
 
             text-transform: uppercase;
+        }
+
+        .hero-label::before {
+            content: "";
+
+            width: 42px;
+            height: 1px;
+
+            background: #ffffff;
         }
 
         .hero h1 {
-            font-size: clamp(42px, 5.5vw, 70px);
+            max-width: 850px;
 
-            line-height: 1.03;
+            color: #ffffff;
+
+            font-size: clamp(50px, 7vw, 94px);
+
+            line-height: 0.96;
+
+            font-weight: 700;
+
+            letter-spacing: -4px;
+
+            margin-bottom: 30px;
 
             text-transform: uppercase;
-
-            margin-bottom: 22px;
         }
 
         .hero h1 span {
-            color: #f5b82e;
+            color: #ffffff;
+
+            font-weight: 300;
         }
 
         .hero p {
-            max-width: 590px;
+            max-width: 650px;
 
-            color: #dce6f0;
+            color: #d2d2d2;
 
-            font-size: 14px;
+            font-size: 15px;
 
             line-height: 1.9;
 
-            margin-bottom: 28px;
+            margin-bottom: 35px;
         }
 
         .hero-button {
-            display: inline-block;
+            display: inline-flex;
 
-            padding: 14px 23px;
+            align-items: center;
 
-            background: #f5b82e;
+            gap: 12px;
 
-            color: #082b57;
+            padding: 15px 26px;
 
-            text-decoration: none;
+            background: #ffffff;
+
+            color: #000000;
+
+            border: 1px solid #ffffff;
 
             font-size: 11px;
 
-            font-weight: 800;
+            font-weight: 700;
 
-            letter-spacing: .5px;
+            letter-spacing: 1px;
 
-            border-radius: 3px;
+            transition: 0.3s ease;
+        }
+
+        .hero-button:hover {
+            background: #000000;
+
+            color: #ffffff;
+
+            border-color: #ffffff;
+
+            transform: translateY(-3px);
         }
 
 
-        /* =========================================
+        /* =========================================================
            HIGHLIGHTS
-        ========================================= */
+        ========================================================= */
 
         .highlights {
+            width: 86%;
+
+            margin: -45px auto 0;
+
             position: relative;
 
-            margin: -48px 7% 0;
+            z-index: 10;
 
             display: grid;
 
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns:
+                repeat(4, 1fr);
 
-            background: #fff;
+            background: #ffffff;
 
-            box-shadow: 0 15px 35px rgba(8, 43, 87, .12);
-
-            z-index: 3;
+            box-shadow:
+                0 20px 55px rgba(0, 0, 0, 0.12);
         }
 
         .highlight {
             min-height: 115px;
 
-            padding: 20px;
-
             display: flex;
+
             align-items: center;
 
-            gap: 14px;
+            gap: 16px;
 
-            border-right: 1px solid #e5eaf0;
+            padding: 20px 25px;
+
+            border-right: 1px solid #e5e5e5;
         }
 
         .highlight:last-child {
@@ -242,84 +369,101 @@
             flex-shrink: 0;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
-            border-radius: 50%;
+            background: #000000;
 
-            background: #edf3f9;
-
-            color: #082b57;
+            color: #ffffff;
 
             font-size: 17px;
         }
 
         .highlight h4 {
-            font-size: 11px;
+            color: #111111;
 
-            color: #183452;
+            font-size: 12px;
 
-            margin-bottom: 5px;
+            font-weight: 600;
+
+            margin-bottom: 6px;
         }
 
         .highlight p {
-            color: #77869a;
-
-            font-size: 9px;
-
-            line-height: 1.5;
-        }
-
-
-        /* =========================================
-           INTRO
-        ========================================= */
-
-        .intro {
-            padding: 90px 8% 75px;
-
-            display: grid;
-
-            grid-template-columns: .85fr 1.15fr;
-
-            gap: 75px;
-        }
-
-        .section-label {
-            color: #d49a08;
+            color: #777777;
 
             font-size: 10px;
 
-            font-weight: 800;
+            line-height: 1.6;
 
-            letter-spacing: 2px;
+            margin: 0;
+        }
+
+
+        /* =========================================================
+           COMMON SECTION STYLES
+        ========================================================= */
+
+        .section-label {
+            color: #777777;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
 
             text-transform: uppercase;
 
-            margin-bottom: 10px;
+            margin-bottom: 14px;
         }
 
         .section-title {
-            color: #082b57;
+            color: #111111;
 
-            font-size: 34px;
+            font-size: clamp(34px, 4vw, 58px);
 
-            line-height: 1.2;
+            line-height: 1.08;
 
-            margin-bottom: 18px;
+            font-weight: 600;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 0;
         }
 
         .section-line {
-            width: 50px;
-            height: 4px;
+            width: 45px;
 
-            background: #f5b82e;
+            height: 3px;
 
-            margin-bottom: 24px;
+            background: #000000;
+
+            margin: 20px 0 25px;
+        }
+
+
+        /* =========================================================
+           INTRO
+        ========================================================= */
+
+        .intro {
+            padding: 110px 8%;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 90px;
+
+            align-items: center;
+
+            background: #ffffff;
         }
 
         .intro-text {
-            color: #68778b;
+            color: #666666;
 
             font-size: 13px;
 
@@ -327,58 +471,63 @@
         }
 
 
-        /* =========================================
+        /* =========================================================
            PANEL TYPES
-        ========================================= */
+        ========================================================= */
 
         .panel-types {
-            padding: 80px 8%;
+            padding: 105px 8%;
 
-            background: #f3f7fb;
+            background: #f5f5f5;
         }
 
         .section-heading {
             max-width: 720px;
 
-            margin: 0 auto 45px;
-
             text-align: center;
+
+            margin: 0 auto 50px;
         }
 
         .section-heading .section-line {
-            margin: 0 auto 22px;
+            margin: 20px auto 25px;
         }
 
         .section-heading p {
-            color: #6c7b8e;
+            color: #666666;
 
-            font-size: 12px;
+            font-size: 13px;
 
-            line-height: 1.8;
+            line-height: 1.9;
         }
 
         .panel-grid {
+            max-width: 1250px;
+
+            margin: auto;
+
             display: grid;
 
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns:
+                repeat(3, 1fr);
 
             gap: 18px;
         }
 
         .panel-card {
-            min-height: 230px;
-
-            padding: 28px;
+            min-height: 245px;
 
             position: relative;
 
-            background: #fff;
+            padding: 32px;
 
-            border: 1px solid #e1e8ef;
+            background: #ffffff;
+
+            border: 1px solid #dddddd;
 
             overflow: hidden;
 
-            transition: .3s;
+            transition: 0.35s ease;
         }
 
         .panel-card::before {
@@ -386,31 +535,28 @@
 
             position: absolute;
 
-            top: 0;
             left: 0;
+            top: 0;
 
-            width: 100%;
-            height: 4px;
+            width: 0;
+            height: 3px;
 
-            background: #f5b82e;
+            background: #000000;
 
-            transform: scaleX(0);
-
-            transform-origin: left;
-
-            transition: .3s;
+            transition: 0.35s ease;
         }
 
         .panel-card:hover {
+            background: #000000;
+
             transform: translateY(-7px);
 
-            background: #082b57;
-
-            box-shadow: 0 15px 30px rgba(8, 43, 87, .14);
+            box-shadow:
+                0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
         .panel-card:hover::before {
-            transform: scaleX(1);
+            width: 100%;
         }
 
         .panel-icon {
@@ -418,89 +564,101 @@
             height: 48px;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
-            background: #082b57;
+            margin-bottom: 23px;
 
-            color: #f5b82e;
+            background: #000000;
 
-            border-radius: 6px;
+            color: #ffffff;
 
             font-size: 18px;
 
-            margin-bottom: 20px;
+            transition: 0.3s ease;
         }
 
         .panel-card:hover .panel-icon {
-            background: #f5b82e;
-            color: #082b57;
+            background: #ffffff;
+
+            color: #000000;
         }
 
         .panel-card h3 {
-            color: #193654;
+            color: #111111;
 
-            font-size: 14px;
+            font-size: 15px;
+
+            font-weight: 600;
 
             margin-bottom: 10px;
 
-            transition: .3s;
+            transition: 0.3s ease;
         }
 
         .panel-card p {
-            color: #718096;
+            color: #777777;
 
-            font-size: 10px;
+            font-size: 11px;
 
             line-height: 1.75;
 
-            transition: .3s;
+            transition: 0.3s ease;
         }
 
         .panel-card:hover h3 {
-            color: #fff;
+            color: #ffffff;
         }
 
         .panel-card:hover p {
-            color: #cbd8e7;
+            color: #bbbbbb;
         }
 
 
-        /* =========================================
-           DISTRIBUTION SYSTEM
-        ========================================= */
+        /* =========================================================
+           DISTRIBUTION
+        ========================================================= */
 
         .distribution-section {
-            padding: 85px 8%;
+            padding: 110px 8%;
 
-            background: #fff;
+            background: #ffffff;
         }
 
         .distribution-header {
+            max-width: 1250px;
+
+            margin: 0 auto 50px;
+
             display: flex;
 
             justify-content: space-between;
+
             align-items: flex-end;
 
             gap: 50px;
-
-            margin-bottom: 45px;
         }
 
         .distribution-header p {
             max-width: 520px;
 
-            color: #68788d;
+            color: #666666;
 
-            font-size: 12px;
+            font-size: 13px;
 
-            line-height: 1.8;
+            line-height: 1.9;
         }
 
         .distribution-grid {
+            max-width: 1250px;
+
+            margin: auto;
+
             display: grid;
 
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns:
+                repeat(4, 1fr);
 
             gap: 15px;
         }
@@ -508,23 +666,26 @@
         .distribution-card {
             min-height: 175px;
 
-            padding: 25px 20px;
-
-            background: #f6f9fc;
-
-            border: 1px solid #e3eaf1;
-
             position: relative;
 
-            transition: .3s;
+            padding: 27px 22px;
+
+            background: #f7f7f7;
+
+            border: 1px solid #dddddd;
+
+            transition: 0.3s ease;
         }
 
         .distribution-card:hover {
-            transform: translateY(-6px);
+            transform: translateY(-7px);
 
-            border-color: #082b57;
+            background: #ffffff;
 
-            box-shadow: 0 12px 25px rgba(8, 43, 87, .10);
+            border-color: #000000;
+
+            box-shadow:
+                0 15px 30px rgba(0, 0, 0, 0.10);
         }
 
         .distribution-number {
@@ -533,15 +694,15 @@
             top: 14px;
             right: 17px;
 
-            color: #e1e7ee;
+            color: #dddddd;
 
-            font-size: 23px;
+            font-size: 24px;
 
             font-weight: 800;
         }
 
         .distribution-card h4 {
-            color: #183653;
+            color: #111111;
 
             font-size: 12px;
 
@@ -549,7 +710,7 @@
         }
 
         .distribution-card p {
-            color: #718095;
+            color: #777777;
 
             font-size: 10px;
 
@@ -557,35 +718,40 @@
         }
 
 
-        /* =========================================
-           BUSBAR SECTION
-        ========================================= */
+        /* =========================================================
+           BUSBAR
+        ========================================================= */
 
         .busbar-section {
-            padding: 80px 8%;
+            padding: 105px 8%;
 
-            background: #f3f7fb;
+            background: #f5f5f5;
         }
 
         .busbar-layout {
+            max-width: 1250px;
+
+            margin: auto;
+
             display: grid;
 
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns:
+                1fr 1fr;
 
-            gap: 70px;
+            gap: 80px;
 
             align-items: center;
         }
 
         .busbar-image {
-            min-height: 390px;
+            min-height: 470px;
 
             position: relative;
 
             background:
                 linear-gradient(
-                    rgba(8, 43, 87, .18),
-                    rgba(8, 43, 87, .18)
+                    rgba(0, 0, 0, 0.18),
+                    rgba(0, 0, 0, 0.18)
                 ),
                 url("images/busbar-panel.jpg");
 
@@ -600,35 +766,37 @@
             left: 25px;
             bottom: 25px;
 
-            padding: 15px 20px;
+            padding: 18px 22px;
 
-            background: #082b57;
+            background: #000000;
 
-            color: #fff;
+            color: #ffffff;
 
-            border-left: 4px solid #f5b82e;
+            border-left: 4px solid #ffffff;
         }
 
         .image-tag strong {
             display: block;
 
-            color: #f5b82e;
+            color: #ffffff;
 
-            font-size: 12px;
+            font-size: 13px;
 
             margin-bottom: 5px;
         }
 
         .image-tag span {
-            color: #d2dce8;
+            color: #bbbbbb;
 
             font-size: 9px;
+
+            letter-spacing: 1px;
         }
 
         .busbar-content p {
-            color: #68788d;
+            color: #666666;
 
-            font-size: 12px;
+            font-size: 13px;
 
             line-height: 1.9;
 
@@ -638,19 +806,20 @@
         .feature-list {
             display: grid;
 
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns:
+                1fr 1fr;
 
             gap: 10px;
         }
 
         .feature {
-            padding: 13px 14px;
+            padding: 16px;
 
-            background: #fff;
+            background: #ffffff;
 
-            border-left: 3px solid #f5b82e;
+            border-left: 3px solid #000000;
 
-            color: #314861;
+            color: #222222;
 
             font-size: 10px;
 
@@ -658,83 +827,93 @@
         }
 
 
-        /* =========================================
-           DESIGN CAPABILITIES
-        ========================================= */
+        /* =========================================================
+           CAPABILITIES
+        ========================================================= */
 
         .capability-section {
-            padding: 80px 8%;
+            padding: 110px 8%;
 
-            background: #082b57;
+            background: #000000;
 
-            color: #fff;
+            color: #ffffff;
         }
 
         .capability-header {
-            max-width: 700px;
+            max-width: 720px;
 
-            margin-bottom: 45px;
+            margin: 0 auto 55px;
         }
 
         .capability-header .section-label {
-            color: #f5b82e;
+            color: #aaaaaa;
         }
 
         .capability-header .section-title {
-            color: #fff;
+            color: #ffffff;
+        }
+
+        .capability-header .section-line {
+            background: #ffffff;
         }
 
         .capability-header p {
-            color: #c9d6e4;
+            color: #bbbbbb;
 
-            font-size: 12px;
+            font-size: 13px;
 
             line-height: 1.8;
         }
 
         .capability-grid {
+            max-width: 1250px;
+
+            margin: auto;
+
             display: grid;
 
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns:
+                repeat(6, 1fr);
 
             gap: 10px;
         }
 
         .capability-card {
-            min-height: 175px;
+            min-height: 180px;
 
-            padding: 23px 15px;
+            padding: 25px 15px;
 
             text-align: center;
 
-            border: 1px solid rgba(255, 255, 255, .12);
+            border: 1px solid #333333;
 
-            background: rgba(255, 255, 255, .04);
+            background: rgba(255,255,255,0.03);
 
-            transition: .3s;
+            transition: 0.3s ease;
         }
 
         .capability-card:hover {
-            background: rgba(255, 255, 255, .09);
+            background: #ffffff;
 
-            transform: translateY(-5px);
+            transform: translateY(-6px);
         }
 
         .capability-number {
-            width: 40px;
-            height: 40px;
+            width: 42px;
+            height: 42px;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
             margin: 0 auto 15px;
 
+            background: #ffffff;
+
+            color: #000000;
+
             border-radius: 50%;
-
-            background: #f5b82e;
-
-            color: #082b57;
 
             font-size: 12px;
 
@@ -742,62 +921,81 @@
         }
 
         .capability-card h4 {
+            color: #ffffff;
+
             font-size: 10px;
 
             margin-bottom: 8px;
+
+            transition: 0.3s;
         }
 
         .capability-card p {
-            color: #b9c8d9;
+            color: #aaaaaa;
 
             font-size: 9px;
 
             line-height: 1.6;
+
+            transition: 0.3s;
+        }
+
+        .capability-card:hover h4 {
+            color: #000000;
+        }
+
+        .capability-card:hover p {
+            color: #555555;
         }
 
 
-        /* =========================================
+        /* =========================================================
            SAFETY
-        ========================================= */
+        ========================================================= */
 
         .safety-section {
-            padding: 80px 8%;
+            padding: 105px 8%;
 
-            background: #fff;
+            background: #ffffff;
         }
 
         .safety-grid {
+            max-width: 1250px;
+
+            margin: 45px auto 0;
+
             display: grid;
 
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns:
+                repeat(4, 1fr);
 
             gap: 16px;
-
-            margin-top: 40px;
         }
 
         .safety-card {
-            padding: 25px 20px;
+            padding: 27px 22px;
 
-            border: 1px solid #e2e9f0;
+            background: #f7f7f7;
 
-            background: #f8fafc;
+            border: 1px solid #dddddd;
 
-            transition: .3s;
+            transition: 0.3s ease;
         }
 
         .safety-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px);
 
-            border-color: #f5b82e;
+            background: #ffffff;
+
+            border-color: #000000;
         }
 
         .safety-card span {
             display: block;
 
-            color: #d69d0c;
+            color: #000000;
 
-            font-size: 21px;
+            font-size: 22px;
 
             font-weight: 800;
 
@@ -805,7 +1003,7 @@
         }
 
         .safety-card h4 {
-            color: #183653;
+            color: #111111;
 
             font-size: 12px;
 
@@ -813,7 +1011,7 @@
         }
 
         .safety-card p {
-            color: #718096;
+            color: #777777;
 
             font-size: 10px;
 
@@ -821,20 +1019,25 @@
         }
 
 
-        /* =========================================
+        /* =========================================================
            APPLICATIONS
-        ========================================= */
+        ========================================================= */
 
         .application-section {
-            padding: 80px 8%;
+            padding: 105px 8%;
 
-            background: #f3f7fb;
+            background: #f5f5f5;
         }
 
         .application-content {
+            max-width: 1250px;
+
+            margin: auto;
+
             display: grid;
 
-            grid-template-columns: .8fr 1.2fr;
+            grid-template-columns:
+                0.8fr 1.2fr;
 
             gap: 70px;
 
@@ -842,9 +1045,9 @@
         }
 
         .application-description {
-            color: #68788d;
+            color: #666666;
 
-            font-size: 12px;
+            font-size: 13px;
 
             line-height: 1.9;
         }
@@ -852,21 +1055,30 @@
         .application-list {
             display: grid;
 
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns:
+                repeat(2, 1fr);
 
             gap: 12px;
         }
 
         .application-item {
-            padding: 20px;
+            padding: 21px;
 
-            background: #fff;
+            background: #ffffff;
 
-            border: 1px solid #e2e9f0;
+            border: 1px solid #dddddd;
 
             position: relative;
 
             overflow: hidden;
+
+            transition: 0.3s ease;
+        }
+
+        .application-item:hover {
+            transform: translateY(-4px);
+
+            border-color: #000000;
         }
 
         .application-item::after {
@@ -874,21 +1086,21 @@
 
             position: absolute;
 
-            width: 55px;
-            height: 55px;
+            width: 60px;
+            height: 60px;
 
             right: -25px;
             bottom: -25px;
 
             border-radius: 50%;
 
-            background: rgba(245, 184, 46, .12);
+            background: rgba(0, 0, 0, 0.05);
         }
 
         .application-item strong {
             display: block;
 
-            color: #193654;
+            color: #111111;
 
             font-size: 11px;
 
@@ -896,7 +1108,7 @@
         }
 
         .application-item span {
-            color: #78879a;
+            color: #777777;
 
             font-size: 9px;
 
@@ -904,24 +1116,27 @@
         }
 
 
-        /* =========================================
+        /* =========================================================
            CTA
-        ========================================= */
+        ========================================================= */
 
         .cta {
-            margin: 60px 8%;
+            max-width: 1250px;
 
-            min-height: 230px;
+            margin: 80px auto;
+
+            min-height: 280px;
 
             display: grid;
 
-            grid-template-columns: 1.2fr .8fr;
+            grid-template-columns:
+                1.3fr 0.7fr;
 
             background:
                 linear-gradient(
                     90deg,
-                    rgba(8, 43, 87, 1),
-                    rgba(8, 43, 87, .72)
+                    rgba(0,0,0,1),
+                    rgba(0,0,0,0.70)
                 ),
                 url("images/panel-board-cta.jpg");
 
@@ -931,23 +1146,27 @@
         }
 
         .cta-content {
-            padding: 42px;
+            padding: 50px;
 
-            color: #fff;
+            color: #ffffff;
         }
 
         .cta-content h2 {
-            font-size: 25px;
+            color: #ffffff;
 
-            margin-bottom: 13px;
+            font-size: 31px;
+
+            line-height: 1.2;
+
+            margin-bottom: 15px;
         }
 
         .cta-content p {
-            max-width: 590px;
+            max-width: 650px;
 
-            color: #cbd7e4;
+            color: #cccccc;
 
-            font-size: 11px;
+            font-size: 12px;
 
             line-height: 1.8;
         }
@@ -958,21 +1177,21 @@
             align-items: center;
             justify-content: center;
 
-            border-left: 1px solid rgba(255,255,255,.13);
+            border-left: 1px solid #444444;
         }
 
         .cta-side strong {
-            color: #f5b82e;
-
-            font-size: 24px;
-
             display: block;
 
-            margin-bottom: 5px;
+            color: #ffffff;
+
+            font-size: 22px;
+
+            margin-bottom: 6px;
         }
 
         .cta-side span {
-            color: #fff;
+            color: #bbbbbb;
 
             font-size: 9px;
 
@@ -980,63 +1199,248 @@
         }
 
 
-        /* =========================================
+        /* =========================================================
            FOOTER
-        ========================================= */
+        ========================================================= */
 
-        .footer {
-            min-height: 55px;
+        .main-footer {
+            background: #050505;
 
-            padding: 0 8%;
+            color: #ffffff;
+
+            padding: 75px 7% 25px;
+        }
+
+        .footer-logo img {
+            height: 55px;
+
+            width: auto;
+
+            margin-bottom: 22px;
+        }
+
+        .footer-description {
+            max-width: 370px;
+
+            color: #888888;
+
+            font-size: 12px;
+
+            line-height: 1.9;
+        }
+
+        .footer-heading {
+            color: #ffffff;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            letter-spacing: 1.5px;
+
+            margin-bottom: 22px;
+        }
+
+        .footer-links {
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 11px;
+        }
+
+        .footer-links a {
+            color: #888888;
+
+            font-size: 12px;
+
+            transition: 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+
+            padding-left: 4px;
+        }
+
+        .footer-contact {
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+        }
+
+        .footer-contact li {
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 12px;
+
+            color: #888888;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+            margin-bottom: 15px;
+        }
+
+        .footer-contact i {
+            width: 18px;
+
+            color: #ffffff;
+
+            margin-top: 4px;
+        }
+
+        .footer-social {
+            display: flex;
+
+            gap: 9px;
+
+            margin-top: 24px;
+        }
+
+        .footer-social a {
+            width: 35px;
+            height: 35px;
 
             display: flex;
 
             align-items: center;
+            justify-content: center;
+
+            border: 1px solid #333333;
+
+            color: #999999;
+
+            font-size: 13px;
+
+            transition: 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: #ffffff;
+
+            color: #000000;
+
+            border-color: #ffffff;
+        }
+
+        .footer-bottom {
+            margin-top: 55px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid #222222;
+
+            display: flex;
+
             justify-content: space-between;
 
-            background: #061f40;
+            align-items: center;
 
-            color: #b9c9dc;
+            gap: 20px;
 
-            font-size: 9px;
+            color: #666666;
 
-            letter-spacing: 1px;
+            font-size: 10px;
+
+            letter-spacing: 0.5px;
         }
 
-        .footer strong {
-            color: #f5b82e;
+        .footer-bottom strong {
+            color: #ffffff;
+
+            font-weight: 500;
         }
 
 
-        /* =========================================
+        /* =========================================================
            RESPONSIVE
-        ========================================= */
+        ========================================================= */
 
-        @media (max-width: 1050px) {
+        @media (max-width: 1100px) {
 
-            .distribution-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .main-navbar .navbar-nav {
+                gap: 18px;
             }
 
-            .safety-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .panel-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .distribution-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
             .capability-grid {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+            .safety-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
         }
 
 
-        @media (max-width: 800px) {
+        @media (max-width: 991px) {
 
-            .hero-content {
-                width: 90%;
+            .main-navbar {
+                height: auto;
+
+                min-height: 80px;
+
+                padding: 10px 5%;
             }
 
-            .highlights {
-                grid-template-columns: repeat(2, 1fr);
+            .main-navbar .navbar-brand img {
+                height: 48px;
+            }
+
+            .main-navbar .navbar-collapse {
+                margin-top: 15px;
+
+                padding: 15px 0;
+
+                background: #ffffff;
+            }
+
+            .main-navbar .navbar-nav {
+                align-items: flex-start;
+
+                gap: 0;
+            }
+
+            .main-navbar .nav-item {
+                width: 100%;
+            }
+
+            .main-navbar .nav-link {
+                padding: 12px 5px !important;
+            }
+
+            .main-navbar .dropdown-menu {
+                margin-top: 0;
+
+                border: none;
+
+                box-shadow: none;
+            }
+
+            .hero {
+                margin-top: 80px;
             }
 
             .intro,
@@ -1047,44 +1451,38 @@
 
             .distribution-header {
                 flex-direction: column;
+
                 align-items: flex-start;
             }
 
             .cta {
-                grid-template-columns: 1fr;
-            }
+                margin-left: 6%;
 
-            .cta-side {
-                min-height: 120px;
-
-                border-left: none;
-
-                border-top: 1px solid rgba(255,255,255,.13);
+                margin-right: 6%;
             }
 
         }
 
 
-        @media (max-width: 600px) {
-
-            .header {
-                padding: 0 5%;
-            }
-
-            .page-number {
-                display: none;
-            }
+        @media (max-width: 767px) {
 
             .hero {
-                min-height: 500px;
+                min-height: 650px;
             }
 
             .hero-content {
-                width: 94%;
-                padding-left: 6%;
+                padding: 90px 7%;
+            }
+
+            .hero h1 {
+                font-size: 54px;
+
+                letter-spacing: -3px;
             }
 
             .highlights {
+                width: 100%;
+
                 margin: 0;
 
                 grid-template-columns: 1fr;
@@ -1093,7 +1491,7 @@
             .highlight {
                 border-right: none;
 
-                border-bottom: 1px solid #e5eaf0;
+                border-bottom: 1px solid #e5e5e5;
             }
 
             .intro,
@@ -1103,8 +1501,9 @@
             .capability-section,
             .safety-section,
             .application-section {
-                padding-left: 6%;
-                padding-right: 6%;
+                padding-left: 7%;
+
+                padding-right: 7%;
             }
 
             .panel-grid {
@@ -1120,7 +1519,8 @@
             }
 
             .capability-grid {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
             .safety-grid {
@@ -1133,78 +1533,458 @@
 
             .cta {
                 margin: 40px 6%;
+
+                grid-template-columns: 1fr;
             }
 
-            .footer {
-                padding: 15px 6%;
+            .cta-side {
+                min-height: 120px;
 
+                border-left: none;
+
+                border-top: 1px solid #333333;
+            }
+
+            .footer-bottom {
                 flex-direction: column;
 
-                gap: 8px;
+                align-items: flex-start;
 
-                justify-content: center;
+                gap: 10px;
+            }
+
+        }
+
+
+        @media (max-width: 430px) {
+
+            .main-navbar .navbar-brand img {
+                height: 42px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
             }
 
         }
 
     </style>
+
 </head>
 
 
 <body>
 
+
 <div class="panel-page">
 
 
-    <!-- =========================================
-         HEADER
-    ========================================= -->
+    <!-- =========================================================
+         NAVIGATION
+    ========================================================= -->
 
-    <header class="header">
+    <nav class="navbar navbar-expand-lg main-navbar fixed-top">
 
-        <div class="logo">
+        <div class="container-fluid px-4 px-lg-5">
 
-            <div class="logo-icon">
-                ⚡
-            </div>
 
-            <div class="logo-text">
+            <!-- LOGO -->
 
-                <h3>POWER SEGMENT</h3>
+            <a class="navbar-brand"
+               href="index.html">
 
-                <span>
-                    POWERING A STRONGER TOMORROW
+                <img
+                    src="assets/img/b-alpha.png"
+                    alt="Alpha Numeric Logo">
+
+            </a>
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive">
+
+                <span class="me-2">
+                    Menu
                 </span>
 
+                <i class="fas fa-bars"></i>
+
+            </button>
+
+
+            <!-- NAVIGATION -->
+
+            <div
+                class="collapse navbar-collapse"
+                id="navbarResponsive">
+
+                <ul class="navbar-nav ms-auto">
+
+
+                    <!-- HOME -->
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="index.html">
+
+                            Home
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- ABOUT -->
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="about.html">
+
+                            About
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- ENERGY -->
+
+                    <li class="nav-item dropdown">
+
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            data-bs-toggle="dropdown">
+
+                            Energy
+
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="solar-energy.html">
+                                    Solar Energy
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="wind-energy.html">
+                                    Wind Energy
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="biomass-energy.html">
+                                    Biomass Energy
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="hydel-energy.html">
+                                    Hydel Energy
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+                    <!-- POWER -->
+
+                    <li class="nav-item dropdown">
+
+                        <a
+                            class="nav-link dropdown-toggle active"
+                            href="#"
+                            data-bs-toggle="dropdown">
+
+                            Power
+
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="transmission.html">
+                                    Transmission
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="distribution.html">
+                                    Distribution
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="control-panels.html">
+                                    Control Panels
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item active"
+                                    href="panel-boards.html">
+                                    Panel Boards
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+                    <!-- AUTOMATION -->
+
+                    <li class="nav-item dropdown">
+
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            data-bs-toggle="dropdown">
+
+                            Automation
+
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="home-automation.html">
+                                    Home Automation
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="commercial-automation.html">
+                                    Commercial Automation
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="industrial-automation.html">
+                                    Industrial Automation
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="hospital-automation.html">
+                                    Hospital Automation
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="hotel-automation.html">
+                                    Hotel Automation
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+                    <!-- R&D -->
+
+                    <li class="nav-item dropdown">
+
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            data-bs-toggle="dropdown">
+
+                            R & D
+
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="smart-pole.html">
+                                    Smart Pole
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="smart-bollard.html">
+                                    Smart Bollard
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="window-leaf-ac.html">
+                                    Window Leaf AC
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="smart-conference-table.html">
+                                    Smart Conference Table
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+                    <!-- PRODUCTS -->
+
+                    <li class="nav-item dropdown">
+
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            data-bs-toggle="dropdown">
+
+                            Products
+
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="transformers.html">
+                                    Transformers
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="panels.html">
+                                    Panels
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="switchgear.html">
+                                    Switchgear
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="controllers.html">
+                                    Controllers
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="accessories.html">
+                                    Accessories
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+                    <!-- CONTACT -->
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="index.html#contact">
+
+                            Contact
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
             </div>
 
         </div>
 
-        <div class="page-number">
-            POWER SOLUTIONS / 04
-        </div>
-
-    </header>
+    </nav>
 
 
 
-    <!-- =========================================
+    <!-- =========================================================
          HERO
-    ========================================= -->
+    ========================================================= -->
 
     <section class="hero">
 
         <div class="hero-content">
 
+
             <div class="hero-label">
+
                 Power Distribution & Protection
+
             </div>
 
+
             <h1>
+
                 Panel
+
                 <br>
-                <span>Boards</span>
+
+                <span>
+                    Boards
+                </span>
+
             </h1>
+
 
             <p>
 
@@ -1216,9 +1996,17 @@
 
             </p>
 
-            <a href="#panel-types" class="hero-button">
-                EXPLORE PANEL SOLUTIONS →
+
+            <a
+                href="#panel-types"
+                class="hero-button">
+
+                EXPLORE PANEL SOLUTIONS
+
+                <i class="fas fa-arrow-right"></i>
+
             </a>
+
 
         </div>
 
@@ -1226,9 +2014,9 @@
 
 
 
-    <!-- =========================================
+    <!-- =========================================================
          HIGHLIGHTS
-    ========================================= -->
+    ========================================================= -->
 
     <section class="highlights">
 
@@ -1236,7 +2024,9 @@
         <div class="highlight">
 
             <div class="highlight-icon">
-                ⚡
+
+                <i class="fas fa-bolt"></i>
+
             </div>
 
             <div>
@@ -1257,7 +2047,9 @@
         <div class="highlight">
 
             <div class="highlight-icon">
-                🛡
+
+                <i class="fas fa-shield-halved"></i>
+
             </div>
 
             <div>
@@ -1278,7 +2070,9 @@
         <div class="highlight">
 
             <div class="highlight-icon">
-                ⚙
+
+                <i class="fas fa-gears"></i>
+
             </div>
 
             <div>
@@ -1299,7 +2093,9 @@
         <div class="highlight">
 
             <div class="highlight-icon">
-                ✓
+
+                <i class="fas fa-check"></i>
+
             </div>
 
             <div>
@@ -1321,9 +2117,9 @@
 
 
 
-    <!-- =========================================
+    <!-- =========================================================
          INTRO
-    ========================================= -->
+    ========================================================= -->
 
     <section class="intro">
 
@@ -1334,21 +2130,27 @@
                 Panel Board Solutions
             </div>
 
+
             <h2 class="section-title">
 
                 Safe Power.
+
                 <br>
+
                 Smarter Distribution.
 
             </h2>
 
+
             <div class="section-line"></div>
+
 
             <p class="intro-text">
 
-                Our panel boards are designed to distribute electrical
-                power safely and efficiently from incoming sources
-                to multiple outgoing circuits and loads.
+                Our panel boards are designed to distribute
+                electrical power safely and efficiently from
+                incoming sources to multiple outgoing circuits
+                and loads.
 
             </p>
 
@@ -1361,11 +2163,17 @@
                 Engineering Approach
             </div>
 
+
             <h2 class="section-title">
-                Built Around Your Application
+
+                Built Around
+                Your Application
+
             </h2>
 
+
             <div class="section-line"></div>
+
 
             <p class="intro-text">
 
@@ -1384,28 +2192,35 @@
 
         </div>
 
+
     </section>
 
 
 
-    <!-- =========================================
+    <!-- =========================================================
          PANEL TYPES
-    ========================================= -->
+    ========================================================= -->
 
-    <section class="panel-types" id="panel-types">
+    <section
+        class="panel-types"
+        id="panel-types">
 
 
         <div class="section-heading">
+
 
             <div class="section-label">
                 Our Panel Board Range
             </div>
 
+
             <h2 class="section-title">
                 Distribution Panel Solutions
             </h2>
 
+
             <div class="section-line"></div>
+
 
             <p>
 
@@ -1415,19 +2230,19 @@
 
             </p>
 
-        </div>
 
+        </div>
 
 
         <div class="panel-grid">
 
 
-            <!-- MDB -->
+            <!-- 01 -->
 
             <div class="panel-card">
 
                 <div class="panel-icon">
-                    ⚡
+                    <i class="fas fa-bolt"></i>
                 </div>
 
                 <h3>
@@ -1445,12 +2260,12 @@
             </div>
 
 
-            <!-- SDB -->
+            <!-- 02 -->
 
             <div class="panel-card">
 
                 <div class="panel-icon">
-                    ⇩
+                    <i class="fas fa-arrow-down"></i>
                 </div>
 
                 <h3>
@@ -1468,12 +2283,12 @@
             </div>
 
 
-            <!-- Feeder -->
+            <!-- 03 -->
 
             <div class="panel-card">
 
                 <div class="panel-icon">
-                    ⬡
+                    <i class="fas fa-cubes"></i>
                 </div>
 
                 <h3>
@@ -1491,12 +2306,12 @@
             </div>
 
 
-            <!-- APFC -->
+            <!-- 04 -->
 
             <div class="panel-card">
 
                 <div class="panel-icon">
-                    ◉
+                    <i class="fas fa-circle-dot"></i>
                 </div>
 
                 <h3>
@@ -1514,12 +2329,12 @@
             </div>
 
 
-            <!-- MCC -->
+            <!-- 05 -->
 
             <div class="panel-card">
 
                 <div class="panel-icon">
-                    ⚙
+                    <i class="fas fa-gears"></i>
                 </div>
 
                 <h3>
@@ -1537,12 +2352,12 @@
             </div>
 
 
-            <!-- Outdoor -->
+            <!-- 06 -->
 
             <div class="panel-card">
 
                 <div class="panel-icon">
-                    ◫
+                    <i class="fas fa-border-all"></i>
                 </div>
 
                 <h3>
@@ -1560,12 +2375,12 @@
             </div>
 
 
-            <!-- Metering -->
+            <!-- 07 -->
 
             <div class="panel-card">
 
                 <div class="panel-icon">
-                    ◌
+                    <i class="fas fa-gauge-high"></i>
                 </div>
 
                 <h3>
@@ -1583,12 +2398,12 @@
             </div>
 
 
-            <!-- Changeover -->
+            <!-- 08 -->
 
             <div class="panel-card">
 
                 <div class="panel-icon">
-                    ⇄
+                    <i class="fas fa-right-left"></i>
                 </div>
 
                 <h3>
@@ -1606,12 +2421,12 @@
             </div>
 
 
-            <!-- Customized -->
+            <!-- 09 -->
 
             <div class="panel-card">
 
                 <div class="panel-icon">
-                    ✦
+                    <i class="fas fa-star"></i>
                 </div>
 
                 <h3>
@@ -1635,14 +2450,15 @@
 
 
 
-    <!-- =========================================
+    <!-- =========================================================
          DISTRIBUTION SYSTEM
-    ========================================= -->
+    ========================================================= -->
 
     <section class="distribution-section">
 
 
         <div class="distribution-header">
+
 
             <div>
 
@@ -1650,13 +2466,17 @@
                     Engineering Capabilities
                 </div>
 
+
                 <h2 class="section-title">
 
                     Designed for
+
                     <br>
+
                     Reliable Distribution
 
                 </h2>
+
 
                 <div class="section-line"></div>
 
@@ -1672,8 +2492,8 @@
 
             </p>
 
-        </div>
 
+        </div>
 
 
         <div class="distribution-grid">
@@ -1829,9 +2649,9 @@
 
 
 
-    <!-- =========================================
-         BUSBAR SECTION
-    ========================================= -->
+    <!-- =========================================================
+         BUSBAR
+    ========================================================= -->
 
     <section class="busbar-section">
 
@@ -1840,6 +2660,7 @@
 
 
             <div class="busbar-image">
+
 
                 <div class="image-tag">
 
@@ -1853,26 +2674,35 @@
 
                 </div>
 
+
             </div>
 
 
             <div class="busbar-content">
 
+
                 <div class="section-label">
                     Busbar & Internal Arrangement
                 </div>
 
+
                 <h2 class="section-title">
 
                     Organized.
+
                     <br>
+
                     Accessible.
+
                     <br>
+
                     Reliable.
 
                 </h2>
 
+
                 <div class="section-line"></div>
+
 
                 <p>
 
@@ -1885,39 +2715,49 @@
 
                 <div class="feature-list">
 
+
                     <div class="feature">
                         Copper / Aluminium Busbars
                     </div>
+
 
                     <div class="feature">
                         Proper Busbar Supports
                     </div>
 
+
                     <div class="feature">
                         Clear Circuit Identification
                     </div>
+
 
                     <div class="feature">
                         Neat Internal Wiring
                     </div>
 
+
                     <div class="feature">
                         Cable Glanding Provisions
                     </div>
+
 
                     <div class="feature">
                         Separate Neutral & Earth
                     </div>
 
+
                     <div class="feature">
                         Easy Maintenance Access
                     </div>
+
 
                     <div class="feature">
                         Modular Feeder Arrangement
                     </div>
 
+
                 </div>
+
 
             </div>
 
@@ -1928,36 +2768,46 @@
 
 
 
-    <!-- =========================================
-         DESIGN CAPABILITIES
-    ========================================= -->
+    <!-- =========================================================
+         CAPABILITIES
+    ========================================================= -->
 
     <section class="capability-section">
 
 
         <div class="capability-header">
 
+
             <div class="section-label">
-                Technical Expertise
+                Design Capabilities
             </div>
 
+
             <h2 class="section-title">
-                Panel Board Engineering
+
+                Engineered Around
+
+                <br>
+
+                Your Electrical System
+
             </h2>
+
 
             <div class="section-line"></div>
 
+
             <p>
 
-                From electrical design to final testing, every
-                panel board is developed with attention to
-                functionality, safety, accessibility and
-                application requirements.
+                Our panel board engineering approach covers
+                electrical design, component integration,
+                protection, busbar arrangements, metering
+                and cable management.
 
             </p>
 
-        </div>
 
+        </div>
 
 
         <div class="capability-grid">
@@ -1970,11 +2820,12 @@
                 </div>
 
                 <h4>
-                    Load Assessment
+                    Electrical Design
                 </h4>
 
                 <p>
-                    Evaluation of connected and operating loads.
+                    Application-specific electrical design
+                    and schematic development.
                 </p>
 
             </div>
@@ -1987,11 +2838,12 @@
                 </div>
 
                 <h4>
-                    Circuit Design
+                    Protection
                 </h4>
 
                 <p>
-                    Structured feeder and circuit configuration.
+                    Circuit protection and system safety
+                    integration.
                 </p>
 
             </div>
@@ -2004,11 +2856,12 @@
                 </div>
 
                 <h4>
-                    Protection
+                    Busbar Design
                 </h4>
 
                 <p>
-                    Appropriate protection device integration.
+                    Proper busbar arrangements for current
+                    distribution.
                 </p>
 
             </div>
@@ -2021,11 +2874,12 @@
                 </div>
 
                 <h4>
-                    Busbar Design
+                    Metering
                 </h4>
 
                 <p>
-                    Efficient busbar arrangement and support.
+                    Electrical measurement and monitoring
+                    integration.
                 </p>
 
             </div>
@@ -2038,11 +2892,12 @@
                 </div>
 
                 <h4>
-                    Fabrication
+                    Cable Management
                 </h4>
 
                 <p>
-                    Quality enclosure assembly and fabrication.
+                    Organized cable routing and termination
+                    for easy maintenance.
                 </p>
 
             </div>
@@ -2059,7 +2914,8 @@
                 </h4>
 
                 <p>
-                    Inspection and functional verification.
+                    Electrical and functional verification
+                    before commissioning.
                 </p>
 
             </div>
@@ -2071,22 +2927,39 @@
 
 
 
-    <!-- =========================================
-         SAFETY & QUALITY
-    ========================================= -->
+    <!-- =========================================================
+         SAFETY
+    ========================================================= -->
 
     <section class="safety-section">
 
 
-        <div class="section-label">
-            Quality & Safety
+        <div class="section-heading">
+
+
+            <div class="section-label">
+                Quality Assurance
+            </div>
+
+
+            <h2 class="section-title">
+                Safety & Verification
+            </h2>
+
+
+            <div class="section-line"></div>
+
+
+            <p>
+
+                Panel boards are checked through structured
+                inspection and verification processes to
+                support safe and reliable operation.
+
+            </p>
+
+
         </div>
-
-        <h2 class="section-title">
-            Built for Safe Operation
-        </h2>
-
-        <div class="section-line"></div>
 
 
         <div class="safety-grid">
@@ -2103,8 +2976,8 @@
                 </h4>
 
                 <p>
-                    Inspection of enclosure, components,
-                    mounting and internal workmanship.
+                    Panel assembly, component placement,
+                    wiring and workmanship inspection.
                 </p>
 
             </div>
@@ -2117,12 +2990,12 @@
                 </span>
 
                 <h4>
-                    Wiring Verification
+                    Insulation Testing
                 </h4>
 
                 <p>
-                    Verification of cable routing,
-                    termination and circuit identification.
+                    Insulation resistance checks for
+                    electrical safety and reliability.
                 </p>
 
             </div>
@@ -2135,12 +3008,12 @@
                 </span>
 
                 <h4>
-                    Insulation Testing
+                    Continuity Testing
                 </h4>
 
                 <p>
-                    Insulation resistance checks to support
-                    electrical safety and reliability.
+                    Verification of wiring paths,
+                    connections and terminal continuity.
                 </p>
 
             </div>
@@ -2157,8 +3030,8 @@
                 </h4>
 
                 <p>
-                    Verification of switching, protection
-                    and metering functions.
+                    Functional verification of control,
+                    protection and electrical circuits.
                 </p>
 
             </div>
@@ -2170,9 +3043,9 @@
 
 
 
-    <!-- =========================================
+    <!-- =========================================================
          APPLICATIONS
-    ========================================= -->
+    ========================================================= -->
 
     <section class="application-section">
 
@@ -2182,26 +3055,34 @@
 
             <div>
 
+
                 <div class="section-label">
                     Applications
                 </div>
 
+
                 <h2 class="section-title">
+
                     Power Distribution
+
                     <br>
-                    Across Industries
+
+                    Across Applications
+
                 </h2>
+
 
                 <div class="section-line"></div>
 
+
                 <p class="application-description">
 
-                    Our panel board solutions can be engineered
+                    Panel board solutions can be engineered
                     for a wide range of electrical distribution
-                    applications across industrial,
-                    commercial and infrastructure environments.
+                    and infrastructure requirements.
 
                 </p>
+
 
             </div>
 
@@ -2212,24 +3093,12 @@
                 <div class="application-item">
 
                     <strong>
-                        Industrial Facilities
-                    </strong>
-
-                    <span>
-                        Manufacturing plants and production facilities.
-                    </span>
-
-                </div>
-
-
-                <div class="application-item">
-
-                    <strong>
                         Commercial Buildings
                     </strong>
 
                     <span>
-                        Offices, commercial complexes and facilities.
+                        Electrical distribution and protection
+                        for commercial facilities.
                     </span>
 
                 </div>
@@ -2238,11 +3107,12 @@
                 <div class="application-item">
 
                     <strong>
-                        Infrastructure Projects
+                        Industrial Facilities
                     </strong>
 
                     <span>
-                        Infrastructure and utility applications.
+                        Reliable power distribution for
+                        industrial electrical systems.
                     </span>
 
                 </div>
@@ -2251,11 +3121,12 @@
                 <div class="application-item">
 
                     <strong>
-                        Data & Technology
+                        Infrastructure
                     </strong>
 
                     <span>
-                        Electrical distribution for technology environments.
+                        Engineered distribution solutions
+                        for infrastructure applications.
                     </span>
 
                 </div>
@@ -2264,11 +3135,12 @@
                 <div class="application-item">
 
                     <strong>
-                        Water & Utilities
+                        Utility Systems
                     </strong>
 
                     <span>
-                        Utility plants and essential service facilities.
+                        Panel solutions supporting electrical
+                        power distribution systems.
                     </span>
 
                 </div>
@@ -2277,11 +3149,26 @@
                 <div class="application-item">
 
                     <strong>
-                        Renewable Energy
+                        Data & Technology Facilities
                     </strong>
 
                     <span>
-                        Distribution arrangements for renewable projects.
+                        Organized and reliable electrical
+                        distribution arrangements.
+                    </span>
+
+                </div>
+
+
+                <div class="application-item">
+
+                    <strong>
+                        Institutional Buildings
+                    </strong>
+
+                    <span>
+                        Electrical distribution and protection
+                        for institutional facilities.
                     </span>
 
                 </div>
@@ -2289,15 +3176,16 @@
 
             </div>
 
+
         </div>
 
     </section>
 
 
 
-    <!-- =========================================
+    <!-- =========================================================
          CTA
-    ========================================= -->
+    ========================================================= -->
 
     <section class="cta">
 
@@ -2305,15 +3193,17 @@
         <div class="cta-content">
 
             <h2>
-                Reliable Distribution Starts Here.
+                Engineered Distribution.
+                Reliable Power.
             </h2>
 
             <p>
 
-                From compact distribution boards to customized
-                industrial panel boards, we provide engineered
-                solutions focused on safe power distribution,
-                protection and dependable performance.
+                From standard distribution boards to
+                application-specific panel solutions,
+                our systems are designed to support
+                safe, efficient and dependable electrical
+                operation.
 
             </p>
 
@@ -2325,7 +3215,7 @@
             <div>
 
                 <strong>
-                    DISTRIBUTE • PROTECT • POWER
+                    DISTRIBUTE • PROTECT • CONTROL
                 </strong>
 
                 <span>
@@ -2341,24 +3231,339 @@
 
 
 
-    <!-- =========================================
+    <!-- =========================================================
          FOOTER
-    ========================================= -->
+    ========================================================= -->
 
-    <footer class="footer">
+    <footer class="main-footer">
 
-        <span>
-            POWERING PROGRESS. CONNECTING COMMUNITIES.
-        </span>
 
-        <strong>
-            PANEL BOARDS
-        </strong>
+        <div class="container-fluid">
+
+
+            <div class="row g-5">
+
+
+                <!-- COMPANY -->
+
+                <div class="col-lg-4 col-md-6">
+
+
+                    <div class="footer-logo">
+
+                        <img
+                            src="assets/img/w-alpha.png"
+                            alt="Alpha Numeric Logo">
+
+                    </div>
+
+
+                    <p class="footer-description">
+
+                        Alpha Numeric is a technology-driven
+                        organization delivering intelligent
+                        solutions across energy, power,
+                        automation, IoT, lighting, R&D and
+                        industrial infrastructure.
+
+                    </p>
+
+
+                    <div class="footer-social">
+
+
+                        <a
+                            href="#"
+                            aria-label="LinkedIn">
+
+                            <i class="fab fa-linkedin-in"></i>
+
+                        </a>
+
+
+                        <a
+                            href="#"
+                            aria-label="Instagram">
+
+                            <i class="fab fa-instagram"></i>
+
+                        </a>
+
+
+                        <a
+                            href="#"
+                            aria-label="Facebook">
+
+                            <i class="fab fa-facebook-f"></i>
+
+                        </a>
+
+
+                        <a
+                            href="#"
+                            aria-label="YouTube">
+
+                            <i class="fab fa-youtube"></i>
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- SOLUTIONS -->
+
+                <div class="col-lg-2 col-md-6">
+
+
+                    <div class="footer-heading">
+                        SOLUTIONS
+                    </div>
+
+
+                    <ul class="footer-links">
+
+
+                        <li>
+                            <a href="solar-energy.html">
+                                Solar Energy
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="wind-energy.html">
+                                Wind Energy
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="biomass-energy.html">
+                                Biomass Energy
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="hydel-energy.html">
+                                Hydel Energy
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="transmission.html">
+                                Transmission
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="distribution.html">
+                                Distribution
+                            </a>
+                        </li>
+
+
+                    </ul>
+
+
+                </div>
+
+
+
+                <!-- TECHNOLOGY -->
+
+                <div class="col-lg-2 col-md-6">
+
+
+                    <div class="footer-heading">
+                        TECHNOLOGY
+                    </div>
+
+
+                    <ul class="footer-links">
+
+
+                        <li>
+                            <a href="home-automation.html">
+                                Automation
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="smart-pole.html">
+                                R & D
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="transformers.html">
+                                Transformers
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="panels.html">
+                                Panels
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="switchgear.html">
+                                Switchgear
+                            </a>
+                        </li>
+
+
+                    </ul>
+
+
+                </div>
+
+
+
+                <!-- CONTACT -->
+
+                <div class="col-lg-4 col-md-6">
+
+
+                    <div class="footer-heading">
+                        CONTACT
+                    </div>
+
+
+                    <ul class="footer-contact">
+
+
+                        <li>
+
+                            <i class="fas fa-location-dot"></i>
+
+                            <span>
+
+                               Madhapur, Hyderabad
+
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="fas fa-phone"></i>
+
+                            <span>
+                                +91 XXXXX XXXXX
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="fas fa-envelope"></i>
+
+                            <span>
+                                info@alphanumeric.com
+                            </span>
+
+                        </li>
+
+
+                    </ul>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- FOOTER BOTTOM -->
+
+            <div class="footer-bottom">
+
+
+                <span>
+
+                    © 2026
+
+                    <strong>
+                        Alpha Numeric
+                    </strong>.
+
+                    All Rights Reserved.
+
+                </span>
+
+
+                <span>
+
+                    CLEAN ENERGY • SMART TECHNOLOGY • ENGINEERED FUTURE
+
+                </span>
+
+
+            </div>
+
+
+        </div>
+
 
     </footer>
 
 
 </div>
+
+
+
+<!-- =========================================================
+     BOOTSTRAP JS
+========================================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+
+<!-- =========================================================
+     NAVBAR SCROLL EFFECT
+========================================================= -->
+
+<script>
+
+    window.addEventListener("scroll", function () {
+
+        const navbar =
+            document.querySelector(".main-navbar");
+
+        if (window.scrollY > 30) {
+
+            navbar.style.boxShadow =
+                "0 5px 25px rgba(0,0,0,0.08)";
+
+        } else {
+
+            navbar.style.boxShadow =
+                "none";
+
+        }
+
+    });
+
+</script>
+
 
 </body>
 
