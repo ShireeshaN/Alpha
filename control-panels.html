@@ -1,1069 +1,2292 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Control Panels | Power Segment</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:"Inter",sans-serif;background:#fff;color:#111;overflow-x:hidden}
-a{text-decoration:none} img{max-width:100%;display:block}
-.control-page{width:100%;background:#fff;overflow:hidden}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Panels | Power Segment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
 
-/* FIRST FILE NAVBAR STYLE */
-.main-navbar{height:100px;padding:0 7%;background:#fff!important;border-bottom:1px solid #e8e8e8;z-index:9999;transition:.3s ease}
-.main-navbar .navbar-brand{padding:0;margin:0}.main-navbar .navbar-brand img{height:55px;width:auto;object-fit:contain}
-.main-navbar .navbar-nav{align-items:center;gap:28px}.main-navbar .nav-link{color:#111!important;font-size:15px;font-weight:400;letter-spacing:1px;padding:10px 0!important;transition:.3s ease}.main-navbar .nav-link:hover{color:#666!important}.main-navbar .nav-link.active{color:#111!important;font-weight:600}
-.main-navbar .dropdown-toggle::after{margin-left:7px;vertical-align:middle;border-top:5px solid #111;border-right:4px solid transparent;border-left:4px solid transparent}
-.main-navbar .dropdown-menu{margin-top:18px;padding:10px 0;min-width:215px;border:1px solid #e5e5e5;border-radius:0;background:#fff;box-shadow:0 15px 40px rgba(0,0,0,.08)}
-.main-navbar .dropdown-item{padding:11px 20px;color:#222;font-size:13px;transition:.25s ease}.main-navbar .dropdown-item:hover{background:#f5f5f5;color:#000}.main-navbar .dropdown-item.active{background:#111;color:#fff}.main-navbar .navbar-toggler{border:none!important;box-shadow:none!important}
+        html {
+            scroll-behavior: smooth
+        }
 
-/* CONTROL PANEL PAGE — FIRST FILE VISUAL LANGUAGE */
-.hero{min-height:650px;margin-top:100px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.82) 40%,rgba(0,0,0,.35) 75%,rgba(0,0,0,.10) 100%),url("images/control-panel.jpg");background-size:cover;background-position:center}
-.hero-content{width:100%;max-width:1350px;margin:auto;padding:100px 7%;color:#fff;position:relative;z-index:2}.small-title{display:flex;align-items:center;gap:12px;margin-bottom:24px;color:#bbb;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase}.small-title:before{content:"";width:42px;height:1px;background:#fff;flex:0 0 auto}
-.hero h1{max-width:850px;color:#fff;font-size:clamp(50px,7vw,94px);line-height:.96;font-weight:700;letter-spacing:-4px;margin-bottom:30px;text-transform:none}.hero h1 span{font-weight:300;color:#fff}.hero-description{max-width:650px;color:#d4d4d4;font-size:15px;line-height:1.9;margin-bottom:35px}.hero-btn{display:inline-flex;align-items:center;gap:12px;padding:15px 25px;background:#fff;color:#111;font-size:11px;font-weight:700;letter-spacing:1px;transition:.3s ease;border-radius:0}.hero-btn:hover{background:#ddd;color:#000;transform:translateY(-3px)}
-.highlights{width:86%;margin:-45px auto 0;position:relative;z-index:10;display:grid;grid-template-columns:repeat(4,1fr);background:#fff;box-shadow:0 20px 55px rgba(0,0,0,.12)}.highlight{min-height:115px;display:flex;align-items:center;gap:16px;padding:20px 25px;border-right:1px solid #e5e5e5}.highlight:last-child{border-right:none}.highlight-icon{width:44px;height:44px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:#111;color:#fff;font-size:17px;border-radius:0}.highlight h4{color:#111;font-size:12px;font-weight:600;margin-bottom:6px}.highlight p{color:#777;font-size:10px;line-height:1.6;margin:0}
-.intro{padding:110px 8%;display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}.section-label{color:#777;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px}.section-title{color:#111;font-size:clamp(34px,4vw,58px);line-height:1.08;font-weight:600;letter-spacing:-2px;margin-bottom:0}.section-line{width:45px;height:3px;background:#111;margin:20px 0 25px}.intro-text{color:#666;font-size:13px;line-height:1.9}
-.panel-section{padding:105px 8%;background:#f5f5f5}.panel-heading{max-width:720px;text-align:center;margin:0 auto 50px}.panel-heading .section-line{margin:20px auto 25px}.panel-heading p{color:#666;font-size:13px;line-height:1.9}.panel-grid{max-width:1250px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.panel-card{min-height:245px;position:relative;padding:32px;background:#fafafa;border:1px solid #e5e5e5;overflow:hidden;transition:.35s ease}.panel-card:before{content:"";position:absolute;left:0;top:0;width:0;height:3px;background:#111;transition:.35s ease}.panel-card:after{display:none}.panel-card:hover{background:#111;transform:translateY(-7px);box-shadow:0 20px 40px rgba(0,0,0,.12)}.panel-card:hover:before{width:100%}.panel-icon{width:48px;height:48px;display:flex;align-items:center;justify-content:center;margin-bottom:23px;background:#111;color:#fff;font-size:18px;border-radius:0;transition:.3s}.panel-card:hover .panel-icon{background:#fff;color:#111}.panel-card h3{color:#111;font-size:15px;font-weight:600;margin-bottom:10px;transition:.3s}.panel-card p{color:#777;font-size:11px;line-height:1.75;transition:.3s}.panel-card:hover h3{color:#fff}.panel-card:hover p{color:#aaa}
-.technical-section{padding:110px 8%;background:#fff}.technical-header{display:flex;align-items:flex-end;justify-content:space-between;gap:50px;margin:0 auto 50px;max-width:1250px}.technical-description{max-width:500px;color:#666;font-size:13px;line-height:1.9}.technical-grid{max-width:1250px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.technical-card{min-height:170px;padding:25px 20px;background:#fafafa;border:1px solid #e5e5e5;position:relative;transition:.35s}.technical-card:hover{transform:translateY(-6px);border-color:#111;box-shadow:0 12px 25px rgba(0,0,0,.10)}.technical-number{position:absolute;right:18px;top:14px;color:#e4e4e4;font-size:25px;font-weight:800}.technical-card h4{color:#111;font-size:12px;margin-bottom:10px}.technical-card p{color:#777;font-size:10px;line-height:1.7}
-.components-section{padding:110px 8%;background:#f6f6f6}.components-layout{max-width:1250px;margin:auto;display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:center}.components-text p{color:#666;font-size:13px;line-height:1.9;margin-bottom:25px}.component-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}.component-item{padding:18px;background:#fff;border-left:3px solid #111;color:#111;font-size:11px;font-weight:600}.components-visual{min-height:500px;background:linear-gradient(rgba(0,0,0,.12),rgba(0,0,0,.12)),url("images/panel-components.jpg");background-size:cover;background-position:center;position:relative}.visual-label{position:absolute;left:25px;bottom:25px;padding:18px 22px;background:#111;color:#fff}.visual-label strong{display:block;color:#fff;font-size:18px;margin-bottom:4px}.visual-label span{font-size:9px;color:#aaa;text-transform:uppercase;letter-spacing:1px}
-.process-section{padding:110px 8%;background:#111;color:#fff;position:relative;overflow:hidden}.process-header{max-width:700px;margin:0 auto 60px;}.process-header .section-label{color:#888}.process-header .section-title{color:#fff}.process-header p{color:#aaa;font-size:13px;line-height:1.8}.process-grid{max-width:1250px;margin:auto;display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative}.process-grid:before{content:"";position:absolute;left:30px;right:30px;top:25px;height:1px;background:#333}.process-step{position:relative;padding-right:25px;min-height:170px;background:transparent;border:none;transition:.3s}.process-step:hover{background:transparent;transform:translateY(-5px)}.process-number{width:50px;height:50px;margin:0 0 23px;display:flex;align-items:center;justify-content:center;position:relative;z-index:2;background:#111;border:1px solid #fff;color:#fff;border-radius:50%;font-size:11px;font-weight:700}.process-step h4{color:#fff;font-size:12px;font-weight:600;margin-bottom:8px}.process-step p{max-width:160px;color:#888;font-size:9px;line-height:1.7}
-.testing-section{padding:110px 8%;background:#fff}.testing-grid{max-width:1250px;margin:40px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.test-card{padding:25px 20px;border:1px solid #e5e5e5;background:#fafafa;transition:.35s}.test-card:hover{border-color:#111;transform:translateY(-5px)}.test-card span{display:block;color:#111;font-size:20px;font-weight:800;margin-bottom:12px}.test-card h4{color:#111;font-size:12px;margin-bottom:7px}.test-card p{color:#777;font-size:10px;line-height:1.6}
-.cta{max-width:1250px;margin:0 auto 100px;min-height:300px;display:grid;grid-template-columns:1.4fr .6fr;background:linear-gradient(90deg,rgba(0,0,0,1),rgba(0,0,0,.35)),url("images/control-panel-cta.jpg");background-size:cover;background-position:center;overflow:hidden}.cta-content{padding:50px;color:#fff}.cta-content h2{font-size:31px;line-height:1.2;margin-bottom:17px}.cta-content p{max-width:650px;color:#aaa;font-size:12px;line-height:1.8}.cta-side{display:flex;align-items:center;justify-content:center;border-left:1px solid rgba(255,255,255,.18)}.cta-side strong{color:#fff;font-size:27px}.cta-side span{display:block;color:#999;font-size:9px;letter-spacing:1px}
-.main-footer{background:#050505;color:#fff;padding:75px 7% 25px}.footer-logo img{height:55px;width:auto;margin-bottom:22px}.footer-description{max-width:370px;color:#888;font-size:12px;line-height:1.9}.footer-heading{color:#fff;font-size:12px;font-weight:600;letter-spacing:1.5px;margin-bottom:22px}.footer-links{list-style:none;padding:0;margin:0}.footer-links li{margin-bottom:11px}.footer-links a{color:#888;font-size:12px;transition:.3s}.footer-links a:hover{color:#fff;padding-left:4px}.footer-contact{list-style:none;padding:0;margin:0}.footer-contact li{display:flex;align-items:flex-start;gap:12px;color:#888;font-size:12px;line-height:1.8;margin-bottom:15px}.footer-contact i{width:18px;color:#fff;margin-top:4px}.footer-social{display:flex;gap:9px;margin-top:24px}.footer-social a{width:35px;height:35px;display:flex;align-items:center;justify-content:center;border:1px solid #2b2b2b;color:#999;font-size:13px;transition:.3s}.footer-social a:hover{background:#fff;color:#000;border-color:#fff}.footer-bottom{margin-top:55px;padding-top:20px;border-top:1px solid #222;display:flex;justify-content:space-between;align-items:center;gap:20px;color:#666;font-size:10px;letter-spacing:.5px}.footer-bottom strong{color:#fff;font-weight:500}
-@media(max-width:1100px){.main-navbar .navbar-nav{gap:18px}.panel-grid{grid-template-columns:repeat(2,1fr)}.technical-grid{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:repeat(3,1fr);row-gap:50px}.process-grid:before{display:none}.testing-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:991px){.main-navbar{height:auto;min-height:80px;padding:10px 5%}.main-navbar .navbar-brand img{height:48px}.main-navbar .navbar-collapse{margin-top:15px;padding:15px 0;background:#fff}.main-navbar .navbar-nav{align-items:flex-start;gap:0}.main-navbar .nav-item{width:100%}.main-navbar .nav-link{padding:12px 0!important}.hero{margin-top:80px}.intro,.components-layout{grid-template-columns:1fr}.intro{gap:55px}.technical-header{flex-direction:column;align-items:flex-start}.cta{margin-left:6%;margin-right:6%}.main-footer{padding:65px 7% 25px}}
-@media(max-width:600px){.main-navbar{padding:10px 5%}.hero{min-height:600px}.hero-content{padding:80px 6%}.hero h1{font-size:48px;letter-spacing:-2px}.highlights{width:100%;margin:0;grid-template-columns:1fr}.highlight{border-right:none;border-bottom:1px solid #e5e5e5}.intro,.panel-section,.technical-section,.components-section,.process-section,.testing-section{padding-left:6%;padding-right:6%}.panel-grid,.technical-grid,.testing-grid{grid-template-columns:1fr}.component-list{grid-template-columns:1fr}.process-grid{grid-template-columns:1fr 1fr}.cta{margin:40px 6%;grid-template-columns:1fr}.cta-side{min-height:120px;border-left:none;border-top:1px solid rgba(255,255,255,.18)}.footer-bottom{flex-direction:column;align-items:flex-start;gap:10px}}
-</style>
+        body {
+            font-family: "Inter", sans-serif;
+            background: #fff;
+            color: #111;
+            overflow-x: hidden
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        img {
+            max-width: 100%;
+            display: block
+        }
+
+        .control-page {
+            width: 100%;
+            background: #fff;
+            overflow: hidden
+        }
+
+        /* FIRST FILE NAVBAR STYLE */
+        .main-navbar {
+            height: 100px;
+            padding: 0 7%;
+            background: #fff !important;
+            border-bottom: 1px solid #e8e8e8;
+            z-index: 9999;
+            transition: .3s ease
+        }
+
+        .main-navbar .navbar-brand {
+            padding: 0;
+            margin: 0
+        }
+
+        .main-navbar .navbar-brand img {
+            height: 55px;
+            width: auto;
+            object-fit: contain
+        }
+
+        .main-navbar .navbar-nav {
+            align-items: center;
+            gap: 28px
+        }
+
+        .main-navbar .nav-link {
+            color: #111 !important;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            padding: 10px 0 !important;
+            transition: .3s ease
+        }
+
+        .main-navbar .nav-link:hover {
+            color: #666 !important
+        }
+
+        .main-navbar .nav-link.active {
+            color: #111 !important;
+            font-weight: 600
+        }
+
+        .main-navbar .dropdown-toggle::after {
+            margin-left: 7px;
+            vertical-align: middle;
+            border-top: 5px solid #111;
+            border-right: 4px solid transparent;
+            border-left: 4px solid transparent
+        }
+
+        .main-navbar .dropdown-menu {
+            margin-top: 18px;
+            padding: 10px 0;
+            min-width: 215px;
+            border: 1px solid #e5e5e5;
+            border-radius: 0;
+            background: #fff;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .08)
+        }
+
+        .main-navbar .dropdown-item {
+            padding: 11px 20px;
+            color: #222;
+            font-size: 13px;
+            transition: .25s ease
+        }
+
+        .main-navbar .dropdown-item:hover {
+            background: #f5f5f5;
+            color: #000
+        }
+
+        .main-navbar .dropdown-item.active {
+            background: #111;
+            color: #fff
+        }
+
+        .main-navbar .navbar-toggler {
+            border: none !important;
+            box-shadow: none !important
+        }
+
+        /* CONTROL PANEL PAGE — FIRST FILE VISUAL LANGUAGE */
+        .hero {
+            min-height: 650px;
+            margin-top: 100px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(90deg, rgba(0, 0, 0, .94) 0%, rgba(0, 0, 0, .82) 40%, rgba(0, 0, 0, .35) 75%, rgba(0, 0, 0, .10) 100%), url("images/control-panel.jpg");
+            background-size: cover;
+            background-position: center
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 1350px;
+            margin: auto;
+            padding: 100px 7%;
+            color: #fff;
+            position: relative;
+            z-index: 2
+        }
+
+        .small-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            color: #bbb;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase
+        }
+
+        .small-title:before {
+            content: "";
+            width: 42px;
+            height: 1px;
+            background: #fff;
+            flex: 0 0 auto
+        }
+
+        .hero h1 {
+            max-width: 850px;
+            color: #fff;
+            font-size: clamp(50px, 7vw, 94px);
+            line-height: .96;
+            font-weight: 700;
+            letter-spacing: -4px;
+            margin-bottom: 30px;
+            text-transform: none
+        }
+
+        .hero h1 span {
+            font-weight: 300;
+            color: #fff
+        }
+
+        .hero-description {
+            max-width: 650px;
+            color: #d4d4d4;
+            font-size: 15px;
+            line-height: 1.9;
+            margin-bottom: 35px
+        }
+
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 25px;
+            background: #fff;
+            color: #111;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: .3s ease;
+            border-radius: 0
+        }
+
+        .hero-btn:hover {
+            background: #ddd;
+            color: #000;
+            transform: translateY(-3px)
+        }
+
+        .highlights {
+            width: 86%;
+            margin: -45px auto 0;
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: #fff;
+            box-shadow: 0 20px 55px rgba(0, 0, 0, .12)
+        }
+
+        .highlight {
+            min-height: 115px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px 25px;
+            border-right: 1px solid #e5e5e5
+        }
+
+        .highlight:last-child {
+            border-right: none
+        }
+
+        .highlight-icon {
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #111;
+            color: #fff;
+            font-size: 17px;
+            border-radius: 0
+        }
+
+        .highlight h4 {
+            color: #111;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 6px
+        }
+
+        .highlight p {
+            color: #777;
+            font-size: 10px;
+            line-height: 1.6;
+            margin: 0
+        }
+
+        .intro {
+            padding: 110px 8%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 90px;
+            align-items: center
+        }
+
+        .section-label {
+            color: #777;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 14px
+        }
+
+        .section-title {
+            color: #111;
+            font-size: clamp(34px, 4vw, 58px);
+            line-height: 1.08;
+            font-weight: 600;
+            letter-spacing: -2px;
+            margin-bottom: 0
+        }
+
+        .section-line {
+            width: 45px;
+            height: 3px;
+            background: #111;
+            margin: 20px 0 25px
+        }
+
+        .intro-text {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.9
+        }
+
+        .panel-section {
+            padding: 105px 8%;
+            background: #f5f5f5
+        }
+
+        .panel-heading {
+            max-width: 720px;
+            text-align: center;
+            margin: 0 auto 50px
+        }
+
+        .panel-heading .section-line {
+            margin: 20px auto 25px
+        }
+
+        .panel-heading p {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.9
+        }
+
+        .panel-grid {
+            max-width: 1250px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .panel-card {
+            min-height: 245px;
+            position: relative;
+            padding: 32px;
+            background: #fafafa;
+            border: 1px solid #e5e5e5;
+            overflow: hidden;
+            transition: .35s ease
+        }
+
+        .panel-card:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 3px;
+            background: #111;
+            transition: .35s ease
+        }
+
+        .panel-card:after {
+            display: none
+        }
+
+        .panel-card:hover {
+            background: #111;
+            transform: translateY(-7px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .12)
+        }
+
+        .panel-card:hover:before {
+            width: 100%
+        }
+
+        .panel-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 23px;
+            background: #111;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 0;
+            transition: .3s
+        }
+
+        .panel-card:hover .panel-icon {
+            background: #fff;
+            color: #111
+        }
+
+        .panel-card h3 {
+            color: #111;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            transition: .3s
+        }
+
+        .panel-card p {
+            color: #777;
+            font-size: 11px;
+            line-height: 1.75;
+            transition: .3s
+        }
+
+        .panel-card:hover h3 {
+            color: #fff
+        }
+
+        .panel-card:hover p {
+            color: #aaa
+        }
+
+        .technical-section {
+            padding: 110px 8%;
+            background: #fff
+        }
+
+        .technical-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 50px;
+            margin: 0 auto 50px;
+            max-width: 1250px
+        }
+
+        .technical-description {
+            max-width: 500px;
+            color: #666;
+            font-size: 13px;
+            line-height: 1.9
+        }
+
+        .technical-grid {
+            max-width: 1250px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px
+        }
+
+        .technical-card {
+            min-height: 170px;
+            padding: 25px 20px;
+            background: #fafafa;
+            border: 1px solid #e5e5e5;
+            position: relative;
+            transition: .35s
+        }
+
+        .technical-card:hover {
+            transform: translateY(-6px);
+            border-color: #111;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, .10)
+        }
+
+        .technical-number {
+            position: absolute;
+            right: 18px;
+            top: 14px;
+            color: #e4e4e4;
+            font-size: 25px;
+            font-weight: 800
+        }
+
+        .technical-card h4 {
+            color: #111;
+            font-size: 12px;
+            margin-bottom: 10px
+        }
+
+        .technical-card p {
+            color: #777;
+            font-size: 10px;
+            line-height: 1.7
+        }
+
+        .components-section {
+            padding: 110px 8%;
+            background: #f6f6f6
+        }
+
+        .components-layout {
+            max-width: 1250px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: .85fr 1.15fr;
+            gap: 80px;
+            align-items: center
+        }
+
+        .components-text p {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.9;
+            margin-bottom: 25px
+        }
+
+        .component-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px
+        }
+
+        .component-item {
+            padding: 18px;
+            background: #fff;
+            border-left: 3px solid #111;
+            color: #111;
+            font-size: 11px;
+            font-weight: 600
+        }
+
+        .components-visual {
+            min-height: 500px;
+            background: linear-gradient(rgba(0, 0, 0, .12), rgba(0, 0, 0, .12)), url("images/panel-components.jpg");
+            background-size: cover;
+            background-position: center;
+            position: relative
+        }
+
+        .visual-label {
+            position: absolute;
+            left: 25px;
+            bottom: 25px;
+            padding: 18px 22px;
+            background: #111;
+            color: #fff
+        }
+
+        .visual-label strong {
+            display: block;
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 4px
+        }
+
+        .visual-label span {
+            font-size: 9px;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1px
+        }
+
+        .process-section {
+            padding: 110px 8%;
+            background: #111;
+            color: #fff;
+            position: relative;
+            overflow: hidden
+        }
+
+        .process-header {
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .process-header .section-label {
+            color: #888
+        }
+
+        .process-header .section-title {
+            color: #fff
+        }
+
+        .process-header p {
+            color: #aaa;
+            font-size: 13px;
+            line-height: 1.8
+        }
+
+        .process-grid {
+            max-width: 1250px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 0;
+            position: relative
+        }
+
+        .process-grid:before {
+            content: "";
+            position: absolute;
+            left: 30px;
+            right: 30px;
+            top: 25px;
+            height: 1px;
+            background: #333
+        }
+
+        .process-step {
+            position: relative;
+            padding-right: 25px;
+            min-height: 170px;
+            background: transparent;
+            border: none;
+            transition: .3s
+        }
+
+        .process-step:hover {
+            background: transparent;
+            transform: translateY(-5px)
+        }
+
+        .process-number {
+            width: 50px;
+            height: 50px;
+            margin: 0 0 23px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+            background: #111;
+            border: 1px solid #fff;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 11px;
+            font-weight: 700
+        }
+
+        .process-step h4 {
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 8px
+        }
+
+        .process-step p {
+            max-width: 160px;
+            color: #888;
+            font-size: 9px;
+            line-height: 1.7
+        }
+
+        .testing-section {
+            padding: 110px 8%;
+            background: #fff
+        }
+
+        .testing-grid {
+            max-width: 1250px;
+            margin: 40px auto 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px
+        }
+
+        .test-card {
+            padding: 25px 20px;
+            border: 1px solid #e5e5e5;
+            background: #fafafa;
+            transition: .35s
+        }
+
+        .test-card:hover {
+            border-color: #111;
+            transform: translateY(-5px)
+        }
+
+        .test-card span {
+            display: block;
+            color: #111;
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 12px
+        }
+
+        .test-card h4 {
+            color: #111;
+            font-size: 12px;
+            margin-bottom: 7px
+        }
+
+        .test-card p {
+            color: #777;
+            font-size: 10px;
+            line-height: 1.6
+        }
+
+        .cta {
+            max-width: 1250px;
+            margin: 0 auto 100px;
+            min-height: 300px;
+            display: grid;
+            grid-template-columns: 1.4fr .6fr;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, .35)), url("images/control-panel-cta.jpg");
+            background-size: cover;
+            background-position: center;
+            overflow: hidden
+        }
+
+        .cta-content {
+            padding: 50px;
+            color: #fff
+        }
+
+        .cta-content h2 {
+            font-size: 31px;
+            line-height: 1.2;
+            margin-bottom: 17px
+        }
+
+        .cta-content p {
+            max-width: 650px;
+            color: #aaa;
+            font-size: 12px;
+            line-height: 1.8
+        }
+
+        .cta-side {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-left: 1px solid rgba(255, 255, 255, .18)
+        }
+
+        .cta-side strong {
+            color: #fff;
+            font-size: 27px
+        }
+
+        .cta-side span {
+            display: block;
+            color: #999;
+            font-size: 9px;
+            letter-spacing: 1px
+        }
+
+        .main-footer {
+            background: #050505;
+            color: #fff;
+            padding: 75px 7% 25px
+        }
+
+        .footer-logo img {
+            height: 55px;
+            width: auto;
+            margin-bottom: 22px
+        }
+
+        .footer-description {
+            max-width: 370px;
+            color: #888;
+            font-size: 12px;
+            line-height: 1.9
+        }
+
+        .footer-heading {
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            margin-bottom: 22px
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0
+        }
+
+        .footer-links li {
+            margin-bottom: 11px
+        }
+
+        .footer-links a {
+            color: #888;
+            font-size: 12px;
+            transition: .3s
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+            padding-left: 4px
+        }
+
+        .footer-contact {
+            list-style: none;
+            padding: 0;
+            margin: 0
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: #888;
+            font-size: 12px;
+            line-height: 1.8;
+            margin-bottom: 15px
+        }
+
+        .footer-contact i {
+            width: 18px;
+            color: #fff;
+            margin-top: 4px
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 9px;
+            margin-top: 24px
+        }
+
+        .footer-social a {
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #2b2b2b;
+            color: #999;
+            font-size: 13px;
+            transition: .3s
+        }
+
+        .footer-social a:hover {
+            background: #fff;
+            color: #000;
+            border-color: #fff
+        }
+
+        .footer-bottom {
+            margin-top: 55px;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            color: #666;
+            font-size: 10px;
+            letter-spacing: .5px
+        }
+
+        .footer-bottom strong {
+            color: #fff;
+            font-weight: 500
+        }
+
+        @media(max-width:1100px) {
+            .main-navbar .navbar-nav {
+                gap: 18px
+            }
+
+            .panel-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .technical-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(3, 1fr);
+                row-gap: 50px
+            }
+
+            .process-grid:before {
+                display: none
+            }
+
+            .testing-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(max-width:991px) {
+            .main-navbar {
+                height: auto;
+                min-height: 80px;
+                padding: 10px 5%
+            }
+
+            .main-navbar .navbar-brand img {
+                height: 48px
+            }
+
+            .main-navbar .navbar-collapse {
+                margin-top: 15px;
+                padding: 15px 0;
+                background: #fff
+            }
+
+            .main-navbar .navbar-nav {
+                align-items: flex-start;
+                gap: 0
+            }
+
+            .main-navbar .nav-item {
+                width: 100%
+            }
+
+            .main-navbar .nav-link {
+                padding: 12px 0 !important
+            }
+
+            .hero {
+                margin-top: 80px
+            }
+
+            .intro,
+            .components-layout {
+                grid-template-columns: 1fr
+            }
+
+            .intro {
+                gap: 55px
+            }
+
+            .technical-header {
+                flex-direction: column;
+                align-items: flex-start
+            }
+
+            .cta {
+                margin-left: 6%;
+                margin-right: 6%
+            }
+
+            .main-footer {
+                padding: 65px 7% 25px
+            }
+        }
+
+        @media(max-width:600px) {
+            .main-navbar {
+                padding: 10px 5%
+            }
+
+            .hero {
+                min-height: 600px
+            }
+
+            .hero-content {
+                padding: 80px 6%
+            }
+
+            .hero h1 {
+                font-size: 48px;
+                letter-spacing: -2px
+            }
+
+            .highlights {
+                width: 100%;
+                margin: 0;
+                grid-template-columns: 1fr
+            }
+
+            .highlight {
+                border-right: none;
+                border-bottom: 1px solid #e5e5e5
+            }
+
+            .intro,
+            .panel-section,
+            .technical-section,
+            .components-section,
+            .process-section,
+            .testing-section {
+                padding-left: 6%;
+                padding-right: 6%
+            }
+
+            .panel-grid,
+            .technical-grid,
+            .testing-grid {
+                grid-template-columns: 1fr
+            }
+
+            .component-list {
+                grid-template-columns: 1fr
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .cta {
+                margin: 40px 6%;
+                grid-template-columns: 1fr
+            }
+
+            .cta-side {
+                min-height: 120px;
+                border-left: none;
+                border-top: 1px solid rgba(255, 255, 255, .18)
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px
+            }
+        }
+    </style>
 </head>
+
 <body>
-<div class="control-page">
-<nav class="navbar navbar-expand-lg main-navbar fixed-top">
+    <div class="control-page">
+        <nav class="navbar navbar-expand-lg main-navbar fixed-top">
 
-<div class="container-fluid px-4 px-lg-5">
+            <div class="container-fluid px-4 px-lg-5">
 
-<a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="index.html">
 
-<img
-src="assets/img/b-alpha.png"
-alt="Alpha Numeric Logo">
+                    <img src="assets/img/b-alpha.png" alt="Alpha Numeric Logo">
 
-</a>
+                </a>
 
 
-<button
-class="navbar-toggler"
-type="button"
-data-bs-toggle="collapse"
-data-bs-target="#navbarResponsive">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarResponsive">
 
-<span class="me-2">Menu</span>
+                    <span class="me-2">Menu</span>
 
-<i class="fas fa-bars"></i>
+                    <i class="fas fa-bars"></i>
 
-</button>
+                </button>
 
 
-<div
-class="collapse navbar-collapse"
-id="navbarResponsive">
+                <div class="collapse navbar-collapse" id="navbarResponsive">
 
-<ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto">
 
 
-<li class="nav-item">
-<a class="nav-link" href="index.html">
-Home
-</a>
-</li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                Home
+                            </a>
+                        </li>
 
 
-<li class="nav-item">
-<a class="nav-link" href="about.html">
-About
-</a>
-</li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">
+                                About
+                            </a>
+                        </li>
 
 
-<li class="nav-item dropdown">
+                        <li class="nav-item dropdown">
 
-<a
-class="nav-link dropdown-toggle"
-href="#"
-data-bs-toggle="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
 
-Energy
+                                Energy
 
-</a>
+                            </a>
 
-<ul class="dropdown-menu">
+                            <ul class="dropdown-menu">
 
-<li>
-<a class="dropdown-item" href="solar-energy.html">
-Solar Energy
-</a>
-</li>
+                                <li>
+                                    <a class="dropdown-item" href="solar-energy.html">
+                                        Solar Energy
+                                    </a>
+                                </li>
 
-<li>
-<a class="dropdown-item" href="wind-energy.html">
-Wind Energy
-</a>
-</li>
+                                <li>
+                                    <a class="dropdown-item" href="wind-energy.html">
+                                        Wind Energy
+                                    </a>
+                                </li>
 
-<li>
-<a class="dropdown-item" href="biomass-energy.html">
-Biomass Energy
-</a>
-</li>
+                                <li>
+                                    <a class="dropdown-item" href="biomass-energy.html">
+                                        Biomass Energy
+                                    </a>
+                                </li>
 
-<li>
-<a class="dropdown-item" href="hydel-energy.html">
-Hydel Energy
-</a>
-</li>
+                                <li>
+                                    <a class="dropdown-item" href="hydel-energy.html">
+                                        Hydel Energy
+                                    </a>
+                                </li>
 
-</ul>
+                            </ul>
 
-</li>
+                        </li>
 
 
-<li class="nav-item dropdown">
+                        <li class="nav-item dropdown">
 
-<a
-class="nav-link dropdown-toggle active"
-href="#"
-data-bs-toggle="dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">
 
-Power
+                                Power
 
-</a>
+                            </a>
 
-<ul class="dropdown-menu">
+                            <ul class="dropdown-menu">
 
-<li>
-<a class="dropdown-item" href="transmission.html">
-Transmission
-</a>
-</li>
+                                <li>
+                                    <a class="dropdown-item" href="transmission.html">
+                                        Transmission
+                                    </a>
+                                </li>
 
-<li>
-<a class="dropdown-item" href="distribution.html">
-Distribution
-</a>
-</li>
+                                <li>
+                                    <a class="dropdown-item" href="distribution.html">
+                                        Distribution
+                                    </a>
+                                </li>
 
-<li>
-<a class="dropdown-item active" href="control-panels.html">
-Control Panels
-</a>
-</li>
+                                <li>
+                                    <a class="dropdown-item active" href="control-panels.html">
+                                        Control Panels
+                                    </a>
+                                </li>
 
-<li>
-<a class="dropdown-item" href="panel-boards.html">
-Panel Boards
-</a>
-</li>
+                                <li>
+                                    <a class="dropdown-item" href="panel-boards.html">
+                                        Panel Boards
+                                    </a>
+                                </li>
 
-</ul>
+                            </ul>
 
-</li>
+                        </li>
 
 
-<li class="nav-item dropdown">
+                        <li class="nav-item dropdown">
 
-<a
-class="nav-link dropdown-toggle"
-href="#"
-data-bs-toggle="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
 
-Automation
+                                Automation
 
-</a>
+                            </a>
 
-<ul class="dropdown-menu">
+                            <ul class="dropdown-menu">
 
-<li>
-<a class="dropdown-item" href="home-automation.html">
-Home Automation
-</a>
-</li>
+                                <li>
+                                    <a class="dropdown-item" href="home-automation.html">
+                                        Home Automation
+                                    </a>
+                                </li>
 
-<li>
-<a class="dropdown-item" href="commercial-automation.html">
-Commercial Automation
-</a>
-</li>
+                                <li>
+                                    <a class="dropdown-item" href="commercial-automation.html">
+                                        Commercial Automation
+                                    </a>
+                                </li>
 
-<li>
-<a class="dropdown-item" href="industrial-automation.html">
-Industrial Automation
-</a>
-</li>
+                                <li>
+                                    <a class="dropdown-item" href="industrial-automation.html">
+                                        Industrial Automation
+                                    </a>
+                                </li>
 
-<li>
-<a class="dropdown-item" href="hospital-automation.html">
-Hospital Automation
-</a>
-</li>
+                                <li>
+                                    <a class="dropdown-item" href="hospital-automation.html">
+                                        Hospital Automation
+                                    </a>
+                                </li>
 
-<li>
-<a class="dropdown-item" href="hotel-automation.html">
-Hotel Automation
-</a>
-</li>
+                                <li>
+                                    <a class="dropdown-item" href="hotel-automation.html">
+                                        Hotel Automation
+                                    </a>
+                                </li>
 
-</ul>
+                            </ul>
 
-</li>
+                        </li>
 
 
-<li class="nav-item dropdown">
+                        <li class="nav-item dropdown">
 
-<a
-class="nav-link dropdown-toggle"
-href="#"
-data-bs-toggle="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
 
-R & D
+                                R & D
 
-</a>
+                            </a>
 
-<ul class="dropdown-menu">
+                            <ul class="dropdown-menu">
 
-<li>
-<a class="dropdown-item" href="smart-pole.html">
-Smart Pole
-</a>
-</li>
+                                <li>
+                                    <a class="dropdown-item" href="smart-pole.html">
+                                        Smart Pole
+                                    </a>
+                                </li>
 
-<li>
-<a class="dropdown-item" href="smart-bollard.html">
-Smart Bollard
-</a>
-</li>
+                                <li>
+                                    <a class="dropdown-item" href="smart-bollard.html">
+                                        Smart Bollard
+                                    </a>
+                                </li>
 
-<li>
-<a class="dropdown-item" href="window-leaf-ac.html">
-Window Leaf AC
-</a>
-</li>
+                                <li>
+                                    <a class="dropdown-item" href="window-leaf-ac.html">
+                                        Window Leaf AC
+                                    </a>
+                                </li>
 
-<li>
-<a class="dropdown-item" href="smart-conference-table.html">
-Smart Conference Table
-</a>
-</li>
+                                <li>
+                                    <a class="dropdown-item" href="smart-conference-table.html">
+                                        Smart Conference Table
+                                    </a>
+                                </li>
 
-</ul>
+                            </ul>
 
-</li>
+                        </li>
 
 
-<li class="nav-item dropdown">
+                        <li class="nav-item dropdown">
 
-<a
-class="nav-link dropdown-toggle"
-href="#"
-data-bs-toggle="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
 
-Products
+                                Products
 
-</a>
+                            </a>
 
-<ul class="dropdown-menu">
+                            <ul class="dropdown-menu">
 
-<li>
-<a class="dropdown-item" href="transformers.html">
-Transformers
-</a>
-</li>
+                                <li>
+                                    <a class="dropdown-item" href="transformers.html">
+                                        Transformers
+                                    </a>
+                                </li>
 
-<li>
-<a class="dropdown-item" href="panels.html">
-Panels
-</a>
-</li>
+                                <li>
+                                    <a class="dropdown-item" href="panels.html">
+                                        Panels
+                                    </a>
+                                </li>
 
-<li>
-<a class="dropdown-item" href="switchgear.html">
-Switchgear
-</a>
-</li>
+                                <li>
+                                    <a class="dropdown-item" href="switchgear.html">
+                                        Switchgear
+                                    </a>
+                                </li>
 
-<li>
-<a class="dropdown-item" href="controllers.html">
-Controllers
-</a>
-</li>
+                                <li>
+                                    <a class="dropdown-item" href="controllers.html">
+                                        Controllers
+                                    </a>
+                                </li>
 
-<li>
-<a class="dropdown-item" href="accessories.html">
-Accessories
-</a>
-</li>
+                                <li>
+                                    <a class="dropdown-item" href="accessories.html">
+                                        Accessories
+                                    </a>
+                                </li>
 
-</ul>
+                            </ul>
 
-</li>
+                        </li>
 
 
-<li class="nav-item">
-<a class="nav-link" href="index.html#contact">
-Contact
-</a>
-</li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#contact">
+                                Contact
+                            </a>
+                        </li>
 
 
-</ul>
+                    </ul>
 
-</div>
+                </div>
 
-</div>
+            </div>
 
-</nav>
+        </nav>
 
 
 
 
-    <!-- =========================================
+        <!-- =========================================
          HERO
     ========================================= -->
 
-    <section class="hero">
+        <section class="hero">
 
-        <div class="hero-content">
+            <div class="hero-content">
 
-            <div class="small-title">
-                Electrical Control & Automation
+                <div class="small-title">
+                    Electrical Control & Automation
+                </div>
+
+                <h1>
+
+                    Control
+                    <br>
+
+                    <span>Panels</span>
+
+                </h1>
+
+                <p class="hero-description">
+
+                    Engineered control panel solutions designed for
+                    reliable power management, motor control, automation,
+                    protection and efficient electrical system operation.
+
+                </p>
+
+                <a href="#panel-types" class="hero-btn">
+                    Explore Panel Solutions →
+                </a>
+
             </div>
 
-            <h1>
-
-                Control
-                <br>
-
-                <span>Panels</span>
-
-            </h1>
-
-            <p class="hero-description">
-
-                Engineered control panel solutions designed for
-                reliable power management, motor control, automation,
-                protection and efficient electrical system operation.
-
-            </p>
-
-            <a href="#panel-types" class="hero-btn">
-                Explore Panel Solutions →
-            </a>
-
-        </div>
-
-    </section>
+        </section>
 
 
 
-    <!-- =========================================
+        <!-- =========================================
          HIGHLIGHTS
     ========================================= -->
 
-    <section class="highlights">
+        <section class="highlights">
 
 
-        <div class="highlight">
+            <div class="highlight">
 
-            <div class="highlight-icon">
-                ⚙
-            </div>
-
-            <div>
-
-                <h4>
-                    Engineered Solutions
-                </h4>
-
-                <p>
-                    Application-focused panel engineering.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="highlight">
-
-            <div class="highlight-icon">
-                🛡
-            </div>
-
-            <div>
-
-                <h4>
-                    Protection & Safety
-                </h4>
-
-                <p>
-                    Reliable protection and safe operation.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="highlight">
-
-            <div class="highlight-icon">
-                ◉
-            </div>
-
-            <div>
-
-                <h4>
-                    Automation Ready
-                </h4>
-
-                <p>
-                    PLC, VFD and control integration.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="highlight">
-
-            <div class="highlight-icon">
-                ✓
-            </div>
-
-            <div>
-
-                <h4>
-                    Tested & Verified
-                </h4>
-
-                <p>
-                    Quality and functional testing.
-                </p>
-
-            </div>
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- =========================================
-         INTRO
-    ========================================= -->
-
-    <section class="intro">
-
-
-        <div>
-
-            <div class="section-label">
-                About Our Solutions
-            </div>
-
-            <h2 class="section-title">
-
-                Intelligent
-                <br>
-                Electrical Control
-
-            </h2>
-
-            <div class="section-line"></div>
-
-            <p class="intro-text">
-
-                We design and deliver electrical control panel
-                solutions for industrial, commercial and
-                infrastructure applications.
-
-                <br><br>
-
-                Our panels are engineered to provide safe power
-                distribution, motor control, automation,
-                monitoring and protection while supporting
-                efficient system operation.
-
-            </p>
-
-        </div>
-
-
-
-        <div>
-
-            <div class="section-label">
-                Our Expertise
-            </div>
-
-            <h2 class="section-title">
-                Panel Engineering
-            </h2>
-
-            <div class="section-line"></div>
-
-            <p class="intro-text">
-
-                From electrical design and component selection to
-                panel fabrication, wiring, testing and commissioning,
-                our approach focuses on quality, functionality,
-                maintainability and operational reliability.
-
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================================
-         PANEL TYPES
-    ========================================= -->
-
-    <section class="panel-section" id="panel-types">
-
-
-        <div class="panel-heading">
-
-            <div class="section-label">
-                Panel Solutions
-            </div>
-
-            <h2 class="section-title">
-                Our Control Panel Range
-            </h2>
-
-            <div class="section-line"></div>
-
-            <p>
-
-                A comprehensive range of electrical control and
-                automation panels engineered for power distribution,
-                motor control, process automation and system protection.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="panel-grid">
-
-
-            <!-- PCC -->
-
-            <div class="panel-card">
-
-                <div class="panel-icon">
-                    ⚡
-                </div>
-
-                <h3>
-                    PCC Panels
-                </h3>
-
-                <p>
-
-                    Power Control Centre panels designed for
-                    reliable power distribution, protection and
-                    centralized electrical control.
-
-                </p>
-
-            </div>
-
-
-            <!-- MCC -->
-
-            <div class="panel-card">
-
-                <div class="panel-icon">
+                <div class="highlight-icon">
                     ⚙
                 </div>
 
-                <h3>
-                    MCC Panels
-                </h3>
+                <div>
 
-                <p>
+                    <h4>
+                        Engineered Solutions
+                    </h4>
 
-                    Motor Control Centre panels for centralized
-                    motor starting, control, protection and
-                    monitoring applications.
+                    <p>
+                        Application-focused panel engineering.
+                    </p>
 
-                </p>
-
-            </div>
-
-
-            <!-- APFC -->
-
-            <div class="panel-card">
-
-                <div class="panel-icon">
-                    ◉
                 </div>
 
-                <h3>
-                    APFC Panels
-                </h3>
-
-                <p>
-
-                    Automatic Power Factor Correction panels
-                    designed to improve power factor and
-                    electrical system efficiency.
-
-                </p>
-
             </div>
 
 
-            <!-- AMF -->
+            <div class="highlight">
 
-            <div class="panel-card">
-
-                <div class="panel-icon">
-                    ⇄
-                </div>
-
-                <h3>
-                    AMF Panels
-                </h3>
-
-                <p>
-
-                    Automatic Mains Failure panels for
-                    automatic transfer and reliable backup
-                    power management.
-
-                </p>
-
-            </div>
-
-
-            <!-- PLC -->
-
-            <div class="panel-card">
-
-                <div class="panel-icon">
-                    ◫
-                </div>
-
-                <h3>
-                    PLC Control Panels
-                </h3>
-
-                <p>
-
-                    PLC-based control solutions for process
-                    automation, monitoring, sequencing and
-                    intelligent system operation.
-
-                </p>
-
-            </div>
-
-
-            <!-- VFD -->
-
-            <div class="panel-card">
-
-                <div class="panel-icon">
-                    ↗
-                </div>
-
-                <h3>
-                    VFD Panels
-                </h3>
-
-                <p>
-
-                    Variable Frequency Drive panels for efficient
-                    motor speed control, soft starting and
-                    energy-conscious operation.
-
-                </p>
-
-            </div>
-
-
-            <!-- Synchronizing -->
-
-            <div class="panel-card">
-
-                <div class="panel-icon">
-                    ⇆
-                </div>
-
-                <h3>
-                    Synchronizing Panels
-                </h3>
-
-                <p>
-
-                    Synchronizing solutions for coordinated
-                    operation of multiple power sources and
-                    generators.
-
-                </p>
-
-            </div>
-
-
-            <!-- Control & Relay -->
-
-            <div class="panel-card">
-
-                <div class="panel-icon">
+                <div class="highlight-icon">
                     🛡
                 </div>
 
-                <h3>
-                    Control & Relay Panels
-                </h3>
+                <div>
 
-                <p>
+                    <h4>
+                        Protection & Safety
+                    </h4>
 
-                    Protection and control panels for monitoring,
-                    switching and reliable electrical system
-                    protection.
+                    <p>
+                        Reliable protection and safe operation.
+                    </p>
 
-                </p>
-
-            </div>
-
-
-            <!-- Feeder -->
-
-            <div class="panel-card">
-
-                <div class="panel-icon">
-                    ⬡
                 </div>
 
-                <h3>
-                    Feeder Panels
-                </h3>
+            </div>
 
-                <p>
 
-                    Feeder control and protection panels for
-                    dependable electrical distribution and
-                    circuit management.
+            <div class="highlight">
 
-                </p>
+                <div class="highlight-icon">
+                    ◉
+                </div>
+
+                <div>
+
+                    <h4>
+                        Automation Ready
+                    </h4>
+
+                    <p>
+                        PLC, VFD and control integration.
+                    </p>
+
+                </div>
 
             </div>
 
 
-        </div>
+            <div class="highlight">
 
-    </section>
+                <div class="highlight-icon">
+                    ✓
+                </div>
+
+                <div>
+
+                    <h4>
+                        Tested & Verified
+                    </h4>
+
+                    <p>
+                        Quality and functional testing.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
 
 
 
-    <!-- =========================================
-         TECHNICAL CAPABILITIES
+        <!-- =========================================
+         INTRO
     ========================================= -->
 
-    <section class="technical-section">
+        <section class="intro">
 
-
-        <div class="technical-header">
 
             <div>
 
                 <div class="section-label">
-                    Engineering Capability
+                    About Our Solutions
                 </div>
 
                 <h2 class="section-title">
 
-                    Technical
+                    Intelligent
                     <br>
-                    Capabilities
+                    Electrical Control
 
                 </h2>
 
                 <div class="section-line"></div>
 
-            </div>
+                <p class="intro-text">
 
+                    We design and deliver electrical control panel
+                    solutions for industrial, commercial and
+                    infrastructure applications.
 
-            <p class="technical-description">
+                    <br><br>
 
-                Our panel engineering capabilities cover electrical
-                design, control architecture, component integration,
-                wiring, protection and automation requirements.
+                    Our panels are engineered to provide safe power
+                    distribution, motor control, automation,
+                    monitoring and protection while supporting
+                    efficient system operation.
 
-            </p>
-
-        </div>
-
-
-
-        <div class="technical-grid">
-
-
-            <div class="technical-card">
-
-                <div class="technical-number">
-                    01
-                </div>
-
-                <h4>
-                    Electrical Design
-                </h4>
-
-                <p>
-                    Electrical schematic development and
-                    application-specific panel design.
                 </p>
 
             </div>
 
 
-            <div class="technical-card">
 
-                <div class="technical-number">
-                    02
+            <div>
+
+                <div class="section-label">
+                    Our Expertise
                 </div>
 
-                <h4>
-                    Protection Systems
-                </h4>
+                <h2 class="section-title">
+                    Panel Engineering
+                </h2>
+
+                <div class="section-line"></div>
+
+                <p class="intro-text">
+
+                    From electrical design and component selection to
+                    panel fabrication, wiring, testing and commissioning,
+                    our approach focuses on quality, functionality,
+                    maintainability and operational reliability.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+         PANEL TYPES
+    ========================================= -->
+
+        <section class="panel-section" id="panel-types">
+
+
+            <div class="panel-heading">
+
+                <div class="section-label">
+                    Panel Solutions
+                </div>
+
+                <h2 class="section-title">
+                    Our Control Panel Range
+                </h2>
+
+                <div class="section-line"></div>
 
                 <p>
-                    Circuit protection, overload protection
-                    and system safety integration.
+
+                    A comprehensive range of electrical control and
+                    automation panels engineered for power distribution,
+                    motor control, process automation and system protection.
+
                 </p>
 
             </div>
 
 
-            <div class="technical-card">
 
-                <div class="technical-number">
-                    03
+            <div class="panel-grid">
+
+
+                <!-- PCC -->
+
+                <div class="panel-card">
+
+                    <div class="panel-icon">
+                        ⚡
+                    </div>
+
+                    <h3>
+                        PCC Panels
+                    </h3>
+
+                    <p>
+
+                        Power Control Centre panels designed for
+                        reliable power distribution, protection and
+                        centralized electrical control.
+
+                    </p>
+
                 </div>
 
-                <h4>
-                    PLC & Automation
-                </h4>
 
-                <p>
-                    PLC, HMI and automation system integration
-                    for industrial applications.
+                <!-- MCC -->
+
+                <div class="panel-card">
+
+                    <div class="panel-icon">
+                        ⚙
+                    </div>
+
+                    <h3>
+                        MCC Panels
+                    </h3>
+
+                    <p>
+
+                        Motor Control Centre panels for centralized
+                        motor starting, control, protection and
+                        monitoring applications.
+
+                    </p>
+
+                </div>
+
+
+                <!-- APFC -->
+
+                <div class="panel-card">
+
+                    <div class="panel-icon">
+                        ◉
+                    </div>
+
+                    <h3>
+                        APFC Panels
+                    </h3>
+
+                    <p>
+
+                        Automatic Power Factor Correction panels
+                        designed to improve power factor and
+                        electrical system efficiency.
+
+                    </p>
+
+                </div>
+
+
+                <!-- AMF -->
+
+                <div class="panel-card">
+
+                    <div class="panel-icon">
+                        ⇄
+                    </div>
+
+                    <h3>
+                        AMF Panels
+                    </h3>
+
+                    <p>
+
+                        Automatic Mains Failure panels for
+                        automatic transfer and reliable backup
+                        power management.
+
+                    </p>
+
+                </div>
+
+
+                <!-- PLC -->
+
+                <div class="panel-card">
+
+                    <div class="panel-icon">
+                        ◫
+                    </div>
+
+                    <h3>
+                        PLC Control Panels
+                    </h3>
+
+                    <p>
+
+                        PLC-based control solutions for process
+                        automation, monitoring, sequencing and
+                        intelligent system operation.
+
+                    </p>
+
+                </div>
+
+
+                <!-- VFD -->
+
+                <div class="panel-card">
+
+                    <div class="panel-icon">
+                        ↗
+                    </div>
+
+                    <h3>
+                        VFD Panels
+                    </h3>
+
+                    <p>
+
+                        Variable Frequency Drive panels for efficient
+                        motor speed control, soft starting and
+                        energy-conscious operation.
+
+                    </p>
+
+                </div>
+
+
+                <!-- Synchronizing -->
+
+                <div class="panel-card">
+
+                    <div class="panel-icon">
+                        ⇆
+                    </div>
+
+                    <h3>
+                        Synchronizing Panels
+                    </h3>
+
+                    <p>
+
+                        Synchronizing solutions for coordinated
+                        operation of multiple power sources and
+                        generators.
+
+                    </p>
+
+                </div>
+
+
+                <!-- Control & Relay -->
+
+                <div class="panel-card">
+
+                    <div class="panel-icon">
+                        🛡
+                    </div>
+
+                    <h3>
+                        Control & Relay Panels
+                    </h3>
+
+                    <p>
+
+                        Protection and control panels for monitoring,
+                        switching and reliable electrical system
+                        protection.
+
+                    </p>
+
+                </div>
+
+
+                <!-- Feeder -->
+
+                <div class="panel-card">
+
+                    <div class="panel-icon">
+                        ⬡
+                    </div>
+
+                    <h3>
+                        Feeder Panels
+                    </h3>
+
+                    <p>
+
+                        Feeder control and protection panels for
+                        dependable electrical distribution and
+                        circuit management.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+         TECHNICAL CAPABILITIES
+    ========================================= -->
+
+        <section class="technical-section">
+
+
+            <div class="technical-header">
+
+                <div>
+
+                    <div class="section-label">
+                        Engineering Capability
+                    </div>
+
+                    <h2 class="section-title">
+
+                        Technical
+                        <br>
+                        Capabilities
+
+                    </h2>
+
+                    <div class="section-line"></div>
+
+                </div>
+
+
+                <p class="technical-description">
+
+                    Our panel engineering capabilities cover electrical
+                    design, control architecture, component integration,
+                    wiring, protection and automation requirements.
+
                 </p>
 
             </div>
 
 
-            <div class="technical-card">
 
-                <div class="technical-number">
-                    04
+            <div class="technical-grid">
+
+
+                <div class="technical-card">
+
+                    <div class="technical-number">
+                        01
+                    </div>
+
+                    <h4>
+                        Electrical Design
+                    </h4>
+
+                    <p>
+                        Electrical schematic development and
+                        application-specific panel design.
+                    </p>
+
                 </div>
 
-                <h4>
-                    Motor Control
-                </h4>
 
-                <p>
-                    DOL, star-delta, VFD and other motor
-                    control configurations.
-                </p>
+                <div class="technical-card">
+
+                    <div class="technical-number">
+                        02
+                    </div>
+
+                    <h4>
+                        Protection Systems
+                    </h4>
+
+                    <p>
+                        Circuit protection, overload protection
+                        and system safety integration.
+                    </p>
+
+                </div>
+
+
+                <div class="technical-card">
+
+                    <div class="technical-number">
+                        03
+                    </div>
+
+                    <h4>
+                        PLC & Automation
+                    </h4>
+
+                    <p>
+                        PLC, HMI and automation system integration
+                        for industrial applications.
+                    </p>
+
+                </div>
+
+
+                <div class="technical-card">
+
+                    <div class="technical-number">
+                        04
+                    </div>
+
+                    <h4>
+                        Motor Control
+                    </h4>
+
+                    <p>
+                        DOL, star-delta, VFD and other motor
+                        control configurations.
+                    </p>
+
+                </div>
+
+
+                <div class="technical-card">
+
+                    <div class="technical-number">
+                        05
+                    </div>
+
+                    <h4>
+                        Busbar Systems
+                    </h4>
+
+                    <p>
+                        Properly engineered busbar arrangements
+                        for safe and efficient current distribution.
+                    </p>
+
+                </div>
+
+
+                <div class="technical-card">
+
+                    <div class="technical-number">
+                        06
+                    </div>
+
+                    <h4>
+                        Cable Management
+                    </h4>
+
+                    <p>
+                        Organized cable routing, termination,
+                        ferruling and identification.
+                    </p>
+
+                </div>
+
+
+                <div class="technical-card">
+
+                    <div class="technical-number">
+                        07
+                    </div>
+
+                    <h4>
+                        Metering & Monitoring
+                    </h4>
+
+                    <p>
+                        Electrical measurement, monitoring and
+                        indication systems.
+                    </p>
+
+                </div>
+
+
+                <div class="technical-card">
+
+                    <div class="technical-number">
+                        08
+                    </div>
+
+                    <h4>
+                        Control Integration
+                    </h4>
+
+                    <p>
+                        Integration of relays, contactors, timers,
+                        drives and control devices.
+                    </p>
+
+                </div>
+
 
             </div>
 
-
-            <div class="technical-card">
-
-                <div class="technical-number">
-                    05
-                </div>
-
-                <h4>
-                    Busbar Systems
-                </h4>
-
-                <p>
-                    Properly engineered busbar arrangements
-                    for safe and efficient current distribution.
-                </p>
-
-            </div>
-
-
-            <div class="technical-card">
-
-                <div class="technical-number">
-                    06
-                </div>
-
-                <h4>
-                    Cable Management
-                </h4>
-
-                <p>
-                    Organized cable routing, termination,
-                    ferruling and identification.
-                </p>
-
-            </div>
-
-
-            <div class="technical-card">
-
-                <div class="technical-number">
-                    07
-                </div>
-
-                <h4>
-                    Metering & Monitoring
-                </h4>
-
-                <p>
-                    Electrical measurement, monitoring and
-                    indication systems.
-                </p>
-
-            </div>
-
-
-            <div class="technical-card">
-
-                <div class="technical-number">
-                    08
-                </div>
-
-                <h4>
-                    Control Integration
-                </h4>
-
-                <p>
-                    Integration of relays, contactors, timers,
-                    drives and control devices.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </section>
+        </section>
 
 
 
-    <!-- =========================================
+        <!-- =========================================
          COMPONENTS
     ========================================= -->
 
-    <section class="components-section">
+        <section class="components-section">
 
 
-        <div class="components-layout">
+            <div class="components-layout">
 
 
-            <div class="components-text">
+                <div class="components-text">
+
+                    <div class="section-label">
+                        Panel Construction
+                    </div>
+
+                    <h2 class="section-title">
+                        Quality Components.
+                        <br>
+                        Reliable Control.
+                    </h2>
+
+                    <div class="section-line"></div>
+
+                    <p>
+
+                        We integrate carefully selected electrical,
+                        protection and automation components to build
+                        reliable and maintainable control panels.
+
+                    </p>
+
+
+                    <div class="component-list">
+
+                        <div class="component-item">
+                            MCCB / MCB
+                        </div>
+
+                        <div class="component-item">
+                            Contactors
+                        </div>
+
+                        <div class="component-item">
+                            Overload Relays
+                        </div>
+
+                        <div class="component-item">
+                            Protection Relays
+                        </div>
+
+                        <div class="component-item">
+                            PLC / HMI
+                        </div>
+
+                        <div class="component-item">
+                            VFD / Drives
+                        </div>
+
+                        <div class="component-item">
+                            CT / PT
+                        </div>
+
+                        <div class="component-item">
+                            Meters & Indicators
+                        </div>
+
+                        <div class="component-item">
+                            Busbars
+                        </div>
+
+                        <div class="component-item">
+                            Terminal Blocks
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="components-visual">
+
+                    <div class="visual-label">
+
+                        <strong>
+                            ENGINEERED FOR PERFORMANCE
+                        </strong>
+
+                        <span>
+                            Electrical • Control • Automation
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+         MANUFACTURING PROCESS
+    ========================================= -->
+
+        <section class="process-section">
+
+
+            <div class="process-header">
 
                 <div class="section-label">
-                    Panel Construction
+                    Our Process
                 </div>
 
                 <h2 class="section-title">
-                    Quality Components.
-                    <br>
-                    Reliable Control.
+                    From Design to Commissioning
                 </h2>
 
                 <div class="section-line"></div>
 
                 <p>
 
-                    We integrate carefully selected electrical,
-                    protection and automation components to build
-                    reliable and maintainable control panels.
+                    Every control panel passes through a structured
+                    engineering and quality process to ensure reliable
+                    performance and safe operation.
 
                 </p>
-
-
-                <div class="component-list">
-
-                    <div class="component-item">
-                        MCCB / MCB
-                    </div>
-
-                    <div class="component-item">
-                        Contactors
-                    </div>
-
-                    <div class="component-item">
-                        Overload Relays
-                    </div>
-
-                    <div class="component-item">
-                        Protection Relays
-                    </div>
-
-                    <div class="component-item">
-                        PLC / HMI
-                    </div>
-
-                    <div class="component-item">
-                        VFD / Drives
-                    </div>
-
-                    <div class="component-item">
-                        CT / PT
-                    </div>
-
-                    <div class="component-item">
-                        Meters & Indicators
-                    </div>
-
-                    <div class="component-item">
-                        Busbars
-                    </div>
-
-                    <div class="component-item">
-                        Terminal Blocks
-                    </div>
-
-                </div>
 
             </div>
 
 
-            <div class="components-visual">
 
-                <div class="visual-label">
+            <div class="process-grid">
+
+
+                <div class="process-step">
+
+                    <div class="process-number">
+                        01
+                    </div>
+
+                    <h4>
+                        Requirement
+                    </h4>
+
+                    <p>
+                        Application and technical requirement analysis.
+                    </p>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <div class="process-number">
+                        02
+                    </div>
+
+                    <h4>
+                        Design
+                    </h4>
+
+                    <p>
+                        Electrical drawings and control architecture.
+                    </p>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <div class="process-number">
+                        03
+                    </div>
+
+                    <h4>
+                        Fabrication
+                    </h4>
+
+                    <p>
+                        Panel enclosure preparation and assembly.
+                    </p>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <div class="process-number">
+                        04
+                    </div>
+
+                    <h4>
+                        Wiring
+                    </h4>
+
+                    <p>
+                        Component wiring, ferruling and termination.
+                    </p>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <div class="process-number">
+                        05
+                    </div>
+
+                    <h4>
+                        Testing
+                    </h4>
+
+                    <p>
+                        Electrical, functional and safety verification.
+                    </p>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <div class="process-number">
+                        06
+                    </div>
+
+                    <h4>
+                        Commissioning
+                    </h4>
+
+                    <p>
+                        Site installation, commissioning and handover.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+         TESTING & QUALITY
+    ========================================= -->
+
+        <section class="testing-section">
+
+
+            <div class="section-label">
+                Quality Assurance
+            </div>
+
+            <h2 class="section-title">
+                Testing & Verification
+            </h2>
+
+            <div class="section-line"></div>
+
+
+            <div class="testing-grid">
+
+
+                <div class="test-card">
+
+                    <span>
+                        01
+                    </span>
+
+                    <h4>
+                        Visual Inspection
+                    </h4>
+
+                    <p>
+                        Panel assembly, component placement,
+                        wiring and workmanship inspection.
+                    </p>
+
+                </div>
+
+
+                <div class="test-card">
+
+                    <span>
+                        02
+                    </span>
+
+                    <h4>
+                        Insulation Testing
+                    </h4>
+
+                    <p>
+                        Insulation resistance checks for
+                        electrical safety and reliability.
+                    </p>
+
+                </div>
+
+
+                <div class="test-card">
+
+                    <span>
+                        03
+                    </span>
+
+                    <h4>
+                        Continuity Testing
+                    </h4>
+
+                    <p>
+                        Verification of wiring paths,
+                        connections and terminal continuity.
+                    </p>
+
+                </div>
+
+
+                <div class="test-card">
+
+                    <span>
+                        04
+                    </span>
+
+                    <h4>
+                        Functional Testing
+                    </h4>
+
+                    <p>
+                        Functional verification of control,
+                        protection and automation circuits.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+         CTA
+    ========================================= -->
+
+        <section class="cta">
+
+
+            <div class="cta-content">
+
+                <h2>
+                    Engineered Control. Reliable Power.
+                </h2>
+
+                <p>
+
+                    From conventional electrical control to advanced
+                    automation solutions, our panels are designed to
+                    support safe, efficient and reliable operation
+                    across demanding applications.
+
+                </p>
+
+            </div>
+
+
+            <div class="cta-side">
+
+                <div>
 
                     <strong>
-                        ENGINEERED FOR PERFORMANCE
+                        CONTROL • PROTECT • AUTOMATE
                     </strong>
 
                     <span>
-                        Electrical • Control • Automation
+                        ENGINEERED PANEL SOLUTIONS
                     </span>
 
                 </div>
@@ -1071,524 +2294,1755 @@ Contact
             </div>
 
 
-        </div>
-
-    </section>
+        </section>
 
 
+  <!-- footer start -->
 
-    <!-- =========================================
-         MANUFACTURING PROCESS
-    ========================================= -->
+    <footer class="premium-footer">
 
-    <section class="process-section">
+        <!-- Ambient Background -->
+        <div class="footer-grid"></div>
+        <div class="footer-glow footer-glow-1"></div>
+        <div class="footer-glow footer-glow-2"></div>
 
+        <div class="container">
 
-        <div class="process-header">
+            <!-- =====================================================
+             TOP CTA
+             ===================================================== -->
 
-            <div class="section-label">
-                Our Process
-            </div>
+            <div class="footer-cta">
 
-            <h2 class="section-title">
-                From Design to Commissioning
-            </h2>
-
-            <div class="section-line"></div>
-
-            <p>
-
-                Every control panel passes through a structured
-                engineering and quality process to ensure reliable
-                performance and safe operation.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="process-grid">
-
-
-            <div class="process-step">
-
-                <div class="process-number">
-                    01
+                <div class="footer-cta-line">
+                    <span></span>
+                    <small>LET'S BUILD WHAT'S NEXT</small>
                 </div>
 
-                <h4>
-                    Requirement
-                </h4>
+                <div class="footer-cta-main">
 
-                <p>
-                    Application and technical requirement analysis.
-                </p>
+                    <div class="footer-cta-title">
+                        <h2>
+                            Engineering
+                            <span>the future.</span>
+                        </h2>
+                    </div>
 
-            </div>
+                    <a href="#contact" class="footer-cta-button">
+                        <span>Start a Conversation</span>
+                        <i>↗</i>
+                    </a>
 
-
-            <div class="process-step">
-
-                <div class="process-number">
-                    02
                 </div>
 
-                <h4>
-                    Design
-                </h4>
-
-                <p>
-                    Electrical drawings and control architecture.
-                </p>
-
             </div>
 
 
-            <div class="process-step">
+            <!-- =====================================================
+             MAIN FOOTER
+             ===================================================== -->
 
-                <div class="process-number">
-                    03
+            <div class="footer-main">
+
+                <!-- BRAND -->
+                <div class="footer-brand-column">
+
+                    <a href="index.html" class="footer-logo-wrap">
+
+                        <span class="footer-logo-ring"></span>
+
+                        <img src="assets/img/w-alpha.png" alt="Company Logo" class="premium-footer-logo">
+
+                    </a>
+
+                    <p class="footer-brand-text">
+                        Technology-driven solutions across
+                        <strong>Power, Energy, Automation and R&D</strong>
+                        — engineered for a smarter, connected and
+                        future-ready world.
+                    </p>
+
+                    <div class="footer-status">
+
+                        <span class="status-dot"></span>
+
+                        <span>Engineering Tomorrow</span>
+
+                    </div>
+
                 </div>
 
-                <h4>
-                    Fabrication
-                </h4>
 
-                <p>
-                    Panel enclosure preparation and assembly.
-                </p>
+                <!-- COMPANY -->
+                <div class="footer-column">
 
-            </div>
+                    <div class="footer-column-label">
+                        <span>01</span>
+                        COMPANY
+                    </div>
 
+                    <ul class="premium-footer-links">
 
-            <div class="process-step">
+                        <li>
+                            <a href="index.html">
+                                <span>Home</span>
+                                <b>↗</b>
+                            </a>
+                        </li>
 
-                <div class="process-number">
-                    04
+                        <li>
+                            <a href="about.html">
+                                <span>About Us</span>
+                                <b>↗</b>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#contact">
+                                <span>Contact</span>
+                                <b>↗</b>
+                            </a>
+                        </li>
+
+                    </ul>
+
                 </div>
 
-                <h4>
-                    Wiring
-                </h4>
 
-                <p>
-                    Component wiring, ferruling and termination.
-                </p>
+                <!-- SOLUTIONS -->
+                <div class="footer-column">
 
-            </div>
+                    <div class="footer-column-label">
+                        <span>02</span>
+                        SOLUTIONS
+                    </div>
 
+                    <ul class="premium-footer-links">
 
-            <div class="process-step">
+                        <li>
+                            <a href="transmission.html">
+                                <span>Power Systems</span>
+                                <b>↗</b>
+                            </a>
+                        </li>
 
-                <div class="process-number">
-                    05
+                        <li>
+                            <a href="solar-energy.html">
+                                <span>Energy</span>
+                                <b>↗</b>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="home-automation.html">
+                                <span>Automation</span>
+                                <b>↗</b>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="smart-pole.html">
+                                <span>R&amp;D</span>
+                                <b>↗</b>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="transformers.html">
+                                <span>Products</span>
+                                <b>↗</b>
+                            </a>
+                        </li>
+
+                    </ul>
+
                 </div>
 
-                <h4>
-                    Testing
-                </h4>
 
-                <p>
-                    Electrical, functional and safety verification.
-                </p>
+                <!-- CONTACT -->
+                <div class="footer-column footer-contact-column">
 
-            </div>
+                    <div class="footer-column-label">
+                        <span>03</span>
+                        CONTACT
+                    </div>
+
+                    <div class="premium-contact-list">
+
+                        <!-- PHONE -->
+                        <a href="tel:+919000000000" class="premium-contact-item">
+
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+
+                            <div class="contact-info">
+
+                                <span>Phone</span>
+
+                                <strong>
+                                    +91 90000 00000
+                                </strong>
+
+                            </div>
+
+                        </a>
 
 
-            <div class="process-step">
+                        <!-- EMAIL -->
+                        <a href="mailto:info@alphanumeric.com" class="premium-contact-item">
 
-                <div class="process-number">
-                    06
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+
+                            <div class="contact-info">
+
+                                <span>Email</span>
+
+                                <strong>
+                                    info@alphanumeric.com
+                                </strong>
+
+                            </div>
+
+                        </a>
+
+
+                        <!-- LOCATION -->
+                        <div class="premium-contact-item">
+
+                            <div class="contact-icon">
+                                <i class="fas fa-location-dot"></i>
+                            </div>
+
+                            <div class="contact-info">
+
+                                <span>Location</span>
+
+                                <strong>
+                                    Madhapur, Hyderabad
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <h4>
-                    Commissioning
-                </h4>
+            </div>
 
-                <p>
-                    Site installation, commissioning and handover.
-                </p>
+
+            <!-- =====================================================
+             TECHNOLOGY STRIP
+             ===================================================== -->
+
+            <div class="footer-tech-strip">
+
+                <span>POWER</span>
+                <i></i>
+
+                <span>ENERGY</span>
+                <i></i>
+
+                <span>AUTOMATION</span>
+                <i></i>
+
+                <span>R&amp;D</span>
+                <i></i>
+
+                <span>INNOVATION</span>
 
             </div>
 
+
+            <!-- =====================================================
+             BOTTOM
+             ===================================================== -->
+
+            <div class="footer-bottom">
+
+                <div class="footer-copyright">
+
+                    © <span id="footerYear"></span>
+                    All Rights Reserved.
+
+                </div>
+
+                <div class="footer-bottom-center">
+
+                    <span>
+                        ENGINEERED FOR TOMORROW
+                    </span>
+
+                </div>
+
+                <div class="footer-bottom-links">
+
+                    <a href="#">
+                        Privacy
+                    </a>
+
+                    <a href="#">
+                        Terms
+                    </a>
+
+                </div>
+
+            </div>
 
         </div>
 
-    </section>
+    </footer>
+
+    <style>
+        /* =========================================================
+   PREMIUM FOOTER
+   ========================================================= */
+
+        .premium-footer {
+
+            --footer-bg: #030506;
+            --footer-bg-2: #070b0d;
+            --footer-white: #ffffff;
+            --footer-muted: rgba(255, 255, 255, .54);
+            --footer-soft: rgba(255, 255, 255, .30);
+            --footer-line: rgba(255, 255, 255, .10);
+            --footer-orange: #ff4b0b;
+
+            position: relative;
+
+            width: 100%;
+
+            background:
+                radial-gradient(circle at 75% 10%,
+                    rgba(255, 75, 11, .07),
+                    transparent 28%),
+                linear-gradient(135deg,
+                    var(--footer-bg),
+                    var(--footer-bg-2));
+
+            color: #fff;
+
+            overflow: hidden;
+
+            font-family:
+                "Varela Round",
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            isolation: isolate;
+
+        }
 
 
+        /* =========================================================
+   GRID
+   ========================================================= */
 
-    <!-- =========================================
-         TESTING & QUALITY
-    ========================================= -->
+        .footer-grid {
 
-    <section class="testing-section">
+            position: absolute;
 
+            inset: 0;
 
-        <div class="section-label">
-            Quality Assurance
-        </div>
+            z-index: -2;
 
-        <h2 class="section-title">
-            Testing & Verification
-        </h2>
+            opacity: .25;
 
-        <div class="section-line"></div>
+            background-image:
 
+                linear-gradient(rgba(255, 255, 255, .035) 1px,
+                    transparent 1px),
 
-        <div class="testing-grid">
+                linear-gradient(90deg,
+                    rgba(255, 255, 255, .035) 1px,
+                    transparent 1px);
 
+            background-size: 55px 55px;
 
-            <div class="test-card">
+            mask-image:
+                linear-gradient(180deg,
+                    black,
+                    transparent 85%);
 
-                <span>
-                    01
-                </span>
-
-                <h4>
-                    Visual Inspection
-                </h4>
-
-                <p>
-                    Panel assembly, component placement,
-                    wiring and workmanship inspection.
-                </p>
-
-            </div>
+        }
 
 
-            <div class="test-card">
+        /* =========================================================
+   AMBIENT GLOW
+   ========================================================= */
 
-                <span>
-                    02
-                </span>
+        .footer-glow {
 
-                <h4>
-                    Insulation Testing
-                </h4>
+            position: absolute;
 
-                <p>
-                    Insulation resistance checks for
-                    electrical safety and reliability.
-                </p>
+            border-radius: 50%;
 
-            </div>
+            pointer-events: none;
 
+            filter: blur(90px);
 
-            <div class="test-card">
+            z-index: -1;
 
-                <span>
-                    03
-                </span>
+            animation:
+                footerGlowMove 9s ease-in-out infinite alternate;
 
-                <h4>
-                    Continuity Testing
-                </h4>
+        }
 
-                <p>
-                    Verification of wiring paths,
-                    connections and terminal continuity.
-                </p>
+        .footer-glow-1 {
 
-            </div>
+            width: 350px;
+            height: 350px;
 
+            top: -200px;
+            right: 12%;
 
-            <div class="test-card">
+            background:
+                rgba(255, 75, 11, .10);
 
-                <span>
-                    04
-                </span>
+        }
 
-                <h4>
-                    Functional Testing
-                </h4>
+        .footer-glow-2 {
 
-                <p>
-                    Functional verification of control,
-                    protection and automation circuits.
-                </p>
+            width: 260px;
+            height: 260px;
 
-            </div>
+            bottom: 80px;
+            left: 10%;
+
+            background:
+                rgba(255, 255, 255, .035);
+
+            animation-delay: 2s;
+
+        }
 
 
-        </div>
+        @keyframes footerGlowMove {
 
-    </section>
+            from {
 
+                transform:
+                    translate3d(-20px, 0, 0) scale(1);
 
+            }
 
-    <!-- =========================================
-         CTA
-    ========================================= -->
+            to {
 
-    <section class="cta">
+                transform:
+                    translate3d(35px, 20px, 0) scale(1.15);
 
+            }
 
-        <div class="cta-content">
-
-            <h2>
-                Engineered Control. Reliable Power.
-            </h2>
-
-            <p>
-
-                From conventional electrical control to advanced
-                automation solutions, our panels are designed to
-                support safe, efficient and reliable operation
-                across demanding applications.
-
-            </p>
-
-        </div>
+        }
 
 
-        <div class="cta-side">
+        /* =========================================================
+   CONTAINER
+   ========================================================= */
 
-            <div>
+        .premium-footer .container {
 
-                <strong>
-                    CONTROL • PROTECT • AUTOMATE
-                </strong>
+            position: relative;
 
-                <span>
-                    ENGINEERED PANEL SOLUTIONS
-                </span>
+            z-index: 2;
 
-            </div>
-
-        </div>
+        }
 
 
-    </section>
+        /* =========================================================
+   CTA
+   ========================================================= */
+
+        .footer-cta {
+
+            padding:
+                90px 0 72px;
+
+            border-bottom:
+                1px solid var(--footer-line);
+
+        }
 
 
+        .footer-cta-line {
 
-    <!-- =========================================
-         FOOTER
-    ========================================= -->
+            display: flex;
 
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .footer-cta-line span {
+
+            width: 35px;
+
+            height: 1px;
+
+            background:
+                var(--footer-orange);
+
+        }
+
+
+        .footer-cta-line small {
+
+            color:
+                rgba(255, 255, 255, .42);
+
+            font-size: 8px;
+
+            letter-spacing:
+                .20rem;
+
+        }
+
+
+        .footer-cta-main {
+
+            display: flex;
+
+            align-items: flex-end;
+
+            justify-content: space-between;
+
+            gap: 40px;
+
+        }
+
+
+        .footer-cta-title h2 {
+
+            margin: 0;
+
+            font-size:
+                clamp(52px, 7vw, 100px);
+
+            font-weight: 400;
+
+            line-height: .90;
+
+            letter-spacing:
+                -.055em;
+
+        }
+
+
+        .footer-cta-title h2 span {
+
+            display: block;
+
+            color:
+                rgba(255, 255, 255, .28);
+
+        }
+
+
+        /* =========================================================
+   CTA BUTTON
+   ========================================================= */
+
+        .footer-cta-button {
+
+            position: relative;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+
+            min-width: 215px;
+
+            padding: 17px 20px;
+
+            color: #fff;
+
+            border:
+                1px solid rgba(255, 255, 255, .22);
+
+            text-decoration: none;
+
+            overflow: hidden;
+
+            transition:
+                color .4s ease,
+                border-color .4s ease,
+                transform .4s ease;
+
+        }
+
+
+        .footer-cta-button::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                var(--footer-orange);
+
+            transform:
+                translateX(-101%);
+
+            transition:
+                transform .45s cubic-bezier(.2, .7, .2, 1);
+
+            z-index: -1;
+
+        }
+
+
+        .footer-cta-button span {
+
+            position: relative;
+
+            z-index: 2;
+
+            font-size: 9px;
+
+            letter-spacing: .13rem;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .footer-cta-button i {
+
+            position: relative;
+
+            z-index: 2;
+
+            font-size: 18px;
+
+            font-style: normal;
+
+            transition:
+                transform .35s ease;
+
+        }
+
+
+        .footer-cta-button:hover {
+
+            color: #fff;
+
+            border-color:
+                var(--footer-orange);
+
+            transform:
+                translateY(-4px);
+
+        }
+
+
+        .footer-cta-button:hover::before {
+
+            transform:
+                translateX(0);
+
+        }
+
+
+        .footer-cta-button:hover i {
+
+            transform:
+                translate(5px, -5px);
+
+        }
+
+
+        /* =========================================================
+   MAIN FOOTER
+   ========================================================= */
+
+        .footer-main {
+
+            display: grid;
+
+            grid-template-columns:
+                1.45fr .7fr 1fr 1.15fr;
+
+            gap: 55px;
+
+            padding:
+                75px 0 70px;
+
+        }
+
+
+        /* =========================================================
+   LOGO
+   ========================================================= */
+
+        .footer-logo-wrap {
+
+            position: relative;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 190px;
+
+            height: 85px;
+
+            margin-bottom: 28px;
+
+            text-decoration: none;
+
+        }
+
+
+        .premium-footer-logo {
+
+            position: relative;
+
+            z-index: 2;
+
+            width: 175px;
+
+            height: auto;
+
+            object-fit: contain;
+
+            transform-origin: center;
+
+            filter:
+                drop-shadow(0 0 0 rgba(255, 75, 11, 0));
+
+            transition:
+                transform .6s cubic-bezier(.2, .7, .2, 1),
+                filter .6s ease;
+
+            animation:
+                footerLogoFloat 5s ease-in-out infinite;
+
+        }
+
+
+        .footer-logo-ring {
+
+            position: absolute;
+
+            width: 72px;
+
+            height: 72px;
+
+            border:
+                1px solid rgba(255, 75, 11, .15);
+
+            border-radius: 50%;
+
+            opacity: .8;
+
+            animation:
+                footerRing 7s linear infinite;
+
+        }
+
+
+        .footer-logo-ring::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: -8px;
+
+            border:
+                1px solid rgba(255, 255, 255, .04);
+
+            border-radius: 50%;
+
+        }
+
+
+        .footer-logo-wrap:hover .premium-footer-logo {
+
+            transform:
+                scale(1.055);
+
+            filter:
+                drop-shadow(0 0 20px rgba(255, 75, 11, .20));
+
+        }
+
+
+        @keyframes footerLogoFloat {
+
+            0%,
+            100% {
+
+                transform:
+                    translateY(0);
+
+            }
+
+            50% {
+
+                transform:
+                    translateY(-4px);
+
+            }
+
+        }
+
+
+        @keyframes footerRing {
+
+            from {
+
+                transform:
+                    rotate(0deg);
+
+            }
+
+            to {
+
+                transform:
+                    rotate(360deg);
+
+            }
+
+        }
+
+
+        /* =========================================================
+   BRAND TEXT
+   ========================================================= */
+
+        .footer-brand-text {
+
+            max-width: 390px;
+
+            margin: 0;
+
+            color:
+                var(--footer-muted);
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .footer-brand-text strong {
+
+            color:
+                rgba(255, 255, 255, .75);
+
+            font-weight: 400;
+
+        }
+
+
+        /* =========================================================
+   STATUS
+   ========================================================= */
+
+        .footer-status {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            margin-top: 27px;
+
+            color:
+                rgba(255, 255, 255, .38);
+
+            font-size: 8px;
+
+            letter-spacing:
+                .15rem;
+
+            text-transform:
+                uppercase;
+
+        }
+
+
+        .status-dot {
+
+            width: 6px;
+
+            height: 6px;
+
+            border-radius: 50%;
+
+            background:
+                var(--footer-orange);
+
+            box-shadow:
+                0 0 0 0 rgba(255, 75, 11, .45);
+
+            animation:
+                statusPulse 2s infinite;
+
+        }
+
+
+        @keyframes statusPulse {
+
+            0% {
+
+                box-shadow:
+                    0 0 0 0 rgba(255, 75, 11, .45);
+
+            }
+
+            70% {
+
+                box-shadow:
+                    0 0 0 7px rgba(255, 75, 11, 0);
+
+            }
+
+            100% {
+
+                box-shadow:
+                    0 0 0 0 rgba(255, 75, 11, 0);
+
+            }
+
+        }
+
+
+        /* =========================================================
+   COLUMN
+   ========================================================= */
+
+        .footer-column-label {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 27px;
+
+            color:
+                rgba(255, 255, 255, .43);
+
+            font-size: 8px;
+
+            letter-spacing:
+                .18rem;
+
+        }
+
+
+        .footer-column-label span {
+
+            color:
+                var(--footer-orange);
+
+            font-size: 8px;
+
+        }
+
+
+        /* =========================================================
+   LINKS
+   ========================================================= */
+
+        .premium-footer-links {
+
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+
+        }
+
+
+        .premium-footer-links li {
+
+            margin-bottom: 14px;
+
+        }
+
+
+        .premium-footer-links a {
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 12px;
+
+            width: 100%;
+
+            color:
+                rgba(255, 255, 255, .58);
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            transition:
+                color .3s ease,
+                padding-left .3s ease;
+
+        }
+
+
+        .premium-footer-links a b {
+
+            color:
+                rgba(255, 255, 255, .18);
+
+            font-size: 14px;
+
+            font-weight: 400;
+
+            opacity: 0;
+
+            transform:
+                translate(-5px, 5px);
+
+            transition:
+                opacity .3s ease,
+                transform .3s ease;
+
+        }
+
+
+        .premium-footer-links a:hover {
+
+            color: #fff;
+
+            padding-left: 6px;
+
+        }
+
+
+        .premium-footer-links a:hover b {
+
+            opacity: 1;
+
+            color:
+                var(--footer-orange);
+
+            transform:
+                translate(0, 0);
+
+        }
+
+
+        /* =========================================================
+   CONTACT
+   ========================================================= */
+
+        .premium-contact-list {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 21px;
+
+        }
+
+
+        .premium-contact-item {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 14px;
+
+            color: #fff;
+
+            text-decoration: none;
+
+        }
+
+
+        .contact-icon {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 34px;
+
+            height: 34px;
+
+            flex: 0 0 34px;
+
+            border:
+                1px solid rgba(255, 255, 255, .10);
+
+            color:
+                rgba(255, 255, 255, .55);
+
+            transition:
+                background .35s ease,
+                border-color .35s ease,
+                color .35s ease,
+                transform .35s ease;
+
+        }
+
+
+        .contact-icon i {
+
+            font-size: 12px;
+
+        }
+
+
+        .premium-contact-item:hover .contact-icon {
+
+            background:
+                var(--footer-orange);
+
+            border-color:
+                var(--footer-orange);
+
+            color: #fff;
+
+            transform:
+                translateY(-2px);
+
+        }
+
+
+        .contact-info {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 4px;
+
+        }
+
+
+        .contact-info span {
+
+            color:
+                rgba(255, 255, 255, .30);
+
+            font-size: 7px;
+
+            letter-spacing:
+                .15rem;
+
+            text-transform:
+                uppercase;
+
+        }
+
+
+        .contact-info strong {
+
+            color:
+                rgba(255, 255, 255, .72);
+
+            font-size: 12px;
+
+            font-weight: 400;
+
+            line-height: 1.5;
+
+            word-break: break-word;
+
+            transition:
+                color .3s ease;
+
+        }
+
+
+        .premium-contact-item:hover .contact-info strong {
+
+            color: #fff;
+
+        }
+
+
+        /* =========================================================
+   TECHNOLOGY STRIP
+   ========================================================= */
+
+        .footer-tech-strip {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 18px;
+
+            padding:
+                23px 0;
+
+            border-top:
+                1px solid var(--footer-line);
+
+            border-bottom:
+                1px solid var(--footer-line);
+
+        }
+
+
+        .footer-tech-strip span {
+
+            color:
+                rgba(255, 255, 255, .28);
+
+            font-size: 7px;
+
+            letter-spacing:
+                .18rem;
+
+            transition:
+                color .3s ease;
+
+        }
+
+
+        .footer-tech-strip span:hover {
+
+            color:
+                var(--footer-orange);
+
+        }
+
+
+        .footer-tech-strip i {
+
+            width: 3px;
+
+            height: 3px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255, 75, 11, .65);
+
+        }
+
+
+        /* =========================================================
+   BOTTOM
+   ========================================================= */
+
+        .footer-bottom {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr auto 1fr;
+
+            align-items: center;
+
+            gap: 25px;
+
+            min-height: 80px;
+
+        }
+
+
+        .footer-copyright {
+
+            color:
+                rgba(255, 255, 255, .28);
+
+            font-size: 10px;
+
+        }
+
+
+        .footer-bottom-center {
+
+            color:
+                rgba(255, 255, 255, .20);
+
+            font-size: 7px;
+
+            letter-spacing:
+                .18rem;
+
+            text-align: center;
+
+        }
+
+
+        .footer-bottom-links {
+
+            display: flex;
+
+            justify-content: flex-end;
+
+            gap: 22px;
+
+        }
+
+
+        .footer-bottom-links a {
+
+            color:
+                rgba(255, 255, 255, .28);
+
+            text-decoration: none;
+
+            font-size: 10px;
+
+            transition:
+                color .3s ease;
+
+        }
+
+
+        .footer-bottom-links a:hover {
+
+            color: #fff;
+
+        }
+
+
+        /* =========================================================
+   TABLET
+   ========================================================= */
+
+        @media (max-width: 991px) {
+
+            .footer-cta {
+
+                padding:
+                    65px 0 55px;
+
+            }
+
+
+            .footer-cta-main {
+
+                align-items: flex-start;
+
+                flex-direction: column;
+
+            }
+
+
+            .footer-cta-button {
+
+                min-width: 210px;
+
+            }
+
+
+            .footer-main {
+
+                grid-template-columns:
+                    1.3fr 1fr;
+
+                gap: 55px 40px;
+
+                padding:
+                    60px 0;
+
+            }
+
+
+            .footer-brand-column {
+
+                grid-column:
+                    1 / -1;
+
+            }
+
+
+            .footer-brand-text {
+
+                max-width: 520px;
+
+            }
+
+
+            .footer-bottom {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+                padding:
+                    22px 0;
+
+            }
+
+
+            .footer-bottom-center {
+
+                display: none;
+
+            }
+
+
+            .footer-bottom-links {
+
+                justify-content: flex-end;
+
+            }
+
+        }
+
+
+        /* =========================================================
+   MOBILE
+   ========================================================= */
+
+        @media (max-width: 767px) {
+
+            .premium-footer {
+
+                text-align: left;
+
+            }
+
+
+            .footer-cta {
+
+                padding:
+                    55px 0 45px;
+
+            }
+
+
+            .footer-cta-line {
+
+                margin-bottom: 20px;
+
+            }
+
+
+            .footer-cta-title h2 {
+
+                font-size:
+                    clamp(48px, 15vw, 65px);
+
+            }
+
+
+            .footer-cta-button {
+
+                width: 100%;
+
+                min-width: 0;
+
+                margin-top: 5px;
+
+            }
+
+
+            .footer-main {
+
+                display: flex;
+
+                flex-direction: column;
+
+                gap: 42px;
+
+                padding:
+                    48px 0;
+
+            }
+
+
+            .footer-brand-column {
+
+                width: 100%;
+
+            }
+
+
+            .footer-logo-wrap {
+
+                width: 175px;
+
+                height: 75px;
+
+            }
+
+
+            .premium-footer-logo {
+
+                width: 160px;
+
+            }
+
+
+            .footer-brand-text {
+
+                max-width: 100%;
+
+                font-size: 12px;
+
+                line-height: 1.75;
+
+            }
+
+
+            .footer-column {
+
+                width: 100%;
+
+            }
+
+
+            .footer-column-label {
+
+                margin-bottom: 20px;
+
+            }
+
+
+            .premium-footer-links li {
+
+                margin-bottom: 13px;
+
+            }
+
+
+            .premium-footer-links a {
+
+                font-size: 12px;
+
+            }
+
+
+            .premium-contact-list {
+
+                gap: 18px;
+
+            }
+
+
+            .contact-info strong {
+
+                font-size: 11px;
+
+            }
+
+
+            .footer-tech-strip {
+
+                justify-content: flex-start;
+
+                gap: 12px;
+
+                line-height: 2;
+
+            }
+
+
+            .footer-tech-strip span {
+
+                font-size: 6px;
+
+            }
+
+
+            .footer-tech-strip i {
+
+                width: 2px;
+
+                height: 2px;
+
+            }
+
+
+            .footer-bottom {
+
+                display: flex;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 14px;
+
+                padding:
+                    24px 0 28px;
+
+            }
+
+
+            .footer-bottom-links {
+
+                justify-content: flex-start;
+
+                gap: 20px;
+
+            }
+
+        }
+
+
+        /* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+        @media (max-width: 375px) {
+
+            .footer-cta-title h2 {
+
+                font-size: 45px;
+
+            }
+
+
+            .footer-cta {
+
+                padding-top: 45px;
+
+            }
+
+
+            .footer-main {
+
+                gap: 36px;
+
+            }
+
+
+            .footer-tech-strip {
+
+                gap: 9px;
+
+            }
+
+
+            .footer-tech-strip span {
+
+                letter-spacing:
+                    .10rem;
+
+            }
+
+        }
+
+
+        /* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .footer-glow,
+            .premium-footer-logo,
+            .footer-logo-ring,
+            .status-dot {
+
+                animation: none !important;
+
+            }
+
+            .footer-cta-button,
+            .premium-footer-links a,
+            .contact-icon,
+            .premium-footer-logo {
+
+                transition: none !important;
+
+            }
+
+        }
+    </style>
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                /* Dynamic year */
+
+                const year =
+                    document.getElementById(
+                        "footerYear"
+                    );
+
+                if (year) {
+
+                    year.textContent =
+                        new Date().getFullYear();
+
+                }
+
+
+                /* Subtle logo interaction */
+
+                const logo =
+                    document.querySelector(
+                        ".premium-footer-logo"
+                    );
+
+                if (logo) {
+
+                    logo.addEventListener(
+                        "mouseenter",
+                        function () {
+
+                            logo.style.animationPlayState =
+                                "paused";
+
+                        }
+                    );
+
+                    logo.addEventListener(
+                        "mouseleave",
+                        function () {
+
+                            logo.style.animationPlayState =
+                                "running";
+
+                        }
+                    );
+
+                }
+
+            }
+        );
+
+    </script>
+    <!-- footer end -->
     
-<footer class="main-footer">
-
-
-<div class="container-fluid">
-
-
-<div class="row g-5">
-
-
-<div class="col-lg-4 col-md-6 footer-column">
-
-<div class="footer-logo">
-
-<img
-src="assets/img/w-alpha.png"
-alt="Alpha Numeric Logo">
-
-</div>
-
-
-<p class="footer-description">
-
-Alpha Numeric is a technology-driven organization delivering
-intelligent solutions across energy, power, automation, IoT,
-lighting, R&D and industrial infrastructure.
-
-</p>
-
-
-<div class="footer-social">
-
-<a href="#" aria-label="LinkedIn">
-<i class="fab fa-linkedin-in"></i>
-</a>
-
-<a href="#" aria-label="Instagram">
-<i class="fab fa-instagram"></i>
-</a>
-
-<a href="#" aria-label="Facebook">
-<i class="fab fa-facebook-f"></i>
-</a>
-
-<a href="#" aria-label="YouTube">
-<i class="fab fa-youtube"></i>
-</a>
-
-</div>
-
-</div>
-
-
-<div class="col-lg-2 col-md-6 footer-column">
-
-<div class="footer-heading">
-SOLUTIONS
-</div>
-
-<ul class="footer-links">
-
-<li>
-<a href="solar-energy.html">
-Solar Energy
-</a>
-</li>
-
-<li>
-<a href="wind-energy.html">
-Wind Energy
-</a>
-</li>
-
-<li>
-<a href="biomass-energy.html">
-Biomass Energy
-</a>
-</li>
-
-<li>
-<a href="hydel-energy.html">
-Hydel Energy
-</a>
-</li>
-
-<li>
-<a href="transmission.html">
-Transmission
-</a>
-</li>
-
-<li>
-<a href="distribution.html">
-Distribution
-</a>
-</li>
-
-</ul>
-
-</div>
-
-
-<div class="col-lg-2 col-md-6 footer-column">
-
-<div class="footer-heading">
-TECHNOLOGY
-</div>
-
-<ul class="footer-links">
-
-<li>
-<a href="home-automation.html">
-Automation
-</a>
-</li>
-
-<li>
-<a href="smart-pole.html">
-R & D
-</a>
-</li>
-
-<li>
-<a href="transformers.html">
-Transformers
-</a>
-</li>
-
-<li>
-<a href="panels.html">
-Panels
-</a>
-</li>
-
-<li>
-<a href="switchgear.html">
-Switchgear
-</a>
-</li>
-
-</ul>
-
-</div>
-
-
-<div class="col-lg-4 col-md-6 footer-column">
-
-<div class="footer-heading">
-CONTACT
-</div>
-
-
-<ul class="footer-contact">
-
-<li>
-
-<i class="fas fa-location-dot"></i>
-
-<span>
-
- Madhapur, Hyderabad
-
-</span>
-
-</li>
-
-
-<li>
-
-<i class="fas fa-phone"></i>
-
-<span>
-+91 XXXXX XXXXX
-</span>
-
-</li>
-
-
-<li>
-
-<i class="fas fa-envelope"></i>
-
-<span>
-info@alphanumeric.com
-</span>
-
-</li>
-
-</ul>
-
-</div>
-
-
-</div>
-
-
-<div class="footer-bottom">
-
-<span>
-
-© 2026
-<strong>Alpha Numeric</strong>.
-All Rights Reserved.
-
-</span>
-
-
-<span>
-
-CLEAN ENERGY • SMART TECHNOLOGY • ENGINEERED FUTURE
-
-</span>
-
-</div>
-
-
-</div>
-
-</footer>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>window.addEventListener("scroll",function(){const navbar=document.querySelector(".main-navbar");if(window.scrollY>30){navbar.style.boxShadow="0 5px 25px rgba(0,0,0,0.07)";}else{navbar.style.boxShadow="none";}});</script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>window.addEventListener("scroll", function () { const navbar = document.querySelector(".main-navbar"); if (window.scrollY > 30) { navbar.style.boxShadow = "0 5px 25px rgba(0,0,0,0.07)"; } else { navbar.style.boxShadow = "none"; } });</script>
 </body>
+
 </html>
