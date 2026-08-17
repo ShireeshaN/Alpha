@@ -1,0 +1,3508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Pole | R&D | Alpha Numeric</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<style>
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #fff;
+    color: #111;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.main-navbar {
+    height: 100px;
+    padding: 0 7%;
+    background: #fff !important;
+    border-bottom: 1px solid #e8e8e8;
+    z-index: 9999;
+    transition: .3s ease;
+}
+
+.main-navbar .navbar-brand img {
+    height: 55px;
+    width: auto;
+}
+
+.main-navbar .navbar-nav {
+    align-items: center;
+    gap: 28px;
+}
+
+.main-navbar .nav-link {
+    color: #111 !important;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 10px 0 !important;
+    transition: .3s ease;
+}
+
+.main-navbar .nav-link:hover {
+    color: #666 !important;
+}
+
+.main-navbar .nav-link.main-active {
+    font-weight: 700;
+}
+
+.main-navbar .dropdown-toggle::after {
+    margin-left: 7px;
+}
+
+.main-navbar .dropdown-menu {
+    margin-top: 18px;
+    padding: 10px 0;
+    min-width: 235px;
+    border: 1px solid #e5e5e5;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: 0 15px 40px rgba(0,0,0,.08);
+}
+
+.main-navbar .dropdown-item {
+    padding: 12px 20px;
+    color: #222;
+    font-size: 13px;
+}
+
+.main-navbar .dropdown-item:hover {
+    background: #f5f5f5;
+}
+
+.main-navbar .dropdown-item.active {
+    background: #111 !important;
+    color: #fff !important;
+}
+
+
+/* =========================================================
+   R&D HERO
+========================================================= */
+
+.rd-hero {
+    min-height: 820px;
+    margin-top: 100px;
+    position: relative;
+    overflow: hidden;
+    background: #050505;
+    color: #fff;
+}
+
+.rd-grid {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+
+    background-size: 65px 65px;
+
+    mask-image: linear-gradient(
+        90deg,
+        #000,
+        transparent 90%
+    );
+}
+
+.rd-glow {
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    right: -180px;
+    top: 30px;
+
+    border: 1px solid #333;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 80px rgba(255,255,255,.015),
+        0 0 0 160px rgba(255,255,255,.01);
+}
+
+.rd-glow::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 100px;
+
+    border: 1px dashed #555;
+
+    border-radius: 50%;
+}
+
+.rd-glow::after {
+    content: "";
+
+    position: absolute;
+
+    width: 12px;
+    height: 12px;
+
+    background: #fff;
+
+    border-radius: 50%;
+
+    top: 48%;
+    left: 48%;
+
+    box-shadow:
+        0 0 25px #fff,
+        0 0 60px rgba(255,255,255,.3);
+}
+
+.rd-hero-content {
+    position: relative;
+    z-index: 2;
+
+    min-height: 820px;
+
+    max-width: 1450px;
+    margin: auto;
+
+    padding: 150px 7% 100px;
+
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+.rd-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    color: #aaa;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    margin-bottom: 28px;
+}
+
+.rd-eyebrow span {
+    width: 45px;
+    height: 1px;
+
+    background: #fff;
+}
+
+.rd-hero h1 {
+    font-size: clamp(55px, 8vw, 115px);
+
+    line-height: .86;
+
+    letter-spacing: -7px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    margin-bottom: 38px;
+}
+
+.rd-hero h1 span {
+    color: #888;
+    font-weight: 300;
+}
+
+.rd-hero-description {
+    max-width: 650px;
+
+    color: #aaa;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    margin-bottom: 35px;
+}
+
+.rd-hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.meta-box {
+    padding: 12px 16px;
+
+    border: 1px solid #333;
+
+    color: #ccc;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+.hero-product {
+    position: relative;
+
+    height: 550px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pole-visual {
+    position: relative;
+
+    width: 6px;
+    height: 450px;
+
+    background: linear-gradient(
+        90deg,
+        #444,
+        #fff,
+        #555
+    );
+
+    box-shadow:
+        0 0 25px rgba(255,255,255,.1);
+}
+
+.pole-top {
+    position: absolute;
+
+    top: -18px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 22px;
+    height: 22px;
+
+    border: 3px solid #fff;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 30px #fff;
+}
+
+.pole-arm {
+    position: absolute;
+
+    top: 35px;
+
+    width: 170px;
+    height: 3px;
+
+    background: #aaa;
+}
+
+.pole-arm.left {
+    right: 0;
+    transform: rotate(-17deg);
+    transform-origin: right;
+}
+
+.pole-arm.right {
+    left: 0;
+    transform: rotate(17deg);
+    transform-origin: left;
+}
+
+.pole-light {
+    position: absolute;
+
+    width: 75px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    box-shadow: 0 0 35px #fff;
+}
+
+.pole-light.left {
+    right: 105px;
+    top: 7px;
+    transform: rotate(-17deg);
+}
+
+.pole-light.right {
+    left: 105px;
+    top: 7px;
+    transform: rotate(17deg);
+}
+
+.pole-node {
+    position: absolute;
+
+    width: 13px;
+    height: 13px;
+
+    border: 2px solid #fff;
+
+    background: #111;
+
+    border-radius: 50%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.node-1 {
+    top: 100px;
+}
+
+.node-2 {
+    top: 190px;
+}
+
+.node-3 {
+    top: 280px;
+}
+
+.node-4 {
+    top: 370px;
+}
+
+.pole-base {
+    position: absolute;
+
+    bottom: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 85px;
+    height: 20px;
+
+    background: #222;
+
+    border: 1px solid #555;
+}
+
+.pole-label {
+    position: absolute;
+
+    right: 30px;
+    top: 110px;
+
+    padding: 12px;
+
+    border-left: 1px solid #fff;
+
+    color: #aaa;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   PRODUCT INTRO
+========================================================= */
+
+.product-intro {
+    padding: 120px 8%;
+
+    background: #fff;
+}
+
+.intro-grid {
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: .7fr 1.3fr;
+
+    gap: 100px;
+}
+
+.section-number {
+    font-size: 90px;
+
+    line-height: .8;
+
+    font-weight: 800;
+
+    color: #eee;
+
+    letter-spacing: -7px;
+}
+
+.section-label {
+    color: #777;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+}
+
+.section-title {
+    color: #111;
+
+    font-size: clamp(38px, 5vw, 68px);
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    letter-spacing: -3px;
+}
+
+.section-line {
+    width: 50px;
+    height: 3px;
+
+    background: #111;
+
+    margin: 25px 0;
+}
+
+.intro-copy {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 2;
+}
+
+.intro-copy strong {
+    color: #111;
+}
+
+
+/* =========================================================
+   ARCHITECTURE
+========================================================= */
+
+.architecture {
+    background: #050505;
+
+    color: #fff;
+
+    padding: 120px 8%;
+}
+
+.architecture-header {
+    max-width: 1250px;
+
+    margin: auto auto 70px;
+}
+
+.architecture .section-label {
+    color: #888;
+}
+
+.architecture .section-title {
+    color: #fff;
+}
+
+.architecture .section-line {
+    background: #fff;
+}
+
+.architecture-subtitle {
+    max-width: 650px;
+
+    color: #888;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+.architecture-system {
+    max-width: 1250px;
+
+    margin: auto;
+
+    border: 1px solid #292929;
+
+    position: relative;
+}
+
+.arch-layer {
+    min-height: 115px;
+
+    display: grid;
+
+    grid-template-columns: 190px 1fr;
+
+    border-bottom: 1px solid #292929;
+}
+
+.arch-layer:last-child {
+    border-bottom: none;
+}
+
+.layer-name {
+    padding: 25px;
+
+    border-right: 1px solid #292929;
+
+    display: flex;
+
+    align-items: center;
+
+    color: #fff;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.layer-content {
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.layer-chip {
+    padding: 11px 15px;
+
+    border: 1px solid #333;
+
+    color: #aaa;
+
+    font-size: 9px;
+
+    transition: .3s;
+}
+
+.layer-chip:hover {
+    background: #fff;
+
+    color: #111;
+
+    border-color: #fff;
+}
+
+
+/* =========================================================
+   INNOVATION CARDS
+========================================================= */
+
+.innovation {
+    padding: 120px 8%;
+
+    background: #f5f5f5;
+}
+
+.innovation-header {
+    max-width: 1250px;
+
+    margin: auto auto 60px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    gap: 40px;
+}
+
+.innovation-header p {
+    max-width: 450px;
+
+    color: #777;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+.innovation-grid {
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 2px;
+
+    background: #111;
+}
+
+.innovation-card {
+    min-height: 330px;
+
+    background: #fff;
+
+    padding: 30px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: .4s ease;
+}
+
+.innovation-card:hover {
+    background: #111;
+
+    color: #fff;
+}
+
+.innovation-index {
+    position: absolute;
+
+    right: 20px;
+    top: 15px;
+
+    color: #ddd;
+
+    font-size: 40px;
+
+    font-weight: 800;
+
+    transition: .3s;
+}
+
+.innovation-card:hover .innovation-index {
+    color: #333;
+}
+
+.innovation-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #111;
+
+    color: #fff;
+
+    margin-bottom: 45px;
+}
+
+.innovation-card:hover .innovation-icon {
+    background: #fff;
+    color: #111;
+}
+
+.innovation-card h3 {
+    font-size: 14px;
+
+    margin-bottom: 12px;
+}
+
+.innovation-card p {
+    color: #777;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+}
+
+.innovation-card:hover p {
+    color: #999;
+}
+
+
+/* =========================================================
+   DATA / IOT
+========================================================= */
+
+.iot-section {
+    padding: 125px 8%;
+
+    background: #fff;
+}
+
+.iot-layout {
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+.iot-copy p {
+    color: #666;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+.iot-dashboard {
+    position: relative;
+
+    min-height: 470px;
+
+    background: #080808;
+
+    border: 1px solid #222;
+
+    padding: 25px;
+}
+
+.dashboard-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #292929;
+}
+
+.dashboard-title {
+    color: #fff;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.live {
+    color: #aaa;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+.live::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 6px;
+    height: 6px;
+
+    margin-right: 6px;
+
+    border-radius: 50%;
+
+    background: #fff;
+}
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.dashboard-card {
+    padding: 20px;
+
+    min-height: 105px;
+
+    background: #111;
+
+    border: 1px solid #292929;
+}
+
+.dashboard-card span {
+    display: block;
+
+    color: #666;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+}
+
+.dashboard-card strong {
+    color: #fff;
+
+    font-size: 22px;
+}
+
+.dashboard-chart {
+    height: 110px;
+
+    margin-top: 20px;
+
+    position: relative;
+
+    border-bottom: 1px solid #333;
+
+    overflow: hidden;
+}
+
+.chart-line {
+    position: absolute;
+
+    width: 150%;
+
+    height: 2px;
+
+    background: #fff;
+
+    transform:
+        rotate(-4deg)
+        translateY(50px);
+}
+
+.chart-line::before,
+.chart-line::after {
+    content: "";
+
+    position: absolute;
+
+    width: 9px;
+    height: 9px;
+
+    background: #fff;
+
+    border-radius: 50%;
+}
+
+.chart-line::before {
+    left: 25%;
+    top: -3px;
+}
+
+.chart-line::after {
+    right: 15%;
+    top: 5px;
+}
+
+
+/* =========================================================
+   SMART INFRASTRUCTURE
+========================================================= */
+
+.infrastructure {
+    padding: 120px 8%;
+
+    background: #050505;
+}
+
+.infrastructure-header {
+    max-width: 1250px;
+
+    margin: auto auto 60px;
+}
+
+.infrastructure .section-title {
+    color: #fff;
+}
+
+.infrastructure .section-label {
+    color: #888;
+}
+
+.infrastructure .section-line {
+    background: #fff;
+}
+
+.infrastructure-grid {
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr .8fr;
+
+    gap: 15px;
+}
+
+.infrastructure-main {
+    min-height: 470px;
+
+    padding: 45px;
+
+    border: 1px solid #292929;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.infrastructure-main h3 {
+    max-width: 550px;
+
+    color: #fff;
+
+    font-size: 35px;
+
+    line-height: 1.1;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 20px;
+}
+
+.infrastructure-main p {
+    max-width: 550px;
+
+    color: #888;
+
+    font-size: 12px;
+
+    line-height: 1.9;
+}
+
+.infrastructure-circle {
+    position: absolute;
+
+    right: -100px;
+    bottom: -130px;
+
+    width: 450px;
+    height: 450px;
+
+    border: 1px solid #333;
+
+    border-radius: 50%;
+}
+
+.infrastructure-circle::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 60px;
+
+    border: 1px dashed #444;
+
+    border-radius: 50%;
+}
+
+.infrastructure-list {
+    display: grid;
+
+    grid-template-rows: repeat(4,1fr);
+
+    gap: 2px;
+
+    background: #292929;
+}
+
+.infrastructure-item {
+    padding: 25px;
+
+    background: #111;
+
+    transition: .3s;
+}
+
+.infrastructure-item:hover {
+    background: #fff;
+}
+
+.infrastructure-item i {
+    color: #fff;
+
+    margin-bottom: 12px;
+}
+
+.infrastructure-item h4 {
+    color: #fff;
+
+    font-size: 11px;
+
+    margin-bottom: 7px;
+}
+
+.infrastructure-item p {
+    color: #777;
+
+    font-size: 9px;
+
+    line-height: 1.6;
+}
+
+.infrastructure-item:hover i,
+.infrastructure-item:hover h4 {
+    color: #111;
+}
+
+
+/* =========================================================
+   APPLICATIONS
+========================================================= */
+
+.applications {
+    padding: 120px 8%;
+
+    background: #fff;
+}
+
+.application-grid {
+    max-width: 1250px;
+
+    margin: 60px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 15px;
+}
+
+.application-card {
+    min-height: 250px;
+
+    border: 1px solid #ddd;
+
+    padding: 30px;
+
+    position: relative;
+
+    transition: .3s;
+}
+
+.application-card:hover {
+    background: #111;
+
+    transform: translateY(-6px);
+}
+
+.application-card .number {
+    color: #ddd;
+
+    font-size: 45px;
+
+    font-weight: 800;
+
+    margin-bottom: 25px;
+}
+
+.application-card h3 {
+    font-size: 14px;
+
+    margin-bottom: 10px;
+}
+
+.application-card p {
+    color: #777;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+}
+
+.application-card:hover h3 {
+    color: #fff;
+}
+
+.application-card:hover p {
+    color: #999;
+}
+
+.application-card:hover .number {
+    color: #333;
+}
+
+
+/* =========================================================
+   R&D PROCESS
+========================================================= */
+
+.process {
+    padding: 120px 8%;
+
+    background: #f4f4f4;
+}
+
+.process-header {
+    max-width: 1250px;
+
+    margin: auto auto 65px;
+}
+
+.process-track {
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(5,1fr);
+
+    position: relative;
+}
+
+.process-track::before {
+    content: "";
+
+    position: absolute;
+
+    top: 28px;
+    left: 5%;
+    right: 5%;
+
+    height: 1px;
+
+    background: #bbb;
+}
+
+.process-step {
+    position: relative;
+
+    text-align: center;
+
+    padding: 0 15px;
+}
+
+.process-circle {
+    position: relative;
+
+    z-index: 2;
+
+    width: 56px;
+    height: 56px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #111;
+
+    border-radius: 50%;
+
+    background: #f4f4f4;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+.process-step h4 {
+    font-size: 11px;
+
+    margin-bottom: 10px;
+}
+
+.process-step p {
+    color: #777;
+
+    font-size: 9px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   SPECIFICATION STRIP
+========================================================= */
+
+.spec-strip {
+    background: #111;
+
+    color: #fff;
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    border-bottom: 1px solid #333;
+}
+
+.spec-item {
+    padding: 38px 25px;
+
+    text-align: center;
+
+    border-right: 1px solid #333;
+}
+
+.spec-item:last-child {
+    border-right: none;
+}
+
+.spec-item strong {
+    display: block;
+
+    font-size: 27px;
+
+    margin-bottom: 7px;
+}
+
+.spec-item span {
+    color: #888;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.rd-cta {
+    padding: 120px 8%;
+
+    background: #fff;
+}
+
+.cta-box {
+    max-width: 1250px;
+
+    min-height: 360px;
+
+    margin: auto;
+
+    background: #050505;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 65px;
+}
+
+.cta-box::before {
+    content: "";
+
+    position: absolute;
+
+    right: -120px;
+    top: -120px;
+
+    width: 450px;
+    height: 450px;
+
+    border: 1px solid #333;
+
+    border-radius: 50%;
+}
+
+.cta-box::after {
+    content: "";
+
+    position: absolute;
+
+    right: -30px;
+    top: -30px;
+
+    width: 270px;
+    height: 270px;
+
+    border: 1px dashed #333;
+
+    border-radius: 50%;
+}
+
+.cta-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 700px;
+}
+
+.cta-content .section-label {
+    color: #777;
+}
+
+.cta-content h2 {
+    color: #fff;
+
+    font-size: clamp(35px,5vw,65px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    color: #888;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+.cta-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 25px;
+
+    background: #fff;
+
+    color: #111;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    transition: .3s;
+}
+
+.cta-button:hover {
+    background: #111;
+
+    color: #fff;
+
+    border: 1px solid #fff;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.main-footer {
+    background: #050505;
+
+    color: #fff;
+
+    padding: 75px 7% 25px;
+}
+
+.footer-logo img {
+    height: 55px;
+
+    margin-bottom: 22px;
+}
+
+.footer-description {
+    max-width: 370px;
+
+    color: #888;
+
+    font-size: 12px;
+
+    line-height: 1.9;
+}
+
+.footer-heading {
+    color: #fff;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 22px;
+}
+
+.footer-links {
+    list-style: none;
+
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 11px;
+}
+
+.footer-links a {
+    color: #888;
+
+    font-size: 12px;
+
+    transition: .3s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+
+    padding-left: 4px;
+}
+
+.footer-contact {
+    list-style: none;
+
+    padding: 0;
+}
+
+.footer-contact li {
+    display: flex;
+
+    gap: 12px;
+
+    color: #888;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+.footer-contact i {
+    width: 18px;
+
+    color: #fff;
+
+    margin-top: 4px;
+}
+
+.footer-social {
+    display: flex;
+
+    gap: 9px;
+
+    margin-top: 24px;
+}
+
+.footer-social a {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #2b2b2b;
+
+    color: #999;
+
+    transition: .3s;
+}
+
+.footer-social a:hover {
+    background: #fff;
+
+    color: #000;
+
+    border-color: #fff;
+}
+
+.footer-bottom {
+    margin-top: 55px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #222;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #666;
+
+    font-size: 10px;
+}
+
+.footer-bottom strong {
+    color: #fff;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width:1100px) {
+
+    .innovation-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .application-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .process-track {
+        grid-template-columns: repeat(3,1fr);
+
+        row-gap: 45px;
+    }
+
+    .process-track::before {
+        display: none;
+    }
+
+}
+
+
+@media (max-width:991px) {
+
+    .main-navbar {
+        height: auto;
+
+        min-height: 80px;
+
+        padding: 10px 5%;
+    }
+
+    .main-navbar .navbar-brand img {
+        height: 48px;
+    }
+
+    .main-navbar .navbar-collapse {
+        margin-top: 15px;
+
+        padding: 15px 0;
+
+        background: #fff;
+    }
+
+    .main-navbar .navbar-nav {
+        align-items: flex-start;
+
+        gap: 0;
+    }
+
+    .main-navbar .nav-item {
+        width: 100%;
+    }
+
+    .main-navbar .nav-link {
+        padding: 12px 5px !important;
+    }
+
+    .main-navbar .dropdown-menu {
+        margin-top: 0;
+
+        border: none;
+
+        box-shadow: none;
+    }
+
+    .rd-hero {
+        margin-top: 80px;
+    }
+
+    .rd-hero-content {
+        grid-template-columns: 1fr;
+
+        padding-top: 110px;
+    }
+
+    .hero-product {
+        display: none;
+    }
+
+    .intro-grid,
+    .iot-layout {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .infrastructure-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width:767px) {
+
+    .rd-hero {
+        min-height: 700px;
+    }
+
+    .rd-hero-content {
+        min-height: 700px;
+
+        padding: 90px 7%;
+    }
+
+    .rd-hero h1 {
+        font-size: 55px;
+
+        letter-spacing: -4px;
+    }
+
+    .architecture,
+    .innovation,
+    .iot-section,
+    .infrastructure,
+    .applications,
+    .process,
+    .rd-cta,
+    .product-intro {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .arch-layer {
+        grid-template-columns: 1fr;
+    }
+
+    .layer-name {
+        border-right: none;
+
+        border-bottom: 1px solid #292929;
+    }
+
+    .innovation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .innovation-header {
+        display: block;
+    }
+
+    .innovation-header p {
+        margin-top: 25px;
+    }
+
+    .application-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-track {
+        grid-template-columns: 1fr;
+    }
+
+    .spec-strip {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .spec-item {
+        border-bottom: 1px solid #333;
+    }
+
+    .cta-box {
+        padding: 40px 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+}
+
+
+@media (max-width:450px) {
+
+    .spec-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<nav class="navbar navbar-expand-lg main-navbar fixed-top">
+
+    <div class="container-fluid px-4 px-lg-5">
+
+        <a class="navbar-brand" href="index.html">
+
+            <img
+                src="assets/img/b-alpha.png"
+                alt="Alpha Numeric">
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarResponsive">
+
+            <span class="me-2">Menu</span>
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="navbarResponsive">
+
+            <ul class="navbar-nav ms-auto">
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">
+                        About
+                    </a>
+                </li>
+
+
+                <!-- ENERGY -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown">
+
+                        Energy
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a class="dropdown-item" href="solar-energy.html">
+                                Solar Energy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="wind-energy.html">
+                                Wind Energy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="biomass-energy.html">
+                                Biomass Energy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="hydel-energy.html">
+                                Hydel Energy
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- POWER -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown">
+
+                        Power
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a class="dropdown-item" href="transmission.html">
+                                Transmission
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="distribution.html">
+                                Distribution
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="control-panels.html">
+                                Control Panels
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="panel-boards.html">
+                                Panel Boards
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- AUTOMATION -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown">
+
+                        Automation
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a class="dropdown-item" href="home-automation.html">
+                                Home Automation
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="commercial-automation.html">
+                                Commercial Automation
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="industrial-automation.html">
+                                Industrial Automation
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="hospital-automation.html">
+                                Hospital Automation
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="hotel-automation.html">
+                                Hotel Automation
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================================
+                     R&D ACTIVE
+                ================================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle main-active"
+                        href="#"
+                        data-bs-toggle="dropdown">
+
+                        R & D
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a
+                                class="dropdown-item active"
+                                href="smart-pole.html">
+
+                                Smart Pole
+
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="smart-bollard.html">
+
+                                Smart Bollard
+
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="window-leaf-ac.html">
+
+                                Window Leaf AC
+
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="smart-conference-table.html">
+
+                                Smart Conference Table
+
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- PRODUCTS -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown">
+
+                        Products
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a class="dropdown-item" href="transformers.html">
+                                Transformers
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="panels.html">
+                                Panels
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="switchgear.html">
+                                Switchgear
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="controllers.html">
+                                Controllers
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="index.html#contact">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================================
+     HERO — R&D PRODUCT
+========================================================= -->
+
+<section class="rd-hero">
+
+    <div class="rd-grid"></div>
+
+    <div class="rd-glow"></div>
+
+
+    <div class="rd-hero-content">
+
+
+        <div>
+
+            <div class="rd-eyebrow">
+
+                <span></span>
+
+                Research • Engineering • Innovation
+
+            </div>
+
+
+            <h1>
+
+                Smart
+
+                <br>
+
+                <span>Pole</span>
+
+            </h1>
+
+
+            <p class="rd-hero-description">
+
+                A connected infrastructure platform designed
+                to combine intelligent lighting, sensing,
+                communication and smart-city technologies
+                within a single engineered structure.
+
+                <br><br>
+
+                Designed as an adaptable foundation for the
+                next generation of connected public spaces.
+
+            </p>
+
+
+            <div class="rd-hero-meta">
+
+                <div class="meta-box">
+                    Intelligent Lighting
+                </div>
+
+                <div class="meta-box">
+                    IoT Ready
+                </div>
+
+                <div class="meta-box">
+                    Sensor Integration
+                </div>
+
+                <div class="meta-box">
+                    Smart Infrastructure
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT VISUAL -->
+
+        <div class="hero-product">
+
+            <div class="pole-visual">
+
+                <div class="pole-top"></div>
+
+                <div class="pole-arm left"></div>
+                <div class="pole-arm right"></div>
+
+                <div class="pole-light left"></div>
+                <div class="pole-light right"></div>
+
+                <div class="pole-node node-1"></div>
+                <div class="pole-node node-2"></div>
+                <div class="pole-node node-3"></div>
+                <div class="pole-node node-4"></div>
+
+                <div class="pole-base"></div>
+
+                <div class="pole-label">
+                    SENSOR NODE
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PRODUCT INTRO
+========================================================= -->
+
+<section class="product-intro">
+
+    <div class="intro-grid">
+
+
+        <div>
+
+            <div class="section-number">
+                01
+            </div>
+
+            <div class="section-label">
+                Product Concept
+            </div>
+
+            <h2 class="section-title">
+                Beyond<br>
+                A Light Pole.
+            </h2>
+
+        </div>
+
+
+        <div>
+
+            <p class="intro-copy">
+
+                The <strong>Smart Pole</strong> is envisioned as
+                more than a conventional lighting structure.
+
+                <br><br>
+
+                It provides an engineered platform where
+                lighting, sensors, communication technologies,
+                monitoring and connected infrastructure can
+                converge.
+
+                <br><br>
+
+                The modular approach allows the platform to
+                evolve according to application, environment
+                and technology requirements.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ARCHITECTURE
+========================================================= -->
+
+<section class="architecture">
+
+
+    <div class="architecture-header">
+
+        <div class="section-label">
+            Product Architecture
+        </div>
+
+        <h2 class="section-title">
+            Designed In Layers.
+            <br>
+            Built To Connect.
+        </h2>
+
+        <div class="section-line"></div>
+
+        <p class="architecture-subtitle">
+
+            A modular architecture enables multiple
+            technologies to operate as part of a connected
+            infrastructure platform.
+
+        </p>
+
+    </div>
+
+
+    <div class="architecture-system">
+
+
+        <div class="arch-layer">
+
+            <div class="layer-name">
+                Structure
+            </div>
+
+            <div class="layer-content">
+
+                <span class="layer-chip">
+                    Pole Structure
+                </span>
+
+                <span class="layer-chip">
+                    Modular Mounting
+                </span>
+
+                <span class="layer-chip">
+                    Equipment Housing
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="arch-layer">
+
+            <div class="layer-name">
+                Lighting
+            </div>
+
+            <div class="layer-content">
+
+                <span class="layer-chip">
+                    LED Luminaire
+                </span>
+
+                <span class="layer-chip">
+                    Dimming
+                </span>
+
+                <span class="layer-chip">
+                    Lighting Control
+                </span>
+
+                <span class="layer-chip">
+                    Scheduling
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="arch-layer">
+
+            <div class="layer-name">
+                Sensing
+            </div>
+
+            <div class="layer-content">
+
+                <span class="layer-chip">
+                    Environmental Sensors
+                </span>
+
+                <span class="layer-chip">
+                    Occupancy
+                </span>
+
+                <span class="layer-chip">
+                    Light Sensors
+                </span>
+
+                <span class="layer-chip">
+                    Equipment Monitoring
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="arch-layer">
+
+            <div class="layer-name">
+                Connectivity
+            </div>
+
+            <div class="layer-content">
+
+                <span class="layer-chip">
+                    IoT Gateway
+                </span>
+
+                <span class="layer-chip">
+                    Wireless Communication
+                </span>
+
+                <span class="layer-chip">
+                    Network Interface
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="arch-layer">
+
+            <div class="layer-name">
+                Intelligence
+            </div>
+
+            <div class="layer-content">
+
+                <span class="layer-chip">
+                    Edge Processing
+                </span>
+
+                <span class="layer-chip">
+                    Monitoring
+                </span>
+
+                <span class="layer-chip">
+                    Analytics
+                </span>
+
+                <span class="layer-chip">
+                    Remote Management
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INNOVATION
+========================================================= -->
+
+<section class="innovation">
+
+
+    <div class="innovation-header">
+
+        <div>
+
+            <div class="section-label">
+                Innovation Modules
+            </div>
+
+            <h2 class="section-title">
+                One Platform.
+                <br>
+                Multiple Possibilities.
+            </h2>
+
+        </div>
+
+
+        <p>
+
+            The platform can be configured with different
+            technology modules depending on the intended
+            deployment and infrastructure requirements.
+
+        </p>
+
+    </div>
+
+
+    <div class="innovation-grid">
+
+
+        <div class="innovation-card">
+
+            <div class="innovation-index">
+                01
+            </div>
+
+            <div class="innovation-icon">
+                <i class="fas fa-lightbulb"></i>
+            </div>
+
+            <h3>
+                Intelligent Lighting
+            </h3>
+
+            <p>
+
+                Connected lighting infrastructure with
+                controllable operation, scheduling and
+                monitoring capabilities.
+
+            </p>
+
+        </div>
+
+
+        <div class="innovation-card">
+
+            <div class="innovation-index">
+                02
+            </div>
+
+            <div class="innovation-icon">
+                <i class="fas fa-satellite-dish"></i>
+            </div>
+
+            <h3>
+                IoT Connectivity
+            </h3>
+
+            <p>
+
+                A communication-ready foundation for
+                transmitting device and environmental
+                information.
+
+            </p>
+
+        </div>
+
+
+        <div class="innovation-card">
+
+            <div class="innovation-index">
+                03
+            </div>
+
+            <div class="innovation-icon">
+                <i class="fas fa-microchip"></i>
+            </div>
+
+            <h3>
+                Sensor Integration
+            </h3>
+
+            <p>
+
+                Modular sensing capabilities can support
+                environmental, occupancy and infrastructure
+                monitoring.
+
+            </p>
+
+        </div>
+
+
+        <div class="innovation-card">
+
+            <div class="innovation-index">
+                04
+            </div>
+
+            <div class="innovation-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+
+            <h3>
+                Data Intelligence
+            </h3>
+
+            <p>
+
+                Connected infrastructure can generate useful
+                operational data for monitoring and analysis.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     IOT MONITORING
+========================================================= -->
+
+<section class="iot-section">
+
+
+    <div class="iot-layout">
+
+
+        <div class="iot-copy">
+
+            <div class="section-label">
+                Connected Intelligence
+            </div>
+
+            <h2 class="section-title">
+                From Physical
+                Infrastructure
+                To Digital Data.
+            </h2>
+
+            <div class="section-line"></div>
+
+            <p>
+
+                The Smart Pole can act as an edge point between
+                physical infrastructure and digital systems.
+
+            </p>
+
+            <p>
+
+                Lighting status, equipment information and
+                connected sensor data can be structured for
+                centralized monitoring and analysis.
+
+            </p>
+
+            <p>
+
+                This creates a foundation for future smart-city
+                applications without requiring the entire
+                infrastructure to be redesigned.
+
+            </p>
+
+        </div>
+
+
+        <!-- DASHBOARD -->
+
+        <div class="iot-dashboard">
+
+            <div class="dashboard-top">
+
+                <span class="dashboard-title">
+                    SMART POLE / SYSTEM STATUS
+                </span>
+
+                <span class="live">
+                    CONNECTED
+                </span>
+
+            </div>
+
+
+            <div class="dashboard-grid">
+
+
+                <div class="dashboard-card">
+
+                    <span>
+                        LIGHTING
+                    </span>
+
+                    <strong>
+                        96%
+                    </strong>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <span>
+                        SYSTEM
+                    </span>
+
+                    <strong>
+                        OK
+                    </strong>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <span>
+                        SENSOR NODES
+                    </span>
+
+                    <strong>
+                        08
+                    </strong>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <span>
+                        NETWORK
+                    </span>
+
+                    <strong>
+                        LIVE
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="dashboard-chart">
+
+                <div class="chart-line"></div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SMART INFRASTRUCTURE
+========================================================= -->
+
+<section class="infrastructure">
+
+
+    <div class="infrastructure-header">
+
+        <div class="section-label">
+            Smart Infrastructure
+        </div>
+
+        <h2 class="section-title">
+            Engineered For
+            Connected Environments.
+        </h2>
+
+        <div class="section-line"></div>
+
+    </div>
+
+
+    <div class="infrastructure-grid">
+
+
+        <div class="infrastructure-main">
+
+            <h3>
+                A modular infrastructure
+                platform for evolving
+                technology.
+            </h3>
+
+            <p>
+
+                Smart infrastructure must be capable of
+                adapting as technologies and requirements
+                change.
+
+                <br><br>
+
+                The Smart Pole concept provides a structured
+                foundation for integrating different
+                technologies within a single physical
+                platform.
+
+            </p>
+
+
+            <div class="infrastructure-circle"></div>
+
+        </div>
+
+
+        <div class="infrastructure-list">
+
+
+            <div class="infrastructure-item">
+
+                <i class="fas fa-network-wired"></i>
+
+                <h4>
+                    CONNECTIVITY
+                </h4>
+
+                <p>
+                    Communication-ready infrastructure for
+                    connected devices and systems.
+                </p>
+
+            </div>
+
+
+            <div class="infrastructure-item">
+
+                <i class="fas fa-solar-panel"></i>
+
+                <h4>
+                    ENERGY
+                </h4>
+
+                <p>
+                    Designed to accommodate intelligent energy
+                    and electrical monitoring concepts.
+                </p>
+
+            </div>
+
+
+            <div class="infrastructure-item">
+
+                <i class="fas fa-eye"></i>
+
+                <h4>
+                    MONITORING
+                </h4>
+
+                <p>
+                    Sensor and equipment information can be
+                    structured for centralized visibility.
+                </p>
+
+            </div>
+
+
+            <div class="infrastructure-item">
+
+                <i class="fas fa-expand"></i>
+
+                <h4>
+                    SCALABILITY
+                </h4>
+
+                <p>
+                    Modular architecture allows future
+                    technology additions.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     APPLICATIONS
+========================================================= -->
+
+<section class="applications">
+
+
+    <div class="intro-grid">
+
+        <div>
+
+            <div class="section-number">
+                02
+            </div>
+
+            <div class="section-label">
+                Potential Applications
+            </div>
+
+            <h2 class="section-title">
+                Built For
+                Smart Spaces.
+            </h2>
+
+        </div>
+
+
+        <div>
+
+            <p class="intro-copy">
+
+                The Smart Pole platform can support different
+                infrastructure environments where connected
+                lighting and intelligent technology are
+                required.
+
+                <br><br>
+
+                Its modular architecture allows applications
+                to be considered according to site-specific
+                requirements.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="application-grid">
+
+
+        <div class="application-card">
+
+            <div class="number">
+                01
+            </div>
+
+            <h3>
+                Smart Cities
+            </h3>
+
+            <p>
+                Connected public infrastructure for intelligent
+                urban environments.
+            </p>
+
+        </div>
+
+
+        <div class="application-card">
+
+            <div class="number">
+                02
+            </div>
+
+            <h3>
+                Roads & Highways
+            </h3>
+
+            <p>
+                Intelligent lighting and monitoring concepts
+                for road infrastructure.
+            </p>
+
+        </div>
+
+
+        <div class="application-card">
+
+            <div class="number">
+                03
+            </div>
+
+            <h3>
+                Campuses
+            </h3>
+
+            <p>
+                Connected infrastructure for institutional,
+                technology and corporate campuses.
+            </p>
+
+        </div>
+
+
+        <div class="application-card">
+
+            <div class="number">
+                04
+            </div>
+
+            <h3>
+                Industrial Areas
+            </h3>
+
+            <p>
+                Smart lighting and infrastructure monitoring
+                across industrial environments.
+            </p>
+
+        </div>
+
+
+        <div class="application-card">
+
+            <div class="number">
+                05
+            </div>
+
+            <h3>
+                Residential Communities
+            </h3>
+
+            <p>
+                Connected outdoor infrastructure for modern
+                residential developments.
+            </p>
+
+        </div>
+
+
+        <div class="application-card">
+
+            <div class="number">
+                06
+            </div>
+
+            <h3>
+                Public Spaces
+            </h3>
+
+            <p>
+                Technology-enabled infrastructure for parks,
+                public areas and urban spaces.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     R&D PROCESS
+========================================================= -->
+
+<section class="process">
+
+
+    <div class="process-header">
+
+        <div class="section-label">
+            R&D Approach
+        </div>
+
+        <h2 class="section-title">
+            From Concept
+            To Connected Product.
+        </h2>
+
+        <div class="section-line"></div>
+
+    </div>
+
+
+    <div class="process-track">
+
+
+        <div class="process-step">
+
+            <div class="process-circle">
+                01
+            </div>
+
+            <h4>
+                CONCEPT
+            </h4>
+
+            <p>
+                Define the application, requirements and
+                product direction.
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <div class="process-circle">
+                02
+            </div>
+
+            <h4>
+                ENGINEERING
+            </h4>
+
+            <p>
+                Develop the structural, electrical and
+                technology architecture.
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <div class="process-circle">
+                03
+            </div>
+
+            <h4>
+                INTEGRATION
+            </h4>
+
+            <p>
+                Bring hardware, sensors, lighting and
+                connectivity together.
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <div class="process-circle">
+                04
+            </div>
+
+            <h4>
+                VALIDATION
+            </h4>
+
+            <p>
+                Evaluate the system against defined
+                functional requirements.
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <div class="process-circle">
+                05
+            </div>
+
+            <h4>
+                EVOLUTION
+            </h4>
+
+            <p>
+                Refine the platform for future applications
+                and technologies.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PRODUCT METRICS
+========================================================= -->
+
+<section class="spec-strip">
+
+
+    <div class="spec-item">
+
+        <strong>
+            IoT
+        </strong>
+
+        <span>
+            Connected Architecture
+        </span>
+
+    </div>
+
+
+    <div class="spec-item">
+
+        <strong>
+            LED
+        </strong>
+
+        <span>
+            Intelligent Lighting
+        </span>
+
+    </div>
+
+
+    <div class="spec-item">
+
+        <strong>
+            24/7
+        </strong>
+
+        <span>
+            Monitoring Concept
+        </span>
+
+    </div>
+
+
+    <div class="spec-item">
+
+        <strong>
+            MODULAR
+        </strong>
+
+        <span>
+            Technology Platform
+        </span>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="rd-cta">
+
+
+    <div class="cta-box">
+
+
+        <div class="cta-content">
+
+            <div class="section-label">
+                Alpha Numeric R&D
+            </div>
+
+            <h2>
+                Engineering The
+                Infrastructure Of Tomorrow.
+            </h2>
+
+            <p>
+
+                Explore how intelligent infrastructure,
+                connected technology and product engineering
+                can come together through the Smart Pole
+                platform.
+
+            </p>
+
+            <a
+                href="index.html#contact"
+                class="cta-button">
+
+                DISCUSS THE TECHNOLOGY
+
+                <i class="fas fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="main-footer">
+
+    <div class="container-fluid">
+
+        <div class="row g-5">
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="footer-logo">
+
+                    <img
+                        src="assets/img/w-alpha.png"
+                        alt="Alpha Numeric">
+
+                </div>
+
+                <p class="footer-description">
+
+                    Alpha Numeric is a technology-driven
+                    organization delivering intelligent
+                    solutions across energy, power, automation,
+                    IoT, lighting, R&D and industrial
+                    infrastructure.
+
+                </p>
+
+
+                <div class="footer-social">
+
+                    <a href="#">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-2 col-md-6">
+
+                <div class="footer-heading">
+                    SOLUTIONS
+                </div>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="solar-energy.html">
+                            Solar Energy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="wind-energy.html">
+                            Wind Energy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="biomass-energy.html">
+                            Biomass Energy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="hydel-energy.html">
+                            Hydel Energy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="transmission.html">
+                            Transmission
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="distribution.html">
+                            Distribution
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-lg-2 col-md-6">
+
+                <div class="footer-heading">
+                    R & D
+                </div>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="smart-pole.html">
+                            Smart Pole
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="smart-bollard.html">
+                            Smart Bollard
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="window-leaf-ac.html">
+                            Window Leaf AC
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="smart-conference-table.html">
+                            Smart Conference Table
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="footer-heading">
+                    CONTACT
+                </div>
+
+                <ul class="footer-contact">
+
+                    <li>
+                        <i class="fas fa-location-dot"></i>
+
+                        <span>
+                            Hyderabad, Telangana, India
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="fas fa-phone"></i>
+
+                        <span>
+                            +91 XXXXX XXXXX
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="fas fa-envelope"></i>
+
+                        <span>
+                            info@alphanumeric.com
+                        </span>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026
+                <strong>Alpha Numeric</strong>.
+                All Rights Reserved.
+            </span>
+
+            <span>
+                RESEARCH • ENGINEERING • INNOVATION
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<script>
+
+window.addEventListener("scroll", function () {
+
+    const navbar =
+        document.querySelector(".main-navbar");
+
+    if (window.scrollY > 30) {
+
+        navbar.style.boxShadow =
+            "0 5px 25px rgba(0,0,0,.07)";
+
+    } else {
+
+        navbar.style.boxShadow = "none";
+
+    }
+
+});
+
+</script>
+
+
+</body>
+</html>

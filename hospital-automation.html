@@ -1,0 +1,3365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hospital Automation | Alpha Numeric</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* =========================================================
+           GLOBAL
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #fff;
+            color: #111;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* =========================================================
+           NAVBAR
+        ========================================================= */
+
+        .main-navbar {
+            height: 100px;
+            padding: 0 7%;
+            background: #fff !important;
+            border-bottom: 1px solid #e8e8e8;
+            z-index: 9999;
+            transition: .3s ease;
+        }
+
+        .main-navbar .navbar-brand img {
+            height: 55px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .main-navbar .navbar-nav {
+            align-items: center;
+            gap: 28px;
+        }
+
+        .main-navbar .nav-link {
+            color: #111 !important;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            padding: 10px 0 !important;
+            transition: .3s ease;
+        }
+
+        .main-navbar .nav-link:hover {
+            color: #666 !important;
+        }
+
+        .main-navbar .nav-link.main-active {
+            color: #000 !important;
+            font-weight: 700;
+        }
+
+        .main-navbar .dropdown-toggle::after {
+            margin-left: 7px;
+            vertical-align: middle;
+            border-top: 5px solid #111;
+            border-right: 4px solid transparent;
+            border-left: 4px solid transparent;
+        }
+
+        .main-navbar .dropdown-menu {
+            margin-top: 18px;
+            padding: 10px 0;
+            min-width: 235px;
+            border: 1px solid #e5e5e5;
+            border-radius: 0;
+            background: #fff;
+            box-shadow: 0 15px 40px rgba(0,0,0,.08);
+        }
+
+        .main-navbar .dropdown-item {
+            padding: 12px 20px;
+            color: #222;
+            font-size: 13px;
+            transition: .25s ease;
+        }
+
+        .main-navbar .dropdown-item:hover {
+            background: #f5f5f5;
+            color: #000;
+        }
+
+        .main-navbar .dropdown-item.active {
+            background: #111 !important;
+            color: #fff !important;
+        }
+
+        .main-navbar .navbar-toggler {
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            min-height: 700px;
+            margin-top: 100px;
+
+            display: flex;
+            align-items: center;
+
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,.97) 0%,
+                    rgba(0,0,0,.88) 40%,
+                    rgba(0,0,0,.50) 75%,
+                    rgba(0,0,0,.15) 100%
+                ),
+                url("images/hospital-automation-hero.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+
+            padding: 100px 7%;
+
+            color: #fff;
+
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            margin-bottom: 24px;
+
+            color: #bbb;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .hero-label::before {
+            content: "";
+
+            width: 42px;
+            height: 1px;
+
+            background: #fff;
+        }
+
+        .hero h1 {
+            max-width: 1000px;
+
+            color: #fff;
+
+            font-size: clamp(46px, 7vw, 90px);
+
+            line-height: .94;
+
+            font-weight: 700;
+
+            letter-spacing: -5px;
+
+            margin-bottom: 30px;
+
+            text-transform: uppercase;
+        }
+
+        .hero h1 span {
+            font-weight: 300;
+        }
+
+        .hero p {
+            max-width: 730px;
+
+            color: #d4d4d4;
+
+            font-size: 15px;
+
+            line-height: 1.9;
+
+            margin-bottom: 35px;
+        }
+
+        .hero-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+
+            padding: 15px 28px;
+
+            background: #fff;
+            color: #111;
+
+            border: 1px solid #fff;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            transition: .3s ease;
+        }
+
+        .hero-button:hover {
+            background: #111;
+            color: #fff;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================================================
+           HIGHLIGHTS
+        ========================================================= */
+
+        .highlights {
+            width: 86%;
+            margin: -45px auto 0;
+
+            position: relative;
+            z-index: 10;
+
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+
+            background: #fff;
+
+            box-shadow: 0 20px 55px rgba(0,0,0,.12);
+        }
+
+        .highlight {
+            min-height: 115px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 16px;
+
+            padding: 20px 25px;
+
+            border-right: 1px solid #e5e5e5;
+        }
+
+        .highlight:last-child {
+            border-right: none;
+        }
+
+        .highlight-icon {
+            width: 44px;
+            height: 44px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #111;
+            color: #fff;
+
+            font-size: 17px;
+        }
+
+        .highlight h4 {
+            color: #111;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            margin-bottom: 6px;
+        }
+
+        .highlight p {
+            color: #777;
+
+            font-size: 10px;
+
+            line-height: 1.6;
+
+            margin: 0;
+        }
+
+
+        /* =========================================================
+           COMMON
+        ========================================================= */
+
+        .section-label {
+            color: #777;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 14px;
+        }
+
+        .section-title {
+            color: #111;
+
+            font-size: clamp(34px,4vw,58px);
+
+            line-height: 1.08;
+
+            font-weight: 600;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 0;
+        }
+
+        .section-line {
+            width: 45px;
+            height: 3px;
+
+            background: #111;
+
+            margin: 20px 0 25px;
+        }
+
+
+        /* =========================================================
+           INTRO
+        ========================================================= */
+
+        .intro {
+            padding: 110px 8%;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 90px;
+
+            align-items: center;
+
+            background: #fff;
+        }
+
+        .intro-text {
+            color: #666;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+
+        /* =========================================================
+           HOSPITAL SYSTEMS
+        ========================================================= */
+
+        .systems-section {
+            padding: 105px 8%;
+
+            background: #f5f5f5;
+        }
+
+        .section-heading {
+            max-width: 850px;
+
+            text-align: center;
+
+            margin: 0 auto 50px;
+        }
+
+        .section-heading .section-line {
+            margin: 20px auto 25px;
+        }
+
+        .section-heading p {
+            color: #666;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+        .systems-grid {
+            max-width: 1250px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(3,1fr);
+
+            gap: 18px;
+        }
+
+        .system-card {
+            min-height: 285px;
+
+            position: relative;
+
+            padding: 32px;
+
+            background: #fff;
+
+            border: 1px solid #e5e5e5;
+
+            overflow: hidden;
+
+            transition: .35s ease;
+        }
+
+        .system-card::before {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            top: 0;
+
+            width: 0;
+            height: 3px;
+
+            background: #111;
+
+            transition: .35s ease;
+        }
+
+        .system-card:hover {
+            background: #111;
+
+            transform: translateY(-7px);
+
+            box-shadow: 0 20px 40px rgba(0,0,0,.12);
+        }
+
+        .system-card:hover::before {
+            width: 100%;
+        }
+
+        .system-icon {
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 23px;
+
+            background: #111;
+            color: #fff;
+
+            font-size: 18px;
+
+            transition: .3s ease;
+        }
+
+        .system-card:hover .system-icon {
+            background: #fff;
+            color: #111;
+        }
+
+        .system-card h3 {
+            color: #111;
+
+            font-size: 15px;
+            font-weight: 600;
+
+            margin-bottom: 10px;
+
+            transition: .3s ease;
+        }
+
+        .system-card p {
+            color: #777;
+
+            font-size: 11px;
+
+            line-height: 1.75;
+
+            transition: .3s ease;
+        }
+
+        .system-card:hover h3 {
+            color: #fff;
+        }
+
+        .system-card:hover p {
+            color: #aaa;
+        }
+
+
+        /* =========================================================
+           SMART HOSPITAL
+        ========================================================= */
+
+        .smart-section {
+            padding: 110px 8%;
+
+            background: #fff;
+        }
+
+        .smart-layout {
+            max-width: 1250px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 80px;
+
+            align-items: center;
+        }
+
+        .smart-image {
+            min-height: 510px;
+
+            position: relative;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.18),
+                    rgba(0,0,0,.18)
+                ),
+                url("images/smart-hospital.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+        .smart-tag {
+            position: absolute;
+
+            left: 25px;
+            bottom: 25px;
+
+            padding: 18px 22px;
+
+            background: #111;
+
+            color: #fff;
+
+            border-left: 4px solid #fff;
+        }
+
+        .smart-tag strong {
+            display: block;
+
+            color: #fff;
+
+            font-size: 13px;
+
+            margin-bottom: 5px;
+        }
+
+        .smart-tag span {
+            color: #aaa;
+
+            font-size: 9px;
+
+            letter-spacing: 1px;
+        }
+
+        .smart-content p {
+            color: #666;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+
+            margin-bottom: 25px;
+        }
+
+        .smart-list {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 10px;
+        }
+
+        .smart-item {
+            padding: 17px;
+
+            background: #f5f5f5;
+
+            border-left: 3px solid #111;
+
+            color: #222;
+
+            font-size: 10px;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================================================
+           HOSPITAL WORKFLOW
+        ========================================================= */
+
+        .workflow-section {
+            padding: 110px 8%;
+
+            background: #050505;
+
+            color: #fff;
+        }
+
+        .workflow-header {
+            max-width: 800px;
+
+            margin: 0 auto 55px;
+
+            text-align: center;
+        }
+
+        .workflow-header .section-label {
+            color: #aaa;
+        }
+
+        .workflow-header .section-title {
+            color: #fff;
+        }
+
+        .workflow-header .section-line {
+            background: #fff;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .workflow-header p {
+            color: #aaa;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+        .workflow-grid {
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(5,1fr);
+
+            gap: 10px;
+        }
+
+        .workflow-card {
+            min-height: 220px;
+
+            padding: 25px 15px;
+
+            text-align: center;
+
+            border: 1px solid #333;
+
+            background: rgba(255,255,255,.03);
+
+            transition: .3s ease;
+        }
+
+        .workflow-card:hover {
+            background: #fff;
+
+            transform: translateY(-6px);
+        }
+
+        .workflow-number {
+            width: 45px;
+            height: 45px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0 auto 16px;
+
+            background: #fff;
+            color: #111;
+
+            border-radius: 50%;
+
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .workflow-card h4 {
+            color: #fff;
+
+            font-size: 10px;
+
+            margin-bottom: 8px;
+
+            transition: .3s;
+        }
+
+        .workflow-card p {
+            color: #aaa;
+
+            font-size: 9px;
+
+            line-height: 1.6;
+
+            transition: .3s;
+        }
+
+        .workflow-card:hover h4 {
+            color: #111;
+        }
+
+        .workflow-card:hover p {
+            color: #555;
+        }
+
+
+        /* =========================================================
+           FEATURES
+        ========================================================= */
+
+        .features-section {
+            padding: 105px 8%;
+
+            background: #f5f5f5;
+        }
+
+        .features-header {
+            max-width: 1250px;
+
+            margin: auto;
+        }
+
+        .features-grid {
+            max-width: 1250px;
+
+            margin: 45px auto 0;
+
+            display: grid;
+
+            grid-template-columns: repeat(4,1fr);
+
+            gap: 16px;
+        }
+
+        .feature-card {
+            padding: 28px 22px;
+
+            background: #fff;
+
+            border: 1px solid #e5e5e5;
+
+            transition: .3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+
+            border-color: #111;
+        }
+
+        .feature-card i {
+            color: #111;
+
+            font-size: 23px;
+
+            margin-bottom: 17px;
+        }
+
+        .feature-card h4 {
+            color: #111;
+
+            font-size: 12px;
+
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            color: #777;
+
+            font-size: 10px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================================================
+           BMS / INTEGRATION
+        ========================================================= */
+
+        .bms-section {
+            padding: 110px 8%;
+
+            background: #fff;
+        }
+
+        .bms-layout {
+            max-width: 1250px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: .8fr 1.2fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .bms-description {
+            color: #666;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+        .bms-list {
+            display: grid;
+
+            grid-template-columns: repeat(2,1fr);
+
+            gap: 12px;
+        }
+
+        .bms-item {
+            padding: 22px;
+
+            background: #f7f7f7;
+
+            border: 1px solid #e5e5e5;
+
+            transition: .3s ease;
+        }
+
+        .bms-item:hover {
+            background: #111;
+
+            transform: translateY(-5px);
+        }
+
+        .bms-item i {
+            color: #111;
+
+            font-size: 17px;
+
+            margin-bottom: 12px;
+
+            transition: .3s;
+        }
+
+        .bms-item strong {
+            display: block;
+
+            color: #111;
+
+            font-size: 11px;
+
+            margin-bottom: 6px;
+
+            transition: .3s;
+        }
+
+        .bms-item span {
+            color: #777;
+
+            font-size: 9px;
+
+            line-height: 1.6;
+
+            transition: .3s;
+        }
+
+        .bms-item:hover i,
+        .bms-item:hover strong {
+            color: #fff;
+        }
+
+        .bms-item:hover span {
+            color: #aaa;
+        }
+
+
+        /* =========================================================
+           APPLICATIONS
+        ========================================================= */
+
+        .applications-section {
+            padding: 105px 8%;
+
+            background: #f5f5f5;
+        }
+
+        .applications-content {
+            max-width: 1250px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: .8fr 1.2fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .application-description {
+            color: #666;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+        .application-list {
+            display: grid;
+
+            grid-template-columns: repeat(2,1fr);
+
+            gap: 12px;
+        }
+
+        .application-item {
+            padding: 21px;
+
+            background: #fff;
+
+            border: 1px solid #e5e5e5;
+
+            transition: .3s ease;
+        }
+
+        .application-item:hover {
+            transform: translateY(-5px);
+
+            border-color: #111;
+        }
+
+        .application-item strong {
+            display: block;
+
+            color: #111;
+
+            font-size: 11px;
+
+            margin-bottom: 6px;
+        }
+
+        .application-item span {
+            color: #777;
+
+            font-size: 9px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================================================
+           CTA
+        ========================================================= */
+
+        .cta {
+            max-width: 1250px;
+
+            margin: 80px auto;
+
+            min-height: 290px;
+
+            display: grid;
+
+            grid-template-columns: 1.3fr .7fr;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,1),
+                    rgba(0,0,0,.68)
+                ),
+                url("images/hospital-automation-cta.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+        .cta-content {
+            padding: 50px;
+
+            color: #fff;
+        }
+
+        .cta-content h2 {
+            color: #fff;
+
+            font-size: 32px;
+
+            line-height: 1.2;
+
+            margin-bottom: 15px;
+        }
+
+        .cta-content p {
+            max-width: 650px;
+
+            color: #ccc;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-top: 15px;
+
+            padding: 13px 23px;
+
+            background: #fff;
+
+            color: #111;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            transition: .3s ease;
+        }
+
+        .cta-button:hover {
+            background: #111;
+
+            color: #fff;
+
+            border: 1px solid #fff;
+        }
+
+        .cta-side {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-left: 1px solid #333;
+        }
+
+        .cta-side strong {
+            display: block;
+
+            color: #fff;
+
+            font-size: 18px;
+
+            margin-bottom: 6px;
+        }
+
+        .cta-side span {
+            color: #aaa;
+
+            font-size: 9px;
+
+            letter-spacing: 1.5px;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        .main-footer {
+            background: #050505;
+
+            color: #fff;
+
+            padding: 75px 7% 25px;
+        }
+
+        .footer-logo img {
+            height: 55px;
+
+            width: auto;
+
+            margin-bottom: 22px;
+        }
+
+        .footer-description {
+            max-width: 370px;
+
+            color: #888;
+
+            font-size: 12px;
+
+            line-height: 1.9;
+        }
+
+        .footer-heading {
+            color: #fff;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            letter-spacing: 1.5px;
+
+            margin-bottom: 22px;
+        }
+
+        .footer-links {
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 11px;
+        }
+
+        .footer-links a {
+            color: #888;
+
+            font-size: 12px;
+
+            transition: .3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+
+            padding-left: 4px;
+        }
+
+        .footer-contact {
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+        }
+
+        .footer-contact li {
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 12px;
+
+            color: #888;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+            margin-bottom: 15px;
+        }
+
+        .footer-contact i {
+            width: 18px;
+
+            color: #fff;
+
+            margin-top: 4px;
+        }
+
+        .footer-social {
+            display: flex;
+
+            gap: 9px;
+
+            margin-top: 24px;
+        }
+
+        .footer-social a {
+            width: 35px;
+            height: 35px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid #2b2b2b;
+
+            color: #999;
+
+            font-size: 13px;
+
+            transition: .3s ease;
+        }
+
+        .footer-social a:hover {
+            background: #fff;
+
+            color: #000;
+
+            border-color: #fff;
+        }
+
+        .footer-bottom {
+            margin-top: 55px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid #222;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+            color: #666;
+
+            font-size: 10px;
+        }
+
+        .footer-bottom strong {
+            color: #fff;
+
+            font-weight: 500;
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width:1100px) {
+
+            .main-navbar .navbar-nav {
+                gap: 18px;
+            }
+
+            .systems-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .workflow-grid {
+                grid-template-columns: repeat(3,1fr);
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+        }
+
+
+        @media (max-width:991px) {
+
+            .main-navbar {
+                height: auto;
+                min-height: 80px;
+                padding: 10px 5%;
+            }
+
+            .main-navbar .navbar-brand img {
+                height: 48px;
+            }
+
+            .main-navbar .navbar-collapse {
+                margin-top: 15px;
+                padding: 15px 0;
+                background: #fff;
+            }
+
+            .main-navbar .navbar-nav {
+                align-items: flex-start;
+                gap: 0;
+            }
+
+            .main-navbar .nav-item {
+                width: 100%;
+            }
+
+            .main-navbar .nav-link {
+                padding: 12px 5px !important;
+            }
+
+            .main-navbar .dropdown-menu {
+                margin-top: 0;
+                border: none;
+                box-shadow: none;
+            }
+
+            .hero {
+                margin-top: 80px;
+            }
+
+            .intro,
+            .smart-layout,
+            .bms-layout,
+            .applications-content {
+                grid-template-columns: 1fr;
+            }
+
+            .cta {
+                margin-left: 6%;
+                margin-right: 6%;
+            }
+
+        }
+
+
+        @media (max-width:767px) {
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .hero-content {
+                padding: 90px 7%;
+            }
+
+            .hero h1 {
+                font-size: 50px;
+                letter-spacing: -3px;
+            }
+
+            .highlights {
+                width: 100%;
+                margin: 0;
+                grid-template-columns: 1fr;
+            }
+
+            .highlight {
+                border-right: none;
+                border-bottom: 1px solid #e5e5e5;
+            }
+
+            .intro,
+            .systems-section,
+            .smart-section,
+            .workflow-section,
+            .features-section,
+            .bms-section,
+            .applications-section {
+                padding-left: 7%;
+                padding-right: 7%;
+            }
+
+            .systems-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .smart-list {
+                grid-template-columns: 1fr;
+            }
+
+            .workflow-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bms-list,
+            .application-list {
+                grid-template-columns: 1fr;
+            }
+
+            .cta {
+                margin: 40px 6%;
+                grid-template-columns: 1fr;
+            }
+
+            .cta-side {
+                min-height: 120px;
+                border-left: none;
+                border-top: 1px solid #333;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+        }
+
+
+        @media (max-width:430px) {
+
+            .main-navbar .navbar-brand img {
+                height: 42px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .workflow-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<nav class="navbar navbar-expand-lg main-navbar fixed-top">
+
+    <div class="container-fluid px-4 px-lg-5">
+
+
+        <a class="navbar-brand" href="index.html">
+
+            <img
+                src="assets/img/b-alpha.png"
+                alt="Alpha Numeric Logo">
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="me-2">Menu</span>
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="navbarResponsive">
+
+            <ul class="navbar-nav ms-auto">
+
+
+                <!-- HOME -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <!-- ABOUT -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="about.html">
+
+                        About
+
+                    </a>
+
+                </li>
+
+
+                <!-- ENERGY -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown">
+
+                        Energy
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a class="dropdown-item" href="solar-energy.html">
+                                Solar Energy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="wind-energy.html">
+                                Wind Energy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="biomass-energy.html">
+                                Biomass Energy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="hydel-energy.html">
+                                Hydel Energy
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- POWER -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown">
+
+                        Power
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a class="dropdown-item" href="transmission.html">
+                                Transmission
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="distribution.html">
+                                Distribution
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="control-panels.html">
+                                Control Panels
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="panel-boards.html">
+                                Panel Boards
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================================
+                     AUTOMATION - ACTIVE
+                ================================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle main-active"
+                        href="#"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        Automation
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="home-automation.html">
+
+                                Home Automation
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="commercial-automation.html">
+
+                                Commercial Automation
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="industrial-automation.html">
+
+                                Industrial Automation
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- CURRENT PAGE -->
+
+                        <li>
+
+                            <a
+                                class="dropdown-item active"
+                                href="hospital-automation.html">
+
+                                Hospital Automation
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="hotel-automation.html">
+
+                                Hotel Automation
+
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+                </li>
+
+
+                <!-- R&D -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown">
+
+                        R & D
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a class="dropdown-item" href="smart-pole.html">
+                                Smart Pole
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="smart-bollard.html">
+                                Smart Bollard
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="window-leaf-ac.html">
+                                Window Leaf AC
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="smart-conference-table.html">
+                                Smart Conference Table
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- PRODUCTS -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown">
+
+                        Products
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a class="dropdown-item" href="transformers.html">
+                                Transformers
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="panels.html">
+                                Panels
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="switchgear.html">
+                                Switchgear
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="controllers.html">
+                                Controllers
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="accessories.html">
+                                Accessories
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- CONTACT -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="index.html#contact">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-label">
+
+            Smart Healthcare • Connected Infrastructure
+
+        </div>
+
+
+        <h1>
+
+            Hospital
+
+            <br>
+
+            <span>Automation</span>
+
+        </h1>
+
+
+        <p>
+
+            Intelligent hospital automation solutions that
+            connect building systems, critical infrastructure,
+            energy systems and operational environments to
+            create safer, more efficient and connected
+            healthcare facilities.
+
+        </p>
+
+
+        <a
+            href="#systems"
+            class="hero-button">
+
+            EXPLORE SOLUTIONS
+
+            <i class="fas fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     HIGHLIGHTS
+========================================================= -->
+
+<section class="highlights">
+
+
+    <div class="highlight">
+
+        <div class="highlight-icon">
+            <i class="fas fa-hospital"></i>
+        </div>
+
+        <div>
+
+            <h4>
+                Smart Hospital
+            </h4>
+
+            <p>
+                Connected infrastructure for modern healthcare facilities.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="highlight">
+
+        <div class="highlight-icon">
+            <i class="fas fa-temperature-half"></i>
+        </div>
+
+        <div>
+
+            <h4>
+                HVAC & BMS
+            </h4>
+
+            <p>
+                Centralized monitoring of building and environmental systems.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="highlight">
+
+        <div class="highlight-icon">
+            <i class="fas fa-lightbulb"></i>
+        </div>
+
+        <div>
+
+            <h4>
+                Smart Lighting
+            </h4>
+
+            <p>
+                Intelligent lighting control for different hospital zones.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="highlight">
+
+        <div class="highlight-icon">
+            <i class="fas fa-bolt"></i>
+        </div>
+
+        <div>
+
+            <h4>
+                Energy Management
+            </h4>
+
+            <p>
+                Visibility into selected electrical and energy parameters.
+            </p>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     INTRO
+========================================================= -->
+
+<section class="intro">
+
+
+    <div>
+
+        <div class="section-label">
+            Connected Healthcare Infrastructure
+        </div>
+
+        <h2 class="section-title">
+
+            Smarter Systems
+            For Better Facilities
+
+        </h2>
+
+        <div class="section-line"></div>
+
+        <p class="intro-text">
+
+            Hospitals operate continuously across multiple
+            departments, technical systems and critical
+            infrastructure.
+
+            <br><br>
+
+            Automation helps bring these systems into a
+            structured monitoring environment, giving facility
+            teams greater visibility and control.
+
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <div class="section-label">
+            Integrated Hospital Automation
+        </div>
+
+        <h2 class="section-title">
+
+            One Connected
+            Infrastructure
+
+        </h2>
+
+        <div class="section-line"></div>
+
+        <p class="intro-text">
+
+            From HVAC and lighting to electrical systems,
+            energy monitoring and building management,
+            selected hospital systems can be integrated into
+            a centralized automation architecture.
+
+            <br><br>
+
+            The objective is simple: better visibility,
+            efficient operation and a more connected facility.
+
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     HOSPITAL SYSTEMS
+========================================================= -->
+
+<section
+    class="systems-section"
+    id="systems">
+
+
+    <div class="section-heading">
+
+        <div class="section-label">
+            Hospital Automation Solutions
+        </div>
+
+        <h2 class="section-title">
+
+            Intelligent Systems
+            Across The Hospital
+
+        </h2>
+
+        <div class="section-line"></div>
+
+        <p>
+
+            Integrated automation solutions for hospital
+            buildings, clinical environments, technical
+            services and facility operations.
+
+        </p>
+
+    </div>
+
+
+    <div class="systems-grid">
+
+
+        <!-- BMS -->
+
+        <div class="system-card">
+
+            <div class="system-icon">
+                <i class="fas fa-building"></i>
+            </div>
+
+            <h3>
+                Building Management System
+            </h3>
+
+            <p>
+
+                Centralized monitoring and control of selected
+                building systems to improve operational
+                visibility across hospital facilities.
+
+            </p>
+
+        </div>
+
+
+        <!-- HVAC -->
+
+        <div class="system-card">
+
+            <div class="system-icon">
+                <i class="fas fa-wind"></i>
+            </div>
+
+            <h3>
+                HVAC Automation
+            </h3>
+
+            <p>
+
+                Intelligent monitoring and control of HVAC
+                systems for appropriate environmental
+                conditions across designated hospital areas.
+
+            </p>
+
+        </div>
+
+
+        <!-- LIGHTING -->
+
+        <div class="system-card">
+
+            <div class="system-icon">
+                <i class="fas fa-lightbulb"></i>
+            </div>
+
+            <h3>
+                Smart Lighting
+            </h3>
+
+            <p>
+
+                Automated lighting control based on zones,
+                schedules, occupancy strategies and facility
+                requirements.
+
+            </p>
+
+        </div>
+
+
+        <!-- ENERGY -->
+
+        <div class="system-card">
+
+            <div class="system-icon">
+                <i class="fas fa-bolt"></i>
+            </div>
+
+            <h3>
+                Energy Management
+            </h3>
+
+            <p>
+
+                Monitor selected electrical parameters and
+                energy consumption across hospital
+                infrastructure.
+
+            </p>
+
+        </div>
+
+
+        <!-- ACCESS -->
+
+        <div class="system-card">
+
+            <div class="system-icon">
+                <i class="fas fa-id-card"></i>
+            </div>
+
+            <h3>
+                Access Control Integration
+            </h3>
+
+            <p>
+
+                Integrate suitable access control information
+                with building automation and security
+                infrastructure.
+
+            </p>
+
+        </div>
+
+
+        <!-- EQUIPMENT -->
+
+        <div class="system-card">
+
+            <div class="system-icon">
+                <i class="fas fa-stethoscope"></i>
+            </div>
+
+            <h3>
+                Equipment Monitoring
+            </h3>
+
+            <p>
+
+                Provide monitoring visibility for selected
+                technical equipment and facility assets.
+
+            </p>
+
+        </div>
+
+
+        <!-- CRITICAL AREAS -->
+
+        <div class="system-card">
+
+            <div class="system-icon">
+                <i class="fas fa-shield-heart"></i>
+            </div>
+
+            <h3>
+                Critical Area Monitoring
+            </h3>
+
+            <p>
+
+                Support monitoring of selected environmental
+                and technical parameters in critical hospital
+                areas.
+
+            </p>
+
+        </div>
+
+
+        <!-- DASHBOARD -->
+
+        <div class="system-card">
+
+            <div class="system-icon">
+                <i class="fas fa-chart-column"></i>
+            </div>
+
+            <h3>
+                Centralized Dashboards
+            </h3>
+
+            <p>
+
+                Bring selected facility information together
+                through centralized visualization and
+                monitoring dashboards.
+
+            </p>
+
+        </div>
+
+
+        <!-- ALERTS -->
+
+        <div class="system-card">
+
+            <div class="system-icon">
+                <i class="fas fa-bell"></i>
+            </div>
+
+            <h3>
+                Alerts & Notifications
+            </h3>
+
+            <p>
+
+                Configure notifications for selected system
+                conditions requiring attention from facility
+                teams.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SMART HOSPITAL
+========================================================= -->
+
+<section class="smart-section">
+
+
+    <div class="smart-layout">
+
+
+        <div class="smart-image">
+
+            <div class="smart-tag">
+
+                <strong>
+                    BMS • HVAC • LIGHTING • ENERGY
+                </strong>
+
+                <span>
+                    CONNECT • MONITOR • MANAGE
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="smart-content">
+
+            <div class="section-label">
+                Smart Hospital Infrastructure
+            </div>
+
+            <h2 class="section-title">
+
+                Connect Every
+                Building System
+
+            </h2>
+
+            <div class="section-line"></div>
+
+            <p>
+
+                A modern hospital depends on many technical
+                systems operating together. Automation creates
+                a structured environment for monitoring and
+                coordinating these systems.
+
+            </p>
+
+            <p>
+
+                Building management, HVAC, lighting, energy
+                systems and selected facility assets can be
+                connected to centralized monitoring platforms.
+
+            </p>
+
+
+            <div class="smart-list">
+
+                <div class="smart-item">
+                    BMS Integration
+                </div>
+
+                <div class="smart-item">
+                    HVAC Monitoring
+                </div>
+
+                <div class="smart-item">
+                    Lighting Control
+                </div>
+
+                <div class="smart-item">
+                    Energy Monitoring
+                </div>
+
+                <div class="smart-item">
+                    Electrical Monitoring
+                </div>
+
+                <div class="smart-item">
+                    Equipment Monitoring
+                </div>
+
+                <div class="smart-item">
+                    Environmental Monitoring
+                </div>
+
+                <div class="smart-item">
+                    Centralized Dashboards
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WORKFLOW
+========================================================= -->
+
+<section class="workflow-section">
+
+
+    <div class="workflow-header">
+
+        <div class="section-label">
+            Smart Hospital Workflow
+        </div>
+
+        <h2 class="section-title">
+
+            From Facility Systems
+            To Centralized Visibility
+
+        </h2>
+
+        <div class="section-line"></div>
+
+        <p>
+
+            Hospital automation brings selected facility
+            systems into a connected operational environment
+            for monitoring, alerts and management.
+
+        </p>
+
+    </div>
+
+
+    <div class="workflow-grid">
+
+
+        <div class="workflow-card">
+
+            <div class="workflow-number">
+                01
+            </div>
+
+            <h4>
+                CONNECT
+            </h4>
+
+            <p>
+
+                Connect suitable building systems, sensors,
+                meters and equipment.
+
+            </p>
+
+        </div>
+
+
+        <div class="workflow-card">
+
+            <div class="workflow-number">
+                02
+            </div>
+
+            <h4>
+                MONITOR
+            </h4>
+
+            <p>
+
+                Collect selected operational and environmental
+                information.
+
+            </p>
+
+        </div>
+
+
+        <div class="workflow-card">
+
+            <div class="workflow-number">
+                03
+            </div>
+
+            <h4>
+                VISUALIZE
+            </h4>
+
+            <p>
+
+                Present system information through centralized
+                dashboards and interfaces.
+
+            </p>
+
+        </div>
+
+
+        <div class="workflow-card">
+
+            <div class="workflow-number">
+                04
+            </div>
+
+            <h4>
+                ALERT
+            </h4>
+
+            <p>
+
+                Generate configured alerts when selected
+                conditions require attention.
+
+            </p>
+
+        </div>
+
+
+        <div class="workflow-card">
+
+            <div class="workflow-number">
+                05
+            </div>
+
+            <h4>
+                OPTIMIZE
+            </h4>
+
+            <p>
+
+                Use operational information to support
+                efficient facility management.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FEATURES
+========================================================= -->
+
+<section class="features-section">
+
+
+    <div class="features-header">
+
+        <div class="section-label">
+            Key Capabilities
+        </div>
+
+        <h2 class="section-title">
+
+            Designed Around
+            Hospital Operations
+
+        </h2>
+
+        <div class="section-line"></div>
+
+    </div>
+
+
+    <div class="features-grid">
+
+
+        <div class="feature-card">
+
+            <i class="fas fa-gauge-high"></i>
+
+            <h4>
+                Real-Time Monitoring
+            </h4>
+
+            <p>
+
+                View selected building and facility parameters
+                through centralized monitoring systems.
+
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <i class="fas fa-bell"></i>
+
+            <h4>
+                Smart Alerts
+            </h4>
+
+            <p>
+
+                Configure notifications for selected facility
+                conditions and system events.
+
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <i class="fas fa-temperature-half"></i>
+
+            <h4>
+                Environmental Monitoring
+            </h4>
+
+            <p>
+
+                Monitor relevant environmental parameters in
+                designated hospital environments.
+
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <i class="fas fa-bolt"></i>
+
+            <h4>
+                Electrical Visibility
+            </h4>
+
+            <p>
+
+                Monitor selected electrical systems, panels
+                and energy parameters.
+
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <i class="fas fa-lightbulb"></i>
+
+            <h4>
+                Lighting Management
+            </h4>
+
+            <p>
+
+                Automate selected lighting zones according to
+                facility schedules and operational needs.
+
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <i class="fas fa-fan"></i>
+
+            <h4>
+                HVAC Management
+            </h4>
+
+            <p>
+
+                Centralize visibility of selected HVAC systems
+                and operational parameters.
+
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <i class="fas fa-chart-line"></i>
+
+            <h4>
+                Trend Analysis
+            </h4>
+
+            <p>
+
+                Review historical system information to
+                understand operational patterns.
+
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <i class="fas fa-layer-group"></i>
+
+            <h4>
+                Scalable Architecture
+            </h4>
+
+            <p>
+
+                Build automation architecture that can expand
+                with hospital infrastructure.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     BMS / INTEGRATION
+========================================================= -->
+
+<section class="bms-section">
+
+
+    <div class="bms-layout">
+
+
+        <div>
+
+            <div class="section-label">
+                Building Management Integration
+            </div>
+
+            <h2 class="section-title">
+
+                One View Of
+                Hospital Infrastructure
+
+            </h2>
+
+            <div class="section-line"></div>
+
+            <p class="bms-description">
+
+                Building Management Systems can bring selected
+                hospital infrastructure into a centralized
+                operational interface.
+
+                <br><br>
+
+                This can provide facility teams with a clearer
+                view of building services, energy systems,
+                environmental conditions and equipment status.
+
+            </p>
+
+        </div>
+
+
+        <div class="bms-list">
+
+
+            <div class="bms-item">
+
+                <i class="fas fa-building"></i>
+
+                <strong>
+                    BMS Integration
+                </strong>
+
+                <span>
+                    Connect suitable building systems to a
+                    centralized management environment.
+                </span>
+
+            </div>
+
+
+            <div class="bms-item">
+
+                <i class="fas fa-wind"></i>
+
+                <strong>
+                    HVAC Systems
+                </strong>
+
+                <span>
+                    Monitor selected HVAC equipment and
+                    operating parameters.
+                </span>
+
+            </div>
+
+
+            <div class="bms-item">
+
+                <i class="fas fa-lightbulb"></i>
+
+                <strong>
+                    Lighting Systems
+                </strong>
+
+                <span>
+                    Manage selected lighting zones through
+                    centralized control strategies.
+                </span>
+
+            </div>
+
+
+            <div class="bms-item">
+
+                <i class="fas fa-bolt"></i>
+
+                <strong>
+                    Electrical Systems
+                </strong>
+
+                <span>
+                    Monitor selected electrical infrastructure
+                    and energy parameters.
+                </span>
+
+            </div>
+
+
+            <div class="bms-item">
+
+                <i class="fas fa-temperature-half"></i>
+
+                <strong>
+                    Environment
+                </strong>
+
+                <span>
+                    Collect selected environmental information
+                    from connected systems.
+                </span>
+
+            </div>
+
+
+            <div class="bms-item">
+
+                <i class="fas fa-display"></i>
+
+                <strong>
+                    Central Dashboard
+                </strong>
+
+                <span>
+                    Present connected system information through
+                    a structured visualization interface.
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     APPLICATIONS
+========================================================= -->
+
+<section class="applications-section">
+
+
+    <div class="applications-content">
+
+
+        <div>
+
+            <div class="section-label">
+                Hospital Areas
+            </div>
+
+            <h2 class="section-title">
+
+                Automation Across
+                Healthcare Spaces
+
+            </h2>
+
+            <div class="section-line"></div>
+
+            <p class="application-description">
+
+                Hospital automation can be applied across
+                different facility areas according to their
+                operational, environmental and infrastructure
+                requirements.
+
+            </p>
+
+        </div>
+
+
+        <div class="application-list">
+
+
+            <div class="application-item">
+
+                <strong>
+                    Patient Rooms
+                </strong>
+
+                <span>
+                    Smart environmental and lighting control
+                    for appropriate room environments.
+                </span>
+
+            </div>
+
+
+            <div class="application-item">
+
+                <strong>
+                    Operation Theatres
+                </strong>
+
+                <span>
+                    Monitoring of selected building and
+                    environmental systems.
+                </span>
+
+            </div>
+
+
+            <div class="application-item">
+
+                <strong>
+                    ICU & Critical Areas
+                </strong>
+
+                <span>
+                    Visibility into selected technical and
+                    environmental parameters.
+                </span>
+
+            </div>
+
+
+            <div class="application-item">
+
+                <strong>
+                    Laboratories
+                </strong>
+
+                <span>
+                    Monitoring and control of selected
+                    facility systems and environmental needs.
+                </span>
+
+            </div>
+
+
+            <div class="application-item">
+
+                <strong>
+                    Pharmacies
+                </strong>
+
+                <span>
+                    Environmental and facility monitoring for
+                    designated areas.
+                </span>
+
+            </div>
+
+
+            <div class="application-item">
+
+                <strong>
+                    Utility Areas
+                </strong>
+
+                <span>
+                    Monitoring of electrical, HVAC and
+                    supporting infrastructure.
+                </span>
+
+            </div>
+
+
+            <div class="application-item">
+
+                <strong>
+                    Administration
+                </strong>
+
+                <span>
+                    Smart lighting, energy monitoring and
+                    building management integration.
+                </span>
+
+            </div>
+
+
+            <div class="application-item">
+
+                <strong>
+                    Common Areas
+                </strong>
+
+                <span>
+                    Automated lighting and facility management
+                    for shared spaces.
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta">
+
+
+    <div class="cta-content">
+
+        <h2>
+            Build A Smarter Hospital.
+        </h2>
+
+        <p>
+
+            Connect building systems, energy infrastructure
+            and facility operations through intelligent
+            hospital automation designed around your
+            requirements.
+
+        </p>
+
+        <a
+            href="index.html#contact"
+            class="cta-button">
+
+            DISCUSS YOUR PROJECT
+
+            <i class="fas fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+
+    <div class="cta-side">
+
+        <div>
+
+            <strong>
+                CONNECT • MONITOR • MANAGE
+            </strong>
+
+            <span>
+                INTELLIGENT HEALTHCARE INFRASTRUCTURE
+            </span>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="main-footer">
+
+
+    <div class="container-fluid">
+
+
+        <div class="row g-5">
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="footer-logo">
+
+                    <img
+                        src="assets/img/w-alpha.png"
+                        alt="Alpha Numeric Logo">
+
+                </div>
+
+                <p class="footer-description">
+
+                    Alpha Numeric is a technology-driven
+                    organization delivering intelligent
+                    solutions across energy, power, automation,
+                    IoT, lighting, R&D and industrial
+                    infrastructure.
+
+                </p>
+
+
+                <div class="footer-social">
+
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-2 col-md-6">
+
+                <div class="footer-heading">
+                    SOLUTIONS
+                </div>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="solar-energy.html">
+                            Solar Energy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="wind-energy.html">
+                            Wind Energy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="biomass-energy.html">
+                            Biomass Energy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="hydel-energy.html">
+                            Hydel Energy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="transmission.html">
+                            Transmission
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="distribution.html">
+                            Distribution
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-lg-2 col-md-6">
+
+                <div class="footer-heading">
+                    TECHNOLOGY
+                </div>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="home-automation.html">
+                            Home Automation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="commercial-automation.html">
+                            Commercial Automation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="industrial-automation.html">
+                            Industrial Automation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="hospital-automation.html">
+                            Hospital Automation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="hotel-automation.html">
+                            Hotel Automation
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="footer-heading">
+                    CONTACT
+                </div>
+
+                <ul class="footer-contact">
+
+                    <li>
+
+                        <i class="fas fa-location-dot"></i>
+
+                        <span>
+                            Hyderabad, Telangana, India
+                        </span>
+
+                    </li>
+
+                    <li>
+
+                        <i class="fas fa-phone"></i>
+
+                        <span>
+                            +91 XXXXX XXXXX
+                        </span>
+
+                    </li>
+
+                    <li>
+
+                        <i class="fas fa-envelope"></i>
+
+                        <span>
+                            info@alphanumeric.com
+                        </span>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+
+                © 2026
+
+                <strong>
+                    Alpha Numeric
+                </strong>.
+
+                All Rights Reserved.
+
+            </span>
+
+            <span>
+
+                SMART HEALTHCARE • CONNECTED INFRASTRUCTURE
+
+            </span>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<script>
+
+    window.addEventListener("scroll", function () {
+
+        const navbar =
+            document.querySelector(".main-navbar");
+
+        if (window.scrollY > 30) {
+
+            navbar.style.boxShadow =
+                "0 5px 25px rgba(0,0,0,.07)";
+
+        } else {
+
+            navbar.style.boxShadow =
+                "none";
+
+        }
+
+    });
+
+</script>
+
+
+</body>
+
+</html>

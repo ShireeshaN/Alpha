@@ -1,0 +1,4072 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Power Products | Alpha Numeric</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<style>
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #fff;
+    color: #111;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.main-navbar {
+    height: 100px;
+    padding: 0 7%;
+    background: #fff !important;
+    border-bottom: 1px solid #e8e8e8;
+    z-index: 9999;
+    transition: .3s ease;
+}
+
+.main-navbar .navbar-brand img {
+    height: 55px;
+    width: auto;
+}
+
+.main-navbar .navbar-nav {
+    align-items: center;
+    gap: 28px;
+}
+
+.main-navbar .nav-link {
+    color: #111 !important;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 10px 0 !important;
+    transition: .3s;
+}
+
+.main-navbar .nav-link:hover {
+    color: #666 !important;
+}
+
+.main-navbar .nav-link.power-active {
+    font-weight: 800;
+}
+
+.main-navbar .dropdown-menu {
+    margin-top: 18px;
+    padding: 10px 0;
+    min-width: 240px;
+    border: 1px solid #e5e5e5;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: 0 15px 40px rgba(0,0,0,.08);
+}
+
+.main-navbar .dropdown-item {
+    padding: 12px 20px;
+    color: #222;
+    font-size: 13px;
+}
+
+.main-navbar .dropdown-item:hover {
+    background: #f3f3f3;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.power-hero {
+    margin-top: 100px;
+    min-height: 650px;
+    background: #070707;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-grid {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.045) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.045) 1px,
+            transparent 1px
+        );
+
+    background-size: 85px 85px;
+}
+
+.hero-lines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-lines::before {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 1px;
+    background: #444;
+    transform: rotate(-27deg);
+    top: 210px;
+    right: -80px;
+}
+
+.hero-lines::after {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 1px;
+    background: #333;
+    transform: rotate(-27deg);
+    top: 340px;
+    right: -80px;
+}
+
+.power-orbit {
+    position: absolute;
+    width: 580px;
+    height: 580px;
+    border: 1px solid #292929;
+    border-radius: 50%;
+    right: -100px;
+    top: 30px;
+}
+
+.power-orbit::before {
+    content: "";
+    position: absolute;
+    inset: 75px;
+    border: 1px dashed #333;
+    border-radius: 50%;
+}
+
+.power-orbit::after {
+    content: "";
+    position: absolute;
+    inset: 165px;
+    border: 1px solid #333;
+    border-radius: 50%;
+}
+
+.power-hero-inner {
+    max-width: 1450px;
+    min-height: 650px;
+    margin: auto;
+    padding: 100px 7% 70px;
+
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.hero-code {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    border: 1px solid #333;
+
+    padding: 10px 15px;
+
+    color: #888;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 30px;
+}
+
+.hero-code i {
+    color: #fff;
+}
+
+.power-hero h1 {
+    font-size: clamp(55px, 8vw, 108px);
+    line-height: .85;
+    letter-spacing: -7px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.power-hero h1 span {
+    display: block;
+    color: #777;
+    font-weight: 300;
+}
+
+.hero-description {
+    max-width: 600px;
+    color: #999;
+    font-size: 12px;
+    line-height: 1.9;
+    margin-top: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 15px 22px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    transition: .3s;
+}
+
+.hero-button.primary {
+    background: #fff;
+    color: #111;
+}
+
+.hero-button.secondary {
+    border: 1px solid #444;
+    color: #fff;
+}
+
+.hero-button.primary:hover {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.hero-button.secondary:hover {
+    background: #fff;
+    color: #111;
+}
+
+
+/* =========================================================
+   HERO NETWORK
+========================================================= */
+
+.network-display {
+    position: relative;
+    min-height: 430px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.network-core {
+    width: 125px;
+    height: 125px;
+
+    border-radius: 50%;
+
+    background: #fff;
+    color: #111;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 5;
+
+    box-shadow: 0 0 60px rgba(255,255,255,.1);
+}
+
+.network-core i {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.network-core span {
+    font-size: 8px;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.network-circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #333;
+    border-radius: 50%;
+}
+
+.network-circle.two {
+    width: 440px;
+    height: 440px;
+    border-style: dashed;
+    border-color: #292929;
+}
+
+.network-node {
+    position: absolute;
+
+    width: 55px;
+    height: 55px;
+
+    border: 1px solid #555;
+
+    background: #101010;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #aaa;
+
+    font-size: 15px;
+
+    z-index: 6;
+}
+
+.network-node.n1 {
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.network-node.n2 {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.network-node.n3 {
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.network-node.n4 {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.power-intro {
+    padding: 110px 8%;
+    background: #fff;
+}
+
+.power-intro-inner {
+    max-width: 1250px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: .65fr 1.35fr;
+
+    gap: 80px;
+}
+
+.section-index {
+    font-size: 90px;
+    font-weight: 800;
+    line-height: .8;
+    letter-spacing: -8px;
+    color: #e7e7e7;
+}
+
+.intro-label {
+    color: #777;
+    font-size: 9px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.intro-content h2 {
+    font-size: clamp(40px,5vw,70px);
+    line-height: .95;
+    letter-spacing: -4px;
+    margin-top: 15px;
+}
+
+.intro-content p {
+    max-width: 700px;
+    color: #777;
+    font-size: 12px;
+    line-height: 1.9;
+    margin-top: 25px;
+}
+
+.intro-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.intro-tag {
+    border: 1px solid #ddd;
+    padding: 9px 13px;
+    font-size: 8px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   PRODUCT CATALOGUE SECTION
+========================================================= */
+
+.product-catalogue {
+    background: #f1f1f1;
+    padding: 110px 7%;
+}
+
+.catalogue-container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.catalogue-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 50px;
+    margin-bottom: 55px;
+}
+
+.catalogue-label {
+    color: #777;
+    font-size: 9px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.catalogue-top h2 {
+    font-size: clamp(42px,5vw,72px);
+    line-height: .88;
+    letter-spacing: -5px;
+    margin-top: 15px;
+}
+
+.catalogue-top p {
+    max-width: 390px;
+    color: #777;
+    font-size: 10px;
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   CATALOGUE LAYOUT
+========================================================= */
+
+.catalogue-layout {
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.product-sidebar {
+    background: #080808;
+    color: #fff;
+    position: sticky;
+    top: 120px;
+}
+
+.sidebar-heading {
+    padding: 28px 25px;
+    border-bottom: 1px solid #292929;
+}
+
+.sidebar-heading small {
+    color: #666;
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.sidebar-heading h3 {
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.category-list {
+    list-style: none;
+    padding: 10px 0 20px;
+    margin: 0;
+}
+
+.category-list li {
+    border-bottom: 1px solid #202020;
+}
+
+.category-button {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    color: #888;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 17px 22px;
+
+    text-align: left;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.category-button i {
+    font-size: 9px;
+    transition: .3s;
+}
+
+.category-button:hover {
+    color: #fff;
+    padding-left: 27px;
+}
+
+.category-button.active {
+    background: #fff;
+    color: #111;
+}
+
+.category-button.active i {
+    transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   PRODUCTS GRID
+========================================================= */
+
+.products-area {
+    min-width: 0;
+}
+
+.products-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #ccc;
+
+    padding-bottom: 15px;
+
+    margin-bottom: 20px;
+}
+
+.products-toolbar span {
+    color: #777;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.products-count {
+    font-weight: 800;
+    color: #111 !important;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.product-card {
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    position: relative;
+    overflow: hidden;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    border-color: #111;
+    box-shadow: 0 18px 40px rgba(0,0,0,.08);
+}
+
+
+/* CARD IMAGE */
+
+.product-image {
+    height: 225px;
+
+    background: #0b0b0b;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.product-image::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 35px 35px;
+}
+
+.product-image-label {
+    position: absolute;
+
+    top: 14px;
+
+    left: 14px;
+
+    color: #777;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    z-index: 2;
+}
+
+.product-image-code {
+    position: absolute;
+
+    right: 14px;
+
+    top: 14px;
+
+    color: #555;
+
+    font-size: 7px;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   TECHNICAL PRODUCT VISUALS
+========================================================= */
+
+.tech-panel {
+    width: 120px;
+    height: 150px;
+
+    background: #1c1c1c;
+
+    border: 2px solid #555;
+
+    position: relative;
+
+    box-shadow: 13px 13px 0 #292929;
+
+    z-index: 2;
+}
+
+.tech-panel::before {
+    content: "";
+
+    position: absolute;
+
+    top: 12px;
+
+    left: 12px;
+
+    right: 12px;
+
+    height: 27px;
+
+    border: 1px solid #555;
+}
+
+.tech-panel::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 12px;
+
+    left: 12px;
+
+    right: 12px;
+
+    height: 55px;
+
+    border: 1px solid #444;
+}
+
+.tech-screen {
+    position: absolute;
+
+    top: 17px;
+
+    left: 38px;
+
+    width: 43px;
+
+    height: 17px;
+
+    border: 1px solid #777;
+
+    color: #aaa;
+
+    font-size: 6px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.tech-switches {
+    position: absolute;
+
+    bottom: 27px;
+
+    left: 25px;
+
+    display: flex;
+
+    gap: 8px;
+}
+
+.tech-switch {
+    width: 9px;
+    height: 20px;
+    border: 1px solid #777;
+}
+
+
+/* VCB */
+
+.visual-vcb {
+    width: 145px;
+    height: 150px;
+
+    background: #1b1b1b;
+
+    border: 2px solid #555;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.visual-vcb .vcb-top {
+    height: 30px;
+    border-bottom: 1px solid #555;
+}
+
+.visual-vcb .vcb-middle {
+    height: 55px;
+    border-bottom: 1px solid #555;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.vcb-circle {
+    width: 34px;
+    height: 34px;
+
+    border: 2px solid #777;
+
+    border-radius: 50%;
+}
+
+.visual-vcb .vcb-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding-top: 15px;
+}
+
+.vcb-line {
+    width: 10px;
+    height: 35px;
+    border: 1px solid #666;
+}
+
+
+/* TRANSFORMER */
+
+.visual-transformer {
+    position: relative;
+    z-index: 2;
+
+    width: 140px;
+    height: 130px;
+
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.transformer-coil {
+    width: 35px;
+    height: 115px;
+
+    border: 3px solid #666;
+
+    border-radius: 8px;
+
+    position: relative;
+}
+
+.transformer-coil::after {
+    content: "";
+
+    position: absolute;
+
+    width: 10px;
+
+    height: 10px;
+
+    border: 1px solid #777;
+
+    border-radius: 50%;
+
+    left: 10px;
+
+    top: 15px;
+
+    box-shadow:
+        0 25px 0 #777,
+        0 50px 0 #777,
+        0 75px 0 #777;
+}
+
+
+/* RMU */
+
+.visual-rmu {
+    width: 175px;
+    height: 110px;
+
+    background: #1c1c1c;
+
+    border: 2px solid #555;
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-evenly;
+}
+
+.rmu-door {
+    width: 42px;
+    height: 75px;
+
+    border: 1px solid #666;
+}
+
+.rmu-door::before {
+    content: "";
+
+    display: block;
+
+    width: 7px;
+    height: 7px;
+
+    border: 1px solid #888;
+
+    border-radius: 50%;
+
+    margin: 10px auto;
+}
+
+
+/* FEEDER */
+
+.visual-feeder {
+    width: 90px;
+    height: 160px;
+
+    background: #202020;
+
+    border: 2px solid #666;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.visual-feeder::before {
+    content: "";
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 12px;
+
+    right: 12px;
+
+    height: 45px;
+
+    border: 1px solid #666;
+}
+
+.visual-feeder::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 15px;
+
+    right: 15px;
+
+    height: 45px;
+
+    border: 1px solid #555;
+}
+
+
+/* BUSDUCT */
+
+.visual-busduct {
+    width: 190px;
+    height: 70px;
+
+    background: #222;
+
+    border: 2px solid #666;
+
+    position: relative;
+
+    z-index: 2;
+
+    transform: skewY(-5deg);
+}
+
+.visual-busduct::before,
+.visual-busduct::after {
+    content: "";
+
+    position: absolute;
+
+    top: 10px;
+
+    bottom: 10px;
+
+    width: 2px;
+
+    background: #777;
+}
+
+.visual-busduct::before {
+    left: 45px;
+}
+
+.visual-busduct::after {
+    right: 45px;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.product-card-content {
+    padding: 22px;
+}
+
+.product-card-number {
+    font-size: 7px;
+    letter-spacing: 2px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 15px;
+    margin-bottom: 9px;
+}
+
+.product-card-description {
+    color: #777;
+    font-size: 9px;
+    line-height: 1.8;
+
+    min-height: 48px;
+}
+
+.product-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    margin-top: 15px;
+}
+
+.product-tag {
+    padding: 6px 7px;
+
+    border: 1px solid #ddd;
+
+    color: #555;
+
+    font-size: 6px;
+
+    letter-spacing: .8px;
+
+    font-weight: 700;
+}
+
+.product-card-footer {
+    border-top: 1px solid #eee;
+
+    margin-top: 18px;
+
+    padding-top: 14px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.product-card-footer span {
+    font-size: 7px;
+    color: #999;
+}
+
+.product-card-footer a {
+    color: #111;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    display: inline-flex;
+
+    gap: 8px;
+
+    align-items: center;
+}
+
+.product-card-footer a i {
+    transition: .3s;
+}
+
+.product-card:hover .product-card-footer a i {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   NO PRODUCTS
+========================================================= */
+
+.no-products {
+    display: none;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+
+    padding: 70px 30px;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   APPLICATION SECTION
+========================================================= */
+
+.application-section {
+    background: #050505;
+    color: #fff;
+    padding: 110px 8%;
+}
+
+.application-inner {
+    max-width: 1250px;
+    margin: auto;
+}
+
+.application-heading {
+    margin-bottom: 55px;
+}
+
+.application-heading span {
+    color: #777;
+    font-size: 9px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.application-heading h2 {
+    font-size: clamp(42px,5vw,70px);
+    line-height: .9;
+    letter-spacing: -4px;
+    margin-top: 15px;
+}
+
+.application-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+    border-top: 1px solid #292929;
+    border-left: 1px solid #292929;
+}
+
+.application-card {
+    min-height: 220px;
+
+    padding: 28px;
+
+    border-right: 1px solid #292929;
+    border-bottom: 1px solid #292929;
+
+    transition: .3s;
+}
+
+.application-card:hover {
+    background: #fff;
+    color: #111;
+}
+
+.application-card i {
+    font-size: 22px;
+    color: #aaa;
+    margin-bottom: 45px;
+}
+
+.application-card:hover i {
+    color: #111;
+}
+
+.application-card h3 {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.application-card p {
+    color: #777;
+    font-size: 9px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.power-cta {
+    padding: 0 8% 110px;
+    background: #050505;
+}
+
+.power-cta-inner {
+    max-width: 1250px;
+    min-height: 330px;
+
+    margin: auto;
+
+    background: #ededed;
+
+    padding: 60px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.cta-orbit {
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    right: -100px;
+    top: -60px;
+
+    border: 1px solid #d1d1d1;
+
+    border-radius: 50%;
+}
+
+.cta-orbit::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 70px;
+
+    border: 1px dashed #ccc;
+
+    border-radius: 50%;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.cta-content span {
+    color: #777;
+    font-size: 9px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.cta-content h2 {
+    font-size: clamp(40px,5vw,66px);
+    line-height: .9;
+    letter-spacing: -4px;
+    margin: 15px 0 20px;
+}
+
+.cta-content p {
+    color: #777;
+    font-size: 11px;
+    line-height: 1.8;
+    max-width: 580px;
+    margin-bottom: 28px;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    background: #111;
+    color: #fff;
+
+    padding: 15px 22px;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    transition: .3s;
+}
+
+.cta-button:hover {
+    background: #fff;
+    color: #111;
+    border: 1px solid #111;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.main-footer {
+    background: #050505;
+    color: #fff;
+    padding: 75px 7% 25px;
+}
+
+.footer-logo img {
+    height: 55px;
+    margin-bottom: 22px;
+}
+
+.footer-description {
+    max-width: 370px;
+    color: #888;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.footer-heading {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 22px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 11px;
+}
+
+.footer-links a {
+    color: #888;
+    font-size: 12px;
+    transition: .3s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    padding-left: 4px;
+}
+
+.footer-contact {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-contact li {
+    display: flex;
+    gap: 12px;
+
+    color: #888;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+.footer-contact i {
+    width: 18px;
+    color: #fff;
+    margin-top: 4px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 9px;
+    margin-top: 24px;
+}
+
+.footer-social a {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #2b2b2b;
+
+    color: #999;
+
+    transition: .3s;
+}
+
+.footer-social a:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+.footer-bottom {
+    margin-top: 55px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #222;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #666;
+
+    font-size: 10px;
+}
+
+.footer-bottom strong {
+    color: #fff;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .products-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+@media (max-width: 1100px) {
+
+    .application-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    .main-navbar {
+        height: auto;
+        min-height: 80px;
+        padding: 10px 5%;
+    }
+
+    .main-navbar .navbar-brand img {
+        height: 48px;
+    }
+
+    .main-navbar .navbar-collapse {
+        margin-top: 15px;
+        padding: 15px 0;
+        background: #fff;
+    }
+
+    .main-navbar .navbar-nav {
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    .main-navbar .nav-item {
+        width: 100%;
+    }
+
+    .main-navbar .nav-link {
+        padding: 12px 5px !important;
+    }
+
+    .main-navbar .dropdown-menu {
+        margin-top: 0;
+        border: none;
+        box-shadow: none;
+    }
+
+    .power-hero {
+        margin-top: 80px;
+    }
+
+    .power-hero-inner {
+        grid-template-columns: 1fr;
+        padding-top: 90px;
+        padding-bottom: 80px;
+    }
+
+    .network-display {
+        min-height: 360px;
+    }
+
+    .power-intro-inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .catalogue-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .product-sidebar {
+        position: relative;
+        top: 0;
+    }
+
+    .category-list {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding: 0;
+    }
+
+    .category-list li {
+        border-right: 1px solid #202020;
+    }
+
+    .featured-inner {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .power-hero h1 {
+        font-size: 60px;
+        letter-spacing: -4px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .network-circle {
+        width: 230px;
+        height: 230px;
+    }
+
+    .network-circle.two {
+        width: 330px;
+        height: 330px;
+    }
+
+    .network-node {
+        width: 45px;
+        height: 45px;
+    }
+
+    .catalogue-top {
+        display: block;
+    }
+
+    .catalogue-top p {
+        margin-top: 20px;
+    }
+
+    .category-list {
+        display: block;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .application-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .power-cta-inner {
+        padding: 45px 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<nav class="navbar navbar-expand-lg main-navbar fixed-top">
+
+    <div class="container-fluid px-4 px-lg-5">
+
+
+        <a class="navbar-brand" href="index.html">
+
+            <img
+                src="assets/img/b-alpha.png"
+                alt="Alpha Numeric">
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarResponsive">
+
+            <span class="me-2">
+                Menu
+            </span>
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="navbarResponsive">
+
+
+            <ul class="navbar-nav ms-auto">
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">
+                        About
+                    </a>
+                </li>
+
+
+                <!-- ENERGY -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown">
+
+                        Energy
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a class="dropdown-item" href="solar-energy.html">
+                                Solar Energy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="wind-energy.html">
+                                Wind Energy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="biomass-energy.html">
+                                Biomass Energy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="hydel-energy.html">
+                                Hydel Energy
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- POWER -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle power-active"
+                        href="#"
+                        data-bs-toggle="dropdown">
+
+                        Power
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a class="dropdown-item" href="transmission.html">
+                                Transmission
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="distribution.html">
+                                Distribution
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="control-panels.html">
+                                Control Panels
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="panel-boards.html">
+                                Panel Boards
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="power-products.html">
+                                Power Products
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- AUTOMATION -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown">
+
+                        Automation
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a class="dropdown-item" href="home-automation.html">
+                                Home Automation
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="commercial-automation.html">
+                                Commercial Automation
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="industrial-automation.html">
+                                Industrial Automation
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="hospital-automation.html">
+                                Hospital Automation
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="hotel-automation.html">
+                                Hotel Automation
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- R&D -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown">
+
+                        R & D
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a class="dropdown-item" href="smart-pole.html">
+                                Smart Pole
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="smart-bollard.html">
+                                Smart Bollard
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="window-leaf-ac.html">
+                                Window Leaf AC
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="smart-conference-table.html">
+                                Smart Conference Table
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- PRODUCTS -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown">
+
+                        Products
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a class="dropdown-item" href="transformers.html">
+                                Transformers
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="panels.html">
+                                Panels
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="switchgear.html">
+                                Switchgear
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="controllers.html">
+                                Controllers
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="power-hero">
+
+    <div class="hero-grid"></div>
+
+    <div class="hero-lines"></div>
+
+    <div class="power-orbit"></div>
+
+
+    <div class="power-hero-inner">
+
+
+        <div>
+
+            <div class="hero-code">
+
+                <i class="fas fa-bolt"></i>
+
+                POWER / PRODUCTS / ENGINEERING
+
+            </div>
+
+
+            <h1>
+
+                Power
+
+                <span>Products.</span>
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                Engineered electrical products and systems
+                supporting transmission, distribution,
+                protection, switching, control and reliable
+                power delivery.
+
+                <br><br>
+
+                Explore our structured product portfolio
+                for electrical infrastructure and industrial
+                power applications.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#products"
+                    class="hero-button primary">
+
+                    EXPLORE PRODUCTS
+
+                    <i class="fas fa-arrow-down"></i>
+
+                </a>
+
+
+                <a
+                    href="contact.html"
+                    class="hero-button secondary">
+
+                    PROJECT ENQUIRY
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="network-display">
+
+            <div class="network-circle"></div>
+
+            <div class="network-circle two"></div>
+
+
+            <div class="network-core">
+
+                <i class="fas fa-bolt"></i>
+
+                <span>
+                    POWER
+                </span>
+
+            </div>
+
+
+            <div class="network-node n1">
+                <i class="fas fa-tower-broadcast"></i>
+            </div>
+
+            <div class="network-node n2">
+                <i class="fas fa-plug"></i>
+            </div>
+
+            <div class="network-node n3">
+                <i class="fas fa-industry"></i>
+            </div>
+
+            <div class="network-node n4">
+                <i class="fas fa-sliders"></i>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INTRO
+========================================================= -->
+
+<section class="power-intro">
+
+
+    <div class="power-intro-inner">
+
+
+        <div>
+
+            <div class="section-index">
+                01
+            </div>
+
+        </div>
+
+
+        <div class="intro-content">
+
+            <div class="intro-label">
+                POWER INFRASTRUCTURE
+            </div>
+
+
+            <h2>
+                Electrical
+                Systems.
+            </h2>
+
+
+            <p>
+
+                Our power product portfolio brings together
+                equipment for electrical switching,
+                distribution, protection, control and
+                monitoring.
+
+                <br><br>
+
+                The catalogue is organized by application
+                and equipment category, making it easier
+                to identify the right solution for your
+                electrical infrastructure.
+
+            </p>
+
+
+            <div class="intro-tags">
+
+                <div class="intro-tag">
+                    TRANSMISSION
+                </div>
+
+                <div class="intro-tag">
+                    DISTRIBUTION
+                </div>
+
+                <div class="intro-tag">
+                    SWITCHGEAR
+                </div>
+
+                <div class="intro-tag">
+                    HT / LT PANELS
+                </div>
+
+                <div class="intro-tag">
+                    TRANSFORMERS
+                </div>
+
+                <div class="intro-tag">
+                    PROTECTION
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PRODUCT CATALOGUE
+========================================================= -->
+
+<section
+    class="product-catalogue"
+    id="products">
+
+
+    <div class="catalogue-container">
+
+
+        <div class="catalogue-top">
+
+
+            <div>
+
+                <div class="catalogue-label">
+                    PRODUCT CATALOGUE / 01
+                </div>
+
+                <h2>
+                    Explore
+                    Products.
+                </h2>
+
+            </div>
+
+
+            <p>
+
+                Select a product category from the left.
+                The product catalogue updates instantly
+                without leaving the page.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="catalogue-layout">
+
+
+            <!-- =================================================
+                 SIDEBAR
+            ================================================= -->
+
+            <aside class="product-sidebar">
+
+
+                <div class="sidebar-heading">
+
+                    <small>
+                        PRODUCT SYSTEM
+                    </small>
+
+                    <h3>
+                        Categories
+                    </h3>
+
+                </div>
+
+
+                <ul class="category-list">
+
+
+                    <li>
+
+                        <button
+                            class="category-button active"
+                            data-category="all">
+
+                            <span>
+                                All Products
+                            </span>
+
+                            <i class="fas fa-plus"></i>
+
+                        </button>
+
+                    </li>
+
+
+                    <li>
+
+                        <button
+                            class="category-button"
+                            data-category="transmission">
+
+                            <span>
+                                Transmission
+                            </span>
+
+                            <i class="fas fa-plus"></i>
+
+                        </button>
+
+                    </li>
+
+
+                    <li>
+
+                        <button
+                            class="category-button"
+                            data-category="distribution">
+
+                            <span>
+                                Distribution
+                            </span>
+
+                            <i class="fas fa-plus"></i>
+
+                        </button>
+
+                    </li>
+
+
+                    <li>
+
+                        <button
+                            class="category-button"
+                            data-category="switchgear">
+
+                            <span>
+                                Switchgear
+                            </span>
+
+                            <i class="fas fa-plus"></i>
+
+                        </button>
+
+                    </li>
+
+
+                    <li>
+
+                        <button
+                            class="category-button"
+                            data-category="panels">
+
+                            <span>
+                                HT / LT Panels
+                            </span>
+
+                            <i class="fas fa-plus"></i>
+
+                        </button>
+
+                    </li>
+
+
+                    <li>
+
+                        <button
+                            class="category-button"
+                            data-category="transformers">
+
+                            <span>
+                                Transformers
+                            </span>
+
+                            <i class="fas fa-plus"></i>
+
+                        </button>
+
+                    </li>
+
+
+                    <li>
+
+                        <button
+                            class="category-button"
+                            data-category="protection">
+
+                            <span>
+                                Protection & Control
+                            </span>
+
+                            <i class="fas fa-plus"></i>
+
+                        </button>
+
+                    </li>
+
+
+                </ul>
+
+            </aside>
+
+
+
+            <!-- =================================================
+                 PRODUCTS
+            ================================================= -->
+
+            <div class="products-area">
+
+
+                <div class="products-toolbar">
+
+                    <span>
+                        POWER PRODUCT PORTFOLIO
+                    </span>
+
+                    <span class="products-count">
+                        12 PRODUCTS
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="products-grid"
+                    id="productsGrid">
+
+
+                    <!-- PRODUCT 01 -->
+
+                    <article
+                        class="product-card"
+                        data-category="switchgear">
+
+                        <div class="product-image">
+
+                            <span class="product-image-label">
+                                SWITCHGEAR
+                            </span>
+
+                            <span class="product-image-code">
+                                PP / 001
+                            </span>
+
+
+                            <div class="visual-vcb">
+
+                                <div class="vcb-top"></div>
+
+                                <div class="vcb-middle">
+
+                                    <div class="vcb-circle"></div>
+
+                                </div>
+
+                                <div class="vcb-bottom">
+
+                                    <div class="vcb-line"></div>
+                                    <div class="vcb-line"></div>
+                                    <div class="vcb-line"></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-card-content">
+
+                            <div class="product-card-number">
+                                01 / SWITCHGEAR
+                            </div>
+
+                            <h3>
+                                HT VCB Panel
+                            </h3>
+
+                            <p class="product-card-description">
+
+                                Vacuum circuit breaker based
+                                high-voltage switchgear for
+                                switching and protection.
+
+                            </p>
+
+
+                            <div class="product-tags">
+
+                                <span class="product-tag">
+                                    HT
+                                </span>
+
+                                <span class="product-tag">
+                                    VCB
+                                </span>
+
+                                <span class="product-tag">
+                                    PROTECTION
+                                </span>
+
+                            </div>
+
+
+                            <div class="product-card-footer">
+
+                                <span>
+                                    ENGINEERED SYSTEM
+                                </span>
+
+                                <a href="contact.html">
+
+                                    VIEW DETAILS
+
+                                    <i class="fas fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCT 02 -->
+
+                    <article
+                        class="product-card"
+                        data-category="switchgear">
+
+                        <div class="product-image">
+
+                            <span class="product-image-label">
+                                SWITCHGEAR
+                            </span>
+
+                            <span class="product-image-code">
+                                PP / 002
+                            </span>
+
+
+                            <div class="visual-rmu">
+
+                                <div class="rmu-door"></div>
+                                <div class="rmu-door"></div>
+                                <div class="rmu-door"></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-card-content">
+
+                            <div class="product-card-number">
+                                02 / SWITCHGEAR
+                            </div>
+
+                            <h3>
+                                RMU
+                            </h3>
+
+                            <p class="product-card-description">
+
+                                Compact medium-voltage ring main
+                                unit solution for distribution
+                                network applications.
+
+                            </p>
+
+
+                            <div class="product-tags">
+
+                                <span class="product-tag">
+                                    MV
+                                </span>
+
+                                <span class="product-tag">
+                                    RMU
+                                </span>
+
+                                <span class="product-tag">
+                                    SWITCHING
+                                </span>
+
+                            </div>
+
+
+                            <div class="product-card-footer">
+
+                                <span>
+                                    MV SYSTEM
+                                </span>
+
+                                <a href="contact.html">
+
+                                    VIEW DETAILS
+
+                                    <i class="fas fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCT 03 -->
+
+                    <article
+                        class="product-card"
+                        data-category="panels">
+
+                        <div class="product-image">
+
+                            <span class="product-image-label">
+                                LT PANELS
+                            </span>
+
+                            <span class="product-image-code">
+                                PP / 003
+                            </span>
+
+
+                            <div class="tech-panel">
+
+                                <div class="tech-screen">
+                                    PCC
+                                </div>
+
+                                <div class="tech-switches">
+
+                                    <div class="tech-switch"></div>
+                                    <div class="tech-switch"></div>
+                                    <div class="tech-switch"></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-card-content">
+
+                            <div class="product-card-number">
+                                03 / PANELS
+                            </div>
+
+                            <h3>
+                                LT PCC Panel
+                            </h3>
+
+                            <p class="product-card-description">
+
+                                Power control centre panel for
+                                centralized low-voltage
+                                power distribution.
+
+                            </p>
+
+
+                            <div class="product-tags">
+
+                                <span class="product-tag">
+                                    LT
+                                </span>
+
+                                <span class="product-tag">
+                                    PCC
+                                </span>
+
+                                <span class="product-tag">
+                                    POWER
+                                </span>
+
+                            </div>
+
+
+                            <div class="product-card-footer">
+
+                                <span>
+                                    LT DISTRIBUTION
+                                </span>
+
+                                <a href="contact.html">
+
+                                    VIEW DETAILS
+
+                                    <i class="fas fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCT 04 -->
+
+                    <article
+                        class="product-card"
+                        data-category="panels">
+
+                        <div class="product-image">
+
+                            <span class="product-image-label">
+                                LT PANELS
+                            </span>
+
+                            <span class="product-image-code">
+                                PP / 004
+                            </span>
+
+
+                            <div class="tech-panel">
+
+                                <div class="tech-screen">
+                                    MCC
+                                </div>
+
+                                <div class="tech-switches">
+
+                                    <div class="tech-switch"></div>
+                                    <div class="tech-switch"></div>
+                                    <div class="tech-switch"></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-card-content">
+
+                            <div class="product-card-number">
+                                04 / PANELS
+                            </div>
+
+                            <h3>
+                                MCC Panel
+                            </h3>
+
+                            <p class="product-card-description">
+
+                                Motor control centre solution
+                                for industrial motor and
+                                process applications.
+
+                            </p>
+
+
+                            <div class="product-tags">
+
+                                <span class="product-tag">
+                                    LT
+                                </span>
+
+                                <span class="product-tag">
+                                    MCC
+                                </span>
+
+                                <span class="product-tag">
+                                    MOTOR
+                                </span>
+
+                            </div>
+
+
+                            <div class="product-card-footer">
+
+                                <span>
+                                    MOTOR CONTROL
+                                </span>
+
+                                <a href="contact.html">
+
+                                    VIEW DETAILS
+
+                                    <i class="fas fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCT 05 -->
+
+                    <article
+                        class="product-card"
+                        data-category="panels">
+
+                        <div class="product-image">
+
+                            <span class="product-image-label">
+                                POWER QUALITY
+                            </span>
+
+                            <span class="product-image-code">
+                                PP / 005
+                            </span>
+
+
+                            <div class="tech-panel">
+
+                                <div class="tech-screen">
+                                    APFC
+                                </div>
+
+                                <div class="tech-switches">
+
+                                    <div class="tech-switch"></div>
+                                    <div class="tech-switch"></div>
+                                    <div class="tech-switch"></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-card-content">
+
+                            <div class="product-card-number">
+                                05 / PANELS
+                            </div>
+
+                            <h3>
+                                APFC Panel
+                            </h3>
+
+                            <p class="product-card-description">
+
+                                Automatic power factor correction
+                                system for electrical efficiency
+                                improvement.
+
+                            </p>
+
+
+                            <div class="product-tags">
+
+                                <span class="product-tag">
+                                    APFC
+                                </span>
+
+                                <span class="product-tag">
+                                    LT
+                                </span>
+
+                                <span class="product-tag">
+                                    POWER QUALITY
+                                </span>
+
+                            </div>
+
+
+                            <div class="product-card-footer">
+
+                                <span>
+                                    POWER MANAGEMENT
+                                </span>
+
+                                <a href="contact.html">
+
+                                    VIEW DETAILS
+
+                                    <i class="fas fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCT 06 -->
+
+                    <article
+                        class="product-card"
+                        data-category="panels">
+
+                        <div class="product-image">
+
+                            <span class="product-image-label">
+                                AUTOMATION
+                            </span>
+
+                            <span class="product-image-code">
+                                PP / 006
+                            </span>
+
+
+                            <div class="tech-panel">
+
+                                <div class="tech-screen">
+                                    ATS
+                                </div>
+
+                                <div class="tech-switches">
+
+                                    <div class="tech-switch"></div>
+                                    <div class="tech-switch"></div>
+                                    <div class="tech-switch"></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-card-content">
+
+                            <div class="product-card-number">
+                                06 / PANELS
+                            </div>
+
+                            <h3>
+                                AMF / ATS Panel
+                            </h3>
+
+                            <p class="product-card-description">
+
+                                Automatic mains failure and
+                                transfer system for reliable
+                                power source management.
+
+                            </p>
+
+
+                            <div class="product-tags">
+
+                                <span class="product-tag">
+                                    AMF
+                                </span>
+
+                                <span class="product-tag">
+                                    ATS
+                                </span>
+
+                                <span class="product-tag">
+                                    AUTO TRANSFER
+                                </span>
+
+                            </div>
+
+
+                            <div class="product-card-footer">
+
+                                <span>
+                                    POWER TRANSFER
+                                </span>
+
+                                <a href="contact.html">
+
+                                    VIEW DETAILS
+
+                                    <i class="fas fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCT 07 -->
+
+                    <article
+                        class="product-card"
+                        data-category="transformers">
+
+                        <div class="product-image">
+
+                            <span class="product-image-label">
+                                TRANSFORMERS
+                            </span>
+
+                            <span class="product-image-code">
+                                PP / 007
+                            </span>
+
+
+                            <div class="visual-transformer">
+
+                                <div class="transformer-coil"></div>
+
+                                <div class="transformer-coil"></div>
+
+                                <div class="transformer-coil"></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-card-content">
+
+                            <div class="product-card-number">
+                                07 / TRANSFORMERS
+                            </div>
+
+                            <h3>
+                                Distribution Transformer
+                            </h3>
+
+                            <p class="product-card-description">
+
+                                Transformer solution for electrical
+                                distribution and voltage
+                                transformation applications.
+
+                            </p>
+
+
+                            <div class="product-tags">
+
+                                <span class="product-tag">
+                                    TRANSFORMER
+                                </span>
+
+                                <span class="product-tag">
+                                    DISTRIBUTION
+                                </span>
+
+                            </div>
+
+
+                            <div class="product-card-footer">
+
+                                <span>
+                                    POWER EQUIPMENT
+                                </span>
+
+                                <a href="contact.html">
+
+                                    VIEW DETAILS
+
+                                    <i class="fas fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCT 08 -->
+
+                    <article
+                        class="product-card"
+                        data-category="distribution">
+
+                        <div class="product-image">
+
+                            <span class="product-image-label">
+                                DISTRIBUTION
+                            </span>
+
+                            <span class="product-image-code">
+                                PP / 008
+                            </span>
+
+
+                            <div class="visual-feeder"></div>
+
+                        </div>
+
+
+                        <div class="product-card-content">
+
+                            <div class="product-card-number">
+                                08 / DISTRIBUTION
+                            </div>
+
+                            <h3>
+                                Feeder Pillar
+                            </h3>
+
+                            <p class="product-card-description">
+
+                                Outdoor feeder and distribution
+                                enclosure for electrical network
+                                applications.
+
+                            </p>
+
+
+                            <div class="product-tags">
+
+                                <span class="product-tag">
+                                    LT
+                                </span>
+
+                                <span class="product-tag">
+                                    FEEDER
+                                </span>
+
+                                <span class="product-tag">
+                                    OUTDOOR
+                                </span>
+
+                            </div>
+
+
+                            <div class="product-card-footer">
+
+                                <span>
+                                    DISTRIBUTION
+                                </span>
+
+                                <a href="contact.html">
+
+                                    VIEW DETAILS
+
+                                    <i class="fas fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCT 09 -->
+
+                    <article
+                        class="product-card"
+                        data-category="distribution">
+
+                        <div class="product-image">
+
+                            <span class="product-image-label">
+                                DISTRIBUTION
+                            </span>
+
+                            <span class="product-image-code">
+                                PP / 009
+                            </span>
+
+
+                            <div class="visual-rmu">
+
+                                <div class="rmu-door"></div>
+                                <div class="rmu-door"></div>
+                                <div class="rmu-door"></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-card-content">
+
+                            <div class="product-card-number">
+                                09 / DISTRIBUTION
+                            </div>
+
+                            <h3>
+                                Distribution Unit
+                            </h3>
+
+                            <p class="product-card-description">
+
+                                Electrical distribution equipment
+                                for controlled and dependable
+                                feeder management.
+
+                            </p>
+
+
+                            <div class="product-tags">
+
+                                <span class="product-tag">
+                                    DISTRIBUTION
+                                </span>
+
+                                <span class="product-tag">
+                                    FEEDER
+                                </span>
+
+                            </div>
+
+
+                            <div class="product-card-footer">
+
+                                <span>
+                                    NETWORK SYSTEM
+                                </span>
+
+                                <a href="contact.html">
+
+                                    VIEW DETAILS
+
+                                    <i class="fas fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCT 10 -->
+
+                    <article
+                        class="product-card"
+                        data-category="transmission">
+
+                        <div class="product-image">
+
+                            <span class="product-image-label">
+                                TRANSMISSION
+                            </span>
+
+                            <span class="product-image-code">
+                                PP / 010
+                            </span>
+
+
+                            <div class="tech-panel">
+
+                                <div class="tech-screen">
+                                    HV
+                                </div>
+
+                                <div class="tech-switches">
+
+                                    <div class="tech-switch"></div>
+                                    <div class="tech-switch"></div>
+                                    <div class="tech-switch"></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-card-content">
+
+                            <div class="product-card-number">
+                                10 / TRANSMISSION
+                            </div>
+
+                            <h3>
+                                Transmission Panel
+                            </h3>
+
+                            <p class="product-card-description">
+
+                                Electrical panel solution for
+                                high-voltage transmission
+                                infrastructure applications.
+
+                            </p>
+
+
+                            <div class="product-tags">
+
+                                <span class="product-tag">
+                                    HV
+                                </span>
+
+                                <span class="product-tag">
+                                    TRANSMISSION
+                                </span>
+
+                            </div>
+
+
+                            <div class="product-card-footer">
+
+                                <span>
+                                    HIGH VOLTAGE
+                                </span>
+
+                                <a href="contact.html">
+
+                                    VIEW DETAILS
+
+                                    <i class="fas fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCT 11 -->
+
+                    <article
+                        class="product-card"
+                        data-category="protection">
+
+                        <div class="product-image">
+
+                            <span class="product-image-label">
+                                PROTECTION
+                            </span>
+
+                            <span class="product-image-code">
+                                PP / 011
+                            </span>
+
+
+                            <div class="tech-panel">
+
+                                <div class="tech-screen">
+                                    RELAY
+                                </div>
+
+                                <div class="tech-switches">
+
+                                    <div class="tech-switch"></div>
+                                    <div class="tech-switch"></div>
+                                    <div class="tech-switch"></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-card-content">
+
+                            <div class="product-card-number">
+                                11 / PROTECTION
+                            </div>
+
+                            <h3>
+                                Protection Relay Panel
+                            </h3>
+
+                            <p class="product-card-description">
+
+                                Protection and relay panel for
+                                electrical network monitoring,
+                                control and protection.
+
+                            </p>
+
+
+                            <div class="product-tags">
+
+                                <span class="product-tag">
+                                    RELAY
+                                </span>
+
+                                <span class="product-tag">
+                                    PROTECTION
+                                </span>
+
+                                <span class="product-tag">
+                                    CONTROL
+                                </span>
+
+                            </div>
+
+
+                            <div class="product-card-footer">
+
+                                <span>
+                                    SYSTEM PROTECTION
+                                </span>
+
+                                <a href="contact.html">
+
+                                    VIEW DETAILS
+
+                                    <i class="fas fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCT 12 -->
+
+                    <article
+                        class="product-card"
+                        data-category="protection">
+
+                        <div class="product-image">
+
+                            <span class="product-image-label">
+                                POWER DISTRIBUTION
+                            </span>
+
+                            <span class="product-image-code">
+                                PP / 012
+                            </span>
+
+
+                            <div class="visual-busduct"></div>
+
+                        </div>
+
+
+                        <div class="product-card-content">
+
+                            <div class="product-card-number">
+                                12 / PROTECTION
+                            </div>
+
+                            <h3>
+                                Busbar / Busduct System
+                            </h3>
+
+                            <p class="product-card-description">
+
+                                Power distribution system for
+                                efficient electrical power
+                                routing within facilities.
+
+                            </p>
+
+
+                            <div class="product-tags">
+
+                                <span class="product-tag">
+                                    BUSBAR
+                                </span>
+
+                                <span class="product-tag">
+                                    BUSDUCT
+                                </span>
+
+                                <span class="product-tag">
+                                    POWER
+                                </span>
+
+                            </div>
+
+
+                            <div class="product-card-footer">
+
+                                <span>
+                                    POWER ROUTING
+                                </span>
+
+                                <a href="contact.html">
+
+                                    VIEW DETAILS
+
+                                    <i class="fas fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+                <div
+                    class="no-products"
+                    id="noProducts">
+
+                    No products available in this category.
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     APPLICATIONS
+========================================================= -->
+
+<section class="application-section">
+
+
+    <div class="application-inner">
+
+
+        <div class="application-heading">
+
+            <span>
+                APPLICATION ENVIRONMENTS
+            </span>
+
+            <h2>
+                Built For
+                Real Infrastructure.
+            </h2>
+
+        </div>
+
+
+        <div class="application-grid">
+
+
+            <div class="application-card">
+
+                <i class="fas fa-industry"></i>
+
+                <h3>
+                    Industrial
+                </h3>
+
+                <p>
+                    Electrical systems for manufacturing,
+                    process plants and industrial facilities.
+                </p>
+
+            </div>
+
+
+            <div class="application-card">
+
+                <i class="fas fa-city"></i>
+
+                <h3>
+                    Commercial
+                </h3>
+
+                <p>
+                    Reliable power distribution for commercial
+                    buildings and business infrastructure.
+                </p>
+
+            </div>
+
+
+            <div class="application-card">
+
+                <i class="fas fa-hospital"></i>
+
+                <h3>
+                    Healthcare
+                </h3>
+
+                <p>
+                    Electrical infrastructure supporting
+                    critical healthcare environments.
+                </p>
+
+            </div>
+
+
+            <div class="application-card">
+
+                <i class="fas fa-hotel"></i>
+
+                <h3>
+                    Hospitality
+                </h3>
+
+                <p>
+                    Power systems for hotels, resorts
+                    and hospitality facilities.
+                </p>
+
+            </div>
+
+
+            <div class="application-card">
+
+                <i class="fas fa-solar-panel"></i>
+
+                <h3>
+                    Renewable Energy
+                </h3>
+
+                <p>
+                    Electrical equipment supporting renewable
+                    energy generation and integration.
+                </p>
+
+            </div>
+
+
+            <div class="application-card">
+
+                <i class="fas fa-building"></i>
+
+                <h3>
+                    Infrastructure
+                </h3>
+
+                <p>
+                    Electrical systems for large-scale
+                    infrastructure developments.
+                </p>
+
+            </div>
+
+
+            <div class="application-card">
+
+                <i class="fas fa-server"></i>
+
+                <h3>
+                    Data Infrastructure
+                </h3>
+
+                <p>
+                    Power distribution and control solutions
+                    for technology-intensive facilities.
+                </p>
+
+            </div>
+
+
+            <div class="application-card">
+
+                <i class="fas fa-road"></i>
+
+                <h3>
+                    Utilities
+                </h3>
+
+                <p>
+                    Products supporting electrical utility
+                    networks and distribution infrastructure.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="power-cta">
+
+
+    <div class="power-cta-inner">
+
+
+        <div class="cta-orbit"></div>
+
+
+        <div class="cta-content">
+
+            <span>
+                POWER / ENGINEERING / PROJECTS
+            </span>
+
+            <h2>
+                Need The Right
+                Power Solution?
+            </h2>
+
+            <p>
+
+                Share your electrical application,
+                project requirement or equipment scope.
+                Our team can help identify the appropriate
+                product category and configuration.
+
+            </p>
+
+
+            <a
+                href="contact.html"
+                class="cta-button">
+
+                TALK TO OUR TEAM
+
+                <i class="fas fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="main-footer">
+
+
+    <div class="container-fluid">
+
+
+        <div class="row g-5">
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="footer-logo">
+
+                    <img
+                        src="assets/img/w-alpha.png"
+                        alt="Alpha Numeric">
+
+                </div>
+
+
+                <p class="footer-description">
+
+                    Alpha Numeric is a technology-driven
+                    organization delivering intelligent
+                    solutions across energy, power, automation,
+                    IoT, lighting, R&D and industrial
+                    infrastructure.
+
+                </p>
+
+
+                <div class="footer-social">
+
+                    <a href="#">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-2 col-md-6">
+
+                <div class="footer-heading">
+                    POWER
+                </div>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="transmission.html">
+                            Transmission
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="distribution.html">
+                            Distribution
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="control-panels.html">
+                            Control Panels
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="panel-boards.html">
+                            Panel Boards
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="power-products.html">
+                            Power Products
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-lg-2 col-md-6">
+
+                <div class="footer-heading">
+                    R & D
+                </div>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="smart-pole.html">
+                            Smart Pole
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="smart-bollard.html">
+                            Smart Bollard
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="window-leaf-ac.html">
+                            Window Leaf AC
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="smart-conference-table.html">
+                            Smart Conference Table
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="footer-heading">
+                    CONTACT
+                </div>
+
+                <ul class="footer-contact">
+
+                    <li>
+
+                        <i class="fas fa-location-dot"></i>
+
+                        <span>
+                            Hyderabad, Telangana, India
+                        </span>
+
+                    </li>
+
+                    <li>
+
+                        <i class="fas fa-phone"></i>
+
+                        <span>
+                            +91 XXXXX XXXXX
+                        </span>
+
+                    </li>
+
+                    <li>
+
+                        <i class="fas fa-envelope"></i>
+
+                        <span>
+                            info@alphanumeric.com
+                        </span>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+
+                © 2026
+                <strong>Alpha Numeric</strong>.
+                All Rights Reserved.
+
+            </span>
+
+
+            <span>
+                POWER • ENGINEERING • INFRASTRUCTURE
+            </span>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     BOOTSTRAP
+========================================================= -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+
+<!-- =========================================================
+     PRODUCT FILTER
+========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    const categoryButtons =
+        document.querySelectorAll(".category-button");
+
+    const productCards =
+        document.querySelectorAll(".product-card");
+
+    const productCount =
+        document.querySelector(".products-count");
+
+    const noProducts =
+        document.getElementById("noProducts");
+
+
+    function filterProducts(category) {
+
+        let visibleCount = 0;
+
+
+        productCards.forEach(function (card) {
+
+            const cardCategory =
+                card.getAttribute("data-category");
+
+
+            if (
+                category === "all" ||
+                cardCategory === category
+            ) {
+
+                card.style.display = "";
+
+                visibleCount++;
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+
+        productCount.textContent =
+            visibleCount + " PRODUCTS";
+
+
+        if (visibleCount === 0) {
+
+            noProducts.style.display = "block";
+
+        } else {
+
+            noProducts.style.display = "none";
+
+        }
+
+    }
+
+
+    categoryButtons.forEach(function (button) {
+
+
+        button.addEventListener("click", function () {
+
+
+            categoryButtons.forEach(function (item) {
+
+                item.classList.remove("active");
+
+            });
+
+
+            this.classList.add("active");
+
+
+            const category =
+                this.getAttribute("data-category");
+
+
+            filterProducts(category);
+
+
+            const productsSection =
+                document.getElementById("products");
+
+
+            if (window.innerWidth < 992) {
+
+                setTimeout(function () {
+
+                    productsSection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                }, 100);
+
+            }
+
+        });
+
+    });
+
+
+    filterProducts("all");
+
+});
+
+
+
+/* =========================================================
+   NAVBAR SHADOW
+========================================================= */
+
+window.addEventListener("scroll", function () {
+
+    const navbar =
+        document.querySelector(".main-navbar");
+
+
+    if (window.scrollY > 30) {
+
+        navbar.style.boxShadow =
+            "0 5px 25px rgba(0,0,0,.07)";
+
+    } else {
+
+        navbar.style.boxShadow =
+            "none";
+
+    }
+
+});
+
+</script>
+
+
+</body>
+
+</html>
