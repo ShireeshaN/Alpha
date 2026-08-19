@@ -20,7 +20,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
@@ -450,7 +450,7 @@
             background:
                 linear-gradient(rgba(0, 0, 0, .12),
                     rgba(0, 0, 0, .12)),
-                url("assets/img/industrial.jpg");
+                url("assets/img/about/about-Engineering Excellence.png");
 
             background-size: cover;
 
@@ -745,59 +745,343 @@
         }
 
 
-        /* =====================================================
-           SECTORS
-        ===================================================== */
+       /* =====================================================
+   SECTORS / APPLICATIONS
+===================================================== */
 
-        .sectors-section {
+.sectors-section {
+    padding: 110px 8%;
+    background: #f6f6f4;
+    position: relative;
+}
 
-            padding: 100px 8%;
+.sectors-section .section-container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
 
-            background: #f5f5f5;
-        }
 
-        .sector-box {
+/* -----------------------------------------------------
+   SECTION INTRO
+----------------------------------------------------- */
 
-            background: #ffffff;
+.sectors-intro {
+    max-width: 390px;
+    margin-left: auto;
+    margin-bottom: 0;
 
-            padding: 28px;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.8;
+}
 
-            min-height: 135px;
 
-            border: 1px solid #eeeeee;
+/* -----------------------------------------------------
+   SECTOR CARD
+----------------------------------------------------- */
 
-            transition: .3s;
-        }
+.sector-box {
+    position: relative;
 
-        .sector-box:hover {
+    min-height: 260px;
 
-            background: #111111;
+    padding: 30px;
 
-            color: #ffffff;
-        }
+    background: #ffffff;
 
-        .sector-box h4 {
+    border: 1px solid #e8e8e8;
 
-            font-size: 16px;
+    overflow: hidden;
 
-            margin-bottom: 8px;
-        }
+    transition:
+        transform .4s ease,
+        background .4s ease,
+        border-color .4s ease,
+        box-shadow .4s ease;
+}
 
-        .sector-box p {
 
-            color: #777777;
+/* Subtle top line */
 
-            font-size: 11px;
+.sector-box::before {
 
-            line-height: 1.6;
+    content: "";
 
-            margin: 0;
-        }
+    position: absolute;
 
-        .sector-box:hover p {
-            color: #aaaaaa;
-        }
+    top: 0;
+    left: 0;
 
+    width: 0;
+    height: 2px;
+
+    background: #111;
+
+    transition: width .45s ease;
+}
+
+
+/* Large background number */
+
+.sector-box::after {
+
+    content: attr(data-number);
+
+    position: absolute;
+
+    right: -8px;
+    bottom: -35px;
+
+    font-size: 110px;
+
+    font-weight: 700;
+
+    color: rgba(0,0,0,.025);
+
+    pointer-events: none;
+}
+
+
+/* -----------------------------------------------------
+   TOP AREA
+----------------------------------------------------- */
+
+.sector-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 35px;
+}
+
+
+/* -----------------------------------------------------
+   ICON
+----------------------------------------------------- */
+
+.sector-icon {
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #dedede;
+
+    background: #fafafa;
+
+    transition:
+        background .4s ease,
+        border-color .4s ease,
+        color .4s ease,
+        transform .4s ease;
+}
+
+.sector-icon i {
+
+    font-size: 20px;
+
+    color: #222;
+
+    transition: .4s ease;
+}
+
+
+/* -----------------------------------------------------
+   NUMBER
+----------------------------------------------------- */
+
+.sector-number {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #999;
+
+    font-weight: 500;
+}
+
+
+/* -----------------------------------------------------
+   CONTENT
+----------------------------------------------------- */
+
+.sector-content h4 {
+
+    margin: 0 0 12px;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    letter-spacing: -.2px;
+
+    color: #151515;
+}
+
+
+.sector-content p {
+
+    max-width: 250px;
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: 11px;
+
+    line-height: 1.75;
+}
+
+
+/* -----------------------------------------------------
+   ARROW
+----------------------------------------------------- */
+
+.sector-arrow {
+
+    position: absolute;
+
+    right: 28px;
+    bottom: 25px;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #e3e3e3;
+
+    color: #777;
+
+    font-size: 12px;
+
+    opacity: 0;
+
+    transform: translate(-8px, 8px);
+
+    transition:
+        opacity .35s ease,
+        transform .35s ease,
+        background .35s ease,
+        color .35s ease;
+}
+
+
+/* -----------------------------------------------------
+   HOVER
+----------------------------------------------------- */
+
+.sector-box:hover {
+
+    background: #111;
+
+    border-color: #111;
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 18px 40px rgba(0,0,0,.10);
+}
+
+
+.sector-box:hover::before {
+
+    width: 100%;
+}
+
+
+.sector-box:hover .sector-icon {
+
+    background: #fff;
+
+    border-color: #fff;
+
+    transform: translateY(-2px);
+}
+
+
+.sector-box:hover .sector-icon i {
+
+    color: #111;
+
+    transform: scale(1.05);
+}
+
+
+.sector-box:hover .sector-number {
+
+    color: #777;
+}
+
+
+.sector-box:hover .sector-content h4 {
+
+    color: #fff;
+}
+
+
+.sector-box:hover .sector-content p {
+
+    color: #aaa;
+}
+
+
+.sector-box:hover .sector-arrow {
+
+    opacity: 1;
+
+    transform: translate(0, 0);
+
+    border-color: #444;
+
+    color: #fff;
+}
+
+
+/* -----------------------------------------------------
+   RESPONSIVE
+----------------------------------------------------- */
+
+@media (max-width: 991px) {
+
+    .sectors-section {
+        padding: 80px 5%;
+    }
+
+    .sectors-intro {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .sectors-section {
+        padding: 70px 20px;
+    }
+
+    .sector-box {
+        min-height: 230px;
+        padding: 25px;
+    }
+
+    .sector-top {
+        margin-bottom: 28px;
+    }
+
+}
 
         /* =====================================================
            CTA
@@ -1077,7 +1361,8 @@
             .capability-section,
             .technology-section,
             .why-section,
-            .sectors-section {
+            .
+            sectors-section {
                 padding: 75px 7%;
             }
 
@@ -3088,76 +3373,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    <!-- =========================================================
-     STATS
-========================================================= -->
-
-    <section class="stats-section">
-
-        <div class="container-fluid">
-
-            <div class="row">
-
-
-                <div class="col-lg-3 col-6 stat-box">
-
-                    <div class="stat-number">
-                        360°
-                    </div>
-
-                    <div class="stat-label">
-                        Engineering Approach
-                    </div>
-
-                </div>
-
-
-                <div class="col-lg-3 col-6 stat-box">
-
-                    <div class="stat-number">
-                        5+
-                    </div>
-
-                    <div class="stat-label">
-                        Core Solution Areas
-                    </div>
-
-                </div>
-
-
-                <div class="col-lg-3 col-6 stat-box">
-
-                    <div class="stat-number">
-                        IoT
-                    </div>
-
-                    <div class="stat-label">
-                        Connected Technology
-                    </div>
-
-                </div>
-
-
-                <div class="col-lg-3 col-6 stat-box">
-
-                    <div class="stat-number">
-                        EPC
-                    </div>
-
-                    <div class="stat-label">
-                        End-to-End Execution
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
+  
 
     <!-- =========================================================
      WHAT WE DO
@@ -4304,207 +4520,329 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    <!-- =========================================================
-     SECTORS
+  <!-- =========================================================
+     SECTORS / APPLICATIONS
 ========================================================= -->
 
-    <section class="sectors-section">
+<section class="sectors-section">
 
-        <div class="section-container">
+    <div class="section-container">
+
+        <!-- Section Heading -->
+        <div class="row align-items-end mb-5">
+
+            <div class="col-lg-8">
+
+                <span class="section-tag">
+                    APPLICATIONS
+                </span>
+
+                <h2 class="section-title">
+                    Solutions across
+                    <span>multiple environments.</span>
+                </h2>
+
+            </div>
+
+            <div class="col-lg-4">
+                <p class="sectors-intro">
+                    Engineered solutions designed to perform across
+                    residential, commercial, industrial and
+                    infrastructure environments.
+                </p>
+            </div>
+
+        </div>
 
 
-            <div class="row mb-5">
+        <!-- Sector Grid -->
+        <div class="row g-3">
 
-                <div class="col-lg-7">
 
-                    <span class="section-tag">
-                        Applications
-                    </span>
+            <!-- Residential -->
+            <div class="col-lg-3 col-md-6">
 
-                    <h2 class="section-title">
+                <div class="sector-box">
 
-                        Solutions across
-                        <span>multiple environments.</span>
+                    <div class="sector-top">
 
-                    </h2>
+                        <div class="sector-icon">
+                            <i class="bi bi-house-door"></i>
+                        </div>
+
+                        <span class="sector-number">01</span>
+
+                    </div>
+
+                    <div class="sector-content">
+
+                        <h4>Residential</h4>
+
+                        <p>
+                            Smart home, lighting and energy solutions
+                            for connected and efficient living spaces.
+                        </p>
+
+                    </div>
+
+                    <div class="sector-arrow">
+                        <i class="bi bi-arrow-up-right"></i>
+                    </div>
 
                 </div>
 
             </div>
 
 
-            <div class="row g-3">
+            <!-- Commercial -->
+            <div class="col-lg-3 col-md-6">
 
+                <div class="sector-box">
 
-                <div class="col-lg-3 col-md-6">
+                    <div class="sector-top">
 
-                    <div class="sector-box">
+                        <div class="sector-icon">
+                            <i class="bi bi-building"></i>
+                        </div>
 
-                        <h4>
-                            Residential
-                        </h4>
+                        <span class="sector-number">02</span>
+
+                    </div>
+
+                    <div class="sector-content">
+
+                        <h4>Commercial</h4>
 
                         <p>
-
-                            Smart home, lighting and energy
-                            solutions for connected living spaces.
-
+                            Automation, lighting, power and energy
+                            management for modern commercial spaces.
                         </p>
 
                     </div>
 
-                </div>
-
-
-                <div class="col-lg-3 col-md-6">
-
-                    <div class="sector-box">
-
-                        <h4>
-                            Commercial
-                        </h4>
-
-                        <p>
-
-                            Automation, lighting, power and
-                            energy management for commercial
-                            environments.
-
-                        </p>
-
+                    <div class="sector-arrow">
+                        <i class="bi bi-arrow-up-right"></i>
                     </div>
 
                 </div>
 
+            </div>
 
-                <div class="col-lg-3 col-md-6">
 
-                    <div class="sector-box">
+            <!-- Industrial -->
+            <div class="col-lg-3 col-md-6">
 
-                        <h4>
-                            Industrial
-                        </h4>
+                <div class="sector-box">
+
+                    <div class="sector-top">
+
+                        <div class="sector-icon">
+                            <i class="bi bi-gear-wide-connected"></i>
+                        </div>
+
+                        <span class="sector-number">03</span>
+
+                    </div>
+
+                    <div class="sector-content">
+
+                        <h4>Industrial</h4>
 
                         <p>
-
                             Industrial automation, electrical
-                            infrastructure and monitoring solutions.
-
+                            infrastructure and intelligent monitoring.
                         </p>
 
                     </div>
 
-                </div>
-
-
-                <div class="col-lg-3 col-md-6">
-
-                    <div class="sector-box">
-
-                        <h4>
-                            Infrastructure
-                        </h4>
-
-                        <p>
-
-                            Power, transmission, distribution
-                            and infrastructure engineering solutions.
-
-                        </p>
-
+                    <div class="sector-arrow">
+                        <i class="bi bi-arrow-up-right"></i>
                     </div>
 
                 </div>
 
+            </div>
 
-                <div class="col-lg-3 col-md-6">
 
-                    <div class="sector-box">
+            <!-- Infrastructure -->
+            <div class="col-lg-3 col-md-6">
 
-                        <h4>
-                            Hospitality
-                        </h4>
+                <div class="sector-box">
+
+                    <div class="sector-top">
+
+                        <div class="sector-icon">
+                            <i class="bi bi-diagram-3"></i>
+                        </div>
+
+                        <span class="sector-number">04</span>
+
+                    </div>
+
+                    <div class="sector-content">
+
+                        <h4>Infrastructure</h4>
 
                         <p>
+                            Power, transmission, distribution and
+                            infrastructure engineering solutions.
+                        </p>
 
+                    </div>
+
+                    <div class="sector-arrow">
+                        <i class="bi bi-arrow-up-right"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hospitality -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="sector-box">
+
+                    <div class="sector-top">
+
+                        <div class="sector-icon">
+                            <i class="bi bi-buildings"></i>
+                        </div>
+
+                        <span class="sector-number">05</span>
+
+                    </div>
+
+                    <div class="sector-content">
+
+                        <h4>Hospitality</h4>
+
+                        <p>
                             Smart automation and energy solutions
                             for hotels and hospitality environments.
-
                         </p>
 
                     </div>
 
+                    <div class="sector-arrow">
+                        <i class="bi bi-arrow-up-right"></i>
+                    </div>
+
                 </div>
 
+            </div>
 
-                <div class="col-lg-3 col-md-6">
 
-                    <div class="sector-box">
+            <!-- Healthcare -->
+            <div class="col-lg-3 col-md-6">
 
-                        <h4>
-                            Healthcare
-                        </h4>
+                <div class="sector-box">
+
+                    <div class="sector-top">
+
+                        <div class="sector-icon">
+                            <i class="bi bi-heart-pulse"></i>
+                        </div>
+
+                        <span class="sector-number">06</span>
+
+                    </div>
+
+                    <div class="sector-content">
+
+                        <h4>Healthcare</h4>
 
                         <p>
-
-                            Intelligent automation and
-                            infrastructure solutions for
-                            healthcare facilities.
-
+                            Intelligent automation and infrastructure
+                            solutions for healthcare facilities.
                         </p>
 
                     </div>
 
+                    <div class="sector-arrow">
+                        <i class="bi bi-arrow-up-right"></i>
+                    </div>
+
                 </div>
 
+            </div>
 
-                <div class="col-lg-3 col-md-6">
 
-                    <div class="sector-box">
+            <!-- Energy -->
+            <div class="col-lg-3 col-md-6">
 
-                        <h4>
-                            Energy
-                        </h4>
+                <div class="sector-box">
+
+                    <div class="sector-top">
+
+                        <div class="sector-icon">
+                            <i class="bi bi-lightning-charge"></i>
+                        </div>
+
+                        <span class="sector-number">07</span>
+
+                    </div>
+
+                    <div class="sector-content">
+
+                        <h4>Energy</h4>
 
                         <p>
-
-                            Renewable energy and energy
-                            management solutions for
-                            sustainable operations.
-
+                            Renewable energy and energy management
+                            solutions for sustainable operations.
                         </p>
 
                     </div>
 
+                    <div class="sector-arrow">
+                        <i class="bi bi-arrow-up-right"></i>
+                    </div>
+
                 </div>
 
+            </div>
 
-                <div class="col-lg-3 col-md-6">
 
-                    <div class="sector-box">
+            <!-- Smart Infrastructure -->
+            <div class="col-lg-3 col-md-6">
 
-                        <h4>
-                            Smart Infrastructure
-                        </h4>
+                <div class="sector-box">
+
+                    <div class="sector-top">
+
+                        <div class="sector-icon">
+                            <i class="bi bi-cpu"></i>
+                        </div>
+
+                        <span class="sector-number">08</span>
+
+                    </div>
+
+                    <div class="sector-content">
+
+                        <h4>Smart Infrastructure</h4>
 
                         <p>
-
-                            Connected lighting, smart
-                            infrastructure and intelligent systems.
-
+                            Connected lighting, smart infrastructure
+                            and intelligent automation systems.
                         </p>
 
                     </div>
 
-                </div>
+                    <div class="sector-arrow">
+                        <i class="bi bi-arrow-up-right"></i>
+                    </div>
 
+                </div>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
 
+</section>
 
 
     <!-- =========================================================
