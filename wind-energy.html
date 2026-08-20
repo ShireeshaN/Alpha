@@ -5,45 +5,36 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Wind Energy | Alpha Numeric</title>
 
     <meta name="description"
-          content="Alpha Numeric delivers intelligent and efficient wind energy solutions for commercial, industrial, infrastructure and utility-scale applications.">
+        content="Alpha Numeric delivers intelligent and efficient wind energy solutions for commercial, industrial, infrastructure and utility-scale applications.">
 
     <!-- =====================================================
          BOOTSTRAP
     ====================================================== -->
 
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
     <!-- =====================================================
          FONT AWESOME
     ====================================================== -->
 
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
     <!-- =====================================================
          GOOGLE FONT
     ====================================================== -->
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
 
@@ -52,7 +43,6 @@
     ====================================================== -->
 
     <style>
-
         /* =====================================================
            GLOBAL
         ====================================================== */
@@ -274,14 +264,12 @@
 
             background:
 
-                linear-gradient(
-                    90deg,
-                    rgba(0,0,0,.94) 0%,
-                    rgba(0,0,0,.72) 43%,
-                    rgba(0,0,0,.16) 100%
-                ),
+                linear-gradient(90deg,
+                    rgba(0, 0, 0, .94) 0%,
+                    rgba(0, 0, 0, .72) 43%,
+                    rgba(0, 0, 0, .16) 100%),
 
-                url("assets/img/wind-banner.jpg");
+                url("assets/img/wind/wind-banner.png");
 
             background-size: cover;
 
@@ -435,7 +423,7 @@
 
             padding: 14px 25px;
 
-            border: 1px solid rgba(255,255,255,.55);
+            border: 1px solid rgba(255, 255, 255, .55);
 
             color: #ffffff;
 
@@ -524,347 +512,8 @@
         }
 
 
-        /* =====================================================
-           WIND INTRO
-        ====================================================== */
 
-        .wind-intro {
-
-            padding: 115px 8%;
-
-        }
-
-
-        .intro-highlight {
-
-            margin-top: 30px;
-
-            padding-left: 25px;
-
-            border-left: 3px solid #111111;
-
-            color: #222222;
-
-            font-size: 16px;
-
-            line-height: 1.8;
-
-            font-weight: 500;
-
-        }
-
-
-        .wind-stat {
-
-            background: #f6f6f6;
-
-            padding: 35px;
-
-            height: 100%;
-
-            position: relative;
-
-            overflow: hidden;
-
-            transition: .3s ease;
-
-        }
-
-
-        .wind-stat::after {
-
-            content: "";
-
-            position: absolute;
-
-            width: 80px;
-
-            height: 80px;
-
-            border: 1px solid #dddddd;
-
-            border-radius: 50%;
-
-            right: -25px;
-
-            bottom: -25px;
-
-        }
-
-
-        .wind-stat:hover {
-
-            background: #eeeeee;
-
-            transform: translateY(-5px);
-
-        }
-
-
-        .wind-stat i {
-
-            font-size: 25px;
-
-            margin-bottom: 22px;
-
-        }
-
-
-        .wind-stat h3 {
-
-            font-size: 20px;
-
-            margin-bottom: 10px;
-
-        }
-
-
-        .wind-stat p {
-
-            color: #777777;
-
-            font-size: 12px;
-
-            line-height: 1.8;
-
-            margin: 0;
-
-        }
-
-
-        /* =====================================================
-           WIND SOLUTIONS
-        ====================================================== */
-
-        .solutions-section {
-
-            background: #f5f5f5;
-
-            padding: 115px 8%;
-
-        }
-
-
-        .solution-card {
-
-            background: #ffffff;
-
-            border: 1px solid #eeeeee;
-
-            padding: 40px;
-
-            min-height: 330px;
-
-            position: relative;
-
-            overflow: hidden;
-
-            transition: .4s ease;
-
-        }
-
-
-        .solution-card::before {
-
-            content: "";
-
-            position: absolute;
-
-            width: 100%;
-
-            height: 3px;
-
-            background: #111111;
-
-            left: -100%;
-
-            top: 0;
-
-            transition: .4s ease;
-
-        }
-
-
-        .solution-card:hover::before {
-
-            left: 0;
-
-        }
-
-
-        .solution-card:hover {
-
-            transform: translateY(-8px);
-
-            box-shadow: 0 20px 50px rgba(0,0,0,.08);
-
-        }
-
-
-        .solution-number {
-
-            position: absolute;
-
-            right: 20px;
-
-            top: 10px;
-
-            font-size: 65px;
-
-            font-weight: 700;
-
-            color: #eeeeee;
-
-        }
-
-
-        .solution-icon {
-
-            width: 55px;
-
-            height: 55px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            background: #111111;
-
-            color: #ffffff;
-
-            font-size: 19px;
-
-            margin-bottom: 25px;
-
-        }
-
-
-        .solution-card h3 {
-
-            font-size: 21px;
-
-            font-weight: 600;
-
-            margin-bottom: 14px;
-
-        }
-
-
-        .solution-card p {
-
-            color: #707070;
-
-            font-size: 13px;
-
-            line-height: 1.8;
-
-        }
-
-
-        /* =====================================================
-           WIND BENEFITS
-        ====================================================== */
-
-        .benefits-section {
-
-            padding: 115px 8%;
-
-        }
-
-
-        .benefit-image {
-
-            min-height: 560px;
-
-            background:
-
-                linear-gradient(
-                    rgba(0,0,0,.10),
-                    rgba(0,0,0,.10)
-                ),
-
-                url("assets/img/wind-benefits.jpg");
-
-            background-size: cover;
-
-            background-position: center;
-
-        }
-
-
-        .benefit-content {
-
-            padding-left: 60px;
-
-        }
-
-
-        .benefit-item {
-
-            display: flex;
-
-            gap: 18px;
-
-            padding: 22px 0;
-
-            border-bottom: 1px solid #e5e5e5;
-
-        }
-
-
-        .benefit-item:last-child {
-
-            border-bottom: none;
-
-        }
-
-
-        .benefit-icon {
-
-            width: 42px;
-
-            height: 42px;
-
-            flex-shrink: 0;
-
-            border: 1px solid #111111;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            font-size: 13px;
-
-        }
-
-
-        .benefit-item h4 {
-
-            font-size: 15px;
-
-            font-weight: 600;
-
-            margin-bottom: 7px;
-
-        }
-
-
-        .benefit-item p {
-
-            margin: 0;
-
-            color: #777777;
-
-            font-size: 12px;
-
-            line-height: 1.7;
-
-        }
-
+       
 
         /* =====================================================
            WIND TECHNOLOGY
@@ -949,88 +598,7 @@
         }
 
 
-        /* =====================================================
-           PROJECT PROCESS
-        ====================================================== */
-
-        .process-section {
-
-            background: #111111;
-
-            color: #ffffff;
-
-            padding: 115px 8%;
-
-        }
-
-
-        .process-section .section-tag {
-
-            color: #999999;
-
-        }
-
-
-        .process-section .section-title {
-
-            color: #ffffff;
-
-        }
-
-
-        .process-section .section-text {
-
-            color: #aaaaaa;
-
-        }
-
-
-        .process-card {
-
-            padding: 35px 25px 25px 0;
-
-            min-height: 230px;
-
-        }
-
-
-        .process-number {
-
-            font-size: 11px;
-
-            letter-spacing: 2px;
-
-            color: #777777;
-
-            margin-bottom: 18px;
-
-        }
-
-
-        .process-card h4 {
-
-            font-size: 18px;
-
-            font-weight: 500;
-
-            margin-bottom: 12px;
-
-        }
-
-
-        .process-card p {
-
-            color: #999999;
-
-            font-size: 12px;
-
-            line-height: 1.8;
-
-            margin: 0;
-
-        }
-
-
+    
         /* =====================================================
            APPLICATIONS
         ====================================================== */
@@ -1360,10 +928,8 @@
 
             background:
 
-                linear-gradient(
-                    rgba(0,0,0,.88),
-                    rgba(0,0,0,.88)
-                ),
+                linear-gradient(rgba(0, 0, 0, .88),
+                    rgba(0, 0, 0, .88)),
 
                 url("assets/img/wind-cta.jpg");
 
@@ -1876,7 +1442,6 @@
             }
 
         }
-
     </style>
 
 </head>
@@ -1885,791 +1450,1702 @@
 <body>
 
 
-<!-- =========================================================
+    <!-- =========================================================
      NAVIGATION
 ========================================================= -->
 
-<nav class="navbar navbar-expand-lg main-navbar fixed-top"
-     id="mainNav">
+    <nav class="navbar navbar-expand-lg main-navbar fixed-top" id="mainNav">
 
-    <div class="container-fluid px-4 px-lg-5">
+        <div class="container-fluid px-4 px-lg-5">
 
 
-        <!-- LOGO -->
+            <!-- LOGO -->
 
-        <a class="navbar-brand"
-           href="index.html">
+            <a class="navbar-brand" href="index.html">
 
-            <img src="assets/img/b-alpha.png"
-                 alt="Alpha Numeric Logo">
+                <img src="assets/img/b-alpha.png" alt="Alpha Numeric Logo">
 
-        </a>
+            </a>
 
 
-        <!-- MOBILE MENU -->
+            <!-- MOBILE MENU -->
 
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 
-            <span class="me-2">
-                Menu
-            </span>
+                <span class="me-2">
+                    Menu
+                </span>
 
-            <i class="fas fa-bars"></i>
+                <i class="fas fa-bars"></i>
 
-        </button>
+            </button>
 
 
-        <!-- NAVIGATION -->
+            <!-- NAVIGATION -->
 
-        <div class="collapse navbar-collapse"
-             id="navbarResponsive">
+            <div class="collapse navbar-collapse" id="navbarResponsive">
 
-            <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto">
 
 
-                <!-- HOME -->
+                    <!-- HOME -->
 
-                <li class="nav-item">
+                    <li class="nav-item">
 
-                    <a class="nav-link"
-                       href="index.html">
+                        <a class="nav-link" href="index.html">
 
-                        Home
+                            Home
 
-                    </a>
+                        </a>
 
-                </li>
+                    </li>
 
 
-                <!-- ABOUT -->
+                    <!-- ABOUT -->
 
-                <li class="nav-item">
+                    <li class="nav-item">
 
-                    <a class="nav-link"
-                       href="about.html">
+                        <a class="nav-link" href="about.html">
 
-                        About
+                            About
 
-                    </a>
+                        </a>
 
-                </li>
+                    </li>
 
 
-                <!-- ENERGY -->
+                    <!-- ENERGY -->
 
-                <li class="nav-item dropdown">
+                    <li class="nav-item dropdown">
 
-                    <a class="nav-link dropdown-toggle active"
-                       href="#"
-                       id="energyDropdown"
-                       role="button"
-                       data-bs-toggle="dropdown"
-                       aria-expanded="false">
+                        <a class="nav-link dropdown-toggle active" href="#" id="energyDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
 
-                        Energy
+                            Energy
 
-                    </a>
+                        </a>
 
 
-                    <ul class="dropdown-menu"
-                        aria-labelledby="energyDropdown">
+                        <ul class="dropdown-menu" aria-labelledby="energyDropdown">
 
-                        <li>
+                            <li>
 
-                            <a class="dropdown-item"
-                               href="solar-energy.html">
+                                <a class="dropdown-item" href="solar-energy.html">
 
-                                Solar Energy
+                                    Solar Energy
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
 
-                        <li>
+                            <li>
 
-                            <a class="dropdown-item active"
-                               href="wind-energy.html">
+                                <a class="dropdown-item active" href="wind-energy.html">
 
-                                Wind Energy
+                                    Wind Energy
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
 
-                        <li>
+                            <li>
 
-                            <a class="dropdown-item"
-                               href="biomass-energy.html">
+                                <a class="dropdown-item" href="biomass-energy.html">
 
-                                Biomass Energy
+                                    Biomass Energy
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
 
-                        <li>
+                            <li>
 
-                            <a class="dropdown-item"
-                               href="hydel-energy.html">
+                                <a class="dropdown-item" href="hydel-energy.html">
 
-                                Hydel Energy
+                                    Hydel Energy
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
-                    </ul>
+                        </ul>
 
-                </li>
+                    </li>
 
 
-                <!-- POWER -->
+                    <!-- POWER -->
 
-                <li class="nav-item dropdown">
+                    <li class="nav-item dropdown">
 
-                    <a class="nav-link dropdown-toggle"
-                       href="#"
-                       id="powerDropdown"
-                       role="button"
-                       data-bs-toggle="dropdown"
-                       aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="powerDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
 
-                        Power
+                            Power
 
-                    </a>
+                        </a>
 
 
-                    <ul class="dropdown-menu"
-                        aria-labelledby="powerDropdown">
+                        <ul class="dropdown-menu" aria-labelledby="powerDropdown">
 
-                        <li>
+                            <li>
 
-                            <a class="dropdown-item"
-                               href="transmission.html">
+                                <a class="dropdown-item" href="transmission.html">
 
-                                Transmission
+                                    Transmission
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
 
-                        <li>
+                            <li>
 
-                            <a class="dropdown-item"
-                               href="distribution.html">
+                                <a class="dropdown-item" href="distribution.html">
 
-                                Distribution
+                                    Distribution
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
 
-                        <li>
+                            <li>
 
-                            <a class="dropdown-item"
-                               href="control-panels.html">
+                                <a class="dropdown-item" href="control-panels.html">
 
-                                Control Panels
+                                    Control Panels
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
 
-                        <li>
+                            <li>
 
-                            <a class="dropdown-item"
-                               href="panel-boards.html">
+                                <a class="dropdown-item" href="panel-boards.html">
 
-                                Panel Boards
+                                    Panel Boards
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
-                    </ul>
+                        </ul>
 
-                </li>
+                    </li>
 
 
-                <!-- AUTOMATION -->
+                    <!-- AUTOMATION -->
 
-                <li class="nav-item dropdown">
+                    <li class="nav-item dropdown">
 
-                    <a class="nav-link dropdown-toggle"
-                       href="#"
-                       id="automationDropdown"
-                       role="button"
-                       data-bs-toggle="dropdown"
-                       aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="automationDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
 
-                        Automation
+                            Automation
 
-                    </a>
+                        </a>
 
 
-                    <ul class="dropdown-menu"
-                        aria-labelledby="automationDropdown">
+                        <ul class="dropdown-menu" aria-labelledby="automationDropdown">
 
-                        <li>
+                            <li>
 
-                            <a class="dropdown-item"
-                               href="home-automation.html">
+                                <a class="dropdown-item" href="home-automation.html">
 
-                                Home Automation
+                                    Home Automation
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
 
-                        <li>
+                            <li>
 
-                            <a class="dropdown-item"
-                               href="commercial-automation.html">
+                                <a class="dropdown-item" href="commercial-automation.html">
 
-                                Commercial Automation
+                                    Commercial Automation
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
 
-                        <li>
+                            <li>
 
-                            <a class="dropdown-item"
-                               href="industrial-automation.html">
+                                <a class="dropdown-item" href="industrial-automation.html">
 
-                                Industrial Automation
+                                    Industrial Automation
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
 
-                        <li>
+                            <li>
 
-                            <a class="dropdown-item"
-                               href="hospital-automation.html">
+                                <a class="dropdown-item" href="hospital-automation.html">
 
-                                Hospital Automation
+                                    Hospital Automation
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
 
-                        <li>
+                            <li>
 
-                            <a class="dropdown-item"
-                               href="hotel-automation.html">
+                                <a class="dropdown-item" href="hotel-automation.html">
 
-                                Hotel Automation
+                                    Hotel Automation
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
-                    </ul>
+                        </ul>
 
-                </li>
+                    </li>
 
 
-                <!-- R&D -->
+                    <!-- R&D -->
 
-                <li class="nav-item dropdown">
+                    <li class="nav-item dropdown">
 
-                    <a class="nav-link dropdown-toggle"
-                       href="#"
-                       id="rdDropdown"
-                       role="button"
-                       data-bs-toggle="dropdown"
-                       aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="rdDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
 
-                        R & D
+                            R & D
 
-                    </a>
+                        </a>
 
 
-                    <ul class="dropdown-menu"
-                        aria-labelledby="rdDropdown">
+                        <ul class="dropdown-menu" aria-labelledby="rdDropdown">
 
-                        <li>
+                            <li>
 
-                            <a class="dropdown-item"
-                               href="smart-pole.html">
+                                <a class="dropdown-item" href="smart-pole.html">
 
-                                Smart Pole
+                                    Smart Pole
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
 
-                        <li>
+                            <li>
 
-                            <a class="dropdown-item"
-                               href="smart-bollard.html">
+                                <a class="dropdown-item" href="smart-bollard.html">
 
-                                Smart Bollard
+                                    Smart Bollard
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
 
-                        <li>
+                            <li>
 
-                            <a class="dropdown-item"
-                               href="window-leaf-ac.html">
+                                <a class="dropdown-item" href="window-leaf-ac.html">
 
-                                Window Leaf AC
+                                    Window Leaf AC
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
 
-                        <li>
+                            <li>
 
-                            <a class="dropdown-item"
-                               href="smart-conference-table.html">
+                                <a class="dropdown-item" href="smart-conference-table.html">
 
-                                Smart Conference Table
+                                    Smart Conference Table
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
-                    </ul>
+                        </ul>
 
-                </li>
+                    </li>
 
 
-                <!-- PRODUCTS -->
+                    <!-- PRODUCTS -->
 
-                <li class="nav-item dropdown">
+                    <li class="nav-item dropdown">
 
-                    <a class="nav-link dropdown-toggle"
-                       href="#"
-                       id="productsDropdown"
-                       role="button"
-                       data-bs-toggle="dropdown"
-                       aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
 
-                        Products
+                            Products
 
-                    </a>
+                        </a>
 
 
-                    <ul class="dropdown-menu"
-                        aria-labelledby="productsDropdown">
+                        <ul class="dropdown-menu" aria-labelledby="productsDropdown">
 
-                        <li>
+                            <li>
 
-                            <a class="dropdown-item"
-                               href="transformers.html">
+                                <a class="dropdown-item" href="transformers.html">
 
-                                Transformers
+                                    Transformers
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
 
-                        <li>
+                            <li>
 
-                            <a class="dropdown-item"
-                               href="panels.html">
+                                <a class="dropdown-item" href="panels.html">
 
-                                Panels
+                                    Panels
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
 
-                        <li>
+                            <li>
 
-                            <a class="dropdown-item"
-                               href="switchgear.html">
+                                <a class="dropdown-item" href="switchgear.html">
 
-                                Switchgear
+                                    Switchgear
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
 
-                        <li>
+                            <li>
 
-                            <a class="dropdown-item"
-                               href="controllers.html">
+                                <a class="dropdown-item" href="controllers.html">
 
-                                Controllers
+                                    Controllers
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
 
-                        <li>
+                            <li>
 
-                            <a class="dropdown-item"
-                               href="accessories.html">
+                                <a class="dropdown-item" href="accessories.html">
 
-                                Accessories
+                                    Accessories
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
-                    </ul>
+                        </ul>
 
-                </li>
+                    </li>
 
 
-                <!-- CONTACT -->
+                    <!-- CONTACT -->
 
-                <li class="nav-item">
+                    <li class="nav-item">
 
-                    <a class="nav-link"
-                       href="index.html#contact">
+                        <a class="nav-link" href="index.html#contact">
 
-                        Contact
+                            Contact
 
-                    </a>
+                        </a>
 
-                </li>
+                    </li>
 
 
-            </ul>
+                </ul>
+
+            </div>
 
         </div>
 
-    </div>
-
-</nav>
+    </nav>
 
 
 
-<!-- =========================================================
+    <!-- =========================================================
      HERO
 ========================================================= -->
 
-<section class="wind-hero">
+    <section class="wind-hero">
 
-    <div class="wind-hero-content">
+        <div class="wind-hero-content">
 
-        <span class="hero-label">
-            Renewable Energy
-        </span>
-
-
-        <h1>
-
-            Energy in
-            <br>
-
-            <span>every movement.</span>
-
-        </h1>
+            <span class="hero-label">
+                Renewable Energy
+            </span>
 
 
-        <p class="hero-text">
+            <h1>
 
-            Alpha Numeric delivers intelligent wind energy
-            solutions that transform naturally available
-            wind resources into dependable, scalable and
-            sustainable power for the future.
+                Energy in
+                <br>
 
-        </p>
+                <span>every movement.</span>
 
-
-        <div class="hero-buttons">
-
-            <a href="#wind-solutions"
-               class="hero-button">
-
-                EXPLORE WIND SOLUTIONS
-
-                <i class="fa-solid fa-arrow-down"></i>
-
-            </a>
+            </h1>
 
 
-            <a href="index.html#contact"
-               class="hero-button-outline">
+            <p class="hero-text">
 
-                DISCUSS YOUR PROJECT
+                Alpha Numeric delivers intelligent wind energy
+                solutions that transform naturally available
+                wind resources into dependable, scalable and
+                sustainable power for the future.
 
-                <i class="fa-solid fa-arrow-right"></i>
+            </p>
 
-            </a>
+
+            <div class="hero-buttons">
+
+                <a href="#wind-solutions" class="hero-button">
+
+                    EXPLORE WIND SOLUTIONS
+
+                    <i class="fa-solid fa-arrow-down"></i>
+
+                </a>
+
+
+                <a href="index.html#contact" class="hero-button-outline">
+
+                    DISCUSS YOUR PROJECT
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
 
-<!-- =========================================================
-     INTRODUCTION
-========================================================= -->
 
-<section class="wind-intro"
-         id="wind-solutions">
+<!-- wind inro start -->
 
-    <div class="section-container">
+    <section class="premium-wind-intro" id="wind-solutions">
 
-        <div class="row align-items-center">
+        <!-- Decorative Wind Lines -->
+        <div class="wind-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
+        <div class="wind-intro-container">
 
-            <div class="col-lg-6">
+            <!-- =====================================================
+             LEFT CONTENT
+        ====================================================== -->
 
-                <span class="section-tag">
-                    Wind Energy
-                </span>
+            <div class="wind-intro-content reveal">
 
+                <div class="wind-eyebrow">
+                    <span class="eyebrow-line"></span>
+                    <span>01 / WIND ENERGY</span>
+                </div>
 
-                <h2 class="section-title">
-
+                <h2 class="wind-main-title">
                     Capture the wind.
                     <br>
-
                     <span>Engineer the future.</span>
-
                 </h2>
 
-
-                <p class="section-text">
-
-                    Wind energy converts the natural movement
-                    of air into clean electrical power,
-                    providing a dependable renewable energy
-                    resource for large-scale and distributed
-                    applications.
-
+                <p class="wind-lead">
+                    Turning natural wind resources into intelligent,
+                    dependable and scalable energy infrastructure.
                 </p>
 
+                <div class="wind-divider"></div>
 
-                <p class="section-text mt-3">
-
-                    Alpha Numeric brings together electrical
-                    engineering, renewable energy systems,
-                    automation and intelligent monitoring to
-                    create wind energy solutions focused on
-                    performance, reliability and long-term
-                    operational value.
-
+                <p class="wind-description">
+                    Wind energy transforms the natural movement of air
+                    into clean electrical power. Alpha Numeric combines
+                    electrical engineering, renewable energy systems,
+                    automation and intelligent monitoring to develop
+                    wind energy solutions engineered for performance,
+                    reliability and long-term operational value.
                 </p>
 
+                <div class="wind-bottom-row">
 
-                <div class="intro-highlight">
-
-                    Harnessing natural wind resources through
-                    intelligent engineering and connected
-                    energy infrastructure.
-
-                </div>
-
-            </div>
-
-
-            <div class="col-lg-6">
-
-                <div class="row g-3">
-
-
-                    <div class="col-6">
-
-                        <div class="wind-stat">
-
-                            <i class="fa-solid fa-wind"></i>
-
-                            <h3>
-                                Natural Resource
-                            </h3>
-
-                            <p>
-
-                                Utilize naturally occurring
-                                wind resources to generate
-                                renewable electrical power.
-
-                            </p>
-
+                    <div class="wind-highlight">
+                        <div class="highlight-icon">
+                            <i class="fa-solid fa-arrow-right"></i>
                         </div>
 
-                    </div>
-
-
-                    <div class="col-6">
-
-                        <div class="wind-stat">
-
-                            <i class="fa-solid fa-bolt"></i>
-
-                            <h3>
-                                Clean Generation
-                            </h3>
-
-                            <p>
-
-                                Produce electricity without
-                                direct fuel combustion during
-                                normal operation.
-
-                            </p>
-
+                        <div>
+                            <span>ENGINEERED FOR</span>
+                            <strong>LONG-TERM PERFORMANCE</strong>
                         </div>
-
                     </div>
 
-
-                    <div class="col-6">
-
-                        <div class="wind-stat">
-
-                            <i class="fa-solid fa-chart-line"></i>
-
-                            <h3>
-                                Performance
-                            </h3>
-
-                            <p>
-
-                                Intelligent monitoring helps
-                                track generation and system
-                                performance.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-6">
-
-                        <div class="wind-stat">
-
-                            <i class="fa-solid fa-earth-americas"></i>
-
-                            <h3>
-                                Sustainability
-                            </h3>
-
-                            <p>
-
-                                Support cleaner energy
-                                infrastructure and long-term
-                                renewable generation.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     WIND SOLUTIONS
-========================================================= -->
-
-<section class="solutions-section">
-
-    <div class="section-container">
-
-
-        <div class="row mb-5">
-
-            <div class="col-lg-7">
-
-                <span class="section-tag">
-                    Our Wind Solutions
-                </span>
-
-
-                <h2 class="section-title">
-
-                    Built around the
-                    <span>power of motion.</span>
-
-                </h2>
-
-            </div>
-
-
-            <div class="col-lg-5">
-
-                <p class="section-text">
-
-                    From wind resource assessment and system
-                    planning to electrical integration,
-                    monitoring and commissioning, our approach
-                    connects renewable generation with
-                    intelligent infrastructure.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="row g-4">
-
-
-            <!-- 01 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="solution-card">
-
-                    <div class="solution-number">
+                    <div class="wind-number">
                         01
                     </div>
 
+                </div>
 
-                    <div class="solution-icon">
+            </div>
 
-                        <i class="fa-solid fa-wind"></i>
+
+            <!-- =====================================================
+             RIGHT CAPABILITIES
+        ====================================================== -->
+
+            <div class="wind-capabilities">
+
+                <div class="capability-heading reveal">
+                    <span>CORE PRINCIPLES</span>
+                    <div></div>
+                </div>
+
+
+                <!-- Card 01 -->
+
+                <div class="wind-card reveal">
+
+                    <div class="wind-card-top">
+
+                        <span class="wind-card-number">
+                            01
+                        </span>
+
+                        <div class="wind-card-icon">
+                            <i class="fa-solid fa-wind"></i>
+                        </div>
 
                     </div>
 
+                    <h3>
+                        Natural Resource
+                    </h3>
+
+                    <p>
+                        Utilising naturally occurring wind resources
+                        to generate renewable electrical power.
+                    </p>
+
+                    <div class="card-arrow">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </div>
+
+
+                <!-- Card 02 -->
+
+                <div class="wind-card reveal">
+
+                    <div class="wind-card-top">
+
+                        <span class="wind-card-number">
+                            02
+                        </span>
+
+                        <div class="wind-card-icon">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+
+                    </div>
 
                     <h3>
-                        Wind Power Systems
+                        Clean Generation
+                    </h3>
+
+                    <p>
+                        Producing electricity without direct fuel
+                        combustion during normal operation.
+                    </p>
+
+                    <div class="card-arrow">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </div>
+
+
+                <!-- Card 03 -->
+
+                <div class="wind-card reveal">
+
+                    <div class="wind-card-top">
+
+                        <span class="wind-card-number">
+                            03
+                        </span>
+
+                        <div class="wind-card-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                    </div>
+
+                    <h3>
+                        Intelligent Performance
+                    </h3>
+
+                    <p>
+                        Intelligent monitoring helps track generation,
+                        efficiency and overall system performance.
+                    </p>
+
+                    <div class="card-arrow">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </div>
+
+
+                <!-- Card 04 -->
+
+                <div class="wind-card reveal">
+
+                    <div class="wind-card-top">
+
+                        <span class="wind-card-number">
+                            04
+                        </span>
+
+                        <div class="wind-card-icon">
+                            <i class="fa-solid fa-earth-americas"></i>
+                        </div>
+
+                    </div>
+
+                    <h3>
+                        Sustainable Infrastructure
+                    </h3>
+
+                    <p>
+                        Supporting cleaner energy infrastructure and
+                        long-term renewable generation.
+                    </p>
+
+                    <div class="card-arrow">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <style>
+        /* =========================================================
+   PREMIUM WIND INTRO
+========================================================= */
+
+        .premium-wind-intro {
+
+            position: relative;
+
+            padding: 130px 8%;
+
+            background: #ffffff;
+
+            overflow: hidden;
+
+            isolation: isolate;
+        }
+
+
+        /* =========================================================
+   BACKGROUND WIND LINES
+========================================================= */
+
+        .wind-lines {
+
+            position: absolute;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            z-index: -1;
+
+            overflow: hidden;
+        }
+
+
+        .wind-lines span {
+
+            position: absolute;
+
+            width: 520px;
+
+            height: 160px;
+
+            border-top: 1px solid rgba(0, 0, 0, .055);
+
+            border-radius: 50%;
+
+            transform: rotate(-18deg);
+
+            animation: windFlow 9s ease-in-out infinite;
+        }
+
+
+        .wind-lines span:nth-child(1) {
+
+            top: 15%;
+
+            right: -100px;
+
+        }
+
+
+        .wind-lines span:nth-child(2) {
+
+            top: 45%;
+
+            right: -170px;
+
+            width: 650px;
+
+            animation-delay: 2s;
+
+        }
+
+
+        .wind-lines span:nth-child(3) {
+
+            bottom: 5%;
+
+            left: -200px;
+
+            width: 700px;
+
+            animation-delay: 4s;
+
+        }
+
+
+        @keyframes windFlow {
+
+            0%,
+            100% {
+
+                transform:
+                    translateX(0) rotate(-18deg);
+
+            }
+
+            50% {
+
+                transform:
+                    translateX(45px) rotate(-18deg);
+
+            }
+
+        }
+
+
+        /* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+        .wind-intro-container {
+
+            max-width: 1450px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1.05fr .95fr;
+
+            gap: 100px;
+
+            align-items: center;
+
+        }
+
+
+        /* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+        .wind-intro-content {
+
+            max-width: 700px;
+
+        }
+
+
+        .wind-eyebrow {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+
+            margin-bottom: 30px;
+
+            font-size: 11px;
+
+            letter-spacing: 3px;
+
+            font-weight: 700;
+
+            color: #555;
+
+        }
+
+
+        .eyebrow-line {
+
+            width: 45px;
+
+            height: 1px;
+
+            background: #111;
+
+        }
+
+
+        .wind-main-title {
+
+            margin: 0;
+
+            font-size: clamp(48px, 5.3vw, 82px);
+
+            line-height: .98;
+
+            letter-spacing: -3px;
+
+            font-weight: 600;
+
+            color: #111;
+
+        }
+
+
+        .wind-main-title span {
+
+            color: #999;
+
+        }
+
+
+        .wind-lead {
+
+            max-width: 600px;
+
+            margin-top: 35px;
+
+            font-size: 21px;
+
+            line-height: 1.65;
+
+            color: #333;
+
+            font-weight: 400;
+
+        }
+
+
+        .wind-divider {
+
+            width: 100%;
+
+            height: 1px;
+
+            background: #e7e7e7;
+
+            margin: 35px 0;
+
+        }
+
+
+        .wind-description {
+
+            max-width: 620px;
+
+            color: #777;
+
+            font-size: 15px;
+
+            line-height: 1.9;
+
+            margin: 0;
+
+        }
+
+
+        /* =========================================================
+   BOTTOM ROW
+========================================================= */
+
+        .wind-bottom-row {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            margin-top: 50px;
+
+        }
+
+
+        .wind-highlight {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 16px;
+
+        }
+
+
+        .highlight-icon {
+
+            width: 48px;
+
+            height: 48px;
+
+            border: 1px solid #111;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            transition: .4s ease;
+
+        }
+
+
+        .wind-highlight:hover .highlight-icon {
+
+            background: #111;
+
+            color: #fff;
+
+            transform: rotate(45deg);
+
+        }
+
+
+        .wind-highlight span {
+
+            display: block;
+
+            font-size: 9px;
+
+            letter-spacing: 2px;
+
+            color: #999;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .wind-highlight strong {
+
+            display: block;
+
+            font-size: 11px;
+
+            letter-spacing: 1.5px;
+
+            color: #222;
+
+        }
+
+
+        .wind-number {
+
+            font-size: 100px;
+
+            line-height: 1;
+
+            font-weight: 700;
+
+            color: rgba(0, 0, 0, .045);
+
+            letter-spacing: -6px;
+
+        }
+
+
+        /* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+        .wind-capabilities {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 14px;
+
+        }
+
+
+        .capability-heading {
+
+            grid-column: 1 / -1;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .capability-heading span {
+
+            font-size: 10px;
+
+            letter-spacing: 2.5px;
+
+            font-weight: 700;
+
+            color: #999;
+
+        }
+
+
+        .capability-heading div {
+
+            height: 1px;
+
+            flex: 1;
+
+            background: #e5e5e5;
+
+        }
+
+
+        /* =========================================================
+   WIND CARDS
+========================================================= */
+
+        .wind-card {
+
+            position: relative;
+
+            min-height: 265px;
+
+            padding: 30px;
+
+            background: #f6f6f6;
+
+            overflow: hidden;
+
+            transition:
+                transform .45s cubic-bezier(.2, .8, .2, 1),
+                background .45s ease,
+                box-shadow .45s ease;
+
+        }
+
+
+        .wind-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            width: 0;
+
+            height: 2px;
+
+            background: #111;
+
+            transition: width .45s ease;
+
+        }
+
+
+        .wind-card::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 130px;
+
+            height: 130px;
+
+            right: -60px;
+
+            bottom: -65px;
+
+            border: 1px solid rgba(0, 0, 0, .08);
+
+            border-radius: 50%;
+
+            transition: .5s ease;
+
+        }
+
+
+        .wind-card:hover {
+
+            transform: translateY(-8px);
+
+            background: #eeeeee;
+
+            box-shadow: 0 18px 40px rgba(0, 0, 0, .08);
+
+        }
+
+
+        .wind-card:hover::before {
+
+            width: 100%;
+
+        }
+
+
+        .wind-card:hover::after {
+
+            transform: scale(1.3);
+
+        }
+
+
+        .wind-card-top {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            justify-content: space-between;
+
+        }
+
+
+        .wind-card-number {
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            color: #999;
+
+            font-weight: 600;
+
+        }
+
+
+        .wind-card-icon {
+
+            width: 45px;
+
+            height: 45px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border: 1px solid #d8d8d8;
+
+            border-radius: 50%;
+
+            font-size: 16px;
+
+            transition: .4s ease;
+
+        }
+
+
+        .wind-card:hover .wind-card-icon {
+
+            background: #111;
+
+            border-color: #111;
+
+            color: #fff;
+
+            transform: rotate(-8deg);
+
+        }
+
+
+        .wind-card h3 {
+
+            position: relative;
+
+            z-index: 2;
+
+            margin-top: 45px;
+
+            margin-bottom: 13px;
+
+            font-size: 20px;
+
+            line-height: 1.2;
+
+            font-weight: 600;
+
+            color: #171717;
+
+        }
+
+
+        .wind-card p {
+
+            position: relative;
+
+            z-index: 2;
+
+            margin: 0;
+
+            max-width: 240px;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+            color: #777;
+
+        }
+
+
+        .card-arrow {
+
+            position: absolute;
+
+            left: 30px;
+
+            bottom: 25px;
+
+            font-size: 11px;
+
+            color: #999;
+
+            transition: .4s ease;
+
+        }
+
+
+        .wind-card:hover .card-arrow {
+
+            color: #111;
+
+            transform:
+                translate(5px, -5px);
+
+        }
+
+
+        /* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+        .reveal {
+
+            opacity: 0;
+
+            transform:
+                translateY(35px);
+
+            transition:
+                opacity .9s ease,
+                transform .9s cubic-bezier(.2, .8, .2, 1);
+
+        }
+
+
+        .reveal.active {
+
+            opacity: 1;
+
+            transform:
+                translateY(0);
+
+        }
+
+
+        /* =========================================================
+   STAGGER DELAYS
+========================================================= */
+
+        .wind-capabilities .wind-card:nth-child(2) {
+
+            transition-delay: .1s;
+
+        }
+
+
+        .wind-capabilities .wind-card:nth-child(3) {
+
+            transition-delay: .2s;
+
+        }
+
+
+        .wind-capabilities .wind-card:nth-child(4) {
+
+            transition-delay: .3s;
+
+        }
+
+
+        .wind-capabilities .wind-card:nth-child(5) {
+
+            transition-delay: .4s;
+
+        }
+
+
+        /* =========================================================
+   TABLET
+========================================================= */
+
+        @media (max-width: 1100px) {
+
+            .premium-wind-intro {
+
+                padding: 100px 6%;
+
+            }
+
+
+            .wind-intro-container {
+
+                grid-template-columns: 1fr;
+
+                gap: 70px;
+
+            }
+
+
+            .wind-intro-content {
+
+                max-width: 850px;
+
+            }
+
+
+            .wind-main-title {
+
+                font-size: clamp(50px, 8vw, 76px);
+
+            }
+
+        }
+
+
+        /* =========================================================
+   MOBILE
+========================================================= */
+
+        @media (max-width: 650px) {
+
+            .premium-wind-intro {
+
+                padding: 80px 6%;
+
+            }
+
+
+            .wind-main-title {
+
+                font-size: 48px;
+
+                letter-spacing: -2px;
+
+            }
+
+
+            .wind-lead {
+
+                font-size: 17px;
+
+                margin-top: 25px;
+
+            }
+
+
+            .wind-description {
+
+                font-size: 14px;
+
+            }
+
+
+            .wind-capabilities {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .wind-card {
+
+                min-height: 235px;
+
+            }
+
+
+            .wind-bottom-row {
+
+                margin-top: 35px;
+
+            }
+
+
+            .wind-number {
+
+                font-size: 65px;
+
+            }
+
+
+            .wind-highlight strong {
+
+                font-size: 9px;
+
+            }
+
+        }
+    </style>
+    <script>
+
+        /* =========================================================
+           WIND SECTION REVEAL ANIMATION
+        ========================================================= */
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const revealElements =
+                document.querySelectorAll(
+                    "#wind-solutions .reveal"
+                );
+
+
+            const revealObserver =
+                new IntersectionObserver(
+
+                    function (entries) {
+
+                        entries.forEach(function (entry) {
+
+                            if (entry.isIntersecting) {
+
+                                entry.target.classList.add("active");
+
+                            }
+
+                        });
+
+                    },
+
+                    {
+                        threshold: 0.15
+                    }
+
+                );
+
+
+            revealElements.forEach(function (element) {
+
+                revealObserver.observe(element);
+
+            });
+
+        });
+
+    </script>
+
+    <!-- wind intro end -->
+
+
+
+
+<!-- =========================================================
+     PREMIUM DYNAMIC WIND SOLUTIONS
+     AUTO SLIDER + HOVER INTERACTION + IMAGE TRANSITIONS
+========================================================= -->
+
+<section class="dynamic-wind-solutions" id="wind-solutions-grid">
+
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
+
+    <div class="dws-grid-background"></div>
+
+    <div class="dws-orbit dws-orbit-one"></div>
+    <div class="dws-orbit dws-orbit-two"></div>
+
+
+    <div class="dws-container">
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <div class="dws-header dws-reveal">
+
+            <div class="dws-label">
+
+                <span class="dws-label-line"></span>
+
+                <span>
+                    02 / OUR WIND SOLUTIONS
+                </span>
+
+            </div>
+
+
+            <div class="dws-heading-grid">
+
+                <h2>
+                    Engineered systems.
+                    <br>
+                    <span>One connected ecosystem.</span>
+                </h2>
+
+
+                <p>
+                    From renewable generation and electrical
+                    integration to intelligent monitoring and
+                    project execution, every layer is engineered
+                    to work together as one dependable energy
+                    infrastructure.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             MAIN EXPERIENCE
+        ================================================== -->
+
+        <div class="dws-main dws-reveal">
+
+
+            <!-- =============================================
+                 IMAGE / FEATURE PANEL
+            ============================================== -->
+
+            <div class="dws-visual">
+
+                <!-- Images -->
+                <div class="dws-image-layer active"
+                     data-image="01"
+                     style="background-image:url('assets/img/wind/Wind Power Systems.png');">
+                </div>
+
+                <div class="dws-image-layer"
+                     data-image="02"
+                     style="background-image:url('assets/img/wind/Wind Farm Infrastructure.png');">
+                </div>
+
+                <div class="dws-image-layer"
+                     data-image="03"
+                     style="background-image:url('assets/img/wind/Grid Integration.png');">
+                </div>
+
+                <div class="dws-image-layer"
+                     data-image="04"
+                     style="background-image:url('assets/img/wind/Smart Monitoring.png');">
+                </div>
+
+                <div class="dws-image-layer"
+                     data-image="05"
+                     style="background-image:url('assets/img/wind/Electrical Systems.png');">
+                </div>
+
+                <div class="dws-image-layer"
+                     data-image="06"
+                     style="background-image:url('assets/img/wind/EPC Execution.png');">
+                </div>
+
+
+                <!-- Dark cinematic overlay -->
+
+                <div class="dws-image-overlay"></div>
+
+
+                <!-- Image noise / technical overlay -->
+
+                <div class="dws-tech-grid"></div>
+
+
+                <!-- Top information -->
+
+                <div class="dws-visual-top">
+
+                    <span>
+                        ALPHA NUMERIC / WIND ENERGY
+                    </span>
+
+                    <span class="dws-live">
+
+                        <i></i>
+
+                        LIVE SYSTEM
+
+                    </span>
+
+                </div>
+
+
+                <!-- Giant number -->
+
+                <div class="dws-big-number">
+                    01
+                </div>
+
+
+                <!-- Main feature content -->
+
+                <div class="dws-feature-content">
+
+                    <span class="dws-feature-category">
+                        RENEWABLE GENERATION
+                    </span>
+
+
+                    <h3 class="dws-feature-title">
+                        Wind Power
+                        <br>
+                        Systems
                     </h3>
 
 
-                    <p>
+                    <p class="dws-feature-description">
 
                         Engineered wind energy systems designed
                         to convert available wind resources into
@@ -2680,191 +3156,305 @@
 
                 </div>
 
+
+                <!-- Bottom image information -->
+
+                <div class="dws-visual-bottom">
+
+                    <span class="dws-slide-counter">
+                        01 / 06
+                    </span>
+
+
+                    <div class="dws-progress">
+
+                        <span></span>
+
+                    </div>
+
+
+                    <div class="dws-scroll-indicator">
+
+                        <span>
+                            EXPLORE
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </div>
+
+                </div>
+
             </div>
 
 
-            <!-- 02 -->
 
-            <div class="col-lg-4 col-md-6">
+            <!-- =============================================
+                 SOLUTION NAVIGATION
+            ============================================== -->
 
-                <div class="solution-card">
+            <div class="dws-list">
 
-                    <div class="solution-number">
+
+                <!-- 01 -->
+
+                <div class="dws-item active"
+                     data-solution="01">
+
+                    <div class="dws-item-number">
+                        01
+                    </div>
+
+                    <div class="dws-item-content">
+
+                        <span>
+                            GENERATION
+                        </span>
+
+                        <h3>
+                            Wind Power Systems
+                        </h3>
+
+                        <p>
+                            Reliable renewable generation systems.
+                        </p>
+
+                    </div>
+
+                    <div class="dws-item-arrow">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </div>
+
+                    <div class="dws-item-progress"></div>
+
+                </div>
+
+
+
+                <!-- 02 -->
+
+                <div class="dws-item"
+                     data-solution="02">
+
+                    <div class="dws-item-number">
                         02
                     </div>
 
+                    <div class="dws-item-content">
 
-                    <div class="solution-icon">
+                        <span>
+                            INFRASTRUCTURE
+                        </span>
 
-                        <i class="fa-solid fa-tower-observation"></i>
+                        <h3>
+                            Wind Farm Infrastructure
+                        </h3>
+
+                        <p>
+                            Infrastructure for large renewable
+                            developments.
+                        </p>
 
                     </div>
 
+                    <div class="dws-item-arrow">
 
-                    <h3>
-                        Wind Farm Infrastructure
-                    </h3>
+                        <i class="fa-solid fa-arrow-right"></i>
 
+                    </div>
 
-                    <p>
-
-                        Electrical and infrastructure solutions
-                        supporting multiple wind generation
-                        assets and large renewable energy
-                        developments.
-
-                    </p>
+                    <div class="dws-item-progress"></div>
 
                 </div>
 
-            </div>
 
 
-            <!-- 03 -->
+                <!-- 03 -->
 
-            <div class="col-lg-4 col-md-6">
+                <div class="dws-item"
+                     data-solution="03">
 
-                <div class="solution-card">
-
-                    <div class="solution-number">
+                    <div class="dws-item-number">
                         03
                     </div>
 
+                    <div class="dws-item-content">
 
-                    <div class="solution-icon">
+                        <span>
+                            POWER NETWORK
+                        </span>
 
-                        <i class="fa-solid fa-network-wired"></i>
+                        <h3>
+                            Grid Integration
+                        </h3>
+
+                        <p>
+                            Connecting renewable generation with
+                            power infrastructure.
+                        </p>
 
                     </div>
 
+                    <div class="dws-item-arrow">
 
-                    <h3>
-                        Grid Integration
-                    </h3>
+                        <i class="fa-solid fa-arrow-right"></i>
 
+                    </div>
 
-                    <p>
-
-                        Electrical integration solutions
-                        designed to connect renewable generation
-                        with suitable power infrastructure and
-                        distribution systems.
-
-                    </p>
+                    <div class="dws-item-progress"></div>
 
                 </div>
 
-            </div>
 
 
-            <!-- 04 -->
+                <!-- 04 -->
 
-            <div class="col-lg-4 col-md-6">
+                <div class="dws-item"
+                     data-solution="04">
 
-                <div class="solution-card">
-
-                    <div class="solution-number">
+                    <div class="dws-item-number">
                         04
                     </div>
 
+                    <div class="dws-item-content">
 
-                    <div class="solution-icon">
+                        <span>
+                            DIGITAL CONTROL
+                        </span>
 
-                        <i class="fa-solid fa-microchip"></i>
+                        <h3>
+                            Smart Monitoring
+                        </h3>
+
+                        <p>
+                            Connected monitoring for system
+                            performance.
+                        </p>
 
                     </div>
 
+                    <div class="dws-item-arrow">
 
-                    <h3>
-                        Smart Monitoring
-                    </h3>
+                        <i class="fa-solid fa-arrow-right"></i>
 
+                    </div>
 
-                    <p>
-
-                        Connected monitoring solutions for
-                        observing generation, equipment status,
-                        energy flow and operational performance.
-
-                    </p>
+                    <div class="dws-item-progress"></div>
 
                 </div>
 
-            </div>
 
 
-            <!-- 05 -->
+                <!-- 05 -->
 
-            <div class="col-lg-4 col-md-6">
+                <div class="dws-item"
+                     data-solution="05">
 
-                <div class="solution-card">
-
-                    <div class="solution-number">
+                    <div class="dws-item-number">
                         05
                     </div>
 
+                    <div class="dws-item-content">
 
-                    <div class="solution-icon">
+                        <span>
+                            ELECTRICAL
+                        </span>
 
-                        <i class="fa-solid fa-gears"></i>
+                        <h3>
+                            Electrical Systems
+                        </h3>
+
+                        <p>
+                            Panels, protection, control and energy
+                            management systems.
+                        </p>
 
                     </div>
 
+                    <div class="dws-item-arrow">
 
-                    <h3>
-                        Electrical Systems
-                    </h3>
+                        <i class="fa-solid fa-arrow-right"></i>
 
+                    </div>
 
-                    <p>
-
-                        Supporting electrical infrastructure
-                        including panels, protection systems,
-                        control systems and energy management
-                        interfaces.
-
-                    </p>
+                    <div class="dws-item-progress"></div>
 
                 </div>
 
-            </div>
 
 
-            <!-- 06 -->
+                <!-- 06 -->
 
-            <div class="col-lg-4 col-md-6">
+                <div class="dws-item"
+                     data-solution="06">
 
-                <div class="solution-card">
-
-                    <div class="solution-number">
+                    <div class="dws-item-number">
                         06
                     </div>
 
+                    <div class="dws-item-content">
 
-                    <div class="solution-icon">
+                        <span>
+                            PROJECT DELIVERY
+                        </span>
 
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <h3>
+                            EPC Execution
+                        </h3>
+
+                        <p>
+                            Engineering through installation and
+                            commissioning.
+                        </p>
 
                     </div>
 
+                    <div class="dws-item-arrow">
 
-                    <h3>
-                        EPC Execution
-                    </h3>
+                        <i class="fa-solid fa-arrow-right"></i>
 
+                    </div>
 
-                    <p>
-
-                        Integrated engineering, procurement,
-                        installation, testing and commissioning
-                        support for renewable energy projects.
-
-                    </p>
+                    <div class="dws-item-progress"></div>
 
                 </div>
 
+
             </div>
 
+        </div>
+
+
+
+        <!-- =================================================
+             BOTTOM STATEMENT
+        ================================================== -->
+
+        <div class="dws-bottom dws-reveal">
+
+            <div class="dws-bottom-index">
+                06
+            </div>
+
+            <div class="dws-bottom-line"></div>
+
+            <div class="dws-bottom-text">
+
+                <span>
+                    COMPLETE ENERGY ECOSYSTEM
+                </span>
+
+                <strong>
+                    From wind resource to connected power.
+                </strong>
+
+            </div>
+
+            <div class="dws-bottom-mark">
+                <i class="fa-solid fa-arrow-down"></i>
+            </div>
 
         </div>
 
@@ -2874,398 +3464,3608 @@
 
 
 
+<style>
+
+/* =========================================================
+   DYNAMIC WIND SOLUTIONS
+========================================================= */
+
+.dynamic-wind-solutions {
+
+    position: relative;
+
+    padding: 145px 8%;
+
+    background: #f3f3f1;
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
+.dws-grid-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -3;
+
+    opacity: .45;
+
+    background-image:
+
+        linear-gradient(
+            rgba(0,0,0,.035) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 75px 75px;
+
+}
+
+
+/* =========================================================
+   ORBITS
+========================================================= */
+
+.dws-orbit {
+
+    position: absolute;
+
+    border: 1px solid rgba(0,0,0,.05);
+
+    border-radius: 50%;
+
+    z-index: -2;
+
+    pointer-events: none;
+
+}
+
+
+.dws-orbit-one {
+
+    width: 850px;
+
+    height: 850px;
+
+    right: -500px;
+
+    top: -100px;
+
+}
+
+
+.dws-orbit-two {
+
+    width: 500px;
+
+    height: 500px;
+
+    left: -320px;
+
+    bottom: -250px;
+
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.dws-container {
+
+    max-width: 1500px;
+
+    margin: auto;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.dws-header {
+
+    margin-bottom: 80px;
+
+}
+
+
+.dws-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 30px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #777;
+
+}
+
+
+.dws-label-line {
+
+    width: 48px;
+
+    height: 1px;
+
+    background: #111;
+
+}
+
+
+.dws-heading-grid {
+
+    display: grid;
+
+    grid-template-columns: 1.2fr .8fr;
+
+    gap: 90px;
+
+    align-items: end;
+
+}
+
+
+.dws-heading-grid h2 {
+
+    margin: 0;
+
+    font-size: clamp(50px, 5.6vw, 86px);
+
+    line-height: .95;
+
+    letter-spacing: -4px;
+
+    font-weight: 600;
+
+    color: #111;
+
+}
+
+
+.dws-heading-grid h2 span {
+
+    color: #999;
+
+}
+
+
+.dws-heading-grid p {
+
+    margin: 0;
+
+    max-width: 520px;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color: #777;
+
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.dws-main {
+
+    display: grid;
+
+    grid-template-columns: 1.05fr .95fr;
+
+    min-height: 680px;
+
+    gap: 0;
+
+}
+
+
+/* =========================================================
+   VISUAL PANEL
+========================================================= */
+
+.dws-visual {
+
+    position: relative;
+
+    min-height: 680px;
+
+    overflow: hidden;
+
+    background: #111;
+
+    color: #fff;
+
+}
+
+
+/* =========================================================
+   IMAGE LAYERS
+========================================================= */
+
+.dws-image-layer {
+
+    position: absolute;
+
+    inset: -2%;
+
+    background-size: cover;
+
+    background-position: center;
+
+    opacity: 0;
+
+    transform: scale(1.08);
+
+    transition:
+
+        opacity 1s ease,
+
+        transform 6s cubic-bezier(.2,.7,.2,1);
+
+}
+
+
+.dws-image-layer.active {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.dws-image-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.48) 0%,
+            rgba(0,0,0,.05) 45%,
+            rgba(0,0,0,.78) 100%
+        );
+
+    z-index: 2;
+
+}
+
+
+/* =========================================================
+   TECHNICAL GRID
+========================================================= */
+
+.dws-tech-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 3;
+
+    opacity: .12;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,.5) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.5) 1px,
+            transparent 1px
+        );
+
+    background-size: 80px 80px;
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+   VISUAL TOP
+========================================================= */
+
+.dws-visual-top {
+
+    position: absolute;
+
+    z-index: 5;
+
+    top: 32px;
+
+    left: 35px;
+
+    right: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.dws-visual-top > span {
+
+    font-size: 8px;
+
+    letter-spacing: 2.5px;
+
+    color: rgba(255,255,255,.75);
+
+}
+
+
+.dws-live {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+.dws-live i {
+
+    width: 6px;
+
+    height: 6px;
+
+    background: #fff;
+
+    border-radius: 50%;
+
+    animation: dwsPulse 1.8s infinite;
+
+}
+
+
+@keyframes dwsPulse {
+
+    0%,
+    100% {
+
+        opacity: .25;
+
+        transform: scale(.8);
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+/* =========================================================
+   BIG NUMBER
+========================================================= */
+
+.dws-big-number {
+
+    position: absolute;
+
+    z-index: 4;
+
+    right: 25px;
+
+    top: 45px;
+
+    font-size: 180px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: -14px;
+
+    color: rgba(255,255,255,.10);
+
+    transition: opacity .4s ease;
+
+}
+
+
+/* =========================================================
+   FEATURE CONTENT
+========================================================= */
+
+.dws-feature-content {
+
+    position: absolute;
+
+    z-index: 6;
+
+    left: 45px;
+
+    right: 45px;
+
+    bottom: 105px;
+
+    transition:
+
+        opacity .35s ease,
+
+        transform .45s cubic-bezier(.2,.8,.2,1);
+
+}
+
+
+.dws-feature-category {
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: rgba(255,255,255,.65);
+
+}
+
+
+.dws-feature-title {
+
+    margin: 0 0 25px;
+
+    font-size: clamp(45px, 4.5vw, 70px);
+
+    line-height: .92;
+
+    letter-spacing: -3px;
+
+    font-weight: 500;
+
+    color: #fff;
+
+}
+
+
+.dws-feature-description {
+
+    max-width: 500px;
+
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: rgba(255,255,255,.68);
+
+}
+
+
+/* =========================================================
+   VISUAL BOTTOM
+========================================================= */
+
+.dws-visual-bottom {
+
+    position: absolute;
+
+    z-index: 6;
+
+    left: 35px;
+
+    right: 35px;
+
+    bottom: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+
+.dws-slide-counter {
+
+    white-space: nowrap;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: rgba(255,255,255,.65);
+
+}
+
+
+.dws-progress {
+
+    flex: 1;
+
+    height: 1px;
+
+    background: rgba(255,255,255,.25);
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.dws-progress span {
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 16.666%;
+
+    height: 100%;
+
+    background: #fff;
+
+    transition: width .4s ease;
+
+}
+
+
+.dws-scroll-indicator {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.dws-scroll-indicator span {
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: rgba(255,255,255,.65);
+
+}
+
+
+.dws-scroll-indicator i {
+
+    font-size: 9px;
+
+    color: #fff;
+
+}
+
+
+/* =========================================================
+   RIGHT LIST
+========================================================= */
+
+.dws-list {
+
+    background: rgba(255,255,255,.72);
+
+    border-top: 1px solid #ddd;
+
+    border-right: 1px solid #ddd;
+
+    border-bottom: 1px solid #ddd;
+
+}
+
+
+/* =========================================================
+   ITEM
+========================================================= */
+
+.dws-item {
+
+    position: relative;
+
+    height: calc(680px / 6);
+
+    min-height: 105px;
+
+    display: grid;
+
+    grid-template-columns: 48px 1fr 40px;
+
+    gap: 18px;
+
+    align-items: center;
+
+    padding: 20px 30px;
+
+    border-bottom: 1px solid #ddd;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+
+        padding .45s ease,
+
+        background .45s ease;
+
+}
+
+
+.dws-item:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.dws-item::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: #111;
+
+    transform: translateX(-102%);
+
+    transition:
+        transform .55s cubic-bezier(.77,0,.18,1);
+
+    z-index: 0;
+
+}
+
+
+.dws-item:hover::before,
+.dws-item.active::before {
+
+    transform: translateX(0);
+
+}
+
+
+.dws-item:hover,
+.dws-item.active {
+
+    padding-left: 38px;
+
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.dws-item-number {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #aaa;
+
+    transition: .4s ease;
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.dws-item-content {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.dws-item-content span {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: #aaa;
+
+    transition: .4s ease;
+
+}
+
+
+.dws-item-content h3 {
+
+    margin: 0;
+
+    font-size: 18px;
+
+    line-height: 1.2;
+
+    font-weight: 600;
+
+    color: #222;
+
+    transition: .4s ease;
+
+}
+
+
+.dws-item-content p {
+
+    margin: 7px 0 0;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+
+    color: #888;
+
+    transition: .4s ease;
+
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.dws-item-arrow {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 34px;
+
+    height: 34px;
+
+    border: 1px solid #d7d7d7;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #777;
+
+    font-size: 9px;
+
+    transition: .45s ease;
+
+}
+
+
+.dws-item:hover .dws-item-arrow,
+.dws-item.active .dws-item-arrow {
+
+    color: #fff;
+
+    border-color: rgba(255,255,255,.3);
+
+    transform: rotate(-45deg);
+
+}
+
+
+/* =========================================================
+   ACTIVE TEXT
+========================================================= */
+
+.dws-item:hover .dws-item-number,
+.dws-item.active .dws-item-number {
+
+    color: #fff;
+
+}
+
+
+.dws-item:hover .dws-item-content span,
+.dws-item.active .dws-item-content span {
+
+    color: #aaa;
+
+}
+
+
+.dws-item:hover .dws-item-content h3,
+.dws-item.active .dws-item-content h3 {
+
+    color: #fff;
+
+}
+
+
+.dws-item:hover .dws-item-content p,
+.dws-item.active .dws-item-content p {
+
+    color: #999;
+
+}
+
+
+/* =========================================================
+   ITEM PROGRESS
+========================================================= */
+
+.dws-item-progress {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 0;
+
+    height: 2px;
+
+    background: #fff;
+
+    z-index: 5;
+
+}
+
+
+.dws-item.active .dws-item-progress {
+
+    animation:
+        dwsItemProgress 4s linear forwards;
+
+}
+
+
+@keyframes dwsItemProgress {
+
+    from {
+
+        width: 0;
+
+    }
+
+    to {
+
+        width: 100%;
+
+    }
+
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.dws-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    margin-top: 55px;
+
+    padding-top: 28px;
+
+    border-top: 1px solid #d5d5d2;
+
+}
+
+
+.dws-bottom-index {
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #999;
+
+}
+
+
+.dws-bottom-line {
+
+    width: 55px;
+
+    height: 1px;
+
+    background: #111;
+
+}
+
+
+.dws-bottom-text {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.dws-bottom-text span {
+
+    font-size: 8px;
+
+    letter-spacing: 2.5px;
+
+    color: #999;
+
+}
+
+
+.dws-bottom-text strong {
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    color: #222;
+
+}
+
+
+.dws-bottom-mark {
+
+    width: 45px;
+
+    height: 45px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 10px;
+
+    transition: .4s ease;
+
+}
+
+
+.dws-bottom:hover .dws-bottom-mark {
+
+    background: #111;
+
+    color: #fff;
+
+    border-color: #111;
+
+    transform: translateY(5px);
+
+}
+
+
+/* =========================================================
+   REVEAL
+========================================================= */
+
+.dws-reveal {
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+
+        opacity 1s ease,
+
+        transform 1s cubic-bezier(.2,.8,.2,1);
+
+}
+
+
+.dws-reveal.dws-visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .dynamic-wind-solutions {
+
+        padding: 110px 6%;
+
+    }
+
+
+    .dws-heading-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+    }
+
+
+    .dws-main {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .dws-visual {
+
+        min-height: 600px;
+
+    }
+
+
+    .dws-item {
+
+        height: auto;
+
+        min-height: 110px;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .dynamic-wind-solutions {
+
+        padding: 85px 5%;
+
+    }
+
+
+    .dws-header {
+
+        margin-bottom: 55px;
+
+    }
+
+
+    .dws-heading-grid h2 {
+
+        font-size: 47px;
+
+        letter-spacing: -2.5px;
+
+    }
+
+
+    .dws-heading-grid p {
+
+        font-size: 13px;
+
+    }
+
+
+    .dws-visual {
+
+        min-height: 560px;
+
+    }
+
+
+    .dws-visual-top {
+
+        left: 22px;
+
+        right: 22px;
+
+        top: 22px;
+
+    }
+
+
+    .dws-visual-top > span:first-child {
+
+        font-size: 7px;
+
+    }
+
+
+    .dws-big-number {
+
+        right: 15px;
+
+        top: 55px;
+
+        font-size: 120px;
+
+        letter-spacing: -8px;
+
+    }
+
+
+    .dws-feature-content {
+
+        left: 25px;
+
+        right: 25px;
+
+        bottom: 100px;
+
+    }
+
+
+    .dws-feature-title {
+
+        font-size: 44px;
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .dws-feature-description {
+
+        font-size: 12px;
+
+    }
+
+
+    .dws-visual-bottom {
+
+        left: 22px;
+
+        right: 22px;
+
+        bottom: 22px;
+
+        gap: 12px;
+
+    }
+
+
+    .dws-scroll-indicator span {
+
+        display: none;
+
+    }
+
+
+    .dws-item {
+
+        grid-template-columns: 35px 1fr 35px;
+
+        gap: 12px;
+
+        padding: 22px 17px;
+
+    }
+
+
+    .dws-item:hover,
+    .dws-item.active {
+
+        padding-left: 22px;
+
+    }
+
+
+    .dws-item-content h3 {
+
+        font-size: 15px;
+
+    }
+
+
+    .dws-item-content p {
+
+        font-size: 9px;
+
+    }
+
+
+    .dws-bottom {
+
+        gap: 12px;
+
+    }
+
+
+    .dws-bottom-line {
+
+        width: 30px;
+
+    }
+
+
+    .dws-bottom-text strong {
+
+        font-size: 13px;
+
+    }
+
+}
+
+</style>
+
+
+
+<script>
+
+/* =========================================================
+   DYNAMIC WIND SOLUTIONS
+   AUTO ROTATION + HOVER + MOBILE SUPPORT
+========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const section =
+            document.querySelector(
+                "#wind-solutions-grid"
+            );
+
+        if (!section) return;
+
+
+        /* =================================================
+           REVEAL ANIMATION
+        ================================================== */
+
+        const revealElements =
+            section.querySelectorAll(
+                ".dws-reveal"
+            );
+
+
+        const revealObserver =
+            new IntersectionObserver(
+
+                function (entries) {
+
+                    entries.forEach(
+                        function (entry) {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                entry.target.classList.add(
+                                    "dws-visible"
+                                );
+
+                            }
+
+                        }
+                    );
+
+                },
+
+                {
+                    threshold: 0.12
+                }
+
+            );
+
+
+        revealElements.forEach(
+            function (element) {
+
+                revealObserver.observe(
+                    element
+                );
+
+            }
+        );
+
+
+        /* =================================================
+           DATA
+        ================================================== */
+
+        const solutionData = {
+
+            "01": {
+
+                category:
+                    "RENEWABLE GENERATION",
+
+                title:
+                    "Wind Power<br>Systems",
+
+                description:
+                    "Engineered wind energy systems designed to convert available wind resources into reliable electrical power for renewable energy applications.",
+
+                image:
+                    "assets/img/wind-power.jpg"
+
+            },
+
+
+            "02": {
+
+                category:
+                    "INFRASTRUCTURE",
+
+                title:
+                    "Wind Farm<br>Infrastructure",
+
+                description:
+                    "Electrical and infrastructure solutions supporting multiple wind generation assets and large renewable energy developments.",
+
+                image:
+                    "assets/img/wind-farm.jpg"
+
+            },
+
+
+            "03": {
+
+                category:
+                    "POWER NETWORK",
+
+                title:
+                    "Grid<br>Integration",
+
+                description:
+                    "Electrical integration solutions designed to connect renewable generation with suitable power infrastructure and distribution systems.",
+
+                image:
+                    "assets/img/wind-grid.jpg"
+
+            },
+
+
+            "04": {
+
+                category:
+                    "DIGITAL CONTROL",
+
+                title:
+                    "Smart<br>Monitoring",
+
+                description:
+                    "Connected monitoring solutions for observing generation, equipment status, energy flow and operational performance.",
+
+                image:
+                    "assets/img/wind-monitoring.jpg"
+
+            },
+
+
+            "05": {
+
+                category:
+                    "ELECTRICAL",
+
+                title:
+                    "Electrical<br>Systems",
+
+                description:
+                    "Supporting electrical infrastructure including panels, protection systems, control systems and energy management interfaces.",
+
+                image:
+                    "assets/img/wind-electrical.jpg"
+
+            },
+
+
+            "06": {
+
+                category:
+                    "PROJECT DELIVERY",
+
+                title:
+                    "EPC<br>Execution",
+
+                description:
+                    "Integrated engineering, procurement, installation, testing and commissioning support for renewable energy projects.",
+
+                image:
+                    "assets/img/wind-epc.jpg"
+
+            }
+
+        };
+
+
+        /* =================================================
+           ELEMENTS
+        ================================================== */
+
+        const items =
+            section.querySelectorAll(
+                ".dws-item"
+            );
+
+
+        const imageLayers =
+            section.querySelectorAll(
+                ".dws-image-layer"
+            );
+
+
+        const featureContent =
+            section.querySelector(
+                ".dws-feature-content"
+            );
+
+
+        const bigNumber =
+            section.querySelector(
+                ".dws-big-number"
+            );
+
+
+        const category =
+            section.querySelector(
+                ".dws-feature-category"
+            );
+
+
+        const title =
+            section.querySelector(
+                ".dws-feature-title"
+            );
+
+
+        const description =
+            section.querySelector(
+                ".dws-feature-description"
+            );
+
+
+        const counter =
+            section.querySelector(
+                ".dws-slide-counter"
+            );
+
+
+        const progress =
+            section.querySelector(
+                ".dws-progress span"
+            );
+
+
+        /* =================================================
+           STATE
+        ================================================== */
+
+        let currentIndex = 0;
+
+        let autoTimer = null;
+
+        let isHovering = false;
+
+        let isVisible = false;
+
+
+        const totalSlides =
+            Object.keys(solutionData).length;
+
+
+        /* =================================================
+           CHANGE SLIDE
+        ================================================== */
+
+        function changeSolution(
+            index,
+            userTriggered = false
+        ) {
+
+            if (
+                index < 0 ||
+                index >= totalSlides
+            ) {
+                return;
+            }
+
+
+            currentIndex = index;
+
+
+            const key =
+                String(index + 1)
+                    .padStart(2, "0");
+
+
+            const data =
+                solutionData[key];
+
+
+            if (!data) return;
+
+
+            /* ---------------------------------------------
+               Active navigation
+            --------------------------------------------- */
+
+            items.forEach(
+                function (item) {
+
+                    item.classList.remove(
+                        "active"
+                    );
+
+                }
+            );
+
+
+            const activeItem =
+                section.querySelector(
+                    `.dws-item[data-solution="${key}"]`
+                );
+
+
+            if (activeItem) {
+
+                activeItem.classList.add(
+                    "active"
+                );
+
+            }
+
+
+            /* ---------------------------------------------
+               Image
+            --------------------------------------------- */
+
+            imageLayers.forEach(
+                function (layer) {
+
+                    layer.classList.remove(
+                        "active"
+                    );
+
+                }
+            );
+
+
+            const activeImage =
+                section.querySelector(
+                    `.dws-image-layer[data-image="${key}"]`
+                );
+
+
+            if (activeImage) {
+
+                activeImage.classList.add(
+                    "active"
+                );
+
+            }
+
+
+            /* ---------------------------------------------
+               Content fade
+            --------------------------------------------- */
+
+            featureContent.style.opacity =
+                "0";
+
+            featureContent.style.transform =
+                "translateY(12px)";
+
+
+            bigNumber.style.opacity =
+                "0";
+
+
+            setTimeout(
+                function () {
+
+                    category.textContent =
+                        data.category;
+
+
+                    title.innerHTML =
+                        data.title;
+
+
+                    description.textContent =
+                        data.description;
+
+
+                    bigNumber.textContent =
+                        key;
+
+
+                    counter.textContent =
+                        key + " / 06";
+
+
+                    const percentage =
+                        ((index + 1) /
+                            totalSlides) *
+                        100;
+
+
+                    progress.style.width =
+                        percentage + "%";
+
+
+                    featureContent.style.opacity =
+                        "1";
+
+                    featureContent.style.transform =
+                        "translateY(0)";
+
+
+                    bigNumber.style.opacity =
+                        "1";
+
+                },
+                userTriggered ? 180 : 100
+            );
+
+        }
+
+
+        /* =================================================
+           NEXT SLIDE
+        ================================================== */
+
+        function nextSolution() {
+
+            const next =
+                (currentIndex + 1) %
+                totalSlides;
+
+
+            changeSolution(next);
+
+        }
+
+
+        /* =================================================
+           AUTO ROTATION
+        ================================================== */
+
+        function startAutoRotation() {
+
+            stopAutoRotation();
+
+
+            autoTimer =
+                setInterval(
+                    function () {
+
+                        if (
+                            !isHovering &&
+                            isVisible
+                        ) {
+
+                            nextSolution();
+
+                        }
+
+                    },
+                    4000
+                );
+
+        }
+
+
+        function stopAutoRotation() {
+
+            if (autoTimer) {
+
+                clearInterval(
+                    autoTimer
+                );
+
+                autoTimer = null;
+
+            }
+
+        }
+
+
+        /* =================================================
+           HOVER
+        ================================================== */
+
+        items.forEach(
+            function (item, index) {
+
+                item.addEventListener(
+                    "mouseenter",
+                    function () {
+
+                        isHovering = true;
+
+                        changeSolution(
+                            index,
+                            true
+                        );
+
+                    }
+                );
+
+
+                item.addEventListener(
+                    "mouseleave",
+                    function () {
+
+                        isHovering = false;
+
+                    }
+                );
+
+
+                /* Mobile / touch */
+
+                item.addEventListener(
+                    "click",
+                    function () {
+
+                        changeSolution(
+                            index,
+                            true
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* =================================================
+           PAUSE WHEN HOVERING IMAGE
+        ================================================== */
+
+        const visual =
+            section.querySelector(
+                ".dws-visual"
+            );
+
+
+        visual.addEventListener(
+            "mouseenter",
+            function () {
+
+                isHovering = true;
+
+            }
+        );
+
+
+        visual.addEventListener(
+            "mouseleave",
+            function () {
+
+                isHovering = false;
+
+            }
+        );
+
+
+        /* =================================================
+           VISIBILITY CONTROL
+        ================================================== */
+
+        const visibilityObserver =
+            new IntersectionObserver(
+
+                function (entries) {
+
+                    entries.forEach(
+                        function (entry) {
+
+                            isVisible =
+                                entry.isIntersecting;
+
+
+                            if (
+                                isVisible
+                            ) {
+
+                                startAutoRotation();
+
+                            }
+                            else {
+
+                                stopAutoRotation();
+
+                            }
+
+                        }
+                    );
+
+                },
+
+                {
+                    threshold: 0.2
+                }
+
+            );
+
+
+        visibilityObserver.observe(
+            section
+        );
+
+
+        /* =================================================
+           INITIAL STATE
+        ================================================== */
+
+        changeSolution(0);
+
+    }
+);
+
+</script>
+
+
+
+
 <!-- =========================================================
-     BENEFITS
+     WIND ENERGY — BENEFITS
 ========================================================= -->
 
-<section class="benefits-section">
+<section class="wind-journey">
 
-    <div class="section-container">
+    <div class="wj-container">
 
-        <div class="row align-items-center">
+        <!-- HEADER -->
+
+        <div class="wj-header">
+
+            <div class="wj-label">
+                <span class="wj-line"></span>
+                WHY WIND ENERGY
+            </div>
+
+            <div class="wj-counter">
+                <span>04</span>
+                ADVANTAGES
+            </div>
+
+        </div>
 
 
-            <div class="col-lg-6">
+        <!-- TITLE -->
 
-                <div class="benefit-image"></div>
+        <div class="wj-title">
+
+            <div>
+
+                <h2>
+                    Energy that
+                    <span>moves forward.</span>
+                </h2>
+
+            </div>
+
+            <p>
+                Wind transforms a naturally available resource
+                into a smarter pathway toward cleaner and
+                scalable energy infrastructure.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             BENEFIT STAGES
+        ================================================== -->
+
+        <div class="wj-track">
+
+
+            <!-- =================================================
+                 01
+            ================================================== -->
+
+            <div class="wj-stage active"
+                 data-stage="0">
+
+                <div class="wj-image">
+
+                    <img
+                        src="assets/img/wind/RenewableResource.png"
+                        alt="Renewable wind energy">
+
+                </div>
+
+                <div class="wj-image-overlay"></div>
+
+
+                <div class="wj-stage-top">
+
+                    <span class="wj-number">
+                        01
+                    </span>
+
+                    <span class="wj-symbol">
+                        <i class="fa-solid fa-wind"></i>
+                    </span>
+
+                </div>
+
+
+                <div class="wj-stage-content">
+
+                    <span>
+                        RESOURCE
+                    </span>
+
+                    <h3>
+                        Renewable
+                        <br>
+                        Resource
+                    </h3>
+
+                    <p>
+                        Harness naturally available wind
+                        movement to generate renewable
+                        electricity.
+                    </p>
+
+                </div>
+
+
+                <div class="wj-stage-bottom">
+
+                    <span>
+                        NATURAL FORCE
+                    </span>
+
+                    <i class="fa-solid fa-arrow-up-right"></i>
+
+                </div>
 
             </div>
 
 
-            <div class="col-lg-6">
 
-                <div class="benefit-content">
+            <!-- =================================================
+                 02
+            ================================================== -->
+
+            <div class="wj-stage"
+                 data-stage="1">
+
+                <div class="wj-image">
+
+                    <img
+                        src="assets/img/wind/CleanerGeneration.png"
+                        alt="Clean wind energy">
+
+                </div>
+
+                <div class="wj-image-overlay"></div>
+
+
+                <div class="wj-stage-top">
+
+                    <span class="wj-number">
+                        02
+                    </span>
+
+                    <span class="wj-symbol">
+                        <i class="fa-solid fa-leaf"></i>
+                    </span>
+
+                </div>
+
+
+                <div class="wj-stage-content">
+
+                    <span>
+                        SUSTAINABILITY
+                    </span>
+
+                    <h3>
+                        Cleaner
+                        <br>
+                        Generation
+                    </h3>
+
+                    <p>
+                        Support the transition toward cleaner
+                        energy through wind-based generation.
+                    </p>
+
+                </div>
+
+
+                <div class="wj-stage-bottom">
+
+                    <span>
+                        CLEAN POWER
+                    </span>
+
+                    <i class="fa-solid fa-arrow-up-right"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 03
+            ================================================== -->
+
+            <div class="wj-stage"
+                 data-stage="2">
+
+                <div class="wj-image">
+
+                    <img
+                        src="assets/img/wind/OperationalVisibility.png"
+                        alt="Wind energy monitoring">
+
+                </div>
+
+                <div class="wj-image-overlay"></div>
+
+
+                <div class="wj-stage-top">
+
+                    <span class="wj-number">
+                        03
+                    </span>
+
+                    <span class="wj-symbol">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </span>
+
+                </div>
+
+
+                <div class="wj-stage-content">
+
+                    <span>
+                        INTELLIGENCE
+                    </span>
+
+                    <h3>
+                        Operational
+                        <br>
+                        Visibility
+                    </h3>
+
+                    <p>
+                        Intelligent monitoring provides clearer
+                        visibility into energy generation and
+                        system performance.
+                    </p>
+
+                </div>
+
+
+                <div class="wj-stage-bottom">
+
+                    <span>
+                        SMART MONITORING
+                    </span>
+
+                    <i class="fa-solid fa-arrow-up-right"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 04
+            ================================================== -->
+
+            <div class="wj-stage"
+                 data-stage="3">
+
+                <div class="wj-image">
+
+                    <img
+                        src="assets/img/wind/ScalableInfrastructue.png"
+                        alt="Scalable wind infrastructure">
+
+                </div>
+
+                <div class="wj-image-overlay"></div>
+
+
+                <div class="wj-stage-top">
+
+                    <span class="wj-number">
+                        04
+                    </span>
+
+                    <span class="wj-symbol">
+                        <i class="fa-solid fa-arrows-to-circle"></i>
+                    </span>
+
+                </div>
+
+
+                <div class="wj-stage-content">
+
+                    <span>
+                        FLEXIBILITY
+                    </span>
+
+                    <h3>
+                        Scalable
+                        <br>
+                        Infrastructure
+                    </h3>
+
+                    <p>
+                        Engineer solutions around project scale,
+                        site conditions and energy requirements.
+                    </p>
+
+                </div>
+
+
+                <div class="wj-stage-bottom">
+
+                    <span>
+                        FUTURE READY
+                    </span>
+
+                    <i class="fa-solid fa-arrow-up-right"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <div class="wj-footer">
+
+            <div class="wj-footer-left">
+
+                <span>
+                    WIND ENERGY
+                </span>
+
+                <div></div>
+
+                <span>
+                    01 — 04
+                </span>
+
+            </div>
+
+            <div class="wj-footer-text">
+                NATURAL RESOURCE → CLEAN POWER → INTELLIGENCE
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<style>
+
+/* =========================================================
+   WIND JOURNEY
+========================================================= */
+
+.wind-journey {
+
+    background: #111111;
+
+    color: #ffffff;
+
+    padding: 120px 8%;
+
+    overflow: hidden;
+
+}
+
+
+.wj-container {
+
+    max-width: 1450px;
+
+    margin: auto;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.wj-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 60px;
+
+}
+
+
+.wj-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #999999;
+
+}
+
+
+.wj-line {
+
+    width: 42px;
+
+    height: 1px;
+
+    background: #ffffff;
+
+}
+
+
+.wj-counter {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: #666666;
+
+}
+
+
+.wj-counter span {
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.wj-title {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    margin-bottom: 65px;
+
+}
+
+
+.wj-title h2 {
+
+    margin: 0;
+
+    font-size: clamp(
+        55px,
+        7vw,
+        105px
+    );
+
+    line-height: .88;
+
+    letter-spacing: -5px;
+
+    font-weight: 400;
+
+}
+
+
+.wj-title h2 span {
+
+    display: block;
+
+    color: #666666;
+
+    font-style: normal;
+
+}
+
+
+.wj-title p {
+
+    width: 310px;
+
+    margin: 0 0 5px;
+
+    color: #777777;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   TRACK
+========================================================= */
+
+.wj-track {
+
+    display: flex;
+
+    width: 100%;
+
+    min-height: 500px;
+
+    border-top: 1px solid #333333;
+
+    border-bottom: 1px solid #333333;
+
+}
+
+
+/* =========================================================
+   STAGE
+========================================================= */
+
+.wj-stage {
+
+    position: relative;
+
+    flex: 1;
+
+    min-height: 500px;
+
+    overflow: hidden;
+
+    border-right: 1px solid #333333;
+
+    cursor: pointer;
+
+    transition:
+        flex .7s
+        cubic-bezier(
+            .65,
+            0,
+            .35,
+            1
+        );
+
+}
+
+
+.wj-stage:last-child {
+
+    border-right: none;
+
+}
+
+
+/* ACTIVE WIDTH */
+
+.wj-stage:hover,
+.wj-stage.active {
+
+    flex: 1.7;
+
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.wj-image {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    background: #222222;
+
+}
+
+
+.wj-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transform:
+        scale(1.12);
+
+    filter:
+        grayscale(100%)
+        brightness(.45);
+
+    opacity: .35;
+
+    transition:
+
+        transform 1.2s
+        cubic-bezier(
+            .2,
+            .7,
+            .2,
+            1
+        ),
+
+        filter .8s ease,
+
+        opacity .8s ease;
+
+}
+
+
+/* ACTIVE IMAGE */
+
+.wj-stage:hover
+.wj-image img,
+
+.wj-stage.active
+.wj-image img {
+
+    transform:
+        scale(1);
+
+    filter:
+        grayscale(10%)
+        brightness(.7);
+
+    opacity: .85;
+
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.wj-image-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.5),
+            transparent 40%,
+            rgba(0,0,0,.8)
+        );
+
+    transition: .7s ease;
+
+}
+
+
+.wj-stage:hover
+.wj-image-overlay,
+
+.wj-stage.active
+.wj-image-overlay {
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.25),
+            transparent 40%,
+            rgba(0,0,0,.72)
+        );
+
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.wj-stage-top {
+
+    position: absolute;
+
+    z-index: 4;
+
+    top: 28px;
+
+    left: 28px;
+
+    right: 28px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.wj-number {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: rgba(
+        255,
+        255,
+        255,
+        .55
+    );
+
+}
+
+
+.wj-symbol {
+
+    width: 38px;
+
+    height: 38px;
+
+    border: 1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .3
+        );
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 11px;
+
+    color: rgba(
+        255,
+        255,
+        255,
+        .65
+    );
+
+    transition: .5s ease;
+
+}
+
+
+.wj-stage:hover
+.wj-symbol,
+
+.wj-stage.active
+.wj-symbol {
+
+    background: #ffffff;
+
+    color: #111111;
+
+    border-color: #ffffff;
+
+    transform:
+        rotate(-8deg);
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.wj-stage-content {
+
+    position: absolute;
+
+    z-index: 4;
+
+    left: 30px;
+
+    right: 30px;
+
+    bottom: 82px;
+
+}
+
+
+.wj-stage-content > span {
+
+    display: block;
+
+    margin-bottom: 16px;
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+
+    color: rgba(
+        255,
+        255,
+        255,
+        .55
+    );
+
+}
+
+
+.wj-stage-content h3 {
+
+    margin: 0;
+
+    font-size: 24px;
+
+    line-height: 1;
+
+    letter-spacing: -.5px;
+
+    font-weight: 400;
+
+    color: #ffffff;
+
+}
+
+
+.wj-stage-content p {
+
+    max-width: 300px;
+
+    margin: 20px 0 0;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+
+    color: rgba(
+        255,
+        255,
+        255,
+        .7
+    );
+
+    opacity: 0;
+
+    transform:
+        translateY(15px);
+
+    transition:
+
+        opacity .45s ease,
+
+        transform .55s ease;
+
+}
+
+
+.wj-stage:hover
+.wj-stage-content p,
+
+.wj-stage.active
+.wj-stage-content p {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.wj-stage-bottom {
+
+    position: absolute;
+
+    z-index: 4;
+
+    left: 30px;
+
+    right: 30px;
+
+    bottom: 28px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.wj-stage-bottom span {
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    color: rgba(
+        255,
+        255,
+        255,
+        .45
+    );
+
+}
+
+
+.wj-stage-bottom i {
+
+    width: 28px;
+
+    height: 28px;
+
+    border: 1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .35
+        );
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 8px;
+
+    opacity: 0;
+
+    transform:
+        translate(-5px,5px);
+
+    transition: .45s ease;
+
+}
+
+
+.wj-stage:hover
+.wj-stage-bottom i,
+
+.wj-stage.active
+.wj-stage-bottom i {
+
+    opacity: 1;
+
+    transform:
+        translate(0,0);
+
+}
+
+
+/* =========================================================
+   ACTIVE INDICATOR
+========================================================= */
+
+.wj-stage::after {
+
+    content: "";
+
+    position: absolute;
+
+    z-index: 6;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 0;
+
+    height: 2px;
+
+    background: #ffffff;
+
+}
+
+
+.wj-stage.active::after {
+
+    animation:
+        wjProgress 4.5s linear forwards;
+
+}
+
+
+@keyframes wjProgress {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.wj-footer {
+
+    padding-top: 23px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.wj-footer-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    color: #555555;
+
+}
+
+
+.wj-footer-left div {
+
+    width: 45px;
+
+    height: 1px;
+
+    background: #333333;
+
+}
+
+
+.wj-footer-text {
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    color: #555555;
+
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.wj-header,
+.wj-title,
+.wj-track,
+.wj-footer {
+
+    opacity: 0;
+
+    transform:
+        translateY(35px);
+
+    transition:
+
+        opacity .8s ease,
+
+        transform .8s
+        cubic-bezier(
+            .2,
+            .7,
+            .2,
+            1
+        );
+
+}
+
+
+.wind-journey.wj-show
+.wj-header {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+.wind-journey.wj-show
+.wj-title {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+    transition-delay: .15s;
+
+}
+
+
+.wind-journey.wj-show
+.wj-track {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+    transition-delay: .3s;
+
+}
+
+
+.wind-journey.wj-show
+.wj-footer {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+    transition-delay: .45s;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .wind-journey {
+
+        padding: 100px 6%;
+
+    }
+
+
+    .wj-title {
+
+        display: block;
+
+    }
+
+
+    .wj-title p {
+
+        margin-top: 28px;
+
+    }
+
+
+    .wj-track {
+
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .wj-stage {
+
+        min-height: 430px;
+
+        border-bottom: 1px solid #333333;
+
+    }
+
+
+    .wj-stage:hover,
+    .wj-stage.active {
+
+        flex: unset;
+
+    }
+
+
+    .wj-stage-content p {
+
+        opacity: 1;
+
+        transform: none;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .wind-journey {
+
+        padding: 75px 5%;
+
+    }
+
+
+    .wj-header {
+
+        margin-bottom: 45px;
+
+    }
+
+
+    .wj-title {
+
+        margin-bottom: 45px;
+
+    }
+
+
+    .wj-title h2 {
+
+        font-size: 52px;
+
+        letter-spacing: -3px;
+
+    }
+
+
+    .wj-track {
+
+        display: block;
+
+    }
+
+
+    .wj-stage {
+
+        min-height: 350px;
+
+        border-right: none;
+
+    }
+
+
+    .wj-stage-content {
+
+        bottom: 75px;
+
+    }
+
+
+    .wj-stage-content h3 {
+
+        font-size: 22px;
+
+    }
+
+
+    .wj-stage-content p {
+
+        font-size: 9px;
+
+    }
+
+
+    .wj-footer {
+
+        display: block;
+
+    }
+
+
+    .wj-footer-text {
+
+        margin-top: 15px;
+
+    }
+
+}
+
+</style>
+
+
+
+<script>
+
+/* =========================================================
+   WIND JOURNEY — INTERACTION
+========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const section =
+            document.querySelector(
+                ".wind-journey"
+            );
+
+        if (!section) return;
+
+
+        const stages =
+            section.querySelectorAll(
+                ".wj-stage"
+            );
+
+
+        let current = 0;
+
+        let autoPlay;
+
+
+        /* =================================================
+           ACTIVATE STAGE
+        ================================================= */
+
+        function activateStage(index) {
+
+            stages.forEach(
+                function (stage) {
+
+                    stage.classList.remove(
+                        "active"
+                    );
+
+                }
+            );
+
+
+            stages[index].classList.add(
+                "active"
+            );
+
+
+            current = index;
+
+        }
+
+
+        /* =================================================
+           MANUAL HOVER
+        ================================================= */
+
+        stages.forEach(
+            function (stage, index) {
+
+                stage.addEventListener(
+                    "mouseenter",
+                    function () {
+
+                        activateStage(index);
+
+                    }
+                );
+
+
+                stage.addEventListener(
+                    "click",
+                    function () {
+
+                        activateStage(index);
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* =================================================
+           AUTOMATIC
+        ================================================= */
+
+        function startAutoPlay() {
+
+            clearInterval(autoPlay);
+
+
+            autoPlay =
+                setInterval(
+                    function () {
+
+                        if (
+                            !section.matches(":hover")
+                        ) {
+
+                            let next =
+                                (current + 1)
+                                % stages.length;
+
+                            activateStage(next);
+
+                        }
+
+                    },
+                    4500
+                );
+
+        }
+
+
+        startAutoPlay();
+
+
+        /* =================================================
+           SCROLL REVEAL
+        ================================================= */
+
+        const observer =
+            new IntersectionObserver(
+                function (entries) {
+
+                    entries.forEach(
+                        function (entry) {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                section.classList.add(
+                                    "wj-show"
+                                );
+
+                                observer.unobserve(
+                                    section
+                                );
+
+                            }
+
+                        }
+                    );
+
+                },
+                {
+                    threshold: .15
+                }
+            );
+
+
+        observer.observe(section);
+
+    }
+);
+
+</script>
+
+    <!-- =========================================================
+     WIND TECHNOLOGY
+========================================================= -->
+
+    <section class="technology-section">
+
+        <div class="section-container">
+
+
+            <div class="row mb-5">
+
+                <div class="col-lg-7">
 
                     <span class="section-tag">
-                        Why Wind Energy
+                        Wind Technology
                     </span>
 
 
                     <h2 class="section-title">
 
-                        The force of nature.
+                        Every component matters.
                         <br>
 
-                        <span>Engineered for value.</span>
+                        <span>Every connection counts.</span>
 
                     </h2>
 
+                </div>
 
-                    <p class="section-text mb-4">
 
-                        Wind energy offers a scalable renewable
-                        resource that can complement modern
-                        energy infrastructure while supporting
-                        cleaner and more sustainable power
-                        generation.
+                <div class="col-lg-5">
+
+                    <p class="section-text">
+
+                        A successful wind energy system depends
+                        on the coordinated performance of
+                        mechanical, electrical and intelligent
+                        control infrastructure.
 
                     </p>
 
+                </div>
 
-                    <!-- ITEM -->
-
-                    <div class="benefit-item">
-
-                        <div class="benefit-icon">
-
-                            <i class="fa-solid fa-wind"></i>
-
-                        </div>
+            </div>
 
 
-                        <div>
+            <div class="technology-main">
 
-                            <h4>
-                                Renewable Resource
-                            </h4>
 
-                            <p>
+                <!-- ROW -->
 
-                                Harness naturally available
-                                wind movement to generate
-                                renewable electricity.
+                <div class="technology-row">
 
-                            </p>
-
-                        </div>
-
+                    <div class="technology-number">
+                        01
                     </div>
 
+                    <h4>
+                        Wind Turbine
+                    </h4>
 
-                    <!-- ITEM -->
+                    <p>
 
-                    <div class="benefit-item">
+                        Converts the kinetic energy of moving air
+                        into rotational mechanical energy for
+                        electrical generation.
 
-                        <div class="benefit-icon">
-
-                            <i class="fa-solid fa-leaf"></i>
-
-                        </div>
-
-
-                        <div>
-
-                            <h4>
-                                Cleaner Energy Generation
-                            </h4>
-
-                            <p>
-
-                                Support the transition toward
-                                renewable energy with wind-based
-                                electricity generation.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- ITEM -->
-
-                    <div class="benefit-item">
-
-                        <div class="benefit-icon">
-
-                            <i class="fa-solid fa-chart-line"></i>
-
-                        </div>
-
-
-                        <div>
-
-                            <h4>
-                                Operational Visibility
-                            </h4>
-
-                            <p>
-
-                                Intelligent monitoring provides
-                                greater visibility into energy
-                                generation and system operation.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- ITEM -->
-
-                    <div class="benefit-item">
-
-                        <div class="benefit-icon">
-
-                            <i class="fa-solid fa-arrows-to-circle"></i>
-
-                        </div>
-
-
-                        <div>
-
-                            <h4>
-                                Scalable Infrastructure
-                            </h4>
-
-                            <p>
-
-                                Solutions can be engineered
-                                around project scale, site
-                                conditions and energy
-                                requirements.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
+                    </p>
 
                 </div>
+
+
+                <!-- ROW -->
+
+                <div class="technology-row">
+
+                    <div class="technology-number">
+                        02
+                    </div>
+
+                    <h4>
+                        Generator System
+                    </h4>
+
+                    <p>
+
+                        Converts rotational mechanical power
+                        into electrical energy for further
+                        processing and integration.
+
+                    </p>
+
+                </div>
+
+
+                <!-- ROW -->
+
+                <div class="technology-row">
+
+                    <div class="technology-number">
+                        03
+                    </div>
+
+                    <h4>
+                        Power Electronics
+                    </h4>
+
+                    <p>
+
+                        Supports electrical conversion,
+                        conditioning and controlled integration
+                        of generated power.
+
+                    </p>
+
+                </div>
+
+
+                <!-- ROW -->
+
+                <div class="technology-row">
+
+                    <div class="technology-number">
+                        04
+                    </div>
+
+                    <h4>
+                        Control & Protection
+                    </h4>
+
+                    <p>
+
+                        Intelligent control and protection
+                        systems help maintain safe and stable
+                        operation.
+
+                    </p>
+
+                </div>
+
+
+                <!-- ROW -->
+
+                <div class="technology-row">
+
+                    <div class="technology-number">
+                        05
+                    </div>
+
+                    <h4>
+                        Energy Monitoring
+                    </h4>
+
+                    <p>
+
+                        Monitor generation, power flow, equipment
+                        status and operational parameters through
+                        connected systems.
+
+                    </p>
+
+                </div>
+
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
 
 <!-- =========================================================
-     WIND TECHNOLOGY
-========================================================= -->
-
-<section class="technology-section">
-
-    <div class="section-container">
-
-
-        <div class="row mb-5">
-
-            <div class="col-lg-7">
-
-                <span class="section-tag">
-                    Wind Technology
-                </span>
-
-
-                <h2 class="section-title">
-
-                    Every component matters.
-                    <br>
-
-                    <span>Every connection counts.</span>
-
-                </h2>
-
-            </div>
-
-
-            <div class="col-lg-5">
-
-                <p class="section-text">
-
-                    A successful wind energy system depends
-                    on the coordinated performance of
-                    mechanical, electrical and intelligent
-                    control infrastructure.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="technology-main">
-
-
-            <!-- ROW -->
-
-            <div class="technology-row">
-
-                <div class="technology-number">
-                    01
-                </div>
-
-                <h4>
-                    Wind Turbine
-                </h4>
-
-                <p>
-
-                    Converts the kinetic energy of moving air
-                    into rotational mechanical energy for
-                    electrical generation.
-
-                </p>
-
-            </div>
-
-
-            <!-- ROW -->
-
-            <div class="technology-row">
-
-                <div class="technology-number">
-                    02
-                </div>
-
-                <h4>
-                    Generator System
-                </h4>
-
-                <p>
-
-                    Converts rotational mechanical power
-                    into electrical energy for further
-                    processing and integration.
-
-                </p>
-
-            </div>
-
-
-            <!-- ROW -->
-
-            <div class="technology-row">
-
-                <div class="technology-number">
-                    03
-                </div>
-
-                <h4>
-                    Power Electronics
-                </h4>
-
-                <p>
-
-                    Supports electrical conversion,
-                    conditioning and controlled integration
-                    of generated power.
-
-                </p>
-
-            </div>
-
-
-            <!-- ROW -->
-
-            <div class="technology-row">
-
-                <div class="technology-number">
-                    04
-                </div>
-
-                <h4>
-                    Control & Protection
-                </h4>
-
-                <p>
-
-                    Intelligent control and protection
-                    systems help maintain safe and stable
-                    operation.
-
-                </p>
-
-            </div>
-
-
-            <!-- ROW -->
-
-            <div class="technology-row">
-
-                <div class="technology-number">
-                    05
-                </div>
-
-                <h4>
-                    Energy Monitoring
-                </h4>
-
-                <p>
-
-                    Monitor generation, power flow, equipment
-                    status and operational parameters through
-                    connected systems.
-
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     PROJECT PROCESS
+     PROJECT PROCESS — PREMIUM ENGINEERING TIMELINE
 ========================================================= -->
 
 <section class="process-section">
 
-    <div class="section-container">
+    <div class="process-container">
 
+        <!-- ================= HEADER ================= -->
 
-        <div class="row mb-5">
+        <div class="process-header">
 
-            <div class="col-lg-7">
+            <div class="process-heading">
 
-                <span class="section-tag">
-                    Project Execution
+                <span class="process-tag">
+                    PROJECT EXECUTION
                 </span>
 
-
-                <h2 class="section-title">
-
+                <h2>
                     From wind resource
-                    <br>
-
                     <span>to usable power.</span>
-
                 </h2>
 
             </div>
 
 
-            <div class="col-lg-5">
+            <div class="process-intro">
 
-                <p class="section-text">
+                <div class="intro-line"></div>
 
-                    A structured project methodology helps
-                    bring together site evaluation, system
-                    engineering, electrical integration and
-                    commissioning.
-
+                <p>
+                    A structured project methodology brings together
+                    site evaluation, system engineering, electrical
+                    integration and commissioning into one reliable
+                    execution process.
                 </p>
 
             </div>
@@ -3273,165 +7073,273 @@
         </div>
 
 
-        <div class="row">
+        <!-- ================= PROCESS TIMELINE ================= -->
+
+        <div class="process-timeline">
 
 
             <!-- 01 -->
 
-            <div class="col-lg-2 col-md-4 col-6">
+            <div class="process-item">
 
-                <div class="process-card">
+                <div class="process-top">
 
-                    <div class="process-number">
-                        01 / ASSESS
-                    </div>
+                    <span class="process-index">
+                        01
+                    </span>
 
-                    <h4>
+                    <span class="process-action">
+                        ASSESS
+                    </span>
+
+                </div>
+
+
+                <div class="process-line">
+
+                    <span class="process-dot"></span>
+
+                </div>
+
+
+                <div class="process-content">
+
+                    <span class="process-mini">
+                        SITE STUDY
+                    </span>
+
+                    <h3>
                         Site Assessment
-                    </h4>
+                    </h3>
 
                     <p>
-
-                        Evaluate site conditions,
-                        wind characteristics,
-                        infrastructure and project
-                        requirements.
-
+                        Evaluate site conditions, wind characteristics,
+                        infrastructure and project requirements.
                     </p>
 
                 </div>
 
             </div>
+
 
 
             <!-- 02 -->
 
-            <div class="col-lg-2 col-md-4 col-6">
+            <div class="process-item">
 
-                <div class="process-card">
+                <div class="process-top">
 
-                    <div class="process-number">
-                        02 / PLAN
-                    </div>
+                    <span class="process-index">
+                        02
+                    </span>
 
-                    <h4>
+                    <span class="process-action">
+                        PLAN
+                    </span>
+
+                </div>
+
+
+                <div class="process-line">
+
+                    <span class="process-dot"></span>
+
+                </div>
+
+
+                <div class="process-content">
+
+                    <span class="process-mini">
+                        STRATEGY
+                    </span>
+
+                    <h3>
                         System Planning
-                    </h4>
+                    </h3>
 
                     <p>
-
-                        Develop project architecture,
-                        capacity planning and technical
-                        execution strategy.
-
+                        Develop project architecture, capacity planning
+                        and technical execution strategy.
                     </p>
 
                 </div>
 
             </div>
+
 
 
             <!-- 03 -->
 
-            <div class="col-lg-2 col-md-4 col-6">
+            <div class="process-item">
 
-                <div class="process-card">
+                <div class="process-top">
 
-                    <div class="process-number">
-                        03 / DESIGN
-                    </div>
+                    <span class="process-index">
+                        03
+                    </span>
 
-                    <h4>
+                    <span class="process-action">
+                        DESIGN
+                    </span>
+
+                </div>
+
+
+                <div class="process-line">
+
+                    <span class="process-dot"></span>
+
+                </div>
+
+
+                <div class="process-content">
+
+                    <span class="process-mini">
+                        ENGINEERING
+                    </span>
+
+                    <h3>
                         Engineering
-                    </h4>
+                    </h3>
 
                     <p>
-
-                        Prepare electrical layouts,
-                        control systems and technical
-                        specifications.
-
+                        Prepare electrical layouts, control systems
+                        and technical specifications.
                     </p>
 
                 </div>
 
             </div>
+
 
 
             <!-- 04 -->
 
-            <div class="col-lg-2 col-md-4 col-6">
+            <div class="process-item">
 
-                <div class="process-card">
+                <div class="process-top">
 
-                    <div class="process-number">
-                        04 / SOURCE
-                    </div>
+                    <span class="process-index">
+                        04
+                    </span>
 
-                    <h4>
+                    <span class="process-action">
+                        SOURCE
+                    </span>
+
+                </div>
+
+
+                <div class="process-line">
+
+                    <span class="process-dot"></span>
+
+                </div>
+
+
+                <div class="process-content">
+
+                    <span class="process-mini">
+                        PROCUREMENT
+                    </span>
+
+                    <h3>
                         Procurement
-                    </h4>
+                    </h3>
 
                     <p>
-
-                        Coordinate equipment,
-                        materials and project
-                        requirements.
-
+                        Coordinate equipment, materials and project
+                        requirements with precision.
                     </p>
 
                 </div>
 
             </div>
+
 
 
             <!-- 05 -->
 
-            <div class="col-lg-2 col-md-4 col-6">
+            <div class="process-item">
 
-                <div class="process-card">
+                <div class="process-top">
 
-                    <div class="process-number">
-                        05 / INSTALL
-                    </div>
+                    <span class="process-index">
+                        05
+                    </span>
 
-                    <h4>
+                    <span class="process-action">
+                        INSTALL
+                    </span>
+
+                </div>
+
+
+                <div class="process-line">
+
+                    <span class="process-dot"></span>
+
+                </div>
+
+
+                <div class="process-content">
+
+                    <span class="process-mini">
+                        EXECUTION
+                    </span>
+
+                    <h3>
                         Installation
-                    </h4>
+                    </h3>
 
                     <p>
-
-                        Execute electrical,
-                        control and supporting
+                        Execute electrical, control and supporting
                         infrastructure installation.
-
                     </p>
 
                 </div>
 
             </div>
+
 
 
             <!-- 06 -->
 
-            <div class="col-lg-2 col-md-4 col-6">
+            <div class="process-item">
 
-                <div class="process-card">
+                <div class="process-top">
 
-                    <div class="process-number">
-                        06 / COMMISSION
-                    </div>
+                    <span class="process-index">
+                        06
+                    </span>
 
-                    <h4>
+                    <span class="process-action">
+                        COMMISSION
+                    </span>
+
+                </div>
+
+
+                <div class="process-line">
+
+                    <span class="process-dot"></span>
+
+                </div>
+
+
+                <div class="process-content">
+
+                    <span class="process-mini">
+                        HANDOVER
+                    </span>
+
+                    <h3>
                         Commissioning
-                    </h4>
+                    </h3>
 
                     <p>
-
-                        Test systems, validate
-                        performance and complete
+                        Test systems, validate performance and complete
                         operational handover.
-
                     </p>
 
                 </div>
@@ -3441,436 +7349,1367 @@
 
         </div>
 
+
+        <!-- ================= FOOTER ================= -->
+
+        <div class="process-footer">
+
+            <span>
+                ENGINEERING
+            </span>
+
+            <span>
+                INTEGRATION
+            </span>
+
+            <span>
+                EXECUTION
+            </span>
+
+            <span>
+                COMMISSIONING
+            </span>
+
+        </div>
+
     </div>
 
 </section>
 
 
 
-<!-- =========================================================
+<style>
+
+/* =========================================================
+   PROJECT PROCESS
+   PREMIUM ENGINEERING TIMELINE
+========================================================= */
+
+.process-section {
+
+    position: relative;
+
+    width: 100%;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    padding: 120px 7%;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.process-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    top: -350px;
+    right: -280px;
+
+    border: 1px solid rgba(255,255,255,.055);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+}
+
+
+.process-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    bottom: -280px;
+    left: -220px;
+
+    border: 1px solid rgba(255,255,255,.035);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.process-container {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1550px;
+
+    margin: 0 auto;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.process-header {
+
+    display: grid;
+
+    grid-template-columns: 1.2fr .8fr;
+
+    gap: 100px;
+
+    align-items: end;
+
+    margin-bottom: 85px;
+
+}
+
+
+.process-tag {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: #8e8e8e;
+
+}
+
+
+.process-tag::before {
+
+    content: "";
+
+    width: 38px;
+
+    height: 1px;
+
+    background: #ffffff;
+
+}
+
+
+.process-heading h2 {
+
+    max-width: 850px;
+
+    margin: 24px 0 0;
+
+    font-size: clamp(44px, 5vw, 76px);
+
+    line-height: 1.02;
+
+    font-weight: 500;
+
+    letter-spacing: -3.5px;
+
+}
+
+
+.process-heading h2 span {
+
+    display: block;
+
+    color: #777777;
+
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.process-intro {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 22px;
+
+    padding-bottom: 8px;
+
+}
+
+
+.intro-line {
+
+    width: 2px;
+
+    min-width: 2px;
+
+    height: 105px;
+
+    background: #555555;
+
+}
+
+
+.process-intro p {
+
+    max-width: 430px;
+
+    margin: 0;
+
+    color: #999999;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.process-timeline {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, minmax(0, 1fr));
+
+    border-top: 1px solid rgba(255,255,255,.16);
+
+}
+
+
+/* =========================================================
+   PROCESS ITEM
+========================================================= */
+
+.process-item {
+
+    position: relative;
+
+    min-height: 340px;
+
+    padding: 30px 25px 0;
+
+    border-right: 1px solid rgba(255,255,255,.10);
+
+    transition:
+        background .5s ease,
+        transform .5s ease;
+
+}
+
+
+.process-item:first-child {
+
+    border-left: 1px solid rgba(255,255,255,.10);
+
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.process-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.process-index {
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #777777;
+
+    transition:
+        color .4s ease;
+
+}
+
+
+.process-action {
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #555555;
+
+    transition:
+        color .4s ease;
+
+}
+
+
+/* =========================================================
+   TIMELINE LINE
+========================================================= */
+
+.process-line {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 45px;
+
+    margin-top: 18px;
+
+}
+
+
+.process-line::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 1px;
+
+    background: rgba(255,255,255,.12);
+
+}
+
+
+.process-dot {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 0;
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #555555;
+
+    transform: translateY(-50%);
+
+    transition:
+        transform .5s cubic-bezier(.22,1,.36,1),
+        background .4s ease,
+        box-shadow .4s ease;
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.process-content {
+
+    padding-top: 32px;
+
+}
+
+
+.process-mini {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #666666;
+
+    transition:
+        color .4s ease;
+
+}
+
+
+.process-content h3 {
+
+    margin: 0 0 15px;
+
+    font-size: 20px;
+
+    line-height: 1.2;
+
+    font-weight: 500;
+
+    letter-spacing: -.4px;
+
+    color: #ffffff;
+
+}
+
+
+.process-content p {
+
+    max-width: 190px;
+
+    margin: 0;
+
+    color: #858585;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.process-item:hover {
+
+    background: rgba(255,255,255,.025);
+
+    transform: translateY(-5px);
+
+}
+
+
+.process-item:hover .process-index {
+
+    color: #ffffff;
+
+}
+
+
+.process-item:hover .process-action {
+
+    color: #aaaaaa;
+
+}
+
+
+.process-item:hover .process-mini {
+
+    color: #aaaaaa;
+
+}
+
+
+.process-item:hover .process-dot {
+
+    background: #ffffff;
+
+    transform:
+        translateY(-50%)
+        scale(1.45);
+
+    box-shadow:
+        0 0 0 6px rgba(255,255,255,.07);
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.process-footer {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-top: 55px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255,255,255,.08);
+
+}
+
+
+.process-footer span {
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+    color: #555555;
+
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1500px) {
+
+    .process-section {
+
+        padding-left: 8%;
+
+        padding-right: 8%;
+
+    }
+
+
+    .process-header {
+
+        margin-bottom: 100px;
+
+    }
+
+
+    .process-item {
+
+        min-height: 360px;
+
+        padding-left: 30px;
+
+        padding-right: 30px;
+
+    }
+
+
+    .process-content h3 {
+
+        font-size: 22px;
+
+    }
+
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .process-section {
+
+        padding: 100px 6%;
+
+    }
+
+
+    .process-header {
+
+        grid-template-columns: 1fr .8fr;
+
+        gap: 60px;
+
+    }
+
+
+    .process-heading h2 {
+
+        font-size: 54px;
+
+        letter-spacing: -2.5px;
+
+    }
+
+
+    .process-item {
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+
+    }
+
+
+    .process-content h3 {
+
+        font-size: 18px;
+
+    }
+
+
+    .process-content p {
+
+        font-size: 11.5px;
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .process-section {
+
+        padding: 90px 6%;
+
+    }
+
+
+    .process-header {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        margin-bottom: 60px;
+
+    }
+
+
+    .process-heading h2 {
+
+        font-size: 52px;
+
+    }
+
+
+    .process-intro p {
+
+        max-width: 650px;
+
+    }
+
+
+    .intro-line {
+
+        height: 75px;
+
+    }
+
+
+    .process-timeline {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+    }
+
+
+    .process-item {
+
+        min-height: 310px;
+
+        border-bottom: 1px solid rgba(255,255,255,.10);
+
+    }
+
+
+    .process-item:nth-child(4) {
+
+        border-left: 1px solid rgba(255,255,255,.10);
+
+    }
+
+
+    .process-content p {
+
+        max-width: 220px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .process-section {
+
+        padding: 75px 5%;
+
+    }
+
+
+    .process-header {
+
+        gap: 30px;
+
+        margin-bottom: 50px;
+
+    }
+
+
+    .process-heading h2 {
+
+        font-size: 40px;
+
+        line-height: 1.05;
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .process-intro {
+
+        gap: 15px;
+
+    }
+
+
+    .intro-line {
+
+        height: 95px;
+
+    }
+
+
+    .process-intro p {
+
+        font-size: 13px;
+
+        line-height: 1.8;
+
+    }
+
+
+    .process-timeline {
+
+        grid-template-columns: 1fr;
+
+        border-top: 0;
+
+    }
+
+
+    .process-item {
+
+        min-height: auto;
+
+        padding: 25px 0 35px 0;
+
+        border-left: 0 !important;
+
+        border-right: 0;
+
+        border-bottom: 1px solid rgba(255,255,255,.10);
+
+    }
+
+
+    .process-item:last-child {
+
+        border-bottom: 0;
+
+    }
+
+
+    .process-line {
+
+        height: 25px;
+
+        margin-top: 10px;
+
+    }
+
+
+    .process-line::before {
+
+        width: 100%;
+
+    }
+
+
+    .process-content {
+
+        padding-top: 20px;
+
+    }
+
+
+    .process-content h3 {
+
+        font-size: 22px;
+
+    }
+
+
+    .process-content p {
+
+        max-width: 100%;
+
+        font-size: 13px;
+
+        line-height: 1.8;
+
+    }
+
+
+    .process-footer {
+
+        flex-wrap: wrap;
+
+        justify-content: flex-start;
+
+        gap: 15px 30px;
+
+        margin-top: 35px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .process-section {
+
+        padding: 65px 5%;
+
+    }
+
+
+    .process-heading h2 {
+
+        font-size: 35px;
+
+        letter-spacing: -1.6px;
+
+    }
+
+
+    .process-tag {
+
+        font-size: 9px;
+
+        letter-spacing: 2.5px;
+
+    }
+
+
+    .process-tag::before {
+
+        width: 28px;
+
+    }
+
+
+    .process-item {
+
+        padding-top: 22px;
+
+        padding-bottom: 30px;
+
+    }
+
+
+    .process-content h3 {
+
+        font-size: 20px;
+
+    }
+
+
+    .process-content p {
+
+        font-size: 12px;
+
+    }
+
+
+    .process-footer span {
+
+        font-size: 7px;
+
+        letter-spacing: 2px;
+
+    }
+
+}
+
+</style>
+
+
+    <!-- =========================================================
      APPLICATIONS
 ========================================================= -->
 
-<section class="applications-section">
+    <section class="applications-section">
 
-    <div class="section-container">
-
-
-        <div class="row mb-5">
-
-            <div class="col-lg-7">
-
-                <span class="section-tag">
-                    Applications
-                </span>
+        <div class="section-container">
 
 
-                <h2 class="section-title">
+            <div class="row mb-5">
 
-                    Wind power for
-                    <span>evolving infrastructure.</span>
+                <div class="col-lg-7">
 
-                </h2>
+                    <span class="section-tag">
+                        Applications
+                    </span>
+
+
+                    <h2 class="section-title">
+
+                        Wind power for
+                        <span>evolving infrastructure.</span>
+
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <!-- UTILITY -->
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="application-card">
+
+                        <i class="fa-solid fa-tower-broadcast"></i>
+
+                        <h4>
+                            Utility Scale
+                        </h4>
+
+                        <p>
+
+                            Large renewable generation
+                            infrastructure designed for
+                            utility-scale power requirements.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- INDUSTRIAL -->
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="application-card">
+
+                        <i class="fa-solid fa-industry"></i>
+
+                        <h4>
+                            Industrial
+                        </h4>
+
+                        <p>
+
+                            Renewable energy solutions
+                            supporting industrial facilities
+                            and high-energy operations.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- INFRASTRUCTURE -->
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="application-card">
+
+                        <i class="fa-solid fa-city"></i>
+
+                        <h4>
+                            Infrastructure
+                        </h4>
+
+                        <p>
+
+                            Wind energy infrastructure for
+                            large developments and renewable
+                            power projects.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HYBRID -->
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="application-card">
+
+                        <i class="fa-solid fa-sun"></i>
+
+                        <h4>
+                            Hybrid Energy
+                        </h4>
+
+                        <p>
+
+                            Wind systems can complement other
+                            renewable energy technologies as
+                            part of integrated energy solutions.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
 
             </div>
 
         </div>
 
-
-        <div class="row g-4">
-
-
-            <!-- UTILITY -->
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="application-card">
-
-                    <i class="fa-solid fa-tower-broadcast"></i>
-
-                    <h4>
-                        Utility Scale
-                    </h4>
-
-                    <p>
-
-                        Large renewable generation
-                        infrastructure designed for
-                        utility-scale power requirements.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- INDUSTRIAL -->
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="application-card">
-
-                    <i class="fa-solid fa-industry"></i>
-
-                    <h4>
-                        Industrial
-                    </h4>
-
-                    <p>
-
-                        Renewable energy solutions
-                        supporting industrial facilities
-                        and high-energy operations.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- INFRASTRUCTURE -->
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="application-card">
-
-                    <i class="fa-solid fa-city"></i>
-
-                    <h4>
-                        Infrastructure
-                    </h4>
-
-                    <p>
-
-                        Wind energy infrastructure for
-                        large developments and renewable
-                        power projects.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- HYBRID -->
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="application-card">
-
-                    <i class="fa-solid fa-sun"></i>
-
-                    <h4>
-                        Hybrid Energy
-                    </h4>
-
-                    <p>
-
-                        Wind systems can complement other
-                        renewable energy technologies as
-                        part of integrated energy solutions.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
+    </section>
 
 
 
-<!-- =========================================================
+    <!-- =========================================================
      SMART MONITORING
 ========================================================= -->
 
-<section class="monitoring-section">
+    <section class="monitoring-section">
 
-    <div class="section-container">
+        <div class="section-container">
 
-        <div class="monitoring-box">
+            <div class="monitoring-box">
 
 
-            <span class="section-tag">
-                Intelligent Energy Management
+                <span class="section-tag">
+                    Intelligent Energy Management
+                </span>
+
+
+                <h3>
+
+                    Wind power,
+                    <br>
+
+                    <span>connected intelligence.</span>
+
+                </h3>
+
+
+                <p>
+
+                    Renewable generation becomes more valuable
+                    when it can be measured, monitored and
+                    intelligently managed. Alpha Numeric combines
+                    wind energy systems with automation, IoT and
+                    energy monitoring capabilities to provide
+                    better visibility into system performance,
+                    energy flow and operational conditions.
+
+                </p>
+
+
+                <div class="monitoring-features">
+
+                    <div class="monitoring-feature">
+                        REAL-TIME MONITORING
+                    </div>
+
+                    <div class="monitoring-feature">
+                        ENERGY ANALYTICS
+                    </div>
+
+                    <div class="monitoring-feature">
+                        IoT CONNECTIVITY
+                    </div>
+
+                    <div class="monitoring-feature">
+                        REMOTE VISIBILITY
+                    </div>
+
+                    <div class="monitoring-feature">
+                        SYSTEM PERFORMANCE
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+     WHY ALPHA NUMERIC
+========================================================= -->
+
+    <section class="why-section">
+
+        <div class="section-container">
+
+
+            <div class="row mb-5">
+
+                <div class="col-lg-7">
+
+                    <span class="section-tag">
+                        Why Alpha Numeric
+                    </span>
+
+
+                    <h2 class="section-title">
+
+                        Renewable energy.
+                        <br>
+
+                        <span>Engineered intelligently.</span>
+
+                    </h2>
+
+                </div>
+
+
+                <div class="col-lg-5">
+
+                    <p class="section-text">
+
+                        We bring renewable energy together with
+                        electrical engineering, automation,
+                        monitoring and EPC execution to create
+                        connected energy infrastructure.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <!-- CARD -->
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="why-card">
+
+                        <i class="fa-solid fa-compass-drafting"></i>
+
+                        <h4>
+                            Engineering Expertise
+                        </h4>
+
+                        <p>
+
+                            Technical planning and system
+                            engineering aligned with project
+                            requirements and site conditions.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CARD -->
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="why-card">
+
+                        <i class="fa-solid fa-microchip"></i>
+
+                        <h4>
+                            Connected Technology
+                        </h4>
+
+                        <p>
+
+                            IoT, automation and monitoring
+                            capabilities help create smarter
+                            renewable energy infrastructure.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CARD -->
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="why-card">
+
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                        <h4>
+                            End-to-End Execution
+                        </h4>
+
+                        <p>
+
+                            Integrated project support from
+                            engineering and procurement through
+                            installation and commissioning.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CARD -->
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="why-card">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        <h4>
+                            Performance Focus
+                        </h4>
+
+                        <p>
+
+                            Solutions designed with emphasis
+                            on reliability, visibility,
+                            scalability and long-term value.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+     CTA
+========================================================= -->
+
+    <section class="wind-cta">
+
+        <div class="section-container">
+
+
+            <span class="section-tag" style="color:#aaaaaa;">
+
+                Renewable Future
+
             </span>
 
 
-            <h3>
+            <h2>
 
-                Wind power,
+                Let the wind
                 <br>
 
-                <span>connected intelligence.</span>
+                <strong>power tomorrow.</strong>
 
-            </h3>
+            </h2>
 
 
             <p>
 
-                Renewable generation becomes more valuable
-                when it can be measured, monitored and
-                intelligently managed. Alpha Numeric combines
-                wind energy systems with automation, IoT and
-                energy monitoring capabilities to provide
-                better visibility into system performance,
-                energy flow and operational conditions.
+                Explore intelligent wind energy solutions
+                designed to connect renewable generation with
+                modern electrical infrastructure and a more
+                sustainable energy future.
 
             </p>
 
 
-            <div class="monitoring-features">
+            <a href="index.html#contact" class="cta-button">
 
-                <div class="monitoring-feature">
-                    REAL-TIME MONITORING
-                </div>
+                DISCUSS YOUR PROJECT
 
-                <div class="monitoring-feature">
-                    ENERGY ANALYTICS
-                </div>
+                <i class="fa-solid fa-arrow-right"></i>
 
-                <div class="monitoring-feature">
-                    IoT CONNECTIVITY
-                </div>
-
-                <div class="monitoring-feature">
-                    REMOTE VISIBILITY
-                </div>
-
-                <div class="monitoring-feature">
-                    SYSTEM PERFORMANCE
-                </div>
-
-            </div>
+            </a>
 
 
         </div>
 
-    </div>
+    </section>
 
-</section>
 
 
-
-<!-- =========================================================
-     WHY ALPHA NUMERIC
-========================================================= -->
-
-<section class="why-section">
-
-    <div class="section-container">
-
-
-        <div class="row mb-5">
-
-            <div class="col-lg-7">
-
-                <span class="section-tag">
-                    Why Alpha Numeric
-                </span>
-
-
-                <h2 class="section-title">
-
-                    Renewable energy.
-                    <br>
-
-                    <span>Engineered intelligently.</span>
-
-                </h2>
-
-            </div>
-
-
-            <div class="col-lg-5">
-
-                <p class="section-text">
-
-                    We bring renewable energy together with
-                    electrical engineering, automation,
-                    monitoring and EPC execution to create
-                    connected energy infrastructure.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="row g-4">
-
-
-            <!-- CARD -->
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="why-card">
-
-                    <i class="fa-solid fa-compass-drafting"></i>
-
-                    <h4>
-                        Engineering Expertise
-                    </h4>
-
-                    <p>
-
-                        Technical planning and system
-                        engineering aligned with project
-                        requirements and site conditions.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- CARD -->
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="why-card">
-
-                    <i class="fa-solid fa-microchip"></i>
-
-                    <h4>
-                        Connected Technology
-                    </h4>
-
-                    <p>
-
-                        IoT, automation and monitoring
-                        capabilities help create smarter
-                        renewable energy infrastructure.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- CARD -->
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="why-card">
-
-                    <i class="fa-solid fa-screwdriver-wrench"></i>
-
-                    <h4>
-                        End-to-End Execution
-                    </h4>
-
-                    <p>
-
-                        Integrated project support from
-                        engineering and procurement through
-                        installation and commissioning.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- CARD -->
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="why-card">
-
-                    <i class="fa-solid fa-chart-line"></i>
-
-                    <h4>
-                        Performance Focus
-                    </h4>
-
-                    <p>
-
-                        Solutions designed with emphasis
-                        on reliability, visibility,
-                        scalability and long-term value.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     CTA
-========================================================= -->
-
-<section class="wind-cta">
-
-    <div class="section-container">
-
-
-        <span class="section-tag"
-              style="color:#aaaaaa;">
-
-            Renewable Future
-
-        </span>
-
-
-        <h2>
-
-            Let the wind
-            <br>
-
-            <strong>power tomorrow.</strong>
-
-        </h2>
-
-
-        <p>
-
-            Explore intelligent wind energy solutions
-            designed to connect renewable generation with
-            modern electrical infrastructure and a more
-            sustainable energy future.
-
-        </p>
-
-
-        <a href="index.html#contact"
-           class="cta-button">
-
-            DISCUSS YOUR PROJECT
-
-            <i class="fa-solid fa-arrow-right"></i>
-
-        </a>
-
-
-    </div>
-
-</section>
-
-
-
-  <!-- footer start -->
+    <!-- footer start -->
 
     <footer class="premium-footer">
 
@@ -5612,46 +10451,45 @@
 
     </script>
     <!-- footer end -->
-    
 
 
 
-<!-- =========================================================
+
+    <!-- =========================================================
      BOOTSTRAP JS
 ========================================================= -->
 
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
 
 
 
-<!-- =========================================================
+    <!-- =========================================================
      NAVBAR SCROLL
 ========================================================= -->
 
-<script>
+    <script>
 
-    window.addEventListener("scroll", function () {
+        window.addEventListener("scroll", function () {
 
-        const navbar =
-            document.querySelector(".main-navbar");
+            const navbar =
+                document.querySelector(".main-navbar");
 
-        if (window.scrollY > 30) {
+            if (window.scrollY > 30) {
 
-            navbar.style.boxShadow =
-                "0 5px 25px rgba(0,0,0,0.07)";
+                navbar.style.boxShadow =
+                    "0 5px 25px rgba(0,0,0,0.07)";
 
-        } else {
+            } else {
 
-            navbar.style.boxShadow =
-                "none";
+                navbar.style.boxShadow =
+                    "none";
 
-        }
+            }
 
-    });
+        });
 
-</script>
+    </script>
 
 
 </body>

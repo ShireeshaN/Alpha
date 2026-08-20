@@ -162,7 +162,7 @@
                     rgba(0, 0, 0, .94) 0%,
                     rgba(0, 0, 0, .78) 42%,
                     rgba(0, 0, 0, .18) 100%),
-                url("assets/img/banners/wind.png");
+                url("assets/img/about/about-banner.png");
 
             background-size: cover;
             background-position: center;
@@ -1756,7 +1756,7 @@
 
 
 
-  <!-- =========================================================
+<!-- =========================================================
      WHO WE ARE
 ========================================================= -->
 
@@ -1815,13 +1815,11 @@
         <!-- RIGHT CARDS -->
         <div class="who-grid">
 
-
             <!-- CARD 01 -->
             <div class="who-card"
-                 style="--card-image:url('assets/img/banners/solar.png');">
+                 style="--card-image:url('assets/img/about/PRECISION ENGINEERING.png');">
 
                 <div class="card-bg"></div>
-
                 <div class="card-overlay"></div>
 
                 <div class="card-content">
@@ -1862,10 +1860,9 @@
 
             <!-- CARD 02 -->
             <div class="who-card"
-                 style="--card-image:url('assets/img/banners/solar.png');">
+                 style="--card-image:url('assets/img/about/INTELLIGENT FUTURE.png');">
 
                 <div class="card-bg"></div>
-
                 <div class="card-overlay"></div>
 
                 <div class="card-content">
@@ -1906,10 +1903,9 @@
 
             <!-- CARD 03 -->
             <div class="who-card"
-                 style="--card-image:url('assets/img/banners/solar.png');">
+                 style="--card-image:url('assets/img/about/END-TO-END DELIVERY.png');">
 
                 <div class="card-bg"></div>
-
                 <div class="card-overlay"></div>
 
                 <div class="card-content">
@@ -1950,10 +1946,9 @@
 
             <!-- CARD 04 -->
             <div class="who-card"
-                 style="--card-image:url('assets/img/banners/solar.png');">
+                 style="--card-image:url('assets/img/about/FUTURE READY.png');">
 
                 <div class="card-bg"></div>
-
                 <div class="card-overlay"></div>
 
                 <div class="card-content">
@@ -1996,8 +1991,11 @@
     </div>
 
 </section>
+
+
 <style>
-    /* =========================================================
+
+/* =========================================================
    WHO WE ARE — PREMIUM COMPLETE CSS
 ========================================================= */
 
@@ -2356,6 +2354,7 @@
 
 /* =========================================================
    CARD IMAGE
+   FIXED IMAGE — NEVER CHANGES
 ========================================================= */
 
 .card-bg {
@@ -2380,10 +2379,8 @@
     filter: grayscale(20%);
 
     transition:
-        opacity .65s ease,
         transform 1.2s cubic-bezier(.22, 1, .36, 1),
-        filter .8s ease,
-        background-image 0s;
+        filter .8s ease;
 }
 
 
@@ -2618,17 +2615,9 @@
 
 
 /* =========================================================
-   AUTOMATIC CONTENT CHANGE
+   TEXT CHANGE ANIMATION
+   IMAGE IS NOT TOUCHED
 ========================================================= */
-
-.who-card.changing .card-bg {
-    opacity: 0;
-
-    transform: scale(1.08);
-
-    filter: blur(5px) grayscale(100%);
-}
-
 
 .who-card.changing .card-bottom {
     opacity: 0;
@@ -2760,15 +2749,6 @@
 
 
 /* =========================================================
-   IMAGE ZOOM WHILE AUTO CHANGE
-========================================================= */
-
-.who-card.changing {
-    overflow: hidden;
-}
-
-
-/* =========================================================
    DESKTOP LARGE
 ========================================================= */
 
@@ -2883,14 +2863,10 @@
     }
 
 
-    /* Container */
-
     .who-container {
         gap: 45px;
     }
 
-
-    /* Heading */
 
     .who-title {
         margin-top: 18px;
@@ -2912,8 +2888,6 @@
     }
 
 
-    /* Highlight */
-
     .who-highlight {
         gap: 16px;
 
@@ -2927,8 +2901,6 @@
         line-height: 1.75;
     }
 
-
-    /* Bottom */
 
     .who-bottom-line {
         margin-top: 30px;
@@ -2944,16 +2916,12 @@
     }
 
 
-    /* Grid */
-
     .who-grid {
         grid-template-columns: 1fr;
 
         gap: 12px;
     }
 
-
-    /* Cards */
 
     .who-card {
         height: 310px;
@@ -3086,12 +3054,19 @@
     }
 
 }
+
 </style>
 
+
 <script>
+
 /* =========================================================
-   WHO WE ARE — PREMIUM AUTO IMAGE + TEXT ROTATION
-   1 & 4  →  2 & 3  →  1 & 4
+   WHO WE ARE
+   FIXED IMAGES + TEXT ONLY ROTATION
+
+   IMPORTANT:
+   Images are defined only in HTML using --card-image.
+   JavaScript NEVER changes the image.
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -3102,100 +3077,110 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       CARD CONTENT + IMAGES
+       TEXT DATA ONLY
+       
+       NO IMAGE PATHS HERE
+       Images will remain permanently fixed.
     ===================================================== */
 
     const cardData = {
 
         0: [
+
             {
-                image: "assets/img/who/engineering.jpg",
                 label: "CORE CAPABILITY",
                 title: "Engineering",
                 text: "Practical engineering solutions built around performance, reliability and efficiency."
             },
+
             {
-                image: "assets/img/who/engineering-2.jpg",
                 label: "PRECISION ENGINEERING",
                 title: "Smart Engineering",
                 text: "Advanced engineering approaches designed for dependable and efficient systems."
             },
+
             {
-                image: "assets/img/who/engineering-3.jpg",
                 label: "SYSTEM DESIGN",
                 title: "Integrated Systems",
                 text: "Intelligent system design connecting technology, performance and operational needs."
             }
+
         ],
 
+
         1: [
+
             {
-                image: "assets/img/who/technology.jpg",
                 label: "DIGITAL SYSTEMS",
                 title: "Technology",
                 text: "IoT, automation and intelligent systems for connected environments."
             },
+
             {
-                image: "assets/img/who/technology-2.jpg",
                 label: "CONNECTED SOLUTIONS",
                 title: "Automation",
                 text: "Connected technologies that improve control, efficiency and operational intelligence."
             },
+
             {
-                image: "assets/img/who/technology-3.jpg",
                 label: "INTELLIGENT FUTURE",
                 title: "IoT Solutions",
                 text: "Smart connected solutions built for modern infrastructure and future-ready environments."
             }
+
         ],
 
+
         2: [
+
             {
-                image: "assets/img/who/execution.jpg",
                 label: "PROJECT DELIVERY",
                 title: "Execution",
                 text: "Structured project execution from design through commissioning."
             },
+
             {
-                image: "assets/img/who/execution-2.jpg",
                 label: "SITE MANAGEMENT",
                 title: "Implementation",
                 text: "Disciplined execution focused on quality, timelines and real-world performance."
             },
+
             {
-                image: "assets/img/who/execution-3.jpg",
                 label: "END-TO-END DELIVERY",
                 title: "Commissioning",
                 text: "From installation to commissioning, every stage is managed with precision."
             }
+
         ],
 
+
         3: [
+
             {
-                image: "assets/img/who/innovation.jpg",
                 label: "FUTURE READY",
                 title: "Innovation",
                 text: "Continuous development of smart and future-ready solutions."
             },
+
             {
-                image: "assets/img/who/innovation-2.jpg",
                 label: "NEXT GENERATION",
                 title: "Smart Innovation",
                 text: "Creative technologies transforming conventional systems into intelligent solutions."
             },
+
             {
-                image: "assets/img/who/innovation-3.jpg",
                 label: "R&D",
                 title: "Future Systems",
                 text: "Research-driven solutions created for evolving industries and connected environments."
             }
+
         ]
 
     };
 
 
     /* =====================================================
-       INITIAL INDEX
+       CURRENT TEXT INDEX
     ===================================================== */
 
     let currentIndex = 0;
@@ -3205,6 +3190,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* =====================================================
        UPDATE CARD
+       
+       ONLY TEXT CHANGES.
+       IMAGE IS COMPLETELY UNTOUCHED.
     ===================================================== */
 
     function updateCard(card, data) {
@@ -3212,22 +3200,21 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!data) return;
 
 
-        const bg = card.querySelector(".card-bg");
         const label = card.querySelector(".card-label");
         const title = card.querySelector(".card-bottom h3");
         const text = card.querySelector(".card-bottom p");
 
 
-        /* Exit animation */
+        /* Exit text animation */
 
         card.classList.add("changing");
 
 
         setTimeout(() => {
 
-            /* Change content */
-
-            bg.style.backgroundImage = `url("${data.image}")`;
+            /* =============================================
+               ONLY TEXT IS UPDATED
+               ============================================= */
 
             label.textContent = data.label;
 
@@ -3265,6 +3252,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const dataArray = cardData[cardIndex];
 
+            if (!dataArray || !dataArray.length) return;
+
+
             const nextData =
                 dataArray[currentIndex % dataArray.length];
 
@@ -3285,12 +3275,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* =====================================================
        AUTOMATIC SEQUENCE
+
+       01 + 04
+          ↓
+       02 + 03
+          ↓
+       01 + 04
+          ↓
+       02 + 03
        
-       1 + 4
-       ↓
-       2 + 3
-       ↓
-       1 + 4
+       IMAGES REMAIN FIXED
+       ONLY TEXT CHANGES
     ===================================================== */
 
     function runSequence() {
@@ -3344,6 +3339,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     section.classList.add("is-visible");
 
+
                     setTimeout(() => {
 
                         runSequence();
@@ -3364,14 +3360,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     if (section) {
+
         observer.observe(section);
+
     }
 
 });
+
 </script>
+
 <!-- who we are end -->
-
-
 
   
 
