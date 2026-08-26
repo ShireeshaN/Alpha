@@ -142,176 +142,6 @@ a{
 }
 
 
-/* =========================================================
-   HERO
-========================================================= */
-
-.transmission-hero{
-    min-height:700px;
-    margin-top:100px;
-    position:relative;
-    display:flex;
-    align-items:center;
-    overflow:hidden;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,.94) 0%,
-            rgba(0,0,0,.82) 38%,
-            rgba(0,0,0,.42) 72%,
-            rgba(0,0,0,.12) 100%
-        ),
-        url("assets/img/banners/transmission-2.png");
-
-    background-size:cover;
-    background-position:center;
-}
-
-.hero-content{
-    width:100%;
-    max-width:1350px;
-    margin:auto;
-    padding:100px 7%;
-    position:relative;
-    z-index:2;
-}
-
-.hero-small{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    margin-bottom:24px;
-
-    color:#bbb;
-    font-size:11px;
-    font-weight:700;
-    letter-spacing:3px;
-    text-transform:uppercase;
-}
-
-.hero-small::before{
-    content:"";
-    width:42px;
-    height:1px;
-    background:#fff;
-}
-
-.hero-content h1{
-    max-width:850px;
-
-    color:#fff;
-    font-size:clamp(50px,7vw,94px);
-    line-height:.96;
-    font-weight:700;
-    letter-spacing:-4px;
-
-    margin-bottom:30px;
-}
-
-.hero-content h1 span{
-    font-weight:300;
-}
-
-.hero-text{
-    max-width:650px;
-
-    color:#d4d4d4;
-    font-size:15px;
-    line-height:1.9;
-
-    margin-bottom:35px;
-}
-
-.hero-buttons{
-    display:flex;
-    align-items:center;
-    gap:14px;
-}
-
-.hero-btn-primary{
-    display:inline-flex;
-    align-items:center;
-    gap:12px;
-
-    padding:15px 25px;
-
-    background:#fff;
-    color:#111;
-
-    font-size:11px;
-    font-weight:700;
-    letter-spacing:1px;
-
-    transition:.3s ease;
-}
-
-.hero-btn-primary:hover{
-    background:#ddd;
-    color:#000;
-    transform:translateY(-3px);
-}
-
-.hero-btn-secondary{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-
-    padding:14px 22px;
-
-    border:1px solid rgba(255,255,255,.4);
-
-    color:#fff;
-
-    font-size:11px;
-    font-weight:600;
-    letter-spacing:1px;
-
-    transition:.3s ease;
-}
-
-.hero-btn-secondary:hover{
-    background:#fff;
-    color:#111;
-}
-
-
-/* HERO SIDE DATA */
-
-.hero-data{
-    position:absolute;
-    right:7%;
-    bottom:55px;
-
-    display:flex;
-    gap:10px;
-
-    z-index:3;
-}
-
-.hero-data-item{
-    min-width:165px;
-    padding:16px 20px;
-
-    background:rgba(0,0,0,.65);
-    border:1px solid rgba(255,255,255,.18);
-    backdrop-filter:blur(10px);
-}
-
-.hero-data-item strong{
-    display:block;
-    color:#fff;
-    font-size:18px;
-    margin-bottom:5px;
-}
-
-.hero-data-item span{
-    color:#aaa;
-    font-size:9px;
-    text-transform:uppercase;
-    letter-spacing:1px;
-}
-
 
 /* =========================================================
    INTRO STRIP
@@ -447,7 +277,7 @@ a{
             rgba(0,0,0,.05),
             rgba(0,0,0,.05)
         ),
-        url("assets/img/transmission-worker.jpg");
+        url("assets/img/transmission/about.png");
 
     background-size:cover;
     background-position:center;
@@ -535,117 +365,6 @@ a{
 }
 
 
-/* =========================================================
-   VOLTAGE CAPABILITIES
-========================================================= */
-
-.voltage-section{
-    padding:105px 8%;
-    background:#f5f5f5;
-}
-
-.voltage-top{
-    max-width:700px;
-    margin:0 auto 50px;
-    text-align:center;
-}
-
-.voltage-top .black-line{
-    margin:20px auto 25px;
-}
-
-.voltage-grid{
-    max-width:1250px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:repeat(7,1fr);
-    gap:12px;
-}
-
-.voltage-card{
-    min-height:170px;
-
-    position:relative;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-
-    background:#fff;
-    border:1px solid #e5e5e5;
-
-    overflow:hidden;
-    transition:.35s ease;
-}
-
-.voltage-card::before{
-    content:"";
-
-    position:absolute;
-    top:0;
-    left:0;
-
-    width:100%;
-    height:3px;
-
-    background:#111;
-}
-
-.voltage-card:hover{
-    background:#111;
-    color:#fff;
-
-    transform:translateY(-8px);
-
-    box-shadow:0 20px 40px rgba(0,0,0,.14);
-}
-
-.voltage-icon{
-    width:42px;
-    height:42px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    margin-bottom:13px;
-
-    background:#f0f0f0;
-    color:#111;
-
-    font-size:17px;
-}
-
-.voltage-card:hover .voltage-icon{
-    background:#fff;
-    color:#111;
-}
-
-.voltage-value{
-    color:#111;
-    font-size:20px;
-    font-weight:800;
-}
-
-.voltage-card:hover .voltage-value{
-    color:#fff;
-}
-
-.voltage-label{
-    margin-top:6px;
-
-    color:#777;
-
-    font-size:8px;
-    text-transform:uppercase;
-    letter-spacing:1px;
-}
-
-.voltage-card:hover .voltage-label{
-    color:#aaa;
-}
 
 
 /* =========================================================
@@ -787,332 +506,9 @@ a{
 }
 
 
-/* =========================================================
-   PROCESS
-========================================================= */
 
-.process-section{
-    padding:110px 8%;
 
-    background:#111;
-    color:#fff;
 
-    position:relative;
-    overflow:hidden;
-}
-
-.process-section::after{
-    content:"TRANSMISSION";
-
-    position:absolute;
-    right:-100px;
-    top:100px;
-
-    color:rgba(255,255,255,.025);
-
-    font-size:110px;
-    font-weight:800;
-
-    transform:rotate(90deg);
-}
-
-.process-heading{
-    max-width:700px;
-    margin-bottom:60px;
-}
-
-.process-heading .eyebrow{
-    color:#888;
-}
-
-.process-heading .section-title{
-    color:#fff;
-}
-
-.process-heading .black-line{
-    background:#fff;
-}
-
-.process-heading p{
-    color:#aaa;
-    font-size:13px;
-    line-height:1.8;
-}
-
-.process-track{
-    max-width:1250px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:repeat(6,1fr);
-
-    position:relative;
-}
-
-.process-track::before{
-    content:"";
-
-    position:absolute;
-
-    left:30px;
-    right:30px;
-    top:25px;
-
-    height:1px;
-
-    background:#333;
-}
-
-.process-item{
-    position:relative;
-    padding-right:25px;
-}
-
-.process-circle{
-    width:50px;
-    height:50px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    position:relative;
-    z-index:2;
-
-    margin-bottom:23px;
-
-    background:#111;
-
-    border:1px solid #fff;
-
-    color:#fff;
-
-    border-radius:50%;
-
-    font-size:11px;
-    font-weight:700;
-}
-
-.process-item h4{
-    color:#fff;
-    font-size:12px;
-    font-weight:600;
-
-    margin-bottom:8px;
-}
-
-.process-item p{
-    max-width:160px;
-
-    color:#888;
-
-    font-size:9px;
-    line-height:1.7;
-}
-
-
-/* =========================================================
-   FIELD EXECUTION
-========================================================= */
-
-.field-section{
-    padding:110px 8%;
-    background:#f6f6f6;
-}
-
-.field-layout{
-    max-width:1250px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:.85fr 1.15fr;
-
-    gap:80px;
-
-    align-items:center;
-}
-
-.field-image{
-    min-height:500px;
-
-    position:relative;
-
-    background:
-        linear-gradient(
-            0deg,
-            rgba(0,0,0,.35),
-            transparent
-        ),
-        url("assets/img/transmission-worker.jpg");
-
-    background-size:cover;
-    background-position:center;
-}
-
-.field-image::before{
-    content:"";
-
-    position:absolute;
-
-    left:-20px;
-    bottom:-20px;
-
-    width:70%;
-    height:70%;
-
-    border:1px solid #111;
-
-    z-index:-1;
-}
-
-.field-image-tag{
-    position:absolute;
-
-    left:0;
-    bottom:0;
-
-    padding:18px 24px;
-
-    background:#111;
-    color:#fff;
-
-    font-size:9px;
-    font-weight:700;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-}
-
-.field-content{
-    padding-right:3%;
-}
-
-.field-list{
-    margin-top:30px;
-
-    display:grid;
-    grid-template-columns:1fr 1fr;
-
-    gap:14px;
-}
-
-.field-item{
-    padding:20px;
-
-    background:#fff;
-    border:1px solid #e5e5e5;
-
-    transition:.3s ease;
-}
-
-.field-item:hover{
-    transform:translateX(5px);
-
-    border-left:3px solid #111;
-}
-
-.field-item strong{
-    display:block;
-
-    color:#111;
-
-    font-size:11px;
-
-    margin-bottom:7px;
-}
-
-.field-item span{
-    color:#777;
-
-    font-size:9px;
-
-    line-height:1.7;
-}
-
-
-/* =========================================================
-   QUALITY
-========================================================= */
-
-.quality-section{
-    max-width:1250px;
-
-    margin:0 auto 100px;
-
-    min-height:300px;
-
-    display:grid;
-    grid-template-columns:1.4fr .6fr;
-
-    background:#111;
-
-    overflow:hidden;
-}
-
-.quality-content{
-    padding:50px;
-}
-
-.quality-content .eyebrow{
-    color:#888;
-}
-
-.quality-content h2{
-    max-width:650px;
-
-    color:#fff;
-
-    font-size:31px;
-    line-height:1.2;
-
-    margin-bottom:17px;
-}
-
-.quality-content p{
-    max-width:650px;
-
-    color:#aaa;
-
-    font-size:12px;
-    line-height:1.8;
-}
-
-.quality-points{
-    display:flex;
-    gap:35px;
-
-    margin-top:27px;
-}
-
-.quality-point strong{
-    display:block;
-
-    color:#fff;
-
-    font-size:17px;
-
-    margin-bottom:4px;
-}
-
-.quality-point span{
-    color:#999;
-
-    font-size:9px;
-}
-
-.quality-side{
-    min-height:300px;
-
-    background:
-        linear-gradient(
-            90deg,
-            #111,
-            rgba(17,17,17,.15)
-        ),
-        url("assets/img/transmission.jpg");
-
-    background-size:cover;
-    background-position:center;
-}
 
 
 /* =========================================================
@@ -1577,6 +973,8 @@ a{
 }
 
 </style>
+
+
 </head>
 
 
@@ -2027,7 +1425,6 @@ a{
 </nav>
 
 
-
 <!-- =========================================================
      HERO
 ========================================================= -->
@@ -2037,14 +1434,10 @@ a{
     <div class="hero-content">
 
         <div class="hero-small">
-
             Power Transmission Infrastructure
-
         </div>
 
-
         <h1>
-
             Connecting
             <br>
 
@@ -2054,85 +1447,697 @@ a{
             <br>
 
             Progress.
-
         </h1>
 
-
         <p class="hero-text">
-
             End-to-end transmission solutions engineered for
             dependable power delivery — from line design and tower
             erection to stringing, testing and commissioning.
-
         </p>
-
 
         <div class="hero-buttons">
 
-            <a
-                href="#services"
-                class="hero-btn-primary">
-
+            <a href="#services" class="hero-btn-primary">
                 Explore Transmission Services
-
                 <i class="fa-solid fa-arrow-right"></i>
-
             </a>
 
-
-            <a
-                href="#capabilities"
-                class="hero-btn-secondary">
-
+            <a href="#capabilities" class="hero-btn-secondary">
                 View Capabilities
-
                 <i class="fa-solid fa-arrow-down"></i>
-
             </a>
 
         </div>
 
     </div>
 
-
     <div class="hero-data">
 
         <div class="hero-data-item">
-
             <strong>765 kV</strong>
 
             <span>
                 Transmission Capability
             </span>
-
         </div>
 
-
         <div class="hero-data-item">
-
             <strong>EPC</strong>
 
             <span>
                 Engineering to Commissioning
             </span>
-
         </div>
 
-
         <div class="hero-data-item">
-
             <strong>24/7</strong>
 
             <span>
                 Reliability Focus
             </span>
-
         </div>
 
     </div>
 
 </section>
 
+<style>
+    /* =========================================================
+   HERO
+========================================================= */
+
+.transmission-hero {
+    min-height: 700px;
+    margin-top: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+    background: #080808;
+}
+
+/* Cinematic background */
+
+.transmission-hero::before {
+    content: "";
+    position: absolute;
+    inset: -25px;
+    z-index: -3;
+
+    background-image: url("assets/img/banners/transmission-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    transform: scale(1.06);
+    animation: heroBackgroundZoom 16s ease-in-out infinite alternate;
+}
+
+/* Premium contrast overlay */
+
+.transmission-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, .97) 0%,
+            rgba(0, 0, 0, .91) 30%,
+            rgba(0, 0, 0, .67) 55%,
+            rgba(0, 0, 0, .28) 78%,
+            rgba(0, 0, 0, .12) 100%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, .26) 0%,
+            transparent 35%,
+            rgba(0, 0, 0, .55) 100%
+        ),
+        radial-gradient(
+            circle at 76% 42%,
+            rgba(255, 255, 255, .08),
+            transparent 34%
+        );
+}
+
+/* Subtle light sweep */
+
+.transmission-hero .hero-content::before {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: -35%;
+    width: 300px;
+    height: 180%;
+    pointer-events: none;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, .035),
+        transparent
+    );
+
+    transform: rotate(18deg);
+    animation: heroLightSweep 8s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+    width: 100%;
+    max-width: 1350px;
+    margin: auto;
+    padding: 100px 7%;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-small {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+
+    color: #d0d0d0;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 1.5;
+    text-transform: uppercase;
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: heroRevealUp .75s cubic-bezier(.22, 1, .36, 1) .15s forwards;
+}
+
+.hero-small::before {
+    content: "";
+    width: 42px;
+    height: 1px;
+    flex-shrink: 0;
+
+    background: #fff;
+    box-shadow: 0 0 12px rgba(255, 255, 255, .55);
+
+    transform-origin: left;
+    animation: heroLineGrow 1s cubic-bezier(.22, 1, .36, 1) .45s both;
+}
+
+.hero-content h1 {
+    max-width: 850px;
+    margin: 0 0 30px;
+
+    color: #fff;
+    font-size: clamp(50px, 7vw, 94px);
+    line-height: .96;
+    font-weight: 700;
+    letter-spacing: -4px;
+
+    text-shadow:
+        0 3px 18px rgba(0, 0, 0, .55),
+        0 12px 45px rgba(0, 0, 0, .35);
+
+    opacity: 0;
+    transform: translateY(35px);
+    animation: heroTitleReveal 1s cubic-bezier(.16, 1, .3, 1) .3s forwards;
+}
+
+.hero-content h1 span {
+    position: relative;
+    display: inline-block;
+    font-weight: 300;
+    color: #f1f1f1;
+}
+
+.hero-content h1 span::after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    right: 3px;
+    bottom: 2px;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, .8),
+        rgba(255, 255, 255, 0)
+    );
+
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: heroAccentLine 1.1s cubic-bezier(.22, 1, .36, 1) 1s forwards;
+}
+
+.hero-text {
+    max-width: 650px;
+    margin: 0 0 35px;
+
+    color: #dedede;
+    font-size: 15px;
+    line-height: 1.9;
+    font-weight: 400;
+    letter-spacing: .1px;
+
+    text-shadow: 0 2px 14px rgba(0, 0, 0, .8);
+
+    opacity: 0;
+    transform: translateY(25px);
+    animation: heroRevealUp .85s cubic-bezier(.22, 1, .36, 1) .55s forwards;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    opacity: 0;
+    transform: translateY(25px);
+    animation: heroRevealUp .85s cubic-bezier(.22, 1, .36, 1) .72s forwards;
+}
+
+.hero-btn-primary,
+.hero-btn-secondary {
+    position: relative;
+    overflow: hidden;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    transition:
+        transform .35s cubic-bezier(.22, 1, .36, 1),
+        background-color .35s ease,
+        color .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+.hero-btn-primary {
+    padding: 15px 25px;
+    background: #fff;
+    color: #111;
+    border: 1px solid #fff;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .22);
+}
+
+.hero-btn-primary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 65%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, .9),
+        transparent
+    );
+
+    transform: skewX(-22deg);
+    transition: left .7s ease;
+}
+
+.hero-btn-primary:hover {
+    background: #ededed;
+    color: #000;
+    transform: translateY(-4px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .35);
+}
+
+.hero-btn-primary:hover::before {
+    left: 145%;
+}
+
+.hero-btn-secondary {
+    padding: 14px 22px;
+    color: #fff;
+
+    border: 1px solid rgba(255, 255, 255, .48);
+    background: rgba(0, 0, 0, .18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.hero-btn-secondary:hover {
+    background: #fff;
+    color: #111;
+    border-color: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, .3);
+}
+
+.hero-btn-primary i,
+.hero-btn-secondary i {
+    font-size: 10px;
+    transition: transform .35s cubic-bezier(.22, 1, .36, 1);
+}
+
+.hero-btn-primary:hover i {
+    transform: translateX(5px);
+}
+
+.hero-btn-secondary:hover i {
+    transform: translateY(4px);
+}
+
+.hero-btn-primary:focus-visible,
+.hero-btn-secondary:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 5px;
+}
+
+
+/* =========================================================
+   HERO SIDE DATA
+========================================================= */
+
+.hero-data {
+    position: absolute;
+    right: 7%;
+    bottom: 55px;
+    z-index: 3;
+
+    display: flex;
+    gap: 10px;
+}
+
+.hero-data-item {
+    min-width: 165px;
+    padding: 16px 20px;
+    position: relative;
+    overflow: hidden;
+
+    background: rgba(7, 7, 7, .72);
+    border: 1px solid rgba(255, 255, 255, .22);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, .28),
+        inset 0 1px 0 rgba(255, 255, 255, .06);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        transform .35s cubic-bezier(.22, 1, .36, 1),
+        background-color .35s ease,
+        border-color .35s ease;
+}
+
+.hero-data-item:nth-child(1) {
+    animation: heroDataReveal .7s cubic-bezier(.22, 1, .36, 1) .9s forwards;
+}
+
+.hero-data-item:nth-child(2) {
+    animation: heroDataReveal .7s cubic-bezier(.22, 1, .36, 1) 1.05s forwards;
+}
+
+.hero-data-item:nth-child(3) {
+    animation: heroDataReveal .7s cubic-bezier(.22, 1, .36, 1) 1.2s forwards;
+}
+
+.hero-data-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #fff;
+    transition: width .4s cubic-bezier(.22, 1, .36, 1);
+}
+
+.hero-data-item:hover {
+    transform: translateY(-7px);
+    background: rgba(10, 10, 10, .9);
+    border-color: rgba(255, 255, 255, .5);
+}
+
+.hero-data-item:hover::before {
+    width: 100%;
+}
+
+.hero-data-item strong {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -.2px;
+}
+
+.hero-data-item span {
+    display: block;
+
+    color: #bdbdbd;
+    font-size: 9px;
+    line-height: 1.5;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes heroBackgroundZoom {
+    0% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(1.13);
+    }
+}
+
+@keyframes heroRevealUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroTitleReveal {
+    from {
+        opacity: 0;
+        transform: translateY(38px);
+        filter: blur(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes heroDataReveal {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroLineGrow {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes heroAccentLine {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes heroLightSweep {
+    0%,
+    35% {
+        left: -35%;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    70%,
+    100% {
+        left: 105%;
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+    .transmission-hero {
+        min-height: 760px;
+    }
+
+    .hero-content {
+        padding-bottom: 200px;
+    }
+
+    .hero-data {
+        right: 7%;
+        left: 7%;
+        bottom: 45px;
+    }
+
+    .hero-data-item {
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .transmission-hero {
+        min-height: auto;
+        margin-top: 80px;
+        align-items: flex-start;
+    }
+
+    .transmission-hero::after {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(0, 0, 0, .96) 0%,
+                rgba(0, 0, 0, .83) 70%,
+                rgba(0, 0, 0, .58) 100%
+            ),
+            linear-gradient(
+                180deg,
+                rgba(0, 0, 0, .2),
+                rgba(0, 0, 0, .75)
+            );
+    }
+
+    .hero-content {
+        padding: 85px 7% 260px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(46px, 13vw, 70px);
+        letter-spacing: -2.5px;
+    }
+
+    .hero-text {
+        max-width: 560px;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .hero-buttons {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .hero-btn-primary,
+    .hero-btn-secondary {
+        width: 100%;
+        max-width: 310px;
+    }
+
+    .hero-data {
+        right: 7%;
+        left: 7%;
+        bottom: 35px;
+        gap: 8px;
+    }
+
+    .hero-data-item {
+        min-width: 0;
+        padding: 14px;
+    }
+}
+
+@media (max-width: 520px) {
+    .hero-content {
+        padding-bottom: 385px;
+    }
+
+    .hero-small {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .hero-small::before {
+        width: 28px;
+    }
+
+    .hero-content h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero-data {
+        flex-direction: column;
+    }
+
+    .hero-data-item {
+        width: 100%;
+    }
+}
+
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .transmission-hero::before,
+    .transmission-hero .hero-content::before,
+    .hero-small,
+    .hero-small::before,
+    .hero-content h1,
+    .hero-content h1 span::after,
+    .hero-text,
+    .hero-buttons,
+    .hero-data-item {
+        animation: none !important;
+    }
+
+    .hero-small,
+    .hero-content h1,
+    .hero-text,
+    .hero-buttons,
+    .hero-data-item {
+        opacity: 1;
+        transform: none;
+        filter: none;
+    }
+}
+</style>
 
 
 <!-- =========================================================
@@ -2358,169 +2363,1059 @@ a{
 
 
 <!-- =========================================================
-     VOLTAGE CAPABILITIES
+     PREMIUM VOLTAGE CAPABILITIES MODULE
 ========================================================= -->
 
-<section
-    class="voltage-section"
-    id="capabilities">
+<section class="voltage-section" id="capabilities">
 
+    <div class="voltage-container">
 
-    <div class="voltage-top">
+        <!-- SECTION HEADER -->
 
-        <div class="eyebrow">
-            Technical Capability
-        </div>
+        <div class="voltage-top reveal-item">
 
+            <div class="voltage-heading">
 
-        <h2 class="section-title">
+                <div class="eyebrow">
+                    Technical Capability
+                </div>
 
-            Transmission
-            <span>Voltage Range</span>
+                <h2 class="section-title">
+                    Transmission & Sub-Transmission
+                    <span>Voltage Range</span>
+                </h2>
 
-        </h2>
+                <div class="black-line"></div>
 
-
-        <div class="black-line"></div>
-
-
-        <p class="section-description">
-
-            Our transmission capabilities cover a broad range
-            of electrical voltage levels to support diverse power
-            infrastructure requirements.
-
-        </p>
-
-    </div>
-
-
-    <div class="voltage-grid">
-
-
-        <div class="voltage-card">
-
-            <div class="voltage-icon">
-                <i class="fa-solid fa-bolt"></i>
             </div>
 
-            <div class="voltage-value">
-                11kV
-            </div>
-
-            <div class="voltage-label">
-                Power Lines
-            </div>
+            <p class="section-description">
+                Our transmission capabilities cover a broad range
+                of electrical voltage levels to support diverse power
+                infrastructure requirements.
+            </p>
 
         </div>
 
 
-        <div class="voltage-card">
+        <!-- VOLTAGE GRID -->
 
-            <div class="voltage-icon">
-                <i class="fa-solid fa-bolt"></i>
-            </div>
+        <div class="voltage-grid">
 
-            <div class="voltage-value">
-                33kV
-            </div>
+            <!-- 33kV -->
 
-            <div class="voltage-label">
-                Transmission
-            </div>
+            <article
+                class="voltage-card voltage-card-33 reveal-item"
+                style="--level:25%; --delay:0.05s;">
+
+                <img
+                    src="assets/img/transmission/33kv.png"
+                    alt="33kV sub-transmission power lines"
+                    loading="lazy">
+
+                <div class="voltage-overlay"></div>
+
+                <div class="voltage-card-top">
+                    <span class="voltage-number">01</span>
+
+                    <span class="voltage-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </span>
+                </div>
+
+                <div class="voltage-content">
+
+                    <div class="voltage-label">
+                        Sub-Transmission
+                    </div>
+
+                    <div class="voltage-value">
+                        33<span>kV</span>
+                    </div>
+
+                    <div class="voltage-meter">
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 66kV -->
+
+            <article
+                class="voltage-card voltage-card-66 reveal-item"
+                style="--level:35%; --delay:0.12s;">
+
+                <img
+                    src="assets/img/transmission/66kv.png"
+                    alt="66kV sub-transmission infrastructure"
+                    loading="lazy">
+
+                <div class="voltage-overlay"></div>
+
+                <div class="voltage-card-top">
+                    <span class="voltage-number">02</span>
+
+                    <span class="voltage-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </span>
+                </div>
+
+                <div class="voltage-content">
+
+                    <div class="voltage-label">
+                        Sub-Transmission
+                    </div>
+
+                    <div class="voltage-value">
+                        66<span>kV</span>
+                    </div>
+
+                    <div class="voltage-meter">
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 110kV -->
+
+            <article
+                class="voltage-card voltage-card-110 reveal-item"
+                style="--level:46%; --delay:0.19s;">
+
+                <img
+                    src="assets/img/transmission/110kv.jpg"
+                    alt="110kV high voltage transmission towers"
+                    loading="lazy">
+
+                <div class="voltage-overlay"></div>
+
+                <div class="voltage-card-top">
+                    <span class="voltage-number">03</span>
+
+                    <span class="voltage-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </span>
+                </div>
+
+                <div class="voltage-content">
+
+                    <div class="voltage-label">
+                        High Voltage Transmission
+                    </div>
+
+                    <div class="voltage-value">
+                        110<span>kV</span>
+                    </div>
+
+                    <div class="voltage-meter">
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 132kV -->
+
+            <article
+                class="voltage-card voltage-card-132 reveal-item"
+                style="--level:55%; --delay:0.26s;">
+
+                <img
+                    src="assets/img/transmission/132kv.png"
+                    alt="132kV high voltage transmission infrastructure"
+                    loading="lazy">
+
+                <div class="voltage-overlay"></div>
+
+                <div class="voltage-card-top">
+                    <span class="voltage-number">04</span>
+
+                    <span class="voltage-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </span>
+                </div>
+
+                <div class="voltage-content">
+
+                    <div class="voltage-label">
+                        High Voltage Transmission
+                    </div>
+
+                    <div class="voltage-value">
+                        132<span>kV</span>
+                    </div>
+
+                    <div class="voltage-meter">
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 220kV -->
+
+            <article
+                class="voltage-card voltage-card-220 reveal-item"
+                style="--level:70%; --delay:0.33s;">
+
+                <img
+                    src="assets/img/transmission/220kv.png"
+                    alt="220kV high voltage transmission system"
+                    loading="lazy">
+
+                <div class="voltage-overlay"></div>
+
+                <div class="voltage-card-top">
+                    <span class="voltage-number">05</span>
+
+                    <span class="voltage-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </span>
+                </div>
+
+                <div class="voltage-content">
+
+                    <div class="voltage-label">
+                        High Voltage Transmission
+                    </div>
+
+                    <div class="voltage-value">
+                        220<span>kV</span>
+                    </div>
+
+                    <div class="voltage-meter">
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 400kV -->
+
+            <article
+                class="voltage-card voltage-card-400 reveal-item"
+                style="--level:86%; --delay:0.40s;">
+
+                <img
+                    src="assets/img/transmission/400kv.png"
+                    alt="400kV EHV transmission lines"
+                    loading="lazy">
+
+                <div class="voltage-overlay"></div>
+
+                <div class="voltage-card-top">
+                    <span class="voltage-number">06</span>
+
+                    <span class="voltage-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </span>
+                </div>
+
+                <div class="voltage-content">
+
+                    <div class="voltage-label">
+                        EHV Transmission
+                    </div>
+
+                    <div class="voltage-value">
+                        400<span>kV</span>
+                    </div>
+
+                    <div class="voltage-meter">
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 765kV FEATURE -->
+
+            <article
+                class="voltage-card voltage-card-765 reveal-item"
+                style="--level:100%; --delay:0.47s;">
+
+                <img
+                    src="assets/img/transmission/765kv.png"
+                    alt="765kV EHV transmission towers"
+                    loading="lazy">
+
+                <div class="voltage-overlay"></div>
+
+                <div class="voltage-feature-tag">
+                    Maximum Capability
+                </div>
+
+                <div class="voltage-card-top">
+                    <span class="voltage-number">07</span>
+
+                    <span class="voltage-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </span>
+                </div>
+
+                <div class="voltage-content">
+
+                    <div class="voltage-label">
+                        EHV Transmission
+                    </div>
+
+                    <div class="voltage-value">
+                        765<span>kV</span>
+                    </div>
+
+                    <div class="voltage-meter">
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </article>
 
         </div>
-
-
-        <div class="voltage-card">
-
-            <div class="voltage-icon">
-                <i class="fa-solid fa-bolt"></i>
-            </div>
-
-            <div class="voltage-value">
-                66kV
-            </div>
-
-            <div class="voltage-label">
-                Transmission
-            </div>
-
-        </div>
-
-
-        <div class="voltage-card">
-
-            <div class="voltage-icon">
-                <i class="fa-solid fa-bolt"></i>
-            </div>
-
-            <div class="voltage-value">
-                110kV
-            </div>
-
-            <div class="voltage-label">
-                Transmission
-            </div>
-
-        </div>
-
-
-        <div class="voltage-card">
-
-            <div class="voltage-icon">
-                <i class="fa-solid fa-bolt"></i>
-            </div>
-
-            <div class="voltage-value">
-                220kV
-            </div>
-
-            <div class="voltage-label">
-                High Voltage
-            </div>
-
-        </div>
-
-
-        <div class="voltage-card">
-
-            <div class="voltage-icon">
-                <i class="fa-solid fa-bolt"></i>
-            </div>
-
-            <div class="voltage-value">
-                400kV
-            </div>
-
-            <div class="voltage-label">
-                EHV Transmission
-            </div>
-
-        </div>
-
-
-        <div class="voltage-card">
-
-            <div class="voltage-icon">
-                <i class="fa-solid fa-bolt"></i>
-            </div>
-
-            <div class="voltage-value">
-                765kV
-            </div>
-
-            <div class="voltage-label">
-                Ultra High Voltage
-            </div>
-
-        </div>
-
 
     </div>
 
 </section>
+<style>
+    /* =========================================================
+   TRANSMISSION VOLTAGE CAPABILITIES
+========================================================= */
 
+.voltage-section {
+    --sky-950: #06334f;
+    --sky-900: #08486d;
+    --sky-800: #0c628f;
+    --sky-700: #1682b6;
+    --sky-500: #4ab7e5;
+    --sky-300: #a7dcf2;
+    --sky-100: #eaf7fc;
+    --ice-white: #f9fdff;
+
+    position: relative;
+    overflow: hidden;
+    padding: 115px 7%;
+
+    background:
+        radial-gradient(
+            circle at 88% 8%,
+            rgba(74, 183, 229, 0.20),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 6% 92%,
+            rgba(167, 220, 242, 0.24),
+            transparent 26%
+        ),
+        linear-gradient(
+            135deg,
+            #f9fdff 0%,
+            #eef8fc 48%,
+            #e7f4fa 100%
+        );
+}
+
+.voltage-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.65;
+
+    background-image:
+        linear-gradient(
+            rgba(17, 126, 176, 0.055) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(17, 126, 176, 0.055) 1px,
+            transparent 1px
+        );
+
+    background-size: 55px 55px;
+}
+
+.voltage-container {
+    width: 100%;
+    max-width: 1350px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.voltage-top {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+    align-items: end;
+    gap: 80px;
+
+    margin-bottom: 55px;
+}
+
+.voltage-heading {
+    max-width: 820px;
+}
+
+.voltage-section .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    margin-bottom: 20px;
+
+    color: #397895;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.voltage-section .eyebrow::before {
+    content: "";
+    width: 38px;
+    height: 1px;
+    flex-shrink: 0;
+    background: linear-gradient(90deg, var(--sky-800), var(--sky-500));
+}
+
+.voltage-section .section-title {
+    margin: 0;
+
+    color: var(--sky-950);
+    font-size: clamp(44px, 4.8vw, 75px);
+    font-weight: 700;
+    line-height: 0.98;
+    letter-spacing: -3.5px;
+}
+
+.voltage-section .section-title span {
+    display: block;
+    color: #4c91af;
+    font-weight: 300;
+}
+
+.voltage-section .black-line {
+    width: 80px;
+    height: 2px;
+    margin-top: 28px;
+    background: linear-gradient(90deg, var(--sky-900), var(--sky-500));
+}
+
+.voltage-section .section-description {
+    max-width: 470px;
+    margin: 0 0 4px auto;
+
+    color: #52788a;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   PREMIUM GRID
+========================================================= */
+
+.voltage-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-areas:
+        "v33  v66  v765 v765"
+        "v110 v132 v765 v765"
+        "v220 v220 v400 v400";
+    grid-auto-rows: 255px;
+    gap: 14px;
+}
+
+.voltage-card-33 {
+    grid-area: v33;
+}
+
+.voltage-card-66 {
+    grid-area: v66;
+}
+
+.voltage-card-110 {
+    grid-area: v110;
+}
+
+.voltage-card-132 {
+    grid-area: v132;
+}
+
+.voltage-card-220 {
+    grid-area: v220;
+}
+
+.voltage-card-400 {
+    grid-area: v400;
+}
+
+.voltage-card-765 {
+    grid-area: v765;
+}
+
+
+/* =========================================================
+   VOLTAGE CARD
+========================================================= */
+
+.voltage-card {
+    --level: 50%;
+
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    color: #fff;
+    background: #8ac8e5;
+    border: 1px solid rgba(225, 247, 255, 0.72);
+
+    box-shadow:
+        0 18px 42px rgba(22, 115, 158, 0.15),
+        0 3px 10px rgba(48, 154, 201, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
+
+    transition:
+        transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.4s ease;
+}
+
+.voltage-card > img {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    filter:
+        saturate(0.88)
+        contrast(1.02)
+        brightness(0.96);
+
+    transform: scale(1.02);
+
+    transition:
+        transform 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+        filter 0.7s ease;
+}
+
+.voltage-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(103, 199, 237, 0.12) 0%,
+            rgba(40, 151, 203, 0.08) 34%,
+            rgba(10, 91, 134, 0.58) 70%,
+            rgba(5, 59, 91, 0.88) 100%
+        ),
+        linear-gradient(
+            110deg,
+            rgba(7, 92, 137, 0.42) 0%,
+            rgba(42, 158, 210, 0.14) 48%,
+            rgba(168, 224, 247, 0.10) 100%
+        );
+
+    transition: background 0.6s ease;
+}
+
+/* Soft sky-blue glass glow */
+
+.voltage-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 84% 12%,
+            rgba(196, 237, 253, 0.42),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.08),
+            transparent 45%
+        );
+
+    opacity: 0.8;
+    transition: opacity 0.5s ease;
+}
+
+/* Premium light sweep */
+
+.voltage-card::after {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: -90%;
+    z-index: -1;
+
+    width: 45%;
+    height: 170%;
+
+    pointer-events: none;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(207, 242, 255, 0.32),
+        transparent
+    );
+
+    transform: rotate(18deg);
+    transition: left 0.9s ease;
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.voltage-card-top {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    left: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.voltage-number {
+    padding: 7px 9px;
+
+    color: rgba(247, 253, 255, 0.94);
+    background: rgba(47, 151, 199, 0.20);
+    border: 1px solid rgba(220, 245, 255, 0.32);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.voltage-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--sky-900);
+    background: rgba(242, 251, 255, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.78);
+
+    box-shadow:
+        0 8px 24px rgba(12, 102, 145, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+    font-size: 13px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    transition:
+        color 0.4s ease,
+        background 0.4s ease,
+        transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+/* =========================================================
+   FEATURE CARD
+========================================================= */
+
+.voltage-feature-tag {
+    position: absolute;
+    top: 31px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 8px 13px;
+
+    color: #fff;
+    background: rgba(14, 116, 164, 0.58);
+    border: 1px solid rgba(218, 244, 255, 0.50);
+
+    box-shadow:
+        0 10px 28px rgba(6, 79, 117, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.voltage-content {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    left: 24px;
+
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.voltage-label {
+    margin-bottom: 8px;
+
+    color: rgba(224, 246, 255, 0.90);
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.voltage-value {
+    color: #fff;
+    font-size: clamp(38px, 4vw, 58px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -2.5px;
+
+    text-shadow:
+        0 5px 22px rgba(4, 61, 92, 0.52),
+        0 1px 2px rgba(6, 70, 102, 0.35);
+}
+
+.voltage-value span {
+    margin-left: 3px;
+
+    color: rgba(218, 243, 253, 0.86);
+    font-size: 0.38em;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+.voltage-card-765 .voltage-value {
+    font-size: clamp(75px, 8vw, 118px);
+    letter-spacing: -6px;
+}
+
+.voltage-card-765 .voltage-value span {
+    margin-left: 7px;
+}
+
+
+/* =========================================================
+   VOLTAGE LEVEL INDICATOR
+========================================================= */
+
+.voltage-meter {
+    width: 100%;
+    height: 2px;
+    margin-top: 17px;
+    overflow: hidden;
+
+    background: rgba(210, 241, 253, 0.28);
+}
+
+.voltage-meter span {
+    display: block;
+    width: var(--level);
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #f7fdff 0%,
+        #8fd8f5 55%,
+        #38afe0 100%
+    );
+
+    box-shadow: 0 0 16px rgba(130, 219, 252, 0.75);
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition:
+        transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.25s;
+}
+
+
+/* =========================================================
+   HOVER EFFECTS
+========================================================= */
+
+.voltage-card:hover {
+    z-index: 5;
+
+    transform: translateY(-9px);
+    border-color: rgba(221, 246, 255, 0.90);
+
+    box-shadow:
+        0 32px 70px rgba(11, 100, 143, 0.25),
+        0 10px 25px rgba(61, 169, 216, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.38);
+}
+
+.voltage-card:hover > img {
+    filter:
+        saturate(1.02)
+        contrast(1.02)
+        brightness(1.02);
+
+    transform: scale(1.1);
+}
+
+.voltage-card:hover::after {
+    left: 145%;
+}
+
+.voltage-card:hover::before {
+    opacity: 1;
+}
+
+.voltage-card:hover .voltage-content {
+    transform: translateY(-5px);
+}
+
+.voltage-card:hover .voltage-icon {
+    color: #fff;
+    background: var(--sky-700);
+    transform: rotate(8deg) scale(1.08);
+}
+
+.voltage-card:hover .voltage-meter span,
+.voltage-card.is-visible .voltage-meter span {
+    transform: scaleX(1);
+}
+
+
+/* =========================================================
+   SCROLL ANIMATION
+========================================================= */
+
+.voltage-section.has-animation .reveal-item {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.voltage-section.has-animation .reveal-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+
+    transition:
+        opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1) var(--delay, 0s),
+        transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) var(--delay, 0s);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .voltage-section {
+        padding: 95px 6%;
+    }
+
+    .voltage-top {
+        gap: 45px;
+    }
+
+    .voltage-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas:
+            "v33  v66"
+            "v110 v132"
+            "v765 v765"
+            "v220 v400";
+        grid-auto-rows: 310px;
+    }
+
+    .voltage-card-765 {
+        min-height: 440px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .voltage-section {
+        padding: 80px 20px;
+    }
+
+    .voltage-top {
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    .voltage-section .section-title {
+        font-size: clamp(42px, 12vw, 60px);
+        letter-spacing: -2.5px;
+    }
+
+    .voltage-section .section-description {
+        max-width: 100%;
+        margin: 30px 0 0;
+        font-size: 13px;
+    }
+
+    .voltage-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "v33"
+            "v66"
+            "v110"
+            "v132"
+            "v220"
+            "v400"
+            "v765";
+        grid-auto-rows: 355px;
+        gap: 12px;
+    }
+
+    .voltage-card-765 {
+        min-height: 440px;
+    }
+
+    .voltage-card-765 .voltage-value {
+        font-size: clamp(75px, 22vw, 100px);
+        letter-spacing: -5px;
+    }
+
+    .voltage-feature-tag {
+        top: 76px;
+        left: 22px;
+        transform: none;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .voltage-section.has-animation .reveal-item {
+        opacity: 1;
+        transform: none;
+    }
+
+    .voltage-card,
+    .voltage-card > img,
+    .voltage-card::after,
+    .voltage-content,
+    .voltage-icon,
+    .voltage-meter span {
+        transition: none;
+    }
+
+    .voltage-meter span {
+        transform: scaleX(1);
+    }
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const voltageSection =
+        document.querySelector(".voltage-section");
+
+    if (!voltageSection) return;
+
+    const revealItems =
+        voltageSection.querySelectorAll(".reveal-item");
+
+    const reduceMotion =
+        window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches;
+
+    if (
+        reduceMotion ||
+        !("IntersectionObserver" in window)
+    ) {
+        revealItems.forEach(function (item) {
+            item.classList.add("is-visible");
+        });
+
+        return;
+    }
+
+    voltageSection.classList.add("has-animation");
+
+    const voltageObserver =
+        new IntersectionObserver(
+            function (entries, observer) {
+
+                entries.forEach(function (entry) {
+
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add(
+                            "is-visible"
+                        );
+
+                        observer.unobserve(
+                            entry.target
+                        );
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.16,
+                rootMargin: "0px 0px -40px 0px"
+            }
+        );
+
+    revealItems.forEach(function (item) {
+        voltageObserver.observe(item);
+    });
+
+});
+</script>
 
 
 <!-- =========================================================
@@ -2717,151 +3612,1002 @@ a{
 
 
 <!-- =========================================================
-     EXECUTION PROCESS
+     PREMIUM PROJECT EXECUTION MODULE
 ========================================================= -->
 
 <section class="process-section">
 
-
-    <div class="process-heading">
-
-        <div class="eyebrow">
-            Project Execution
-        </div>
-
-
-        <h2 class="section-title">
-
-            From Engineering
-            <br>
-
-            <span>to Energization</span>
-
-        </h2>
-
-
-        <div class="black-line"></div>
-
-
-        <p>
-
-            Our structured execution approach ensures that every
-            transmission project progresses through clearly defined
-            engineering, construction and commissioning stages.
-
-        </p>
-
+    <div class="process-watermark" aria-hidden="true">
+        TRANSMISSION
     </div>
 
+    <div class="process-container">
 
-    <div class="process-track">
+        <!-- HEADING -->
+        <div class="process-heading">
 
+            <div class="process-title-area">
 
-        <div class="process-item">
+                <div class="process-eyebrow">
+                    <span></span>
+                    Project Execution
+                </div>
 
-            <div class="process-circle">
-                01
+                <h2 class="process-title">
+                    From Engineering
+                    <span>to Energization</span>
+                </h2>
+
             </div>
 
-            <h4>
-                Survey & Planning
-            </h4>
+            <div class="process-introduction">
 
-            <p>
-                Route assessment, site survey and project planning.
-            </p>
+                <p>
+                    Our structured execution approach ensures that every
+                    transmission project progresses through clearly defined
+                    engineering, construction and commissioning stages.
+                </p>
+
+                <div class="process-summary">
+
+                    <div>
+                        <strong>06</strong>
+                        <span>Execution Stages</span>
+                    </div>
+
+                    <div>
+                        <strong>360°</strong>
+                        <span>Project Management</span>
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
 
-        <div class="process-item">
+        <!-- PROCESS TIMELINE -->
+        <ol class="process-track">
 
-            <div class="process-circle">
-                02
-            </div>
+            <!-- STEP 01 -->
+            <li class="process-step">
 
-            <h4>
-                Engineering
-            </h4>
+                <div class="process-node">
+                    <span>01</span>
+                </div>
 
-            <p>
-                Technical design and engineering coordination.
-            </p>
+                <article class="process-card">
 
-        </div>
+                    <div class="process-image">
 
+                        <img
+                            src="assets/img/transmission/Survey & Planning.png"
+                            alt="Transmission line route survey and project planning"
+                            loading="lazy"
+                        >
 
-        <div class="process-item">
+                        <div class="image-overlay"></div>
 
-            <div class="process-circle">
-                03
-            </div>
+                        <span class="image-tag">
+                            Assessment
+                        </span>
 
-            <h4>
-                Foundation
-            </h4>
+                    </div>
 
-            <p>
-                Foundation construction and structural preparation.
-            </p>
+                    <div class="process-content">
 
-        </div>
+                        <span class="step-label">
+                            Stage 01
+                        </span>
 
+                        <h3>Survey &amp; Planning</h3>
 
-        <div class="process-item">
+                        <p>
+                            Route assessment, detailed site survey and
+                            strategic project planning.
+                        </p>
 
-            <div class="process-circle">
-                04
-            </div>
+                        <div class="process-arrow" aria-hidden="true">
+                            <span></span>
+                        </div>
 
-            <h4>
-                Tower Erection
-            </h4>
+                    </div>
 
-            <p>
-                Tower assembly, erection and structural completion.
-            </p>
+                </article>
 
-        </div>
-
-
-        <div class="process-item">
-
-            <div class="process-circle">
-                05
-            </div>
-
-            <h4>
-                Stringing
-            </h4>
-
-            <p>
-                Conductor, earth wire and hardware installation.
-            </p>
-
-        </div>
+            </li>
 
 
-        <div class="process-item">
+            <!-- STEP 02 -->
+            <li class="process-step">
 
-            <div class="process-circle">
-                06
-            </div>
+                <div class="process-node">
+                    <span>02</span>
+                </div>
 
-            <h4>
-                Testing & Energization
-            </h4>
+                <article class="process-card">
 
-            <p>
-                Final testing, inspection and commissioning.
-            </p>
+                    <div class="process-image">
 
-        </div>
+                        <img
+                            src="assets/img/transmission/Engineering.png"
+                            alt="Transmission engineering and technical design"
+                            loading="lazy"
+                        >
 
+                        <div class="image-overlay"></div>
+
+                        <span class="image-tag">
+                            Design
+                        </span>
+
+                    </div>
+
+                    <div class="process-content">
+
+                        <span class="step-label">
+                            Stage 02
+                        </span>
+
+                        <h3>Engineering</h3>
+
+                        <p>
+                            Detailed technical design, structural analysis
+                            and multidisciplinary engineering coordination.
+                        </p>
+
+                        <div class="process-arrow" aria-hidden="true">
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </li>
+
+
+            <!-- STEP 03 -->
+            <li class="process-step">
+
+                <div class="process-node">
+                    <span>03</span>
+                </div>
+
+                <article class="process-card">
+
+                    <div class="process-image">
+
+                        <img
+                            src="assets/img/transmission/Foundation.png"
+                            alt="Transmission tower foundation construction"
+                            loading="lazy"
+                        >
+
+                        <div class="image-overlay"></div>
+
+                        <span class="image-tag">
+                            Civil Works
+                        </span>
+
+                    </div>
+
+                    <div class="process-content">
+
+                        <span class="step-label">
+                            Stage 03
+                        </span>
+
+                        <h3>Foundation</h3>
+
+                        <p>
+                            Precision foundation construction, reinforcement
+                            and structural site preparation.
+                        </p>
+
+                        <div class="process-arrow" aria-hidden="true">
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </li>
+
+
+            <!-- STEP 04 -->
+            <li class="process-step">
+
+                <div class="process-node">
+                    <span>04</span>
+                </div>
+
+                <article class="process-card">
+
+                    <div class="process-image">
+
+                        <img
+                            src="assets/img/transmission/Tower Erection.png"
+                            alt="High voltage transmission tower erection"
+                            loading="lazy"
+                        >
+
+                        <div class="image-overlay"></div>
+
+                        <span class="image-tag">
+                            Construction
+                        </span>
+
+                    </div>
+
+                    <div class="process-content">
+
+                        <span class="step-label">
+                            Stage 04
+                        </span>
+
+                        <h3>Tower Erection</h3>
+
+                        <p>
+                            Safe tower assembly, controlled erection and
+                            complete structural alignment.
+                        </p>
+
+                        <div class="process-arrow" aria-hidden="true">
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </li>
+
+
+            <!-- STEP 05 -->
+            <li class="process-step">
+
+                <div class="process-node">
+                    <span>05</span>
+                </div>
+
+                <article class="process-card">
+
+                    <div class="process-image">
+
+                        <img
+                            src="assets/img/transmission/Stringing.png"
+                            alt="Transmission conductor and earth wire stringing"
+                            loading="lazy"
+                        >
+
+                        <div class="image-overlay"></div>
+
+                        <span class="image-tag">
+                            Installation
+                        </span>
+
+                    </div>
+
+                    <div class="process-content">
+
+                        <span class="step-label">
+                            Stage 05
+                        </span>
+
+                        <h3>Stringing</h3>
+
+                        <p>
+                            Conductor, earth wire, insulator and associated
+                            hardware installation.
+                        </p>
+
+                        <div class="process-arrow" aria-hidden="true">
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </li>
+
+
+            <!-- STEP 06 -->
+            <li class="process-step">
+
+                <div class="process-node">
+                    <span>06</span>
+                </div>
+
+                <article class="process-card">
+
+                    <div class="process-image">
+
+                        <img
+                            src="assets/img/transmission/Testing & Energization.png"
+                            alt="Transmission project testing and energization"
+                            loading="lazy"
+                        >
+
+                        <div class="image-overlay"></div>
+
+                        <span class="image-tag">
+                            Commissioning
+                        </span>
+
+                    </div>
+
+                    <div class="process-content">
+
+                        <span class="step-label">
+                            Final Stage
+                        </span>
+
+                        <h3>Testing &amp; Energization</h3>
+
+                        <p>
+                            Final inspection, system testing, commissioning
+                            and safe project energization.
+                        </p>
+
+                        <div class="process-arrow" aria-hidden="true">
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </li>
+
+        </ol>
 
     </div>
 
 </section>
+
+
+<style>
+
+/* =========================================================
+   PREMIUM PROJECT EXECUTION MODULE
+========================================================= */
+
+.process-section {
+    --process-bg: #0d0e0f;
+    --process-card: #151719;
+    --process-card-hover: #1a1c1f;
+    --process-white: #ffffff;
+    --process-muted: #92979d;
+    --process-line: rgba(255, 255, 255, 0.13);
+    --process-accent: #c9a66b;
+    --process-accent-light: #e5c995;
+
+    position: relative;
+    overflow: hidden;
+    padding: 120px 6%;
+    background:
+        radial-gradient(
+            circle at 80% 5%,
+            rgba(201, 166, 107, 0.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 5% 85%,
+            rgba(255, 255, 255, 0.035),
+            transparent 25%
+        ),
+        var(--process-bg);
+    color: var(--process-white);
+    font-family:
+        "Inter",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+}
+
+
+/* BACKGROUND GRID */
+
+.process-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.18;
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        );
+    background-size: 80px 80px;
+}
+
+
+/* WATERMARK */
+
+.process-watermark {
+    position: absolute;
+    top: 70px;
+    right: -25px;
+    color: rgba(255, 255, 255, 0.022);
+    font-size: clamp(70px, 10vw, 165px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    writing-mode: vertical-rl;
+    user-select: none;
+    pointer-events: none;
+}
+
+
+/* MAIN CONTAINER */
+
+.process-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.process-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.65fr);
+    gap: 80px;
+    align-items: end;
+    margin-bottom: 80px;
+}
+
+.process-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+    color: var(--process-accent-light);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.process-eyebrow span {
+    display: block;
+    width: 42px;
+    height: 1px;
+    background: var(--process-accent);
+}
+
+.process-title {
+    max-width: 850px;
+    margin: 0;
+    color: var(--process-white);
+    font-size: clamp(43px, 5.4vw, 82px);
+    font-weight: 300;
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+}
+
+.process-title span {
+    display: block;
+    margin-top: 10px;
+    color: var(--process-accent-light);
+    font-weight: 600;
+}
+
+.process-introduction {
+    padding-left: 30px;
+    border-left: 1px solid var(--process-line);
+}
+
+.process-introduction > p {
+    max-width: 520px;
+    margin: 0;
+    color: #adb1b5;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.9;
+}
+
+.process-summary {
+    display: flex;
+    gap: 42px;
+    margin-top: 32px;
+    padding-top: 25px;
+    border-top: 1px solid var(--process-line);
+}
+
+.process-summary div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.process-summary strong {
+    color: var(--process-white);
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.process-summary span {
+    color: #73787e;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   PROCESS TRACK
+========================================================= */
+
+.process-track {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* HORIZONTAL CONNECTING LINE */
+
+.process-track::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    height: 1px;
+    background:
+        linear-gradient(
+            90deg,
+            var(--process-accent),
+            rgba(201, 166, 107, 0.25) 75%,
+            var(--process-line)
+        );
+}
+
+
+/* =========================================================
+   PROCESS STEP
+========================================================= */
+
+.process-step {
+    position: relative;
+    min-width: 0;
+    padding-top: 73px;
+}
+
+.process-node {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 51px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--process-bg);
+    border: 1px solid rgba(201, 166, 107, 0.75);
+    border-radius: 50%;
+    box-shadow: 0 0 0 7px var(--process-bg);
+    transition:
+        background 0.35s ease,
+        border-color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.process-node::after {
+    content: "";
+    position: absolute;
+    inset: 5px;
+    border: 1px solid rgba(201, 166, 107, 0.18);
+    border-radius: inherit;
+}
+
+.process-node span {
+    position: relative;
+    z-index: 2;
+    color: var(--process-accent-light);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   PROCESS CARD
+========================================================= */
+
+.process-card {
+    height: 100%;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.035),
+            transparent 45%
+        ),
+        var(--process-card);
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    transition:
+        transform 0.45s cubic-bezier(.2, .8, .2, 1),
+        border-color 0.45s ease,
+        background 0.45s ease,
+        box-shadow 0.45s ease;
+}
+
+.process-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 4.8;
+    background: #202225;
+}
+
+.process-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    filter:
+        grayscale(25%)
+        saturate(75%)
+        contrast(105%)
+        brightness(78%);
+    transition:
+        transform 0.75s cubic-bezier(.2, .8, .2, 1),
+        filter 0.55s ease;
+}
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(10, 11, 12, 0.05) 15%,
+            rgba(10, 11, 12, 0.15) 55%,
+            rgba(10, 11, 12, 0.92) 100%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(201, 166, 107, 0.10),
+            transparent 45%
+        );
+}
+
+.image-tag {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    padding: 8px 10px;
+    color: #f0dfbf;
+    background: rgba(11, 12, 13, 0.72);
+    border: 1px solid rgba(201, 166, 107, 0.25);
+    backdrop-filter: blur(10px);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.process-content {
+    position: relative;
+    min-height: 205px;
+    padding: 25px 20px 24px;
+}
+
+.step-label {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--process-accent);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.process-content h3 {
+    min-height: 42px;
+    margin: 0 0 13px;
+    color: var(--process-white);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+}
+
+.process-content p {
+    margin: 0;
+    color: #8d9297;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+
+/* CARD ARROW */
+
+.process-arrow {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    width: 27px;
+    height: 27px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    transition:
+        background 0.35s ease,
+        border-color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.process-arrow span {
+    position: absolute;
+    top: 12px;
+    left: 8px;
+    width: 9px;
+    height: 1px;
+    background: #a4a8ab;
+}
+
+.process-arrow span::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    right: 0;
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid #a4a8ab;
+    border-right: 1px solid #a4a8ab;
+    transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   HOVER EFFECTS
+========================================================= */
+
+.process-step:hover .process-card {
+    z-index: 3;
+    transform: translateY(-9px);
+    background: var(--process-card-hover);
+    border-color: rgba(201, 166, 107, 0.42);
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.34);
+}
+
+.process-step:hover .process-image img {
+    transform: scale(1.075);
+    filter:
+        grayscale(0%)
+        saturate(90%)
+        contrast(108%)
+        brightness(88%);
+}
+
+.process-step:hover .process-node {
+    transform: scale(1.08);
+    color: #121212;
+    background: var(--process-accent);
+    border-color: var(--process-accent);
+}
+
+.process-step:hover .process-node span {
+    color: #111;
+}
+
+.process-step:hover .process-arrow {
+    transform: rotate(-35deg);
+    background: var(--process-accent);
+    border-color: var(--process-accent);
+}
+
+.process-step:hover .process-arrow span,
+.process-step:hover .process-arrow span::before {
+    border-color: #111;
+}
+
+.process-step:hover .process-arrow span {
+    background: #111;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1250px) {
+
+    .process-section {
+        padding: 100px 5%;
+    }
+
+    .process-heading {
+        gap: 45px;
+    }
+
+    .process-track {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 55px 20px;
+    }
+
+    .process-track::before {
+        display: none;
+    }
+
+    .process-step {
+        padding-top: 65px;
+    }
+
+    .process-step::before {
+        content: "";
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        right: -20px;
+        height: 1px;
+        background: var(--process-line);
+    }
+
+    .process-step:nth-child(3n)::before {
+        right: 25px;
+    }
+
+    .process-image {
+        aspect-ratio: 16 / 10;
+    }
+
+    .process-content {
+        min-height: 185px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .process-section {
+        padding: 85px 6%;
+    }
+
+    .process-watermark {
+        display: none;
+    }
+
+    .process-heading {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin-bottom: 60px;
+    }
+
+    .process-introduction {
+        padding-left: 20px;
+    }
+
+    .process-track {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .process-step:nth-child(3n)::before {
+        right: -20px;
+    }
+
+    .process-step:nth-child(2n)::before {
+        right: 25px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 580px) {
+
+    .process-section {
+        padding: 70px 20px;
+    }
+
+    .process-title {
+        font-size: clamp(40px, 13vw, 58px);
+    }
+
+    .process-introduction {
+        padding-left: 16px;
+    }
+
+    .process-summary {
+        gap: 25px;
+    }
+
+    .process-track {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-left: 70px;
+    }
+
+    .process-step {
+        padding-top: 0;
+    }
+
+    .process-step::before {
+        top: 25px;
+        bottom: -28px;
+        left: -45px;
+        right: auto;
+        width: 1px;
+        height: auto;
+        background: var(--process-line);
+    }
+
+    .process-step:nth-child(2n)::before,
+    .process-step:nth-child(3n)::before {
+        right: auto;
+    }
+
+    .process-step:last-child::before {
+        display: none;
+    }
+
+    .process-node {
+        top: 0;
+        left: -70px;
+    }
+
+    .process-image {
+        aspect-ratio: 16 / 11;
+    }
+
+    .process-content {
+        min-height: auto;
+        padding: 24px 20px 55px;
+    }
+
+    .process-content h3 {
+        min-height: auto;
+        font-size: 18px;
+    }
+
+    .process-content p {
+        font-size: 12px;
+    }
+}
+
+
+/* REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .process-card,
+    .process-image img,
+    .process-node,
+    .process-arrow {
+        transition: none;
+    }
+}
+
+</style>
 
 
 
@@ -2871,11 +4617,96 @@ a{
 
 <section class="field-section">
 
-
     <div class="field-layout">
 
+        <!-- LEFT SIDE CONTENT -->
+        <div class="field-content">
 
+            <div class="eyebrow">
+                Site Capabilities
+            </div>
+
+            <h2 class="section-title">
+                Precision on
+                <br>
+                <span>Every Structure</span>
+            </h2>
+
+            <div class="black-line"></div>
+
+            <p class="section-description">
+                Transmission infrastructure demands precise
+                coordination between engineering, equipment,
+                manpower and site safety. Our execution methodology
+                is focused on maintaining quality and reliability
+                throughout the construction cycle.
+            </p>
+
+            <div class="field-list">
+
+                <div class="field-item">
+                    <strong>Tower Assembly</strong>
+
+                    <span>
+                        Accurate assembly and erection of tower structures.
+                    </span>
+                </div>
+
+                <div class="field-item">
+                    <strong>Conductor Stringing</strong>
+
+                    <span>
+                        Controlled stringing and tensioning operations.
+                    </span>
+                </div>
+
+                <div class="field-item">
+                    <strong>Sag &amp; Tension</strong>
+
+                    <span>
+                        Precise conductor sag and clearance control.
+                    </span>
+                </div>
+
+                <div class="field-item">
+                    <strong>Line Alignment</strong>
+
+                    <span>
+                        Route and structure alignment according to design.
+                    </span>
+                </div>
+
+                <div class="field-item">
+                    <strong>Hardware Fixing</strong>
+
+                    <span>
+                        Installation of fittings, clamps and accessories.
+                    </span>
+                </div>
+
+                <div class="field-item">
+                    <strong>Safety Compliance</strong>
+
+                    <span>
+                        Safety procedures followed across project sites.
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE IMAGE -->
         <div class="field-image">
+
+            <img
+                src="assets/img/transmission/field execution.png"
+                alt="Transmission field execution"
+                loading="lazy"
+            >
+
+            <div class="field-image-overlay"></div>
 
             <div class="field-image-tag">
                 Transmission Field Execution
@@ -2883,225 +4714,832 @@ a{
 
         </div>
 
-
-        <div class="field-content">
-
-            <div class="eyebrow">
-                Site Capabilities
-            </div>
-
-
-            <h2 class="section-title">
-
-                Precision on
-                <br>
-
-                <span>Every Structure</span>
-
-            </h2>
-
-
-            <div class="black-line"></div>
-
-
-            <p class="section-description">
-
-                Transmission infrastructure demands precise
-                coordination between engineering, equipment,
-                manpower and site safety. Our execution methodology
-                is focused on maintaining quality and reliability
-                throughout the construction cycle.
-
-            </p>
-
-
-            <div class="field-list">
-
-
-                <div class="field-item">
-
-                    <strong>
-                        Tower Assembly
-                    </strong>
-
-                    <span>
-                        Accurate assembly and erection of tower structures.
-                    </span>
-
-                </div>
-
-
-                <div class="field-item">
-
-                    <strong>
-                        Conductor Stringing
-                    </strong>
-
-                    <span>
-                        Controlled stringing and tensioning operations.
-                    </span>
-
-                </div>
-
-
-                <div class="field-item">
-
-                    <strong>
-                        Sag & Tension
-                    </strong>
-
-                    <span>
-                        Precise conductor sag and clearance control.
-                    </span>
-
-                </div>
-
-
-                <div class="field-item">
-
-                    <strong>
-                        Line Alignment
-                    </strong>
-
-                    <span>
-                        Route and structure alignment according to design.
-                    </span>
-
-                </div>
-
-
-                <div class="field-item">
-
-                    <strong>
-                        Hardware Fixing
-                    </strong>
-
-                    <span>
-                        Installation of fittings, clamps and accessories.
-                    </span>
-
-                </div>
-
-
-                <div class="field-item">
-
-                    <strong>
-                        Safety Compliance
-                    </strong>
-
-                    <span>
-                        Safety procedures followed across project sites.
-                    </span>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
     </div>
 
 </section>
 
+
+<style>
+
+/* =========================================================
+   FIELD EXECUTION
+========================================================= */
+
+.field-section {
+    padding: 110px 8%;
+    background: #f6f6f6;
+}
+
+.field-layout {
+    width: 100%;
+    max-width: 1450px;
+    margin: auto;
+
+    display: grid;
+
+    /* CONTENT LEFT — IMAGE RIGHT */
+    grid-template-columns: 1.15fr 0.85fr;
+
+    gap: 80px;
+    align-items: center;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.field-content {
+    padding-left: 3%;
+}
+
+.field-content .eyebrow {
+    margin-bottom: 18px;
+
+    color: #817363;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.field-content .section-title {
+    margin: 0;
+
+    color: #111;
+
+    font-size: clamp(48px, 5vw, 72px);
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -3px;
+}
+
+.field-content .section-title span {
+    font-weight: 300;
+}
+
+.field-content .black-line {
+    width: 55px;
+    height: 3px;
+
+    margin: 28px 0 30px;
+
+    background: #111;
+}
+
+.field-content .section-description {
+    max-width: 750px;
+    margin: 0;
+
+    color: #666;
+
+    font-size: 13px;
+    line-height: 2;
+}
+
+
+/* =========================================================
+   FIELD LIST
+========================================================= */
+
+.field-list {
+    margin-top: 38px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+.field-item {
+    min-height: 105px;
+    padding: 22px 24px;
+
+    background: #fff;
+
+    border: 1px solid #e1e1e1;
+    border-left: 3px solid transparent;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.field-item:hover {
+    transform: translateX(5px);
+
+    border-left-color: #111;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+}
+
+.field-item strong {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #111;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.field-item span {
+    display: block;
+
+    color: #777;
+
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   RIGHT SIDE IMAGE
+========================================================= */
+
+.field-image {
+    position: relative;
+
+    width: 100%;
+    min-height: 610px;
+
+    background: #d8d8d8;
+    isolation: isolate;
+}
+
+.field-image img {
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.field-image-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.02) 30%,
+            rgba(0, 0, 0, 0.58) 100%
+        );
+}
+
+
+/* IMAGE DECORATIVE BORDER */
+
+.field-image::before {
+    content: "";
+
+    position: absolute;
+
+    right: -20px;
+    bottom: -20px;
+
+    z-index: -1;
+
+    width: 70%;
+    height: 70%;
+
+    border: 1px solid #111;
+}
+
+
+/* IMAGE BOTTOM LABEL */
+
+.field-image-tag {
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    z-index: 3;
+
+    padding: 19px 25px;
+
+    background: #111;
+    color: #fff;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .field-section {
+        padding: 90px 6%;
+    }
+
+    .field-layout {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .field-content {
+        padding-left: 0;
+    }
+
+    .field-image {
+        min-height: 600px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .field-section {
+        padding: 70px 20px;
+    }
+
+    .field-content .section-title {
+        font-size: 44px;
+        letter-spacing: -2px;
+    }
+
+    .field-list {
+        grid-template-columns: 1fr;
+    }
+
+    .field-image {
+        min-height: 500px;
+    }
+
+    .field-image::before {
+        right: -10px;
+        bottom: -10px;
+    }
+
+    .field-image-tag {
+        right: 0;
+        left: 0;
+
+        text-align: center;
+    }
+}
+
+</style>
 
 
 <!-- =========================================================
-     QUALITY BANNER
+     TRANSMISSION COMMITMENT BANNER
 ========================================================= -->
 
-<section class="quality-section">
+<section class="tx-commitment">
 
+    <!-- LEFT CONTENT -->
+    <div class="tx-commitment__content">
 
-    <div class="quality-content">
-
-        <div class="eyebrow">
+        <div class="tx-commitment__eyebrow">
+            <span></span>
             Our Commitment
         </div>
 
-
-        <h2>
-
+        <h2 class="tx-commitment__title">
             Safe Infrastructure.
-            Reliable Power.
+            <span>Reliable Power.</span>
             Long-Term Performance.
-
         </h2>
 
-
-        <p>
-
+        <p class="tx-commitment__description">
             Every transmission project is executed with a strong
             focus on safety, engineering accuracy, workmanship and
             dependable system performance.
-
         </p>
 
 
-        <div class="quality-points">
+        <!-- COMMITMENT POINTS -->
+        <div class="tx-commitment__points">
 
+            <div class="tx-commitment__item">
 
-            <div class="quality-point">
-
-                <strong>
+                <span class="tx-commitment__number">
                     01
-                </strong>
-
-                <span>
-                    Safety First
                 </span>
+
+                <div>
+                    <strong>Safety First</strong>
+
+                    <small>
+                        Safety-driven execution across every project stage.
+                    </small>
+                </div>
 
             </div>
 
 
-            <div class="quality-point">
+            <div class="tx-commitment__item">
 
-                <strong>
+                <span class="tx-commitment__number">
                     02
-                </strong>
-
-                <span>
-                    Quality Workmanship
                 </span>
+
+                <div>
+                    <strong>Quality Workmanship</strong>
+
+                    <small>
+                        Consistent construction and installation standards.
+                    </small>
+                </div>
 
             </div>
 
 
-            <div class="quality-point">
+            <div class="tx-commitment__item">
 
-                <strong>
+                <span class="tx-commitment__number">
                     03
-                </strong>
-
-                <span>
-                    Technical Precision
                 </span>
+
+                <div>
+                    <strong>Technical Precision</strong>
+
+                    <small>
+                        Accurate engineering, alignment and execution.
+                    </small>
+                </div>
 
             </div>
 
 
-            <div class="quality-point">
+            <div class="tx-commitment__item">
 
-                <strong>
+                <span class="tx-commitment__number">
                     04
-                </strong>
-
-                <span>
-                    Reliable Delivery
                 </span>
 
-            </div>
+                <div>
+                    <strong>Reliable Delivery</strong>
 
+                    <small>
+                        Dependable performance from planning to energization.
+                    </small>
+                </div>
+
+            </div>
 
         </div>
 
     </div>
 
 
-    <div class="quality-side"></div>
+    <!-- RIGHT IMAGE -->
+    <figure class="tx-commitment__visual">
+
+        <img
+            src="assets/img/transmission-quality.jpg"
+            alt="Reliable transmission infrastructure"
+            loading="lazy"
+        >
+
+        <div class="tx-commitment__overlay"></div>
+
+        <figcaption class="tx-commitment__caption">
+
+            <span>Engineering Excellence</span>
+
+            <strong>
+                Built for long-term reliability
+            </strong>
+
+        </figcaption>
+
+    </figure>
 
 </section>
 
+
+<style>
+
+/* =========================================================
+   TRANSMISSION COMMITMENT BANNER
+========================================================= */
+
+.tx-commitment,
+.tx-commitment * {
+    box-sizing: border-box;
+}
+
+.tx-commitment {
+    --tx-dark: #101112;
+    --tx-card: #171819;
+    --tx-white: #ffffff;
+    --tx-text: #a0a4a8;
+    --tx-line: rgba(255, 255, 255, 0.12);
+    --tx-gold: #c5a36b;
+
+    position: relative;
+
+    width: calc(100% - 48px);
+    max-width: 1350px;
+    min-height: 560px;
+
+    margin: 0 auto 100px;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+
+    overflow: hidden;
+
+    background: var(--tx-dark);
+
+    font-family:
+        "Inter",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+}
+
+
+/* GOLD TOP DETAIL */
+
+.tx-commitment::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 5;
+
+    width: 140px;
+    height: 3px;
+
+    background: var(--tx-gold);
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.tx-commitment__content {
+    position: relative;
+    z-index: 2;
+
+    padding: 70px;
+}
+
+
+/* EYEBROW */
+
+.tx-commitment__eyebrow {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 23px;
+
+    color: var(--tx-gold);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+}
+
+.tx-commitment__eyebrow span {
+    display: block;
+
+    width: 35px;
+    height: 1px;
+
+    background: var(--tx-gold);
+}
+
+
+/* TITLE */
+
+.tx-commitment__title {
+    max-width: 720px;
+
+    margin: 0;
+
+    color: var(--tx-white);
+
+    font-size: clamp(42px, 4.3vw, 64px);
+    font-weight: 300;
+
+    line-height: 1.06;
+    letter-spacing: -2.5px;
+}
+
+.tx-commitment__title span {
+    display: block;
+
+    color: var(--tx-gold);
+
+    font-weight: 650;
+}
+
+
+/* DESCRIPTION */
+
+.tx-commitment__description {
+    max-width: 680px;
+
+    margin: 25px 0 0;
+
+    color: var(--tx-text);
+
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   COMMITMENT POINTS
+========================================================= */
+
+.tx-commitment__points {
+    max-width: 760px;
+
+    margin-top: 40px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    border-top: 1px solid var(--tx-line);
+    border-left: 1px solid var(--tx-line);
+}
+
+.tx-commitment__item {
+    min-height: 105px;
+
+    display: grid;
+    grid-template-columns: 40px 1fr;
+
+    gap: 14px;
+
+    padding: 21px;
+
+    border-right: 1px solid var(--tx-line);
+    border-bottom: 1px solid var(--tx-line);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.tx-commitment__item:hover {
+    position: relative;
+    z-index: 2;
+
+    transform: translateY(-3px);
+
+    background: rgba(255, 255, 255, 0.045);
+}
+
+
+/* NUMBER */
+
+.tx-commitment__number {
+    color: var(--tx-gold);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    line-height: 1.5;
+}
+
+
+/* ITEM CONTENT */
+
+.tx-commitment__item strong {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--tx-white);
+
+    font-size: 12px;
+    font-weight: 650;
+}
+
+.tx-commitment__item small {
+    display: block;
+
+    color: #777c81;
+
+    font-size: 9px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   RIGHT IMAGE
+========================================================= */
+
+.tx-commitment__visual {
+    position: relative;
+
+    min-width: 0;
+    min-height: 560px;
+
+    margin: 0;
+
+    overflow: hidden;
+}
+
+
+/* IMAGE */
+
+.tx-commitment__visual img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    filter:
+        saturate(80%)
+        contrast(105%)
+        brightness(82%);
+
+    transition:
+        transform 0.7s ease,
+        filter 0.5s ease;
+}
+
+.tx-commitment:hover .tx-commitment__visual img {
+    transform: scale(1.04);
+
+    filter:
+        saturate(90%)
+        contrast(107%)
+        brightness(90%);
+}
+
+
+/* IMAGE OVERLAY */
+
+.tx-commitment__overlay {
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--tx-dark) 0%,
+            rgba(16, 17, 18, 0.55) 15%,
+            transparent 55%
+        ),
+        linear-gradient(
+            180deg,
+            transparent 40%,
+            rgba(0, 0, 0, 0.75) 100%
+        );
+}
+
+
+/* IMAGE CAPTION */
+
+.tx-commitment__caption {
+    position: absolute;
+
+    right: 35px;
+    bottom: 35px;
+    left: 45px;
+
+    padding-top: 16px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.tx-commitment__caption span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--tx-gold);
+
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+
+    text-transform: uppercase;
+}
+
+.tx-commitment__caption strong {
+    display: block;
+
+    color: #fff;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .tx-commitment {
+        grid-template-columns: 1fr;
+    }
+
+    .tx-commitment__content {
+        padding: 60px 50px;
+    }
+
+    .tx-commitment__visual {
+        min-height: 480px;
+    }
+
+    .tx-commitment__overlay {
+        background:
+            linear-gradient(
+                180deg,
+                var(--tx-dark) 0%,
+                rgba(16, 17, 18, 0.05) 25%,
+                rgba(0, 0, 0, 0.75) 100%
+            );
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .tx-commitment {
+        width: calc(100% - 40px);
+        margin-bottom: 70px;
+    }
+
+    .tx-commitment__content {
+        padding: 50px 24px;
+    }
+
+    .tx-commitment__title {
+        font-size: 40px;
+        letter-spacing: -1.5px;
+    }
+
+    .tx-commitment__description {
+        font-size: 12px;
+    }
+
+    .tx-commitment__points {
+        grid-template-columns: 1fr;
+    }
+
+    .tx-commitment__item {
+        min-height: auto;
+    }
+
+    .tx-commitment__visual {
+        min-height: 430px;
+    }
+
+    .tx-commitment__caption {
+        right: 24px;
+        bottom: 25px;
+        left: 24px;
+    }
+}
+
+</style>
 
 
 <!-- =========================================================

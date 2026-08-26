@@ -170,7 +170,7 @@
                     rgba(0,0,0,.35) 78%,
                     rgba(0,0,0,.10) 100%
                 ),
-                url("images/home-automation-hero.jpg");
+                url("assets/img/automation/banner.png");
 
             background-size: cover;
             background-position: center;
@@ -360,153 +360,8 @@
         }
 
 
-        /* =========================================================
-           INTRO
-        ========================================================= */
+        
 
-        .intro {
-            padding: 110px 8%;
-
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-
-            gap: 90px;
-            align-items: center;
-
-            background: #fff;
-        }
-
-        .intro-text {
-            color: #666;
-            font-size: 13px;
-            line-height: 1.9;
-        }
-
-
-        /* =========================================================
-           SMART HOME SOLUTIONS
-        ========================================================= */
-
-        .solutions-section {
-            padding: 105px 8%;
-            background: #f5f5f5;
-        }
-
-        .section-heading {
-            max-width: 760px;
-            text-align: center;
-            margin: 0 auto 50px;
-        }
-
-        .section-heading .section-line {
-            margin: 20px auto 25px;
-        }
-
-        .section-heading p {
-            color: #666;
-            font-size: 13px;
-            line-height: 1.9;
-        }
-
-        .solution-grid {
-            max-width: 1250px;
-            margin: auto;
-
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-
-            gap: 18px;
-        }
-
-        .solution-card {
-            min-height: 260px;
-
-            position: relative;
-
-            padding: 32px;
-
-            background: #fff;
-            border: 1px solid #e5e5e5;
-
-            overflow: hidden;
-
-            transition: .35s ease;
-        }
-
-        .solution-card::before {
-            content: "";
-
-            position: absolute;
-            left: 0;
-            top: 0;
-
-            width: 0;
-            height: 3px;
-
-            background: #111;
-
-            transition: .35s ease;
-        }
-
-        .solution-card:hover {
-            background: #111;
-            transform: translateY(-7px);
-
-            box-shadow: 0 20px 40px rgba(0,0,0,.12);
-        }
-
-        .solution-card:hover::before {
-            width: 100%;
-        }
-
-        .solution-icon {
-            width: 50px;
-            height: 50px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            margin-bottom: 23px;
-
-            background: #111;
-            color: #fff;
-
-            font-size: 18px;
-
-            transition: .3s ease;
-        }
-
-        .solution-card:hover .solution-icon {
-            background: #fff;
-            color: #111;
-        }
-
-        .solution-card h3 {
-            color: #111;
-            font-size: 15px;
-            font-weight: 600;
-
-            margin-bottom: 10px;
-
-            transition: .3s ease;
-        }
-
-        .solution-card p {
-            color: #777;
-            font-size: 11px;
-            line-height: 1.75;
-
-            transition: .3s ease;
-        }
-
-        .solution-card:hover h3 {
-            color: #fff;
-        }
-
-        .solution-card:hover p {
-            color: #aaa;
-        }
 
 
         /* =========================================================
@@ -540,7 +395,7 @@
                     rgba(0,0,0,.15),
                     rgba(0,0,0,.15)
                 ),
-                url("images/smart-home.jpg");
+                url("assets/img/automation/home-automation-experience.png");
 
             background-size: cover;
             background-position: center;
@@ -1850,322 +1705,1689 @@
 
 
 <!-- =========================================================
-     INTRO
+     HOME AUTOMATION INTRO
 ========================================================= -->
 
-<section class="intro">
+<section class="ha-intro-section">
+
+    <div class="ha-intro-frame">
 
 
-    <div>
+        <!-- LEFT CONTENT -->
 
-        <div class="section-label">
-            Intelligent Living
+        <div class="ha-intro-lead">
+
+            <div class="ha-intro-index">
+                <span>01</span>
+                <small>Smart Living</small>
+            </div>
+
+            <div class="ha-intro-label">
+                Intelligent Living
+            </div>
+
+            <h2 class="ha-intro-title">
+
+                Your Home.
+
+                <br>
+
+                <span>Your Control.</span>
+
+            </h2>
+
+            <div class="ha-intro-line"></div>
+
+            <p class="ha-intro-description">
+
+                Home automation connects lighting, climate,
+                security, entertainment and electrical systems
+                into one intelligent environment.
+
+            </p>
+
+            <div class="ha-intro-assurance">
+
+                <span class="ha-intro-assurance-dot"></span>
+
+                <div>
+
+                    <strong>
+                        One Connected Ecosystem
+                    </strong>
+
+                    <small>
+                        Designed around the way you live
+                    </small>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <h2 class="section-title">
 
-            Your Home.
+        <!-- RIGHT CONTENT -->
 
-            <br>
+        <div class="ha-intro-story">
 
-            Your Control.
+            <div class="ha-intro-label">
+                Connected Technology
+            </div>
 
-        </h2>
+            <h3>
 
-        <div class="section-line"></div>
+                Technology That
 
-        <p class="intro-text">
+                <br>
 
-            Home automation connects lighting, climate,
-            security, entertainment and electrical systems
-            into one intelligent environment.
+                <span>Works Around You</span>
 
-        </p>
+            </h3>
 
-    </div>
+            <p>
 
+                Smart devices, sensors and control systems work
+                together to create personalized experiences while
+                improving comfort, convenience, security and
+                energy efficiency.
 
-    <div>
+            </p>
 
-        <div class="section-label">
-            Connected Technology
+            <p>
+
+                Manage your complete living environment using wall
+                panels, mobile applications, voice assistants,
+                automated scenes and intelligent schedules.
+
+            </p>
+
+            <div class="ha-intro-statement">
+
+                <span>Connected</span>
+                <span>Responsive</span>
+                <span>Efficient</span>
+
+            </div>
+
         </div>
 
-        <h2 class="section-title">
 
-            Technology That
-            Works Around You
+        <!-- CONTROL OPTIONS -->
 
-        </h2>
+        <div class="ha-intro-controls">
 
-        <div class="section-line"></div>
 
-        <p class="intro-text">
+            <div class="ha-control-item">
 
-            Smart devices, sensors and control systems work
-            together to create personalized experiences while
-            improving comfort, convenience, security and
-            energy efficiency.
+                <span class="ha-control-number">01</span>
 
-            <br><br>
+                <div>
 
-            Control your home through wall panels, mobile
-            applications, voice assistants, automated scenes
-            and intelligent schedules.
+                    <strong>Wall Panels</strong>
 
-        </p>
+                    <p>
+                        Centralized room and system control.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="ha-control-item">
+
+                <span class="ha-control-number">02</span>
+
+                <div>
+
+                    <strong>Mobile Control</strong>
+
+                    <p>
+                        Access your home from anywhere.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="ha-control-item">
+
+                <span class="ha-control-number">03</span>
+
+                <div>
+
+                    <strong>Voice Assistants</strong>
+
+                    <p>
+                        Natural hands-free home operation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="ha-control-item">
+
+                <span class="ha-control-number">04</span>
+
+                <div>
+
+                    <strong>Smart Scenes</strong>
+
+                    <p>
+                        Personalized schedules and experiences.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
 
     </div>
-
 
 </section>
+
+<style>
+    /* =========================================================
+   HOME AUTOMATION INTRO
+========================================================= */
+
+.ha-intro-section,
+.ha-intro-section * {
+    box-sizing: border-box;
+}
+
+.ha-intro-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    padding: 120px 80px;
+
+    background: #ffffff;
+    color: #111111;
+}
+
+/* Decorative background typography */
+
+.ha-intro-section::before {
+    content: "CONNECTED";
+
+    position: absolute;
+    top: 30px;
+    right: -35px;
+    z-index: -1;
+
+    color: rgba(17, 17, 17, 0.025);
+
+    font-size: 140px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -6px;
+
+    pointer-events: none;
+}
+
+
+/* Main frame */
+
+.ha-intro-frame {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 575px 675px;
+
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+
+/* =========================================================
+   LEFT SIDE
+========================================================= */
+
+.ha-intro-lead {
+    position: relative;
+
+    min-height: 470px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 65px 75px 65px 0;
+
+    border-right: 1px solid #dcdcdc;
+}
+
+.ha-intro-index {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ha-intro-index span {
+    color: #111111;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.ha-intro-index small {
+    padding-left: 10px;
+
+    border-left: 1px solid #cccccc;
+
+    color: #888888;
+
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.ha-intro-label {
+    margin-bottom: 20px;
+
+    color: #777777;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+}
+
+.ha-intro-title {
+    margin: 0;
+
+    color: #111111;
+
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -3px;
+}
+
+.ha-intro-title span {
+    font-weight: 300;
+}
+
+.ha-intro-line {
+    width: 58px;
+    height: 3px;
+
+    margin: 30px 0 26px;
+
+    background: #111111;
+}
+
+.ha-intro-description {
+    max-width: 430px;
+
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.ha-intro-assurance {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    margin-top: 34px;
+}
+
+.ha-intro-assurance-dot {
+    width: 9px;
+    height: 9px;
+
+    flex: 0 0 auto;
+
+    border: 2px solid #111111;
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 5px #eeeeee;
+}
+
+.ha-intro-assurance strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #111111;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.ha-intro-assurance small {
+    display: block;
+
+    color: #888888;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.ha-intro-story {
+    min-height: 470px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 65px 0 65px 75px;
+}
+
+.ha-intro-story h3 {
+    max-width: 560px;
+
+    margin: 0 0 27px;
+
+    color: #111111;
+
+    font-size: 37px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+}
+
+.ha-intro-story h3 span {
+    font-weight: 300;
+}
+
+.ha-intro-story p {
+    max-width: 590px;
+
+    margin: 0 0 17px;
+
+    color: #666666;
+
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.ha-intro-statement {
+    display: flex;
+    align-items: center;
+    gap: 0;
+
+    margin-top: 18px;
+}
+
+.ha-intro-statement span {
+    position: relative;
+
+    padding: 0 18px;
+
+    color: #111111;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.ha-intro-statement span:first-child {
+    padding-left: 0;
+}
+
+.ha-intro-statement span:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    width: 3px;
+    height: 3px;
+
+    background: #aaaaaa;
+    border-radius: 50%;
+
+    transform: translateY(-50%);
+}
+
+
+/* =========================================================
+   CONTROL OPTIONS
+========================================================= */
+
+.ha-intro-controls {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid #dcdcdc;
+}
+
+.ha-control-item {
+    min-height: 135px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+
+    padding: 30px 27px;
+
+    background: #ffffff;
+
+    transition:
+        background 0.35s ease,
+        transform 0.35s ease;
+}
+
+.ha-control-item:not(:last-child) {
+    border-right: 1px solid #dcdcdc;
+}
+
+.ha-control-number {
+    flex: 0 0 auto;
+
+    color: #aaaaaa;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    transition: color 0.35s ease;
+}
+
+.ha-control-item strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #111111;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    transition: color 0.35s ease;
+}
+
+.ha-control-item p {
+    max-width: 190px;
+
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 9px;
+    line-height: 1.7;
+
+    transition: color 0.35s ease;
+}
+
+
+/* Hover interaction */
+
+.ha-control-item:hover {
+    z-index: 2;
+
+    background: #111111;
+
+    transform: translateY(-5px);
+}
+
+.ha-control-item:hover .ha-control-number {
+    color: #777777;
+}
+
+.ha-control-item:hover strong {
+    color: #ffffff;
+}
+
+.ha-control-item:hover p {
+    color: #aaaaaa;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1350px) {
+
+    .ha-intro-frame {
+        grid-template-columns: 46% 54%;
+    }
+
+}
+
+@media (max-width: 980px) {
+
+    .ha-intro-section {
+        padding: 90px 40px;
+    }
+
+    .ha-intro-frame {
+        grid-template-columns: 1fr;
+    }
+
+    .ha-intro-lead {
+        min-height: auto;
+
+        padding: 60px 0;
+
+        border-right: 0;
+        border-bottom: 1px solid #dcdcdc;
+    }
+
+    .ha-intro-story {
+        min-height: auto;
+
+        padding: 60px 0;
+    }
+
+    .ha-intro-controls {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ha-control-item:nth-child(2) {
+        border-right: 0;
+    }
+
+    .ha-control-item:nth-child(-n + 2) {
+        border-bottom: 1px solid #dcdcdc;
+    }
+
+}
+
+@media (max-width: 620px) {
+
+    .ha-intro-section {
+        padding: 75px 22px;
+    }
+
+    .ha-intro-section::before {
+        display: none;
+    }
+
+    .ha-intro-title {
+        font-size: 45px;
+        letter-spacing: -2px;
+    }
+
+    .ha-intro-story h3 {
+        font-size: 31px;
+    }
+
+    .ha-intro-index {
+        position: static;
+
+        justify-content: flex-start;
+
+        margin-bottom: 35px;
+    }
+
+    .ha-intro-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .ha-control-item {
+        min-height: 115px;
+
+        border-right: 0 !important;
+        border-bottom: 1px solid #dcdcdc;
+    }
+
+    .ha-control-item:last-child {
+        border-bottom: 0;
+    }
+
+    .ha-intro-statement {
+        flex-wrap: wrap;
+        row-gap: 12px;
+    }
+
+}
+</style>
 
 
 
 <!-- =========================================================
-     SOLUTIONS
+     PREMIUM SMART HOME SOLUTIONS
 ========================================================= -->
 
-<section
-    class="solutions-section"
-    id="solutions">
+<section class="ha-solutions-section" id="solutions">
+
+    <div class="ha-solutions-container">
 
 
-    <div class="section-heading">
+        <!-- SECTION HEADING -->
 
-        <div class="section-label">
-            Smart Home Solutions
-        </div>
+        <header class="ha-solutions-header">
 
-        <h2 class="section-title">
-            One Home. One Intelligent Ecosystem.
-        </h2>
+            <div class="ha-solutions-heading">
 
-        <div class="section-line"></div>
+                <div class="ha-solutions-label">
+                    Smart Home Solutions
+                </div>
 
-        <p>
+                <h2>
+                    One Home.
+                    <br>
+                    <span>One Intelligent Ecosystem.</span>
+                </h2>
 
-            Integrated automation solutions designed to
-            make everyday living simpler, safer and smarter.
-
-        </p>
-
-    </div>
-
-
-    <div class="solution-grid">
-
-
-        <!-- LIGHTING -->
-
-        <div class="solution-card">
-
-            <div class="solution-icon">
-                <i class="fas fa-lightbulb"></i>
             </div>
 
-            <h3>
-                Smart Lighting
-            </h3>
 
-            <p>
+            <div class="ha-solutions-intro">
 
-                Control lights individually or create complete
-                lighting scenes for different moods, activities
-                and times of day.
+                <span class="ha-solutions-count">
+                    09 Connected Capabilities
+                </span>
 
-            </p>
+                <p>
+                    Integrated automation solutions designed to
+                    make everyday living simpler, safer and smarter.
+                </p>
 
-        </div>
-
-
-        <!-- HVAC -->
-
-        <div class="solution-card">
-
-            <div class="solution-icon">
-                <i class="fas fa-temperature-half"></i>
             </div>
 
-            <h3>
-                Smart Climate Control
-            </h3>
+        </header>
 
-            <p>
 
-                Manage air conditioning and temperature settings
-                intelligently for improved comfort and efficient
-                energy use.
+        <!-- BENTO IMAGE GRID -->
 
-            </p>
+        <div class="ha-solutions-grid">
+
+
+            <!-- 01 — SMART LIGHTING -->
+
+            <article class="ha-solution-card ha-solution-card--hero">
+
+                <!-- Recommended image: 1600 × 1050 px -->
+
+                <img
+                    src="assets/img/automation/Smart Lighting.png"
+                    width="1600"
+                    height="1050"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Premium smart lighting automation"
+                >
+
+                <div class="ha-solution-card__shade"></div>
+
+                <div class="ha-solution-card__top">
+
+                    <div class="ha-solution-card__icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+
+                    <span class="ha-solution-card__number">
+                        01
+                    </span>
+
+                </div>
+
+                <div class="ha-solution-card__content">
+
+                    <span class="ha-solution-card__category">
+                        Lighting Automation
+                    </span>
+
+                    <h3>Smart Lighting</h3>
+
+                    <p>
+                        Control individual lights or create complete
+                        lighting scenes for different moods, activities
+                        and times of day.
+                    </p>
+
+                    <span class="ha-solution-card__arrow">
+                        ↗
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- 02 — CLIMATE CONTROL -->
+
+            <article class="ha-solution-card ha-solution-card--side">
+
+                <!-- Recommended image: 1200 × 1050 px -->
+
+                <img
+                    src="assets/img/automation/smart-climate-control.jpg"
+                    width="1200"
+                    height="1050"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Smart residential climate control"
+                >
+
+                <div class="ha-solution-card__shade"></div>
+
+                <div class="ha-solution-card__top">
+
+                    <div class="ha-solution-card__icon">
+                        <i class="fas fa-temperature-half"></i>
+                    </div>
+
+                    <span class="ha-solution-card__number">
+                        02
+                    </span>
+
+                </div>
+
+                <div class="ha-solution-card__content">
+
+                    <span class="ha-solution-card__category">
+                        Intelligent Comfort
+                    </span>
+
+                    <h3>Smart Climate Control</h3>
+
+                    <p>
+                        Manage air conditioning and temperature
+                        intelligently for greater comfort and
+                        efficient energy use.
+                    </p>
+
+                    <span class="ha-solution-card__arrow">
+                        ↗
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- 03 — MOTORIZED CURTAINS -->
+
+            <article class="ha-solution-card ha-solution-card--third">
+
+                <!-- Recommended image: 1200 × 900 px -->
+
+                <img
+                    src="assets/img/automation/motorized-curtains.png"
+                    width="1200"
+                    height="900"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Automated curtains in a luxury home"
+                >
+
+                <div class="ha-solution-card__shade"></div>
+
+                <div class="ha-solution-card__top">
+
+                    <div class="ha-solution-card__icon">
+                        <i class="fas fa-bars"></i>
+                    </div>
+
+                    <span class="ha-solution-card__number">
+                        03
+                    </span>
+
+                </div>
+
+                <div class="ha-solution-card__content">
+
+                    <span class="ha-solution-card__category">
+                        Daylight Control
+                    </span>
+
+                    <h3>Motorized Curtains</h3>
+
+                    <p>
+                        Automate curtains and blinds through schedules,
+                        sensors, scenes, mobile control or voice commands.
+                    </p>
+
+                    <span class="ha-solution-card__arrow">
+                        ↗
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- 04 — SMART SECURITY -->
+
+            <article class="ha-solution-card ha-solution-card--third">
+
+                <!-- Recommended image: 1200 × 900 px -->
+
+                <img
+                    src="assets/img/automation/Smart Security.png"
+                    width="1200"
+                    height="900"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Smart residential security system"
+                >
+
+                <div class="ha-solution-card__shade"></div>
+
+                <div class="ha-solution-card__top">
+
+                    <div class="ha-solution-card__icon">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+
+                    <span class="ha-solution-card__number">
+                        04
+                    </span>
+
+                </div>
+
+                <div class="ha-solution-card__content">
+
+                    <span class="ha-solution-card__category">
+                        Integrated Protection
+                    </span>
+
+                    <h3>Smart Security</h3>
+
+                    <p>
+                        Integrate sensors, cameras and alarms for
+                        intelligent monitoring and dependable protection.
+                    </p>
+
+                    <span class="ha-solution-card__arrow">
+                        ↗
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- 05 — SMART ACCESS -->
+
+            <article class="ha-solution-card ha-solution-card--third">
+
+                <!-- Recommended image: 1200 × 900 px -->
+
+                <img
+                    src="assets/img/automation/smart-access.png"
+                    width="1200"
+                    height="900"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Smart door-access control"
+                >
+
+                <div class="ha-solution-card__shade"></div>
+
+                <div class="ha-solution-card__top">
+
+                    <div class="ha-solution-card__icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+
+                    <span class="ha-solution-card__number">
+                        05
+                    </span>
+
+                </div>
+
+                <div class="ha-solution-card__content">
+
+                    <span class="ha-solution-card__category">
+                        Secure Entry
+                    </span>
+
+                    <h3>Smart Access</h3>
+
+                    <p>
+                        Smart locks and controlled-entry systems provide
+                        secure and convenient access to your home.
+                    </p>
+
+                    <span class="ha-solution-card__arrow">
+                        ↗
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- 06 — HOME ENTERTAINMENT -->
+
+            <article class="ha-solution-card ha-solution-card--wide">
+
+                <!-- Recommended image: 1600 × 1000 px -->
+
+                <img
+                    src="assets/img/automation/home-entertainment.jpg"
+                    width="1600"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Integrated luxury home entertainment"
+                >
+
+                <div class="ha-solution-card__shade"></div>
+
+                <div class="ha-solution-card__top">
+
+                    <div class="ha-solution-card__icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+
+                    <span class="ha-solution-card__number">
+                        06
+                    </span>
+
+                </div>
+
+                <div class="ha-solution-card__content">
+
+                    <span class="ha-solution-card__category">
+                        Connected Entertainment
+                    </span>
+
+                    <h3>Home Entertainment</h3>
+
+                    <p>
+                        Bring lighting, audio, video and room scenes
+                        together to create personalized entertainment
+                        experiences.
+                    </p>
+
+                    <span class="ha-solution-card__arrow">
+                        ↗
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- 07 — SMART SENSORS -->
+
+            <article class="ha-solution-card ha-solution-card--narrow">
+
+                <!-- Recommended image: 1200 × 1000 px -->
+
+                <img
+                    src="assets/img/automation/smart-sensors.png"
+                    width="1200"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Integrated smart-home sensors"
+                >
+
+                <div class="ha-solution-card__shade"></div>
+
+                <div class="ha-solution-card__top">
+
+                    <div class="ha-solution-card__icon">
+                        <i class="fas fa-wave-square"></i>
+                    </div>
+
+                    <span class="ha-solution-card__number">
+                        07
+                    </span>
+
+                </div>
+
+                <div class="ha-solution-card__content">
+
+                    <span class="ha-solution-card__category">
+                        Intelligent Response
+                    </span>
+
+                    <h3>Smart Sensors</h3>
+
+                    <p>
+                        Occupancy, temperature, light and environmental
+                        sensors enable automatic real-time responses.
+                    </p>
+
+                    <span class="ha-solution-card__arrow">
+                        ↗
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- 08 — ENERGY MANAGEMENT -->
+
+            <article class="ha-solution-card ha-solution-card--narrow">
+
+                <!-- Recommended image: 1200 × 1000 px -->
+
+                <img
+                    src="assets/img/automation/Energy Management.png"
+                    width="1200"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Smart-home energy management"
+                >
+
+                <div class="ha-solution-card__shade"></div>
+
+                <div class="ha-solution-card__top">
+
+                    <div class="ha-solution-card__icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+
+                    <span class="ha-solution-card__number">
+                        08
+                    </span>
+
+                </div>
+
+                <div class="ha-solution-card__content">
+
+                    <span class="ha-solution-card__category">
+                        Energy Intelligence
+                    </span>
+
+                    <h3>Energy Management</h3>
+
+                    <p>
+                        Monitor and control connected systems to improve
+                        visibility and encourage efficient power use.
+                    </p>
+
+                    <span class="ha-solution-card__arrow">
+                        ↗
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- 09 — CUSTOM AUTOMATION -->
+
+            <article class="ha-solution-card ha-solution-card--wide">
+
+                <!-- Recommended image: 1600 × 1000 px -->
+
+                <img
+                    src="assets/img/automation/Customized Automation.png"
+                    width="1600"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Customized home automation controls"
+                >
+
+                <div class="ha-solution-card__shade"></div>
+
+                <div class="ha-solution-card__top">
+
+                    <div class="ha-solution-card__icon">
+                        <i class="fas fa-sliders"></i>
+                    </div>
+
+                    <span class="ha-solution-card__number">
+                        09
+                    </span>
+
+                </div>
+
+                <div class="ha-solution-card__content">
+
+                    <span class="ha-solution-card__category">
+                        Designed Around You
+                    </span>
+
+                    <h3>Customized Automation</h3>
+
+                    <p>
+                        Personalized automation scenarios engineered
+                        around your lifestyle, home layout and
+                        technology requirements.
+                    </p>
+
+                    <span class="ha-solution-card__arrow">
+                        ↗
+                    </span>
+
+                </div>
+
+            </article>
+
 
         </div>
-
-
-        <!-- CURTAINS -->
-
-        <div class="solution-card">
-
-            <div class="solution-icon">
-                <i class="fas fa-bars"></i>
-            </div>
-
-            <h3>
-                Motorized Curtains
-            </h3>
-
-            <p>
-
-                Automate curtains and blinds using schedules,
-                scenes, sensors or simple mobile and voice
-                commands.
-
-            </p>
-
-        </div>
-
-
-        <!-- SECURITY -->
-
-        <div class="solution-card">
-
-            <div class="solution-icon">
-                <i class="fas fa-shield-halved"></i>
-            </div>
-
-            <h3>
-                Smart Security
-            </h3>
-
-            <p>
-
-                Integrate sensors, cameras, alarms and access
-                systems to provide intelligent monitoring
-                and security.
-
-            </p>
-
-        </div>
-
-
-        <!-- ACCESS -->
-
-        <div class="solution-card">
-
-            <div class="solution-icon">
-                <i class="fas fa-lock"></i>
-            </div>
-
-            <h3>
-                Smart Access
-            </h3>
-
-            <p>
-
-                Smart locks and access solutions provide
-                convenient and controlled entry while
-                supporting modern security requirements.
-
-            </p>
-
-        </div>
-
-
-        <!-- ENTERTAINMENT -->
-
-        <div class="solution-card">
-
-            <div class="solution-icon">
-                <i class="fas fa-tv"></i>
-            </div>
-
-            <h3>
-                Home Entertainment
-            </h3>
-
-            <p>
-
-                Bring lighting, audio, video and room scenes
-                together to create personalized entertainment
-                experiences.
-
-            </p>
-
-        </div>
-
-
-        <!-- SENSORS -->
-
-        <div class="solution-card">
-
-            <div class="solution-icon">
-                <i class="fas fa-wave-square"></i>
-            </div>
-
-            <h3>
-                Smart Sensors
-            </h3>
-
-            <p>
-
-                Motion, occupancy, temperature, light and
-                environmental sensors enable intelligent
-                automated responses.
-
-            </p>
-
-        </div>
-
-
-        <!-- ENERGY -->
-
-        <div class="solution-card">
-
-            <div class="solution-icon">
-                <i class="fas fa-bolt"></i>
-            </div>
-
-            <h3>
-                Energy Management
-            </h3>
-
-            <p>
-
-                Monitor and control energy-consuming systems
-                to improve visibility and encourage efficient
-                power usage.
-
-            </p>
-
-        </div>
-
-
-        <!-- CUSTOM -->
-
-        <div class="solution-card">
-
-            <div class="solution-icon">
-                <i class="fas fa-sliders"></i>
-            </div>
-
-            <h3>
-                Customized Automation
-            </h3>
-
-            <p>
-
-                Automation scenarios can be customized around
-                your lifestyle, home layout and individual
-                technology requirements.
-
-            </p>
-
-        </div>
-
 
     </div>
 
 </section>
+
+
+<style>
+
+/* =========================================================
+   PREMIUM SMART HOME SOLUTIONS
+========================================================= */
+
+.ha-solutions-section,
+.ha-solutions-section * {
+    box-sizing: border-box;
+}
+
+.ha-solutions-section {
+    position: relative;
+
+    padding: 120px 80px;
+
+    background: #f3f3f1;
+    color: #111111;
+
+    overflow: hidden;
+}
+
+.ha-solutions-container {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.ha-solutions-header {
+    display: grid;
+    grid-template-columns: 700px 1fr;
+    gap: 100px;
+    align-items: end;
+
+    margin-bottom: 55px;
+    padding-bottom: 42px;
+
+    border-bottom: 1px solid #d4d4d1;
+}
+
+.ha-solutions-label {
+    position: relative;
+
+    margin-bottom: 20px;
+    padding-left: 38px;
+
+    color: #777777;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.3px;
+    text-transform: uppercase;
+}
+
+.ha-solutions-label::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 24px;
+    height: 1px;
+
+    background: #111111;
+
+    transform: translateY(-50%);
+}
+
+.ha-solutions-heading h2 {
+    margin: 0;
+
+    color: #111111;
+
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -2.7px;
+}
+
+.ha-solutions-heading h2 span {
+    font-weight: 300;
+}
+
+.ha-solutions-intro {
+    max-width: 370px;
+    padding-bottom: 4px;
+}
+
+.ha-solutions-count {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #111111;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.ha-solutions-intro p {
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   BENTO GRID
+========================================================= */
+
+.ha-solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+.ha-solution-card {
+    position: relative;
+    isolation: isolate;
+
+    min-height: 360px;
+
+    background: #171717;
+
+    overflow: hidden;
+}
+
+/* Individual grid dimensions */
+
+.ha-solution-card--hero {
+    grid-column: span 7;
+    min-height: 470px;
+}
+
+.ha-solution-card--side {
+    grid-column: span 5;
+    min-height: 470px;
+}
+
+.ha-solution-card--third {
+    grid-column: span 4;
+    min-height: 335px;
+}
+
+.ha-solution-card--wide {
+    grid-column: span 7;
+    min-height: 390px;
+}
+
+.ha-solution-card--narrow {
+    grid-column: span 5;
+    min-height: 390px;
+}
+
+
+/* =========================================================
+   CARD IMAGE
+========================================================= */
+
+.ha-solution-card > img {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    filter:
+        saturate(0.82)
+        contrast(1.05)
+        brightness(0.9);
+
+    transform: scale(1.015);
+
+    transition:
+        transform 0.75s cubic-bezier(0.2, 0.7, 0.2, 1),
+        filter 0.6s ease;
+}
+
+.ha-solution-card__shade {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.08) 0%,
+            rgba(0, 0, 0, 0.12) 35%,
+            rgba(0, 0, 0, 0.88) 100%
+        );
+}
+
+.ha-solution-card::after {
+    content: "";
+
+    position: absolute;
+    inset: 12px;
+    z-index: -1;
+
+    border: 1px solid rgba(255, 255, 255, 0);
+
+    pointer-events: none;
+
+    transition: border-color 0.4s ease;
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.ha-solution-card__top {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    right: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ha-solution-card__icon {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+    background: rgba(17, 17, 17, 0.52);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    font-size: 15px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.ha-solution-card__number {
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.ha-solution-card__content {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 29px;
+
+    padding-right: 52px;
+
+    color: #ffffff;
+
+    transition: transform 0.4s ease;
+}
+
+.ha-solution-card__category {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.ha-solution-card h3 {
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+}
+
+.ha-solution-card p {
+    max-width: 500px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.73);
+
+    font-size: 10px;
+    line-height: 1.75;
+}
+
+.ha-solution-card__arrow {
+    position: absolute;
+    right: 0;
+    bottom: 1px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #111111;
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    font-size: 16px;
+
+    transition:
+        color 0.35s ease,
+        background 0.35s ease,
+        transform 0.35s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.ha-solution-card:hover > img {
+    filter:
+        saturate(1)
+        contrast(1.05)
+        brightness(0.82);
+
+    transform: scale(1.075);
+}
+
+.ha-solution-card:hover::after {
+    border-color: rgba(255, 255, 255, 0.28);
+}
+
+.ha-solution-card:hover .ha-solution-card__icon {
+    color: #111111;
+    background: #ffffff;
+
+    transform: translateY(-3px);
+}
+
+.ha-solution-card:hover .ha-solution-card__content {
+    transform: translateY(-5px);
+}
+
+.ha-solution-card:hover .ha-solution-card__arrow {
+    color: #ffffff;
+    background: #111111;
+
+    transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .ha-solutions-section {
+        padding: 100px 40px;
+    }
+
+    .ha-solutions-header {
+        grid-template-columns: 1fr 330px;
+        gap: 50px;
+    }
+
+    .ha-solution-card,
+    .ha-solution-card--side,
+    .ha-solution-card--third,
+    .ha-solution-card--wide,
+    .ha-solution-card--narrow {
+        grid-column: span 6;
+        min-height: 390px;
+    }
+
+    .ha-solution-card--hero {
+        grid-column: span 12;
+        min-height: 480px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 720px) {
+
+    .ha-solutions-section {
+        padding: 80px 22px;
+    }
+
+    .ha-solutions-header {
+        grid-template-columns: 1fr;
+        gap: 28px;
+
+        margin-bottom: 35px;
+        padding-bottom: 32px;
+    }
+
+    .ha-solutions-heading h2 {
+        font-size: 42px;
+        letter-spacing: -2px;
+    }
+
+    .ha-solutions-intro {
+        max-width: 100%;
+    }
+
+    .ha-solution-card,
+    .ha-solution-card--hero,
+    .ha-solution-card--side,
+    .ha-solution-card--third,
+    .ha-solution-card--wide,
+    .ha-solution-card--narrow {
+        grid-column: span 12;
+        min-height: 400px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 460px) {
+
+    .ha-solutions-section {
+        padding: 70px 16px;
+    }
+
+    .ha-solutions-heading h2 {
+        font-size: 36px;
+    }
+
+    .ha-solution-card,
+    .ha-solution-card--hero,
+    .ha-solution-card--side,
+    .ha-solution-card--third,
+    .ha-solution-card--wide,
+    .ha-solution-card--narrow {
+        min-height: 380px;
+    }
+
+    .ha-solution-card__top {
+        top: 20px;
+        left: 20px;
+        right: 20px;
+    }
+
+    .ha-solution-card__content {
+        left: 22px;
+        right: 22px;
+        bottom: 23px;
+
+        padding-right: 46px;
+    }
+
+    .ha-solution-card h3 {
+        font-size: 20px;
+    }
+
+}
+
+</style>
 
 
 
