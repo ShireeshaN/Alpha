@@ -1,1467 +1,591 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>R&D Products | Alpha Numeric</title>
-
-    <meta name="description"
-          content="Explore upcoming Alpha Numeric R&D products including Smart Conference Table, Smart Bar Counter and Smart Window Leaf AC.">
-
-
-    <!-- Bootstrap -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet">
-
-
-    <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-
-    <!-- Inter -->
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-
-    <style>
-
-        /* =========================================================
-           GLOBAL
-        ========================================================== */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-
-            font-family: "Inter", sans-serif;
-
-            background: #ffffff;
-
-            color: #111111;
-
-            overflow-x: hidden;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-
-        /* =========================================================
-           NAVBAR
-        ========================================================== */
-
-        .about-navbar {
-
-            height: 100px;
-
-            padding: 0 7%;
-
-            background: #ffffff !important;
-
-            border-bottom: 1px solid #eeeeee;
-
-            z-index: 9999;
-
-            transition: .3s ease;
-        }
-
-
-        .about-logo {
-
-            display: flex;
-
-            align-items: center;
-
-            padding: 0;
-
-            margin: 0;
-        }
-
-
-        .about-logo img {
-
-            height: 70px;
-
-            width: auto;
-
-            object-fit: contain;
-        }
-
-
-        .about-navbar .navbar-nav {
-
-            align-items: center;
-
-            gap: 28px;
-        }
-
-
-        .about-navbar .nav-link {
-
-            color: #111111 !important;
-
-            font-size: 15px;
-
-            font-weight: 400;
-
-            letter-spacing: 1px;
-
-            padding: 10px 0 !important;
-
-            transition: .3s;
-        }
-
-
-        .about-navbar .nav-link:hover {
-
-            color: #666666 !important;
-        }
-
-
-        .about-navbar .nav-link.active {
-
-            color: #111111 !important;
-
-            font-weight: 500;
-        }
-
-
-        .about-navbar .dropdown-menu {
-
-            margin-top: 18px;
-
-            padding: 10px 0;
-
-            min-width: 215px;
-
-            border: 1px solid #eeeeee;
-
-            border-radius: 0;
-
-            background: #ffffff;
-
-            box-shadow: 0 15px 40px rgba(0,0,0,.08);
-        }
-
-
-        .about-navbar .dropdown-item {
-
-            padding: 11px 20px;
-
-            font-size: 13px;
-
-            color: #222222;
-
-            transition: .25s ease;
-        }
-
-
-        .about-navbar .dropdown-item:hover {
-
-            background: #f5f5f5;
-
-            color: #000000;
-        }
-
-
-        .about-navbar .navbar-toggler {
-
-            border: none !important;
-
-            box-shadow: none !important;
-        }
-
-
-
-        /* =========================================================
-           COMMON
-        ========================================================== */
-
-        .rd-container {
-
-            width: min(calc(100% - 80px), 1500px);
-
-            margin: 0 auto;
-        }
-
-
-        .rd-eyebrow {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 12px;
-
-            color: #666666;
-
-            font-size: 9px;
-
-            font-weight: 700;
-
-            letter-spacing: 3px;
-
-            text-transform: uppercase;
-        }
-
-
-        .rd-eyebrow::before {
-
-            content: "";
-
-            width: 38px;
-
-            height: 1px;
-
-            background: currentColor;
-        }
-
-
-        .rd-title {
-
-            margin: 20px 0 0;
-
-            max-width: 850px;
-
-            color: #111111;
-
-            font-size: clamp(42px,5vw,76px);
-
-            line-height: .98;
-
-            letter-spacing: -3px;
-
-            font-weight: 600;
-        }
-
-
-        .rd-title span {
-
-            color: #777777;
-
-            font-weight: 300;
-        }
-
-
-
-        /* =========================================================
-           INTRO
-        ========================================================== */
-
-        .rd-upcoming-intro {
-
-            padding: 170px 0 90px;
-
-            background: #ffffff;
-        }
-
-
-        .rd-upcoming-intro-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                minmax(0,1fr)
-                minmax(320px,430px);
-
-            gap: 90px;
-
-            align-items: end;
-        }
-
-
-        .rd-upcoming-intro p {
-
-            margin: 0;
-
-            color: #777777;
-
-            font-size: 14px;
-
-            line-height: 1.9;
-        }
-
-
-
-        /* =========================================================
-           COMING SOON PRODUCTS
-        ========================================================== */
-
-        .coming-products {
-
-            padding: 0 0 130px;
-
-            background: #f7f7f5;
-        }
-
-
-        .coming-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, minmax(0,1fr));
-
-            gap: 16px;
-        }
-
-
-        .coming-card {
-
-            position: relative;
-
-            min-height: 560px;
-
-            overflow: hidden;
-
-            background: #111111;
-
-            isolation: isolate;
-        }
-
-
-        .coming-card-image {
-
-            position: absolute;
-
-            inset: 0;
-
-            z-index: 0;
-
-            background-size: cover;
-
-            background-position: center;
-
-            transform: scale(1.05);
-
-            filter: grayscale(15%);
-
-            transition:
-                transform 1s cubic-bezier(.22,1,.36,1),
-                filter .6s ease;
-        }
-
-
-        .conference-image {
-
-            background-image:
-                url("assets/img/rnd/coming-soon/smart-conference-table.jpg");
-        }
-
-
-        .bar-image {
-
-            background-image:
-                url("assets/img/rnd/coming-soon/smart-bar-counter.jpg");
-        }
-
-
-        .window-image {
-
-            background-image:
-                url("assets/img/rnd/coming-soon/smart-window-leaf-ac.jpg");
-        }
-
-
-        .coming-card::before {
-
-            content: "";
-
-            position: absolute;
-
-            inset: 0;
-
-            z-index: 1;
-
-            background:
-                linear-gradient(
-                    to top,
-                    rgba(0,0,0,.96) 0%,
-                    rgba(0,0,0,.65) 45%,
-                    rgba(0,0,0,.12) 100%
-                );
-        }
-
-
-        .coming-card-content {
-
-            position: relative;
-
-            z-index: 3;
-
-            width: 100%;
-
-            height: 100%;
-
-            min-height: 560px;
-
-            padding: 32px;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: space-between;
-
-            color: #ffffff;
-        }
-
-
-        .coming-card-top {
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-        }
-
-
-        .coming-card-number {
-
-            color: rgba(255,255,255,.55);
-
-            font-size: 9px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-        }
-
-
-        .coming-status {
-
-            padding: 9px 12px;
-
-            border: 1px solid rgba(255,255,255,.30);
-
-            color: rgba(255,255,255,.78);
-
-            font-size: 8px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-        }
-
-
-        .coming-card-bottom span {
-
-            display: block;
-
-            margin-bottom: 10px;
-
-            color: rgba(255,255,255,.55);
-
-            font-size: 8px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-        }
-
-
-        .coming-card h2 {
-
-            margin: 0 0 16px;
-
-            color: #ffffff;
-
-            font-size: clamp(30px,3vw,44px);
-
-            line-height: 1;
-
-            letter-spacing: -1.5px;
-
-            font-weight: 500;
-        }
-
-
-        .coming-card p {
-
-            max-width: 420px;
-
-            margin: 0;
-
-            color: rgba(255,255,255,.70);
-
-            font-size: 12px;
-
-            line-height: 1.8;
-        }
-
-
-        .coming-card-footer {
-
-            margin-top: 28px;
-
-            padding-top: 20px;
-
-            border-top: 1px solid rgba(255,255,255,.18);
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            gap: 20px;
-        }
-
-
-        .coming-card-footer strong {
-
-            color: rgba(255,255,255,.75);
-
-            font-size: 9px;
-
-            font-weight: 600;
-
-            letter-spacing: 1.5px;
-
-            text-transform: uppercase;
-        }
-
-
-        .coming-arrow {
-
-            width: 40px;
-
-            height: 40px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            border: 1px solid rgba(255,255,255,.32);
-
-            color: #ffffff;
-
-            transition: .35s ease;
-        }
-
-
-        .coming-card:hover .coming-card-image {
-
-            transform: scale(1);
-
-            filter: grayscale(0%);
-        }
-
-
-        .coming-card:hover .coming-arrow {
-
-            background: #ffffff;
-
-            border-color: #ffffff;
-
-            color: #111111;
-        }
-
-
-
-        /* =========================================================
-           R&D STATUS BAND
-        ========================================================== */
-
-        .rd-status-band {
-
-            padding: 110px 0;
-
-            background: #111111;
-
-            color: #ffffff;
-        }
-
-
-        .rd-status-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                minmax(0,1fr)
-                minmax(320px,420px);
-
-            gap: 90px;
-
-            align-items: end;
-        }
-
-
-        .rd-status-band .rd-eyebrow {
-
-            color: #777777;
-        }
-
-
-        .rd-status-band h2 {
-
-            max-width: 900px;
-
-            margin: 20px 0 0;
-
-            color: #ffffff;
-
-            font-size: clamp(42px,5vw,72px);
-
-            line-height: .98;
-
-            letter-spacing: -3px;
-
-            font-weight: 500;
-        }
-
-
-        .rd-status-band h2 span {
-
-            color: #777777;
-
-            font-weight: 300;
-        }
-
-
-        .rd-status-band p {
-
-            margin: 0;
-
-            color: #999999;
-
-            font-size: 13px;
-
-            line-height: 1.9;
-        }
-
-
-
-        /* =========================================================
-           RESPONSIVE
-        ========================================================== */
-
-        @media (max-width: 991px) {
-
-
-            .about-navbar {
-
-                height: auto;
-
-                min-height: 80px;
-
-                padding: 10px 5%;
-            }
-
-
-            .about-logo img {
-
-                height: 70px;
-            }
-
-
-            .about-navbar .navbar-collapse {
-
-                margin-top: 15px;
-
-                padding: 15px 0;
-
-                background: #ffffff;
-            }
-
-
-            .about-navbar .navbar-nav {
-
-                align-items: flex-start;
-
-                gap: 0;
-            }
-
-
-            .about-navbar .nav-item {
-
-                width: 100%;
-            }
-
-
-            .about-navbar .nav-link {
-
-                padding: 12px 5px !important;
-            }
-
-
-            .about-navbar .dropdown-menu {
-
-                margin-top: 0;
-
-                border: none;
-
-                box-shadow: none;
-            }
-
-
-            .rd-upcoming-intro-grid,
-            .rd-status-grid {
-
-                grid-template-columns: 1fr;
-
-                gap: 40px;
-            }
-
-
-            .coming-grid {
-
-                grid-template-columns: 1fr 1fr;
-            }
-
-        }
-
-
-        @media (max-width: 767px) {
-
-
-            .rd-container {
-
-                width: calc(100% - 40px);
-            }
-
-
-            .rd-upcoming-intro {
-
-                padding:
-                    130px 0
-                    70px;
-            }
-
-
-            .rd-title {
-
-                font-size: 44px;
-
-                letter-spacing: -2px;
-            }
-
-
-            .coming-products {
-
-                padding-bottom: 85px;
-            }
-
-
-            .coming-grid {
-
-                grid-template-columns: 1fr;
-            }
-
-
-            .coming-card {
-
-                min-height: 500px;
-            }
-
-
-            .coming-card-content {
-
-                min-height: 500px;
-
-                padding: 26px;
-            }
-
-
-            .rd-status-band {
-
-                padding: 85px 0;
-            }
-
-
-            .rd-status-band h2 {
-
-                font-size: 44px;
-
-                letter-spacing: -2px;
-            }
-
-        }
-
-    </style>
-
-</head>
-
-
-<body>
-
-
 <!-- =============================================================
-     NAVBAR
+     SMART POLE APPLICATIONS — PREMIUM
 ============================================================= -->
 
-<nav class="navbar navbar-expand-lg about-navbar fixed-top">
+<section class="sp-applications">
 
-    <div class="container-fluid px-4 px-lg-5">
+    <div class="smart-container">
 
 
-        <a class="navbar-brand about-logo"
-           href="index.html">
+        <!-- =====================================================
+             HEADING
+        ====================================================== -->
 
-            <img
-                src="assets/img/b-alpha.png"
-                alt="Alpha Numeric">
-
-        </a>
-
-
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarResponsive">
-
-            <i class="fas fa-bars"></i>
-
-        </button>
-
-
-        <div
-            class="collapse navbar-collapse"
-            id="navbarResponsive">
-
-            <ul class="navbar-nav ms-auto">
-
-
-                <li class="nav-item">
-
-                    <a class="nav-link"
-                       href="index.html">
-
-                        Home
-
-                    </a>
-
-                </li>
-
-
-                <li class="nav-item">
-
-                    <a class="nav-link"
-                       href="about.html">
-
-                        About
-
-                    </a>
-
-                </li>
-
-
-                <!-- ENERGY -->
-
-                <li class="nav-item dropdown">
-
-                    <a class="nav-link dropdown-toggle"
-                       href="#"
-                       data-bs-toggle="dropdown">
-
-                        Energy
-
-                    </a>
-
-                    <ul class="dropdown-menu">
-
-                        <li>
-                            <a class="dropdown-item"
-                               href="solar-energy.html">
-                                Solar Energy
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item"
-                               href="wind-energy.html">
-                                Wind Energy
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item"
-                               href="biomass-energy.html">
-                                Biomass Energy
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item"
-                               href="hydel-energy.html">
-                                Hydel Energy
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </li>
-
-
-                <!-- POWER -->
-
-                <li class="nav-item dropdown">
-
-                    <a class="nav-link dropdown-toggle"
-                       href="#"
-                       data-bs-toggle="dropdown">
-
-                        Power
-
-                    </a>
-
-                    <ul class="dropdown-menu">
-
-                        <li>
-                            <a class="dropdown-item"
-                               href="transmission.html">
-                                Transmission
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item"
-                               href="distribution.html">
-                                Distribution
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item"
-                               href="control-panels.html">
-                                Control Panels
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item"
-                               href="panel-boards.html">
-                                Panel Boards
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </li>
-
-
-                <!-- R&D -->
-
-                <li class="nav-item dropdown">
-
-                    <a class="nav-link dropdown-toggle active"
-                       href="#"
-                       data-bs-toggle="dropdown">
-
-                        R & D
-
-                    </a>
-
-                    <ul class="dropdown-menu">
-
-                        <li>
-                            <a class="dropdown-item"
-                               href="smart-pole.html">
-                                Smart Pole
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item"
-                               href="smart-bollard.html">
-                                Smart Bollard
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item"
-                               href="smart-conference-table.html">
-                                Smart Conference Table
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item"
-                               href="smart-bar-counter.html">
-                                Smart Bar Counter
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item"
-                               href="smart-window-leaf-ac.html">
-                                Smart Window Leaf AC
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </li>
-
-
-                <li class="nav-item">
-
-                    <a class="nav-link"
-                       href="power-products.html">
-
-                        Products
-
-                    </a>
-
-                </li>
-
-
-                <li class="nav-item">
-
-                    <a class="nav-link"
-                       href="index.html#contact">
-
-                        Contact
-
-                    </a>
-
-                </li>
-
-
-            </ul>
-
-        </div>
-
-    </div>
-
-</nav>
-
-
-
-<!-- =============================================================
-     INTRO
-============================================================= -->
-
-<section class="rd-upcoming-intro">
-
-    <div class="rd-container">
-
-
-        <div class="rd-upcoming-intro-grid">
+        <div class="sp-applications-head">
 
 
             <div>
 
+                <span class="smart-eyebrow">
 
-                <span class="rd-eyebrow">
-
-                    Alpha Numeric / R&D
+                    Applications
 
                 </span>
 
 
-                <h1 class="rd-title">
+                <h2 class="smart-title">
 
-                    Future products
-                    currently
+                    Intelligent infrastructure
+                    for
 
                     <span>
-                        in development.
-                    </span>
-
-                </h1>
-
-
-            </div>
-
-
-            <p>
-
-                Our R&D portfolio continues to explore new
-                approaches to intelligent environments,
-                connected infrastructure and integrated
-                product design.
-
-            </p>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =============================================================
-     COMING SOON PRODUCTS
-============================================================= -->
-
-<section class="coming-products">
-
-
-    <div class="rd-container">
-
-
-        <div class="coming-grid">
-
-
-            <!-- =================================================
-                 SMART CONFERENCE TABLE
-            ================================================== -->
-
-            <a href="smart-conference-table.html"
-               class="coming-card">
-
-
-                <div class="coming-card-image conference-image">
-                </div>
-
-
-                <div class="coming-card-content">
-
-
-                    <div class="coming-card-top">
-
-
-                        <span class="coming-card-number">
-
-                            01 / R&D
-
-                        </span>
-
-
-                        <span class="coming-status">
-
-                            Coming Soon
-
-                        </span>
-
-
-                    </div>
-
-
-                    <div class="coming-card-bottom">
-
-
-                        <span>
-
-                            Connected Collaboration
-
-                        </span>
-
-
-                        <h2>
-
-                            Smart Conference Table
-
-                        </h2>
-
-
-                        <p>
-
-                            Intelligent collaboration, integrated
-                            connectivity and technology designed
-                            for the modern meeting environment.
-
-                        </p>
-
-
-                        <div class="coming-card-footer">
-
-
-                            <strong>
-
-                                Currently in Research & Development
-
-                            </strong>
-
-
-                            <span class="coming-arrow">
-
-                                <i class="fa-solid fa-arrow-right"></i>
-
-                            </span>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </a>
-
-
-
-            <!-- =================================================
-                 SMART BAR COUNTER
-            ================================================== -->
-
-            <a href="smart-bar-counter.html"
-               class="coming-card">
-
-
-                <div class="coming-card-image bar-image">
-                </div>
-
-
-                <div class="coming-card-content">
-
-
-                    <div class="coming-card-top">
-
-
-                        <span class="coming-card-number">
-
-                            02 / R&D
-
-                        </span>
-
-
-                        <span class="coming-status">
-
-                            Coming Soon
-
-                        </span>
-
-
-                    </div>
-
-
-                    <div class="coming-card-bottom">
-
-
-                        <span>
-
-                            Smart Hospitality
-
-                        </span>
-
-
-                        <h2>
-
-                            Smart Bar Counter
-
-                        </h2>
-
-
-                        <p>
-
-                            A next-generation smart counter concept
-                            combining intelligent functionality,
-                            connected technology and contemporary
-                            hospitality design.
-
-                        </p>
-
-
-                        <div class="coming-card-footer">
-
-
-                            <strong>
-
-                                Currently in Research & Development
-
-                            </strong>
-
-
-                            <span class="coming-arrow">
-
-                                <i class="fa-solid fa-arrow-right"></i>
-
-                            </span>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </a>
-
-
-
-            <!-- =================================================
-                 SMART WINDOW LEAF AC
-            ================================================== -->
-
-            <a href="smart-window-leaf-ac.html"
-               class="coming-card">
-
-
-                <div class="coming-card-image window-image">
-                </div>
-
-
-                <div class="coming-card-content">
-
-
-                    <div class="coming-card-top">
-
-
-                        <span class="coming-card-number">
-
-                            03 / R&D
-
-                        </span>
-
-
-                        <span class="coming-status">
-
-                            Coming Soon
-
-                        </span>
-
-
-                    </div>
-
-
-                    <div class="coming-card-bottom">
-
-
-                        <span>
-
-                            Intelligent Climate Control
-
-                        </span>
-
-
-                        <h2>
-
-                            Smart Window Leaf AC
-
-                        </h2>
-
-
-                        <p>
-
-                            An innovative climate-control concept
-                            engineered to integrate efficient cooling
-                            technology within modern architectural spaces.
-
-                        </p>
-
-
-                        <div class="coming-card-footer">
-
-
-                            <strong>
-
-                                Currently in Research & Development
-
-                            </strong>
-
-
-                            <span class="coming-arrow">
-
-                                <i class="fa-solid fa-arrow-right"></i>
-
-                            </span>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </a>
-
-
-        </div>
-
-
-    </div>
-
-
-</section>
-
-
-
-<!-- =============================================================
-     DEVELOPMENT BAND
-============================================================= -->
-
-<section class="rd-status-band">
-
-
-    <div class="rd-container">
-
-
-        <div class="rd-status-grid">
-
-
-            <div>
-
-
-                <span class="rd-eyebrow">
-
-                    Research & Development
-
-                </span>
-
-
-                <h2>
-
-                    New ideas are
-
-                    <span>
-                        taking shape.
+                        connected environments.
                     </span>
 
                 </h2>
 
+            </div>
+
+
+            <div class="sp-applications-intro">
+
+                <span>
+                    SMART POLE / USE CASES
+                </span>
+
+                <p>
+
+                    Designed for environments where lighting,
+                    connectivity, safety, environmental monitoring,
+                    charging and digital communication need to
+                    operate as one coordinated infrastructure system.
+
+                </p>
 
             </div>
 
 
-            <p>
+        </div>
 
-                These concepts are currently under research and
-                development as Alpha Numeric continues exploring
-                intelligent products for connected environments,
-                smart infrastructure and future-ready spaces.
 
-            </p>
+
+        <!-- =====================================================
+             FEATURED APPLICATION
+        ====================================================== -->
+
+        <article class="sp-featured-app">
+
+
+            <div class="sp-featured-image">
+
+                <img
+                    src="assets/img/rnd/smart-pole/app-smart-city.jpg"
+                    alt="Smart Pole in Smart City">
+
+            </div>
+
+
+            <div class="sp-featured-overlay"></div>
+
+
+            <div class="sp-featured-top">
+
+                <span>
+                    01 / PRIMARY APPLICATION
+                </span>
+
+                <span>
+                    SMART CITY INFRASTRUCTURE
+                </span>
+
+            </div>
+
+
+            <div class="sp-featured-content">
+
+
+                <span class="sp-app-label">
+
+                    Connected Urban Infrastructure
+
+                </span>
+
+
+                <h3>
+
+                    Smart Cities
+
+                </h3>
+
+
+                <p>
+
+                    A multifunctional urban platform combining
+                    public lighting, EV charging, Wi-Fi, emergency
+                    communication, environmental monitoring,
+                    digital displays and AI-enabled surveillance
+                    within one connected infrastructure asset.
+
+                </p>
+
+
+                <div class="sp-featured-capabilities">
+
+                    <span>Connectivity</span>
+
+                    <span>Public Safety</span>
+
+                    <span>EV Charging</span>
+
+                    <span>Environment</span>
+
+                    <span>AI Monitoring</span>
+
+                </div>
+
+
+            </div>
+
+
+        </article>
+
+
+
+        <!-- =====================================================
+             APPLICATION GRID
+        ====================================================== -->
+
+        <div class="sp-app-grid">
+
+
+            <!-- =================================================
+                 PUBLIC ROADS
+            ================================================== -->
+
+            <article class="sp-app-card">
+
+
+                <div class="sp-app-image">
+
+                    <img
+                        src="assets/img/rnd/smart-pole/app-public-roads.jpg"
+                        alt="Smart Pole Public Roads">
+
+                </div>
+
+
+                <div class="sp-app-gradient"></div>
+
+
+                <div class="sp-app-top">
+
+                    <span>
+                        02
+                    </span>
+
+                    <i class="bi bi-arrow-up-right"></i>
+
+                </div>
+
+
+                <div class="sp-app-content">
+
+
+                    <span class="sp-app-label">
+
+                        Urban Mobility
+
+                    </span>
+
+
+                    <h3>
+
+                        Public Roads
+
+                    </h3>
+
+
+                    <p>
+
+                        Connected lighting, safety monitoring,
+                        digital communication and environmental
+                        sensing for modern road infrastructure.
+
+                    </p>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PARKS
+            ================================================== -->
+
+            <article class="sp-app-card">
+
+
+                <div class="sp-app-image">
+
+                    <img
+                        src="assets/img/rnd/smart-pole/app-parks.jpg"
+                        alt="Smart Pole Parks">
+
+                </div>
+
+
+                <div class="sp-app-gradient"></div>
+
+
+                <div class="sp-app-top">
+
+                    <span>
+                        03
+                    </span>
+
+                    <i class="bi bi-arrow-up-right"></i>
+
+                </div>
+
+
+                <div class="sp-app-content">
+
+
+                    <span class="sp-app-label">
+
+                        Public Experience
+
+                    </span>
+
+
+                    <h3>
+
+                        Parks & Public Spaces
+
+                    </h3>
+
+
+                    <p>
+
+                        Wi-Fi, charging, lighting, emergency
+                        assistance and environmental intelligence
+                        integrated into community spaces.
+
+                    </p>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 TRANSPORT HUBS
+            ================================================== -->
+
+            <article class="sp-app-card sp-app-card-wide">
+
+
+                <div class="sp-app-image">
+
+                    <img
+                        src="assets/img/rnd/smart-pole/app-transport.jpg"
+                        alt="Smart Pole Transport Hub">
+
+                </div>
+
+
+                <div class="sp-app-gradient"></div>
+
+
+                <div class="sp-app-top">
+
+                    <span>
+                        04
+                    </span>
+
+                    <i class="bi bi-arrow-up-right"></i>
+
+                </div>
+
+
+                <div class="sp-app-content">
+
+
+                    <span class="sp-app-label">
+
+                        Connected Mobility Infrastructure
+
+                    </span>
+
+
+                    <h3>
+
+                        Transport Hubs
+
+                    </h3>
+
+
+                    <p>
+
+                        Passenger information, public announcements,
+                        emergency communication, charging,
+                        connectivity and intelligent monitoring
+                        for high-traffic transport environments.
+
+                    </p>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 CAMPUSES
+            ================================================== -->
+
+            <article class="sp-app-card">
+
+
+                <div class="sp-app-image">
+
+                    <img
+                        src="assets/img/rnd/smart-pole/app-campus.jpg"
+                        alt="Smart Pole Campus">
+
+                </div>
+
+
+                <div class="sp-app-gradient"></div>
+
+
+                <div class="sp-app-top">
+
+                    <span>
+                        05
+                    </span>
+
+                    <i class="bi bi-arrow-up-right"></i>
+
+                </div>
+
+
+                <div class="sp-app-content">
+
+
+                    <span class="sp-app-label">
+
+                        Connected Campus
+
+                    </span>
+
+
+                    <h3>
+
+                        Smart Campuses
+
+                    </h3>
+
+
+                    <p>
+
+                        Integrated public connectivity, intelligent
+                        lighting, digital communication and
+                        safety systems for institutional campuses.
+
+                    </p>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 COMMERCIAL DISTRICTS
+            ================================================== -->
+
+            <article class="sp-app-card">
+
+
+                <div class="sp-app-image">
+
+                    <img
+                        src="assets/img/rnd/smart-pole/app-commercial.jpg"
+                        alt="Smart Pole Commercial District">
+
+                </div>
+
+
+                <div class="sp-app-gradient"></div>
+
+
+                <div class="sp-app-top">
+
+                    <span>
+                        06
+                    </span>
+
+                    <i class="bi bi-arrow-up-right"></i>
+
+                </div>
+
+
+                <div class="sp-app-content">
+
+
+                    <span class="sp-app-label">
+
+                        Digital Public Realm
+
+                    </span>
+
+
+                    <h3>
+
+                        Commercial Districts
+
+                    </h3>
+
+
+                    <p>
+
+                        Digital information, connectivity,
+                        charging and intelligent infrastructure
+                        for active commercial environments.
+
+                    </p>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 HOSPITALITY
+            ================================================== -->
+
+            <article class="sp-app-card sp-app-card-wide">
+
+
+                <div class="sp-app-image">
+
+                    <img
+                        src="assets/img/rnd/smart-pole/app-hospitality.jpg"
+                        alt="Smart Pole Hospitality">
+
+                </div>
+
+
+                <div class="sp-app-gradient"></div>
+
+
+                <div class="sp-app-top">
+
+                    <span>
+                        07
+                    </span>
+
+                    <i class="bi bi-arrow-up-right"></i>
+
+                </div>
+
+
+                <div class="sp-app-content">
+
+
+                    <span class="sp-app-label">
+
+                        Premium Outdoor Infrastructure
+
+                    </span>
+
+
+                    <h3>
+
+                        Hospitality & Developments
+
+                    </h3>
+
+
+                    <p>
+
+                        Intelligent lighting, Wi-Fi connectivity,
+                        charging, digital communication and
+                        integrated services for premium outdoor
+                        hospitality and mixed-use developments.
+
+                    </p>
+
+
+                </div>
+
+
+            </article>
+
+
+        </div>
+
+
+
+        <!-- =====================================================
+             BOTTOM STATEMENT
+        ====================================================== -->
+
+        <div class="sp-app-bottom">
+
+
+            <span>
+
+                One Platform
+
+            </span>
+
+
+            <h3>
+
+                Different environments.
+                <strong>
+                    One connected infrastructure system.
+                </strong>
+
+            </h3>
+
+
+            <div class="sp-app-bottom-line">
+
+                <span>
+                    LIGHT
+                </span>
+
+                <i></i>
+
+                <span>
+                    CONNECT
+                </span>
+
+                <i></i>
+
+                <span>
+                    MONITOR
+                </span>
+
+                <i></i>
+
+                <span>
+                    CHARGE
+                </span>
+
+                <i></i>
+
+                <span>
+                    COMMUNICATE
+                </span>
+
+            </div>
 
 
         </div>
@@ -1469,52 +593,705 @@
 
     </div>
 
-
 </section>
 
+<style>
+    /* =========================================================
+   SMART POLE APPLICATIONS
+========================================================= */
+
+.sp-applications {
+
+    position: relative;
+
+    padding: 135px 0;
+
+    background: #f6f6f4;
+
+    overflow: hidden;
+}
 
 
-<!-- =============================================================
-     BOOTSTRAP
-============================================================= -->
 
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>
+/* =========================================================
+   HEADING
+========================================================= */
+
+.sp-applications-head {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0,1fr)
+        minmax(300px,420px);
+
+    gap: 90px;
+
+    align-items: end;
+
+    margin-bottom: 65px;
+}
 
 
-<script>
+.sp-applications-intro {
 
-window.addEventListener(
-    "scroll",
-    function() {
+    padding-left: 28px;
 
-        const navbar =
-            document.querySelector(".about-navbar");
-
-        if (!navbar) return;
+    border-left: 1px solid #cccccc;
+}
 
 
-        if (window.scrollY > 30) {
+.sp-applications-intro > span {
 
-            navbar.style.boxShadow =
-                "0 5px 25px rgba(0,0,0,.06)";
+    display: block;
 
-        }
+    margin-bottom: 15px;
 
-        else {
+    color: #999999;
 
-            navbar.style.boxShadow =
-                "none";
+    font-size: 8px;
 
-        }
+    font-weight: 700;
 
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.sp-applications-intro p {
+
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+
+
+/* =========================================================
+   FEATURED APPLICATION
+========================================================= */
+
+.sp-featured-app {
+
+    position: relative;
+
+    min-height: 600px;
+
+    margin-bottom: 16px;
+
+    overflow: hidden;
+
+    background: #111111;
+
+    isolation: isolate;
+}
+
+
+.sp-featured-image {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+}
+
+
+.sp-featured-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transform: scale(1.02);
+
+    transition:
+        transform 1.2s cubic-bezier(.22,1,.36,1);
+}
+
+
+.sp-featured-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            rgba(0,0,0,.90) 0%,
+
+            rgba(0,0,0,.65) 40%,
+
+            rgba(0,0,0,.18) 100%
+
+        );
+}
+
+
+.sp-featured-top {
+
+    position: absolute;
+
+    z-index: 4;
+
+    top: 32px;
+
+    left: 35px;
+
+    right: 35px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    color: rgba(255,255,255,.58);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.sp-featured-content {
+
+    position: absolute;
+
+    z-index: 4;
+
+    left: 40px;
+
+    bottom: 45px;
+
+    width: min(700px, calc(100% - 80px));
+
+    color: #ffffff;
+}
+
+
+.sp-app-label {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: rgba(255,255,255,.55);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.sp-featured-content h3 {
+
+    margin: 0 0 18px;
+
+    font-size: clamp(42px,5vw,76px);
+
+    line-height: .95;
+
+    letter-spacing: -3px;
+
+    font-weight: 500;
+}
+
+
+.sp-featured-content p {
+
+    max-width: 650px;
+
+    margin: 0;
+
+    color: rgba(255,255,255,.72);
+
+    font-size: 13px;
+
+    line-height: 1.85;
+}
+
+
+.sp-featured-capabilities {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 25px;
+}
+
+
+.sp-featured-capabilities span {
+
+    padding: 8px 11px;
+
+    border: 1px solid rgba(255,255,255,.25);
+
+    color: rgba(255,255,255,.72);
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.3px;
+
+    text-transform: uppercase;
+}
+
+
+.sp-featured-app:hover
+.sp-featured-image img {
+
+    transform: scale(1);
+}
+
+
+
+/* =========================================================
+   APPLICATION GRID
+========================================================= */
+
+.sp-app-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap: 16px;
+}
+
+
+.sp-app-card {
+
+    position: relative;
+
+    min-height: 470px;
+
+    overflow: hidden;
+
+    background: #111111;
+
+    isolation: isolate;
+}
+
+
+.sp-app-card-wide {
+
+    grid-column: span 2;
+
+    min-height: 430px;
+}
+
+
+
+/* IMAGE */
+
+.sp-app-image {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+}
+
+
+.sp-app-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transform: scale(1.05);
+
+    filter: grayscale(12%);
+
+    transition:
+
+        transform 1s cubic-bezier(.22,1,.36,1),
+
+        filter .6s ease;
+}
+
+
+
+/* GRADIENT */
+
+.sp-app-gradient {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+
+        linear-gradient(
+
+            to top,
+
+            rgba(0,0,0,.94) 0%,
+
+            rgba(0,0,0,.55) 43%,
+
+            rgba(0,0,0,.08) 100%
+
+        );
+}
+
+
+
+/* TOP */
+
+.sp-app-top {
+
+    position: absolute;
+
+    z-index: 4;
+
+    top: 28px;
+
+    left: 30px;
+
+    right: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.sp-app-top > span {
+
+    color: rgba(255,255,255,.56);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.sp-app-top i {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,.28);
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    transition: .35s ease;
+}
+
+
+
+/* CONTENT */
+
+.sp-app-content {
+
+    position: absolute;
+
+    z-index: 4;
+
+    left: 30px;
+
+    right: 30px;
+
+    bottom: 32px;
+}
+
+
+.sp-app-content h3 {
+
+    margin: 0 0 13px;
+
+    color: #ffffff;
+
+    font-size: clamp(27px,3vw,42px);
+
+    line-height: 1;
+
+    letter-spacing: -1.5px;
+
+    font-weight: 500;
+}
+
+
+.sp-app-content p {
+
+    max-width: 520px;
+
+    margin: 0;
+
+    color: rgba(255,255,255,.70);
+
+    font-size: 11.5px;
+
+    line-height: 1.8;
+}
+
+
+
+/* HOVER */
+
+.sp-app-card:hover
+.sp-app-image img {
+
+    transform: scale(1);
+
+    filter: grayscale(0%);
+}
+
+
+.sp-app-card:hover
+.sp-app-top i {
+
+    background: #ffffff;
+
+    border-color: #ffffff;
+
+    color: #111111;
+
+    transform: translate(3px,-3px);
+}
+
+
+
+/* =========================================================
+   BOTTOM STATEMENT
+========================================================= */
+
+.sp-app-bottom {
+
+    margin-top: 80px;
+
+    padding-top: 45px;
+
+    border-top: 1px solid #d6d6d6;
+}
+
+
+.sp-app-bottom > span {
+
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #999999;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.sp-app-bottom h3 {
+
+    max-width: 950px;
+
+    margin: 0;
+
+    color: #111111;
+
+    font-size: clamp(30px,3.5vw,52px);
+
+    line-height: 1.08;
+
+    letter-spacing: -2px;
+
+    font-weight: 300;
+}
+
+
+.sp-app-bottom h3 strong {
+
+    font-weight: 600;
+}
+
+
+.sp-app-bottom-line {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 35px;
+}
+
+
+.sp-app-bottom-line span {
+
+    color: #777777;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.sp-app-bottom-line i {
+
+    width: 4px;
+
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #111111;
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .sp-applications-head {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
     }
-);
-
-</script>
 
 
-</body>
+    .sp-applications-intro {
 
-</html>
+        max-width: 650px;
+    }
+
+
+    .sp-featured-app {
+
+        min-height: 550px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .sp-applications {
+
+        padding: 85px 0;
+    }
+
+
+    .sp-applications-intro {
+
+        padding-left: 20px;
+    }
+
+
+    .sp-featured-app {
+
+        min-height: 560px;
+    }
+
+
+    .sp-featured-top {
+
+        top: 22px;
+
+        left: 22px;
+
+        right: 22px;
+
+        flex-direction: column;
+
+        gap: 7px;
+    }
+
+
+    .sp-featured-content {
+
+        left: 24px;
+
+        bottom: 28px;
+
+        width: calc(100% - 48px);
+    }
+
+
+    .sp-featured-content h3 {
+
+        font-size: 45px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .sp-app-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .sp-app-card,
+    .sp-app-card-wide {
+
+        grid-column: auto;
+
+        min-height: 470px;
+    }
+
+
+    .sp-app-bottom {
+
+        margin-top: 55px;
+    }
+
+}
+</style>
