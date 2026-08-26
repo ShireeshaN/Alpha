@@ -2,2035 +2,1522 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Smart Bollard | R&D | Alpha Numeric</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Smart Bollard | Alpha Numeric R&D</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    <meta name="description"
+          content="Alpha Numeric Smart Bollard integrates Bluetooth, Wi-Fi, wireless charging, audio and intelligent tuning and dimming into connected urban infrastructure.">
+
+
+    <!-- =========================================================
+         BOOTSTRAP
+    ========================================================== -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet"
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
-<style>
-
-/* =========================================================
-   GLOBAL
-========================================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: "Inter", sans-serif;
-    background: #fff;
-    color: #111;
-    overflow-x: hidden;
-}
-
-a {
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-
-/* =========================================================
-   NAVBAR
-========================================================= */
-
-.main-navbar {
-    height: 100px;
-    padding: 0 7%;
-    background: #fff !important;
-    border-bottom: 1px solid #e8e8e8;
-    z-index: 9999;
-    transition: .3s ease;
-}
-
-.main-navbar .navbar-brand img {
-    height: 55px;
-    width: auto;
-}
-
-.main-navbar .navbar-nav {
-    align-items: center;
-    gap: 28px;
-}
-
-.main-navbar .nav-link {
-    color: #111 !important;
-    font-size: 15px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    padding: 10px 0 !important;
-    transition: .3s ease;
-}
-
-.main-navbar .nav-link:hover {
-    color: #666 !important;
-}
-
-.main-navbar .nav-link.main-active {
-    font-weight: 700;
-}
-
-.main-navbar .dropdown-menu {
-    margin-top: 18px;
-    padding: 10px 0;
-    min-width: 240px;
-    border: 1px solid #e5e5e5;
-    border-radius: 0;
-    background: #fff;
-    box-shadow: 0 15px 40px rgba(0,0,0,.08);
-}
-
-.main-navbar .dropdown-item {
-    padding: 12px 20px;
-    color: #222;
-    font-size: 13px;
-}
-
-.main-navbar .dropdown-item:hover {
-    background: #f5f5f5;
-}
+    <!-- =========================================================
+         INTER FONT
+    ========================================================== -->
 
-.main-navbar .dropdown-item.active {
-    background: #111 !important;
-    color: #fff !important;
-}
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-/* =========================================================
-   HERO
-========================================================= */
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-.bollard-hero {
-    margin-top: 100px;
-    min-height: 820px;
 
-    background: #080808;
-    color: #fff;
+    <style>
 
-    position: relative;
-    overflow: hidden;
-}
+        /* =========================================================
+           GLOBAL
+        ========================================================== */
 
-.hero-lines {
-    position: absolute;
-    inset: 0;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    background-image:
-        linear-gradient(
-            90deg,
-            transparent 49.8%,
-            rgba(255,255,255,.08) 50%,
-            transparent 50.2%
-        );
 
-    background-size: 180px 100%;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-.hero-circle {
-    position: absolute;
 
-    width: 800px;
-    height: 800px;
+        body {
 
-    right: -300px;
-    top: -100px;
+            font-family: "Inter", sans-serif;
 
-    border: 1px solid #292929;
-    border-radius: 50%;
-}
+            background: #ffffff;
 
-.hero-circle::before {
-    content: "";
+            color: #111111;
 
-    position: absolute;
-    inset: 90px;
+            overflow-x: hidden;
+        }
 
-    border: 1px dashed #333;
-    border-radius: 50%;
-}
 
-.hero-circle::after {
-    content: "";
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-    position: absolute;
-    inset: 190px;
 
-    border: 1px solid #333;
-    border-radius: 50%;
-}
+        img {
+            display: block;
+            max-width: 100%;
+        }
 
-.bollard-hero-inner {
-    position: relative;
-    z-index: 2;
 
-    max-width: 1450px;
-    min-height: 820px;
+        button {
+            font-family: inherit;
+        }
 
-    margin: auto;
 
-    padding: 130px 7% 90px;
 
-    display: grid;
-    grid-template-columns: .9fr 1.1fr;
+        /* =========================================================
+           NAVBAR
+        ========================================================== */
 
-    align-items: center;
+        .about-navbar {
 
-    gap: 80px;
-}
+            height: 100px;
 
+            padding: 0 7%;
 
-/* HERO TEXT */
+            background: #ffffff !important;
 
-.hero-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
+            border-bottom: 1px solid #eeeeee;
 
-    padding: 9px 14px;
+            z-index: 9999;
 
-    border: 1px solid #333;
+            transition: .3s ease;
+        }
 
-    color: #aaa;
 
-    font-size: 9px;
+        .about-logo {
 
-    letter-spacing: 3px;
+            display: flex;
 
-    text-transform: uppercase;
+            align-items: center;
 
-    margin-bottom: 30px;
-}
+            padding: 0;
 
-.hero-tag i {
-    color: #fff;
-}
+            margin: 0;
+        }
 
-.bollard-hero h1 {
-    font-size: clamp(60px, 8vw, 115px);
 
-    line-height: .86;
+        .about-logo img {
 
-    letter-spacing: -7px;
+            height: 70px;
 
-    text-transform: uppercase;
+            width: auto;
 
-    font-weight: 800;
+            object-fit: contain;
+        }
 
-    margin-bottom: 35px;
-}
 
-.bollard-hero h1 span {
-    display: block;
+        .about-navbar .navbar-nav {
 
-    color: #777;
+            align-items: center;
 
-    font-weight: 300;
-}
+            gap: 28px;
+        }
 
-.hero-text {
-    max-width: 560px;
 
-    color: #999;
+        .about-navbar .nav-link {
 
-    font-size: 13px;
+            color: #111111 !important;
 
-    line-height: 1.9;
+            font-size: 15px;
 
-    margin-bottom: 35px;
-}
+            font-weight: 400;
 
-.hero-buttons {
-    display: flex;
+            letter-spacing: 1px;
 
-    flex-wrap: wrap;
+            padding: 10px 0 !important;
 
-    gap: 10px;
-}
+            transition: .3s;
+        }
 
-.hero-button {
-    display: inline-flex;
 
-    align-items: center;
+        .about-navbar .nav-link:hover {
 
-    gap: 12px;
+            color: #666666 !important;
+        }
 
-    padding: 14px 20px;
 
-    background: #fff;
+        .about-navbar .nav-link.active {
 
-    color: #111;
+            color: #111111 !important;
 
-    font-size: 9px;
+            font-weight: 500;
+        }
 
-    font-weight: 700;
 
-    letter-spacing: 1.5px;
+        .about-navbar .dropdown-menu {
 
-    transition: .3s;
-}
+            margin-top: 18px;
 
-.hero-button:hover {
-    background: #111;
+            padding: 10px 0;
 
-    color: #fff;
+            min-width: 215px;
 
-    border: 1px solid #fff;
-}
+            border: 1px solid #eeeeee;
 
-.hero-button-outline {
-    background: transparent;
+            border-radius: 0;
 
-    color: #fff;
+            background: #ffffff;
 
-    border: 1px solid #333;
-}
+            box-shadow: 0 15px 40px rgba(0,0,0,.08);
+        }
 
 
-/* =========================================================
-   BOLLARD PRODUCT VISUAL
-========================================================= */
+        .about-navbar .dropdown-item {
 
-.product-stage {
-    min-height: 570px;
+            padding: 11px 20px;
 
-    position: relative;
+            font-size: 13px;
 
-    display: flex;
+            color: #222222;
 
-    justify-content: center;
+            transition: .25s ease;
+        }
 
-    align-items: center;
-}
 
-.product-shadow {
-    position: absolute;
+        .about-navbar .dropdown-item:hover {
 
-    bottom: 35px;
+            background: #f5f5f5;
 
-    width: 360px;
-    height: 40px;
+            color: #000000;
+        }
 
-    border-radius: 50%;
 
-    background: rgba(255,255,255,.08);
+        .about-navbar .navbar-toggler {
 
-    filter: blur(12px);
-}
+            border: none !important;
 
-.bollard-model {
-    position: relative;
+            box-shadow: none !important;
+        }
 
-    width: 130px;
-    height: 430px;
 
-    background:
-        linear-gradient(
-            90deg,
-            #111 0%,
-            #444 18%,
-            #eee 48%,
-            #777 65%,
-            #151515 100%
-        );
 
-    border-radius: 16px 16px 8px 8px;
+        /* =========================================================
+           COMMON
+        ========================================================== */
 
-    box-shadow:
-        25px 0 45px rgba(255,255,255,.08),
-        -20px 0 40px rgba(0,0,0,.8);
-}
+        .smart-container {
 
-.bollard-top {
-    position: absolute;
+            width: min(calc(100% - 80px), 1500px);
 
-    top: -25px;
-    left: 50%;
+            margin: 0 auto;
+        }
 
-    transform: translateX(-50%);
 
-    width: 145px;
-    height: 45px;
+        .section-eyebrow {
 
-    border-radius: 50%;
+            display: inline-flex;
 
-    background:
-        linear-gradient(
-            90deg,
-            #111,
-            #eee,
-            #333
-        );
+            align-items: center;
 
-    border: 1px solid #777;
-}
+            gap: 12px;
 
-.light-band {
-    position: absolute;
+            color: #666666;
 
-    left: 50%;
+            font-size: 9px;
 
-    transform: translateX(-50%);
+            font-weight: 700;
 
-    width: 122px;
-    height: 28px;
+            letter-spacing: 3px;
 
-    background: #fff;
+            text-transform: uppercase;
+        }
 
-    box-shadow:
-        0 0 25px #fff,
-        0 0 70px rgba(255,255,255,.25);
-}
 
-.light-band.one {
-    top: 85px;
-}
+        .section-eyebrow::before {
 
-.light-band.two {
-    top: 165px;
+            content: "";
 
-    opacity: .55;
-}
+            width: 38px;
 
-.light-band.three {
-    top: 245px;
+            height: 1px;
 
-    opacity: .25;
-}
+            background: currentColor;
+        }
 
-.bollard-panel {
-    position: absolute;
 
-    left: 50%;
+        .section-title {
 
-    transform: translateX(-50%);
+            margin: 20px 0 0;
 
-    bottom: 45px;
+            max-width: 900px;
 
-    width: 50px;
-    height: 75px;
+            color: #111111;
 
-    border: 1px solid #777;
+            font-size: clamp(42px,5vw,76px);
 
-    background: #111;
-}
+            line-height: .98;
 
-.panel-dot {
-    width: 7px;
-    height: 7px;
+            letter-spacing: -3px;
 
-    margin: 12px auto;
+            font-weight: 600;
+        }
 
-    border-radius: 50%;
 
-    background: #fff;
+        .section-title span {
 
-    box-shadow: 0 0 12px #fff;
-}
+            color: #777777;
 
-.panel-line {
-    width: 25px;
-    height: 1px;
+            font-weight: 300;
+        }
 
-    margin: 8px auto;
 
-    background: #777;
-}
+        .section-copy {
 
-.bollard-base {
-    position: absolute;
+            color: #717171;
 
-    bottom: -12px;
-    left: 50%;
+            font-size: 14px;
 
-    transform: translateX(-50%);
+            line-height: 1.9;
+        }
 
-    width: 180px;
-    height: 30px;
 
-    background: #171717;
 
-    border: 1px solid #444;
+        /* =========================================================
+           INTRO
+        ========================================================== */
 
-    border-radius: 4px;
-}
+        .bollard-intro {
 
+            padding: 170px 0 90px;
 
-/* PRODUCT CALLOUTS */
+            background: #ffffff;
+        }
 
-.callout {
-    position: absolute;
 
-    color: #aaa;
+        .bollard-intro-grid {
 
-    font-size: 8px;
+            display: grid;
 
-    letter-spacing: 2px;
+            grid-template-columns:
+                minmax(0,1.05fr)
+                minmax(350px,.7fr);
 
-    text-transform: uppercase;
+            gap: 100px;
 
-    display: flex;
+            align-items: end;
+        }
 
-    align-items: center;
 
-    gap: 12px;
-}
+        .bollard-intro-content {
 
-.callout::after {
-    content: "";
+            max-width: 470px;
+        }
 
-    width: 60px;
-    height: 1px;
 
-    background: #555;
-}
+        .bollard-intro-content p {
 
-.callout-1 {
-    top: 100px;
-    right: 5%;
-}
+            margin: 0 0 28px;
 
-.callout-2 {
-    top: 300px;
-    left: 2%;
-}
+            color: #707070;
 
-.callout-3 {
-    bottom: 115px;
-    right: 8%;
-}
+            font-size: 14px;
 
+            line-height: 1.9;
+        }
 
-/* =========================================================
-   PRODUCT STATEMENT
-========================================================= */
 
-.statement {
-    padding: 120px 8%;
+        .bollard-tags {
 
-    background: #fff;
-}
+            display: flex;
 
-.statement-inner {
-    max-width: 1250px;
+            flex-wrap: wrap;
 
-    margin: auto;
-}
+            gap: 9px;
+        }
 
-.statement-top {
-    display: flex;
 
-    justify-content: space-between;
+        .bollard-tags span {
 
-    align-items: flex-start;
+            padding: 9px 13px;
 
-    gap: 50px;
-}
+            border: 1px solid #dddddd;
 
-.statement-number {
-    font-size: 140px;
+            color: #555555;
 
-    line-height: .7;
+            font-size: 8px;
 
-    color: #ededed;
+            font-weight: 700;
 
-    font-weight: 800;
+            letter-spacing: 1.5px;
 
-    letter-spacing: -12px;
-}
+            text-transform: uppercase;
+        }
 
-.statement-label {
-    color: #777;
 
-    font-size: 10px;
 
-    font-weight: 700;
+        /* =========================================================
+           PRODUCT PRESENTATION
+        ========================================================== */
 
-    letter-spacing: 3px;
+        .bollard-product {
 
-    text-transform: uppercase;
+            background: #111111;
 
-    margin-bottom: 20px;
-}
+            color: #ffffff;
+        }
 
-.statement h2 {
-    max-width: 900px;
 
-    font-size: clamp(40px, 5vw, 72px);
+        .bollard-product-grid {
 
-    line-height: .98;
+            display: grid;
 
-    letter-spacing: -4px;
+            grid-template-columns:
+                minmax(0,1.45fr)
+                minmax(340px,.55fr);
 
-    font-weight: 700;
-}
+            min-height: 720px;
+        }
 
-.statement-copy {
-    max-width: 700px;
 
-    margin-top: 45px;
 
-    color: #666;
+        /* IMAGE */
 
-    font-size: 14px;
+        .bollard-product-image {
 
-    line-height: 2;
-}
+            position: relative;
 
+            min-height: 720px;
 
-/* =========================================================
-   FEATURE MATRIX
-========================================================= */
+            background:
 
-.feature-section {
-    background: #f2f2f2;
+                linear-gradient(
+                    to top,
+                    rgba(0,0,0,.55),
+                    rgba(0,0,0,.03)
+                ),
 
-    padding: 120px 8%;
-}
+                url("assets/img/rnd/smart-bollard/smart-bollard-main.jpg");
 
-.feature-head {
-    max-width: 1250px;
+            background-size: cover;
 
-    margin: auto auto 55px;
+            background-position: center;
+        }
 
-    display: flex;
 
-    justify-content: space-between;
+        .bollard-image-label {
 
-    align-items: flex-end;
+            position: absolute;
 
-    gap: 40px;
-}
+            top: 35px;
 
-.feature-label {
-    color: #777;
+            left: 35px;
 
-    font-size: 10px;
+            padding: 10px 14px;
 
-    letter-spacing: 3px;
+            background: rgba(255,255,255,.95);
 
-    font-weight: 700;
-}
+            color: #111111;
 
-.feature-head h2 {
-    font-size: clamp(38px,5vw,65px);
+            font-size: 8px;
 
-    line-height: 1;
+            font-weight: 700;
 
-    letter-spacing: -3px;
+            letter-spacing: 2px;
 
-    margin-top: 12px;
-}
+            text-transform: uppercase;
+        }
 
-.feature-head p {
-    max-width: 430px;
 
-    color: #777;
 
-    font-size: 11px;
+        /* SIDE CONTENT */
 
-    line-height: 1.8;
-}
+        .bollard-product-content {
 
-.feature-matrix {
-    max-width: 1250px;
+            padding: 60px 45px;
 
-    margin: auto;
+            display: flex;
 
-    display: grid;
+            flex-direction: column;
 
-    grid-template-columns: repeat(3,1fr);
+            justify-content: space-between;
+        }
 
-    gap: 2px;
 
-    background: #111;
-}
+        .bollard-product-index {
 
-.feature-card {
-    background: #fff;
+            color: #6d6d6d;
 
-    min-height: 330px;
+            font-size: 9px;
 
-    padding: 30px;
+            font-weight: 700;
 
-    position: relative;
+            letter-spacing: 2px;
+        }
 
-    transition: .4s;
-}
 
-.feature-card:hover {
-    background: #111;
+        .bollard-product-content h2 {
 
-    color: #fff;
-}
+            margin: 0 0 22px;
 
-.feature-card-number {
-    position: absolute;
+            color: #ffffff;
 
-    right: 22px;
-    top: 18px;
+            font-size: clamp(40px,4vw,62px);
 
-    font-size: 40px;
+            line-height: .96;
 
-    font-weight: 800;
+            letter-spacing: -2.5px;
 
-    color: #e8e8e8;
-}
+            font-weight: 500;
+        }
 
-.feature-card:hover .feature-card-number {
-    color: #333;
-}
 
-.feature-icon {
-    width: 52px;
-    height: 52px;
+        .bollard-product-content h2 span {
 
-    display: flex;
+            display: block;
 
-    justify-content: center;
-    align-items: center;
+            color: #777777;
 
-    background: #111;
+            font-weight: 300;
+        }
 
-    color: #fff;
 
-    margin-bottom: 50px;
-}
+        .bollard-product-content p {
 
-.feature-card:hover .feature-icon {
-    background: #fff;
+            margin: 0;
 
-    color: #111;
-}
+            color: #999999;
 
-.feature-card h3 {
-    font-size: 14px;
+            font-size: 13px;
 
-    margin-bottom: 12px;
-}
+            line-height: 1.9;
+        }
 
-.feature-card p {
-    color: #777;
 
-    font-size: 10px;
+        .bollard-product-meta {
 
-    line-height: 1.9;
-}
+            padding-top: 27px;
 
-.feature-card:hover p {
-    color: #999;
-}
+            border-top: 1px solid #303030;
+        }
 
 
-/* =========================================================
-   TECHNOLOGY STACK
-========================================================= */
+        .bollard-product-meta span {
 
-.tech-section {
-    padding: 120px 8%;
+            display: block;
 
-    background: #050505;
+            margin-bottom: 8px;
 
-    color: #fff;
-}
+            color: #666666;
 
-.tech-inner {
-    max-width: 1250px;
+            font-size: 8px;
 
-    margin: auto;
-}
+            font-weight: 700;
 
-.tech-header {
-    max-width: 800px;
+            letter-spacing: 2px;
 
-    margin-bottom: 65px;
-}
+            text-transform: uppercase;
+        }
 
-.tech-header .label {
-    color: #777;
 
-    font-size: 10px;
+        .bollard-product-meta strong {
 
-    font-weight: 700;
+            color: #ffffff;
 
-    letter-spacing: 3px;
-}
+            font-size: 14px;
 
-.tech-header h2 {
-    margin-top: 18px;
+            font-weight: 500;
+        }
 
-    font-size: clamp(40px,5vw,70px);
 
-    line-height: .95;
 
-    letter-spacing: -4px;
-}
+        /* =========================================================
+           FEATURES INTRO
+        ========================================================== */
 
-.tech-header p {
-    margin-top: 25px;
+        .features-intro {
 
-    max-width: 650px;
+            padding: 125px 0 70px;
 
-    color: #888;
+            background: #f7f7f5;
+        }
 
-    font-size: 12px;
 
-    line-height: 1.9;
-}
+        .features-intro-grid {
 
-.tech-stack {
-    border-top: 1px solid #292929;
-}
+            display: grid;
 
-.tech-row {
-    min-height: 105px;
+            grid-template-columns:
+                minmax(0,1fr)
+                minmax(300px,430px);
 
-    display: grid;
+            gap: 90px;
 
-    grid-template-columns: 230px 1fr;
+            align-items: end;
+        }
 
-    border-bottom: 1px solid #292929;
-}
 
-.tech-name {
-    display: flex;
 
-    align-items: center;
+        /* =========================================================
+           FIVE FEATURE GRID
+        ========================================================== */
 
-    border-right: 1px solid #292929;
+        .features-section {
 
-    padding: 25px;
+            padding-bottom: 130px;
 
-    color: #fff;
+            background: #f7f7f5;
+        }
 
-    font-size: 10px;
 
-    font-weight: 700;
+        .features-grid {
 
-    letter-spacing: 2px;
-}
+            display: grid;
 
-.tech-options {
-    display: flex;
+            grid-template-columns:
+                repeat(5,minmax(0,1fr));
 
-    align-items: center;
+            border-top: 1px solid #dddddd;
 
-    gap: 9px;
+            border-left: 1px solid #dddddd;
+        }
 
-    padding: 25px;
 
-    flex-wrap: wrap;
-}
+        .feature-card {
 
-.tech-pill {
-    padding: 10px 14px;
+            position: relative;
 
-    border: 1px solid #333;
+            min-height: 360px;
 
-    color: #888;
+            padding: 32px 26px;
 
-    font-size: 9px;
+            display: flex;
 
-    transition: .3s;
-}
+            flex-direction: column;
 
-.tech-pill:hover {
-    background: #fff;
+            background: #ffffff;
 
-    color: #111;
+            border-right: 1px solid #dddddd;
 
-    border-color: #fff;
-}
+            border-bottom: 1px solid #dddddd;
 
+            overflow: hidden;
 
-/* =========================================================
-   INTELLIGENT LIGHTING SECTION
-========================================================= */
+            transition:
+                background .35s ease,
+                color .35s ease;
+        }
 
-.lighting-section {
-    padding: 120px 8%;
 
-    background: #fff;
-}
+        .feature-card::before {
 
-.lighting-inner {
-    max-width: 1250px;
+            content: "";
 
-    margin: auto;
+            position: absolute;
 
-    display: grid;
+            top: 0;
 
-    grid-template-columns: 1fr 1fr;
+            left: 0;
 
-    gap: 100px;
+            width: 0;
 
-    align-items: center;
-}
+            height: 2px;
 
-.lighting-copy .small-label {
-    color: #777;
+            background: #111111;
 
-    font-size: 10px;
+            transition: width .4s ease;
+        }
 
-    letter-spacing: 3px;
 
-    font-weight: 700;
-}
+        .feature-card:hover::before {
 
-.lighting-copy h2 {
-    font-size: clamp(40px,5vw,68px);
+            width: 100%;
+        }
 
-    line-height: .95;
 
-    letter-spacing: -4px;
+        .feature-card:hover {
 
-    margin: 18px 0 25px;
-}
+            background: #111111;
 
-.lighting-copy p {
-    color: #666;
+            color: #ffffff;
+        }
 
-    font-size: 13px;
 
-    line-height: 1.9;
+        .feature-number {
 
-    max-width: 600px;
-}
+            color: #aaaaaa;
 
-.lighting-list {
-    margin-top: 35px;
+            font-size: 8px;
 
-    border-top: 1px solid #ddd;
-}
+            font-weight: 700;
 
-.lighting-list-item {
-    display: flex;
+            letter-spacing: 2px;
+        }
 
-    gap: 18px;
 
-    align-items: center;
+        .feature-icon {
 
-    padding: 18px 0;
+            width: 50px;
 
-    border-bottom: 1px solid #ddd;
-}
+            height: 50px;
 
-.lighting-list-item span:first-child {
-    width: 30px;
-    height: 30px;
+            margin-top: 55px;
 
-    display: flex;
+            display: flex;
 
-    align-items: center;
-    justify-content: center;
+            align-items: center;
 
-    background: #111;
+            justify-content: center;
 
-    color: #fff;
+            border: 1px solid #dddddd;
 
-    font-size: 9px;
-}
+            background: #fafafa;
 
-.lighting-list-item span:last-child {
-    color: #333;
+            color: #111111;
 
-    font-size: 10px;
+            font-size: 18px;
 
-    font-weight: 600;
+            transition: .35s ease;
+        }
 
-    letter-spacing: 1px;
-}
 
+        .feature-card:hover .feature-icon {
 
-/* LIGHTING VISUAL */
+            background: #ffffff;
 
-.light-visual {
-    height: 550px;
+            border-color: #ffffff;
+        }
 
-    background: #080808;
 
-    position: relative;
+        .feature-content {
 
-    overflow: hidden;
+            margin-top: auto;
 
-    display: flex;
+            padding-top: 50px;
+        }
 
-    align-items: flex-end;
 
-    justify-content: center;
-}
+        .feature-card h3 {
 
-.ground {
-    position: absolute;
+            margin: 0 0 13px;
 
-    bottom: 50px;
+            font-size: 17px;
 
-    width: 90%;
+            font-weight: 600;
 
-    height: 1px;
+            line-height: 1.3;
+        }
 
-    background: #333;
-}
 
-.light-bollard {
-    position: relative;
+        .feature-card p {
 
-    width: 75px;
-    height: 300px;
+            margin: 0;
 
-    background:
-        linear-gradient(
-            90deg,
-            #222,
-            #ddd,
-            #555,
-            #111
-        );
+            color: #777777;
 
-    z-index: 3;
-}
+            font-size: 11px;
 
-.light-source {
-    position: absolute;
+            line-height: 1.75;
 
-    top: 25px;
-    left: 50%;
+            transition: .35s ease;
+        }
 
-    transform: translateX(-50%);
 
-    width: 66px;
-    height: 35px;
+        .feature-card:hover p {
 
-    background: #fff;
+            color: #aaaaaa;
+        }
 
-    box-shadow:
-        0 0 25px #fff,
-        0 0 70px rgba(255,255,255,.3);
-}
 
-.light-beam {
-    position: absolute;
 
-    bottom: 51px;
+        /* =========================================================
+           FEATURE ARCHITECTURE
+        ========================================================== */
 
-    width: 390px;
-    height: 270px;
+        .feature-architecture {
 
-    background:
-        linear-gradient(
-            180deg,
-            rgba(255,255,255,.20),
-            transparent
-        );
+            padding: 130px 0;
 
-    clip-path: polygon(
-        46% 0,
-        54% 0,
-        100% 100%,
-        0 100%
-    );
+            background: #ffffff;
+        }
 
-    filter: blur(2px);
-}
 
+        .architecture-grid {
 
-/* =========================================================
-   SMART CONNECTIVITY
-========================================================= */
+            display: grid;
 
-.connectivity {
-    padding: 120px 8%;
+            grid-template-columns:
+                minmax(320px,.75fr)
+                minmax(0,1.25fr);
 
-    background: #ededed;
-}
+            gap: 100px;
+        }
 
-.connectivity-inner {
-    max-width: 1250px;
 
-    margin: auto;
-}
+        .architecture-heading {
 
-.connectivity-header {
-    max-width: 750px;
+            position: sticky;
 
-    margin-bottom: 60px;
-}
+            top: 150px;
 
-.connectivity-header span {
-    color: #777;
+            align-self: start;
+        }
 
-    font-size: 10px;
 
-    font-weight: 700;
+        .architecture-heading p {
 
-    letter-spacing: 3px;
-}
+            max-width: 430px;
 
-.connectivity-header h2 {
-    font-size: clamp(40px,5vw,70px);
+            margin-top: 28px;
 
-    line-height: .95;
+            color: #777777;
 
-    letter-spacing: -4px;
+            font-size: 13px;
 
-    margin-top: 15px;
-}
+            line-height: 1.9;
+        }
 
-.connectivity-header p {
-    margin-top: 25px;
 
-    color: #777;
+        .architecture-list {
 
-    font-size: 12px;
+            border-top: 1px solid #dddddd;
+        }
 
-    line-height: 1.9;
-}
 
-.connectivity-grid {
-    display: grid;
+        .architecture-item {
 
-    grid-template-columns: 1.4fr .6fr;
+            min-height: 125px;
 
-    gap: 15px;
-}
+            display: grid;
 
-.connectivity-main {
-    min-height: 420px;
+            grid-template-columns:
+                70px
+                minmax(0,1fr)
+                auto;
 
-    background: #080808;
+            gap: 25px;
 
-    padding: 45px;
+            align-items: center;
 
-    position: relative;
+            border-bottom: 1px solid #dddddd;
 
-    overflow: hidden;
-}
+            transition: padding .35s ease;
+        }
 
-.connectivity-main h3 {
-    color: #fff;
 
-    max-width: 600px;
+        .architecture-item:hover {
 
-    font-size: 34px;
+            padding-left: 15px;
+        }
 
-    line-height: 1.1;
 
-    letter-spacing: -2px;
-}
+        .architecture-number {
 
-.connectivity-main p {
-    color: #888;
+            color: #aaaaaa;
 
-    max-width: 550px;
+            font-size: 9px;
 
-    font-size: 11px;
+            font-weight: 700;
 
-    line-height: 1.9;
+            letter-spacing: 2px;
+        }
 
-    margin-top: 20px;
-}
 
-.connection-ring {
-    position: absolute;
+        .architecture-item h3 {
 
-    width: 400px;
-    height: 400px;
+            margin: 0;
 
-    right: -80px;
-    bottom: -150px;
+            color: #111111;
 
-    border: 1px solid #333;
+            font-size: 21px;
 
-    border-radius: 50%;
-}
+            font-weight: 500;
 
-.connection-ring::before {
-    content: "";
+            letter-spacing: -.4px;
+        }
 
-    position: absolute;
 
-    inset: 65px;
+        .architecture-type {
 
-    border: 1px dashed #444;
+            color: #999999;
 
-    border-radius: 50%;
-}
+            font-size: 8px;
 
-.connection-dot {
-    position: absolute;
+            font-weight: 700;
 
-    width: 10px;
-    height: 10px;
+            letter-spacing: 1.7px;
 
-    border-radius: 50%;
+            text-transform: uppercase;
+        }
 
-    background: #fff;
 
-    box-shadow: 0 0 20px #fff;
 
-    top: 50%;
-    left: 50%;
-}
+        /* =========================================================
+           EXPERIENCE IMAGE SECTION
+        ========================================================== */
 
-.connectivity-side {
-    display: grid;
+        .experience-section {
 
-    grid-template-rows: repeat(3,1fr);
+            position: relative;
 
-    gap: 2px;
+            min-height: 680px;
 
-    background: #111;
-}
+            display: flex;
 
-.connectivity-card {
-    background: #fff;
+            align-items: flex-end;
 
-    padding: 25px;
+            color: #ffffff;
 
-    transition: .3s;
-}
+            background:
 
-.connectivity-card:hover {
-    background: #111;
-}
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,.92) 0%,
+                    rgba(0,0,0,.60) 42%,
+                    rgba(0,0,0,.12) 100%
+                ),
 
-.connectivity-card i {
-    font-size: 18px;
+                url("assets/img/rnd/smart-bollard/smart-bollard-city.jpg");
 
-    margin-bottom: 20px;
-}
+            background-size: cover;
 
-.connectivity-card h4 {
-    font-size: 11px;
+            background-position: center;
+        }
 
-    margin-bottom: 8px;
-}
 
-.connectivity-card p {
-    color: #777;
+        .experience-content {
 
-    font-size: 9px;
+            width: min(calc(100% - 80px),1500px);
 
-    line-height: 1.7;
-}
+            margin: 0 auto;
 
-.connectivity-card:hover h4 {
-    color: #fff;
-}
+            padding: 100px 0;
+        }
 
-.connectivity-card:hover i {
-    color: #fff;
-}
 
-.connectivity-card:hover p {
-    color: #999;
-}
+        .experience-section .section-eyebrow {
 
+            color: rgba(255,255,255,.60);
+        }
 
-/* =========================================================
-   APPLICATIONS
-========================================================= */
 
-.application-section {
-    padding: 120px 8%;
+        .experience-section h2 {
 
-    background: #fff;
-}
+            max-width: 900px;
 
-.application-inner {
-    max-width: 1250px;
+            margin: 22px 0 26px;
 
-    margin: auto;
-}
+            color: #ffffff;
 
-.application-heading {
-    display: grid;
+            font-size: clamp(44px,5vw,76px);
 
-    grid-template-columns: .7fr 1.3fr;
+            line-height: .98;
 
-    gap: 80px;
+            letter-spacing: -3px;
 
-    margin-bottom: 65px;
-}
+            font-weight: 500;
+        }
 
-.application-number {
-    font-size: 120px;
 
-    line-height: .7;
+        .experience-section h2 span {
 
-    color: #eee;
+            color: rgba(255,255,255,.55);
 
-    font-weight: 800;
+            font-weight: 300;
+        }
 
-    letter-spacing: -10px;
-}
 
-.application-heading h2 {
-    font-size: clamp(40px,5vw,68px);
+        .experience-section p {
 
-    line-height: .95;
+            max-width: 620px;
 
-    letter-spacing: -4px;
-}
+            margin: 0;
 
-.application-heading p {
-    color: #777;
+            color: rgba(255,255,255,.68);
 
-    font-size: 12px;
+            font-size: 13px;
 
-    line-height: 1.9;
+            line-height: 1.9;
+        }
 
-    max-width: 650px;
 
-    margin-top: 20px;
-}
 
-.application-grid {
-    display: grid;
+        /* =========================================================
+           CAPABILITY STRIP
+        ========================================================== */
 
-    grid-template-columns: repeat(4,1fr);
+        .capability-strip {
 
-    border-top: 1px solid #ddd;
+            background: #111111;
 
-    border-left: 1px solid #ddd;
-}
+            color: #ffffff;
+        }
 
-.application-card {
-    min-height: 240px;
 
-    padding: 30px;
+        .capability-grid {
 
-    border-right: 1px solid #ddd;
+            display: grid;
 
-    border-bottom: 1px solid #ddd;
+            grid-template-columns:
+                repeat(5,1fr);
+        }
 
-    transition: .3s;
-}
 
-.application-card:hover {
-    background: #111;
+        .capability-item {
 
-    color: #fff;
-}
+            min-height: 145px;
 
-.application-card .num {
-    color: #ccc;
+            padding: 28px 24px;
 
-    font-size: 35px;
+            display: flex;
 
-    font-weight: 800;
+            flex-direction: column;
 
-    margin-bottom: 35px;
-}
+            justify-content: space-between;
 
-.application-card:hover .num {
-    color: #444;
-}
+            border-right: 1px solid #303030;
+        }
 
-.application-card h3 {
-    font-size: 13px;
 
-    margin-bottom: 12px;
-}
+        .capability-item:first-child {
 
-.application-card p {
-    color: #777;
+            border-left: 1px solid #303030;
+        }
 
-    font-size: 9px;
 
-    line-height: 1.8;
-}
+        .capability-item span {
 
-.application-card:hover p {
-    color: #999;
-}
+            color: #666666;
 
+            font-size: 8px;
 
-/* =========================================================
-   R&D DEVELOPMENT
-========================================================= */
+            font-weight: 700;
 
-.rd-development {
-    padding: 120px 8%;
+            letter-spacing: 2px;
+        }
 
-    background: #050505;
 
-    color: #fff;
-}
+        .capability-item strong {
 
-.rd-development-inner {
-    max-width: 1250px;
+            color: #ffffff;
 
-    margin: auto;
-}
+            font-size: 13px;
 
-.rd-development-head {
-    display: flex;
+            font-weight: 500;
+        }
 
-    justify-content: space-between;
 
-    align-items: flex-end;
 
-    gap: 50px;
+        /* =========================================================
+           APPLICATIONS
+        ========================================================== */
 
-    margin-bottom: 70px;
-}
+        .applications-section {
 
-.rd-development-head .label {
-    color: #777;
+            padding: 130px 0;
 
-    font-size: 10px;
+            background: #f7f7f5;
+        }
 
-    letter-spacing: 3px;
 
-    font-weight: 700;
-}
+        .applications-heading {
 
-.rd-development-head h2 {
-    margin-top: 15px;
+            display: grid;
 
-    font-size: clamp(40px,5vw,68px);
+            grid-template-columns:
+                minmax(0,1fr)
+                minmax(300px,430px);
 
-    line-height: .95;
+            gap: 90px;
 
-    letter-spacing: -4px;
-}
+            align-items: end;
 
-.rd-development-head p {
-    max-width: 400px;
+            margin-bottom: 60px;
+        }
 
-    color: #888;
 
-    font-size: 11px;
+        .applications-grid {
 
-    line-height: 1.9;
-}
+            display: grid;
 
-.rd-timeline {
-    display: grid;
+            grid-template-columns:
+                repeat(3,1fr);
 
-    grid-template-columns: repeat(4,1fr);
+            gap: 14px;
+        }
 
-    border-top: 1px solid #292929;
-}
 
-.rd-step {
-    min-height: 280px;
+        .application-card {
 
-    padding: 30px;
+            min-height: 240px;
 
-    border-right: 1px solid #292929;
+            padding: 30px;
 
-    position: relative;
-}
+            background: #ffffff;
 
-.rd-step:last-child {
-    border-right: none;
-}
+            border: 1px solid #e1e1e1;
 
-.rd-step-number {
-    color: #444;
+            transition:
+                transform .35s ease,
+                border-color .35s ease;
+        }
 
-    font-size: 50px;
 
-    font-weight: 800;
+        .application-card:hover {
 
-    line-height: 1;
+            transform: translateY(-5px);
 
-    margin-bottom: 50px;
-}
+            border-color: #111111;
+        }
 
-.rd-step h3 {
-    font-size: 12px;
 
-    letter-spacing: 1px;
+        .application-number {
 
-    margin-bottom: 12px;
-}
+            display: block;
 
-.rd-step p {
-    color: #777;
+            margin-bottom: 60px;
 
-    font-size: 9px;
+            color: #aaaaaa;
 
-    line-height: 1.8;
-}
+            font-size: 8px;
 
-.rd-step::after {
-    content: "";
+            font-weight: 700;
 
-    position: absolute;
+            letter-spacing: 2px;
+        }
 
-    width: 7px;
-    height: 7px;
 
-    top: -4px;
-    left: 30px;
+        .application-card h3 {
 
-    background: #fff;
+            margin: 0 0 12px;
 
-    border-radius: 50%;
-}
+            color: #111111;
 
+            font-size: 18px;
 
-/* =========================================================
-   SPEC STRIP
-========================================================= */
+            font-weight: 600;
+        }
 
-.specifications {
-    display: grid;
 
-    grid-template-columns: repeat(4,1fr);
+        .application-card p {
 
-    background: #111;
-}
+            margin: 0;
 
-.spec {
-    text-align: center;
+            color: #777777;
 
-    padding: 40px 20px;
+            font-size: 11px;
 
-    border-right: 1px solid #333;
-}
+            line-height: 1.75;
+        }
 
-.spec:last-child {
-    border-right: none;
-}
 
-.spec strong {
-    display: block;
 
-    color: #fff;
+        /* =========================================================
+           CTA
+        ========================================================== */
 
-    font-size: 25px;
+        .bollard-cta {
 
-    margin-bottom: 8px;
-}
+            padding: 120px 0;
 
-.spec span {
-    color: #777;
+            background: #ffffff;
+        }
 
-    font-size: 8px;
 
-    letter-spacing: 2px;
+        .bollard-cta-grid {
 
-    text-transform: uppercase;
-}
+            padding-top: 65px;
 
+            display: grid;
 
-/* =========================================================
-   CTA
-========================================================= */
+            grid-template-columns:
+                minmax(0,1fr)
+                320px;
 
-.bollard-cta {
-    padding: 120px 8%;
+            gap: 90px;
 
-    background: #fff;
-}
+            align-items: end;
 
-.cta-inner {
-    max-width: 1250px;
+            border-top: 1px solid #dddddd;
+        }
 
-    min-height: 370px;
 
-    margin: auto;
+        .bollard-cta h2 {
 
-    padding: 65px;
+            max-width: 850px;
 
-    background: #080808;
+            margin: 0;
 
-    position: relative;
+            color: #111111;
 
-    overflow: hidden;
-}
+            font-size: clamp(45px,5.5vw,82px);
 
-.cta-rings {
-    position: absolute;
+            line-height: .98;
 
-    width: 500px;
-    height: 500px;
+            letter-spacing: -4px;
 
-    right: -150px;
-    top: -70px;
+            font-weight: 600;
+        }
 
-    border: 1px solid #333;
 
-    border-radius: 50%;
-}
+        .bollard-cta h2 span {
 
-.cta-rings::before {
-    content: "";
+            color: #777777;
 
-    position: absolute;
+            font-weight: 300;
+        }
 
-    inset: 70px;
 
-    border: 1px dashed #333;
+        .bollard-cta-content p {
 
-    border-radius: 50%;
-}
+            margin: 0 0 26px;
 
-.cta-content {
-    position: relative;
+            color: #777777;
 
-    z-index: 2;
+            font-size: 13px;
 
-    max-width: 750px;
-}
+            line-height: 1.8;
+        }
 
-.cta-label {
-    color: #777;
 
-    font-size: 10px;
+        .bollard-cta-button {
 
-    font-weight: 700;
+            min-height: 58px;
 
-    letter-spacing: 3px;
-}
+            padding: 0 22px;
 
-.cta-content h2 {
-    color: #fff;
+            display: flex;
 
-    font-size: clamp(38px,5vw,67px);
+            align-items: center;
 
-    line-height: .95;
+            justify-content: space-between;
 
-    letter-spacing: -4px;
+            background: #111111;
 
-    margin: 18px 0 22px;
-}
+            color: #ffffff;
 
-.cta-content p {
-    max-width: 650px;
+            font-size: 10px;
 
-    color: #888;
+            font-weight: 700;
 
-    font-size: 11px;
+            letter-spacing: 1.5px;
 
-    line-height: 1.9;
+            text-transform: uppercase;
 
-    margin-bottom: 25px;
-}
+            transition: .35s ease;
+        }
 
-.cta-button {
-    display: inline-flex;
 
-    align-items: center;
+        .bollard-cta-button:hover {
 
-    gap: 12px;
+            background: #303030;
 
-    padding: 15px 23px;
+            color: #ffffff;
+        }
 
-    background: #fff;
 
-    color: #111;
 
-    font-size: 9px;
+        /* =========================================================
+           RESPONSIVE
+        ========================================================== */
 
-    font-weight: 700;
+        @media (max-width: 1200px) {
 
-    letter-spacing: 1.5px;
+            .features-grid {
 
-    transition: .3s;
-}
+                grid-template-columns:
+                    repeat(3,1fr);
+            }
 
-.cta-button:hover {
-    background: transparent;
 
-    color: #fff;
+            .capability-grid {
 
-    border: 1px solid #fff;
-}
+                grid-template-columns:
+                    repeat(3,1fr);
+            }
 
+        }
 
-/* =========================================================
-   FOOTER
-========================================================= */
 
-.main-footer {
-    background: #050505;
+        @media (max-width: 991px) {
 
-    color: #fff;
 
-    padding: 75px 7% 25px;
-}
+            .about-navbar {
 
-.footer-logo img {
-    height: 55px;
+                height: auto;
 
-    margin-bottom: 22px;
-}
+                min-height: 80px;
 
-.footer-description {
-    max-width: 370px;
+                padding: 10px 5%;
+            }
 
-    color: #888;
 
-    font-size: 12px;
+            .about-logo img {
 
-    line-height: 1.9;
-}
+                height: 70px;
+            }
 
-.footer-heading {
-    color: #fff;
 
-    font-size: 12px;
+            .about-navbar .navbar-collapse {
 
-    font-weight: 600;
+                margin-top: 15px;
 
-    letter-spacing: 1.5px;
+                padding: 15px 0;
 
-    margin-bottom: 22px;
-}
+                background: #ffffff;
+            }
 
-.footer-links {
-    list-style: none;
 
-    padding: 0;
-}
+            .about-navbar .navbar-nav {
 
-.footer-links li {
-    margin-bottom: 11px;
-}
+                align-items: flex-start;
 
-.footer-links a {
-    color: #888;
+                gap: 0;
+            }
 
-    font-size: 12px;
 
-    transition: .3s;
-}
+            .about-navbar .nav-item {
 
-.footer-links a:hover {
-    color: #fff;
+                width: 100%;
+            }
 
-    padding-left: 4px;
-}
 
-.footer-contact {
-    list-style: none;
+            .about-navbar .nav-link {
 
-    padding: 0;
-}
+                padding: 12px 5px !important;
+            }
 
-.footer-contact li {
-    display: flex;
 
-    gap: 12px;
+            .about-navbar .dropdown-menu {
 
-    color: #888;
+                margin-top: 0;
 
-    font-size: 12px;
+                border: none;
 
-    line-height: 1.8;
+                box-shadow: none;
+            }
 
-    margin-bottom: 15px;
-}
 
-.footer-contact i {
-    width: 18px;
+            .bollard-intro-grid,
+            .features-intro-grid,
+            .architecture-grid,
+            .applications-heading,
+            .bollard-cta-grid {
 
-    color: #fff;
+                grid-template-columns: 1fr;
 
-    margin-top: 4px;
-}
+                gap: 45px;
+            }
 
-.footer-social {
-    display: flex;
 
-    gap: 9px;
+            .bollard-product-grid {
 
-    margin-top: 24px;
-}
+                grid-template-columns: 1fr;
+            }
 
-.footer-social a {
-    width: 35px;
-    height: 35px;
 
-    display: flex;
+            .bollard-product-content {
 
-    align-items: center;
-    justify-content: center;
+                min-height: 420px;
+            }
 
-    border: 1px solid #2b2b2b;
 
-    color: #999;
+            .architecture-heading {
 
-    transition: .3s;
-}
+                position: static;
+            }
 
-.footer-social a:hover {
-    background: #fff;
 
-    color: #000;
+            .features-grid {
 
-    border-color: #fff;
-}
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
 
-.footer-bottom {
-    margin-top: 55px;
 
-    padding-top: 20px;
+            .applications-grid {
 
-    border-top: 1px solid #222;
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
 
-    display: flex;
 
-    justify-content: space-between;
+            .capability-grid {
 
-    color: #666;
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
 
-    font-size: 10px;
-}
+        }
 
-.footer-bottom strong {
-    color: #fff;
-}
 
+        @media (max-width: 767px) {
 
-/* =========================================================
-   RESPONSIVE
-========================================================= */
 
-@media (max-width: 1100px) {
+            .smart-container,
+            .experience-content {
 
-    .feature-matrix {
-        grid-template-columns: repeat(2,1fr);
-    }
+                width: calc(100% - 40px);
+            }
 
-    .application-grid {
-        grid-template-columns: repeat(2,1fr);
-    }
 
-    .rd-timeline {
-        grid-template-columns: repeat(2,1fr);
-    }
+            .bollard-intro {
 
-    .rd-step:nth-child(2) {
-        border-right: none;
-    }
+                padding:
+                    130px 0
+                    70px;
+            }
 
-}
 
+            .section-title {
 
-@media (max-width: 991px) {
+                font-size: 44px;
 
-    .main-navbar {
-        height: auto;
+                letter-spacing: -2px;
+            }
 
-        min-height: 80px;
 
-        padding: 10px 5%;
-    }
+            .bollard-product-image {
 
-    .main-navbar .navbar-brand img {
-        height: 48px;
-    }
+                min-height: 570px;
+            }
 
-    .main-navbar .navbar-collapse {
-        margin-top: 15px;
 
-        padding: 15px 0;
+            .bollard-product-content {
 
-        background: #fff;
-    }
+                padding: 45px 25px;
+            }
 
-    .main-navbar .navbar-nav {
-        align-items: flex-start;
 
-        gap: 0;
-    }
+            .features-intro,
+            .feature-architecture,
+            .applications-section,
+            .bollard-cta {
 
-    .main-navbar .nav-item {
-        width: 100%;
-    }
+                padding-top: 85px;
 
-    .main-navbar .nav-link {
-        padding: 12px 5px !important;
-    }
+                padding-bottom: 85px;
+            }
 
-    .main-navbar .dropdown-menu {
-        margin-top: 0;
 
-        border: none;
+            .features-section {
 
-        box-shadow: none;
-    }
+                padding-bottom: 85px;
+            }
 
-    .bollard-hero {
-        margin-top: 80px;
-    }
 
-    .bollard-hero-inner {
-        grid-template-columns: 1fr;
+            .features-grid {
 
-        padding-top: 110px;
-    }
+                grid-template-columns: 1fr;
+            }
 
-    .product-stage {
-        min-height: 500px;
-    }
 
-    .lighting-inner {
-        grid-template-columns: 1fr;
+            .feature-card {
 
-        gap: 60px;
-    }
+                min-height: 300px;
+            }
 
-    .connectivity-grid {
-        grid-template-columns: 1fr;
-    }
 
-}
+            .architecture-item {
 
+                padding: 25px 0;
 
-@media (max-width: 767px) {
+                grid-template-columns:
+                    45px 1fr;
 
-    .bollard-hero-inner {
-        padding-left: 7%;
-        padding-right: 7%;
-    }
+                gap: 15px;
+            }
 
-    .bollard-hero h1 {
-        font-size: 58px;
 
-        letter-spacing: -4px;
-    }
+            .architecture-type {
 
-    .statement,
-    .feature-section,
-    .tech-section,
-    .lighting-section,
-    .connectivity,
-    .application-section,
-    .rd-development,
-    .bollard-cta {
-        padding-left: 7%;
-        padding-right: 7%;
-    }
+                grid-column: 2;
+            }
 
-    .statement-top {
-        display: block;
-    }
 
-    .statement-number {
-        margin-bottom: 40px;
-    }
+            .experience-section {
 
-    .feature-head,
-    .rd-development-head {
-        display: block;
-    }
+                min-height: 600px;
+            }
 
-    .feature-head p,
-    .rd-development-head p {
-        margin-top: 25px;
-    }
 
-    .feature-matrix {
-        grid-template-columns: 1fr;
-    }
+            .experience-section h2 {
 
-    .tech-row {
-        grid-template-columns: 1fr;
-    }
+                font-size: 45px;
 
-    .tech-name {
-        border-right: none;
+                letter-spacing: -2px;
+            }
 
-        border-bottom: 1px solid #292929;
-    }
 
-    .application-heading {
-        grid-template-columns: 1fr;
+            .capability-grid {
 
-        gap: 40px;
-    }
+                grid-template-columns: 1fr;
+            }
 
-    .application-grid {
-        grid-template-columns: 1fr;
-    }
 
-    .rd-timeline {
-        grid-template-columns: 1fr;
-    }
+            .capability-item {
 
-    .rd-step {
-        border-right: none;
+                border-left: 1px solid #303030;
 
-        border-bottom: 1px solid #292929;
-    }
+                border-bottom: 1px solid #303030;
+            }
 
-    .specifications {
-        grid-template-columns: repeat(2,1fr);
-    }
 
-    .spec {
-        border-bottom: 1px solid #333;
-    }
+            .applications-grid {
 
-    .cta-inner {
-        padding: 40px 30px;
-    }
+                grid-template-columns: 1fr;
+            }
 
-    .footer-bottom {
-        flex-direction: column;
 
-        gap: 12px;
-    }
+            .bollard-cta h2 {
 
-}
+                font-size: 48px;
 
+                letter-spacing: -2.5px;
+            }
 
-@media (max-width: 480px) {
+        }
 
-    .product-stage {
-        transform: scale(.8);
-    }
+    </style>
 
-    .specifications {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-</style>
 </head>
 
 
 <body>
 
 
-<!-- =========================================================
+<!-- =============================================================
      NAVBAR
-========================================================= -->
+============================================================= -->
 
-<nav class="navbar navbar-expand-lg main-navbar fixed-top">
+<nav class="navbar navbar-expand-lg about-navbar fixed-top">
 
     <div class="container-fluid px-4 px-lg-5">
 
-        <a class="navbar-brand" href="index.html">
+
+        <a class="navbar-brand about-logo"
+           href="index.html">
 
             <img
                 src="assets/img/b-alpha.png"
@@ -2044,8 +1531,6 @@ img {
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarResponsive">
-
-            <span class="me-2">Menu</span>
 
             <i class="fas fa-bars"></i>
 
@@ -2061,8 +1546,11 @@ img {
 
                 <li class="nav-item">
 
-                    <a class="nav-link" href="index.html">
+                    <a class="nav-link"
+                       href="index.html">
+
                         Home
+
                     </a>
 
                 </li>
@@ -2070,8 +1558,11 @@ img {
 
                 <li class="nav-item">
 
-                    <a class="nav-link" href="about.html">
+                    <a class="nav-link"
+                       href="about.html">
+
                         About
+
                     </a>
 
                 </li>
@@ -2081,10 +1572,9 @@ img {
 
                 <li class="nav-item dropdown">
 
-                    <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        data-bs-toggle="dropdown">
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       data-bs-toggle="dropdown">
 
                         Energy
 
@@ -2093,25 +1583,29 @@ img {
                     <ul class="dropdown-menu">
 
                         <li>
-                            <a class="dropdown-item" href="solar-energy.html">
+                            <a class="dropdown-item"
+                               href="solar-energy.html">
                                 Solar Energy
                             </a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="wind-energy.html">
+                            <a class="dropdown-item"
+                               href="wind-energy.html">
                                 Wind Energy
                             </a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="biomass-energy.html">
+                            <a class="dropdown-item"
+                               href="biomass-energy.html">
                                 Biomass Energy
                             </a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="hydel-energy.html">
+                            <a class="dropdown-item"
+                               href="hydel-energy.html">
                                 Hydel Energy
                             </a>
                         </li>
@@ -2125,10 +1619,9 @@ img {
 
                 <li class="nav-item dropdown">
 
-                    <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        data-bs-toggle="dropdown">
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       data-bs-toggle="dropdown">
 
                         Power
 
@@ -2137,25 +1630,29 @@ img {
                     <ul class="dropdown-menu">
 
                         <li>
-                            <a class="dropdown-item" href="transmission.html">
+                            <a class="dropdown-item"
+                               href="transmission.html">
                                 Transmission
                             </a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="distribution.html">
+                            <a class="dropdown-item"
+                               href="distribution.html">
                                 Distribution
                             </a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="control-panels.html">
+                            <a class="dropdown-item"
+                               href="control-panels.html">
                                 Control Panels
                             </a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="panel-boards.html">
+                            <a class="dropdown-item"
+                               href="panel-boards.html">
                                 Panel Boards
                             </a>
                         </li>
@@ -2169,10 +1666,9 @@ img {
 
                 <li class="nav-item dropdown">
 
-                    <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        data-bs-toggle="dropdown">
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       data-bs-toggle="dropdown">
 
                         Automation
 
@@ -2181,31 +1677,36 @@ img {
                     <ul class="dropdown-menu">
 
                         <li>
-                            <a class="dropdown-item" href="home-automation.html">
+                            <a class="dropdown-item"
+                               href="home-automation.html">
                                 Home Automation
                             </a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="commercial-automation.html">
+                            <a class="dropdown-item"
+                               href="commercial-automation.html">
                                 Commercial Automation
                             </a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="industrial-automation.html">
+                            <a class="dropdown-item"
+                               href="industrial-automation.html">
                                 Industrial Automation
                             </a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="hospital-automation.html">
+                            <a class="dropdown-item"
+                               href="hospital-automation.html">
                                 Hospital Automation
                             </a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="hotel-automation.html">
+                            <a class="dropdown-item"
+                               href="hotel-automation.html">
                                 Hotel Automation
                             </a>
                         </li>
@@ -2215,16 +1716,13 @@ img {
                 </li>
 
 
-                <!-- =================================================
-                     R&D ACTIVE
-                ================================================== -->
+                <!-- R&D -->
 
                 <li class="nav-item dropdown">
 
-                    <a
-                        class="nav-link dropdown-toggle main-active"
-                        href="#"
-                        data-bs-toggle="dropdown">
+                    <a class="nav-link dropdown-toggle active"
+                       href="#"
+                       data-bs-toggle="dropdown">
 
                         R & D
 
@@ -2233,56 +1731,32 @@ img {
                     <ul class="dropdown-menu">
 
                         <li>
-                            <a
-                                class="dropdown-item"
-                                href="smart-pole.html">
-
+                            <a class="dropdown-item"
+                               href="smart-pole-r&d.html">
                                 Smart Pole
-
                             </a>
                         </li>
 
                         <li>
-                            <a
-                                class="dropdown-item active"
-                                href="smart-bollard.html">
-
+                            <a class="dropdown-item"
+                               href="smart-bollard-r&d.html">
                                 Smart Bollard
-
                             </a>
                         </li>
 
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="window-leaf-ac.html">
-
-                                Window Leaf AC
-
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="smart-conference-table.html">
-
-                                Smart Conference Table
-
-                            </a>
-                        </li>
+                     
 
                     </ul>
 
                 </li>
 
 
-                <!-- PRODUCTS -->
+                 <!-- PRODUCTS -->
 
                 <li class="nav-item dropdown">
 
                     <a
-                        class="nav-link dropdown-toggle"
+                        class="nav-link dropdown-toggle active"
                         href="#"
                         data-bs-toggle="dropdown">
 
@@ -2290,30 +1764,19 @@ img {
 
                     </a>
 
+
                     <ul class="dropdown-menu">
 
                         <li>
-                            <a class="dropdown-item" href="transformers.html">
-                                Transformers
-                            </a>
-                        </li>
 
-                        <li>
-                            <a class="dropdown-item" href="panels.html">
-                                Panels
-                            </a>
-                        </li>
+                            <a
+                                class="dropdown-item"
+                                href="power-products.html">
 
-                        <li>
-                            <a class="dropdown-item" href="switchgear.html">
-                                Switchgear
-                            </a>
-                        </li>
+                                Power 
 
-                        <li>
-                            <a class="dropdown-item" href="controllers.html">
-                                Controllers
                             </a>
+
                         </li>
 
                     </ul>
@@ -2321,17 +1784,22 @@ img {
                 </li>
 
 
+
                 <li class="nav-item">
 
                     <a
                         class="nav-link"
-                        href="index.html#contact">
+                        href="contact.html">
 
                         Contact
 
                     </a>
 
                 </li>
+
+
+            </ul>
+
 
 
             </ul>
@@ -2344,189 +1812,71 @@ img {
 
 
 
-<!-- =========================================================
-     HERO
-========================================================= -->
+<!-- =============================================================
+     SMART BOLLARD INTRO
+============================================================= -->
 
-<section class="bollard-hero">
+<section class="bollard-intro">
 
-    <div class="hero-lines"></div>
+    <div class="smart-container">
 
-    <div class="hero-circle"></div>
 
-
-    <div class="bollard-hero-inner">
-
-
-        <div>
-
-            <div class="hero-tag">
-
-                <i class="fas fa-cube"></i>
-
-                R&D / PRODUCT ENGINEERING
-
-            </div>
-
-
-            <h1>
-
-                Smart
-
-                <span>Bollard</span>
-
-            </h1>
-
-
-            <p class="hero-text">
-
-                A compact intelligent infrastructure platform
-                designed to bring lighting, sensing,
-                connectivity and control into modern outdoor
-                environments.
-
-                <br><br>
-
-                Engineered for pathways, campuses, landscapes,
-                public spaces and connected developments.
-
-            </p>
-
-
-            <div class="hero-buttons">
-
-                <a
-                    href="#technology"
-                    class="hero-button">
-
-                    EXPLORE TECHNOLOGY
-
-                    <i class="fas fa-arrow-down"></i>
-
-                </a>
-
-
-                <a
-                    href="index.html#contact"
-                    class="hero-button hero-button-outline">
-
-                    TALK TO R&D
-
-                    <i class="fas fa-arrow-right"></i>
-
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- PRODUCT -->
-
-        <div class="product-stage">
-
-            <div class="product-shadow"></div>
-
-
-            <div class="callout callout-1">
-                LED OPTICS
-            </div>
-
-            <div class="callout callout-2">
-                SENSOR MODULE
-            </div>
-
-            <div class="callout callout-3">
-                CONTROL NODE
-            </div>
-
-
-            <div class="bollard-model">
-
-                <div class="bollard-top"></div>
-
-                <div class="light-band one"></div>
-
-                <div class="light-band two"></div>
-
-                <div class="light-band three"></div>
-
-
-                <div class="bollard-panel">
-
-                    <div class="panel-dot"></div>
-
-                    <div class="panel-line"></div>
-
-                    <div class="panel-line"></div>
-
-                </div>
-
-                <div class="bollard-base"></div>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     STATEMENT
-========================================================= -->
-
-<section class="statement">
-
-    <div class="statement-inner">
-
-
-        <div class="statement-top">
-
-            <div class="statement-number">
-                01
-            </div>
+        <div class="bollard-intro-grid">
 
 
             <div>
 
-                <div class="statement-label">
-                    Product Philosophy
-                </div>
+                <span class="section-eyebrow">
 
-                <h2>
-                    Small Form.
-                    <br>
-                    Intelligent Function.
-                </h2>
+                    R&D / Smart Infrastructure
+
+                </span>
+
+
+                <h1 class="section-title">
+
+                    Compact infrastructure.
+                    <span>
+                        Intelligent experience.
+                    </span>
+
+                </h1>
 
             </div>
 
+
+            <div class="bollard-intro-content">
+
+
+                <p>
+
+                    Alpha Numeric Smart Bollard transforms
+                    conventional outdoor infrastructure into a
+                    connected public utility integrating wireless
+                    connectivity, charging, audio and intelligent
+                    lighting control within a compact architectural
+                    form.
+
+                </p>
+
+
+                <div class="bollard-tags">
+
+                    <span>Connected</span>
+
+                    <span>Wireless</span>
+
+                    <span>Smart Lighting</span>
+
+                    <span>Urban Infrastructure</span>
+
+                </div>
+
+
+            </div>
+
+
         </div>
-
-
-        <p class="statement-copy">
-
-            The Smart Bollard is designed around the idea that
-            intelligent infrastructure does not always need a
-            large physical footprint.
-
-            <br><br>
-
-            A compact architectural element can become a
-            technology node capable of supporting intelligent
-            lighting, sensing and connected infrastructure.
-
-            <br><br>
-
-            Its modular approach provides flexibility for
-            different environments while maintaining a clean,
-            contemporary physical form.
-
-        </p>
 
 
     </div>
@@ -2535,989 +1885,854 @@ img {
 
 
 
-<!-- =========================================================
-     FEATURE MATRIX
-========================================================= -->
+<!-- =============================================================
+     PRODUCT VISUAL
+============================================================= -->
 
-<section class="feature-section" id="technology">
+<section class="bollard-product">
 
 
-    <div class="feature-head">
+    <div class="bollard-product-grid">
 
-        <div>
 
-            <div class="feature-label">
-                ENGINEERED FEATURES
+        <!-- IMAGE -->
+
+        <div class="bollard-product-image">
+
+
+            <div class="bollard-image-label">
+
+                Alpha Numeric / R&D Product
+
             </div>
 
-            <h2>
-                Designed Around
-                Real-World Use.
-            </h2>
 
         </div>
+
+
+
+        <!-- CONTENT -->
+
+        <div class="bollard-product-content">
+
+
+            <span class="bollard-product-index">
+
+                02 / SMART BOLLARD
+
+            </span>
+
+
+            <div>
+
+
+                <h2>
+
+                    Smart
+
+                    <span>
+                        Bollard.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    A compact connected infrastructure solution
+                    combining wireless communication, device
+                    charging, integrated audio and intelligent
+                    lighting control for modern public and
+                    architectural environments.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="bollard-product-meta">
+
+
+                <span>
+
+                    Product Direction
+
+                </span>
+
+
+                <strong>
+
+                    Connect • Charge • Experience
+
+                </strong>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =============================================================
+     FEATURES INTRO
+============================================================= -->
+
+<section class="features-intro">
+
+
+    <div class="smart-container">
+
+
+        <div class="features-intro-grid">
+
+
+            <div>
+
+
+                <span class="section-eyebrow">
+
+                    Integrated Features
+
+                </span>
+
+
+                <h2 class="section-title">
+
+                    Five functions.
+
+                    <span>
+                        One intelligent bollard.
+                    </span>
+
+                </h2>
+
+
+            </div>
+
+
+            <p class="section-copy">
+
+                Each capability is integrated into one compact
+                outdoor platform, creating smarter and more
+                connected public environments without adding
+                multiple standalone devices.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =============================================================
+     FEATURES
+============================================================= -->
+
+<section class="features-section">
+
+
+    <div class="smart-container">
+
+
+        <div class="features-grid">
+
+
+            <!-- 01 -->
+
+            <article class="feature-card">
+
+
+                <span class="feature-number">
+
+                    01
+
+                </span>
+
+
+                <div class="feature-icon">
+
+                    <i class="fa-brands fa-bluetooth-b"></i>
+
+                </div>
+
+
+                <div class="feature-content">
+
+
+                    <h3>
+
+                        Bluetooth Connectivity
+
+                    </h3>
+
+
+                    <p>
+
+                        Integrated Bluetooth connectivity enables
+                        compatible devices to interact wirelessly
+                        with the Smart Bollard ecosystem.
+
+                    </p>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- 02 -->
+
+            <article class="feature-card">
+
+
+                <span class="feature-number">
+
+                    02
+
+                </span>
+
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-wifi"></i>
+
+                </div>
+
+
+                <div class="feature-content">
+
+
+                    <h3>
+
+                        Wi-Fi Integration
+
+                    </h3>
+
+
+                    <p>
+
+                        Integrated Wi-Fi capability supports
+                        connected public environments and
+                        wireless digital services.
+
+                    </p>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- 03 -->
+
+            <article class="feature-card">
+
+
+                <span class="feature-number">
+
+                    03
+
+                </span>
+
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                </div>
+
+
+                <div class="feature-content">
+
+
+                    <h3>
+
+                        Wireless Charging
+
+                    </h3>
+
+
+                    <p>
+
+                        Convenient wireless charging provides
+                        accessible power for compatible personal
+                        devices in public spaces.
+
+                    </p>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- 04 -->
+
+            <article class="feature-card">
+
+
+                <span class="feature-number">
+
+                    04
+
+                </span>
+
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-volume-high"></i>
+
+                </div>
+
+
+                <div class="feature-content">
+
+
+                    <h3>
+
+                        Audio System
+
+                    </h3>
+
+
+                    <p>
+
+                        Integrated audio functionality supports
+                        ambient sound, announcements and enhanced
+                        public-space experiences.
+
+                    </p>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- 05 -->
+
+            <article class="feature-card">
+
+
+                <span class="feature-number">
+
+                    05
+
+                </span>
+
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-sliders"></i>
+
+                </div>
+
+
+                <div class="feature-content">
+
+
+                    <h3>
+
+                        Tuning & Dimming
+
+                    </h3>
+
+
+                    <p>
+
+                        Adjustable tuning and dimming provide
+                        intelligent control over lighting intensity
+                        and environmental ambience.
+
+                    </p>
+
+
+                </div>
+
+
+            </article>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =============================================================
+     CONNECTED ARCHITECTURE
+============================================================= -->
+
+<section class="feature-architecture">
+
+
+    <div class="smart-container">
+
+
+        <div class="architecture-grid">
+
+
+            <!-- LEFT -->
+
+            <div class="architecture-heading">
+
+
+                <span class="section-eyebrow">
+
+                    Connected Architecture
+
+                </span>
+
+
+                <h2 class="section-title">
+
+                    Designed around
+
+                    <span>
+                        everyday interaction.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Smart Bollard combines connectivity,
+                    power access, audio and lighting intelligence
+                    into one architectural infrastructure element.
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- RIGHT -->
+
+            <div class="architecture-list">
+
+
+                <div class="architecture-item">
+
+                    <span class="architecture-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Wireless Connectivity
+                    </h3>
+
+                    <span class="architecture-type">
+                        Bluetooth • Wi-Fi
+                    </span>
+
+                </div>
+
+
+                <div class="architecture-item">
+
+                    <span class="architecture-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Personal Device Power
+                    </h3>
+
+                    <span class="architecture-type">
+                        Wireless Charging
+                    </span>
+
+                </div>
+
+
+                <div class="architecture-item">
+
+                    <span class="architecture-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Integrated Audio
+                    </h3>
+
+                    <span class="architecture-type">
+                        Sound • Communication
+                    </span>
+
+                </div>
+
+
+                <div class="architecture-item">
+
+                    <span class="architecture-number">
+                        04
+                    </span>
+
+                    <h3>
+                        Intelligent Lighting
+                    </h3>
+
+                    <span class="architecture-type">
+                        Tuning • Dimming
+                    </span>
+
+                </div>
+
+
+                <div class="architecture-item">
+
+                    <span class="architecture-number">
+                        05
+                    </span>
+
+                    <h3>
+                        Unified Smart Experience
+                    </h3>
+
+                    <span class="architecture-type">
+                        Connect • Charge • Control
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =============================================================
+     EXPERIENCE
+============================================================= -->
+
+<section class="experience-section">
+
+
+    <div class="experience-content">
+
+
+        <span class="section-eyebrow">
+
+            Smart Public Experience
+
+        </span>
+
+
+        <h2>
+
+            Infrastructure that becomes
+
+            <span>
+                part of the experience.
+            </span>
+
+        </h2>
 
 
         <p>
 
-            The Smart Bollard concept combines functional
-            outdoor lighting with technology integration,
-            creating a platform that can evolve with
-            infrastructure requirements.
+            Smart Bollard combines architectural design with
+            digital functionality, helping public spaces deliver
+            connectivity, charging, audio and adaptive lighting
+            through a single integrated infrastructure element.
 
         </p>
 
+
     </div>
 
-
-    <div class="feature-matrix">
-
-
-        <div class="feature-card">
-
-            <div class="feature-card-number">
-                01
-            </div>
-
-            <div class="feature-icon">
-
-                <i class="fas fa-lightbulb"></i>
-
-            </div>
-
-            <h3>
-                Intelligent Illumination
-            </h3>
-
-            <p>
-
-                Designed to provide controlled outdoor
-                illumination while supporting intelligent
-                lighting operation.
-
-            </p>
-
-        </div>
-
-
-        <div class="feature-card">
-
-            <div class="feature-card-number">
-                02
-            </div>
-
-            <div class="feature-icon">
-
-                <i class="fas fa-microchip"></i>
-
-            </div>
-
-            <h3>
-                Embedded Intelligence
-            </h3>
-
-            <p>
-
-                A technology-ready structure for integrating
-                control electronics and intelligent modules.
-
-            </p>
-
-        </div>
-
-
-        <div class="feature-card">
-
-            <div class="feature-card-number">
-                03
-            </div>
-
-            <div class="feature-icon">
-
-                <i class="fas fa-wifi"></i>
-
-            </div>
-
-            <h3>
-                Connected Infrastructure
-            </h3>
-
-            <p>
-
-                Communication capabilities can enable the
-                bollard to participate in connected
-                infrastructure networks.
-
-            </p>
-
-        </div>
-
-
-        <div class="feature-card">
-
-            <div class="feature-card-number">
-                04
-            </div>
-
-            <div class="feature-icon">
-
-                <i class="fas fa-eye"></i>
-
-            </div>
-
-            <h3>
-                Sensor Ready
-            </h3>
-
-            <p>
-
-                The modular architecture can accommodate
-                sensing technologies according to the
-                application.
-
-            </p>
-
-        </div>
-
-
-        <div class="feature-card">
-
-            <div class="feature-card-number">
-                05
-            </div>
-
-            <div class="feature-icon">
-
-                <i class="fas fa-sliders"></i>
-
-            </div>
-
-            <h3>
-                Adaptive Control
-            </h3>
-
-            <p>
-
-                Intelligent control concepts can support
-                scheduling, dimming and operational
-                management.
-
-            </p>
-
-        </div>
-
-
-        <div class="feature-card">
-
-            <div class="feature-card-number">
-                06
-            </div>
-
-            <div class="feature-icon">
-
-                <i class="fas fa-layer-group"></i>
-
-            </div>
-
-            <h3>
-                Modular Design
-            </h3>
-
-            <p>
-
-                A modular approach provides flexibility for
-                future technology integration and product
-                evolution.
-
-            </p>
-
-        </div>
-
-
-    </div>
 
 </section>
 
 
 
-<!-- =========================================================
-     TECHNOLOGY STACK
-========================================================= -->
+<!-- =============================================================
+     CAPABILITY STRIP
+============================================================= -->
 
-<section class="tech-section">
-
-
-    <div class="tech-inner">
+<section class="capability-strip">
 
 
-        <div class="tech-header">
-
-            <div class="label">
-                TECHNOLOGY STACK
-            </div>
-
-            <h2>
-                Multiple Technologies.
-                One Compact Platform.
-            </h2>
-
-            <p>
-
-                The Smart Bollard can be developed as a
-                configurable platform where physical,
-                electrical and digital technologies work
-                together.
-
-            </p>
-
-        </div>
+    <div class="smart-container">
 
 
-        <div class="tech-stack">
+        <div class="capability-grid">
 
 
-            <div class="tech-row">
+            <div class="capability-item">
 
-                <div class="tech-name">
-                    LIGHTING
-                </div>
+                <span>
+                    01 / CONNECT
+                </span>
 
-                <div class="tech-options">
-
-                    <span class="tech-pill">
-                        LED
-                    </span>
-
-                    <span class="tech-pill">
-                        Optical Control
-                    </span>
-
-                    <span class="tech-pill">
-                        Dimming
-                    </span>
-
-                    <span class="tech-pill">
-                        Scheduling
-                    </span>
-
-                </div>
+                <strong>
+                    Bluetooth
+                </strong>
 
             </div>
 
 
-            <div class="tech-row">
+            <div class="capability-item">
 
-                <div class="tech-name">
-                    SENSING
-                </div>
+                <span>
+                    02 / NETWORK
+                </span>
 
-                <div class="tech-options">
-
-                    <span class="tech-pill">
-                        Occupancy
-                    </span>
-
-                    <span class="tech-pill">
-                        Ambient Light
-                    </span>
-
-                    <span class="tech-pill">
-                        Environmental
-                    </span>
-
-                    <span class="tech-pill">
-                        Equipment Status
-                    </span>
-
-                </div>
+                <strong>
+                    Wi-Fi Integration
+                </strong>
 
             </div>
 
 
-            <div class="tech-row">
+            <div class="capability-item">
 
-                <div class="tech-name">
-                    CONNECTIVITY
-                </div>
+                <span>
+                    03 / CHARGE
+                </span>
 
-                <div class="tech-options">
-
-                    <span class="tech-pill">
-                        IoT
-                    </span>
-
-                    <span class="tech-pill">
-                        Wireless
-                    </span>
-
-                    <span class="tech-pill">
-                        Gateway
-                    </span>
-
-                    <span class="tech-pill">
-                        Remote Communication
-                    </span>
-
-                </div>
+                <strong>
+                    Wireless Power
+                </strong>
 
             </div>
 
 
-            <div class="tech-row">
+            <div class="capability-item">
 
-                <div class="tech-name">
-                    CONTROL
-                </div>
+                <span>
+                    04 / EXPERIENCE
+                </span>
 
-                <div class="tech-options">
-
-                    <span class="tech-pill">
-                        Local Control
-                    </span>
-
-                    <span class="tech-pill">
-                        Central Monitoring
-                    </span>
-
-                    <span class="tech-pill">
-                        Automation
-                    </span>
-
-                    <span class="tech-pill">
-                        Analytics
-                    </span>
-
-                </div>
+                <strong>
+                    Integrated Audio
+                </strong>
 
             </div>
 
 
-        </div>
+            <div class="capability-item">
 
-    </div>
+                <span>
+                    05 / CONTROL
+                </span>
 
-</section>
-
-
-
-<!-- =========================================================
-     LIGHTING
-========================================================= -->
-
-<section class="lighting-section">
-
-
-    <div class="lighting-inner">
-
-
-        <div class="lighting-copy">
-
-            <div class="small-label">
-                INTELLIGENT LIGHTING
-            </div>
-
-            <h2>
-                Light That
-                Responds.
-            </h2>
-
-
-            <p>
-
-                Smart Bollard lighting can be designed around
-                the needs of the surrounding environment rather
-                than operating as a simple always-on fixture.
-
-                <br><br>
-
-                Control strategies can support efficient
-                operation, scheduled lighting and future
-                sensor-driven behaviour.
-
-            </p>
-
-
-            <div class="lighting-list">
-
-
-                <div class="lighting-list-item">
-
-                    <span>01</span>
-
-                    <span>
-                        Controlled Illumination
-                    </span>
-
-                </div>
-
-
-                <div class="lighting-list-item">
-
-                    <span>02</span>
-
-                    <span>
-                        Dimming & Scheduling
-                    </span>
-
-                </div>
-
-
-                <div class="lighting-list-item">
-
-                    <span>03</span>
-
-                    <span>
-                        Sensor-Based Operation
-                    </span>
-
-                </div>
-
-
-                <div class="lighting-list-item">
-
-                    <span>04</span>
-
-                    <span>
-                        Remote Monitoring
-                    </span>
-
-                </div>
-
+                <strong>
+                    Tuning & Dimming
+                </strong>
 
             </div>
 
-        </div>
-
-
-        <div class="light-visual">
-
-            <div class="light-beam"></div>
-
-            <div class="ground"></div>
-
-            <div class="light-bollard">
-
-                <div class="light-source"></div>
-
-            </div>
 
         </div>
 
 
     </div>
 
-</section>
-
-
-
-<!-- =========================================================
-     CONNECTIVITY
-========================================================= -->
-
-<section class="connectivity">
-
-
-    <div class="connectivity-inner">
-
-
-        <div class="connectivity-header">
-
-            <span>
-                CONNECTED INFRASTRUCTURE
-            </span>
-
-            <h2>
-                A Bollard Can
-                Become A Data Node.
-            </h2>
-
-            <p>
-
-                When connected to an IoT architecture, the
-                physical lighting element can become part of a
-                wider digital infrastructure ecosystem.
-
-            </p>
-
-        </div>
-
-
-        <div class="connectivity-grid">
-
-
-            <div class="connectivity-main">
-
-                <h3>
-                    Physical Infrastructure
-                    Meets Digital Intelligence.
-                </h3>
-
-                <p>
-
-                    The Smart Bollard can provide a physical
-                    endpoint for lighting control, sensor
-                    information and connected infrastructure
-                    communication.
-
-                    <br><br>
-
-                    This approach allows individual devices to
-                    participate in larger monitoring and
-                    automation systems.
-
-                </p>
-
-
-                <div class="connection-ring">
-
-                    <div class="connection-dot"></div>
-
-                </div>
-
-            </div>
-
-
-            <div class="connectivity-side">
-
-
-                <div class="connectivity-card">
-
-                    <i class="fas fa-network-wired"></i>
-
-                    <h4>
-                        NETWORK READY
-                    </h4>
-
-                    <p>
-                        Designed around connected infrastructure
-                        concepts.
-                    </p>
-
-                </div>
-
-
-                <div class="connectivity-card">
-
-                    <i class="fas fa-chart-line"></i>
-
-                    <h4>
-                        DATA VISIBILITY
-                    </h4>
-
-                    <p>
-                        Connected information can support
-                        monitoring and analysis.
-                    </p>
-
-                </div>
-
-
-                <div class="connectivity-card">
-
-                    <i class="fas fa-cloud"></i>
-
-                    <h4>
-                        REMOTE MANAGEMENT
-                    </h4>
-
-                    <p>
-                        Infrastructure can be designed for
-                        centralized operational visibility.
-                    </p>
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-    </div>
 
 </section>
 
 
 
-<!-- =========================================================
+<!-- =============================================================
      APPLICATIONS
-========================================================= -->
+============================================================= -->
 
-<section class="application-section">
-
-
-    <div class="application-inner">
+<section class="applications-section">
 
 
-        <div class="application-heading">
+    <div class="smart-container">
 
 
-            <div>
-
-                <div class="application-number">
-                    02
-                </div>
-
-            </div>
+        <div class="applications-heading">
 
 
             <div>
 
-                <div class="feature-label">
-                    APPLICATION ENVIRONMENTS
-                </div>
 
-                <h2>
-                    Designed For
-                    Human-Centric Spaces.
+                <span class="section-eyebrow">
+
+                    Applications
+
+                </span>
+
+
+                <h2 class="section-title">
+
+                    Designed for
+
+                    <span>
+                        modern public spaces.
+                    </span>
+
                 </h2>
 
-                <p>
-
-                    Smart Bollard infrastructure can support
-                    environments where lighting, aesthetics,
-                    safety and connected technology need to
-                    work together.
-
-                </p>
 
             </div>
+
+
+            <p class="section-copy">
+
+                Smart Bollard can become part of connected
+                outdoor environments where technology and
+                architectural infrastructure need to work together.
+
+            </p>
 
 
         </div>
 
 
-        <div class="application-grid">
+
+        <div class="applications-grid">
 
 
-            <div class="application-card">
+            <article class="application-card">
 
-                <div class="num">
+                <span class="application-number">
                     01
-                </div>
+                </span>
 
                 <h3>
-                    Landscapes
+                    Parks & Landscapes
                 </h3>
 
                 <p>
-                    Intelligent lighting for landscaped
-                    environments and outdoor spaces.
+                    Connected infrastructure for landscaped
+                    public areas and recreational environments.
                 </p>
 
-            </div>
+            </article>
 
 
-            <div class="application-card">
+            <article class="application-card">
 
-                <div class="num">
+                <span class="application-number">
                     02
-                </div>
+                </span>
 
                 <h3>
-                    Walkways
+                    Public Plazas
                 </h3>
 
                 <p>
-                    Controlled pathway illumination for
-                    pedestrian environments.
+                    Wireless connectivity, charging and intelligent
+                    lighting for active public spaces.
                 </p>
 
-            </div>
+            </article>
 
 
-            <div class="application-card">
+            <article class="application-card">
 
-                <div class="num">
+                <span class="application-number">
                     03
-                </div>
+                </span>
 
                 <h3>
-                    Campuses
+                    Smart Campuses
                 </h3>
 
                 <p>
-                    Connected outdoor infrastructure for
-                    corporate and institutional campuses.
+                    Integrated outdoor technology for corporate,
+                    institutional and educational campuses.
                 </p>
 
-            </div>
+            </article>
 
 
-            <div class="application-card">
+            <article class="application-card">
 
-                <div class="num">
+                <span class="application-number">
                     04
-                </div>
+                </span>
 
                 <h3>
-                    Residential Communities
+                    Commercial Spaces
                 </h3>
 
                 <p>
-                    Smart outdoor lighting for modern
-                    residential developments.
+                    Smart outdoor infrastructure supporting
+                    connected commercial environments.
                 </p>
 
-            </div>
+            </article>
 
 
-            <div class="application-card">
+            <article class="application-card">
 
-                <div class="num">
+                <span class="application-number">
                     05
-                </div>
+                </span>
 
                 <h3>
                     Hospitality
                 </h3>
 
                 <p>
-                    Architectural outdoor lighting for hotels,
-                    resorts and hospitality spaces.
+                    Ambient lighting, audio and wireless services
+                    for premium outdoor hospitality spaces.
                 </p>
 
-            </div>
+            </article>
 
 
-            <div class="application-card">
+            <article class="application-card">
 
-                <div class="num">
+                <span class="application-number">
                     06
-                </div>
+                </span>
 
                 <h3>
-                    Public Spaces
+                    Urban Walkways
                 </h3>
 
                 <p>
-                    Technology-enabled lighting for parks,
-                    plazas and public areas.
+                    Connected infrastructure integrated naturally
+                    into pedestrian and public circulation areas.
                 </p>
 
-            </div>
-
-
-            <div class="application-card">
-
-                <div class="num">
-                    07
-                </div>
-
-                <h3>
-                    Smart Cities
-                </h3>
-
-                <p>
-                    Compact infrastructure nodes for connected
-                    urban environments.
-                </p>
-
-            </div>
-
-
-            <div class="application-card">
-
-                <div class="num">
-                    08
-                </div>
-
-                <h3>
-                    Commercial Areas
-                </h3>
-
-                <p>
-                    Intelligent landscape and pathway
-                    infrastructure for commercial developments.
-                </p>
-
-            </div>
+            </article>
 
 
         </div>
 
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     R&D DEVELOPMENT
-========================================================= -->
-
-<section class="rd-development">
-
-
-    <div class="rd-development-inner">
-
-
-        <div class="rd-development-head">
-
-            <div>
-
-                <div class="label">
-                    R&D DEVELOPMENT
-                </div>
-
-                <h2>
-                    From Idea
-                    To Engineered Product.
-                </h2>
-
-            </div>
-
-
-            <p>
-
-                Product development can move through a
-                structured engineering process covering
-                concept definition, design, integration and
-                validation.
-
-            </p>
-
-        </div>
-
-
-        <div class="rd-timeline">
-
-
-            <div class="rd-step">
-
-                <div class="rd-step-number">
-                    01
-                </div>
-
-                <h3>
-                    CONCEPT
-                </h3>
-
-                <p>
-                    Define the intended environment, product
-                    objectives and technology requirements.
-                </p>
-
-            </div>
-
-
-            <div class="rd-step">
-
-                <div class="rd-step-number">
-                    02
-                </div>
-
-                <h3>
-                    ENGINEERING
-                </h3>
-
-                <p>
-                    Develop the structural, electrical and
-                    electronic architecture.
-                </p>
-
-            </div>
-
-
-            <div class="rd-step">
-
-                <div class="rd-step-number">
-                    03
-                </div>
-
-                <h3>
-                    INTEGRATION
-                </h3>
-
-                <p>
-                    Integrate lighting, sensing, control and
-                    connectivity technologies.
-                </p>
-
-            </div>
-
-
-            <div class="rd-step">
-
-                <div class="rd-step-number">
-                    04
-                </div>
-
-                <h3>
-                    VALIDATION
-                </h3>
-
-                <p>
-                    Evaluate the product against defined
-                    functional and application requirements.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     SPECIFICATIONS
-========================================================= -->
-
-<section class="specifications">
-
-
-    <div class="spec">
-
-        <strong>
-            LED
-        </strong>
-
-        <span>
-            Intelligent Lighting
-        </span>
-
-    </div>
-
-
-    <div class="spec">
-
-        <strong>
-            IoT
-        </strong>
-
-        <span>
-            Connected Platform
-        </span>
-
-    </div>
-
-
-    <div class="spec">
-
-        <strong>
-            MODULAR
-        </strong>
-
-        <span>
-            Technology Integration
-        </span>
-
-    </div>
-
-
-    <div class="spec">
-
-        <strong>
-            SMART
-        </strong>
-
-        <span>
-            Infrastructure Ready
-        </span>
 
     </div>
 
@@ -3526,1293 +2741,111 @@ img {
 
 
 
-<!-- =========================================================
+<!-- =============================================================
      CTA
-========================================================= -->
+============================================================= -->
 
 <section class="bollard-cta">
 
 
-    <div class="cta-inner">
+    <div class="smart-container">
 
 
-        <div class="cta-rings"></div>
+        <div class="bollard-cta-grid">
 
-
-        <div class="cta-content">
-
-            <div class="cta-label">
-                ALPHA NUMERIC / R&D
-            </div>
 
             <h2>
-                Compact Infrastructure.
-                Bigger Possibilities.
+
+                Make public spaces
+
+                <span>
+                    smarter by design.
+                </span>
+
             </h2>
 
-            <p>
 
-                Explore intelligent lighting and connected
-                infrastructure concepts through the Smart
-                Bollard platform.
-
-            </p>
+            <div class="bollard-cta-content">
 
 
-            <a
-                href="index.html#contact"
-                class="cta-button">
+                <p>
 
-                DISCUSS THE PRODUCT
+                    Explore Smart Bollard integration for
+                    connected public spaces, campuses,
+                    landscapes and modern urban environments.
 
-                <i class="fas fa-arrow-right"></i>
+                </p>
 
-            </a>
+
+                <a
+                    href="index.html#contact"
+                    class="bollard-cta-button">
+
+                    Discuss Smart Bollard
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+            </div>
+
 
         </div>
 
 
     </div>
+
 
 </section>
 
 
 
-  <!-- =========================================================
-     ALPHA NUMERIC — PREMIUM CORPORATE WHITE FOOTER
-     Sharp architectural layout | No curves | No toy styling
-     Complete HTML + CSS + automatic year
-========================================================== -->
-
-<footer class="corp-footer" aria-label="Website footer">
-
-    <div class="corp-footer-container">
-
-        <!-- =====================================================
-             PRIMARY CTA
-        ====================================================== -->
-        <section class="corp-footer-cta" aria-labelledby="corp-footer-title">
-
-            <div class="corp-footer-cta-copy">
-
-                <p class="corp-footer-kicker">
-                    <span>01</span>
-                    <i></i>
-                    Start a project
-                </p>
-
-                <h2 id="corp-footer-title">
-                    Let’s engineer
-                    <span>what comes next.</span>
-                </h2>
-
-            </div>
-
-            <div class="corp-footer-cta-action">
-
-                <p>
-                    Intelligent engineering for power, energy,
-                    automation and future-ready systems.
-                </p>
-
-                <a href="contact.html" class="corp-footer-button">
-                    <span>Start a conversation</span>
-                    <i aria-hidden="true">↗</i>
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             BRAND + NAVIGATION
-        ====================================================== -->
-        <div class="corp-footer-main">
-
-            <!-- BRAND -->
-            <section class="corp-footer-brand" aria-label="Alpha Numeric">
-
-                <a href="index.html" class="corp-footer-logo" aria-label="Alpha Numeric home">
-                    <img src="assets/img/b-alpha.png" alt="Alpha Numeric">
-                </a>
-
-                <p>
-                    Technology-driven engineering solutions
-                    designed for dependable performance,
-                    meaningful progress and long-term value.
-                </p>
-
-                <div class="corp-footer-status">
-                    <span></span>
-                    Engineering tomorrow
-                </div>
-
-            </section>
-
-
-            <!-- NAVIGATION -->
-            <nav class="corp-footer-nav" aria-label="Footer navigation">
-
-                <!-- COMPANY -->
-                <div class="corp-footer-column">
-
-                    <div class="corp-footer-column-heading">
-                        <span>01</span>
-                        <h3>Company</h3>
-                    </div>
-
-                    <ul>
-                        <li><a href="index.html"><span>Home</span><i>↗</i></a></li>
-                        <li><a href="about.html"><span>About</span><i>↗</i></a></li>
-                        <li><a href="contact.html"><span>Contact</span><i>↗</i></a></li>
-                    </ul>
-
-                </div>
-
-
-                <!-- ENERGY -->
-                <div class="corp-footer-column">
-
-                    <div class="corp-footer-column-heading">
-                        <span>02</span>
-                        <h3>Energy</h3>
-                    </div>
-
-                    <ul>
-                        <li><a href="solar-energy.html"><span>Solar Energy</span><i>↗</i></a></li>
-                        <li><a href="wind-energy.html"><span>Wind Energy</span><i>↗</i></a></li>
-                        <li><a href="biomass-energy.html"><span>Biomass Energy</span><i>↗</i></a></li>
-                        <li><a href="hydel-energy.html"><span>Hydel Energy</span><i>↗</i></a></li>
-                    </ul>
-
-                </div>
-
-
-                <!-- POWER -->
-                <div class="corp-footer-column">
-
-                    <div class="corp-footer-column-heading">
-                        <span>03</span>
-                        <h3>Power</h3>
-                    </div>
-
-                    <ul>
-                        <li><a href="transmission.html"><span>Transmission</span><i>↗</i></a></li>
-                        <li><a href="distribution.html"><span>Distribution</span><i>↗</i></a></li>
-                        <li><a href="control-panels.html"><span>Control Panels</span><i>↗</i></a></li>
-                        <li><a href="panel-boards.html"><span>Panel Boards</span><i>↗</i></a></li>
-                    </ul>
-
-                </div>
-
-
-                <!-- AUTOMATION -->
-                <div class="corp-footer-column">
-
-                    <div class="corp-footer-column-heading">
-                        <span>04</span>
-                        <h3>Automation</h3>
-                    </div>
-
-                    <ul>
-                        <li><a href="home-automation.html"><span>Home Automation</span><i>↗</i></a></li>
-                        <li><a href="commercial-automation.html"><span>Commercial</span><i>↗</i></a></li>
-                        <li><a href="industrial-automation.html"><span>Industrial</span><i>↗</i></a></li>
-                        <li><a href="hospital-automation.html"><span>Hospital</span><i>↗</i></a></li>
-                        <li><a href="hotel-automation.html"><span>Hotel</span><i>↗</i></a></li>
-                    </ul>
-
-                </div>
-
-
-                <!-- R&D / PRODUCTS -->
-                <div class="corp-footer-column">
-
-                    <div class="corp-footer-column-heading">
-                        <span>05</span>
-                        <h3>R&amp;D / Products</h3>
-                    </div>
-
-                    <ul>
-                        <li><a href="smart-pole-r&d.html"><span>Smart Pole</span><i>↗</i></a></li>
-                        <li><a href="smart-bollard-r&d.html"><span>Smart Bollard</span><i>↗</i></a></li>
-                        <li><a href="power.html"><span>Power Products</span><i>↗</i></a></li>
-                    </ul>
-
-                </div>
-
-            </nav>
-
-        </div>
-
-
-        <!-- =====================================================
-             CONTACT BAND
-        ====================================================== -->
-        <section class="corp-footer-contact" aria-label="Contact information">
-
-            <div class="corp-footer-contact-heading">
-                <span>Contact</span>
-                <h3>Let’s connect.</h3>
-            </div>
-
-            <a href="tel:+919000000000" class="corp-footer-contact-item">
-                <span>01 / Phone</span>
-                <strong>+91 90000 00000</strong>
-                <i aria-hidden="true">↗</i>
-            </a>
-
-            <a href="mailto:info@alphanumeric.com" class="corp-footer-contact-item">
-                <span>02 / Email</span>
-                <strong>info@alphanumeric.com</strong>
-                <i aria-hidden="true">↗</i>
-            </a>
-
-            <div class="corp-footer-contact-item">
-                <span>03 / Location</span>
-                <strong>Madhapur, Hyderabad</strong>
-                <i aria-hidden="true">—</i>
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             BOTTOM BAR
-        ====================================================== -->
-        <div class="corp-footer-bottom">
-
-            <p>
-                © <span id="corpFooterYear"></span> Alpha Numeric.
-                All rights reserved.
-            </p>
-
-            <div class="corp-footer-disciplines" aria-label="Core disciplines">
-                <span>Power</span>
-                <i></i>
-                <span>Energy</span>
-                <i></i>
-                <span>Automation</span>
-                <i></i>
-                <span>R&amp;D</span>
-            </div>
-
-            <div class="corp-footer-bottom-links">
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-
-                <a href="#page-top" class="corp-footer-top-link">
-                    Back to top
-                    <span aria-hidden="true">↑</span>
-                </a>
-            </div>
-
-        </div>
-
-    </div>
-
-</footer>
-
-
-<style>
-
-/* =========================================================
-   CORPORATE WHITE FOOTER — DESIGN SYSTEM
-========================================================== */
-
-.corp-footer {
-    --footer-bg: #f5f5f1;
-    --footer-white: #ffffff;
-    --footer-ink: #102729;
-    --footer-text: #4f6062;
-    --footer-muted: #7a8889;
-    --footer-line: rgba(16, 39, 41, 0.16);
-    --footer-line-light: rgba(16, 39, 41, 0.09);
-    --footer-accent: #ee5a29;
-
-    position: relative;
-
-    width: 100%;
-
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-
-    color: var(--footer-ink);
-    background: var(--footer-bg);
-
-    font-family:
-        "Varela Round",
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-}
-
-.corp-footer::before {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-
-    height: 2px;
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--footer-accent) 0 12%,
-            var(--footer-ink) 12% 100%
-        );
-}
-
-.corp-footer *,
-.corp-footer *::before,
-.corp-footer *::after {
-    box-sizing: border-box;
-
-    /* Intentionally sharp: no curved or toy-like UI */
-    border-radius: 0 !important;
-}
-
-.corp-footer a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.corp-footer-container {
-    width: min(calc(100% - 64px), 1500px);
-
-    margin-inline: auto;
-}
-
-
-/* =========================================================
-   CTA
-========================================================== */
-
-.corp-footer-cta {
-    display: grid;
-    grid-template-columns: minmax(0, 1.6fr) minmax(300px, 0.55fr);
-    align-items: end;
-    gap: clamp(55px, 8vw, 140px);
-
-    padding: clamp(80px, 9vw, 140px) 0 clamp(64px, 7vw, 105px);
-}
-
-.corp-footer-kicker {
-    display: flex;
-    align-items: center;
-    gap: 13px;
-
-    margin: 0 0 26px;
-
-    color: var(--footer-muted);
-
-    font-size: 9px;
-    letter-spacing: 0.18em;
-
-    text-transform: uppercase;
-}
-
-.corp-footer-kicker span {
-    color: var(--footer-accent);
-}
-
-.corp-footer-kicker i {
-    width: 45px;
-    height: 1px;
-
-    background: var(--footer-line);
-}
-
-.corp-footer-cta h2 {
-    max-width: 970px;
-
-    margin: 0;
-
-    color: var(--footer-ink);
-
-    font-size: clamp(57px, 7.2vw, 112px);
-    font-weight: 400;
-    line-height: 0.91;
-    letter-spacing: -0.065em;
-}
-
-.corp-footer-cta h2 span {
-    display: block;
-
-    color: rgba(16, 39, 41, 0.35);
-}
-
-.corp-footer-cta-action {
-    padding-bottom: 6px;
-}
-
-.corp-footer-cta-action > p {
-    margin: 0 0 29px;
-
-    color: var(--footer-text);
-
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-
-    font-size: 14px;
-    line-height: 1.75;
-}
-
-.corp-footer-button {
-    position: relative;
-    isolation: isolate;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 35px;
-
-    width: 100%;
-    min-height: 60px;
-
-    padding: 0 19px 0 22px;
-    overflow: hidden;
-
-    border: 1px solid var(--footer-ink);
-
-    color: #ffffff !important;
-    background: var(--footer-ink);
-
-    font-size: 9px;
-    letter-spacing: 0.15em;
-
-    text-transform: uppercase;
-
-    transition:
-        color 0.35s ease,
-        background-color 0.35s ease;
-}
-
-.corp-footer-button::before {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-
-    width: 4px;
-
-    background: var(--footer-accent);
-
-    transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.corp-footer-button i {
-    font-size: 18px;
-    font-style: normal;
-
-    transition: transform 0.3s ease;
-}
-
-.corp-footer-button:hover::before {
-    width: 100%;
-}
-
-.corp-footer-button:hover i {
-    transform: translate(3px, -3px);
-}
-
-
-/* =========================================================
-   BRAND + NAVIGATION STRUCTURE
-========================================================== */
-
-.corp-footer-main {
-    display: grid;
-    grid-template-columns: minmax(265px, 0.72fr) minmax(0, 2.28fr);
-
-    border-top: 1px solid var(--footer-line);
-    border-bottom: 1px solid var(--footer-line);
-}
-
-.corp-footer-brand {
-    display: flex;
-    flex-direction: column;
-
-    min-width: 0;
-
-    padding: clamp(38px, 4vw, 62px) clamp(28px, 4vw, 58px) clamp(38px, 4vw, 62px) 0;
-
-    border-right: 1px solid var(--footer-line);
-}
-
-.corp-footer-logo {
-    align-self: flex-start;
-}
-
-.corp-footer-logo img {
-    display: block;
-
-    width: auto;
-    max-width: min(100%, 220px);
-    height: 78px;
-
-    object-fit: contain;
-}
-
-.corp-footer-brand > p {
-    max-width: 360px;
-
-    margin: 34px 0 50px;
-
-    color: var(--footer-text);
-
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-
-    font-size: 13px;
-    line-height: 1.85;
-}
-
-.corp-footer-status {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-
-    margin-top: auto;
-
-    color: var(--footer-muted);
-
-    font-size: 8px;
-    letter-spacing: 0.14em;
-
-    text-transform: uppercase;
-}
-
-.corp-footer-status span {
-    width: 19px;
-    height: 2px;
-
-    background: var(--footer-accent);
-}
-
-.corp-footer-nav {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-
-    min-width: 0;
-}
-
-.corp-footer-column {
-    min-width: 0;
-
-    padding: clamp(38px, 3.5vw, 58px) clamp(20px, 2.6vw, 42px);
-
-    border-right: 1px solid var(--footer-line-light);
-}
-
-.corp-footer-column:last-child {
-    border-right: 0;
-}
-
-.corp-footer-column-heading {
-    margin-bottom: 29px;
-}
-
-.corp-footer-column-heading span {
-    display: block;
-
-    margin-bottom: 10px;
-
-    color: var(--footer-accent);
-
-    font-size: 8px;
-    letter-spacing: 0.14em;
-}
-
-.corp-footer-column-heading h3 {
-    margin: 0;
-
-    color: var(--footer-ink);
-
-    font-size: 10px;
-    font-weight: 400;
-    letter-spacing: 0.16em;
-    line-height: 1.4;
-
-    text-transform: uppercase;
-}
-
-.corp-footer-column ul {
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
-}
-
-.corp-footer-column li + li {
-    margin-top: 14px;
-}
-
-.corp-footer-column a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-
-    color: var(--footer-text);
-
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-
-    font-size: 12.5px;
-    line-height: 1.4;
-
-    transition:
-        color 0.25s ease,
-        transform 0.25s ease;
-}
-
-.corp-footer-column a i {
-    flex: 0 0 auto;
-
-    color: var(--footer-accent);
-
-    font-style: normal;
-
-    opacity: 0;
-    transform: translate(-4px, 4px);
-
-    transition:
-        opacity 0.25s ease,
-        transform 0.25s ease;
-}
-
-.corp-footer-column a:hover {
-    color: var(--footer-ink);
-    transform: translateX(4px);
-}
-
-.corp-footer-column a:hover i {
-    opacity: 1;
-    transform: translate(0, 0);
-}
-
-
-/* =========================================================
-   CONTACT BAND
-========================================================== */
-
-.corp-footer-contact {
-    display: grid;
-    grid-template-columns: minmax(210px, 0.72fr) repeat(3, minmax(0, 1fr));
-
-    border-bottom: 1px solid var(--footer-line);
-}
-
-.corp-footer-contact-heading,
-.corp-footer-contact-item {
-    min-width: 0;
-
-    padding: 32px clamp(20px, 3vw, 42px);
-
-    border-right: 1px solid var(--footer-line-light);
-}
-
-.corp-footer-contact-heading {
-    padding-left: 0;
-}
-
-.corp-footer-contact-item:last-child {
-    border-right: 0;
-}
-
-.corp-footer-contact-heading > span {
-    display: block;
-
-    margin-bottom: 8px;
-
-    color: var(--footer-accent);
-
-    font-size: 8px;
-    letter-spacing: 0.14em;
-
-    text-transform: uppercase;
-}
-
-.corp-footer-contact-heading h3 {
-    margin: 0;
-
-    color: var(--footer-ink);
-
-    font-size: 22px;
-    font-weight: 400;
-    letter-spacing: -0.035em;
-}
-
-.corp-footer-contact-item {
-    position: relative;
-
-    display: block;
-}
-
-.corp-footer-contact-item > span,
-.corp-footer-contact-item > strong {
-    display: block;
-}
-
-.corp-footer-contact-item > span {
-    margin-bottom: 9px;
-
-    color: var(--footer-muted);
-
-    font-size: 8px;
-    letter-spacing: 0.13em;
-
-    text-transform: uppercase;
-}
-
-.corp-footer-contact-item > strong {
-    overflow-wrap: anywhere;
-
-    color: var(--footer-ink);
-
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-
-    font-size: 12.5px;
-    font-weight: 500;
-    line-height: 1.45;
-}
-
-.corp-footer-contact-item > i {
-    position: absolute;
-    top: 50%;
-    right: 24px;
-
-    color: var(--footer-accent);
-
-    font-size: 14px;
-    font-style: normal;
-
-    opacity: 0.62;
-    transform: translateY(-50%);
-
-    transition:
-        opacity 0.25s ease,
-        transform 0.25s ease;
-}
-
-a.corp-footer-contact-item:hover > i {
-    opacity: 1;
-    transform: translate(3px, calc(-50% - 3px));
-}
-
-
-/* =========================================================
-   BOTTOM BAR
-========================================================== */
-
-.corp-footer-bottom {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    gap: 28px;
-
-    min-height: 88px;
-}
-
-.corp-footer-bottom > p {
-    margin: 0;
-
-    color: var(--footer-muted);
-
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-
-    font-size: 10px;
-}
-
-.corp-footer-disciplines {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    color: rgba(16, 39, 41, 0.50);
-
-    font-size: 8px;
-    letter-spacing: 0.13em;
-
-    text-transform: uppercase;
-}
-
-.corp-footer-disciplines i {
-    width: 18px;
-    height: 1px;
-
-    background: var(--footer-line);
-}
-
-.corp-footer-bottom-links {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 21px;
-
-    color: var(--footer-muted);
-
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-
-    font-size: 10px;
-}
-
-.corp-footer-bottom-links > a {
-    transition: color 0.25s ease;
-}
-
-.corp-footer-bottom-links > a:hover {
-    color: var(--footer-ink);
-}
-
-.corp-footer-top-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-
-    padding-left: 21px;
-
-    border-left: 1px solid var(--footer-line);
-
-    color: var(--footer-ink) !important;
-
-    font-family:
-        "Varela Round",
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
-
-    font-size: 8px;
-    letter-spacing: 0.12em;
-
-    text-transform: uppercase;
-}
-
-.corp-footer-top-link span {
-    display: grid;
-    place-items: center;
-
-    width: 31px;
-    height: 31px;
-
-    border: 1px solid var(--footer-line);
-
-    color: var(--footer-accent);
-
-    transition:
-        color 0.25s ease,
-        background-color 0.25s ease,
-        transform 0.25s ease;
-}
-
-.corp-footer-top-link:hover span {
-    color: #ffffff;
-    background: var(--footer-ink);
-    transform: translateY(-3px);
-}
-
-
-/* =========================================================
-   ACCESSIBILITY
-========================================================== */
-
-.corp-footer a:focus-visible {
-    outline: 2px solid var(--footer-accent);
-    outline-offset: 4px;
-}
-
-
-/* =========================================================
-   RESPONSIVE — LAPTOP
-========================================================== */
-
-@media (max-width: 1250px) {
-
-    .corp-footer-main {
-        grid-template-columns: 1fr;
-    }
-
-    .corp-footer-brand {
-        display: grid;
-        grid-template-columns: 230px minmax(0, 1fr) auto;
-        align-items: center;
-        gap: 42px;
-
-        padding: 38px 0;
-
-        border-right: 0;
-        border-bottom: 1px solid var(--footer-line);
-    }
-
-    .corp-footer-brand > p {
-        max-width: 650px;
-        margin: 0;
-    }
-
-    .corp-footer-status {
-        margin: 0;
-    }
-
-    .corp-footer-nav {
-        grid-template-columns: repeat(5, minmax(0, 1fr));
-    }
-
-    .corp-footer-column:first-child {
-        padding-left: 0;
-    }
-}
-
-
-/* =========================================================
-   RESPONSIVE — TABLET
-========================================================== */
-
-@media (max-width: 960px) {
-
-    .corp-footer-container {
-        width: min(calc(100% - 44px), 860px);
-    }
-
-    .corp-footer-cta {
-        grid-template-columns: 1fr;
-        gap: 43px;
-
-        padding: 86px 0 70px;
-    }
-
-    .corp-footer-cta-action {
-        max-width: 430px;
-    }
-
-    .corp-footer-brand {
-        grid-template-columns: 220px minmax(0, 1fr);
-    }
-
-    .corp-footer-status {
-        grid-column: 1 / -1;
-    }
-
-    .corp-footer-nav {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .corp-footer-column {
-        border-bottom: 1px solid var(--footer-line-light);
-    }
-
-    .corp-footer-column:nth-child(3) {
-        border-right: 0;
-    }
-
-    .corp-footer-column:nth-child(4) {
-        padding-left: 0;
-    }
-
-    .corp-footer-column:nth-child(n + 4) {
-        border-bottom: 0;
-    }
-
-    .corp-footer-column:last-child {
-        border-right: 1px solid var(--footer-line-light);
-    }
-
-    .corp-footer-contact {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .corp-footer-contact-heading {
-        grid-column: 1 / -1;
-
-        padding-left: 0;
-
-        border-right: 0;
-        border-bottom: 1px solid var(--footer-line);
-    }
-
-    .corp-footer-bottom {
-        grid-template-columns: 1fr auto;
-    }
-
-    .corp-footer-disciplines {
-        display: none;
-    }
-}
-
-
-/* =========================================================
-   RESPONSIVE — MOBILE
-========================================================== */
-
-@media (max-width: 650px) {
-
-    .corp-footer-container {
-        width: calc(100% - 30px);
-    }
-
-    .corp-footer-cta {
-        gap: 35px;
-
-        padding: 72px 0 58px;
-    }
-
-    .corp-footer-kicker {
-        margin-bottom: 20px;
-
-        font-size: 8px;
-    }
-
-    .corp-footer-cta h2 {
-        font-size: clamp(47px, 15vw, 68px);
-    }
-
-    .corp-footer-cta-action > p {
-        font-size: 13px;
-    }
-
-    .corp-footer-brand {
-        display: flex;
-        align-items: flex-start;
-        gap: 0;
-
-        padding: 35px 0;
-    }
-
-    .corp-footer-logo img {
-        height: 70px;
-    }
-
-    .corp-footer-brand > p {
-        margin: 28px 0 34px;
-
-        font-size: 12.5px;
-    }
-
-    .corp-footer-nav {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .corp-footer-column,
-    .corp-footer-column:first-child,
-    .corp-footer-column:nth-child(4) {
-        padding: 31px 18px;
-        border-right: 1px solid var(--footer-line-light);
-        border-bottom: 1px solid var(--footer-line-light);
-    }
-
-    .corp-footer-column:nth-child(odd) {
-        padding-left: 0;
-    }
-
-    .corp-footer-column:nth-child(even) {
-        padding-right: 0;
-        border-right: 0;
-    }
-
-    .corp-footer-column:nth-child(4) {
-        border-bottom: 1px solid var(--footer-line-light);
-    }
-
-    .corp-footer-column:last-child {
-        grid-column: 1 / -1;
-
-        padding-right: 0;
-        padding-left: 0;
-
-        border-right: 0;
-        border-bottom: 0;
-    }
-
-    .corp-footer-column-heading {
-        margin-bottom: 24px;
-    }
-
-    .corp-footer-column a i {
-        opacity: 0.45;
-        transform: none;
-    }
-
-    .corp-footer-contact {
-        grid-template-columns: 1fr;
-    }
-
-    .corp-footer-contact-heading,
-    .corp-footer-contact-item {
-        padding: 25px 0;
-
-        border-right: 0;
-        border-bottom: 1px solid var(--footer-line-light);
-    }
-
-    .corp-footer-contact-item:last-child {
-        border-bottom: 0;
-    }
-
-    .corp-footer-contact-item > i {
-        right: 0;
-    }
-
-    .corp-footer-bottom {
-        grid-template-columns: 1fr;
-        gap: 19px;
-
-        padding: 25px 0;
-    }
-
-    .corp-footer-bottom > p {
-        text-align: center;
-    }
-
-    .corp-footer-bottom-links {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
-
-
-/* =========================================================
-   EXTRA SMALL MOBILE
-========================================================== */
-
-@media (max-width: 390px) {
-
-    .corp-footer-container {
-        width: calc(100% - 24px);
-    }
-
-    .corp-footer-cta h2 {
-        font-size: 45px;
-    }
-
-    .corp-footer-nav {
-        grid-template-columns: 1fr;
-    }
-
-    .corp-footer-column,
-    .corp-footer-column:first-child,
-    .corp-footer-column:nth-child(4),
-    .corp-footer-column:last-child,
-    .corp-footer-column:nth-child(odd),
-    .corp-footer-column:nth-child(even) {
-        grid-column: auto;
-
-        padding: 28px 0;
-
-        border-right: 0;
-        border-bottom: 1px solid var(--footer-line-light);
-    }
-
-    .corp-footer-column:last-child {
-        border-bottom: 0;
-    }
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .corp-footer-button,
-    .corp-footer-button::before,
-    .corp-footer-button i,
-    .corp-footer-column a,
-    .corp-footer-column a i,
-    .corp-footer-contact-item > i,
-    .corp-footer-bottom-links > a,
-    .corp-footer-top-link span {
-        transition: none;
-    }
-}
-
-</style>
-
-
-<script>
-    document.getElementById("corpFooterYear").textContent = new Date().getFullYear();
-</script>
-    
-    <!-- =========================================================
-     PREMIUM TECHNOLOGY FOOTER END
-     ========================================================= -->
-
-
-<!-- =========================================================
+<!-- =============================================================
      BOOTSTRAP
-========================================================= -->
+============================================================= -->
 
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
 </script>
 
 
+<!-- =============================================================
+     NAVBAR SHADOW
+============================================================= -->
+
 <script>
 
-window.addEventListener("scroll", function () {
+window.addEventListener(
+    "scroll",
+    function() {
 
-    const navbar =
-        document.querySelector(".main-navbar");
+        const navbar =
+            document.querySelector(".about-navbar");
 
-    if (window.scrollY > 30) {
+        if (!navbar) return;
 
-        navbar.style.boxShadow =
-            "0 5px 25px rgba(0,0,0,.07)";
 
-    } else {
+        if (window.scrollY > 30) {
 
-        navbar.style.boxShadow = "none";
+            navbar.style.boxShadow =
+                "0 5px 25px rgba(0,0,0,.06)";
+
+        }
+
+        else {
+
+            navbar.style.boxShadow =
+                "none";
+
+        }
 
     }
-
-});
+);
 
 </script>
 
 
 </body>
+
 </html>

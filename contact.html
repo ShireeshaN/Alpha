@@ -1629,399 +1629,286 @@ textarea.form-control-custom {
      NAVBAR
 ========================================================= -->
 
-<nav class="navbar navbar-expand-lg main-navbar fixed-top">
+    <nav class="navbar navbar-expand-lg about-navbar fixed-top" id="mainNav">
 
-    <div class="container-fluid px-4 px-lg-5">
+        <div class="container-fluid px-4 px-lg-5">
 
 
-        <a class="navbar-brand" href="index.html">
+            <!-- LOGO -->
 
-            <img
-                src="assets/img/b-alpha.png"
-                alt="Alpha Numeric">
+            <a class="navbar-brand about-logo" href="index.html">
 
-        </a>
+                <img src="assets/img/b-alpha.png" alt="Alpha Numeric Logo">
 
+            </a>
 
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarResponsive">
 
-            <span class="me-2">Menu</span>
+            <!-- MOBILE BUTTON -->
 
-            <i class="fas fa-bars"></i>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 
-        </button>
 
 
-        <div
-            class="collapse navbar-collapse"
-            id="navbarResponsive">
+                <i class="fas fa-bars"></i>
 
+            </button>
 
-            <ul class="navbar-nav ms-auto">
 
+            <!-- NAVIGATION -->
 
-                <li class="nav-item">
+            <div class="collapse navbar-collapse" id="navbarResponsive">
 
-                    <a
-                        class="nav-link"
-                        href="index.html">
+                <ul class="navbar-nav ms-auto">
 
-                        Home
 
-                    </a>
+                    <!-- HOME -->
 
-                </li>
+                    <li class="nav-item">
 
+                        <a class="nav-link" href="index.html">
 
-                <li class="nav-item">
+                            Home
 
-                    <a
-                        class="nav-link"
-                        href="about.html">
+                        </a>
 
-                        About
+                    </li>
 
-                    </a>
 
-                </li>
+                    <!-- ABOUT -->
 
+                    <li class="nav-item">
 
-                <!-- ENERGY -->
+                        <a class="nav-link active" href="about.html">
 
-                <li class="nav-item dropdown">
+                            About
 
-                    <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        data-bs-toggle="dropdown">
+                        </a>
 
-                        Energy
+                    </li>
 
-                    </a>
 
-                    <ul class="dropdown-menu">
+                    <!-- ENERGY -->
 
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="solar-energy.html">
+                    <li class="nav-item dropdown">
 
-                                Solar Energy
+                        <a class="nav-link dropdown-toggle" href="#" id="energyDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
 
-                            </a>
-                        </li>
+                            Energy
 
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="wind-energy.html">
+                        </a>
 
-                                Wind Energy
+                        <ul class="dropdown-menu" aria-labelledby="energyDropdown">
 
-                            </a>
-                        </li>
+                            <li>
+                                <a class="dropdown-item" href="solar-energy.html">
+                                    Solar Energy
+                                </a>
+                            </li>
 
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="biomass-energy.html">
+                            <li>
+                                <a class="dropdown-item" href="wind-energy.html">
+                                    Wind Energy
+                                </a>
+                            </li>
 
-                                Biomass Energy
+                            <li>
+                                <a class="dropdown-item" href="biomass-energy.html">
+                                    Biomass Energy
+                                </a>
+                            </li>
 
-                            </a>
-                        </li>
+                            <li>
+                                <a class="dropdown-item" href="hydel-energy.html">
+                                    Hydel Energy
+                                </a>
+                            </li>
 
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="hydel-energy.html">
+                        </ul>
 
-                                Hydel Energy
+                    </li>
 
-                            </a>
-                        </li>
 
-                    </ul>
+                    <!-- POWER -->
 
-                </li>
+                    <li class="nav-item dropdown">
 
+                        <a class="nav-link dropdown-toggle" href="#" id="powerDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
 
-                <!-- POWER -->
+                            Power
 
-                <li class="nav-item dropdown">
+                        </a>
 
-                    <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        data-bs-toggle="dropdown">
+                        <ul class="dropdown-menu" aria-labelledby="powerDropdown">
 
-                        Power
+                            <li>
+                                <a class="dropdown-item" href="transmission.html">
+                                    Transmission
+                                </a>
+                            </li>
 
-                    </a>
+                            <li>
+                                <a class="dropdown-item" href="distribution.html">
+                                    Distribution
+                                </a>
+                            </li>
 
-                    <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="control-panels.html">
+                                    Control Panels
+                                </a>
+                            </li>
 
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="transmission.html">
+                            <li>
+                                <a class="dropdown-item" href="panel-boards.html">
+                                    Panel Boards
+                                </a>
+                            </li>
 
-                                Transmission
+                        </ul>
 
-                            </a>
-                        </li>
+                    </li>
 
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="distribution.html">
 
-                                Distribution
+                    <!-- AUTOMATION -->
 
-                            </a>
-                        </li>
+                    <li class="nav-item dropdown">
 
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="control-panels.html">
+                        <a class="nav-link dropdown-toggle" href="#" id="automationDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
 
-                                Control Panels
+                            Automation
 
-                            </a>
-                        </li>
+                        </a>
 
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="panel-boards.html">
+                        <ul class="dropdown-menu" aria-labelledby="automationDropdown">
 
-                                Panel Boards
+                            <li>
+                                <a class="dropdown-item" href="home-automation.html">
+                                    Home Automation
+                                </a>
+                            </li>
 
-                            </a>
-                        </li>
+                            <li>
+                                <a class="dropdown-item" href="commercial-automation.html">
+                                    Commercial Automation
+                                </a>
+                            </li>
 
-                    </ul>
+                            <li>
+                                <a class="dropdown-item" href="industrial-automation.html">
+                                    Industrial Automation
+                                </a>
+                            </li>
 
-                </li>
+                            <li>
+                                <a class="dropdown-item" href="hospital-automation.html">
+                                    Hospital Automation
+                                </a>
+                            </li>
 
+                            <li>
+                                <a class="dropdown-item" href="hotel-automation.html">
+                                    Hotel Automation
+                                </a>
+                            </li>
 
-                <!-- AUTOMATION -->
+                        </ul>
 
-                <li class="nav-item dropdown">
+                    </li>
 
-                    <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        data-bs-toggle="dropdown">
 
-                        Automation
+                    <!-- R&D -->
 
-                    </a>
+                    <li class="nav-item dropdown">
 
-                    <ul class="dropdown-menu">
+                        <a class="nav-link dropdown-toggle" href="#" id="rdDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
 
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="home-automation.html">
+                            R & D
 
-                                Home Automation
+                        </a>
 
-                            </a>
-                        </li>
+                        <ul class="dropdown-menu" aria-labelledby="rdDropdown">
 
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="commercial-automation.html">
+                            <li>
+                                <a class="dropdown-item" href="smart-pole.html">
+                                    Smart Pole
+                                </a>
+                            </li>
 
-                                Commercial Automation
+                            <li>
+                                <a class="dropdown-item" href="smart-bollard.html">
+                                    Smart Bollard
+                                </a>
+                            </li>
 
-                            </a>
-                        </li>
+                            <li>
+                                <a class="dropdown-item" href="window-leaf-ac.html">
+                                    Window Leaf AC
+                                </a>
+                            </li>
 
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="industrial-automation.html">
+                            <li>
+                                <a class="dropdown-item" href="smart-conference-table.html">
+                                    Smart Conference Table
+                                </a>
+                            </li>
 
-                                Industrial Automation
+                        </ul>
 
-                            </a>
-                        </li>
+                    </li>
 
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="hospital-automation.html">
 
-                                Hospital Automation
+                    <!-- PRODUCTS -->
 
-                            </a>
-                        </li>
+                    <li class="nav-item dropdown">
 
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="hotel-automation.html">
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
 
-                                Hotel Automation
+                            Products
 
-                            </a>
-                        </li>
+                        </a>
 
-                    </ul>
+                        <ul class="dropdown-menu" aria-labelledby="productsDropdown">
 
-                </li>
+                            <li>
+                                <a class="dropdown-item" href="power-products.html">
+                                    Power
+                                </a>
+                            </li>
 
+                           
 
-                <!-- R&D -->
+                           
 
-                <li class="nav-item dropdown">
+                        </ul>
 
-                    <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        data-bs-toggle="dropdown">
+                    </li>
 
-                        R & D
 
-                    </a>
+                    <!-- CONTACT -->
 
-                    <ul class="dropdown-menu">
+                    <li class="nav-item">
 
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="smart-pole.html">
+                        <a class="nav-link" href="contact.html">
 
-                                Smart Pole
+                            Contact
 
-                            </a>
-                        </li>
+                        </a>
 
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="smart-bollard.html">
+                    </li>
 
-                                Smart Bollard
+                </ul>
 
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="window-leaf-ac.html">
-
-                                Window Leaf AC
-
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="smart-conference-table.html">
-
-                                Smart Conference Table
-
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </li>
-
-
-                <!-- PRODUCTS -->
-
-                <li class="nav-item dropdown">
-
-                    <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        data-bs-toggle="dropdown">
-
-                        Products
-
-                    </a>
-
-                    <ul class="dropdown-menu">
-
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="transformers.html">
-
-                                Transformers
-
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="panels.html">
-
-                                Panels
-
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="switchgear.html">
-
-                                Switchgear
-
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="controllers.html">
-
-                                Controllers
-
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </li>
-
-
-                <!-- CONTACT ACTIVE -->
-
-                <li class="nav-item">
-
-                    <a
-                        class="nav-link main-active"
-                        href="contact.html">
-
-                        Contact
-
-                    </a>
-
-                </li>
-
-
-            </ul>
+            </div>
 
         </div>
 
-    </div>
-
-</nav>
+    </nav>
 
 
 

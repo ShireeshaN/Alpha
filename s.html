@@ -4,44 +4,27 @@
 <head>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <title>R&D Products | Alpha Numeric</title>
 
-    <title>Power Products | Alpha Numeric</title>
+    <meta name="description"
+          content="Explore upcoming Alpha Numeric R&D products including Smart Conference Table, Smart Bar Counter and Smart Window Leaf AC.">
 
 
-    <!-- =========================================================
-         BOOTSTRAP
-    ========================================================== -->
-
+    <!-- Bootstrap -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet">
 
 
-    <!-- =========================================================
-         FONT AWESOME
-    ========================================================== -->
-
+    <!-- Font Awesome -->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
-    <!-- =========================================================
-         BOOTSTRAP ICONS
-    ========================================================== -->
-
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-
-    <!-- =========================================================
-         INTER FONT
-    ========================================================== -->
-
+    <!-- Inter -->
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
 
@@ -52,7 +35,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-
 
 
     <style>
@@ -67,11 +49,9 @@
             box-sizing: border-box;
         }
 
-
         html {
             scroll-behavior: smooth;
         }
-
 
         body {
 
@@ -84,37 +64,15 @@
             overflow-x: hidden;
         }
 
-
-        img {
-
-            max-width: 100%;
-
-            display: block;
-        }
-
-
-        button,
-        input,
-        textarea,
-        select {
-
-            font-family: inherit;
-        }
-
-
-        button {
-
-            border-radius: 0;
-        }
-
-
         a {
-
             color: inherit;
-
             text-decoration: none;
         }
 
+        img {
+            max-width: 100%;
+            display: block;
+        }
 
 
         /* =========================================================
@@ -133,7 +91,7 @@
 
             z-index: 9999;
 
-            transition: all .3s ease;
+            transition: .3s ease;
         }
 
 
@@ -197,20 +155,6 @@
         }
 
 
-        .about-navbar .dropdown-toggle::after {
-
-            margin-left: 7px;
-
-            vertical-align: middle;
-
-            border-top: 5px solid #111111;
-
-            border-right: 4px solid transparent;
-
-            border-left: 4px solid transparent;
-        }
-
-
         .about-navbar .dropdown-menu {
 
             margin-top: 18px;
@@ -254,70 +198,29 @@
             border: none !important;
 
             box-shadow: none !important;
-
-            color: #111111;
         }
 
 
 
         /* =========================================================
-           PAGE
+           COMMON
         ========================================================== */
 
-        .power-products-page {
+        .rd-container {
 
-            width: 100%;
+            width: min(calc(100% - 80px), 1500px);
 
-            padding-top: 100px;
-
-            background: #ffffff;
+            margin: 0 auto;
         }
 
 
-
-        /* =========================================================
-           SMALL INTRO
-        ========================================================== */
-
-        .power-products-intro {
-
-            padding: 60px 5% 48px;
-
-            border-bottom: 1px solid #e5e5e5;
-
-            background: #ffffff;
-        }
-
-
-        .power-products-intro-inner {
-
-            width: 100%;
-
-            max-width: 1600px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns:
-                minmax(0,1fr)
-                minmax(300px,420px);
-
-            gap: 80px;
-
-            align-items: end;
-        }
-
-
-        .power-products-eyebrow {
+        .rd-eyebrow {
 
             display: inline-flex;
 
             align-items: center;
 
             gap: 12px;
-
-            margin-bottom: 18px;
 
             color: #666666;
 
@@ -331,7 +234,7 @@
         }
 
 
-        .power-products-eyebrow::before {
+        .rd-eyebrow::before {
 
             content: "";
 
@@ -339,21 +242,21 @@
 
             height: 1px;
 
-            background: #111111;
+            background: currentColor;
         }
 
 
-        .power-products-intro h1 {
+        .rd-title {
 
-            max-width: 800px;
+            margin: 20px 0 0;
 
-            margin: 0;
+            max-width: 850px;
 
             color: #111111;
 
-            font-size: clamp(42px, 4.7vw, 70px);
+            font-size: clamp(42px,5vw,76px);
 
-            line-height: 1;
+            line-height: .98;
 
             letter-spacing: -3px;
 
@@ -361,7 +264,7 @@
         }
 
 
-        .power-products-intro h1 span {
+        .rd-title span {
 
             color: #777777;
 
@@ -369,13 +272,40 @@
         }
 
 
-        .power-products-intro p {
+
+        /* =========================================================
+           INTRO
+        ========================================================== */
+
+        .rd-upcoming-intro {
+
+            padding: 170px 0 90px;
+
+            background: #ffffff;
+        }
+
+
+        .rd-upcoming-intro-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0,1fr)
+                minmax(320px,430px);
+
+            gap: 90px;
+
+            align-items: end;
+        }
+
+
+        .rd-upcoming-intro p {
 
             margin: 0;
 
             color: #777777;
 
-            font-size: 13px;
+            font-size: 14px;
 
             line-height: 1.9;
         }
@@ -383,88 +313,158 @@
 
 
         /* =========================================================
-           MAIN CATALOGUE
+           COMING SOON PRODUCTS
         ========================================================== */
 
-        .power-catalogue {
+        .coming-products {
 
-            width: 100%;
+            padding: 0 0 130px;
 
-            min-height: 820px;
+            background: #f7f7f5;
+        }
+
+
+        .coming-grid {
 
             display: grid;
 
             grid-template-columns:
+                repeat(3, minmax(0,1fr));
 
-                minmax(320px, 24%)
-
-                minmax(0, 76%);
+            gap: 16px;
         }
 
 
-
-        /* =========================================================
-           LEFT SIDEBAR
-        ========================================================== */
-
-        .catalogue-sidebar {
+        .coming-card {
 
             position: relative;
 
-            background: #f7f7f5;
+            min-height: 560px;
 
-            border-right: 1px solid #dddddd;
+            overflow: hidden;
+
+            background: #111111;
+
+            isolation: isolate;
         }
 
 
-        .catalogue-sidebar-inner {
+        .coming-card-image {
 
-            position: sticky;
+            position: absolute;
 
-            top: 100px;
+            inset: 0;
 
-            max-height: calc(100vh - 100px);
+            z-index: 0;
 
-            overflow-y: auto;
+            background-size: cover;
 
-            scrollbar-width: thin;
+            background-position: center;
+
+            transform: scale(1.05);
+
+            filter: grayscale(15%);
+
+            transition:
+                transform 1s cubic-bezier(.22,1,.36,1),
+                filter .6s ease;
         }
 
 
-        .catalogue-sidebar-inner::-webkit-scrollbar {
+        .conference-image {
 
-            width: 5px;
+            background-image:
+                url("assets/img/rnd/coming-soon/smart-conference-table.jpg");
         }
 
 
-        .catalogue-sidebar-inner::-webkit-scrollbar-thumb {
+        .bar-image {
 
-            background: #cfcfcf;
+            background-image:
+                url("assets/img/rnd/coming-soon/smart-bar-counter.jpg");
         }
 
 
+        .window-image {
 
-        /* =========================================================
-           SIDEBAR HEADER
-        ========================================================== */
-
-        .catalogue-sidebar-header {
-
-            padding: 28px 32px;
-
-            border-bottom: 1px solid #dddddd;
-
-            background: #f7f7f5;
+            background-image:
+                url("assets/img/rnd/coming-soon/smart-window-leaf-ac.jpg");
         }
 
 
-        .catalogue-sidebar-header span {
+        .coming-card::before {
 
-            display: block;
+            content: "";
 
-            margin-bottom: 7px;
+            position: absolute;
 
-            color: #999999;
+            inset: 0;
+
+            z-index: 1;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(0,0,0,.96) 0%,
+                    rgba(0,0,0,.65) 45%,
+                    rgba(0,0,0,.12) 100%
+                );
+        }
+
+
+        .coming-card-content {
+
+            position: relative;
+
+            z-index: 3;
+
+            width: 100%;
+
+            height: 100%;
+
+            min-height: 560px;
+
+            padding: 32px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            color: #ffffff;
+        }
+
+
+        .coming-card-top {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+
+        .coming-card-number {
+
+            color: rgba(255,255,255,.55);
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+        }
+
+
+        .coming-status {
+
+            padding: 9px 12px;
+
+            border: 1px solid rgba(255,255,255,.30);
+
+            color: rgba(255,255,255,.78);
 
             font-size: 8px;
 
@@ -476,219 +476,61 @@
         }
 
 
-        .catalogue-sidebar-header h2 {
-
-            margin: 0;
-
-            color: #111111;
-
-            font-size: 20px;
-
-            font-weight: 600;
-
-            letter-spacing: -.5px;
-        }
-
-
-
-        /* =========================================================
-           CATEGORY
-        ========================================================== */
-
-        .power-category {
-
-            border-bottom: 1px solid #dddddd;
-        }
-
-
-        .category-button {
-
-            width: 100%;
-
-            min-height: 82px;
-
-            padding: 0 28px;
-
-            display: grid;
-
-            grid-template-columns:
-
-                34px
-
-                1fr
-
-                auto;
-
-            align-items: center;
-
-            gap: 13px;
-
-            border: 0;
-
-            background: #ffffff;
-
-            color: #111111;
-
-            text-align: left;
-
-            cursor: pointer;
-
-            transition: .3s ease;
-        }
-
-
-        .category-button:hover {
-
-            background: #f1f1ef;
-        }
-
-
-        .category-number {
-
-            color: #aaaaaa;
-
-            font-size: 9px;
-
-            font-weight: 600;
-
-            letter-spacing: 1px;
-        }
-
-
-        .category-content {
-
-            min-width: 0;
-        }
-
-
-        .category-title {
+        .coming-card-bottom span {
 
             display: block;
 
-            color: #111111;
+            margin-bottom: 10px;
 
-            font-size: 14px;
-
-            font-weight: 600;
-
-            line-height: 1.25;
-        }
-
-
-        .category-count {
-
-            display: block;
-
-            margin-top: 5px;
-
-            color: #999999;
+            color: rgba(255,255,255,.55);
 
             font-size: 8px;
 
-            font-weight: 600;
+            font-weight: 700;
 
-            letter-spacing: 1.2px;
+            letter-spacing: 2px;
 
             text-transform: uppercase;
         }
 
 
-        .category-toggle {
+        .coming-card h2 {
 
-            width: 28px;
+            margin: 0 0 16px;
 
-            height: 28px;
+            color: #ffffff;
 
-            display: flex;
+            font-size: clamp(30px,3vw,44px);
 
-            align-items: center;
+            line-height: 1;
 
-            justify-content: center;
+            letter-spacing: -1.5px;
 
-            border: 1px solid #dddddd;
+            font-weight: 500;
+        }
 
-            color: #777777;
+
+        .coming-card p {
+
+            max-width: 420px;
+
+            margin: 0;
+
+            color: rgba(255,255,255,.70);
 
             font-size: 12px;
+
+            line-height: 1.8;
         }
 
 
+        .coming-card-footer {
 
-        /* ACTIVE CATEGORY */
+            margin-top: 28px;
 
-        .power-category.open .category-button {
+            padding-top: 20px;
 
-            background: #111111;
-
-            color: #ffffff;
-        }
-
-
-        .power-category.open .category-title {
-
-            color: #ffffff;
-        }
-
-
-        .power-category.open .category-number {
-
-            color: #777777;
-        }
-
-
-        .power-category.open .category-count {
-
-            color: #888888;
-        }
-
-
-        .power-category.open .category-toggle {
-
-            background: #ffffff;
-
-            border-color: #ffffff;
-
-            color: #111111;
-        }
-
-
-
-        /* =========================================================
-           CATEGORY PRODUCTS
-        ========================================================== */
-
-        .category-products {
-
-            max-height: 0;
-
-            overflow: hidden;
-
-            background: #ffffff;
-
-            transition:
-                max-height .55s cubic-bezier(.22,1,.36,1);
-        }
-
-
-        .power-category.open .category-products {
-
-            max-height: 1600px;
-        }
-
-
-        .sidebar-product {
-
-            position: relative;
-
-            width: 100%;
-
-            min-height: 62px;
-
-            padding:
-
-                0 20px
-
-                0 64px;
+            border-top: 1px solid rgba(255,255,255,.18);
 
             display: flex;
 
@@ -697,450 +539,24 @@
             justify-content: space-between;
 
             gap: 20px;
-
-            border: 0;
-
-            border-top: 1px solid #eeeeee;
-
-            background: #ffffff;
-
-            color: #555555;
-
-            text-align: left;
-
-            cursor: pointer;
-
-            transition: .3s ease;
         }
 
 
-        .sidebar-product::before {
+        .coming-card-footer strong {
 
-            content: "";
-
-            position: absolute;
-
-            left: 33px;
-
-            width: 12px;
-
-            height: 1px;
-
-            background: #bbbbbb;
-
-            transition: .3s ease;
-        }
-
-
-        .sidebar-product-name {
-
-            font-size: 12px;
-
-            font-weight: 500;
-
-            line-height: 1.4;
-        }
-
-
-        .sidebar-product-count {
-
-            white-space: nowrap;
-
-            color: #aaaaaa;
-
-            font-size: 8px;
-
-            font-weight: 600;
-
-            letter-spacing: 1px;
-        }
-
-
-        .sidebar-product:hover {
-
-            padding-left: 70px;
-
-            background: #f7f7f5;
-
-            color: #111111;
-        }
-
-
-        .sidebar-product.active {
-
-            background: #ececea;
-
-            color: #111111;
-        }
-
-
-        .sidebar-product.active::before {
-
-            width: 20px;
-
-            background: #111111;
-        }
-
-
-        .sidebar-product.active
-        .sidebar-product-name {
-
-            font-weight: 600;
-        }
-
-
-
-        /* =========================================================
-           RIGHT SIDE
-        ========================================================== */
-
-        .catalogue-display {
-
-            min-width: 0;
-
-            background: #ffffff;
-        }
-
-
-
-        /* =========================================================
-           DISPLAY HEADER
-        ========================================================== */
-
-        .catalogue-display-header {
-
-            min-height: 72px;
-
-            padding: 0 42px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            gap: 30px;
-
-            border-bottom: 1px solid #e5e5e5;
-
-            background: #ffffff;
-        }
-
-
-        .catalogue-breadcrumb {
-
-            color: #999999;
-
-            font-size: 8px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-        }
-
-
-        .catalogue-product-index {
-
-            color: #999999;
+            color: rgba(255,255,255,.75);
 
             font-size: 9px;
 
             font-weight: 600;
 
-            letter-spacing: 2px;
-        }
-
-
-
-        /* =========================================================
-           MAIN PRODUCT VISUAL
-        ========================================================== */
-
-        .product-visual {
-
-            position: relative;
-
-            width: 100%;
-
-            min-height: 590px;
-
-            overflow: hidden;
-
-            background: #e9e9e6;
-        }
-
-
-        .product-visual-image {
-
-            position: absolute;
-
-            inset: 0;
-
-            width: 100%;
-
-            height: 100%;
-
-            object-fit: cover;
-
-            object-position: center;
-
-            opacity: 1;
-
-            transform: scale(1.01);
-
-            transition:
-
-                opacity .35s ease,
-
-                transform .7s
-                cubic-bezier(.22,1,.36,1);
-        }
-
-
-        .product-visual.image-changing
-        .product-visual-image {
-
-            opacity: 0;
-
-            transform: scale(1.04);
-        }
-
-
-
-        /* DARK GRADIENT */
-
-        .product-visual::after {
-
-            content: "";
-
-            position: absolute;
-
-            inset: 0;
-
-            z-index: 2;
-
-            pointer-events: none;
-
-            background:
-
-                linear-gradient(
-
-                    to top,
-
-                    rgba(0,0,0,.92) 0%,
-
-                    rgba(0,0,0,.54) 34%,
-
-                    rgba(0,0,0,.12) 65%,
-
-                    rgba(0,0,0,.02) 100%
-
-                );
-        }
-
-
-
-        /* =========================================================
-           IMAGE COUNTER
-        ========================================================== */
-
-        .gallery-image-counter {
-
-            position: absolute;
-
-            z-index: 6;
-
-            top: 28px;
-
-            right: 30px;
-
-            min-width: 84px;
-
-            height: 38px;
-
-            padding: 0 14px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            gap: 6px;
-
-            background: rgba(255,255,255,.94);
-
-            color: #111111;
-
-            font-size: 9px;
-
-            font-weight: 700;
-
-            letter-spacing: 1.4px;
-        }
-
-
-
-        /* =========================================================
-           PRODUCT CONTENT
-        ========================================================== */
-
-        .product-visual-content {
-
-            position: absolute;
-
-            z-index: 5;
-
-            left: 44px;
-
-            right: 44px;
-
-            bottom: 42px;
-
-            color: #ffffff;
-
-            transition:
-
-                opacity .35s ease,
-
-                transform .4s ease;
-        }
-
-
-        .product-visual.image-changing
-        .product-visual-content {
-
-            opacity: .35;
-        }
-
-
-        .display-category {
-
-            display: block;
-
-            margin-bottom: 12px;
-
-            color: rgba(255,255,255,.58);
-
-            font-size: 9px;
-
-            font-weight: 700;
-
-            letter-spacing: 2.5px;
+            letter-spacing: 1.5px;
 
             text-transform: uppercase;
         }
 
 
-        .display-title {
-
-            max-width: 900px;
-
-            margin: 0 0 17px;
-
-            color: #ffffff;
-
-            font-size: clamp(44px,5vw,78px);
-
-            line-height: .95;
-
-            letter-spacing: -3px;
-
-            font-weight: 500;
-        }
-
-
-        .display-description {
-
-            max-width: 680px;
-
-            margin: 0;
-
-            color: rgba(255,255,255,.73);
-
-            font-size: 13px;
-
-            line-height: 1.85;
-        }
-
-
-
-        /* =========================================================
-           GALLERY
-        ========================================================== */
-
-        .product-gallery-wrapper {
-
-            width: 100%;
-
-            padding: 28px 32px 34px;
-
-            background: #ffffff;
-
-            border-top: 1px solid #e2e2e2;
-        }
-
-
-        .gallery-heading {
-
-            display: flex;
-
-            align-items: flex-end;
-
-            justify-content: space-between;
-
-            gap: 30px;
-
-            margin-bottom: 20px;
-        }
-
-
-        .gallery-heading-label {
-
-            display: block;
-
-            margin-bottom: 6px;
-
-            color: #999999;
-
-            font-size: 8px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-        }
-
-
-        .gallery-heading strong {
-
-            display: block;
-
-            color: #111111;
-
-            font-size: 15px;
-
-            font-weight: 600;
-        }
-
-
-
-        /* =========================================================
-           GALLERY CONTROLS
-        ========================================================== */
-
-        .gallery-controls {
-
-            display: flex;
-
-            gap: 6px;
-        }
-
-
-        .gallery-nav {
+        .coming-arrow {
 
             width: 40px;
 
@@ -1152,236 +568,108 @@
 
             justify-content: center;
 
-            padding: 0;
+            border: 1px solid rgba(255,255,255,.32);
 
-            border: 1px solid #dddddd;
+            color: #ffffff;
+
+            transition: .35s ease;
+        }
+
+
+        .coming-card:hover .coming-card-image {
+
+            transform: scale(1);
+
+            filter: grayscale(0%);
+        }
+
+
+        .coming-card:hover .coming-arrow {
 
             background: #ffffff;
 
+            border-color: #ffffff;
+
             color: #111111;
-
-            cursor: pointer;
-
-            transition: .3s ease;
-        }
-
-
-        .gallery-nav:hover {
-
-            background: #111111;
-
-            border-color: #111111;
-
-            color: #ffffff;
         }
 
 
 
         /* =========================================================
-           THUMBNAILS
+           R&D STATUS BAND
         ========================================================== */
 
-        .product-thumbnails {
+        .rd-status-band {
+
+            padding: 110px 0;
+
+            background: #111111;
+
+            color: #ffffff;
+        }
+
+
+        .rd-status-grid {
 
             display: grid;
 
             grid-template-columns:
-                repeat(6,minmax(0,1fr));
+                minmax(0,1fr)
+                minmax(320px,420px);
 
-            gap: 9px;
+            gap: 90px;
+
+            align-items: end;
         }
 
 
-        .product-thumbnail {
+        .rd-status-band .rd-eyebrow {
 
-            position: relative;
-
-            width: 100%;
-
-            aspect-ratio: 4 / 3;
-
-            padding: 0;
-
-            overflow: hidden;
-
-            border: 1px solid transparent;
-
-            background: #eeeeee;
-
-            cursor: pointer;
-
-            transition: .3s ease;
+            color: #777777;
         }
 
 
-        .product-thumbnail img {
+        .rd-status-band h2 {
 
-            width: 100%;
+            max-width: 900px;
 
-            height: 100%;
-
-            object-fit: cover;
-
-            transition:
-                transform .5s
-                cubic-bezier(.22,1,.36,1);
-        }
-
-
-        .product-thumbnail:hover img {
-
-            transform: scale(1.05);
-        }
-
-
-        .thumbnail-number {
-
-            position: absolute;
-
-            z-index: 3;
-
-            right: 6px;
-
-            bottom: 6px;
-
-            min-width: 25px;
-
-            height: 22px;
-
-            padding: 0 5px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            background: rgba(0,0,0,.75);
+            margin: 20px 0 0;
 
             color: #ffffff;
 
-            font-size: 7px;
+            font-size: clamp(42px,5vw,72px);
 
-            font-weight: 700;
+            line-height: .98;
 
-            letter-spacing: 1px;
-        }
-
-
-        .product-thumbnail.active {
-
-            border-color: #111111;
-        }
-
-
-        .product-thumbnail.active::after {
-
-            content: "";
-
-            position: absolute;
-
-            z-index: 4;
-
-            left: 0;
-
-            right: 0;
-
-            bottom: 0;
-
-            height: 3px;
-
-            background: #111111;
-        }
-
-
-
-        /* =========================================================
-           PRODUCT INFO STRIP
-        ========================================================== */
-
-        .product-info-strip {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3,1fr);
-
-            background: #f7f7f5;
-
-            border-top: 1px solid #dddddd;
-        }
-
-
-        .product-info-item {
-
-            min-height: 115px;
-
-            padding: 26px 30px;
-
-            border-right: 1px solid #dddddd;
-        }
-
-
-        .product-info-item:last-child {
-
-            border-right: 0;
-        }
-
-
-        .product-info-label {
-
-            display: block;
-
-            margin-bottom: 10px;
-
-            color: #999999;
-
-            font-size: 8px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-        }
-
-
-        .product-info-value {
-
-            color: #222222;
-
-            font-size: 14px;
+            letter-spacing: -3px;
 
             font-weight: 500;
         }
 
 
+        .rd-status-band h2 span {
 
-        /* =========================================================
-           RESPONSIVE - 1200
-        ========================================================== */
+            color: #777777;
 
-        @media (max-width: 1200px) {
-
-            .power-catalogue {
-
-                grid-template-columns:
-                    330px minmax(0,1fr);
-            }
+            font-weight: 300;
+        }
 
 
-            .product-thumbnails {
+        .rd-status-band p {
 
-                grid-template-columns:
-                    repeat(3,minmax(0,1fr));
-            }
+            margin: 0;
 
+            color: #999999;
+
+            font-size: 13px;
+
+            line-height: 1.9;
         }
 
 
 
         /* =========================================================
-           RESPONSIVE - TABLET
+           RESPONSIVE
         ========================================================== */
 
         @media (max-width: 991px) {
@@ -1437,64 +725,47 @@
 
                 margin-top: 0;
 
-                border: 0;
+                border: none;
 
                 box-shadow: none;
             }
 
 
-            .power-products-page {
-
-                padding-top: 80px;
-            }
-
-
-            .power-products-intro-inner {
+            .rd-upcoming-intro-grid,
+            .rd-status-grid {
 
                 grid-template-columns: 1fr;
 
-                gap: 25px;
+                gap: 40px;
             }
 
 
-            .power-catalogue {
+            .coming-grid {
 
-                grid-template-columns:
-                    300px minmax(0,1fr);
-            }
-
-
-            .product-visual {
-
-                min-height: 560px;
-            }
-
-
-            .display-title {
-
-                font-size: 55px;
+                grid-template-columns: 1fr 1fr;
             }
 
         }
 
 
-
-        /* =========================================================
-           MOBILE
-        ========================================================== */
-
         @media (max-width: 767px) {
 
 
-            .power-products-intro {
+            .rd-container {
 
-                padding:
-                    48px 20px
-                    38px;
+                width: calc(100% - 40px);
             }
 
 
-            .power-products-intro h1 {
+            .rd-upcoming-intro {
+
+                padding:
+                    130px 0
+                    70px;
+            }
+
+
+            .rd-title {
 
                 font-size: 44px;
 
@@ -1502,98 +773,43 @@
             }
 
 
-            .power-catalogue {
+            .coming-products {
 
-                display: block;
+                padding-bottom: 85px;
             }
 
 
-            .catalogue-sidebar {
-
-                border-right: 0;
-
-                border-bottom: 1px solid #dddddd;
-            }
-
-
-            .catalogue-sidebar-inner {
-
-                position: relative;
-
-                top: auto;
-
-                max-height: none;
-            }
-
-
-            .catalogue-display-header {
-
-                padding: 0 20px;
-            }
-
-
-            .product-visual {
-
-                min-height: 500px;
-            }
-
-
-            .product-visual-content {
-
-                left: 24px;
-
-                right: 24px;
-
-                bottom: 28px;
-            }
-
-
-            .display-title {
-
-                font-size: 43px;
-
-                letter-spacing: -2px;
-            }
-
-
-            .gallery-image-counter {
-
-                top: 20px;
-
-                right: 20px;
-            }
-
-
-            .product-gallery-wrapper {
-
-                padding: 22px 20px 25px;
-            }
-
-
-            .product-thumbnails {
-
-                grid-template-columns:
-                    repeat(2,minmax(0,1fr));
-            }
-
-
-            .product-info-strip {
+            .coming-grid {
 
                 grid-template-columns: 1fr;
             }
 
 
-            .product-info-item {
+            .coming-card {
 
-                border-right: 0;
-
-                border-bottom: 1px solid #dddddd;
+                min-height: 500px;
             }
 
 
-            .product-info-item:last-child {
+            .coming-card-content {
 
-                border-bottom: 0;
+                min-height: 500px;
+
+                padding: 26px;
+            }
+
+
+            .rd-status-band {
+
+                padding: 85px 0;
+            }
+
+
+            .rd-status-band h2 {
+
+                font-size: 44px;
+
+                letter-spacing: -2px;
             }
 
         }
@@ -1601,7 +817,6 @@
     </style>
 
 </head>
-
 
 
 <body>
@@ -1616,21 +831,15 @@
     <div class="container-fluid px-4 px-lg-5">
 
 
-        <!-- LOGO -->
-
-        <a
-            class="navbar-brand about-logo"
-            href="index.html">
+        <a class="navbar-brand about-logo"
+           href="index.html">
 
             <img
                 src="assets/img/b-alpha.png"
-                alt="Alpha Numeric Logo">
+                alt="Alpha Numeric">
 
         </a>
 
-
-
-        <!-- MOBILE -->
 
         <button
             class="navbar-toggler"
@@ -1643,9 +852,6 @@
         </button>
 
 
-
-        <!-- NAV -->
-
         <div
             class="collapse navbar-collapse"
             id="navbarResponsive">
@@ -1655,9 +861,8 @@
 
                 <li class="nav-item">
 
-                    <a
-                        class="nav-link"
-                        href="index.html">
+                    <a class="nav-link"
+                       href="index.html">
 
                         Home
 
@@ -1668,9 +873,8 @@
 
                 <li class="nav-item">
 
-                    <a
-                        class="nav-link"
-                        href="about.html">
+                    <a class="nav-link"
+                       href="about.html">
 
                         About
 
@@ -1679,278 +883,147 @@
                 </li>
 
 
-
                 <!-- ENERGY -->
 
                 <li class="nav-item dropdown">
 
-                    <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        data-bs-toggle="dropdown">
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       data-bs-toggle="dropdown">
 
                         Energy
 
                     </a>
 
-
                     <ul class="dropdown-menu">
 
                         <li>
-
-                            <a
-                                class="dropdown-item"
-                                href="solar-energy.html">
-
+                            <a class="dropdown-item"
+                               href="solar-energy.html">
                                 Solar Energy
-
                             </a>
-
                         </li>
 
-
                         <li>
-
-                            <a
-                                class="dropdown-item"
-                                href="wind-energy.html">
-
+                            <a class="dropdown-item"
+                               href="wind-energy.html">
                                 Wind Energy
-
                             </a>
-
                         </li>
 
-
                         <li>
-
-                            <a
-                                class="dropdown-item"
-                                href="biomass-energy.html">
-
+                            <a class="dropdown-item"
+                               href="biomass-energy.html">
                                 Biomass Energy
-
                             </a>
-
                         </li>
 
-
                         <li>
-
-                            <a
-                                class="dropdown-item"
-                                href="hydel-energy.html">
-
+                            <a class="dropdown-item"
+                               href="hydel-energy.html">
                                 Hydel Energy
-
                             </a>
-
                         </li>
 
                     </ul>
 
                 </li>
-
 
 
                 <!-- POWER -->
 
                 <li class="nav-item dropdown">
 
-                    <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        data-bs-toggle="dropdown">
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       data-bs-toggle="dropdown">
 
                         Power
 
                     </a>
 
-
                     <ul class="dropdown-menu">
 
                         <li>
-
-                            <a
-                                class="dropdown-item"
-                                href="transmission.html">
-
+                            <a class="dropdown-item"
+                               href="transmission.html">
                                 Transmission
-
                             </a>
-
                         </li>
 
-
                         <li>
-
-                            <a
-                                class="dropdown-item"
-                                href="distribution.html">
-
+                            <a class="dropdown-item"
+                               href="distribution.html">
                                 Distribution
-
                             </a>
-
                         </li>
 
-
                         <li>
-
-                            <a
-                                class="dropdown-item"
-                                href="control-panels.html">
-
+                            <a class="dropdown-item"
+                               href="control-panels.html">
                                 Control Panels
-
                             </a>
-
                         </li>
 
-
                         <li>
-
-                            <a
-                                class="dropdown-item"
-                                href="panel-boards.html">
-
+                            <a class="dropdown-item"
+                               href="panel-boards.html">
                                 Panel Boards
-
                             </a>
-
                         </li>
 
                     </ul>
 
                 </li>
-
-
-
-                <!-- AUTOMATION -->
-
-                <li class="nav-item dropdown">
-
-                    <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        data-bs-toggle="dropdown">
-
-                        Automation
-
-                    </a>
-
-
-                    <ul class="dropdown-menu">
-
-                        <li>
-
-                            <a
-                                class="dropdown-item"
-                                href="home-automation.html">
-
-                                Home Automation
-
-                            </a>
-
-                        </li>
-
-
-                        <li>
-
-                            <a
-                                class="dropdown-item"
-                                href="commercial-automation.html">
-
-                                Commercial Automation
-
-                            </a>
-
-                        </li>
-
-
-                        <li>
-
-                            <a
-                                class="dropdown-item"
-                                href="industrial-automation.html">
-
-                                Industrial Automation
-
-                            </a>
-
-                        </li>
-
-
-                        <li>
-
-                            <a
-                                class="dropdown-item"
-                                href="hospital-automation.html">
-
-                                Hospital Automation
-
-                            </a>
-
-                        </li>
-
-
-                        <li>
-
-                            <a
-                                class="dropdown-item"
-                                href="hotel-automation.html">
-
-                                Hotel Automation
-
-                            </a>
-
-                        </li>
-
-                    </ul>
-
-                </li>
-
 
 
                 <!-- R&D -->
 
                 <li class="nav-item dropdown">
 
-                    <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        data-bs-toggle="dropdown">
+                    <a class="nav-link dropdown-toggle active"
+                       href="#"
+                       data-bs-toggle="dropdown">
 
                         R & D
 
                     </a>
 
-
                     <ul class="dropdown-menu">
 
                         <li>
-
-                            <a
-                                class="dropdown-item"
-                                href="smart-pole.html">
-
+                            <a class="dropdown-item"
+                               href="smart-pole.html">
                                 Smart Pole
-
                             </a>
-
                         </li>
 
+                        <li>
+                            <a class="dropdown-item"
+                               href="smart-bollard.html">
+                                Smart Bollard
+                            </a>
+                        </li>
 
                         <li>
-
-                            <a
-                                class="dropdown-item"
-                                href="smart-bollard.html">
-
-                                Smart Bollard
-
+                            <a class="dropdown-item"
+                               href="smart-conference-table.html">
+                                Smart Conference Table
                             </a>
+                        </li>
 
+                        <li>
+                            <a class="dropdown-item"
+                               href="smart-bar-counter.html">
+                                Smart Bar Counter
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="smart-window-leaf-ac.html">
+                                Smart Window Leaf AC
+                            </a>
                         </li>
 
                     </ul>
@@ -1958,46 +1031,22 @@
                 </li>
 
 
+                <li class="nav-item">
 
-                <!-- PRODUCTS -->
-
-                <li class="nav-item dropdown">
-
-                    <a
-                        class="nav-link dropdown-toggle active"
-                        href="#"
-                        data-bs-toggle="dropdown">
+                    <a class="nav-link"
+                       href="power-products.html">
 
                         Products
 
                     </a>
 
-
-                    <ul class="dropdown-menu">
-
-                        <li>
-
-                            <a
-                                class="dropdown-item"
-                                href="power-products.html">
-
-                                Power Products
-
-                            </a>
-
-                        </li>
-
-                    </ul>
-
                 </li>
-
 
 
                 <li class="nav-item">
 
-                    <a
-                        class="nav-link"
-                        href="index.html#contact">
+                    <a class="nav-link"
+                       href="index.html#contact">
 
                         Contact
 
@@ -2017,40 +1066,34 @@
 
 
 <!-- =============================================================
-     PAGE
+     INTRO
 ============================================================= -->
 
-<main class="power-products-page">
+<section class="rd-upcoming-intro">
+
+    <div class="rd-container">
 
 
-
-    <!-- =========================================================
-         INTRO
-    ========================================================== -->
-
-    <section class="power-products-intro">
-
-
-        <div class="power-products-intro-inner">
+        <div class="rd-upcoming-intro-grid">
 
 
             <div>
 
 
-                <span class="power-products-eyebrow">
+                <span class="rd-eyebrow">
 
-                    Power Products
+                    Alpha Numeric / R&D
 
                 </span>
 
 
-                <h1>
+                <h1 class="rd-title">
 
-                    Engineering products
-                    for
+                    Future products
+                    currently
 
                     <span>
-                        dependable power.
+                        in development.
                     </span>
 
                 </h1>
@@ -2059,13 +1102,12 @@
             </div>
 
 
-
             <p>
 
-                Explore our complete range of control panels,
-                panel boards, transformers, switchgear and
-                intelligent controllers. Select a product from
-                the catalogue to view its complete image gallery.
+                Our R&D portfolio continues to explore new
+                approaches to intelligent environments,
+                connected infrastructure and integrated
+                product design.
 
             </p>
 
@@ -2073,323 +1115,367 @@
         </div>
 
 
-    </section>
+    </div>
 
-
-
-    <!-- =========================================================
-         CATALOGUE
-    ========================================================== -->
-
-    <section class="power-catalogue">
-
-
-
-        <!-- =====================================================
-             LEFT
-        ====================================================== -->
-
-        <aside class="catalogue-sidebar">
-
-
-            <div class="catalogue-sidebar-inner">
-
-
-                <div class="catalogue-sidebar-header">
-
-                    <span>
-                        Product Catalogue
-                    </span>
-
-                    <h2>
-                        Power Products
-                    </h2>
-
-                </div>
-
-
-
-                <div id="categoryList">
-
-                    <!-- AUTO GENERATED -->
-
-                </div>
-
-
-            </div>
-
-
-        </aside>
-
-
-
-        <!-- =====================================================
-             RIGHT
-        ====================================================== -->
-
-        <section class="catalogue-display">
-
-
-
-            <!-- HEADER -->
-
-            <div class="catalogue-display-header">
-
-
-                <div
-                    class="catalogue-breadcrumb"
-                    id="displayBreadcrumb">
-
-                    POWER PRODUCTS / CONTROL PANELS
-
-                </div>
-
-
-                <div
-                    class="catalogue-product-index"
-                    id="displayProductIndex">
-
-                    01 / 10
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- =================================================
-                 MAIN IMAGE
-            ================================================== -->
-
-            <div
-                class="product-visual"
-                id="productVisual">
-
-
-                <img
-                    src="assets/img/controlpanels/PCC Panels.png"
-                    alt="PCC Panel"
-                    class="product-visual-image"
-                    id="displayImage">
-
-
-
-                <!-- IMAGE COUNTER -->
-
-                <div class="gallery-image-counter">
-
-                    <span id="currentImageNumber">
-                        01
-                    </span>
-
-                    <span>/</span>
-
-                    <span id="totalImageNumber">
-                        06
-                    </span>
-
-                </div>
-
-
-
-                <!-- CONTENT -->
-
-                <div class="product-visual-content">
-
-
-                    <span
-                        class="display-category"
-                        id="displayCategory">
-
-                        Control Panels
-
-                    </span>
-
-
-                    <h2
-                        class="display-title"
-                        id="displayTitle">
-
-                        PCC Panel
-
-                    </h2>
-
-
-                    <p
-                        class="display-description"
-                        id="displayDescription">
-
-                        Power Control Centre designed for reliable
-                        electrical distribution, protection and
-                        centralized control across industrial
-                        electrical systems.
-
-                    </p>
-
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- =================================================
-                 GALLERY
-            ================================================== -->
-
-            <div class="product-gallery-wrapper">
-
-
-                <div class="gallery-heading">
-
-
-                    <div>
-
-                        <span class="gallery-heading-label">
-
-                            Product Gallery
-
-                        </span>
-
-
-                        <strong id="galleryProductName">
-
-                            PCC Panel
-
-                        </strong>
-
-                    </div>
-
-
-
-                    <div class="gallery-controls">
-
-
-                        <button
-                            class="gallery-nav"
-                            id="galleryPrevious"
-                            type="button"
-                            aria-label="Previous image">
-
-                            <i class="bi bi-arrow-left"></i>
-
-                        </button>
-
-
-                        <button
-                            class="gallery-nav"
-                            id="galleryNext"
-                            type="button"
-                            aria-label="Next image">
-
-                            <i class="bi bi-arrow-right"></i>
-
-                        </button>
-
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- THUMBNAILS -->
-
-                <div
-                    class="product-thumbnails"
-                    id="productThumbnails">
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- =================================================
-                 PRODUCT INFO
-            ================================================== -->
-
-            <div class="product-info-strip">
-
-
-                <div class="product-info-item">
-
-                    <span class="product-info-label">
-
-                        Category
-
-                    </span>
-
-                    <div
-                        class="product-info-value"
-                        id="infoCategory">
-
-                        Control Panels
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="product-info-item">
-
-                    <span class="product-info-label">
-
-                        Application
-
-                    </span>
-
-                    <div
-                        class="product-info-value"
-                        id="infoApplication">
-
-                        Industrial Power Distribution
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="product-info-item">
-
-                    <span class="product-info-label">
-
-                        Engineering Focus
-
-                    </span>
-
-                    <div
-                        class="product-info-value"
-                        id="infoFocus">
-
-                        Distribution & Protection
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-        </section>
-
-
-    </section>
-
-
-</main>
+</section>
 
 
 
 <!-- =============================================================
-     BOOTSTRAP JS
+     COMING SOON PRODUCTS
+============================================================= -->
+
+<section class="coming-products">
+
+
+    <div class="rd-container">
+
+
+        <div class="coming-grid">
+
+
+            <!-- =================================================
+                 SMART CONFERENCE TABLE
+            ================================================== -->
+
+            <a href="smart-conference-table.html"
+               class="coming-card">
+
+
+                <div class="coming-card-image conference-image">
+                </div>
+
+
+                <div class="coming-card-content">
+
+
+                    <div class="coming-card-top">
+
+
+                        <span class="coming-card-number">
+
+                            01 / R&D
+
+                        </span>
+
+
+                        <span class="coming-status">
+
+                            Coming Soon
+
+                        </span>
+
+
+                    </div>
+
+
+                    <div class="coming-card-bottom">
+
+
+                        <span>
+
+                            Connected Collaboration
+
+                        </span>
+
+
+                        <h2>
+
+                            Smart Conference Table
+
+                        </h2>
+
+
+                        <p>
+
+                            Intelligent collaboration, integrated
+                            connectivity and technology designed
+                            for the modern meeting environment.
+
+                        </p>
+
+
+                        <div class="coming-card-footer">
+
+
+                            <strong>
+
+                                Currently in Research & Development
+
+                            </strong>
+
+
+                            <span class="coming-arrow">
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </span>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </a>
+
+
+
+            <!-- =================================================
+                 SMART BAR COUNTER
+            ================================================== -->
+
+            <a href="smart-bar-counter.html"
+               class="coming-card">
+
+
+                <div class="coming-card-image bar-image">
+                </div>
+
+
+                <div class="coming-card-content">
+
+
+                    <div class="coming-card-top">
+
+
+                        <span class="coming-card-number">
+
+                            02 / R&D
+
+                        </span>
+
+
+                        <span class="coming-status">
+
+                            Coming Soon
+
+                        </span>
+
+
+                    </div>
+
+
+                    <div class="coming-card-bottom">
+
+
+                        <span>
+
+                            Smart Hospitality
+
+                        </span>
+
+
+                        <h2>
+
+                            Smart Bar Counter
+
+                        </h2>
+
+
+                        <p>
+
+                            A next-generation smart counter concept
+                            combining intelligent functionality,
+                            connected technology and contemporary
+                            hospitality design.
+
+                        </p>
+
+
+                        <div class="coming-card-footer">
+
+
+                            <strong>
+
+                                Currently in Research & Development
+
+                            </strong>
+
+
+                            <span class="coming-arrow">
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </span>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </a>
+
+
+
+            <!-- =================================================
+                 SMART WINDOW LEAF AC
+            ================================================== -->
+
+            <a href="smart-window-leaf-ac.html"
+               class="coming-card">
+
+
+                <div class="coming-card-image window-image">
+                </div>
+
+
+                <div class="coming-card-content">
+
+
+                    <div class="coming-card-top">
+
+
+                        <span class="coming-card-number">
+
+                            03 / R&D
+
+                        </span>
+
+
+                        <span class="coming-status">
+
+                            Coming Soon
+
+                        </span>
+
+
+                    </div>
+
+
+                    <div class="coming-card-bottom">
+
+
+                        <span>
+
+                            Intelligent Climate Control
+
+                        </span>
+
+
+                        <h2>
+
+                            Smart Window Leaf AC
+
+                        </h2>
+
+
+                        <p>
+
+                            An innovative climate-control concept
+                            engineered to integrate efficient cooling
+                            technology within modern architectural spaces.
+
+                        </p>
+
+
+                        <div class="coming-card-footer">
+
+
+                            <strong>
+
+                                Currently in Research & Development
+
+                            </strong>
+
+
+                            <span class="coming-arrow">
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </span>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =============================================================
+     DEVELOPMENT BAND
+============================================================= -->
+
+<section class="rd-status-band">
+
+
+    <div class="rd-container">
+
+
+        <div class="rd-status-grid">
+
+
+            <div>
+
+
+                <span class="rd-eyebrow">
+
+                    Research & Development
+
+                </span>
+
+
+                <h2>
+
+                    New ideas are
+
+                    <span>
+                        taking shape.
+                    </span>
+
+                </h2>
+
+
+            </div>
+
+
+            <p>
+
+                These concepts are currently under research and
+                development as Alpha Numeric continues exploring
+                intelligent products for connected environments,
+                smart infrastructure and future-ready spaces.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =============================================================
+     BOOTSTRAP
 ============================================================= -->
 
 <script
@@ -2397,1785 +1483,26 @@
 </script>
 
 
-
 <script>
 
-/* =============================================================
-   POWER PRODUCT DATABASE
-
-   Add all new products here.
-
-   images[] = unlimited images supported.
-============================================================= */
-
-
-const powerCategories = [
-
-
-    /* =========================================================
-       01 CONTROL PANELS
-    ========================================================== */
-
-    {
-
-        number: "01",
-
-        name: "Control Panels",
-
-        products: [
-
-
-            /* PCC PANEL */
-
-            {
-
-                name: "PCC Panel",
-
-                application:
-                    "Industrial Power Distribution",
-
-                focus:
-                    "Distribution & Protection",
-
-                description:
-                    "Power Control Centre designed for reliable electrical distribution, protection and centralized control across industrial electrical systems.",
-
-                images: [
-
-                    "assets/img/controlpanels/PCC Panels.png",
-
-                    "assets/img/controlpanels/PCC Panels.png",
-
-                    "assets/img/controlpanels/PCC Panels.png",
-
-                    "assets/img/controlpanels/PCC Panels.png",
-
-                    "assets/img/controlpanels/PCC Panels.png",
-
-                    "assets/img/controlpanels/PCC Panels.png"
-
-                ]
-
-            },
-
-
-
-            /* MCC PANEL */
-
-            {
-
-                name: "MCC Panel",
-
-                application:
-                    "Motor Control Systems",
-
-                focus:
-                    "Motor Protection & Control",
-
-                description:
-                    "Motor Control Centre engineered for centralized control, protection and efficient operation of industrial motors and connected equipment.",
-
-                images: [
-
-                    "assets/img/controlpanels/MCC Panels.png",
-
-                    "assets/img/controlpanels/MCC Panels.png",
-
-                    "assets/img/controlpanels/MCC Panels.png",
-
-                    "assets/img/controlpanels/MCC Panels.png",
-
-                    "assets/img/controlpanels/MCC Panels.png",
-
-                    "assets/img/controlpanels/MCC Panels.png"
-
-                ]
-
-            },
-
-
-
-            /* APFC PANEL */
-
-            {
-
-                name: "APFC Panel",
-
-                application:
-                    "Power Factor Correction",
-
-                focus:
-                    "Energy Efficiency",
-
-                description:
-                    "Automatic Power Factor Correction panel engineered to improve power factor, reduce electrical losses and maintain efficient electrical system performance.",
-
-                images: [
-
-                    "assets/img/controlpanels/APFC Panels.jpg",
-
-                    "assets/img/controlpanels/APFC Panels.jpg",
-
-                    "assets/img/controlpanels/APFC Panels.jpg",
-
-                    "assets/img/controlpanels/APFC Panels.jpg",
-
-                    "assets/img/controlpanels/APFC Panels.jpg",
-
-                    "assets/img/controlpanels/APFC Panels.jpg"
-
-                ]
-
-            },
-
-
-
-            /* AMF PANEL */
-
-            {
-
-                name: "AMF Panel",
-
-                application:
-                    "Mains & Generator Control",
-
-                focus:
-                    "Automatic Power Transfer",
-
-                description:
-                    "Automatic Mains Failure panel designed for dependable automatic switching between mains supply and standby generator power.",
-
-                images: [
-
-                    "assets/img/controlpanels/AMF Panels.png",
-
-                    "assets/img/controlpanels/AMF Panels.png",
-
-                    "assets/img/controlpanels/AMF Panels.png",
-
-                    "assets/img/controlpanels/AMF Panels.png",
-
-                    "assets/img/controlpanels/AMF Panels.png",
-
-                    "assets/img/controlpanels/AMF Panels.png"
-
-                ]
-
-            },
-
-
-
-            /* PLC PANEL */
-
-            {
-
-                name: "PLC Control Panel",
-
-                application:
-                    "Industrial Automation",
-
-                focus:
-                    "Process Control",
-
-                description:
-                    "PLC control panel engineered for intelligent industrial automation, monitoring, process control and reliable machine operation.",
-
-                images: [
-
-                    "assets/img/controlpanels/PLC Control Panels.png",
-
-                    "assets/img/controlpanels/PLC Control Panels.png",
-
-                   "assets/img/controlpanels/PLC Control Panels.png",
-
-                    "assets/img/controlpanels/PLC Control Panels.png",
-
-                   "assets/img/controlpanels/PLC Control Panels.png",
-
-                    "assets/img/controlpanels/PLC Control Panels.png"
-
-                ]
-
-            },
-
-
-
-            /* VFD PANEL */
-
-            {
-
-                name: "VFD Panel",
-
-                application:
-                    "Motor Speed Control",
-
-                focus:
-                    "Efficiency & Automation",
-
-                description:
-                    "Variable Frequency Drive panel designed for precise motor speed control, smooth operation and improved energy efficiency.",
-
-                images: [
-
-                    "assets/img/controlpanels/VFD Panels.png",
-
-                    "assets/img/controlpanels/VFD Panels.png",
-
-                    "assets/img/controlpanels/VFD Panels.png",
-
-                    "assets/img/controlpanels/VFD Panels.png",
-
-                    "assets/img/controlpanels/VFD Panels.png",
-
-                    "assets/img/controlpanels/VFD Panels.png"
-
-                ]
-
-            },
-
-
-             /* Synchronizing PANEL */
-
-            {
-
-                name: "Synchronizing Panel",
-
-                application:
-                    "Industrial Power Distribution",
-
-                focus:
-                    "Distribution & Protection",
-
-                description:
-                    "Power Control Centre designed for reliable electrical distribution, protection and centralized control across industrial electrical systems.",
-
-                images: [
-
-                    "assets/img/controlpanels/Synchronizing Panels.png",
-
-                    "assets/img/controlpanels/Synchronizing Panels.png",
-
-                    "assets/img/controlpanels/Synchronizing Panels.png",
-
-                    "assets/img/controlpanels/Synchronizing Panels.png",
-
-                    "assets/img/controlpanels/Synchronizing Panels.png",
-
-                    "assets/img/controlpanels/Synchronizing Panels.png"
-
-                ]
-
-            },
-
-             /* Control & Relay PANELs */
-
-            {
-
-                name: "Control & Relay Panel",
-
-                application:
-                    "Industrial Power Distribution",
-
-                focus:
-                    "Distribution & Protection",
-
-                description:
-                    "Power Control Centre designed for reliable electrical distribution, protection and centralized control across industrial electrical systems.",
-
-                images: [
-
-                    "assets/img/controlpanels/Control & Relay Panels.png",
-
-                    "assets/img/controlpanels/Control & Relay Panels.png",
-
-                    "assets/img/controlpanels/Control & Relay Panels.png",
-
-                    "assets/img/controlpanels/Control & Relay Panels.png",
-
-                    "assets/img/controlpanels/Control & Relay Panels.png",
-
-                    "assets/img/controlpanels/Control & Relay Panels.png"
-
-                ]
-
-            },
-
-
-
-        ]
-
-    },
-
-
-
-    /* =========================================================
-       02 PANEL BOARDS
-    ========================================================== */
-
-    {
-
-        number: "02",
-
-        name: "Panel Boards",
-
-        products: [
-
-
-            {
-
-                name: "Main Distribution Board",
-
-                application:
-                    "Main Power Distribution",
-
-                focus:
-                    "Distribution & Protection",
-
-                description:
-                    "Main Distribution Board engineered for organized and reliable electrical power distribution across industrial and commercial installations.",
-
-                images: [
-
-                    "assets/img/panel-boards/main-distribution-board.png",
-
-                    "assets/img/panel-boards/main-distribution-board.png",
-
-                    "assets/img/panel-boards/main-distribution-board.png",
-
-                    "assets/img/panel-boards/main-distribution-board.png",
-
-                    "assets/img/panel-boards/main-distribution-board.png",
-
-                    "assets/img/panel-boards/main-distribution-board.png"
-
-                ]
-
-            },
-
-
-
-            {
-
-                name: "Sub Distribution Board",
-
-                application:
-                    "Secondary Distribution",
-
-                focus:
-                    "Safe Load Distribution",
-
-                description:
-                    "Sub Distribution Board developed for safe and organized downstream electrical distribution across buildings and industrial systems.",
-
-                images: [
-
-                    "assets/img/panel-boards/sub-distribution-board.png",
-
-                    "assets/img/panel-boards/sub-distribution-board.png",
-
-                    "assets/img/panel-boards/sub-distribution-board.png",
-
-                    "assets/img/panel-boards/sub-distribution-board.png",
-
-                    "assets/img/panel-boards/sub-distribution-board.png",
-
-                    "assets/img/panel-boards/sub-distribution-board.png"
-
-                    
-
-                ]
-
-            },
-
-
-
-            {
-
-                name: "Feeder Pillar Panel",
-
-                application:
-                    "Outdoor Distribution",
-
-                focus:
-                    "Feeder Distribution",
-
-                description:
-                    "Feeder pillar panel designed for safe outdoor electrical distribution, feeder control and dependable infrastructure operation.",
-
-                images: [
-
-                    "assets/img/panel-boards/feeder-pillar-panel.png",
-
-                    "assets/img/panel-boards/feeder-pillar-panel.png",
-
-                    "assets/img/panel-boards/feeder-pillar-panel.png",
-
-                    "assets/img/panel-boards/feeder-pillar-panel.png",
-
-                    "assets/img/panel-boards/feeder-pillar-panel.png",
-
-                    "assets/img/panel-boards/feeder-pillar-panel.png",
-
-                    
-
-                ]
-
-            },
-
-             {
-
-                name: "APFC Panel Boards",
-
-                application:
-                    "Outdoor Distribution",
-
-                focus:
-                    "Feeder Distribution",
-
-                description:
-                    "Feeder pillar panel designed for safe outdoor electrical distribution, feeder control and dependable infrastructure operation.",
-
-                images: [
-
-                    "assets/img/panel-boards/apfc-panel-board.png",
-
-                    "assets/img/panel-boards/apfc-panel-board.png",
-
-                    "assets/img/panel-boards/apfc-panel-board.png",
-
-                    "assets/img/panel-boards/apfc-panel-board.png",
-
-                    "assets/img/panel-boards/apfc-panel-board.png",
-
-                    "assets/img/panel-boards/apfc-panel-board.png",
-
-                ]
-
-            },
-
-            {
-
-                name: "Motor Distribution Boards",
-
-                application:
-                    "Outdoor Distribution",
-
-                focus:
-                    "Feeder Distribution",
-
-                description:
-                    "Feeder pillar panel designed for safe outdoor electrical distribution, feeder control and dependable infrastructure operation.",
-
-                images: [
-
-                    "assets/img/panel-boards/motor-distribution-board.png",
-
-                    "assets/img/panel-boards/motor-distribution-board.png",
-
-                    "assets/img/panel-boards/motor-distribution-board.png",
-
-                    "assets/img/panel-boards/motor-distribution-board.png",
-
-                    "assets/img/panel-boards/motor-distribution-board.png",
-
-                   "assets/img/panel-boards/motor-distribution-board.png",
-
-                ]
-
-            },
-
-             {
-
-                name: "Outdoor Panel Boards",
-
-                application:
-                    "Outdoor Distribution",
-
-                focus:
-                    "Feeder Distribution",
-
-                description:
-                    "Feeder pillar panel designed for safe outdoor electrical distribution, feeder control and dependable infrastructure operation.",
-
-                images: [
-
-                    "assets/img/panel-boards/outdoor-panel-board.png",
-
-                    "assets/img/panel-boards/outdoor-panel-board.png",
-
-                    "assets/img/panel-boards/outdoor-panel-board.png",
-
-                    "assets/img/panel-boards/outdoor-panel-board.png",
-
-                    "assets/img/panel-boards/outdoor-panel-board.png",
-
-                   "assets/img/panel-boards/outdoor-panel-board.png",
-
-                ]
-
-            },
-
-            {
-
-                name: "Metering Panels",
-
-                application:
-                    "Outdoor Distribution",
-
-                focus:
-                    "Feeder Distribution",
-
-                description:
-                    "Feeder pillar panel designed for safe outdoor electrical distribution, feeder control and dependable infrastructure operation.",
-
-                images: [
-
-                    "assets/img/panel-boards/metering-panel.png",
-
-                    "assets/img/panel-boards/metering-panel.png",
-
-                    "assets/img/panel-boards/metering-panel.png",
-
-                    "assets/img/panel-boards/metering-panel.png",
-
-                    "assets/img/panel-boards/metering-panel.png",
-
-                   "assets/img/panel-boards/metering-panel.png",
-
-                ]
-
-            },
-
-             {
-
-                name: "Changeover Panels",
-
-                application:
-                    "Outdoor Distribution",
-
-                focus:
-                    "Feeder Distribution",
-
-                description:
-                    "Feeder pillar panel designed for safe outdoor electrical distribution, feeder control and dependable infrastructure operation.",
-
-                images: [
-
-                    "assets/img/panel-boards/changeover-panel.png",
-
-                   "assets/img/panel-boards/changeover-panel.png",
-
-                   "assets/img/panel-boards/changeover-panel.png",
-
-                   "assets/img/panel-boards/changeover-panel.png",
-
-                   "assets/img/panel-boards/changeover-panel.png",
-
-                   "assets/img/panel-boards/changeover-panel.png",
-
-
-                ]
-
-            },
-
-
-            {
-
-                name: "Customized Panel Boards",
-
-                application:
-                    "Outdoor Distribution",
-
-                focus:
-                    "Feeder Distribution",
-
-                description:
-                    "Feeder pillar panel designed for safe outdoor electrical distribution, feeder control and dependable infrastructure operation.",
-
-                images: [
-
-                    "assets/img/panel-boards/customized-panel-board.png",
-
-                   "assets/img/panel-boards/customized-panel-board.png",
-
-                   "assets/img/panel-boards/customized-panel-board.png",
-
-                   "assets/img/panel-boards/customized-panel-board.png",
-
-                   "assets/img/panel-boards/customized-panel-board.png",
-
-                   "assets/img/panel-boards/customized-panel-board.png",
-
-                ]
-
-            }
-
-
-
-
-        ]
-
-    },
-
-
-
-    /* =========================================================
-       03 TRANSFORMERS
-    ========================================================== */
-
-    {
-
-        number: "03",
-
-        name: "Transformers",
-
-        products: [
-
-
-            {
-
-                name: "Distribution Transformer",
-
-                application:
-                    "Utility & Distribution",
-
-                focus:
-                    "Voltage Transformation",
-
-                description:
-                    "Distribution transformer engineered for reliable voltage transformation and efficient power delivery across electrical distribution networks.",
-
-                images: [
-
-                    "assets/img/products/transformers/distribution-transformer/distribution-transformer-01.jpg",
-
-                    "assets/img/products/transformers/distribution-transformer/distribution-transformer-02.jpg",
-
-                    "assets/img/products/transformers/distribution-transformer/distribution-transformer-03.jpg",
-
-                    "assets/img/products/transformers/distribution-transformer/distribution-transformer-04.jpg",
-
-                    "assets/img/products/transformers/distribution-transformer/distribution-transformer-05.jpg",
-
-                    "assets/img/products/transformers/distribution-transformer/distribution-transformer-06.jpg"
-
-                ]
-
-            },
-
-
-
-            {
-
-                name: "Dry Type Transformer",
-
-                application:
-                    "Indoor Installations",
-
-                focus:
-                    "Safety & Reliability",
-
-                description:
-                    "Dry type transformer engineered for safe indoor power transformation with dependable operation and reduced maintenance requirements.",
-
-                images: [
-
-                    "assets/img/products/transformers/dry-type-transformer/dry-type-transformer-01.jpg",
-
-                    "assets/img/products/transformers/dry-type-transformer/dry-type-transformer-02.jpg",
-
-                    "assets/img/products/transformers/dry-type-transformer/dry-type-transformer-03.jpg",
-
-                    "assets/img/products/transformers/dry-type-transformer/dry-type-transformer-04.jpg",
-
-                    "assets/img/products/transformers/dry-type-transformer/dry-type-transformer-05.jpg",
-
-                    "assets/img/products/transformers/dry-type-transformer/dry-type-transformer-06.jpg"
-
-                ]
-
-            }
-
-        ]
-
-    },
-
-
-
-    /* =========================================================
-       04 SWITCHGEARS
-    ========================================================== */
-
-    {
-
-        number: "04",
-
-        name: "Switchgears",
-
-        products: [
-
-
-            {
-
-                name: "LV Switchgear",
-
-                application:
-                    "Low Voltage Distribution",
-
-                focus:
-                    "Switching & Protection",
-
-                description:
-                    "Low-voltage switchgear engineered for safe switching, protection and isolation of electrical distribution systems.",
-
-                images: [
-
-                    "assets/img/products/switchgears/lv-switchgear/lv-switchgear-01.jpg",
-
-                    "assets/img/products/switchgears/lv-switchgear/lv-switchgear-02.jpg",
-
-                    "assets/img/products/switchgears/lv-switchgear/lv-switchgear-03.jpg",
-
-                    "assets/img/products/switchgears/lv-switchgear/lv-switchgear-04.jpg",
-
-                    "assets/img/products/switchgears/lv-switchgear/lv-switchgear-05.jpg",
-
-                    "assets/img/products/switchgears/lv-switchgear/lv-switchgear-06.jpg"
-
-                ]
-
-            },
-
-
-
-            {
-
-                name: "MV Switchgear",
-
-                application:
-                    "Medium Voltage Networks",
-
-                focus:
-                    "Protection & Isolation",
-
-                description:
-                    "Medium-voltage switchgear developed for reliable protection, switching and safe operation of electrical distribution networks.",
-
-                images: [
-
-                    "assets/img/products/switchgears/mv-switchgear/mv-switchgear-01.jpg",
-
-                    "assets/img/products/switchgears/mv-switchgear/mv-switchgear-02.jpg",
-
-                    "assets/img/products/switchgears/mv-switchgear/mv-switchgear-03.jpg",
-
-                    "assets/img/products/switchgears/mv-switchgear/mv-switchgear-04.jpg",
-
-                    "assets/img/products/switchgears/mv-switchgear/mv-switchgear-05.jpg",
-
-                    "assets/img/products/switchgears/mv-switchgear/mv-switchgear-06.jpg"
-
-                ]
-
-            }
-
-        ]
-
-    },
-
-
-
-    /* =========================================================
-       05 CONTROLLERS
-    ========================================================== */
-
-    {
-
-        number: "05",
-
-        name: "Controllers",
-
-        products: [
-
-
-            {
-
-                name: "Power Controller",
-
-                application:
-                    "Power Management",
-
-                focus:
-                    "Monitoring & Control",
-
-                description:
-                    "Intelligent power controller developed for monitoring, management and optimized control of modern electrical systems.",
-
-                images: [
-
-                    "assets/img/products/controllers/power-controller/power-controller-01.jpg",
-
-                    "assets/img/products/controllers/power-controller/power-controller-02.jpg",
-
-                    "assets/img/products/controllers/power-controller/power-controller-03.jpg",
-
-                    "assets/img/products/controllers/power-controller/power-controller-04.jpg",
-
-                    "assets/img/products/controllers/power-controller/power-controller-05.jpg",
-
-                    "assets/img/products/controllers/power-controller/power-controller-06.jpg"
-
-                ]
-
-            },
-
-
-
-            {
-
-                name: "Motor Controller",
-
-                application:
-                    "Motor Management",
-
-                focus:
-                    "Motor Monitoring & Protection",
-
-                description:
-                    "Motor controller engineered for precise motor management, protection, monitoring and dependable industrial operation.",
-
-                images: [
-
-                    "assets/img/products/controllers/motor-controller/motor-controller-01.jpg",
-
-                    "assets/img/products/controllers/motor-controller/motor-controller-02.jpg",
-
-                    "assets/img/products/controllers/motor-controller/motor-controller-03.jpg",
-
-                    "assets/img/products/controllers/motor-controller/motor-controller-04.jpg",
-
-                    "assets/img/products/controllers/motor-controller/motor-controller-05.jpg",
-
-                    "assets/img/products/controllers/motor-controller/motor-controller-06.jpg"
-
-                ]
-
-            }
-
-        ]
-
-    }
-
-];
-
-
-
-/* =============================================================
-   DOM ELEMENTS
-============================================================= */
-
-const categoryList =
-    document.getElementById("categoryList");
-
-
-const productVisual =
-    document.getElementById("productVisual");
-
-
-const displayImage =
-    document.getElementById("displayImage");
-
-
-const displayCategory =
-    document.getElementById("displayCategory");
-
-
-const displayTitle =
-    document.getElementById("displayTitle");
-
-
-const displayDescription =
-    document.getElementById("displayDescription");
-
-
-const displayBreadcrumb =
-    document.getElementById("displayBreadcrumb");
-
-
-const displayProductIndex =
-    document.getElementById("displayProductIndex");
-
-
-const productThumbnails =
-    document.getElementById("productThumbnails");
-
-
-const galleryProductName =
-    document.getElementById("galleryProductName");
-
-
-const currentImageNumber =
-    document.getElementById("currentImageNumber");
-
-
-const totalImageNumber =
-    document.getElementById("totalImageNumber");
-
-
-const galleryPrevious =
-    document.getElementById("galleryPrevious");
-
-
-const galleryNext =
-    document.getElementById("galleryNext");
-
-
-const infoCategory =
-    document.getElementById("infoCategory");
-
-
-const infoApplication =
-    document.getElementById("infoApplication");
-
-
-const infoFocus =
-    document.getElementById("infoFocus");
-
-
-
-/* =============================================================
-   STATE
-============================================================= */
-
-let currentProduct = null;
-
-let currentCategory = null;
-
-let currentImageIndex = 0;
-
-
-
-/* =============================================================
-   TOTAL PRODUCTS
-============================================================= */
-
-const totalProducts =
-    powerCategories.reduce(
-
-        function(total, category) {
-
-            return total +
-                category.products.length;
-
-        },
-
-        0
-    );
-
-
-
-/* =============================================================
-   GLOBAL PRODUCT NUMBER
-============================================================= */
-
-function getGlobalProductNumber(
-    categoryIndex,
-    productIndex
-) {
-
-    let number = 0;
-
-
-    for (
-        let i = 0;
-        i < categoryIndex;
-        i++
-    ) {
-
-        number +=
-            powerCategories[i].products.length;
-
-    }
-
-
-    number += productIndex + 1;
-
-
-    return number;
-
-}
-
-
-
-/* =============================================================
-   RENDER SIDEBAR
-============================================================= */
-
-function renderCategories() {
-
-
-    categoryList.innerHTML = "";
-
-
-    powerCategories.forEach(
-
-        function(category, categoryIndex) {
-
-
-            const wrapper =
-                document.createElement("div");
-
-
-            wrapper.className =
-                "power-category";
-
-
-            if (categoryIndex === 0) {
-
-                wrapper.classList.add("open");
-
-            }
-
-
-
-            /* CATEGORY BUTTON */
-
-            const categoryButton =
-                document.createElement("button");
-
-
-            categoryButton.type =
-                "button";
-
-
-            categoryButton.className =
-                "category-button";
-
-
-            categoryButton.innerHTML = `
-
-                <span class="category-number">
-
-                    ${category.number}
-
-                </span>
-
-
-                <span class="category-content">
-
-                    <span class="category-title">
-
-                        ${category.name}
-
-                    </span>
-
-
-                    <span class="category-count">
-
-                        ${category.products.length}
-                        Products
-
-                    </span>
-
-                </span>
-
-
-                <span class="category-toggle">
-
-                    <i class="bi ${
-                        categoryIndex === 0
-                        ? "bi-dash"
-                        : "bi-plus"
-                    }"></i>
-
-                </span>
-
-            `;
-
-
-
-            /* PRODUCTS */
-
-            const productsContainer =
-                document.createElement("div");
-
-
-            productsContainer.className =
-                "category-products";
-
-
-
-            category.products.forEach(
-
-                function(product, productIndex) {
-
-
-                    const productButton =
-                        document.createElement("button");
-
-
-                    productButton.type =
-                        "button";
-
-
-                    productButton.className =
-                        "sidebar-product";
-
-
-                    if (
-                        categoryIndex === 0 &&
-                        productIndex === 0
-                    ) {
-
-                        productButton.classList.add(
-                            "active"
-                        );
-
-                    }
-
-
-                    productButton.innerHTML = `
-
-                        <span class="sidebar-product-name">
-
-                            ${product.name}
-
-                        </span>
-
-
-                        <span class="sidebar-product-count">
-
-                            ${product.images.length}
-                            IMG
-
-                        </span>
-
-                    `;
-
-
-
-                    productButton.addEventListener(
-
-                        "click",
-
-                        function(event) {
-
-
-                            event.stopPropagation();
-
-
-                            document
-                                .querySelectorAll(
-                                    ".sidebar-product"
-                                )
-                                .forEach(
-
-                                    function(button) {
-
-                                        button.classList.remove(
-                                            "active"
-                                        );
-
-                                    }
-
-                                );
-
-
-                            productButton.classList.add(
-                                "active"
-                            );
-
-
-                            const globalNumber =
-                                getGlobalProductNumber(
-                                    categoryIndex,
-                                    productIndex
-                                );
-
-
-                            showProduct(
-                                category,
-                                product,
-                                globalNumber
-                            );
-
-                        }
-
-                    );
-
-
-                    productsContainer.appendChild(
-                        productButton
-                    );
-
-                }
-
-            );
-
-
-
-            /* CATEGORY OPEN / CLOSE */
-
-            categoryButton.addEventListener(
-
-                "click",
-
-                function() {
-
-
-                    const isOpen =
-                        wrapper.classList.contains(
-                            "open"
-                        );
-
-
-                    document
-                        .querySelectorAll(
-                            ".power-category"
-                        )
-                        .forEach(
-
-                            function(item) {
-
-
-                                item.classList.remove(
-                                    "open"
-                                );
-
-
-                                const icon =
-                                    item.querySelector(
-                                        ".category-toggle i"
-                                    );
-
-
-                                if (icon) {
-
-                                    icon.className =
-                                        "bi bi-plus";
-
-                                }
-
-                            }
-
-                        );
-
-
-                    if (!isOpen) {
-
-
-                        wrapper.classList.add(
-                            "open"
-                        );
-
-
-                        const icon =
-                            wrapper.querySelector(
-                                ".category-toggle i"
-                            );
-
-
-                        if (icon) {
-
-                            icon.className =
-                                "bi bi-dash";
-
-                        }
-
-                    }
-
-                }
-
-            );
-
-
-
-            wrapper.appendChild(
-                categoryButton
-            );
-
-
-            wrapper.appendChild(
-                productsContainer
-            );
-
-
-            categoryList.appendChild(
-                wrapper
-            );
-
-        }
-
-    );
-
-}
-
-
-
-/* =============================================================
-   SHOW PRODUCT
-============================================================= */
-
-function showProduct(
-    category,
-    product,
-    globalNumber
-) {
-
-
-    currentCategory = category;
-
-    currentProduct = product;
-
-    currentImageIndex = 0;
-
-
-    productVisual.classList.add(
-        "image-changing"
-    );
-
-
-    setTimeout(
-
-        function() {
-
-
-            displayCategory.textContent =
-                category.name;
-
-
-            displayTitle.textContent =
-                product.name;
-
-
-            displayDescription.textContent =
-                product.description;
-
-
-            displayBreadcrumb.textContent =
-                "POWER PRODUCTS / " +
-                category.name.toUpperCase();
-
-
-            displayProductIndex.textContent =
-
-                String(globalNumber)
-                    .padStart(2,"0")
-
-                +
-
-                " / "
-
-                +
-
-                String(totalProducts)
-                    .padStart(2,"0");
-
-
-            galleryProductName.textContent =
-                product.name;
-
-
-            infoCategory.textContent =
-                category.name;
-
-
-            infoApplication.textContent =
-                product.application;
-
-
-            infoFocus.textContent =
-                product.focus;
-
-
-            renderGallery(product);
-
-
-            changeGalleryImage(
-                0,
-                false
-            );
-
-
-            productVisual.classList.remove(
-                "image-changing"
-            );
-
-
-        },
-
-        240
-    );
-
-}
-
-
-
-/* =============================================================
-   RENDER IMAGE THUMBNAILS
-============================================================= */
-
-function renderGallery(product) {
-
-
-    productThumbnails.innerHTML = "";
-
-
-    totalImageNumber.textContent =
-        String(product.images.length)
-            .padStart(2,"0");
-
-
-    product.images.forEach(
-
-        function(image, index) {
-
-
-            const thumbnail =
-                document.createElement("button");
-
-
-            thumbnail.type =
-                "button";
-
-
-            thumbnail.className =
-                "product-thumbnail";
-
-
-            if (index === 0) {
-
-                thumbnail.classList.add(
-                    "active"
-                );
-
-            }
-
-
-            thumbnail.innerHTML = `
-
-                <img
-                    src="${image}"
-                    alt="${product.name} ${index + 1}"
-                    loading="lazy">
-
-
-                <span class="thumbnail-number">
-
-                    ${String(index + 1)
-                        .padStart(2,"0")}
-
-                </span>
-
-            `;
-
-
-            thumbnail.addEventListener(
-
-                "click",
-
-                function() {
-
-
-                    changeGalleryImage(
-                        index,
-                        true
-                    );
-
-                }
-
-            );
-
-
-            productThumbnails.appendChild(
-                thumbnail
-            );
-
-        }
-
-    );
-
-}
-
-
-
-/* =============================================================
-   CHANGE MAIN IMAGE
-============================================================= */
-
-function changeGalleryImage(
-    index,
-    animate = true
-) {
-
-
-    if (
-        !currentProduct ||
-        !currentProduct.images ||
-        !currentProduct.images.length
-    ) {
-
-        return;
-
-    }
-
-
-    currentImageIndex = index;
-
-
-    const image =
-        currentProduct.images[index];
-
-
-
-    function updateImage() {
-
-
-        displayImage.src =
-            image;
-
-
-        displayImage.alt =
-            currentProduct.name +
-            " image " +
-            (index + 1);
-
-
-        currentImageNumber.textContent =
-            String(index + 1)
-                .padStart(2,"0");
-
-
-        document
-            .querySelectorAll(
-                ".product-thumbnail"
-            )
-            .forEach(
-
-                function(thumbnail, thumbIndex) {
-
-
-                    thumbnail.classList.toggle(
-
-                        "active",
-
-                        thumbIndex === index
-
-                    );
-
-                }
-
-            );
-
-    }
-
-
-
-    if (!animate) {
-
-        updateImage();
-
-        return;
-
-    }
-
-
-    productVisual.classList.add(
-        "image-changing"
-    );
-
-
-    setTimeout(
-
-        function() {
-
-
-            updateImage();
-
-
-            productVisual.classList.remove(
-                "image-changing"
-            );
-
-
-        },
-
-        200
-    );
-
-}
-
-
-
-/* =============================================================
-   NEXT IMAGE
-============================================================= */
-
-galleryNext.addEventListener(
-
-    "click",
-
-    function() {
-
-
-        if (!currentProduct) {
-
-            return;
-
-        }
-
-
-        let next =
-            currentImageIndex + 1;
-
-
-        if (
-            next >=
-            currentProduct.images.length
-        ) {
-
-            next = 0;
-
-        }
-
-
-        changeGalleryImage(
-            next,
-            true
-        );
-
-    }
-
-);
-
-
-
-/* =============================================================
-   PREVIOUS IMAGE
-============================================================= */
-
-galleryPrevious.addEventListener(
-
-    "click",
-
-    function() {
-
-
-        if (!currentProduct) {
-
-            return;
-
-        }
-
-
-        let previous =
-            currentImageIndex - 1;
-
-
-        if (previous < 0) {
-
-            previous =
-                currentProduct.images.length - 1;
-
-        }
-
-
-        changeGalleryImage(
-            previous,
-            true
-        );
-
-    }
-
-);
-
-
-
-/* =============================================================
-   KEYBOARD ARROWS
-============================================================= */
-
-document.addEventListener(
-
-    "keydown",
-
-    function(event) {
-
-
-        if (!currentProduct) return;
-
-
-        if (event.key === "ArrowRight") {
-
-            galleryNext.click();
-
-        }
-
-
-        if (event.key === "ArrowLeft") {
-
-            galleryPrevious.click();
-
-        }
-
-    }
-
-);
-
-
-
-/* =============================================================
-   INITIAL PRODUCT
-============================================================= */
-
-renderCategories();
-
-
-const firstCategory =
-    powerCategories[0];
-
-
-const firstProduct =
-    firstCategory.products[0];
-
-
-showProduct(
-    firstCategory,
-    firstProduct,
-    1
-);
-
-
-
-/* =============================================================
-   NAVBAR SHADOW
-============================================================= */
-
 window.addEventListener(
-
     "scroll",
-
     function() {
-
 
         const navbar =
-            document.querySelector(
-                ".about-navbar"
-            );
-
+            document.querySelector(".about-navbar");
 
         if (!navbar) return;
 
 
         if (window.scrollY > 30) {
 
-
             navbar.style.boxShadow =
                 "0 5px 25px rgba(0,0,0,.06)";
 
+        }
 
-        } else {
-
+        else {
 
             navbar.style.boxShadow =
                 "none";
@@ -4183,7 +1510,6 @@ window.addEventListener(
         }
 
     }
-
 );
 
 </script>

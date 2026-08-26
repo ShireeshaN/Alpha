@@ -2,1810 +2,1496 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Smart Pole | R&D | Alpha Numeric</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Smart Pole | Alpha Numeric R&D</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-          rel="stylesheet">
+    <meta name="description"
+          content="Alpha Numeric Smart Pole integrates EV charging, emergency communication, air quality monitoring, smart lighting, public connectivity, AI communication and intelligent surveillance in one urban infrastructure platform.">
+
+
+    <!-- =========================================================
+         BOOTSTRAP
+    ========================================================== -->
 
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet">
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
 
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
-<style>
-
-/* =========================================================
-   GLOBAL
-========================================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: "Inter", sans-serif;
-    background: #fff;
-    color: #111;
-    overflow-x: hidden;
-}
-
-a {
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-
-/* =========================================================
-   NAVBAR
-========================================================= */
-
-.main-navbar {
-    height: 100px;
-    padding: 0 7%;
-    background: #fff !important;
-    border-bottom: 1px solid #e8e8e8;
-    z-index: 9999;
-    transition: .3s ease;
-}
-
-.main-navbar .navbar-brand img {
-    height: 55px;
-    width: auto;
-}
-
-.main-navbar .navbar-nav {
-    align-items: center;
-    gap: 28px;
-}
-
-.main-navbar .nav-link {
-    color: #111 !important;
-    font-size: 15px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    padding: 10px 0 !important;
-    transition: .3s ease;
-}
-
-.main-navbar .nav-link:hover {
-    color: #666 !important;
-}
-
-.main-navbar .nav-link.main-active {
-    font-weight: 700;
-}
-
-.main-navbar .dropdown-toggle::after {
-    margin-left: 7px;
-}
-
-.main-navbar .dropdown-menu {
-    margin-top: 18px;
-    padding: 10px 0;
-    min-width: 235px;
-    border: 1px solid #e5e5e5;
-    border-radius: 0;
-    background: #fff;
-    box-shadow: 0 15px 40px rgba(0,0,0,.08);
-}
-
-.main-navbar .dropdown-item {
-    padding: 12px 20px;
-    color: #222;
-    font-size: 13px;
-}
+    <!-- =========================================================
+         BOOTSTRAP ICONS
+    ========================================================== -->
 
-.main-navbar .dropdown-item:hover {
-    background: #f5f5f5;
-}
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-.main-navbar .dropdown-item.active {
-    background: #111 !important;
-    color: #fff !important;
-}
 
+    <!-- =========================================================
+         INTER FONT
+    ========================================================== -->
 
-/* =========================================================
-   R&D HERO
-========================================================= */
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-.rd-hero {
-    min-height: 820px;
-    margin-top: 100px;
-    position: relative;
-    overflow: hidden;
-    background: #050505;
-    color: #fff;
-}
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-.rd-grid {
-    position: absolute;
-    inset: 0;
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-    background-image:
-        linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
 
-    background-size: 65px 65px;
+    <style>
 
-    mask-image: linear-gradient(
-        90deg,
-        #000,
-        transparent 90%
-    );
-}
+        /* =========================================================
+           GLOBAL
+        ========================================================== */
 
-.rd-glow {
-    position: absolute;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    width: 700px;
-    height: 700px;
 
-    right: -180px;
-    top: 30px;
+        html {
+            scroll-behavior: smooth;
+        }
 
-    border: 1px solid #333;
 
-    border-radius: 50%;
+        body {
 
-    box-shadow:
-        0 0 0 80px rgba(255,255,255,.015),
-        0 0 0 160px rgba(255,255,255,.01);
-}
+            font-family: "Inter", sans-serif;
 
-.rd-glow::before {
-    content: "";
+            background: #ffffff;
 
-    position: absolute;
+            color: #111111;
 
-    inset: 100px;
+            overflow-x: hidden;
+        }
 
-    border: 1px dashed #555;
 
-    border-radius: 50%;
-}
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-.rd-glow::after {
-    content: "";
 
-    position: absolute;
+        img {
+            max-width: 100%;
+            display: block;
+        }
 
-    width: 12px;
-    height: 12px;
 
-    background: #fff;
+        button {
+            font-family: inherit;
+        }
 
-    border-radius: 50%;
 
-    top: 48%;
-    left: 48%;
 
-    box-shadow:
-        0 0 25px #fff,
-        0 0 60px rgba(255,255,255,.3);
-}
+        /* =========================================================
+           NAVBAR
+        ========================================================== */
 
-.rd-hero-content {
-    position: relative;
-    z-index: 2;
+        .about-navbar {
 
-    min-height: 820px;
+            height: 100px;
 
-    max-width: 1450px;
-    margin: auto;
+            padding: 0 7%;
 
-    padding: 150px 7% 100px;
+            background: #ffffff !important;
 
-    display: grid;
-    grid-template-columns: 1.05fr .95fr;
+            border-bottom: 1px solid #eeeeee;
 
-    align-items: center;
+            z-index: 9999;
 
-    gap: 70px;
-}
+            transition: all .3s ease;
+        }
 
-.rd-eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 14px;
 
-    color: #aaa;
+        .about-logo {
 
-    font-size: 10px;
-    font-weight: 700;
+            display: flex;
 
-    letter-spacing: 4px;
-    text-transform: uppercase;
+            align-items: center;
 
-    margin-bottom: 28px;
-}
+            padding: 0;
 
-.rd-eyebrow span {
-    width: 45px;
-    height: 1px;
+            margin: 0;
+        }
 
-    background: #fff;
-}
 
-.rd-hero h1 {
-    font-size: clamp(55px, 8vw, 115px);
+        .about-logo img {
 
-    line-height: .86;
+            height: 70px;
 
-    letter-spacing: -7px;
+            width: auto;
 
-    font-weight: 800;
+            object-fit: contain;
+        }
 
-    text-transform: uppercase;
 
-    margin-bottom: 38px;
-}
+        .about-navbar .navbar-nav {
 
-.rd-hero h1 span {
-    color: #888;
-    font-weight: 300;
-}
+            align-items: center;
 
-.rd-hero-description {
-    max-width: 650px;
+            gap: 28px;
+        }
 
-    color: #aaa;
 
-    font-size: 14px;
+        .about-navbar .nav-link {
 
-    line-height: 1.9;
+            color: #111111 !important;
 
-    margin-bottom: 35px;
-}
+            font-size: 15px;
 
-.rd-hero-meta {
-    display: flex;
-    flex-wrap: wrap;
+            font-weight: 400;
 
-    gap: 10px;
-}
+            letter-spacing: 1px;
 
-.meta-box {
-    padding: 12px 16px;
+            padding: 10px 0 !important;
 
-    border: 1px solid #333;
+            transition: .3s;
+        }
 
-    color: #ccc;
 
-    font-size: 9px;
+        .about-navbar .nav-link:hover {
 
-    letter-spacing: 1.5px;
+            color: #666666 !important;
+        }
 
-    text-transform: uppercase;
-}
 
-.hero-product {
-    position: relative;
+        .about-navbar .nav-link.active {
 
-    height: 550px;
+            color: #111111 !important;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+            font-weight: 500;
+        }
 
-.pole-visual {
-    position: relative;
 
-    width: 6px;
-    height: 450px;
+        .about-navbar .dropdown-menu {
 
-    background: linear-gradient(
-        90deg,
-        #444,
-        #fff,
-        #555
-    );
+            margin-top: 18px;
 
-    box-shadow:
-        0 0 25px rgba(255,255,255,.1);
-}
+            padding: 10px 0;
 
-.pole-top {
-    position: absolute;
+            min-width: 215px;
 
-    top: -18px;
-    left: 50%;
+            border: 1px solid #eeeeee;
 
-    transform: translateX(-50%);
+            border-radius: 0;
 
-    width: 22px;
-    height: 22px;
+            background: #ffffff;
 
-    border: 3px solid #fff;
+            box-shadow: 0 15px 40px rgba(0,0,0,.08);
+        }
 
-    border-radius: 50%;
 
-    box-shadow: 0 0 30px #fff;
-}
+        .about-navbar .dropdown-item {
 
-.pole-arm {
-    position: absolute;
+            padding: 11px 20px;
 
-    top: 35px;
+            font-size: 13px;
 
-    width: 170px;
-    height: 3px;
+            color: #222222;
 
-    background: #aaa;
-}
+            transition: .25s ease;
+        }
 
-.pole-arm.left {
-    right: 0;
-    transform: rotate(-17deg);
-    transform-origin: right;
-}
 
-.pole-arm.right {
-    left: 0;
-    transform: rotate(17deg);
-    transform-origin: left;
-}
+        .about-navbar .dropdown-item:hover {
 
-.pole-light {
-    position: absolute;
+            background: #f5f5f5;
 
-    width: 75px;
-    height: 22px;
+            color: #000000;
+        }
 
-    border-radius: 50%;
 
-    background: #fff;
+        .about-navbar .navbar-toggler {
 
-    box-shadow: 0 0 35px #fff;
-}
+            border: none !important;
 
-.pole-light.left {
-    right: 105px;
-    top: 7px;
-    transform: rotate(-17deg);
-}
+            box-shadow: none !important;
+        }
 
-.pole-light.right {
-    left: 105px;
-    top: 7px;
-    transform: rotate(17deg);
-}
 
-.pole-node {
-    position: absolute;
 
-    width: 13px;
-    height: 13px;
+        /* =========================================================
+           COMMON
+        ========================================================== */
 
-    border: 2px solid #fff;
+        .smart-container {
 
-    background: #111;
+            width: min(calc(100% - 80px), 1500px);
 
-    border-radius: 50%;
+            margin: 0 auto;
+        }
 
-    left: 50%;
 
-    transform: translateX(-50%);
-}
+        .smart-eyebrow {
 
-.node-1 {
-    top: 100px;
-}
+            display: inline-flex;
 
-.node-2 {
-    top: 190px;
-}
+            align-items: center;
 
-.node-3 {
-    top: 280px;
-}
+            gap: 12px;
 
-.node-4 {
-    top: 370px;
-}
+            color: #666666;
 
-.pole-base {
-    position: absolute;
+            font-size: 9px;
 
-    bottom: 0;
-    left: 50%;
+            font-weight: 700;
 
-    transform: translateX(-50%);
+            letter-spacing: 3px;
 
-    width: 85px;
-    height: 20px;
+            text-transform: uppercase;
+        }
 
-    background: #222;
 
-    border: 1px solid #555;
-}
+        .smart-eyebrow::before {
 
-.pole-label {
-    position: absolute;
+            content: "";
 
-    right: 30px;
-    top: 110px;
+            width: 38px;
 
-    padding: 12px;
+            height: 1px;
 
-    border-left: 1px solid #fff;
+            background: currentColor;
+        }
 
-    color: #aaa;
 
-    font-size: 8px;
+        .smart-title {
 
-    letter-spacing: 2px;
-}
+            margin: 20px 0 0;
 
+            font-size: clamp(42px, 5vw, 76px);
 
-/* =========================================================
-   PRODUCT INTRO
-========================================================= */
+            line-height: .98;
 
-.product-intro {
-    padding: 120px 8%;
+            letter-spacing: -3px;
 
-    background: #fff;
-}
+            font-weight: 600;
 
-.intro-grid {
-    max-width: 1250px;
+            color: #111111;
+        }
 
-    margin: auto;
 
-    display: grid;
+        .smart-title span {
 
-    grid-template-columns: .7fr 1.3fr;
+            color: #777777;
 
-    gap: 100px;
-}
+            font-weight: 300;
+        }
 
-.section-number {
-    font-size: 90px;
 
-    line-height: .8;
+        .smart-copy {
 
-    font-weight: 800;
+            color: #717171;
 
-    color: #eee;
+            font-size: 14px;
 
-    letter-spacing: -7px;
-}
+            line-height: 1.9;
+        }
 
-.section-label {
-    color: #777;
 
-    font-size: 10px;
 
-    font-weight: 700;
+        /* =========================================================
+           PAGE INTRO
+        ========================================================== */
 
-    letter-spacing: 3px;
+        .smart-pole-intro {
 
-    text-transform: uppercase;
+            padding: 170px 0 90px;
 
-    margin-bottom: 15px;
-}
+            background: #ffffff;
+        }
 
-.section-title {
-    color: #111;
 
-    font-size: clamp(38px, 5vw, 68px);
+        .smart-intro-grid {
 
-    line-height: 1;
+            display: grid;
 
-    font-weight: 700;
+            grid-template-columns:
+                minmax(0, 1.05fr)
+                minmax(360px, .72fr);
 
-    letter-spacing: -3px;
-}
+            gap: 100px;
 
-.section-line {
-    width: 50px;
-    height: 3px;
+            align-items: end;
+        }
 
-    background: #111;
 
-    margin: 25px 0;
-}
+        .smart-intro-copy {
 
-.intro-copy {
-    color: #666;
+            max-width: 480px;
+        }
 
-    font-size: 14px;
 
-    line-height: 2;
-}
+        .smart-intro-copy p {
 
-.intro-copy strong {
-    color: #111;
-}
+            margin: 0 0 28px;
 
+            color: #6f6f6f;
 
-/* =========================================================
-   ARCHITECTURE
-========================================================= */
+            font-size: 14px;
 
-.architecture {
-    background: #050505;
+            line-height: 1.9;
+        }
 
-    color: #fff;
 
-    padding: 120px 8%;
-}
+        .smart-intro-tags {
 
-.architecture-header {
-    max-width: 1250px;
+            display: flex;
 
-    margin: auto auto 70px;
-}
+            flex-wrap: wrap;
 
-.architecture .section-label {
-    color: #888;
-}
+            gap: 9px;
+        }
 
-.architecture .section-title {
-    color: #fff;
-}
 
-.architecture .section-line {
-    background: #fff;
-}
+        .smart-intro-tags span {
 
-.architecture-subtitle {
-    max-width: 650px;
+            padding: 9px 13px;
 
-    color: #888;
+            border: 1px solid #dddddd;
 
-    font-size: 13px;
+            color: #555555;
 
-    line-height: 1.8;
-}
+            font-size: 8px;
 
-.architecture-system {
-    max-width: 1250px;
+            font-weight: 700;
 
-    margin: auto;
+            letter-spacing: 1.5px;
 
-    border: 1px solid #292929;
+            text-transform: uppercase;
+        }
 
-    position: relative;
-}
 
-.arch-layer {
-    min-height: 115px;
 
-    display: grid;
+        /* =========================================================
+           PRODUCT HERO VISUAL
+        ========================================================== */
 
-    grid-template-columns: 190px 1fr;
+        .smart-product-visual {
 
-    border-bottom: 1px solid #292929;
-}
+            background: #111111;
 
-.arch-layer:last-child {
-    border-bottom: none;
-}
+            overflow: hidden;
+        }
 
-.layer-name {
-    padding: 25px;
 
-    border-right: 1px solid #292929;
+        .smart-product-visual-grid {
 
-    display: flex;
+            display: grid;
 
-    align-items: center;
+            grid-template-columns:
+                minmax(0, 1.4fr)
+                minmax(320px, .6fr);
 
-    color: #fff;
+            min-height: 720px;
+        }
 
-    font-size: 11px;
 
-    font-weight: 700;
+        .smart-product-image {
 
-    letter-spacing: 2px;
+            position: relative;
 
-    text-transform: uppercase;
-}
+            min-height: 720px;
 
-.layer-content {
-    padding: 25px;
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(0,0,0,.62),
+                    rgba(0,0,0,.05)
+                ),
+                url("assets/img/rnd/smart-pole/smart-pole-main.jpg");
 
-    display: flex;
+            background-size: cover;
 
-    align-items: center;
+            background-position: center;
+        }
 
-    gap: 12px;
 
-    flex-wrap: wrap;
-}
+        .smart-product-image-label {
 
-.layer-chip {
-    padding: 11px 15px;
+            position: absolute;
 
-    border: 1px solid #333;
+            left: 35px;
 
-    color: #aaa;
+            top: 35px;
 
-    font-size: 9px;
+            padding: 10px 14px;
 
-    transition: .3s;
-}
+            background: rgba(255,255,255,.94);
 
-.layer-chip:hover {
-    background: #fff;
+            color: #111111;
 
-    color: #111;
+            font-size: 8px;
 
-    border-color: #fff;
-}
+            font-weight: 700;
 
+            letter-spacing: 2px;
 
-/* =========================================================
-   INNOVATION CARDS
-========================================================= */
+            text-transform: uppercase;
+        }
 
-.innovation {
-    padding: 120px 8%;
 
-    background: #f5f5f5;
-}
+        .smart-product-side {
 
-.innovation-header {
-    max-width: 1250px;
+            padding: 60px 45px;
 
-    margin: auto auto 60px;
+            display: flex;
 
-    display: flex;
+            flex-direction: column;
 
-    justify-content: space-between;
+            justify-content: space-between;
 
-    align-items: flex-end;
+            color: #ffffff;
+        }
 
-    gap: 40px;
-}
 
-.innovation-header p {
-    max-width: 450px;
+        .smart-product-side-number {
 
-    color: #777;
+            color: #777777;
 
-    font-size: 12px;
+            font-size: 9px;
 
-    line-height: 1.8;
-}
+            font-weight: 700;
 
-.innovation-grid {
-    max-width: 1250px;
+            letter-spacing: 2px;
+        }
 
-    margin: auto;
 
-    display: grid;
+        .smart-product-side h2 {
 
-    grid-template-columns: repeat(4,1fr);
+            margin: 0 0 20px;
 
-    gap: 2px;
+            font-size: clamp(38px, 4vw, 60px);
 
-    background: #111;
-}
+            line-height: .98;
 
-.innovation-card {
-    min-height: 330px;
+            letter-spacing: -2.5px;
 
-    background: #fff;
+            font-weight: 500;
+        }
 
-    padding: 30px;
 
-    position: relative;
+        .smart-product-side h2 span {
 
-    overflow: hidden;
+            display: block;
 
-    transition: .4s ease;
-}
+            color: #7f7f7f;
 
-.innovation-card:hover {
-    background: #111;
+            font-weight: 300;
+        }
 
-    color: #fff;
-}
 
-.innovation-index {
-    position: absolute;
+        .smart-product-side p {
 
-    right: 20px;
-    top: 15px;
+            margin: 0;
 
-    color: #ddd;
+            color: #9a9a9a;
 
-    font-size: 40px;
+            font-size: 13px;
 
-    font-weight: 800;
+            line-height: 1.9;
+        }
 
-    transition: .3s;
-}
 
-.innovation-card:hover .innovation-index {
-    color: #333;
-}
+        .smart-product-side-bottom {
 
-.innovation-icon {
-    width: 48px;
-    height: 48px;
+            border-top: 1px solid #2f2f2f;
 
-    display: flex;
+            padding-top: 28px;
+        }
 
-    align-items: center;
-    justify-content: center;
 
-    background: #111;
+        .smart-product-side-bottom span {
 
-    color: #fff;
+            display: block;
 
-    margin-bottom: 45px;
-}
+            margin-bottom: 8px;
 
-.innovation-card:hover .innovation-icon {
-    background: #fff;
-    color: #111;
-}
+            color: #686868;
 
-.innovation-card h3 {
-    font-size: 14px;
+            font-size: 8px;
 
-    margin-bottom: 12px;
-}
+            font-weight: 700;
 
-.innovation-card p {
-    color: #777;
+            letter-spacing: 2px;
 
-    font-size: 10px;
+            text-transform: uppercase;
+        }
 
-    line-height: 1.8;
-}
 
-.innovation-card:hover p {
-    color: #999;
-}
+        .smart-product-side-bottom strong {
 
+            font-size: 14px;
 
-/* =========================================================
-   DATA / IOT
-========================================================= */
+            font-weight: 500;
+        }
 
-.iot-section {
-    padding: 125px 8%;
 
-    background: #fff;
-}
 
-.iot-layout {
-    max-width: 1250px;
+        /* =========================================================
+           FEATURE INTRO
+        ========================================================== */
 
-    margin: auto;
+        .features-intro {
 
-    display: grid;
+            padding: 125px 0 70px;
 
-    grid-template-columns: 1fr 1fr;
+            background: #f7f7f5;
+        }
 
-    gap: 100px;
 
-    align-items: center;
-}
+        .features-intro-grid {
 
-.iot-copy p {
-    color: #666;
+            display: grid;
 
-    font-size: 13px;
+            grid-template-columns:
+                minmax(0, 1fr)
+                minmax(300px, 430px);
 
-    line-height: 1.9;
-}
+            gap: 90px;
 
-.iot-dashboard {
-    position: relative;
+            align-items: end;
+        }
 
-    min-height: 470px;
 
-    background: #080808;
 
-    border: 1px solid #222;
+        /* =========================================================
+           FEATURE GRID
+        ========================================================== */
 
-    padding: 25px;
-}
+        .smart-features {
 
-.dashboard-top {
-    display: flex;
+            padding: 0 0 130px;
 
-    justify-content: space-between;
+            background: #f7f7f5;
+        }
 
-    padding-bottom: 20px;
 
-    border-bottom: 1px solid #292929;
-}
+        .feature-grid {
 
-.dashboard-title {
-    color: #fff;
+            display: grid;
 
-    font-size: 10px;
+            grid-template-columns:
+                repeat(4, minmax(0,1fr));
 
-    font-weight: 700;
+            border-top: 1px solid #dddddd;
 
-    letter-spacing: 2px;
-}
+            border-left: 1px solid #dddddd;
+        }
 
-.live {
-    color: #aaa;
 
-    font-size: 8px;
+        .feature-card {
 
-    letter-spacing: 2px;
-}
+            position: relative;
 
-.live::before {
-    content: "";
+            min-height: 285px;
 
-    display: inline-block;
+            padding: 32px 28px;
 
-    width: 6px;
-    height: 6px;
+            background: #ffffff;
 
-    margin-right: 6px;
+            border-right: 1px solid #dddddd;
 
-    border-radius: 50%;
+            border-bottom: 1px solid #dddddd;
 
-    background: #fff;
-}
+            overflow: hidden;
 
-.dashboard-grid {
-    display: grid;
+            transition:
+                background .35s ease,
+                color .35s ease,
+                transform .35s ease;
+        }
 
-    grid-template-columns: repeat(2,1fr);
 
-    gap: 10px;
+        .feature-card::before {
 
-    margin-top: 20px;
-}
+            content: "";
 
-.dashboard-card {
-    padding: 20px;
+            position: absolute;
 
-    min-height: 105px;
+            top: 0;
+            left: 0;
 
-    background: #111;
+            width: 0;
 
-    border: 1px solid #292929;
-}
+            height: 2px;
 
-.dashboard-card span {
-    display: block;
+            background: #111111;
 
-    color: #666;
+            transition: width .4s ease;
+        }
 
-    font-size: 8px;
 
-    letter-spacing: 1px;
+        .feature-card:hover::before {
 
-    margin-bottom: 12px;
-}
+            width: 100%;
+        }
 
-.dashboard-card strong {
-    color: #fff;
 
-    font-size: 22px;
-}
+        .feature-card:hover {
 
-.dashboard-chart {
-    height: 110px;
+            background: #111111;
 
-    margin-top: 20px;
+            color: #ffffff;
+        }
 
-    position: relative;
 
-    border-bottom: 1px solid #333;
+        .feature-number {
 
-    overflow: hidden;
-}
+            display: block;
 
-.chart-line {
-    position: absolute;
+            margin-bottom: 42px;
 
-    width: 150%;
+            color: #aaaaaa;
 
-    height: 2px;
+            font-size: 8px;
 
-    background: #fff;
+            font-weight: 700;
 
-    transform:
-        rotate(-4deg)
-        translateY(50px);
-}
+            letter-spacing: 2px;
+        }
 
-.chart-line::before,
-.chart-line::after {
-    content: "";
 
-    position: absolute;
+        .feature-icon {
 
-    width: 9px;
-    height: 9px;
+            width: 46px;
 
-    background: #fff;
+            height: 46px;
 
-    border-radius: 50%;
-}
+            display: flex;
 
-.chart-line::before {
-    left: 25%;
-    top: -3px;
-}
+            align-items: center;
 
-.chart-line::after {
-    right: 15%;
-    top: 5px;
-}
+            justify-content: center;
 
+            margin-bottom: 28px;
 
-/* =========================================================
-   SMART INFRASTRUCTURE
-========================================================= */
+            border: 1px solid #dedede;
 
-.infrastructure {
-    padding: 120px 8%;
+            background: #fafafa;
 
-    background: #050505;
-}
+            color: #111111;
 
-.infrastructure-header {
-    max-width: 1250px;
+            font-size: 17px;
 
-    margin: auto auto 60px;
-}
+            transition: .35s ease;
+        }
 
-.infrastructure .section-title {
-    color: #fff;
-}
 
-.infrastructure .section-label {
-    color: #888;
-}
+        .feature-card:hover .feature-icon {
 
-.infrastructure .section-line {
-    background: #fff;
-}
+            background: #ffffff;
 
-.infrastructure-grid {
-    max-width: 1250px;
+            border-color: #ffffff;
 
-    margin: auto;
+            color: #111111;
+        }
 
-    display: grid;
 
-    grid-template-columns: 1.2fr .8fr;
+        .feature-card h3 {
 
-    gap: 15px;
-}
+            margin: 0 0 12px;
 
-.infrastructure-main {
-    min-height: 470px;
+            font-size: 17px;
 
-    padding: 45px;
+            font-weight: 600;
 
-    border: 1px solid #292929;
+            line-height: 1.3;
+        }
 
-    position: relative;
 
-    overflow: hidden;
-}
+        .feature-card p {
 
-.infrastructure-main h3 {
-    max-width: 550px;
+            margin: 0;
 
-    color: #fff;
+            color: #777777;
 
-    font-size: 35px;
+            font-size: 11px;
 
-    line-height: 1.1;
+            line-height: 1.75;
 
-    letter-spacing: -2px;
+            transition: .35s ease;
+        }
 
-    margin-bottom: 20px;
-}
 
-.infrastructure-main p {
-    max-width: 550px;
+        .feature-card:hover p {
 
-    color: #888;
+            color: #aaaaaa;
+        }
 
-    font-size: 12px;
 
-    line-height: 1.9;
-}
 
-.infrastructure-circle {
-    position: absolute;
+        /* =========================================================
+           FEATURE ARCHITECTURE
+        ========================================================== */
 
-    right: -100px;
-    bottom: -130px;
+        .feature-architecture {
 
-    width: 450px;
-    height: 450px;
+            padding: 130px 0;
 
-    border: 1px solid #333;
+            background: #ffffff;
+        }
 
-    border-radius: 50%;
-}
 
-.infrastructure-circle::before {
-    content: "";
+        .feature-architecture-grid {
 
-    position: absolute;
+            display: grid;
 
-    inset: 60px;
+            grid-template-columns:
+                minmax(320px, .75fr)
+                minmax(0, 1.25fr);
 
-    border: 1px dashed #444;
+            gap: 100px;
 
-    border-radius: 50%;
-}
+            align-items: start;
+        }
 
-.infrastructure-list {
-    display: grid;
 
-    grid-template-rows: repeat(4,1fr);
+        .architecture-sticky {
 
-    gap: 2px;
+            position: sticky;
 
-    background: #292929;
-}
+            top: 150px;
+        }
 
-.infrastructure-item {
-    padding: 25px;
 
-    background: #111;
+        .architecture-sticky p {
 
-    transition: .3s;
-}
+            max-width: 430px;
 
-.infrastructure-item:hover {
-    background: #fff;
-}
+            margin-top: 26px;
 
-.infrastructure-item i {
-    color: #fff;
+            color: #777777;
 
-    margin-bottom: 12px;
-}
+            font-size: 13px;
 
-.infrastructure-item h4 {
-    color: #fff;
+            line-height: 1.9;
+        }
 
-    font-size: 11px;
 
-    margin-bottom: 7px;
-}
+        .architecture-list {
 
-.infrastructure-item p {
-    color: #777;
+            border-top: 1px solid #dddddd;
+        }
 
-    font-size: 9px;
 
-    line-height: 1.6;
-}
+        .architecture-item {
 
-.infrastructure-item:hover i,
-.infrastructure-item:hover h4 {
-    color: #111;
-}
+            display: grid;
 
+            grid-template-columns:
+                70px
+                1fr
+                minmax(150px, auto);
 
-/* =========================================================
-   APPLICATIONS
-========================================================= */
+            gap: 25px;
 
-.applications {
-    padding: 120px 8%;
+            align-items: center;
 
-    background: #fff;
-}
+            min-height: 115px;
 
-.application-grid {
-    max-width: 1250px;
+            border-bottom: 1px solid #dddddd;
 
-    margin: 60px auto 0;
+            transition: padding .35s ease;
+        }
 
-    display: grid;
 
-    grid-template-columns: repeat(3,1fr);
+        .architecture-item:hover {
 
-    gap: 15px;
-}
+            padding-left: 15px;
+        }
 
-.application-card {
-    min-height: 250px;
 
-    border: 1px solid #ddd;
+        .architecture-number {
 
-    padding: 30px;
+            color: #aaaaaa;
 
-    position: relative;
+            font-size: 9px;
 
-    transition: .3s;
-}
+            font-weight: 700;
 
-.application-card:hover {
-    background: #111;
+            letter-spacing: 2px;
+        }
 
-    transform: translateY(-6px);
-}
 
-.application-card .number {
-    color: #ddd;
+        .architecture-item h3 {
 
-    font-size: 45px;
+            margin: 0;
 
-    font-weight: 800;
+            font-size: 20px;
 
-    margin-bottom: 25px;
-}
+            font-weight: 500;
+        }
 
-.application-card h3 {
-    font-size: 14px;
 
-    margin-bottom: 10px;
-}
+        .architecture-item span:last-child {
 
-.application-card p {
-    color: #777;
+            color: #999999;
 
-    font-size: 10px;
+            font-size: 8px;
 
-    line-height: 1.8;
-}
+            font-weight: 700;
 
-.application-card:hover h3 {
-    color: #fff;
-}
+            letter-spacing: 1.6px;
 
-.application-card:hover p {
-    color: #999;
-}
+            text-transform: uppercase;
+        }
 
-.application-card:hover .number {
-    color: #333;
-}
 
 
-/* =========================================================
-   R&D PROCESS
-========================================================= */
+        /* =========================================================
+           TECHNOLOGY BAND
+        ========================================================== */
 
-.process {
-    padding: 120px 8%;
+        .technology-band {
 
-    background: #f4f4f4;
-}
+            position: relative;
 
-.process-header {
-    max-width: 1250px;
+            min-height: 650px;
 
-    margin: auto auto 65px;
-}
+            display: flex;
 
-.process-track {
-    max-width: 1250px;
+            align-items: flex-end;
 
-    margin: auto;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,.92),
+                    rgba(0,0,0,.35)
+                ),
+                url("assets/img/rnd/smart-pole/smart-pole-city.jpg");
 
-    display: grid;
+            background-size: cover;
 
-    grid-template-columns: repeat(5,1fr);
+            background-position: center;
 
-    position: relative;
-}
+            color: #ffffff;
+        }
 
-.process-track::before {
-    content: "";
 
-    position: absolute;
+        .technology-band-content {
 
-    top: 28px;
-    left: 5%;
-    right: 5%;
+            width: min(calc(100% - 80px),1500px);
 
-    height: 1px;
+            margin: 0 auto;
 
-    background: #bbb;
-}
+            padding: 95px 0;
+        }
 
-.process-step {
-    position: relative;
 
-    text-align: center;
+        .technology-band .smart-eyebrow {
 
-    padding: 0 15px;
-}
+            color: rgba(255,255,255,.60);
+        }
 
-.process-circle {
-    position: relative;
 
-    z-index: 2;
+        .technology-band h2 {
 
-    width: 56px;
-    height: 56px;
+            max-width: 900px;
 
-    margin: 0 auto 25px;
+            margin: 22px 0 26px;
 
-    display: flex;
+            font-size: clamp(44px,5vw,76px);
 
-    align-items: center;
-    justify-content: center;
+            line-height: .98;
 
-    border: 1px solid #111;
+            letter-spacing: -3px;
 
-    border-radius: 50%;
+            font-weight: 500;
+        }
 
-    background: #f4f4f4;
 
-    font-size: 10px;
+        .technology-band h2 span {
 
-    font-weight: 700;
-}
+            color: rgba(255,255,255,.58);
 
-.process-step h4 {
-    font-size: 11px;
+            font-weight: 300;
+        }
 
-    margin-bottom: 10px;
-}
 
-.process-step p {
-    color: #777;
+        .technology-band p {
 
-    font-size: 9px;
+            max-width: 620px;
 
-    line-height: 1.7;
-}
+            margin: 0;
 
+            color: rgba(255,255,255,.68);
 
-/* =========================================================
-   SPECIFICATION STRIP
-========================================================= */
+            font-size: 13px;
 
-.spec-strip {
-    background: #111;
+            line-height: 1.9;
+        }
 
-    color: #fff;
 
-    display: grid;
 
-    grid-template-columns: repeat(4,1fr);
+        /* =========================================================
+           CAPABILITY STRIP
+        ========================================================== */
 
-    border-bottom: 1px solid #333;
-}
+        .capability-strip {
 
-.spec-item {
-    padding: 38px 25px;
+            background: #111111;
 
-    text-align: center;
+            color: #ffffff;
+        }
 
-    border-right: 1px solid #333;
-}
 
-.spec-item:last-child {
-    border-right: none;
-}
+        .capability-strip-grid {
 
-.spec-item strong {
-    display: block;
+            display: grid;
 
-    font-size: 27px;
+            grid-template-columns:
+                repeat(4,1fr);
+        }
 
-    margin-bottom: 7px;
-}
 
-.spec-item span {
-    color: #888;
+        .capability-strip-item {
 
-    font-size: 8px;
+            min-height: 145px;
 
-    letter-spacing: 2px;
+            padding: 30px 28px;
 
-    text-transform: uppercase;
-}
+            border-right: 1px solid #2f2f2f;
 
+            display: flex;
 
-/* =========================================================
-   CTA
-========================================================= */
+            flex-direction: column;
 
-.rd-cta {
-    padding: 120px 8%;
+            justify-content: space-between;
+        }
 
-    background: #fff;
-}
 
-.cta-box {
-    max-width: 1250px;
+        .capability-strip-item:first-child {
 
-    min-height: 360px;
+            border-left: 1px solid #2f2f2f;
+        }
 
-    margin: auto;
 
-    background: #050505;
+        .capability-strip-item span {
 
-    position: relative;
+            color: #666666;
 
-    overflow: hidden;
+            font-size: 8px;
 
-    padding: 65px;
-}
+            font-weight: 700;
 
-.cta-box::before {
-    content: "";
+            letter-spacing: 2px;
+        }
 
-    position: absolute;
 
-    right: -120px;
-    top: -120px;
+        .capability-strip-item strong {
 
-    width: 450px;
-    height: 450px;
+            font-size: 14px;
 
-    border: 1px solid #333;
+            font-weight: 500;
+        }
 
-    border-radius: 50%;
-}
 
-.cta-box::after {
-    content: "";
 
-    position: absolute;
+        /* =========================================================
+           APPLICATIONS
+        ========================================================== */
 
-    right: -30px;
-    top: -30px;
+        .smart-applications {
 
-    width: 270px;
-    height: 270px;
+            padding: 130px 0;
 
-    border: 1px dashed #333;
+            background: #f7f7f5;
+        }
 
-    border-radius: 50%;
-}
 
-.cta-content {
-    position: relative;
+        .applications-head {
 
-    z-index: 2;
+            display: grid;
 
-    max-width: 700px;
-}
+            grid-template-columns:
+                minmax(0,1fr)
+                minmax(300px,430px);
 
-.cta-content .section-label {
-    color: #777;
-}
+            gap: 90px;
 
-.cta-content h2 {
-    color: #fff;
+            align-items: end;
 
-    font-size: clamp(35px,5vw,65px);
+            margin-bottom: 60px;
+        }
 
-    line-height: 1;
 
-    letter-spacing: -3px;
+        .application-grid {
 
-    margin-bottom: 20px;
-}
+            display: grid;
 
-.cta-content p {
-    color: #888;
+            grid-template-columns:
+                repeat(3,1fr);
 
-    font-size: 12px;
+            gap: 14px;
+        }
 
-    line-height: 1.8;
 
-    margin-bottom: 25px;
-}
+        .application-card {
 
-.cta-button {
-    display: inline-flex;
+            min-height: 230px;
 
-    align-items: center;
+            padding: 30px;
 
-    gap: 12px;
+            background: #ffffff;
 
-    padding: 15px 25px;
+            border: 1px solid #e2e2e2;
 
-    background: #fff;
+            transition: .35s ease;
+        }
 
-    color: #111;
 
-    font-size: 10px;
+        .application-card:hover {
 
-    font-weight: 700;
+            transform: translateY(-5px);
 
-    letter-spacing: 1px;
+            border-color: #111111;
+        }
 
-    transition: .3s;
-}
 
-.cta-button:hover {
-    background: #111;
+        .application-card span {
 
-    color: #fff;
+            display: block;
 
-    border: 1px solid #fff;
-}
+            margin-bottom: 55px;
 
+            color: #aaaaaa;
 
-/* =========================================================
-   FOOTER
-========================================================= */
+            font-size: 8px;
 
-.main-footer {
-    background: #050505;
+            font-weight: 700;
 
-    color: #fff;
+            letter-spacing: 2px;
+        }
 
-    padding: 75px 7% 25px;
-}
 
-.footer-logo img {
-    height: 55px;
+        .application-card h3 {
 
-    margin-bottom: 22px;
-}
+            margin-bottom: 12px;
 
-.footer-description {
-    max-width: 370px;
+            font-size: 18px;
 
-    color: #888;
+            font-weight: 600;
+        }
 
-    font-size: 12px;
 
-    line-height: 1.9;
-}
+        .application-card p {
 
-.footer-heading {
-    color: #fff;
+            margin: 0;
 
-    font-size: 12px;
+            color: #777777;
 
-    font-weight: 600;
+            font-size: 11px;
 
-    letter-spacing: 1.5px;
+            line-height: 1.75;
+        }
 
-    margin-bottom: 22px;
-}
 
-.footer-links {
-    list-style: none;
 
-    padding: 0;
-}
+        /* =========================================================
+           CTA
+        ========================================================== */
 
-.footer-links li {
-    margin-bottom: 11px;
-}
+        .smart-cta {
 
-.footer-links a {
-    color: #888;
+            padding: 120px 0;
 
-    font-size: 12px;
+            background: #ffffff;
+        }
 
-    transition: .3s;
-}
 
-.footer-links a:hover {
-    color: #fff;
+        .smart-cta-inner {
 
-    padding-left: 4px;
-}
+            display: grid;
 
-.footer-contact {
-    list-style: none;
+            grid-template-columns:
+                minmax(0,1fr)
+                320px;
 
-    padding: 0;
-}
+            gap: 90px;
 
-.footer-contact li {
-    display: flex;
+            align-items: end;
 
-    gap: 12px;
+            padding-top: 65px;
 
-    color: #888;
+            border-top: 1px solid #dddddd;
+        }
 
-    font-size: 12px;
 
-    line-height: 1.8;
+        .smart-cta h2 {
 
-    margin-bottom: 15px;
-}
+            max-width: 850px;
 
-.footer-contact i {
-    width: 18px;
+            margin: 0;
 
-    color: #fff;
+            font-size: clamp(45px,5.5vw,82px);
 
-    margin-top: 4px;
-}
+            line-height: .98;
 
-.footer-social {
-    display: flex;
+            letter-spacing: -4px;
 
-    gap: 9px;
+            font-weight: 600;
+        }
 
-    margin-top: 24px;
-}
 
-.footer-social a {
-    width: 35px;
-    height: 35px;
+        .smart-cta h2 span {
 
-    display: flex;
+            color: #777777;
 
-    align-items: center;
-    justify-content: center;
+            font-weight: 300;
+        }
 
-    border: 1px solid #2b2b2b;
 
-    color: #999;
+        .smart-cta-side p {
 
-    transition: .3s;
-}
+            margin: 0 0 26px;
 
-.footer-social a:hover {
-    background: #fff;
+            color: #777777;
 
-    color: #000;
+            font-size: 13px;
 
-    border-color: #fff;
-}
+            line-height: 1.8;
+        }
 
-.footer-bottom {
-    margin-top: 55px;
 
-    padding-top: 20px;
+        .smart-cta-button {
 
-    border-top: 1px solid #222;
+            width: 100%;
 
-    display: flex;
+            min-height: 58px;
 
-    justify-content: space-between;
+            padding: 0 22px;
 
-    color: #666;
+            display: flex;
 
-    font-size: 10px;
-}
+            align-items: center;
 
-.footer-bottom strong {
-    color: #fff;
-}
+            justify-content: space-between;
 
+            background: #111111;
 
-/* =========================================================
-   RESPONSIVE
-========================================================= */
+            color: #ffffff;
 
-@media (max-width:1100px) {
+            font-size: 10px;
 
-    .innovation-grid {
-        grid-template-columns: repeat(2,1fr);
-    }
+            font-weight: 700;
 
-    .application-grid {
-        grid-template-columns: repeat(2,1fr);
-    }
+            letter-spacing: 1.5px;
 
-    .process-track {
-        grid-template-columns: repeat(3,1fr);
+            text-transform: uppercase;
 
-        row-gap: 45px;
-    }
+            transition: .35s ease;
+        }
 
-    .process-track::before {
-        display: none;
-    }
 
-}
+        .smart-cta-button:hover {
 
+            background: #303030;
 
-@media (max-width:991px) {
+            color: #ffffff;
+        }
 
-    .main-navbar {
-        height: auto;
 
-        min-height: 80px;
 
-        padding: 10px 5%;
-    }
+        /* =========================================================
+           RESPONSIVE
+        ========================================================== */
 
-    .main-navbar .navbar-brand img {
-        height: 48px;
-    }
+        @media (max-width: 1200px) {
 
-    .main-navbar .navbar-collapse {
-        margin-top: 15px;
+            .feature-grid {
 
-        padding: 15px 0;
+                grid-template-columns:
+                    repeat(3,1fr);
+            }
 
-        background: #fff;
-    }
 
-    .main-navbar .navbar-nav {
-        align-items: flex-start;
+            .smart-product-visual-grid {
 
-        gap: 0;
-    }
+                grid-template-columns:
+                    minmax(0,1.25fr)
+                    minmax(300px,.75fr);
+            }
 
-    .main-navbar .nav-item {
-        width: 100%;
-    }
+        }
 
-    .main-navbar .nav-link {
-        padding: 12px 5px !important;
-    }
 
-    .main-navbar .dropdown-menu {
-        margin-top: 0;
+        @media (max-width: 991px) {
 
-        border: none;
+            .about-navbar {
 
-        box-shadow: none;
-    }
+                height: auto;
 
-    .rd-hero {
-        margin-top: 80px;
-    }
+                min-height: 80px;
 
-    .rd-hero-content {
-        grid-template-columns: 1fr;
+                padding: 10px 5%;
+            }
 
-        padding-top: 110px;
-    }
 
-    .hero-product {
-        display: none;
-    }
+            .about-logo img {
 
-    .intro-grid,
-    .iot-layout {
-        grid-template-columns: 1fr;
+                height: 70px;
+            }
 
-        gap: 50px;
-    }
 
-    .infrastructure-grid {
-        grid-template-columns: 1fr;
-    }
+            .about-navbar .navbar-collapse {
 
-}
+                margin-top: 15px;
 
+                padding: 15px 0;
 
-@media (max-width:767px) {
+                background: #ffffff;
+            }
 
-    .rd-hero {
-        min-height: 700px;
-    }
 
-    .rd-hero-content {
-        min-height: 700px;
+            .about-navbar .navbar-nav {
 
-        padding: 90px 7%;
-    }
+                align-items: flex-start;
 
-    .rd-hero h1 {
-        font-size: 55px;
+                gap: 0;
+            }
 
-        letter-spacing: -4px;
-    }
 
-    .architecture,
-    .innovation,
-    .iot-section,
-    .infrastructure,
-    .applications,
-    .process,
-    .rd-cta,
-    .product-intro {
-        padding-left: 7%;
-        padding-right: 7%;
-    }
+            .about-navbar .nav-item {
 
-    .arch-layer {
-        grid-template-columns: 1fr;
-    }
+                width: 100%;
+            }
 
-    .layer-name {
-        border-right: none;
 
-        border-bottom: 1px solid #292929;
-    }
+            .about-navbar .nav-link {
 
-    .innovation-grid {
-        grid-template-columns: 1fr;
-    }
+                padding: 12px 5px !important;
+            }
 
-    .innovation-header {
-        display: block;
-    }
 
-    .innovation-header p {
-        margin-top: 25px;
-    }
+            .about-navbar .dropdown-menu {
 
-    .application-grid {
-        grid-template-columns: 1fr;
-    }
+                margin-top: 0;
 
-    .process-track {
-        grid-template-columns: 1fr;
-    }
+                border: none;
 
-    .spec-strip {
-        grid-template-columns: repeat(2,1fr);
-    }
+                box-shadow: none;
+            }
 
-    .spec-item {
-        border-bottom: 1px solid #333;
-    }
 
-    .cta-box {
-        padding: 40px 30px;
-    }
+            .smart-intro-grid,
+            .features-intro-grid,
+            .feature-architecture-grid,
+            .applications-head,
+            .smart-cta-inner {
 
-    .footer-bottom {
-        flex-direction: column;
+                grid-template-columns: 1fr;
 
-        align-items: flex-start;
+                gap: 45px;
+            }
 
-        gap: 12px;
-    }
 
-}
+            .smart-product-visual-grid {
 
+                grid-template-columns: 1fr;
+            }
 
-@media (max-width:450px) {
 
-    .spec-strip {
-        grid-template-columns: 1fr;
-    }
+            .smart-product-side {
 
-    .dashboard-grid {
-        grid-template-columns: 1fr;
-    }
+                min-height: 400px;
+            }
 
-}
 
-</style>
+            .architecture-sticky {
+
+                position: static;
+            }
+
+
+            .feature-grid {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+
+            .capability-strip-grid {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+
+            .application-grid {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+        }
+
+
+        @media (max-width: 767px) {
+
+            .smart-container,
+            .technology-band-content {
+
+                width: calc(100% - 40px);
+            }
+
+
+            .smart-pole-intro {
+
+                padding:
+                    130px 0
+                    70px;
+            }
+
+
+            .smart-title {
+
+                font-size: 44px;
+
+                letter-spacing: -2px;
+            }
+
+
+            .smart-product-image {
+
+                min-height: 560px;
+            }
+
+
+            .smart-product-side {
+
+                padding: 45px 25px;
+            }
+
+
+            .features-intro,
+            .feature-architecture,
+            .smart-applications,
+            .smart-cta {
+
+                padding-top: 85px;
+
+                padding-bottom: 85px;
+            }
+
+
+            .smart-features {
+
+                padding-bottom: 85px;
+            }
+
+
+            .feature-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .feature-card {
+
+                min-height: 250px;
+            }
+
+
+            .architecture-item {
+
+                grid-template-columns:
+                    45px 1fr;
+
+                gap: 15px;
+
+                padding: 22px 0;
+            }
+
+
+            .architecture-item span:last-child {
+
+                grid-column: 2;
+            }
+
+
+            .technology-band {
+
+                min-height: 590px;
+            }
+
+
+            .technology-band h2 {
+
+                font-size: 46px;
+
+                letter-spacing: -2px;
+            }
+
+
+            .capability-strip-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .capability-strip-item {
+
+                border-left: 1px solid #2f2f2f;
+                border-bottom: 1px solid #2f2f2f;
+            }
+
+
+            .application-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .smart-cta h2 {
+
+                font-size: 48px;
+
+                letter-spacing: -2.5px;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================================================
+<!-- =============================================================
      NAVBAR
-========================================================= -->
+============================================================= -->
 
-<nav class="navbar navbar-expand-lg main-navbar fixed-top">
+<nav class="navbar navbar-expand-lg about-navbar fixed-top">
 
     <div class="container-fluid px-4 px-lg-5">
 
-        <a class="navbar-brand" href="index.html">
+
+        <a class="navbar-brand about-logo"
+           href="index.html">
 
             <img
                 src="assets/img/b-alpha.png"
@@ -1820,8 +1506,6 @@ img {
             data-bs-toggle="collapse"
             data-bs-target="#navbarResponsive">
 
-            <span class="me-2">Menu</span>
-
             <i class="fas fa-bars"></i>
 
         </button>
@@ -1835,16 +1519,26 @@ img {
 
 
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">
+
+                    <a class="nav-link"
+                       href="index.html">
+
                         Home
+
                     </a>
+
                 </li>
 
 
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">
+
+                    <a class="nav-link"
+                       href="about.html">
+
                         About
+
                     </a>
+
                 </li>
 
 
@@ -1861,28 +1555,33 @@ img {
 
                     </a>
 
+
                     <ul class="dropdown-menu">
 
                         <li>
-                            <a class="dropdown-item" href="solar-energy.html">
+                            <a class="dropdown-item"
+                               href="solar-energy.html">
                                 Solar Energy
                             </a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="wind-energy.html">
+                            <a class="dropdown-item"
+                               href="wind-energy.html">
                                 Wind Energy
                             </a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="biomass-energy.html">
+                            <a class="dropdown-item"
+                               href="biomass-energy.html">
                                 Biomass Energy
                             </a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="hydel-energy.html">
+                            <a class="dropdown-item"
+                               href="hydel-energy.html">
                                 Hydel Energy
                             </a>
                         </li>
@@ -1905,28 +1604,33 @@ img {
 
                     </a>
 
+
                     <ul class="dropdown-menu">
 
                         <li>
-                            <a class="dropdown-item" href="transmission.html">
+                            <a class="dropdown-item"
+                               href="transmission.html">
                                 Transmission
                             </a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="distribution.html">
+                            <a class="dropdown-item"
+                               href="distribution.html">
                                 Distribution
                             </a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="control-panels.html">
+                            <a class="dropdown-item"
+                               href="control-panels.html">
                                 Control Panels
                             </a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="panel-boards.html">
+                            <a class="dropdown-item"
+                               href="panel-boards.html">
                                 Panel Boards
                             </a>
                         </li>
@@ -1949,35 +1653,27 @@ img {
 
                     </a>
 
+
                     <ul class="dropdown-menu">
 
                         <li>
-                            <a class="dropdown-item" href="home-automation.html">
+                            <a class="dropdown-item"
+                               href="home-automation.html">
                                 Home Automation
                             </a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="commercial-automation.html">
+                            <a class="dropdown-item"
+                               href="commercial-automation.html">
                                 Commercial Automation
                             </a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="industrial-automation.html">
+                            <a class="dropdown-item"
+                               href="industrial-automation.html">
                                 Industrial Automation
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item" href="hospital-automation.html">
-                                Hospital Automation
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item" href="hotel-automation.html">
-                                Hotel Automation
                             </a>
                         </li>
 
@@ -1986,14 +1682,12 @@ img {
                 </li>
 
 
-                <!-- =================================================
-                     R&D ACTIVE
-                ================================================== -->
+                <!-- R&D -->
 
                 <li class="nav-item dropdown">
 
                     <a
-                        class="nav-link dropdown-toggle main-active"
+                        class="nav-link dropdown-toggle active"
                         href="#"
                         data-bs-toggle="dropdown">
 
@@ -2001,59 +1695,33 @@ img {
 
                     </a>
 
+
                     <ul class="dropdown-menu">
 
                         <li>
-                            <a
-                                class="dropdown-item active"
-                                href="smart-pole.html">
-
+                            <a class="dropdown-item"
+                               href="smart-pole.html">
                                 Smart Pole
-
                             </a>
                         </li>
 
                         <li>
-                            <a
-                                class="dropdown-item"
-                                href="smart-bollard.html">
-
+                            <a class="dropdown-item"
+                               href="smart-bollard.html">
                                 Smart Bollard
-
                             </a>
                         </li>
 
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="window-leaf-ac.html">
-
-                                Window Leaf AC
-
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="smart-conference-table.html">
-
-                                Smart Conference Table
-
-                            </a>
-                        </li>
+                       
 
                     </ul>
 
                 </li>
 
-
-                <!-- PRODUCTS -->
-
-                <li class="nav-item dropdown">
+ <li class="nav-item dropdown">
 
                     <a
-                        class="nav-link dropdown-toggle"
+                        class="nav-link dropdown-toggle active"
                         href="#"
                         data-bs-toggle="dropdown">
 
@@ -2061,30 +1729,19 @@ img {
 
                     </a>
 
+
                     <ul class="dropdown-menu">
 
                         <li>
-                            <a class="dropdown-item" href="transformers.html">
-                                Transformers
-                            </a>
-                        </li>
 
-                        <li>
-                            <a class="dropdown-item" href="panels.html">
-                                Panels
-                            </a>
-                        </li>
+                            <a
+                                class="dropdown-item"
+                                href="power-products.html">
 
-                        <li>
-                            <a class="dropdown-item" href="switchgear.html">
-                                Switchgear
-                            </a>
-                        </li>
+                                Power 
 
-                        <li>
-                            <a class="dropdown-item" href="controllers.html">
-                                Controllers
                             </a>
+
                         </li>
 
                     </ul>
@@ -2094,9 +1751,8 @@ img {
 
                 <li class="nav-item">
 
-                    <a
-                        class="nav-link"
-                        href="index.html#contact">
+                    <a class="nav-link"
+                       href="contact.html">
 
                         Contact
 
@@ -2114,2398 +1770,1149 @@ img {
 
 
 
-<!-- =========================================================
-     HERO — R&D PRODUCT
-========================================================= -->
-
-<section class="rd-hero">
-
-    <div class="rd-grid"></div>
-
-    <div class="rd-glow"></div>
-
-
-    <div class="rd-hero-content">
-
-
-        <div>
-
-            <div class="rd-eyebrow">
-
-                <span></span>
-
-                Research • Engineering • Innovation
-
-            </div>
-
-
-            <h1>
-
-                Smart
-
-                <br>
-
-                <span>Pole</span>
-
-            </h1>
-
-
-            <p class="rd-hero-description">
-
-                A connected infrastructure platform designed
-                to combine intelligent lighting, sensing,
-                communication and smart-city technologies
-                within a single engineered structure.
-
-                <br><br>
-
-                Designed as an adaptable foundation for the
-                next generation of connected public spaces.
-
-            </p>
-
-
-            <div class="rd-hero-meta">
-
-                <div class="meta-box">
-                    Intelligent Lighting
-                </div>
-
-                <div class="meta-box">
-                    IoT Ready
-                </div>
-
-                <div class="meta-box">
-                    Sensor Integration
-                </div>
-
-                <div class="meta-box">
-                    Smart Infrastructure
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- PRODUCT VISUAL -->
-
-        <div class="hero-product">
-
-            <div class="pole-visual">
-
-                <div class="pole-top"></div>
-
-                <div class="pole-arm left"></div>
-                <div class="pole-arm right"></div>
-
-                <div class="pole-light left"></div>
-                <div class="pole-light right"></div>
-
-                <div class="pole-node node-1"></div>
-                <div class="pole-node node-2"></div>
-                <div class="pole-node node-3"></div>
-                <div class="pole-node node-4"></div>
-
-                <div class="pole-base"></div>
-
-                <div class="pole-label">
-                    SENSOR NODE
-                </div>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
+<!-- =============================================================
      PRODUCT INTRO
-========================================================= -->
+============================================================= -->
 
-<section class="product-intro">
+<section class="smart-pole-intro">
 
-    <div class="intro-grid">
+    <div class="smart-container">
 
-
-        <div>
-
-            <div class="section-number">
-                01
-            </div>
-
-            <div class="section-label">
-                Product Concept
-            </div>
-
-            <h2 class="section-title">
-                Beyond<br>
-                A Light Pole.
-            </h2>
-
-        </div>
+        <div class="smart-intro-grid">
 
 
-        <div>
+            <div>
 
-            <p class="intro-copy">
+                <span class="smart-eyebrow">
 
-                The <strong>Smart Pole</strong> is envisioned as
-                more than a conventional lighting structure.
+                    R&D / Smart Infrastructure
 
-                <br><br>
-
-                It provides an engineered platform where
-                lighting, sensors, communication technologies,
-                monitoring and connected infrastructure can
-                converge.
-
-                <br><br>
-
-                The modular approach allows the platform to
-                evolve according to application, environment
-                and technology requirements.
-
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     ARCHITECTURE
-========================================================= -->
-
-<section class="architecture">
-
-
-    <div class="architecture-header">
-
-        <div class="section-label">
-            Product Architecture
-        </div>
-
-        <h2 class="section-title">
-            Designed In Layers.
-            <br>
-            Built To Connect.
-        </h2>
-
-        <div class="section-line"></div>
-
-        <p class="architecture-subtitle">
-
-            A modular architecture enables multiple
-            technologies to operate as part of a connected
-            infrastructure platform.
-
-        </p>
-
-    </div>
-
-
-    <div class="architecture-system">
-
-
-        <div class="arch-layer">
-
-            <div class="layer-name">
-                Structure
-            </div>
-
-            <div class="layer-content">
-
-                <span class="layer-chip">
-                    Pole Structure
                 </span>
 
-                <span class="layer-chip">
-                    Modular Mounting
-                </span>
 
-                <span class="layer-chip">
-                    Equipment Housing
-                </span>
+                <h1 class="smart-title">
 
-            </div>
-
-        </div>
-
-
-        <div class="arch-layer">
-
-            <div class="layer-name">
-                Lighting
-            </div>
-
-            <div class="layer-content">
-
-                <span class="layer-chip">
-                    LED Luminaire
-                </span>
-
-                <span class="layer-chip">
-                    Dimming
-                </span>
-
-                <span class="layer-chip">
-                    Lighting Control
-                </span>
-
-                <span class="layer-chip">
-                    Scheduling
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <div class="arch-layer">
-
-            <div class="layer-name">
-                Sensing
-            </div>
-
-            <div class="layer-content">
-
-                <span class="layer-chip">
-                    Environmental Sensors
-                </span>
-
-                <span class="layer-chip">
-                    Occupancy
-                </span>
-
-                <span class="layer-chip">
-                    Light Sensors
-                </span>
-
-                <span class="layer-chip">
-                    Equipment Monitoring
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <div class="arch-layer">
-
-            <div class="layer-name">
-                Connectivity
-            </div>
-
-            <div class="layer-content">
-
-                <span class="layer-chip">
-                    IoT Gateway
-                </span>
-
-                <span class="layer-chip">
-                    Wireless Communication
-                </span>
-
-                <span class="layer-chip">
-                    Network Interface
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <div class="arch-layer">
-
-            <div class="layer-name">
-                Intelligence
-            </div>
-
-            <div class="layer-content">
-
-                <span class="layer-chip">
-                    Edge Processing
-                </span>
-
-                <span class="layer-chip">
-                    Monitoring
-                </span>
-
-                <span class="layer-chip">
-                    Analytics
-                </span>
-
-                <span class="layer-chip">
-                    Remote Management
-                </span>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     INNOVATION
-========================================================= -->
-
-<section class="innovation">
-
-
-    <div class="innovation-header">
-
-        <div>
-
-            <div class="section-label">
-                Innovation Modules
-            </div>
-
-            <h2 class="section-title">
-                One Platform.
-                <br>
-                Multiple Possibilities.
-            </h2>
-
-        </div>
-
-
-        <p>
-
-            The platform can be configured with different
-            technology modules depending on the intended
-            deployment and infrastructure requirements.
-
-        </p>
-
-    </div>
-
-
-    <div class="innovation-grid">
-
-
-        <div class="innovation-card">
-
-            <div class="innovation-index">
-                01
-            </div>
-
-            <div class="innovation-icon">
-                <i class="fas fa-lightbulb"></i>
-            </div>
-
-            <h3>
-                Intelligent Lighting
-            </h3>
-
-            <p>
-
-                Connected lighting infrastructure with
-                controllable operation, scheduling and
-                monitoring capabilities.
-
-            </p>
-
-        </div>
-
-
-        <div class="innovation-card">
-
-            <div class="innovation-index">
-                02
-            </div>
-
-            <div class="innovation-icon">
-                <i class="fas fa-satellite-dish"></i>
-            </div>
-
-            <h3>
-                IoT Connectivity
-            </h3>
-
-            <p>
-
-                A communication-ready foundation for
-                transmitting device and environmental
-                information.
-
-            </p>
-
-        </div>
-
-
-        <div class="innovation-card">
-
-            <div class="innovation-index">
-                03
-            </div>
-
-            <div class="innovation-icon">
-                <i class="fas fa-microchip"></i>
-            </div>
-
-            <h3>
-                Sensor Integration
-            </h3>
-
-            <p>
-
-                Modular sensing capabilities can support
-                environmental, occupancy and infrastructure
-                monitoring.
-
-            </p>
-
-        </div>
-
-
-        <div class="innovation-card">
-
-            <div class="innovation-index">
-                04
-            </div>
-
-            <div class="innovation-icon">
-                <i class="fas fa-chart-line"></i>
-            </div>
-
-            <h3>
-                Data Intelligence
-            </h3>
-
-            <p>
-
-                Connected infrastructure can generate useful
-                operational data for monitoring and analysis.
-
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     IOT MONITORING
-========================================================= -->
-
-<section class="iot-section">
-
-
-    <div class="iot-layout">
-
-
-        <div class="iot-copy">
-
-            <div class="section-label">
-                Connected Intelligence
-            </div>
-
-            <h2 class="section-title">
-                From Physical
-                Infrastructure
-                To Digital Data.
-            </h2>
-
-            <div class="section-line"></div>
-
-            <p>
-
-                The Smart Pole can act as an edge point between
-                physical infrastructure and digital systems.
-
-            </p>
-
-            <p>
-
-                Lighting status, equipment information and
-                connected sensor data can be structured for
-                centralized monitoring and analysis.
-
-            </p>
-
-            <p>
-
-                This creates a foundation for future smart-city
-                applications without requiring the entire
-                infrastructure to be redesigned.
-
-            </p>
-
-        </div>
-
-
-        <!-- DASHBOARD -->
-
-        <div class="iot-dashboard">
-
-            <div class="dashboard-top">
-
-                <span class="dashboard-title">
-                    SMART POLE / SYSTEM STATUS
-                </span>
-
-                <span class="live">
-                    CONNECTED
-                </span>
-
-            </div>
-
-
-            <div class="dashboard-grid">
-
-
-                <div class="dashboard-card">
-
+                    One intelligent pole.
                     <span>
-                        LIGHTING
+                        Multiple urban systems.
                     </span>
 
-                    <strong>
-                        96%
-                    </strong>
+                </h1>
+
+            </div>
+
+
+            <div class="smart-intro-copy">
+
+                <p>
+
+                    Alpha Numeric Smart Pole integrates mobility,
+                    public safety, connectivity, environmental
+                    monitoring, intelligent lighting and AI-enabled
+                    communication into one connected urban
+                    infrastructure platform.
+
+                </p>
+
+
+                <div class="smart-intro-tags">
+
+                    <span>Smart City</span>
+                    <span>IoT</span>
+                    <span>AI Enabled</span>
+                    <span>Connected Infrastructure</span>
 
                 </div>
 
+            </div>
 
-                <div class="dashboard-card">
+        </div>
 
+    </div>
+
+</section>
+
+
+
+<!-- =============================================================
+     MAIN PRODUCT VISUAL
+============================================================= -->
+
+<section class="smart-product-visual">
+
+
+    <div class="smart-product-visual-grid">
+
+
+        <!-- IMAGE -->
+
+        <div class="smart-product-image">
+
+            <div class="smart-product-image-label">
+
+                Alpha Numeric / R&D Product
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTENT -->
+
+        <div class="smart-product-side">
+
+
+            <div class="smart-product-side-number">
+
+                01 / SMART POLE
+
+            </div>
+
+
+            <div>
+
+                <h2>
+
+                    Smart
                     <span>
-                        SYSTEM
+                        Pole.
                     </span>
 
-                    <strong>
-                        OK
-                    </strong>
-
-                </div>
+                </h2>
 
 
-                <div class="dashboard-card">
+                <p>
 
+                    A multifunctional urban infrastructure system
+                    designed to combine electrical services,
+                    connectivity, public communication, monitoring,
+                    charging and intelligent digital technologies
+                    within one integrated structure.
+
+                </p>
+
+            </div>
+
+
+            <div class="smart-product-side-bottom">
+
+                <span>
+                    Product Direction
+                </span>
+
+                <strong>
+                    Connected • Intelligent • Multi-functional
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =============================================================
+     FEATURES INTRO
+============================================================= -->
+
+<section class="features-intro">
+
+    <div class="smart-container">
+
+        <div class="features-intro-grid">
+
+
+            <div>
+
+                <span class="smart-eyebrow">
+
+                    Integrated Features
+
+                </span>
+
+
+                <h2 class="smart-title">
+
+                    One platform.
                     <span>
-                        SENSOR NODES
+                        Sixteen capabilities.
                     </span>
 
-                    <strong>
-                        08
-                    </strong>
-
-                </div>
-
-
-                <div class="dashboard-card">
-
-                    <span>
-                        NETWORK
-                    </span>
-
-                    <strong>
-                        LIVE
-                    </strong>
-
-                </div>
-
-
-            </div>
-
-
-            <div class="dashboard-chart">
-
-                <div class="chart-line"></div>
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     SMART INFRASTRUCTURE
-========================================================= -->
-
-<section class="infrastructure">
-
-
-    <div class="infrastructure-header">
-
-        <div class="section-label">
-            Smart Infrastructure
-        </div>
-
-        <h2 class="section-title">
-            Engineered For
-            Connected Environments.
-        </h2>
-
-        <div class="section-line"></div>
-
-    </div>
-
-
-    <div class="infrastructure-grid">
-
-
-        <div class="infrastructure-main">
-
-            <h3>
-                A modular infrastructure
-                platform for evolving
-                technology.
-            </h3>
-
-            <p>
-
-                Smart infrastructure must be capable of
-                adapting as technologies and requirements
-                change.
-
-                <br><br>
-
-                The Smart Pole concept provides a structured
-                foundation for integrating different
-                technologies within a single physical
-                platform.
-
-            </p>
-
-
-            <div class="infrastructure-circle"></div>
-
-        </div>
-
-
-        <div class="infrastructure-list">
-
-
-            <div class="infrastructure-item">
-
-                <i class="fas fa-network-wired"></i>
-
-                <h4>
-                    CONNECTIVITY
-                </h4>
-
-                <p>
-                    Communication-ready infrastructure for
-                    connected devices and systems.
-                </p>
-
-            </div>
-
-
-            <div class="infrastructure-item">
-
-                <i class="fas fa-solar-panel"></i>
-
-                <h4>
-                    ENERGY
-                </h4>
-
-                <p>
-                    Designed to accommodate intelligent energy
-                    and electrical monitoring concepts.
-                </p>
-
-            </div>
-
-
-            <div class="infrastructure-item">
-
-                <i class="fas fa-eye"></i>
-
-                <h4>
-                    MONITORING
-                </h4>
-
-                <p>
-                    Sensor and equipment information can be
-                    structured for centralized visibility.
-                </p>
-
-            </div>
-
-
-            <div class="infrastructure-item">
-
-                <i class="fas fa-expand"></i>
-
-                <h4>
-                    SCALABILITY
-                </h4>
-
-                <p>
-                    Modular architecture allows future
-                    technology additions.
-                </p>
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     APPLICATIONS
-========================================================= -->
-
-<section class="applications">
-
-
-    <div class="intro-grid">
-
-        <div>
-
-            <div class="section-number">
-                02
-            </div>
-
-            <div class="section-label">
-                Potential Applications
-            </div>
-
-            <h2 class="section-title">
-                Built For
-                Smart Spaces.
-            </h2>
-
-        </div>
-
-
-        <div>
-
-            <p class="intro-copy">
-
-                The Smart Pole platform can support different
-                infrastructure environments where connected
-                lighting and intelligent technology are
-                required.
-
-                <br><br>
-
-                Its modular architecture allows applications
-                to be considered according to site-specific
-                requirements.
-
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="application-grid">
-
-
-        <div class="application-card">
-
-            <div class="number">
-                01
-            </div>
-
-            <h3>
-                Smart Cities
-            </h3>
-
-            <p>
-                Connected public infrastructure for intelligent
-                urban environments.
-            </p>
-
-        </div>
-
-
-        <div class="application-card">
-
-            <div class="number">
-                02
-            </div>
-
-            <h3>
-                Roads & Highways
-            </h3>
-
-            <p>
-                Intelligent lighting and monitoring concepts
-                for road infrastructure.
-            </p>
-
-        </div>
-
-
-        <div class="application-card">
-
-            <div class="number">
-                03
-            </div>
-
-            <h3>
-                Campuses
-            </h3>
-
-            <p>
-                Connected infrastructure for institutional,
-                technology and corporate campuses.
-            </p>
-
-        </div>
-
-
-        <div class="application-card">
-
-            <div class="number">
-                04
-            </div>
-
-            <h3>
-                Industrial Areas
-            </h3>
-
-            <p>
-                Smart lighting and infrastructure monitoring
-                across industrial environments.
-            </p>
-
-        </div>
-
-
-        <div class="application-card">
-
-            <div class="number">
-                05
-            </div>
-
-            <h3>
-                Residential Communities
-            </h3>
-
-            <p>
-                Connected outdoor infrastructure for modern
-                residential developments.
-            </p>
-
-        </div>
-
-
-        <div class="application-card">
-
-            <div class="number">
-                06
-            </div>
-
-            <h3>
-                Public Spaces
-            </h3>
-
-            <p>
-                Technology-enabled infrastructure for parks,
-                public areas and urban spaces.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     R&D PROCESS
-========================================================= -->
-
-<section class="process">
-
-
-    <div class="process-header">
-
-        <div class="section-label">
-            R&D Approach
-        </div>
-
-        <h2 class="section-title">
-            From Concept
-            To Connected Product.
-        </h2>
-
-        <div class="section-line"></div>
-
-    </div>
-
-
-    <div class="process-track">
-
-
-        <div class="process-step">
-
-            <div class="process-circle">
-                01
-            </div>
-
-            <h4>
-                CONCEPT
-            </h4>
-
-            <p>
-                Define the application, requirements and
-                product direction.
-            </p>
-
-        </div>
-
-
-        <div class="process-step">
-
-            <div class="process-circle">
-                02
-            </div>
-
-            <h4>
-                ENGINEERING
-            </h4>
-
-            <p>
-                Develop the structural, electrical and
-                technology architecture.
-            </p>
-
-        </div>
-
-
-        <div class="process-step">
-
-            <div class="process-circle">
-                03
-            </div>
-
-            <h4>
-                INTEGRATION
-            </h4>
-
-            <p>
-                Bring hardware, sensors, lighting and
-                connectivity together.
-            </p>
-
-        </div>
-
-
-        <div class="process-step">
-
-            <div class="process-circle">
-                04
-            </div>
-
-            <h4>
-                VALIDATION
-            </h4>
-
-            <p>
-                Evaluate the system against defined
-                functional requirements.
-            </p>
-
-        </div>
-
-
-        <div class="process-step">
-
-            <div class="process-circle">
-                05
-            </div>
-
-            <h4>
-                EVOLUTION
-            </h4>
-
-            <p>
-                Refine the platform for future applications
-                and technologies.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     PRODUCT METRICS
-========================================================= -->
-
-<section class="spec-strip">
-
-
-    <div class="spec-item">
-
-        <strong>
-            IoT
-        </strong>
-
-        <span>
-            Connected Architecture
-        </span>
-
-    </div>
-
-
-    <div class="spec-item">
-
-        <strong>
-            LED
-        </strong>
-
-        <span>
-            Intelligent Lighting
-        </span>
-
-    </div>
-
-
-    <div class="spec-item">
-
-        <strong>
-            24/7
-        </strong>
-
-        <span>
-            Monitoring Concept
-        </span>
-
-    </div>
-
-
-    <div class="spec-item">
-
-        <strong>
-            MODULAR
-        </strong>
-
-        <span>
-            Technology Platform
-        </span>
-
-    </div>
-
-
-</section>
-
-
-
-<!-- =========================================================
-     CTA
-========================================================= -->
-
-<section class="rd-cta">
-
-
-    <div class="cta-box">
-
-
-        <div class="cta-content">
-
-            <div class="section-label">
-                Alpha Numeric R&D
-            </div>
-
-            <h2>
-                Engineering The
-                Infrastructure Of Tomorrow.
-            </h2>
-
-            <p>
-
-                Explore how intelligent infrastructure,
-                connected technology and product engineering
-                can come together through the Smart Pole
-                platform.
-
-            </p>
-
-            <a
-                href="index.html#contact"
-                class="cta-button">
-
-                DISCUSS THE TECHNOLOGY
-
-                <i class="fas fa-arrow-right"></i>
-
-            </a>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
- <!-- =========================================================
-     ALPHA NUMERIC — PREMIUM CORPORATE WHITE FOOTER
-     Sharp architectural layout | No curves | No toy styling
-     Complete HTML + CSS + automatic year
-========================================================== -->
-
-<footer class="corp-footer" aria-label="Website footer">
-
-    <div class="corp-footer-container">
-
-        <!-- =====================================================
-             PRIMARY CTA
-        ====================================================== -->
-        <section class="corp-footer-cta" aria-labelledby="corp-footer-title">
-
-            <div class="corp-footer-cta-copy">
-
-                <p class="corp-footer-kicker">
-                    <span>01</span>
-                    <i></i>
-                    Start a project
-                </p>
-
-                <h2 id="corp-footer-title">
-                    Let’s engineer
-                    <span>what comes next.</span>
                 </h2>
 
             </div>
 
-            <div class="corp-footer-cta-action">
 
-                <p>
-                    Intelligent engineering for power, energy,
-                    automation and future-ready systems.
-                </p>
+            <p class="smart-copy">
 
-                <a href="contact.html" class="corp-footer-button">
-                    <span>Start a conversation</span>
-                    <i aria-hidden="true">↗</i>
-                </a>
+                Smart Pole brings multiple city services together
+                in a single infrastructure asset — reducing
+                standalone equipment while enabling a more
+                connected and intelligent public environment.
 
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             BRAND + NAVIGATION
-        ====================================================== -->
-        <div class="corp-footer-main">
-
-            <!-- BRAND -->
-            <section class="corp-footer-brand" aria-label="Alpha Numeric">
-
-                <a href="index.html" class="corp-footer-logo" aria-label="Alpha Numeric home">
-                    <img src="assets/img/b-alpha.png" alt="Alpha Numeric">
-                </a>
-
-                <p>
-                    Technology-driven engineering solutions
-                    designed for dependable performance,
-                    meaningful progress and long-term value.
-                </p>
-
-                <div class="corp-footer-status">
-                    <span></span>
-                    Engineering tomorrow
-                </div>
-
-            </section>
-
-
-            <!-- NAVIGATION -->
-            <nav class="corp-footer-nav" aria-label="Footer navigation">
-
-                <!-- COMPANY -->
-                <div class="corp-footer-column">
-
-                    <div class="corp-footer-column-heading">
-                        <span>01</span>
-                        <h3>Company</h3>
-                    </div>
-
-                    <ul>
-                        <li><a href="index.html"><span>Home</span><i>↗</i></a></li>
-                        <li><a href="about.html"><span>About</span><i>↗</i></a></li>
-                        <li><a href="contact.html"><span>Contact</span><i>↗</i></a></li>
-                    </ul>
-
-                </div>
-
-
-                <!-- ENERGY -->
-                <div class="corp-footer-column">
-
-                    <div class="corp-footer-column-heading">
-                        <span>02</span>
-                        <h3>Energy</h3>
-                    </div>
-
-                    <ul>
-                        <li><a href="solar-energy.html"><span>Solar Energy</span><i>↗</i></a></li>
-                        <li><a href="wind-energy.html"><span>Wind Energy</span><i>↗</i></a></li>
-                        <li><a href="biomass-energy.html"><span>Biomass Energy</span><i>↗</i></a></li>
-                        <li><a href="hydel-energy.html"><span>Hydel Energy</span><i>↗</i></a></li>
-                    </ul>
-
-                </div>
-
-
-                <!-- POWER -->
-                <div class="corp-footer-column">
-
-                    <div class="corp-footer-column-heading">
-                        <span>03</span>
-                        <h3>Power</h3>
-                    </div>
-
-                    <ul>
-                        <li><a href="transmission.html"><span>Transmission</span><i>↗</i></a></li>
-                        <li><a href="distribution.html"><span>Distribution</span><i>↗</i></a></li>
-                        <li><a href="control-panels.html"><span>Control Panels</span><i>↗</i></a></li>
-                        <li><a href="panel-boards.html"><span>Panel Boards</span><i>↗</i></a></li>
-                    </ul>
-
-                </div>
-
-
-                <!-- AUTOMATION -->
-                <div class="corp-footer-column">
-
-                    <div class="corp-footer-column-heading">
-                        <span>04</span>
-                        <h3>Automation</h3>
-                    </div>
-
-                    <ul>
-                        <li><a href="home-automation.html"><span>Home Automation</span><i>↗</i></a></li>
-                        <li><a href="commercial-automation.html"><span>Commercial</span><i>↗</i></a></li>
-                        <li><a href="industrial-automation.html"><span>Industrial</span><i>↗</i></a></li>
-                        <li><a href="hospital-automation.html"><span>Hospital</span><i>↗</i></a></li>
-                        <li><a href="hotel-automation.html"><span>Hotel</span><i>↗</i></a></li>
-                    </ul>
-
-                </div>
-
-
-                <!-- R&D / PRODUCTS -->
-                <div class="corp-footer-column">
-
-                    <div class="corp-footer-column-heading">
-                        <span>05</span>
-                        <h3>R&amp;D / Products</h3>
-                    </div>
-
-                    <ul>
-                        <li><a href="smart-pole-r&d.html"><span>Smart Pole</span><i>↗</i></a></li>
-                        <li><a href="smart-bollard-r&d.html"><span>Smart Bollard</span><i>↗</i></a></li>
-                        <li><a href="power.html"><span>Power Products</span><i>↗</i></a></li>
-                    </ul>
-
-                </div>
-
-            </nav>
-
-        </div>
-
-
-        <!-- =====================================================
-             CONTACT BAND
-        ====================================================== -->
-        <section class="corp-footer-contact" aria-label="Contact information">
-
-            <div class="corp-footer-contact-heading">
-                <span>Contact</span>
-                <h3>Let’s connect.</h3>
-            </div>
-
-            <a href="tel:+919000000000" class="corp-footer-contact-item">
-                <span>01 / Phone</span>
-                <strong>+91 90000 00000</strong>
-                <i aria-hidden="true">↗</i>
-            </a>
-
-            <a href="mailto:info@alphanumeric.com" class="corp-footer-contact-item">
-                <span>02 / Email</span>
-                <strong>info@alphanumeric.com</strong>
-                <i aria-hidden="true">↗</i>
-            </a>
-
-            <div class="corp-footer-contact-item">
-                <span>03 / Location</span>
-                <strong>Madhapur, Hyderabad</strong>
-                <i aria-hidden="true">—</i>
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             BOTTOM BAR
-        ====================================================== -->
-        <div class="corp-footer-bottom">
-
-            <p>
-                © <span id="corpFooterYear"></span> Alpha Numeric.
-                All rights reserved.
             </p>
-
-            <div class="corp-footer-disciplines" aria-label="Core disciplines">
-                <span>Power</span>
-                <i></i>
-                <span>Energy</span>
-                <i></i>
-                <span>Automation</span>
-                <i></i>
-                <span>R&amp;D</span>
-            </div>
-
-            <div class="corp-footer-bottom-links">
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-
-                <a href="#page-top" class="corp-footer-top-link">
-                    Back to top
-                    <span aria-hidden="true">↑</span>
-                </a>
-            </div>
 
         </div>
 
     </div>
 
-</footer>
+</section>
 
 
-<style>
 
-/* =========================================================
-   CORPORATE WHITE FOOTER — DESIGN SYSTEM
-========================================================== */
+<!-- =============================================================
+     FEATURE GRID
+============================================================= -->
 
-.corp-footer {
-    --footer-bg: #f5f5f1;
-    --footer-white: #ffffff;
-    --footer-ink: #102729;
-    --footer-text: #4f6062;
-    --footer-muted: #7a8889;
-    --footer-line: rgba(16, 39, 41, 0.16);
-    --footer-line-light: rgba(16, 39, 41, 0.09);
-    --footer-accent: #ee5a29;
+<section class="smart-features">
 
-    position: relative;
+    <div class="smart-container">
 
-    width: 100%;
 
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+        <div class="feature-grid">
 
-    color: var(--footer-ink);
-    background: var(--footer-bg);
 
-    font-family:
-        "Varela Round",
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-}
+            <!-- 01 -->
 
-.corp-footer::before {
-    content: "";
+            <article class="feature-card">
 
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
+                <span class="feature-number">
+                    01
+                </span>
 
-    height: 2px;
+                <div class="feature-icon">
+                    <i class="fa-solid fa-charging-station"></i>
+                </div>
 
-    background:
-        linear-gradient(
-            90deg,
-            var(--footer-accent) 0 12%,
-            var(--footer-ink) 12% 100%
-        );
-}
+                <h3>
+                    EV Charger
+                </h3>
 
-.corp-footer *,
-.corp-footer *::before,
-.corp-footer *::after {
-    box-sizing: border-box;
+                <p>
+                    Integrated electric vehicle charging support
+                    for smart mobility infrastructure.
+                </p>
 
-    /* Intentionally sharp: no curved or toy-like UI */
-    border-radius: 0 !important;
-}
+            </article>
 
-.corp-footer a {
-    color: inherit;
-    text-decoration: none;
-}
 
-.corp-footer-container {
-    width: min(calc(100% - 64px), 1500px);
+            <!-- 02 -->
 
-    margin-inline: auto;
-}
+            <article class="feature-card">
 
+                <span class="feature-number">
+                    02
+                </span>
 
-/* =========================================================
-   CTA
-========================================================== */
+                <div class="feature-icon">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
 
-.corp-footer-cta {
-    display: grid;
-    grid-template-columns: minmax(0, 1.6fr) minmax(300px, 0.55fr);
-    align-items: end;
-    gap: clamp(55px, 8vw, 140px);
+                <h3>
+                    Emergency SOS Alert
+                </h3>
 
-    padding: clamp(80px, 9vw, 140px) 0 clamp(64px, 7vw, 105px);
-}
+                <p>
+                    Emergency assistance interface for rapid
+                    public safety communication.
+                </p>
 
-.corp-footer-kicker {
-    display: flex;
-    align-items: center;
-    gap: 13px;
+            </article>
 
-    margin: 0 0 26px;
 
-    color: var(--footer-muted);
+            <!-- 03 -->
 
-    font-size: 9px;
-    letter-spacing: 0.18em;
+            <article class="feature-card">
 
-    text-transform: uppercase;
-}
+                <span class="feature-number">
+                    03
+                </span>
 
-.corp-footer-kicker span {
-    color: var(--footer-accent);
-}
+                <div class="feature-icon">
+                    <i class="fa-solid fa-plug"></i>
+                </div>
 
-.corp-footer-kicker i {
-    width: 45px;
-    height: 1px;
+                <h3>
+                    Wired Charging
+                </h3>
 
-    background: var(--footer-line);
-}
+                <p>
+                    Public device charging capability through
+                    integrated wired charging points.
+                </p>
 
-.corp-footer-cta h2 {
-    max-width: 970px;
+            </article>
 
-    margin: 0;
 
-    color: var(--footer-ink);
+            <!-- 04 -->
 
-    font-size: clamp(57px, 7.2vw, 112px);
-    font-weight: 400;
-    line-height: 0.91;
-    letter-spacing: -0.065em;
-}
+            <article class="feature-card">
 
-.corp-footer-cta h2 span {
-    display: block;
+                <span class="feature-number">
+                    04
+                </span>
 
-    color: rgba(16, 39, 41, 0.35);
-}
+                <div class="feature-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
 
-.corp-footer-cta-action {
-    padding-bottom: 6px;
-}
+                <h3>
+                    Wireless Charging
+                </h3>
 
-.corp-footer-cta-action > p {
-    margin: 0 0 29px;
+                <p>
+                    Convenient wireless charging support for
+                    compatible mobile devices.
+                </p>
 
-    color: var(--footer-text);
+            </article>
 
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
 
-    font-size: 14px;
-    line-height: 1.75;
-}
+            <!-- 05 -->
 
-.corp-footer-button {
-    position: relative;
-    isolation: isolate;
+            <article class="feature-card">
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 35px;
+                <span class="feature-number">
+                    05
+                </span>
 
-    width: 100%;
-    min-height: 60px;
+                <div class="feature-icon">
+                    <i class="fa-solid fa-wind"></i>
+                </div>
 
-    padding: 0 19px 0 22px;
-    overflow: hidden;
+                <h3>
+                    Air Quality Sensor
+                </h3>
 
-    border: 1px solid var(--footer-ink);
+                <p>
+                    Environmental sensing capability for monitoring
+                    local air quality conditions.
+                </p>
 
-    color: #ffffff !important;
-    background: var(--footer-ink);
+            </article>
 
-    font-size: 9px;
-    letter-spacing: 0.15em;
 
-    text-transform: uppercase;
+            <!-- 06 -->
 
-    transition:
-        color 0.35s ease,
-        background-color 0.35s ease;
-}
+            <article class="feature-card">
 
-.corp-footer-button::before {
-    content: "";
+                <span class="feature-number">
+                    06
+                </span>
 
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
+                <div class="feature-icon">
+                    <i class="fa-solid fa-display"></i>
+                </div>
 
-    width: 4px;
+                <h3>
+                    Air Quality Screen
+                </h3>
 
-    background: var(--footer-accent);
+                <p>
+                    Public-facing display for communicating
+                    environmental and air quality information.
+                </p>
 
-    transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-}
+            </article>
 
-.corp-footer-button i {
-    font-size: 18px;
-    font-style: normal;
 
-    transition: transform 0.3s ease;
-}
+            <!-- 07 -->
 
-.corp-footer-button:hover::before {
-    width: 100%;
-}
+            <article class="feature-card">
 
-.corp-footer-button:hover i {
-    transform: translate(3px, -3px);
-}
+                <span class="feature-number">
+                    07
+                </span>
 
+                <div class="feature-icon">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
 
-/* =========================================================
-   BRAND + NAVIGATION STRUCTURE
-========================================================== */
+                <h3>
+                    Street Lighting
+                </h3>
 
-.corp-footer-main {
-    display: grid;
-    grid-template-columns: minmax(265px, 0.72fr) minmax(0, 2.28fr);
+                <p>
+                    Integrated public lighting for safer and more
+                    efficient urban environments.
+                </p>
 
-    border-top: 1px solid var(--footer-line);
-    border-bottom: 1px solid var(--footer-line);
-}
+            </article>
 
-.corp-footer-brand {
-    display: flex;
-    flex-direction: column;
 
-    min-width: 0;
+            <!-- 08 -->
 
-    padding: clamp(38px, 4vw, 62px) clamp(28px, 4vw, 58px) clamp(38px, 4vw, 62px) 0;
+            <article class="feature-card">
 
-    border-right: 1px solid var(--footer-line);
-}
+                <span class="feature-number">
+                    08
+                </span>
 
-.corp-footer-logo {
-    align-self: flex-start;
-}
+                <div class="feature-icon">
+                    <i class="fa-solid fa-volume-high"></i>
+                </div>
 
-.corp-footer-logo img {
-    display: block;
+                <h3>
+                    PA Loudspeaker
+                </h3>
 
-    width: auto;
-    max-width: min(100%, 220px);
-    height: 78px;
+                <p>
+                    Public announcement system for alerts,
+                    information and emergency communication.
+                </p>
 
-    object-fit: contain;
-}
+            </article>
 
-.corp-footer-brand > p {
-    max-width: 360px;
 
-    margin: 34px 0 50px;
+            <!-- 09 -->
 
-    color: var(--footer-text);
+            <article class="feature-card">
 
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
+                <span class="feature-number">
+                    09
+                </span>
 
-    font-size: 13px;
-    line-height: 1.85;
-}
+                <div class="feature-icon">
+                    <i class="fa-solid fa-solar-panel"></i>
+                </div>
 
-.corp-footer-status {
-    display: flex;
-    align-items: center;
-    gap: 11px;
+                <h3>
+                    Power Generation System
+                </h3>
 
-    margin-top: auto;
+                <p>
+                    Integrated power generation capability to
+                    support smart pole system operation.
+                </p>
 
-    color: var(--footer-muted);
+            </article>
 
-    font-size: 8px;
-    letter-spacing: 0.14em;
 
-    text-transform: uppercase;
-}
+            <!-- 10 -->
 
-.corp-footer-status span {
-    width: 19px;
-    height: 2px;
+            <article class="feature-card">
 
-    background: var(--footer-accent);
-}
+                <span class="feature-number">
+                    10
+                </span>
 
-.corp-footer-nav {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+                <div class="feature-icon">
+                    <i class="fa-solid fa-tv"></i>
+                </div>
 
-    min-width: 0;
-}
+                <h3>
+                    RGB Pixel LED Screen
+                </h3>
 
-.corp-footer-column {
-    min-width: 0;
+                <p>
+                    Dynamic digital display for messages,
+                    information and visual communication.
+                </p>
 
-    padding: clamp(38px, 3.5vw, 58px) clamp(20px, 2.6vw, 42px);
+            </article>
 
-    border-right: 1px solid var(--footer-line-light);
-}
 
-.corp-footer-column:last-child {
-    border-right: 0;
-}
+            <!-- 11 -->
 
-.corp-footer-column-heading {
-    margin-bottom: 29px;
-}
+            <article class="feature-card">
 
-.corp-footer-column-heading span {
-    display: block;
+                <span class="feature-number">
+                    11
+                </span>
 
-    margin-bottom: 10px;
+                <div class="feature-icon">
+                    <i class="fa-solid fa-person-rays"></i>
+                </div>
 
-    color: var(--footer-accent);
+                <h3>
+                    Motion Detector
+                </h3>
 
-    font-size: 8px;
-    letter-spacing: 0.14em;
-}
+                <p>
+                    Motion sensing for responsive lighting,
+                    monitoring and intelligent system actions.
+                </p>
 
-.corp-footer-column-heading h3 {
-    margin: 0;
+            </article>
 
-    color: var(--footer-ink);
 
-    font-size: 10px;
-    font-weight: 400;
-    letter-spacing: 0.16em;
-    line-height: 1.4;
+            <!-- 12 -->
 
-    text-transform: uppercase;
-}
+            <article class="feature-card">
 
-.corp-footer-column ul {
-    margin: 0;
-    padding: 0;
+                <span class="feature-number">
+                    12
+                </span>
 
-    list-style: none;
-}
+                <div class="feature-icon">
+                    <i class="fa-solid fa-wifi"></i>
+                </div>
 
-.corp-footer-column li + li {
-    margin-top: 14px;
-}
+                <h3>
+                    Wi-Fi Hotspot
+                </h3>
 
-.corp-footer-column a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
+                <p>
+                    Public wireless connectivity supporting
+                    connected urban environments.
+                </p>
 
-    color: var(--footer-text);
+            </article>
 
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
 
-    font-size: 12.5px;
-    line-height: 1.4;
+            <!-- 13 -->
 
-    transition:
-        color 0.25s ease,
-        transform 0.25s ease;
-}
+            <article class="feature-card">
 
-.corp-footer-column a i {
-    flex: 0 0 auto;
+                <span class="feature-number">
+                    13
+                </span>
 
-    color: var(--footer-accent);
+                <div class="feature-icon">
+                    <i class="fa-solid fa-phone-volume"></i>
+                </div>
 
-    font-style: normal;
+                <h3>
+                    Intercom
+                </h3>
 
-    opacity: 0;
-    transform: translate(-4px, 4px);
+                <p>
+                    Two-way communication interface for public
+                    assistance and emergency interaction.
+                </p>
 
-    transition:
-        opacity 0.25s ease,
-        transform 0.25s ease;
-}
+            </article>
 
-.corp-footer-column a:hover {
-    color: var(--footer-ink);
-    transform: translateX(4px);
-}
 
-.corp-footer-column a:hover i {
-    opacity: 1;
-    transform: translate(0, 0);
-}
+            <!-- 14 -->
 
+            <article class="feature-card">
 
-/* =========================================================
-   CONTACT BAND
-========================================================== */
+                <span class="feature-number">
+                    14
+                </span>
 
-.corp-footer-contact {
-    display: grid;
-    grid-template-columns: minmax(210px, 0.72fr) repeat(3, minmax(0, 1fr));
+                <div class="feature-icon">
+                    <i class="fa-solid fa-tablet-screen-button"></i>
+                </div>
 
-    border-bottom: 1px solid var(--footer-line);
-}
+                <h3>
+                    Android Touch Screen
+                </h3>
 
-.corp-footer-contact-heading,
-.corp-footer-contact-item {
-    min-width: 0;
+                <p>
+                    Interactive touch interface for digital services,
+                    public information and smart applications.
+                </p>
 
-    padding: 32px clamp(20px, 3vw, 42px);
+            </article>
 
-    border-right: 1px solid var(--footer-line-light);
-}
 
-.corp-footer-contact-heading {
-    padding-left: 0;
-}
+            <!-- 15 -->
 
-.corp-footer-contact-item:last-child {
-    border-right: 0;
-}
+            <article class="feature-card">
 
-.corp-footer-contact-heading > span {
-    display: block;
+                <span class="feature-number">
+                    15
+                </span>
 
-    margin-bottom: 8px;
+                <div class="feature-icon">
+                    <i class="fa-solid fa-microphone-lines"></i>
+                </div>
 
-    color: var(--footer-accent);
+                <h3>
+                    AI-Based Voice Communication
+                </h3>
 
-    font-size: 8px;
-    letter-spacing: 0.14em;
+                <p>
+                    AI-enabled voice interaction designed for
+                    intelligent public communication experiences.
+                </p>
 
-    text-transform: uppercase;
-}
+            </article>
 
-.corp-footer-contact-heading h3 {
-    margin: 0;
 
-    color: var(--footer-ink);
+            <!-- 16 -->
 
-    font-size: 22px;
-    font-weight: 400;
-    letter-spacing: -0.035em;
-}
+            <article class="feature-card">
 
-.corp-footer-contact-item {
-    position: relative;
+                <span class="feature-number">
+                    16
+                </span>
 
-    display: block;
-}
+                <div class="feature-icon">
+                    <i class="fa-solid fa-camera"></i>
+                </div>
 
-.corp-footer-contact-item > span,
-.corp-footer-contact-item > strong {
-    display: block;
-}
+                <h3>
+                    AI-Based Camera
+                </h3>
 
-.corp-footer-contact-item > span {
-    margin-bottom: 9px;
+                <p>
+                    Intelligent camera capability for monitoring,
+                    visual analytics and smart infrastructure use.
+                </p>
 
-    color: var(--footer-muted);
+            </article>
 
-    font-size: 8px;
-    letter-spacing: 0.13em;
 
-    text-transform: uppercase;
-}
+        </div>
 
-.corp-footer-contact-item > strong {
-    overflow-wrap: anywhere;
+    </div>
 
-    color: var(--footer-ink);
+</section>
 
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
 
-    font-size: 12.5px;
-    font-weight: 500;
-    line-height: 1.45;
-}
 
-.corp-footer-contact-item > i {
-    position: absolute;
-    top: 50%;
-    right: 24px;
+<!-- =============================================================
+     SYSTEM ARCHITECTURE
+============================================================= -->
 
-    color: var(--footer-accent);
+<section class="feature-architecture">
 
-    font-size: 14px;
-    font-style: normal;
+    <div class="smart-container">
 
-    opacity: 0.62;
-    transform: translateY(-50%);
 
-    transition:
-        opacity 0.25s ease,
-        transform 0.25s ease;
-}
+        <div class="feature-architecture-grid">
 
-a.corp-footer-contact-item:hover > i {
-    opacity: 1;
-    transform: translate(3px, calc(-50% - 3px));
-}
 
+            <!-- LEFT -->
 
-/* =========================================================
-   BOTTOM BAR
-========================================================== */
+            <div class="architecture-sticky">
 
-.corp-footer-bottom {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    gap: 28px;
+                <span class="smart-eyebrow">
 
-    min-height: 88px;
-}
+                    System Architecture
 
-.corp-footer-bottom > p {
-    margin: 0;
+                </span>
 
-    color: var(--footer-muted);
 
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
+                <h2 class="smart-title">
 
-    font-size: 10px;
-}
+                    Designed as one
+                    <span>
+                        connected ecosystem.
+                    </span>
 
-.corp-footer-disciplines {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+                </h2>
 
-    color: rgba(16, 39, 41, 0.50);
 
-    font-size: 8px;
-    letter-spacing: 0.13em;
+                <p>
 
-    text-transform: uppercase;
-}
+                    Instead of operating as isolated urban devices,
+                    Smart Pole combines key services into coordinated
+                    functional layers.
 
-.corp-footer-disciplines i {
-    width: 18px;
-    height: 1px;
+                </p>
 
-    background: var(--footer-line);
-}
+            </div>
 
-.corp-footer-bottom-links {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 21px;
 
-    color: var(--footer-muted);
 
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
+            <!-- RIGHT -->
 
-    font-size: 10px;
-}
+            <div class="architecture-list">
 
-.corp-footer-bottom-links > a {
-    transition: color 0.25s ease;
-}
 
-.corp-footer-bottom-links > a:hover {
-    color: var(--footer-ink);
-}
+                <div class="architecture-item">
 
-.corp-footer-top-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
+                    <span class="architecture-number">
+                        01
+                    </span>
 
-    padding-left: 21px;
+                    <h3>
+                        Energy & Charging
+                    </h3>
 
-    border-left: 1px solid var(--footer-line);
+                    <span>
+                        EV • Wired • Wireless • Generation
+                    </span>
 
-    color: var(--footer-ink) !important;
+                </div>
 
-    font-family:
-        "Varela Round",
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
 
-    font-size: 8px;
-    letter-spacing: 0.12em;
+                <div class="architecture-item">
 
-    text-transform: uppercase;
-}
+                    <span class="architecture-number">
+                        02
+                    </span>
 
-.corp-footer-top-link span {
-    display: grid;
-    place-items: center;
+                    <h3>
+                        Safety & Emergency
+                    </h3>
 
-    width: 31px;
-    height: 31px;
+                    <span>
+                        SOS • Intercom • PA • Camera
+                    </span>
 
-    border: 1px solid var(--footer-line);
+                </div>
 
-    color: var(--footer-accent);
 
-    transition:
-        color 0.25s ease,
-        background-color 0.25s ease,
-        transform 0.25s ease;
-}
+                <div class="architecture-item">
 
-.corp-footer-top-link:hover span {
-    color: #ffffff;
-    background: var(--footer-ink);
-    transform: translateY(-3px);
-}
+                    <span class="architecture-number">
+                        03
+                    </span>
 
+                    <h3>
+                        Environment Monitoring
+                    </h3>
 
-/* =========================================================
-   ACCESSIBILITY
-========================================================== */
+                    <span>
+                        AQ Sensor • AQ Display
+                    </span>
 
-.corp-footer a:focus-visible {
-    outline: 2px solid var(--footer-accent);
-    outline-offset: 4px;
-}
+                </div>
 
 
-/* =========================================================
-   RESPONSIVE — LAPTOP
-========================================================== */
+                <div class="architecture-item">
 
-@media (max-width: 1250px) {
+                    <span class="architecture-number">
+                        04
+                    </span>
 
-    .corp-footer-main {
-        grid-template-columns: 1fr;
-    }
+                    <h3>
+                        Connectivity
+                    </h3>
 
-    .corp-footer-brand {
-        display: grid;
-        grid-template-columns: 230px minmax(0, 1fr) auto;
-        align-items: center;
-        gap: 42px;
+                    <span>
+                        Wi-Fi • Touch Screen • Voice
+                    </span>
 
-        padding: 38px 0;
+                </div>
 
-        border-right: 0;
-        border-bottom: 1px solid var(--footer-line);
-    }
 
-    .corp-footer-brand > p {
-        max-width: 650px;
-        margin: 0;
-    }
+                <div class="architecture-item">
 
-    .corp-footer-status {
-        margin: 0;
-    }
+                    <span class="architecture-number">
+                        05
+                    </span>
 
-    .corp-footer-nav {
-        grid-template-columns: repeat(5, minmax(0, 1fr));
-    }
+                    <h3>
+                        Smart Lighting & Detection
+                    </h3>
 
-    .corp-footer-column:first-child {
-        padding-left: 0;
-    }
-}
+                    <span>
+                        Street Light • Motion
+                    </span>
 
+                </div>
 
-/* =========================================================
-   RESPONSIVE — TABLET
-========================================================== */
 
-@media (max-width: 960px) {
+                <div class="architecture-item">
 
-    .corp-footer-container {
-        width: min(calc(100% - 44px), 860px);
-    }
+                    <span class="architecture-number">
+                        06
+                    </span>
 
-    .corp-footer-cta {
-        grid-template-columns: 1fr;
-        gap: 43px;
+                    <h3>
+                        Digital Communication
+                    </h3>
 
-        padding: 86px 0 70px;
-    }
+                    <span>
+                        RGB LED • Android • AI
+                    </span>
 
-    .corp-footer-cta-action {
-        max-width: 430px;
-    }
+                </div>
 
-    .corp-footer-brand {
-        grid-template-columns: 220px minmax(0, 1fr);
-    }
 
-    .corp-footer-status {
-        grid-column: 1 / -1;
-    }
+            </div>
 
-    .corp-footer-nav {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
 
-    .corp-footer-column {
-        border-bottom: 1px solid var(--footer-line-light);
-    }
+        </div>
 
-    .corp-footer-column:nth-child(3) {
-        border-right: 0;
-    }
+    </div>
 
-    .corp-footer-column:nth-child(4) {
-        padding-left: 0;
-    }
+</section>
 
-    .corp-footer-column:nth-child(n + 4) {
-        border-bottom: 0;
-    }
 
-    .corp-footer-column:last-child {
-        border-right: 1px solid var(--footer-line-light);
-    }
 
-    .corp-footer-contact {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
+<!-- =============================================================
+     TECHNOLOGY BAND
+============================================================= -->
 
-    .corp-footer-contact-heading {
-        grid-column: 1 / -1;
+<section class="technology-band">
 
-        padding-left: 0;
+    <div class="technology-band-content">
 
-        border-right: 0;
-        border-bottom: 1px solid var(--footer-line);
-    }
 
-    .corp-footer-bottom {
-        grid-template-columns: 1fr auto;
-    }
+        <span class="smart-eyebrow">
 
-    .corp-footer-disciplines {
-        display: none;
-    }
-}
+            Future-Ready Infrastructure
 
+        </span>
 
-/* =========================================================
-   RESPONSIVE — MOBILE
-========================================================== */
 
-@media (max-width: 650px) {
+        <h2>
 
-    .corp-footer-container {
-        width: calc(100% - 30px);
-    }
+            From street furniture
+            to
 
-    .corp-footer-cta {
-        gap: 35px;
+            <span>
+                intelligent city infrastructure.
+            </span>
 
-        padding: 72px 0 58px;
-    }
+        </h2>
 
-    .corp-footer-kicker {
-        margin-bottom: 20px;
 
-        font-size: 8px;
-    }
+        <p>
 
-    .corp-footer-cta h2 {
-        font-size: clamp(47px, 15vw, 68px);
-    }
+            Smart Pole transforms a conventional public pole into
+            a multifunctional connected asset that can support
+            mobility, information, safety, environmental monitoring,
+            communication and intelligent digital services.
 
-    .corp-footer-cta-action > p {
-        font-size: 13px;
-    }
+        </p>
 
-    .corp-footer-brand {
-        display: flex;
-        align-items: flex-start;
-        gap: 0;
 
-        padding: 35px 0;
-    }
+    </div>
 
-    .corp-footer-logo img {
-        height: 70px;
-    }
+</section>
 
-    .corp-footer-brand > p {
-        margin: 28px 0 34px;
 
-        font-size: 12.5px;
-    }
 
-    .corp-footer-nav {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+<!-- =============================================================
+     CAPABILITY STRIP
+============================================================= -->
 
-    .corp-footer-column,
-    .corp-footer-column:first-child,
-    .corp-footer-column:nth-child(4) {
-        padding: 31px 18px;
-        border-right: 1px solid var(--footer-line-light);
-        border-bottom: 1px solid var(--footer-line-light);
-    }
+<section class="capability-strip">
 
-    .corp-footer-column:nth-child(odd) {
-        padding-left: 0;
-    }
+    <div class="smart-container">
 
-    .corp-footer-column:nth-child(even) {
-        padding-right: 0;
-        border-right: 0;
-    }
 
-    .corp-footer-column:nth-child(4) {
-        border-bottom: 1px solid var(--footer-line-light);
-    }
+        <div class="capability-strip-grid">
 
-    .corp-footer-column:last-child {
-        grid-column: 1 / -1;
 
-        padding-right: 0;
-        padding-left: 0;
+            <div class="capability-strip-item">
 
-        border-right: 0;
-        border-bottom: 0;
-    }
+                <span>
+                    01 / CONNECT
+                </span>
 
-    .corp-footer-column-heading {
-        margin-bottom: 24px;
-    }
+                <strong>
+                    Wi-Fi & Communication
+                </strong>
 
-    .corp-footer-column a i {
-        opacity: 0.45;
-        transform: none;
-    }
+            </div>
 
-    .corp-footer-contact {
-        grid-template-columns: 1fr;
-    }
 
-    .corp-footer-contact-heading,
-    .corp-footer-contact-item {
-        padding: 25px 0;
+            <div class="capability-strip-item">
 
-        border-right: 0;
-        border-bottom: 1px solid var(--footer-line-light);
-    }
+                <span>
+                    02 / MONITOR
+                </span>
 
-    .corp-footer-contact-item:last-child {
-        border-bottom: 0;
-    }
+                <strong>
+                    Sensors & AI Camera
+                </strong>
 
-    .corp-footer-contact-item > i {
-        right: 0;
-    }
+            </div>
 
-    .corp-footer-bottom {
-        grid-template-columns: 1fr;
-        gap: 19px;
 
-        padding: 25px 0;
-    }
+            <div class="capability-strip-item">
 
-    .corp-footer-bottom > p {
-        text-align: center;
-    }
+                <span>
+                    03 / SUPPORT
+                </span>
 
-    .corp-footer-bottom-links {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
+                <strong>
+                    Charging & Public Services
+                </strong>
 
+            </div>
 
-/* =========================================================
-   EXTRA SMALL MOBILE
-========================================================== */
 
-@media (max-width: 390px) {
+            <div class="capability-strip-item">
 
-    .corp-footer-container {
-        width: calc(100% - 24px);
-    }
+                <span>
+                    04 / COMMUNICATE
+                </span>
 
-    .corp-footer-cta h2 {
-        font-size: 45px;
-    }
+                <strong>
+                    Screens, Voice & PA
+                </strong>
 
-    .corp-footer-nav {
-        grid-template-columns: 1fr;
-    }
+            </div>
 
-    .corp-footer-column,
-    .corp-footer-column:first-child,
-    .corp-footer-column:nth-child(4),
-    .corp-footer-column:last-child,
-    .corp-footer-column:nth-child(odd),
-    .corp-footer-column:nth-child(even) {
-        grid-column: auto;
 
-        padding: 28px 0;
+        </div>
 
-        border-right: 0;
-        border-bottom: 1px solid var(--footer-line-light);
-    }
+    </div>
 
-    .corp-footer-column:last-child {
-        border-bottom: 0;
-    }
-}
+</section>
 
 
-/* =========================================================
-   REDUCED MOTION
-========================================================== */
 
-@media (prefers-reduced-motion: reduce) {
+<!-- =============================================================
+     APPLICATIONS
+============================================================= -->
 
-    .corp-footer-button,
-    .corp-footer-button::before,
-    .corp-footer-button i,
-    .corp-footer-column a,
-    .corp-footer-column a i,
-    .corp-footer-contact-item > i,
-    .corp-footer-bottom-links > a,
-    .corp-footer-top-link span {
-        transition: none;
-    }
-}
+<section class="smart-applications">
 
-</style>
+    <div class="smart-container">
 
 
-<script>
-    document.getElementById("corpFooterYear").textContent = new Date().getFullYear();
-</script>
-    
-    <!-- =========================================================
-     PREMIUM TECHNOLOGY FOOTER END
-     ========================================================= -->
+        <div class="applications-head">
 
 
+            <div>
+
+                <span class="smart-eyebrow">
+
+                    Applications
+
+                </span>
+
+
+                <h2 class="smart-title">
+
+                    Built for
+                    <span>
+                        connected public spaces.
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <p class="smart-copy">
+
+                The Smart Pole concept can support a wide range
+                of smart-city and public infrastructure environments.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="application-grid">
+
+
+            <article class="application-card">
+
+                <span>
+                    01
+                </span>
+
+                <h3>
+                    Smart Cities
+                </h3>
+
+                <p>
+                    Integrated urban services for connected
+                    and technology-enabled city environments.
+                </p>
+
+            </article>
+
+
+            <article class="application-card">
+
+                <span>
+                    02
+                </span>
+
+                <h3>
+                    Public Roads
+                </h3>
+
+                <p>
+                    Lighting, monitoring, communication and
+                    charging infrastructure for modern road networks.
+                </p>
+
+            </article>
+
+
+            <article class="application-card">
+
+                <span>
+                    03
+                </span>
+
+                <h3>
+                    Parks & Public Spaces
+                </h3>
+
+                <p>
+                    Connectivity and intelligent public services
+                    within high-footfall community spaces.
+                </p>
+
+            </article>
+
+
+            <article class="application-card">
+
+                <span>
+                    04
+                </span>
+
+                <h3>
+                    Transport Hubs
+                </h3>
+
+                <p>
+                    Digital information, safety, communication and
+                    charging support for transport infrastructure.
+                </p>
+
+            </article>
+
+
+            <article class="application-card">
+
+                <span>
+                    05
+                </span>
+
+                <h3>
+                    Campuses
+                </h3>
+
+                <p>
+                    Connected infrastructure for institutional,
+                    corporate and educational environments.
+                </p>
+
+            </article>
+
+
+            <article class="application-card">
+
+                <span>
+                    06
+                </span>
+
+                <h3>
+                    Commercial Districts
+                </h3>
+
+                <p>
+                    Intelligent outdoor infrastructure supporting
+                    connectivity, information and public engagement.
+                </p>
+
+            </article>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =============================================================
+     CTA
+============================================================= -->
+
+<section class="smart-cta">
+
+    <div class="smart-container">
+
+
+        <div class="smart-cta-inner">
+
+
+            <h2>
+
+                Ready to build
+                smarter
+
+                <span>
+                    public infrastructure?
+                </span>
+
+            </h2>
+
+
+            <div class="smart-cta-side">
+
+
+                <p>
+
+                    Talk to Alpha Numeric about Smart Pole
+                    integration, urban applications and
+                    customized smart infrastructure requirements.
+
+                </p>
+
+
+                <a
+                    href="index.html#contact"
+                    class="smart-cta-button">
+
+                    Discuss Smart Pole
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =============================================================
+     BOOTSTRAP JS
+============================================================= -->
 
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
 </script>
 
 
+<!-- =============================================================
+     NAVBAR SHADOW
+============================================================= -->
+
 <script>
 
-window.addEventListener("scroll", function () {
+window.addEventListener(
+    "scroll",
+    function() {
 
-    const navbar =
-        document.querySelector(".main-navbar");
+        const navbar =
+            document.querySelector(".about-navbar");
 
-    if (window.scrollY > 30) {
 
-        navbar.style.boxShadow =
-            "0 5px 25px rgba(0,0,0,.07)";
+        if (!navbar) return;
 
-    } else {
 
-        navbar.style.boxShadow = "none";
+        if (window.scrollY > 30) {
+
+            navbar.style.boxShadow =
+                "0 5px 25px rgba(0,0,0,.06)";
+
+        } else {
+
+            navbar.style.boxShadow =
+                "none";
+
+        }
 
     }
-
-});
+);
 
 </script>
 
 
 </body>
+
 </html>
