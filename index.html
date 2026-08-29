@@ -1722,8 +1722,10 @@
     });
 })();
 </script>
+
+
 <!-- =========================================================
-     ALPHA NUMERIC — PREMIUM ABOUT MODULE
+     ALPHA NUMERIC — PREMIUM BLACK ABOUT MODULE
      Complete HTML + CSS
 ========================================================== -->
 
@@ -1873,12 +1875,12 @@
 ========================================================== */
 
 .about-section {
-    --about-accent: #69d2c8;
-    --about-accent-light: #a5eee7;
-    --about-white: #f7fbfa;
-    --about-muted: rgba(238, 248, 246, 0.72);
-    --about-line: rgba(226, 247, 244, 0.20);
-    --about-panel: rgba(229, 246, 243, 0.11);
+    --about-accent: #67d8cd;
+    --about-accent-light: #a9f2eb;
+    --about-white: #f6f8f7;
+    --about-muted: rgba(232, 241, 239, 0.64);
+    --about-line: rgba(221, 244, 241, 0.12);
+    --about-panel: rgba(255, 255, 255, 0.035);
 
     position: relative;
     isolation: isolate;
@@ -1889,14 +1891,23 @@
     overflow: hidden;
 
     color: var(--about-white);
-    background-color: #31585b;
-    background-image: url("../assets/img/all.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-
-    /* Previous fixed background scrolling effect */
-    background-attachment: fixed;
+    background:
+        radial-gradient(
+            circle at 82% 18%,
+            rgba(103, 216, 205, 0.085),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 18% 86%,
+            rgba(103, 216, 205, 0.045),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #020303 0%,
+            #070a0b 48%,
+            #010202 100%
+        );
 
     font-family:
         "Varela Round",
@@ -1908,6 +1919,21 @@
         sans-serif;
 }
 
+.about-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(
+            118deg,
+            transparent 24%,
+            rgba(255, 255, 255, 0.018) 48%,
+            transparent 67%
+        );
+    pointer-events: none;
+}
+
 .about-section *,
 .about-section *::before,
 .about-section *::after {
@@ -1916,7 +1942,7 @@
 
 
 /* =========================================================
-   LIGHT CINEMATIC OVERLAY
+   BLACK CINEMATIC OVERLAY
 ========================================================== */
 
 .about-overlay {
@@ -1925,17 +1951,15 @@
     z-index: -4;
 
     background:
-        linear-gradient(
-            90deg,
-            rgba(8, 38, 42, 0.78) 0%,
-            rgba(12, 55, 59, 0.58) 42%,
-            rgba(18, 69, 71, 0.32) 72%,
-            rgba(8, 39, 42, 0.46) 100%
+        radial-gradient(
+            ellipse at center,
+            transparent 32%,
+            rgba(0, 0, 0, 0.44) 100%
         ),
         linear-gradient(
             180deg,
-            rgba(31, 79, 81, 0.12) 0%,
-            rgba(7, 34, 37, 0.48) 100%
+            rgba(255, 255, 255, 0.012) 0%,
+            rgba(0, 0, 0, 0.26) 100%
         );
 
     pointer-events: none;
@@ -1951,16 +1975,16 @@
     inset: 0;
     z-index: -3;
 
-    opacity: 0.10;
+    opacity: 0.055;
 
     background-image:
         linear-gradient(
-            rgba(218, 248, 244, 0.34) 1px,
+            rgba(218, 248, 244, 0.45) 1px,
             transparent 1px
         ),
         linear-gradient(
             90deg,
-            rgba(218, 248, 244, 0.34) 1px,
+            rgba(218, 248, 244, 0.45) 1px,
             transparent 1px
         );
 
@@ -2011,7 +2035,7 @@
     background:
         radial-gradient(
             circle,
-            rgba(105, 210, 200, 0.24),
+            rgba(103, 216, 205, 0.13),
             transparent 68%
         );
 }
@@ -2026,7 +2050,7 @@
     background:
         radial-gradient(
             circle,
-            rgba(128, 204, 190, 0.17),
+            rgba(103, 216, 205, 0.075),
             transparent 70%
         );
 }
@@ -2205,7 +2229,7 @@
     text-wrap: balance;
 
     text-shadow:
-        0 12px 40px rgba(0, 25, 28, 0.16);
+        0 18px 58px rgba(0, 0, 0, 0.58);
 }
 
 .about-title > span {
@@ -2213,7 +2237,7 @@
 }
 
 .about-title > span:nth-child(2) {
-    color: rgba(240, 250, 248, 0.57);
+    color: rgba(240, 250, 248, 0.42);
 }
 
 .about-title em {
@@ -2318,26 +2342,27 @@
     overflow: hidden;
 
     border:
-        1px solid rgba(226, 249, 245, 0.27);
+        1px solid rgba(169, 242, 235, 0.17);
 
-    border-radius: 2px;
+    border-radius: 18px;
 
     background:
         linear-gradient(
             145deg,
-            rgba(234, 250, 247, 0.17),
-            rgba(193, 231, 226, 0.075)
+            rgba(22, 29, 30, 0.94),
+            rgba(5, 7, 8, 0.96)
         );
 
     box-shadow:
-        0 30px 80px rgba(5, 29, 32, 0.20),
-        inset 0 1px 0 rgba(255, 255, 255, 0.20);
+        0 34px 90px rgba(0, 0, 0, 0.56),
+        0 0 0 1px rgba(255, 255, 255, 0.018) inset,
+        inset 0 1px 0 rgba(255, 255, 255, 0.07);
 
     -webkit-backdrop-filter:
-        blur(16px) saturate(120%);
+        blur(18px) saturate(112%);
 
     backdrop-filter:
-        blur(16px) saturate(120%);
+        blur(18px) saturate(112%);
 }
 
 .about-story-card::before {
@@ -2369,9 +2394,12 @@
     height: 250px;
 
     border:
-        1px solid rgba(165, 238, 231, 0.13);
+        1px solid rgba(169, 242, 235, 0.09);
 
     border-radius: 50%;
+
+    box-shadow:
+        0 0 80px rgba(103, 216, 205, 0.045);
 }
 
 .about-card-mark {
@@ -2467,10 +2495,10 @@
     overflow: hidden;
 
     border:
-        1px solid rgba(217, 248, 244, 0.48);
+        1px solid rgba(169, 242, 235, 0.34);
 
     color: var(--about-white);
-    background: rgba(232, 249, 247, 0.06);
+    background: rgba(103, 216, 205, 0.045);
 
     font-size: 9px;
     letter-spacing: 0.16em;
@@ -2614,7 +2642,7 @@
 
 .about-capability:hover {
     background:
-        rgba(230, 248, 245, 0.06);
+        rgba(103, 216, 205, 0.045);
 }
 
 .about-capability:hover::after {
@@ -2727,10 +2755,6 @@
 @media (max-width: 991px) {
 
     .about-section {
-        /*
-         Fixed backgrounds are unreliable on touch devices.
-         Desktop keeps the parallax effect.
-        */
         background-attachment: scroll;
     }
 }
@@ -2744,8 +2768,6 @@
 
     .about-section {
         min-height: auto;
-
-        background-position: 62% center;
     }
 
     .about-container {
@@ -2816,16 +2838,26 @@
 @media (max-width: 575px) {
 
     .about-section {
-        background-position: 66% center;
+        background:
+            radial-gradient(
+                circle at 82% 14%,
+                rgba(103, 216, 205, 0.075),
+                transparent 30%
+            ),
+            linear-gradient(
+                155deg,
+                #020303 0%,
+                #080b0c 52%,
+                #010202 100%
+            );
     }
 
     .about-overlay {
         background:
-            linear-gradient(
-                180deg,
-                rgba(9, 43, 47, 0.72) 0%,
-                rgba(12, 55, 59, 0.62) 44%,
-                rgba(7, 35, 38, 0.76) 100%
+            radial-gradient(
+                ellipse at center,
+                transparent 22%,
+                rgba(0, 0, 0, 0.48) 100%
             );
     }
 
@@ -6624,48 +6656,21 @@
     </div>
 
 
-    <!-- Desktop: vertical scroll drives horizontal movement.
-         Mobile: this becomes a native swipe carousel. -->
+    <!-- Auto-playing carousel with arrows, dots, keyboard and swipe controls.
+         The page continues normally after this section. -->
     <div class="bms-story__stage">
         <div class="bms-story__sticky">
 
-            <div class="bms-story__navigation bms-story__container">
-                <div class="bms-story__counter" aria-live="polite">
-                    <span class="bms-story__current">01</span>
-                    <i></i>
-                    <span>04</span>
-                </div>
-
-                <div class="bms-story__progress" aria-label="BMS story progress">
-                    <span class="bms-story__progress-fill"></span>
-
-                    <button type="button" data-bms-target="0" aria-label="Show Unified Command Centre"></button>
-                    <button type="button" data-bms-target="1" aria-label="Show Multi-Site Intelligence"></button>
-                    <button type="button" data-bms-target="2" aria-label="Show Greenfield and Retrofit"></button>
-                    <button type="button" data-bms-target="3" aria-label="Show Open Integration and AI"></button>
-                </div>
-
-                <div class="bms-story__controls">
-                    <span class="bms-story__hint">
-                        <i class="fa-solid fa-computer-mouse" aria-hidden="true"></i>
-                        Scroll to explore
-                    </span>
-
-                    <button type="button" class="bms-story__arrow" data-bms-direction="-1" aria-label="Previous story">
-                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
-                    </button>
-
-                    <button type="button" class="bms-story__arrow" data-bms-direction="1" aria-label="Next story">
-                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                    </button>
-                </div>
-            </div>
-
-
-            <div class="bms-story__track" role="list">
+            <div
+                class="bms-story__track"
+                role="region"
+                aria-roledescription="carousel"
+                aria-label="BMS intelligence capabilities"
+                tabindex="0"
+            >
 
                 <!-- 01 — Unified Command Centre -->
-                <article class="bms-story__slide is-active" data-bms-slide="0" role="listitem">
+                <article class="bms-story__slide is-active" data-bms-slide="0" role="group" aria-roledescription="slide" aria-label="1 of 4">
                     <div class="bms-story__slide-shell">
                         <div class="bms-story__content">
                             <span class="bms-story__chapter">01 / Unified Operations</span>
@@ -6693,7 +6698,7 @@
 
                         <figure class="bms-story__visual">
                             <img
-                                src="assets/img/bms/scroll-story/01-unified-command-centre.png"
+                                src="assets/img/bms/Unified Operations.png"
                                 alt="Unified BMS command centre connected to HVAC, power, lighting, fire, security, water and other building systems"
                                 width="1800"
                                 height="1200"
@@ -6708,7 +6713,7 @@
 
 
                 <!-- 02 — Multi-Site Intelligence -->
-                <article class="bms-story__slide" data-bms-slide="1" role="listitem">
+                <article class="bms-story__slide" data-bms-slide="1" role="group" aria-roledescription="slide" aria-label="2 of 4">
                     <div class="bms-story__slide-shell">
                         <div class="bms-story__content">
                             <span class="bms-story__chapter">02 / Portfolio Intelligence</span>
@@ -6738,7 +6743,7 @@
 
                         <figure class="bms-story__visual">
                             <img
-                                src="assets/img/bms/scroll-story/02-multisite-hierarchy.png"
+                                src="assets/img/bms/Open Intelligence.png"
                                 alt="A unified platform monitoring office, healthcare, hospitality, industrial and residential buildings down to floor and equipment level"
                                 width="1800"
                                 height="1200"
@@ -6754,7 +6759,7 @@
 
 
                 <!-- 03 — Greenfield + Retrofit -->
-                <article class="bms-story__slide" data-bms-slide="2" role="listitem">
+                <article class="bms-story__slide" data-bms-slide="2" role="group" aria-roledescription="slide" aria-label="3 of 4">
                     <div class="bms-story__slide-shell">
                         <div class="bms-story__content">
                             <span class="bms-story__chapter">03 / Flexible Deployment</span>
@@ -6789,7 +6794,7 @@
 
                         <figure class="bms-story__visual">
                             <img
-                                src="assets/img/bms/scroll-story/03-greenfield-brownfield.png"
+                                src="assets/img/bms/Flexible Deployment.png"
                                 alt="A new smart building under construction and an existing commercial building connected to the same BMS platform"
                                 width="1800"
                                 height="1200"
@@ -6805,7 +6810,7 @@
 
 
                 <!-- 04 — Open Integration + AI -->
-                <article class="bms-story__slide" data-bms-slide="3" role="listitem">
+                <article class="bms-story__slide" data-bms-slide="3" role="group" aria-roledescription="slide" aria-label="4 of 4">
                     <div class="bms-story__slide-shell">
                         <div class="bms-story__content">
                             <span class="bms-story__chapter">04 / Open Intelligence</span>
@@ -6838,7 +6843,7 @@
 
                         <figure class="bms-story__visual">
                             <img
-                                src="assets/img/bms/scroll-story/04-open-integration-ai.png"
+                                src="assets/img/bms/Portfolio Intelligence.png"
                                 alt="Open BMS architecture connecting wired and wireless buildings through edge gateways to secure cloud analytics and dashboards"
                                 width="1800"
                                 height="1200"
@@ -6852,6 +6857,43 @@
                     </div>
                 </article>
 
+            </div>
+
+            <!-- Every manual carousel control stays below the visual area. -->
+            <div class="bms-story__navigation bms-story__container">
+                <div class="bms-story__counter" aria-live="polite">
+                    <span class="bms-story__current">01</span>
+                    <i></i>
+                    <span>04</span>
+                </div>
+
+                <div class="bms-story__progress" aria-label="BMS story progress">
+                    <span class="bms-story__progress-fill"></span>
+
+                    <button type="button" data-bms-target="0" aria-label="Show Unified Command Centre"></button>
+                    <button type="button" data-bms-target="1" aria-label="Show Multi-Site Intelligence"></button>
+                    <button type="button" data-bms-target="2" aria-label="Show Greenfield and Retrofit"></button>
+                    <button type="button" data-bms-target="3" aria-label="Show Open Integration and AI"></button>
+                </div>
+
+                <div class="bms-story__controls">
+                    <span class="bms-story__hint">
+                        <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+                        Auto rotation
+                    </span>
+
+                    <button type="button" class="bms-story__autoplay" aria-label="Pause carousel" aria-pressed="false">
+                        <i class="fa-solid fa-pause" aria-hidden="true"></i>
+                    </button>
+
+                    <button type="button" class="bms-story__arrow" data-bms-direction="-1" aria-label="Previous story">
+                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                    </button>
+
+                    <button type="button" class="bms-story__arrow" data-bms-direction="1" aria-label="Next story">
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -7043,21 +7085,22 @@
 
 
 /* =========================================================
-   PINNED SCROLL STAGE
+   INDEPENDENT AUTO CAROUSEL
+   No sticky page lock and no scroll hijacking.
 ========================================================= */
 .bms-story__stage {
     position: relative;
-    height: 400svh;
+    height: auto;
+    padding-bottom: clamp(72px, 8vw, 118px);
 }
 
 .bms-story__sticky {
-    position: sticky;
-    top: 0;
+    position: relative;
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: 1fr auto;
     width: 100%;
-    height: 100svh;
-    min-height: 660px;
+    height: auto;
+    min-height: 0;
     overflow: hidden;
     background: rgba(6, 16, 18, .74);
     backdrop-filter: blur(16px);
@@ -7071,7 +7114,7 @@
     align-items: center;
     gap: 30px;
     min-height: 82px;
-    border-bottom: 1px solid var(--bss-line);
+    border-top: 1px solid var(--bss-line);
 }
 
 .bms-story__counter {
@@ -7148,6 +7191,8 @@
     transition: background .3s ease, box-shadow .3s ease, transform .3s ease;
 }
 
+.bms-story__progress button:nth-of-type(2)::after { left: 33.333%; }
+.bms-story__progress button:nth-of-type(3)::after { left: 66.667%; }
 .bms-story__progress button:last-child::after { left: 100%; }
 
 .bms-story__progress button.is-active::after {
@@ -7195,28 +7240,83 @@
     transform: translateY(-2px);
 }
 
+.bms-story__autoplay {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 1px solid rgba(114, 221, 210, .28);
+    border-radius: 50%;
+    color: var(--bss-teal);
+    background: rgba(114, 221, 210, .055);
+    cursor: pointer;
+    transition: color .3s ease, border-color .3s ease, background .3s ease, transform .3s ease;
+}
+
+.bms-story__autoplay::before {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border: 1px solid rgba(114, 221, 210, .12);
+    border-radius: inherit;
+}
+
+.bms-story__autoplay:hover,
+.bms-story__autoplay[aria-pressed="true"] {
+    color: #082c2f;
+    border-color: var(--bss-teal);
+    background: var(--bss-teal);
+    transform: translateY(-2px);
+}
+
+.bms-story__arrow:focus-visible,
+.bms-story__autoplay:focus-visible,
+.bms-story__progress button:focus-visible,
+.bms-story__track:focus-visible {
+    outline: 2px solid var(--bss-teal);
+    outline-offset: 4px;
+}
+
 .bms-story__track {
     display: flex;
-    width: max-content;
+    width: 100%;
     min-height: 0;
+    touch-action: pan-y pinch-zoom;
+    cursor: grab;
+    transform: translate3d(0, 0, 0);
+    transition: transform .9s var(--bss-ease);
     will-change: transform;
+    user-select: none;
+}
+
+.bms-story__track.is-dragging {
+    cursor: grabbing;
+    transition: none;
 }
 
 .bms-story__slide {
-    flex: 0 0 100vw;
+    flex: 0 0 100%;
     display: grid;
     place-items: center;
-    width: 100vw;
+    width: 100%;
     min-width: 0;
     min-height: 0;
-    padding: 28px 0 40px;
+    padding: clamp(28px, 4vw, 48px) 0;
+    opacity: .36;
+    transition: opacity .75s ease;
+}
+
+.bms-story__slide.is-active {
+    opacity: 1;
 }
 
 .bms-story__slide-shell {
     display: grid;
     grid-template-columns: minmax(330px, .70fr) minmax(0, 1.42fr);
     width: min(calc(100% - 72px), 1460px);
-    height: min(73svh, 730px);
+    height: clamp(560px, 68vh, 730px);
     min-height: 500px;
     margin-inline: auto;
     overflow: hidden;
@@ -7432,17 +7532,22 @@
 ========================================================= */
 .bms-story__visual {
     position: relative;
+    display: grid;
+    place-items: center;
     min-width: 0;
     height: 100%;
+    padding: clamp(10px, 1.1vw, 18px);
     margin: 0;
     overflow: hidden;
-    background: #03090c;
+    background:
+        radial-gradient(circle at 50% 46%, rgba(114, 221, 210, .075), transparent 58%),
+        #03090c;
 }
 
 .bms-story__visual::after {
     content: "";
     position: absolute;
-    inset: 0;
+    inset: clamp(10px, 1.1vw, 18px);
     z-index: 2;
     background:
         linear-gradient(90deg, rgba(5, 14, 17, .20), transparent 24%),
@@ -7454,16 +7559,18 @@
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
     object-position: center;
     filter: saturate(.90) contrast(1.035);
-    transform: scale(1.065);
-    transition: transform 1.25s var(--bss-ease), filter .8s ease;
+    transform: none;
+    transition: filter .8s ease;
 }
 
 .bms-story__slide.is-active .bms-story__visual img {
     filter: saturate(1) contrast(1.04);
-    transform: scale(1);
+    transform: none;
 }
 
 .bms-story__scan {
@@ -7547,58 +7654,6 @@
     }
 }
 
-@media (max-width: 900px), (prefers-reduced-motion: reduce) {
-    .bms-story__stage {
-        height: auto;
-        padding-bottom: 78px;
-    }
-
-    .bms-story__sticky {
-        position: relative;
-        top: auto;
-        display: block;
-        height: auto;
-        min-height: 0;
-        overflow: visible;
-    }
-
-    .bms-story__track {
-        display: flex;
-        gap: 18px;
-        width: auto;
-        padding: 26px max(26px, calc((100vw - 820px) / 2));
-        overflow-x: auto;
-        scroll-padding-inline: 26px;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
-        transform: none !important;
-    }
-
-    .bms-story__track::-webkit-scrollbar { display: none; }
-
-    .bms-story__slide {
-        flex: 0 0 min(88vw, 820px);
-        display: block;
-        width: min(88vw, 820px);
-        min-height: 0;
-        padding: 0;
-        scroll-snap-align: center;
-    }
-
-    .bms-story__slide-shell {
-        width: 100%;
-        height: auto;
-        min-height: 0;
-    }
-
-    .bms-story__hint i::before { content: "\f337"; }
-    .bms-story__hint { font-size: 0; }
-    .bms-story__hint::after {
-        content: "Swipe to explore";
-        font-size: 7px;
-    }
-}
-
 @media (max-width: 900px) {
     .bms-story__container {
         width: min(calc(100% - 42px), 820px);
@@ -7618,8 +7673,22 @@
         gap: 16px;
     }
 
+    .bms-story__track {
+        width: 100%;
+        padding: 24px 0 0;
+    }
+
+    .bms-story__slide {
+        flex: 0 0 100%;
+        width: 100%;
+        padding: 0;
+    }
+
     .bms-story__slide-shell {
+        width: min(calc(100% - 42px), 820px);
         grid-template-columns: 1fr;
+        height: auto;
+        min-height: 0;
     }
 
     .bms-story__content {
@@ -7631,6 +7700,13 @@
     .bms-story__visual {
         aspect-ratio: 3 / 2;
         height: auto;
+    }
+
+    .bms-story__hint i::before { content: "\f337"; }
+    .bms-story__hint { font-size: 0; }
+    .bms-story__hint::after {
+        content: "Swipe or use controls";
+        font-size: 7px;
     }
 }
 
@@ -7668,21 +7744,15 @@
     .bms-story__controls { gap: 6px; }
     .bms-story__hint { display: none; }
 
-    .bms-story__arrow {
+    .bms-story__arrow,
+    .bms-story__autoplay {
         width: 32px;
         height: 32px;
     }
 
-    .bms-story__track {
-        gap: 12px;
-        padding: 20px 18px;
-        scroll-padding-inline: 18px;
-    }
+    .bms-story__track { padding-top: 18px; }
 
-    .bms-story__slide {
-        flex-basis: 92vw;
-        width: 92vw;
-    }
+    .bms-story__slide-shell { width: calc(100% - 36px); }
 
     .bms-story__content {
         min-height: 0;
@@ -7725,107 +7795,114 @@
     "use strict";
 
     document.querySelectorAll(".bms-story").forEach((section) => {
-        const stage = section.querySelector(".bms-story__stage");
         const track = section.querySelector(".bms-story__track");
         const slides = [...section.querySelectorAll("[data-bms-slide]")];
         const progressFill = section.querySelector(".bms-story__progress-fill");
         const progressButtons = [...section.querySelectorAll("[data-bms-target]")];
         const arrows = [...section.querySelectorAll("[data-bms-direction]")];
+        const autoplayButton = section.querySelector(".bms-story__autoplay");
         const currentLabel = section.querySelector(".bms-story__current");
         const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-        const mobileLayout = window.matchMedia("(max-width: 900px)");
+        const AUTOPLAY_DELAY = 6200;
 
-        if (!stage || !track || slides.length < 2) return;
+        if (!track || slides.length < 2) return;
 
         let activeIndex = 0;
-        let frameRequested = false;
+        let autoplayTimer = null;
+        let userPaused = reducedMotion.matches;
+        let pointerDown = false;
+        let pointerStartX = 0;
+        let pointerDeltaX = 0;
+        let dragged = false;
+        let carouselVisible = false;
+        let hoverPaused = false;
+        let focusPaused = false;
 
-        const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
-        const isFreeScroll = () => mobileLayout.matches || reducedMotion.matches;
+        const wrapIndex = (index) => (index + slides.length) % slides.length;
+        const slideWidth = () => track.clientWidth || section.clientWidth || 1;
 
-        const setActive = (index, progress) => {
-            const nextIndex = clamp(index, 0, slides.length - 1);
-            activeIndex = nextIndex;
-
-            slides.forEach((slide, slideIndex) => {
-                slide.classList.toggle("is-active", slideIndex === nextIndex);
-                slide.setAttribute("aria-hidden", slideIndex === nextIndex ? "false" : "true");
-            });
-
-            progressButtons.forEach((button, buttonIndex) => {
-                button.classList.toggle("is-active", buttonIndex === nextIndex);
-                button.setAttribute("aria-current", buttonIndex === nextIndex ? "step" : "false");
-            });
-
-            if (currentLabel) currentLabel.textContent = String(nextIndex + 1).padStart(2, "0");
-            if (progressFill) progressFill.style.transform = `translateY(-50%) scaleX(${clamp(progress, 0, 1)})`;
+        const stopAutoplay = () => {
+            window.clearTimeout(autoplayTimer);
+            autoplayTimer = null;
         };
 
-        const updatePinned = () => {
-            frameRequested = false;
-            if (isFreeScroll()) return;
+        const canAutoplay = () => (
+            !userPaused &&
+            !reducedMotion.matches &&
+            !hoverPaused &&
+            !focusPaused &&
+            !pointerDown &&
+            carouselVisible &&
+            !document.hidden
+        );
 
-            const rect = stage.getBoundingClientRect();
-            const distance = Math.max(stage.offsetHeight - window.innerHeight, 1);
-            const progress = clamp(-rect.top / distance, 0, 1);
-            const maxTranslate = Math.max(track.scrollWidth - window.innerWidth, 0);
-            const translate = progress * maxTranslate;
+        const updateAutoplayButton = () => {
+            if (!autoplayButton) return;
 
-            track.style.transform = `translate3d(${-translate}px, 0, 0)`;
-            setActive(Math.round(progress * (slides.length - 1)), progress);
+            const paused = userPaused || reducedMotion.matches;
+            const icon = autoplayButton.querySelector("i");
+
+            autoplayButton.setAttribute("aria-pressed", paused ? "true" : "false");
+            autoplayButton.setAttribute("aria-label", paused ? "Play carousel" : "Pause carousel");
+            if (icon) icon.className = paused ? "fa-solid fa-play" : "fa-solid fa-pause";
+            section.classList.toggle("is-autoplay-paused", paused);
         };
 
-        const requestPinnedUpdate = () => {
-            if (frameRequested || isFreeScroll()) return;
-            frameRequested = true;
-            window.requestAnimationFrame(updatePinned);
+        const updateTransform = (animate = true) => {
+            track.classList.toggle("is-dragging", !animate);
+            track.style.transform = `translate3d(${-activeIndex * slideWidth()}px, 0, 0)`;
+
+            if (!animate) {
+                window.requestAnimationFrame(() => track.classList.remove("is-dragging"));
+            }
         };
 
-        const updateFreeScroll = () => {
-            if (!isFreeScroll()) return;
-
-            const trackRect = track.getBoundingClientRect();
-            const trackCenter = trackRect.left + trackRect.width / 2;
-            let closestIndex = 0;
-            let closestDistance = Infinity;
-
+        const updateInterface = () => {
             slides.forEach((slide, index) => {
-                const rect = slide.getBoundingClientRect();
-                const distance = Math.abs(rect.left + rect.width / 2 - trackCenter);
-                if (distance < closestDistance) {
-                    closestDistance = distance;
-                    closestIndex = index;
-                }
+                const active = index === activeIndex;
+                slide.classList.toggle("is-active", active);
+                slide.setAttribute("aria-hidden", active ? "false" : "true");
+                if ("inert" in slide) slide.inert = !active;
             });
 
-            const denominator = Math.max(track.scrollWidth - track.clientWidth, 1);
-            setActive(closestIndex, track.scrollLeft / denominator);
-        };
+            progressButtons.forEach((button, index) => {
+                const active = index === activeIndex;
+                button.classList.toggle("is-active", active);
+                button.setAttribute("aria-current", active ? "step" : "false");
+            });
 
-        const goToSlide = (index) => {
-            const targetIndex = clamp(index, 0, slides.length - 1);
-
-            if (isFreeScroll()) {
-                slides[targetIndex].scrollIntoView({
-                    behavior: reducedMotion.matches ? "auto" : "smooth",
-                    block: "nearest",
-                    inline: "center"
-                });
-                return;
+            if (currentLabel) {
+                currentLabel.textContent = String(activeIndex + 1).padStart(2, "0");
             }
 
-            const stageTop = stage.getBoundingClientRect().top + window.scrollY;
-            const distance = Math.max(stage.offsetHeight - window.innerHeight, 1);
-            const targetTop = stageTop + (targetIndex / (slides.length - 1)) * distance;
+            if (progressFill) {
+                const progress = activeIndex / Math.max(slides.length - 1, 1);
+                progressFill.style.transform = `translateY(-50%) scaleX(${progress})`;
+            }
+        };
 
-            window.scrollTo({
-                top: targetTop,
-                behavior: reducedMotion.matches ? "auto" : "smooth"
-            });
+        const scheduleAutoplay = () => {
+            stopAutoplay();
+            if (!canAutoplay()) return;
+
+            autoplayTimer = window.setTimeout(() => {
+                goToSlide(activeIndex + 1, false);
+            }, AUTOPLAY_DELAY);
+        };
+
+        const goToSlide = (index, userAction = true) => {
+            activeIndex = wrapIndex(index);
+            updateInterface();
+            updateTransform(true);
+
+            if (userAction) stopAutoplay();
+            scheduleAutoplay();
         };
 
         progressButtons.forEach((button) => {
-            button.addEventListener("click", () => goToSlide(Number(button.dataset.bmsTarget)));
+            button.addEventListener("click", () => {
+                goToSlide(Number(button.dataset.bmsTarget));
+            });
         });
 
         arrows.forEach((button) => {
@@ -7834,40 +7911,140 @@
             });
         });
 
-        window.addEventListener("scroll", requestPinnedUpdate, { passive: true });
-        window.addEventListener("resize", () => {
-            track.style.transform = "none";
-            if (isFreeScroll()) updateFreeScroll();
-            else updatePinned();
-        }, { passive: true });
+        autoplayButton?.addEventListener("click", () => {
+            userPaused = !userPaused;
+            updateAutoplayButton();
+            scheduleAutoplay();
+        });
 
-        track.addEventListener("scroll", () => {
-            if (!isFreeScroll()) return;
-            window.requestAnimationFrame(updateFreeScroll);
-        }, { passive: true });
+        // Mouse/touch controls resume autoplay after interaction.
+        // Keyboard focus remains paused for accessibility.
+        [...progressButtons, ...arrows, autoplayButton].filter(Boolean).forEach((button) => {
+            button.addEventListener("pointerup", () => button.blur(), { passive: true });
+        });
 
-        mobileLayout.addEventListener?.("change", () => {
-            track.style.transform = "none";
-            if (isFreeScroll()) updateFreeScroll();
-            else updatePinned();
+        section.addEventListener("mouseenter", () => {
+            hoverPaused = true;
+            stopAutoplay();
+        });
+
+        section.addEventListener("mouseleave", () => {
+            hoverPaused = false;
+            scheduleAutoplay();
+        });
+
+        section.addEventListener("focusin", () => {
+            focusPaused = true;
+            stopAutoplay();
+        });
+
+        section.addEventListener("focusout", () => {
+            window.setTimeout(() => {
+                focusPaused = section.contains(document.activeElement);
+                scheduleAutoplay();
+            }, 0);
+        });
+
+        track.addEventListener("keydown", (event) => {
+            if (event.key === "ArrowLeft") {
+                event.preventDefault();
+                goToSlide(activeIndex - 1);
+            } else if (event.key === "ArrowRight") {
+                event.preventDefault();
+                goToSlide(activeIndex + 1);
+            } else if (event.key === "Home") {
+                event.preventDefault();
+                goToSlide(0);
+            } else if (event.key === "End") {
+                event.preventDefault();
+                goToSlide(slides.length - 1);
+            }
+        });
+
+        track.addEventListener("pointerdown", (event) => {
+            if (event.pointerType === "mouse" && event.button !== 0) return;
+            if (event.target.closest("a, button, input, select, textarea")) return;
+
+            pointerDown = true;
+            pointerStartX = event.clientX;
+            pointerDeltaX = 0;
+            dragged = false;
+            track.setPointerCapture?.(event.pointerId);
+            track.classList.add("is-dragging");
+            stopAutoplay();
+        });
+
+        track.addEventListener("pointermove", (event) => {
+            if (!pointerDown) return;
+
+            pointerDeltaX = event.clientX - pointerStartX;
+            dragged = dragged || Math.abs(pointerDeltaX) > 6;
+            const resistance = .88;
+            const translate = -activeIndex * slideWidth() + pointerDeltaX * resistance;
+            track.style.transform = `translate3d(${translate}px, 0, 0)`;
+        });
+
+        const finishDrag = () => {
+            if (!pointerDown) return;
+
+            pointerDown = false;
+            track.classList.remove("is-dragging");
+
+            const threshold = Math.min(Math.max(slideWidth() * .09, 56), 110);
+            if (Math.abs(pointerDeltaX) >= threshold) {
+                goToSlide(activeIndex + (pointerDeltaX < 0 ? 1 : -1));
+            } else {
+                updateTransform(true);
+                scheduleAutoplay();
+            }
+
+            pointerDeltaX = 0;
+        };
+
+        track.addEventListener("pointerup", finishDrag);
+        track.addEventListener("pointercancel", finishDrag);
+        track.addEventListener("lostpointercapture", finishDrag);
+
+        track.addEventListener("click", (event) => {
+            if (!dragged) return;
+            event.preventDefault();
+            event.stopPropagation();
+            dragged = false;
+        }, true);
+
+        document.addEventListener("visibilitychange", () => {
+            if (document.hidden) stopAutoplay();
+            else scheduleAutoplay();
         });
 
         reducedMotion.addEventListener?.("change", () => {
-            track.style.transform = "none";
-            if (isFreeScroll()) updateFreeScroll();
-            else updatePinned();
+            if (reducedMotion.matches) userPaused = true;
+            updateAutoplayButton();
+            updateTransform(false);
+            scheduleAutoplay();
         });
 
+        window.addEventListener("resize", () => updateTransform(false), { passive: true });
+
         if ("ResizeObserver" in window) {
-            new ResizeObserver(() => {
-                if (isFreeScroll()) updateFreeScroll();
-                else updatePinned();
-            }).observe(stage);
+            new ResizeObserver(() => updateTransform(false)).observe(track);
         }
 
-        setActive(0, 0);
-        if (isFreeScroll()) updateFreeScroll();
-        else updatePinned();
+        if ("IntersectionObserver" in window) {
+            const observer = new IntersectionObserver((entries) => {
+                carouselVisible = entries[0]?.isIntersecting ?? false;
+                scheduleAutoplay();
+            }, { threshold: .22 });
+
+            observer.observe(section);
+        } else {
+            carouselVisible = true;
+        }
+
+        updateInterface();
+        updateAutoplayButton();
+        updateTransform(false);
+        scheduleAutoplay();
     });
 })();
 </script>
