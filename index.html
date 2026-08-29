@@ -5794,6 +5794,2085 @@
      ========================================================= -->
 
 
+
+
+<section
+    class="bms-showcase"
+    id="building-management-system"
+    aria-labelledby="bms-showcase-title"
+>
+
+    <!-- Decorative background -->
+    <div class="bms-showcase__grid" aria-hidden="true"></div>
+    <div class="bms-showcase__glow bms-showcase__glow--one" aria-hidden="true"></div>
+    <div class="bms-showcase__glow bms-showcase__glow--two" aria-hidden="true"></div>
+
+    <div class="bms-showcase__container">
+
+        <!-- Top information rail -->
+        <div class="bms-showcase__topbar">
+
+            <div class="bms-showcase__section-id">
+                <span class="bms-showcase__index">05</span>
+                <span class="bms-showcase__id-line"></span>
+                <span>Building Management System</span>
+            </div>
+
+            <div class="bms-showcase__status">
+                <span class="bms-showcase__status-dot"></span>
+                Connected building intelligence
+            </div>
+
+        </div>
+
+
+        <!-- Main two-column layout -->
+        <div class="bms-showcase__layout">
+
+            <!-- LEFT — responsive BMS integration visual -->
+            <div class="bms-showcase__visual">
+
+                <picture class="bms-showcase__picture">
+                    <source
+                        media="(max-width: 575px)"
+                        srcset="assets/img/bms/bms-building-integration-mobile.png"
+                    >
+
+                    <img
+                        src="assets/img/bms/bms2.png"
+                        alt="HVAC, energy, lighting, fire and access systems integrated with a centralized BMS dashboard"
+                        class="bms-showcase__image"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </picture>
+
+            </div>
+
+
+            <!-- RIGHT — content -->
+            <div class="bms-showcase__content">
+
+                <p class="bms-showcase__eyebrow">
+                    <span></span>
+                    Intelligent building control
+                </p>
+
+                <h2
+                    class="bms-showcase__title"
+                    id="bms-showcase-title"
+                >
+                    <span>One Building.</span>
+                    <span>One Intelligent</span>
+                    <span>Control <em>Platform.</em></span>
+                </h2>
+
+                <p class="bms-showcase__description">
+                    Alpha Numeric Innovations delivers centralized Building
+                    Management Systems for monitoring and controlling HVAC,
+                    lighting, energy, water, fire safety, security and
+                    essential building utilities.
+                </p>
+
+
+                <!-- Six BMS capabilities -->
+                <div class="bms-showcase__features">
+
+                    <article class="bms-showcase__feature">
+                        <span>01</span>
+                        <div>
+                            <h3>HVAC Control</h3>
+                            <p>Climate and equipment control</p>
+                        </div>
+                    </article>
+
+                    <article class="bms-showcase__feature">
+                        <span>02</span>
+                        <div>
+                            <h3>Energy Monitoring</h3>
+                            <p>Real-time power visibility</p>
+                        </div>
+                    </article>
+
+                    <article class="bms-showcase__feature">
+                        <span>03</span>
+                        <div>
+                            <h3>Lighting Automation</h3>
+                            <p>Schedules and zone control</p>
+                        </div>
+                    </article>
+
+                    <article class="bms-showcase__feature">
+                        <span>04</span>
+                        <div>
+                            <h3>Fire Integration</h3>
+                            <p>Connected life-safety systems</p>
+                        </div>
+                    </article>
+
+                    <article class="bms-showcase__feature">
+                        <span>05</span>
+                        <div>
+                            <h3>Access &amp; Security</h3>
+                            <p>Centralized security status</p>
+                        </div>
+                    </article>
+
+                    <article class="bms-showcase__feature">
+                        <span>06</span>
+                        <div>
+                            <h3>Central Dashboard</h3>
+                            <p>One view across every system</p>
+                        </div>
+                    </article>
+
+                </div>
+
+
+                <!-- Buttons -->
+                <div class="bms-showcase__actions">
+
+                    <a href="bms.html" class="bms-showcase__button">
+                        <span>Explore BMS Solutions</span>
+                        <span class="bms-showcase__arrow">↗</span>
+                    </a>
+
+                    <a
+                        href="products.html#bms-products"
+                        class="bms-showcase__text-link"
+                    >
+                        <span>View BMS Products</span>
+                        <b>↗</b>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<style>
+
+/* =========================================================
+   BMS SECTION FOUNDATION
+========================================================= */
+
+.bms-showcase {
+    --bms-dark: #071012;
+    --bms-dark-soft: #0c1719;
+    --bms-accent: #69d2c8;
+    --bms-accent-light: #a5eee7;
+    --bms-white: #f7fbfa;
+    --bms-muted: rgba(238, 248, 246, 0.68);
+    --bms-line: rgba(226, 247, 244, 0.18);
+    --bms-ease: cubic-bezier(.22, 1, .36, 1);
+
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    overflow: hidden;
+    padding: 70px 0;
+    color: var(--bms-white);
+    background: #f3f3f1;
+    font-family:
+        "Varela Round",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+}
+
+.bms-showcase *,
+.bms-showcase *::before,
+.bms-showcase *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BACKGROUND DETAILS
+========================================================= */
+
+.bms-showcase__grid {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    opacity: .32;
+    background-image:
+        linear-gradient(rgba(7, 16, 18, .05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(7, 16, 18, .05) 1px, transparent 1px);
+    background-size: 88px 88px;
+    pointer-events: none;
+}
+
+.bms-showcase__glow {
+    position: absolute;
+    z-index: -2;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.bms-showcase__glow--one {
+    top: -260px;
+    right: -180px;
+    width: 620px;
+    height: 620px;
+    background: radial-gradient(circle, rgba(105, 210, 200, .17), transparent 68%);
+}
+
+.bms-showcase__glow--two {
+    bottom: -330px;
+    left: -150px;
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, rgba(70, 123, 120, .11), transparent 70%);
+}
+
+
+/* =========================================================
+   CONTAINER + TOPBAR
+========================================================= */
+
+.bms-showcase__container {
+    width: min(100% - 64px, 1460px);
+    margin-inline: auto;
+}
+
+.bms-showcase__topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid rgba(7, 16, 18, .15);
+}
+
+.bms-showcase__section-id,
+.bms-showcase__status {
+    display: flex;
+    align-items: center;
+    color: rgba(7, 16, 18, .60);
+    font-size: 10px;
+    line-height: 1;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.bms-showcase__section-id {
+    gap: 14px;
+}
+
+.bms-showcase__index {
+    color: #2d7974;
+}
+
+.bms-showcase__id-line {
+    width: 54px;
+    height: 1px;
+    background: rgba(7, 16, 18, .28);
+}
+
+.bms-showcase__status {
+    gap: 9px;
+}
+
+.bms-showcase__status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #3dbf86;
+    box-shadow: 0 0 0 5px rgba(61, 191, 134, .12);
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.bms-showcase__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(430px, .92fr);
+    min-height: 0;
+    margin-top: 32px;
+    background: var(--bms-dark);
+    box-shadow: 0 30px 80px rgba(7, 16, 18, .18);
+}
+
+
+/* =========================================================
+   LEFT VISUAL
+========================================================= */
+
+.bms-showcase__visual {
+    position: relative;
+    min-height: clamp(600px, 48vw, 720px);
+    overflow: hidden;
+    isolation: isolate;
+    background: #071012;
+}
+
+.bms-showcase__picture {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.bms-showcase__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    filter: saturate(.92) contrast(1.02);
+}
+
+.bms-showcase__visual:hover .bms-showcase__image {
+    filter: saturate(1) contrast(1.03);
+}
+
+
+/* =========================================================
+   RIGHT CONTENT
+========================================================= */
+
+.bms-showcase__content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: clamp(48px, 5.5vw, 84px);
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 100% 0%, rgba(105, 210, 200, .12), transparent 32%),
+        var(--bms-dark);
+}
+
+.bms-showcase__content::after {
+    content: "BMS";
+    position: absolute;
+    right: -18px;
+    bottom: -26px;
+    color: rgba(255, 255, 255, .025);
+    font-size: clamp(120px, 15vw, 230px);
+    line-height: .8;
+    letter-spacing: -.08em;
+    pointer-events: none;
+}
+
+.bms-showcase__eyebrow {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 24px;
+    color: var(--bms-accent-light);
+    font-size: 9px;
+    line-height: 1;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+}
+
+.bms-showcase__eyebrow > span {
+    width: 28px;
+    height: 1px;
+    background: var(--bms-accent);
+}
+
+.bms-showcase__title {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    color: var(--bms-white);
+    font-size: clamp(48px, 4.7vw, 76px);
+    font-weight: 400;
+    line-height: .99;
+    letter-spacing: -.055em;
+    text-wrap: balance;
+}
+
+.bms-showcase__title > span {
+    display: block;
+}
+
+.bms-showcase__title > span:nth-child(2) {
+    color: rgba(240, 250, 248, .54);
+}
+
+.bms-showcase__title em {
+    color: var(--bms-accent-light);
+    font-style: normal;
+}
+
+.bms-showcase__description {
+    position: relative;
+    z-index: 1;
+    max-width: 580px;
+    margin: 30px 0 0;
+    padding-top: 22px;
+    border-top: 1px solid var(--bms-line);
+    color: var(--bms-muted);
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   SIX FEATURES
+========================================================= */
+
+.bms-showcase__features {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 30px;
+    border-top: 1px solid var(--bms-line);
+    border-bottom: 1px solid var(--bms-line);
+}
+
+.bms-showcase__feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    min-width: 0;
+    padding: 17px 14px;
+    border-right: 1px solid var(--bms-line);
+    border-bottom: 1px solid var(--bms-line);
+    transition: background-color .35s ease;
+}
+
+.bms-showcase__feature:nth-child(2n) {
+    border-right: 0;
+}
+
+.bms-showcase__feature:nth-last-child(-n + 2) {
+    border-bottom: 0;
+}
+
+.bms-showcase__feature:hover {
+    background: rgba(230, 248, 245, .06);
+}
+
+.bms-showcase__feature > span {
+    flex: 0 0 auto;
+    padding-top: 2px;
+    color: var(--bms-accent-light);
+    font-size: 7px;
+    letter-spacing: .12em;
+}
+
+.bms-showcase__feature h3 {
+    margin: 0 0 5px;
+    color: rgba(248, 253, 252, .93);
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.bms-showcase__feature p {
+    margin: 0;
+    color: rgba(230, 247, 244, .45);
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+    font-size: 9px;
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.bms-showcase__actions {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 27px;
+    margin-top: 31px;
+}
+
+.bms-showcase__button {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    min-height: 50px;
+    padding: 0 20px;
+    overflow: hidden;
+    border: 1px solid rgba(217, 248, 244, .48);
+    color: var(--bms-white);
+    background: rgba(232, 249, 247, .06);
+    font-size: 9px;
+    letter-spacing: .16em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition:
+        color .35s ease,
+        border-color .35s ease,
+        transform .35s ease;
+}
+
+.bms-showcase__button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--bms-accent-light);
+    transform: translateX(-101%);
+    transition: transform .4s var(--bms-ease);
+}
+
+.bms-showcase__button:hover {
+    border-color: var(--bms-accent-light);
+    color: #0a3235;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.bms-showcase__button:hover::before {
+    transform: translateX(0);
+}
+
+.bms-showcase__arrow {
+    font-size: 16px;
+    line-height: 1;
+}
+
+.bms-showcase__text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, .36);
+    color: rgba(255, 255, 255, .82);
+    font-size: 8px;
+    letter-spacing: .16em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: gap .35s ease, border-color .35s ease;
+}
+
+.bms-showcase__text-link b {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.bms-showcase__text-link:hover {
+    gap: 21px;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   LAPTOP / TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .bms-showcase__layout {
+        grid-template-columns: 1fr;
+    }
+
+    .bms-showcase__visual {
+        min-height: 0;
+        aspect-ratio: 6 / 5;
+    }
+
+    .bms-showcase__content {
+        min-height: 680px;
+    }
+}
+
+
+@media (max-width: 820px) {
+
+    .bms-showcase {
+        padding: 58px 0;
+    }
+
+    .bms-showcase__container {
+        width: min(100% - 42px, 720px);
+    }
+
+    .bms-showcase__visual {
+        min-height: 0;
+        aspect-ratio: 6 / 5;
+    }
+
+    .bms-showcase__content {
+        min-height: 0;
+        padding: 58px 46px;
+    }
+
+    .bms-showcase__title {
+        font-size: clamp(48px, 9vw, 70px);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+    .bms-showcase {
+        padding: 48px 0;
+    }
+
+    .bms-showcase__container {
+        width: calc(100% - 36px);
+    }
+
+    .bms-showcase__topbar {
+        padding-bottom: 18px;
+    }
+
+    .bms-showcase__section-id {
+        font-size: 8px;
+        letter-spacing: .13em;
+    }
+
+    .bms-showcase__id-line {
+        width: 28px;
+    }
+
+    .bms-showcase__status {
+        display: none;
+    }
+
+    .bms-showcase__layout {
+        margin-top: 22px;
+    }
+
+    .bms-showcase__visual {
+        min-height: 0;
+        aspect-ratio: 3 / 4;
+    }
+
+    .bms-showcase__content {
+        padding: 48px 25px;
+    }
+
+    .bms-showcase__eyebrow {
+        margin-bottom: 18px;
+        font-size: 8px;
+        letter-spacing: .18em;
+    }
+
+    .bms-showcase__title {
+        font-size: clamp(39px, 12vw, 56px);
+        line-height: 1.01;
+    }
+
+    .bms-showcase__description {
+        margin-top: 25px;
+        padding-top: 18px;
+        font-size: 12.5px;
+        line-height: 1.72;
+    }
+
+    .bms-showcase__features {
+        grid-template-columns: 1fr;
+    }
+
+    .bms-showcase__feature {
+        border-right: 0;
+        border-bottom: 1px solid var(--bms-line);
+    }
+
+    .bms-showcase__feature:nth-last-child(-n + 2) {
+        border-bottom: 1px solid var(--bms-line);
+    }
+
+    .bms-showcase__feature:last-child {
+        border-bottom: 0;
+    }
+
+    .bms-showcase__actions {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .bms-showcase__button {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .bms-showcase__image,
+    .bms-showcase__button,
+    .bms-showcase__button::before,
+    .bms-showcase__text-link {
+        transition: none;
+    }
+}
+
+</style>
+
+
+
+
+
+
+
+
+<!-- =========================================================
+     ALPHA NUMERIC — BMS INTELLIGENCE SCROLL STORY
+
+     Recommended placement:
+     After the BMS connectivity architecture section.
+
+     Existing project dependencies:
+     - Varela Round
+     - Font Awesome 6.3
+
+     Required images:
+     assets/img/bms/scroll-story/01-unified-command-centre.png
+     assets/img/bms/scroll-story/02-multisite-hierarchy.png
+     assets/img/bms/scroll-story/03-greenfield-brownfield.png
+     assets/img/bms/scroll-story/04-open-integration-ai.png
+========================================================== -->
+
+<section class="bms-story" id="bms-intelligence-story" aria-labelledby="bms-story-title">
+    <div class="bms-story__grid" aria-hidden="true"></div>
+    <div class="bms-story__glow bms-story__glow--one" aria-hidden="true"></div>
+    <div class="bms-story__glow bms-story__glow--two" aria-hidden="true"></div>
+
+    <!-- Section introduction -->
+    <div class="bms-story__container bms-story__intro">
+        <div class="bms-story__topline">
+            <div class="bms-story__section-id">
+                <span>07</span>
+                <i></i>
+                <span>BMS Intelligence Journey</span>
+            </div>
+
+            <div class="bms-story__status">
+                <span></span>
+                Four connected capabilities
+            </div>
+        </div>
+
+        <div class="bms-story__intro-grid">
+            <div>
+                <p class="bms-story__eyebrow">
+                    <span></span>
+                    From connected assets to intelligent outcomes
+                </p>
+
+                <h2 id="bms-story-title">
+                    Four Views.<br>
+                    <em>One Complete</em><br>
+                    BMS Story.
+                </h2>
+            </div>
+
+            <div class="bms-story__intro-copy">
+                <p>
+                    Explore how Alpha Numeric Innovations unifies building systems,
+                    portfolios, new projects and existing infrastructure through one
+                    open, secure and scalable control architecture.
+                </p>
+
+                <div class="bms-story__intro-tags" aria-label="BMS outcomes">
+                    <span>Operate</span>
+                    <span>Optimize</span>
+                    <span>Predict</span>
+                    <span>Scale</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Desktop: vertical scroll drives horizontal movement.
+         Mobile: this becomes a native swipe carousel. -->
+    <div class="bms-story__stage">
+        <div class="bms-story__sticky">
+
+            <div class="bms-story__navigation bms-story__container">
+                <div class="bms-story__counter" aria-live="polite">
+                    <span class="bms-story__current">01</span>
+                    <i></i>
+                    <span>04</span>
+                </div>
+
+                <div class="bms-story__progress" aria-label="BMS story progress">
+                    <span class="bms-story__progress-fill"></span>
+
+                    <button type="button" data-bms-target="0" aria-label="Show Unified Command Centre"></button>
+                    <button type="button" data-bms-target="1" aria-label="Show Multi-Site Intelligence"></button>
+                    <button type="button" data-bms-target="2" aria-label="Show Greenfield and Retrofit"></button>
+                    <button type="button" data-bms-target="3" aria-label="Show Open Integration and AI"></button>
+                </div>
+
+                <div class="bms-story__controls">
+                    <span class="bms-story__hint">
+                        <i class="fa-solid fa-computer-mouse" aria-hidden="true"></i>
+                        Scroll to explore
+                    </span>
+
+                    <button type="button" class="bms-story__arrow" data-bms-direction="-1" aria-label="Previous story">
+                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                    </button>
+
+                    <button type="button" class="bms-story__arrow" data-bms-direction="1" aria-label="Next story">
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="bms-story__track" role="list">
+
+                <!-- 01 — Unified Command Centre -->
+                <article class="bms-story__slide is-active" data-bms-slide="0" role="listitem">
+                    <div class="bms-story__slide-shell">
+                        <div class="bms-story__content">
+                            <span class="bms-story__chapter">01 / Unified Operations</span>
+
+                            <h3>One Platform. One Login.<br><em>Complete Building Intelligence.</em></h3>
+
+                            <p>
+                                Bring critical utilities, comfort, life-safety and security
+                                systems into one coordinated operating environment—with a
+                                consistent view across web, workstation and mobile.
+                            </p>
+
+                            <ul class="bms-story__feature-list">
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Cross-system alarms and workflows</li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Live trends, schedules and commands</li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> One login with role-based access</li>
+                            </ul>
+
+                            <div class="bms-story__chips" aria-label="Integrated building systems">
+                                <span>HVAC</span><span>Power</span><span>Lighting</span>
+                                <span>Fire</span><span>Security</span><span>Water</span>
+                                <span>Elevators</span><span>IAQ</span><span>Solar + EV</span>
+                            </div>
+                        </div>
+
+                        <figure class="bms-story__visual">
+                            <img
+                                src="assets/img/bms/scroll-story/01-unified-command-centre.png"
+                                alt="Unified BMS command centre connected to HVAC, power, lighting, fire, security, water and other building systems"
+                                width="1800"
+                                height="1200"
+                                decoding="async"
+                            >
+                            <span class="bms-story__scan" aria-hidden="true"></span>
+                            <span class="bms-story__corner bms-story__corner--one" aria-hidden="true"></span>
+                            <span class="bms-story__corner bms-story__corner--two" aria-hidden="true"></span>
+                        </figure>
+                    </div>
+                </article>
+
+
+                <!-- 02 — Multi-Site Intelligence -->
+                <article class="bms-story__slide" data-bms-slide="1" role="listitem">
+                    <div class="bms-story__slide-shell">
+                        <div class="bms-story__content">
+                            <span class="bms-story__chapter">02 / Portfolio Intelligence</span>
+
+                            <h3>Unified Monitoring.<br><em>Portfolio to Equipment.</em></h3>
+
+                            <p>
+                                Move from enterprise-level performance to the exact floor,
+                                zone or asset that needs attention—without changing tools
+                                or losing operational context.
+                            </p>
+
+                            <div class="bms-story__hierarchy" aria-label="Monitoring hierarchy">
+                                <span>Portfolio</span><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                                <span>Site</span><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                                <span>Building</span><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                                <span>Floor</span><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                                <span>Equipment</span>
+                            </div>
+
+                            <ul class="bms-story__feature-list">
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Multi-site benchmarking and reporting</li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Remote web and mobile operations</li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Central alarm escalation and audit trails</li>
+                            </ul>
+                        </div>
+
+                        <figure class="bms-story__visual">
+                            <img
+                                src="assets/img/bms/scroll-story/02-multisite-hierarchy.png"
+                                alt="A unified platform monitoring office, healthcare, hospitality, industrial and residential buildings down to floor and equipment level"
+                                width="1800"
+                                height="1200"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <span class="bms-story__scan" aria-hidden="true"></span>
+                            <span class="bms-story__corner bms-story__corner--one" aria-hidden="true"></span>
+                            <span class="bms-story__corner bms-story__corner--two" aria-hidden="true"></span>
+                        </figure>
+                    </div>
+                </article>
+
+
+                <!-- 03 — Greenfield + Retrofit -->
+                <article class="bms-story__slide" data-bms-slide="2" role="listitem">
+                    <div class="bms-story__slide-shell">
+                        <div class="bms-story__content">
+                            <span class="bms-story__chapter">03 / Flexible Deployment</span>
+
+                            <h3>Greenfield + Retrofit.<br><em>One Scalable Architecture.</em></h3>
+
+                            <p>
+                                Deploy a complete native BMS for new construction or add
+                                intelligence to existing assets through staged retrofit—while
+                                protecting usable equipment and capital investment.
+                            </p>
+
+                            <div class="bms-story__comparison">
+                                <div>
+                                    <i class="fa-solid fa-building-circle-check" aria-hidden="true"></i>
+                                    <span>Greenfield</span>
+                                    <small>Designed-in controls, networks and analytics from day one.</small>
+                                </div>
+
+                                <div>
+                                    <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+                                    <span>Brownfield / Retrofit</span>
+                                    <small>Gateways, meters and sensors added in manageable phases.</small>
+                                </div>
+                            </div>
+
+                            <ul class="bms-story__feature-list">
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Vendor-neutral phased migration</li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Reduced downtime and replacement cost</li>
+                            </ul>
+                        </div>
+
+                        <figure class="bms-story__visual">
+                            <img
+                                src="assets/img/bms/scroll-story/03-greenfield-brownfield.png"
+                                alt="A new smart building under construction and an existing commercial building connected to the same BMS platform"
+                                width="1800"
+                                height="1200"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <span class="bms-story__scan" aria-hidden="true"></span>
+                            <span class="bms-story__corner bms-story__corner--one" aria-hidden="true"></span>
+                            <span class="bms-story__corner bms-story__corner--two" aria-hidden="true"></span>
+                        </figure>
+                    </div>
+                </article>
+
+
+                <!-- 04 — Open Integration + AI -->
+                <article class="bms-story__slide" data-bms-slide="3" role="listitem">
+                    <div class="bms-story__slide-shell">
+                        <div class="bms-story__content">
+                            <span class="bms-story__chapter">04 / Open Intelligence</span>
+
+                            <h3>Wired. Wireless. Edge. Cloud.<br><em>Open Integration.</em></h3>
+
+                            <p>
+                                Connect field systems through secure edge, on-premise or cloud
+                                architecture. Turn continuous operational data into early warnings,
+                                energy improvements and maintenance priorities.
+                            </p>
+
+                            <div class="bms-story__chips bms-story__chips--protocols" aria-label="Supported integration protocols">
+                                <span>BACnet/IP</span><span>Modbus</span><span>KNX</span>
+                                <span>MQTT</span><span>OPC UA</span><span>REST API</span>
+                                <span>Wi-Fi</span><span>BLE</span><span>LoRaWAN</span>
+                            </div>
+
+                            <ul class="bms-story__feature-list">
+                                <li><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Segmented, role-based cybersecurity</li>
+                                <li><i class="fa-solid fa-brain" aria-hidden="true"></i> Fault detection and predictive maintenance</li>
+                                <li><i class="fa-solid fa-leaf" aria-hidden="true"></i> Energy, demand and carbon optimization</li>
+                            </ul>
+
+                            <div class="bms-story__actions">
+                                <a href="bms.html">Explore BMS Solutions <span>↗</span></a>
+                                <a href="products.html#bms-products">View Products <span>↗</span></a>
+                            </div>
+                        </div>
+
+                        <figure class="bms-story__visual">
+                            <img
+                                src="assets/img/bms/scroll-story/04-open-integration-ai.png"
+                                alt="Open BMS architecture connecting wired and wireless buildings through edge gateways to secure cloud analytics and dashboards"
+                                width="1800"
+                                height="1200"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <span class="bms-story__scan" aria-hidden="true"></span>
+                            <span class="bms-story__corner bms-story__corner--one" aria-hidden="true"></span>
+                            <span class="bms-story__corner bms-story__corner--two" aria-hidden="true"></span>
+                        </figure>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<style>
+/* =========================================================
+   BMS STORY — FOUNDATION
+========================================================= */
+.bms-story {
+    --bss-bg: #061012;
+    --bss-panel: #0a1518;
+    --bss-panel-2: #0d1b1e;
+    --bss-accent: #ff4c24;
+    --bss-teal: #72ddd2;
+    --bss-accent-soft: rgba(255, 76, 36, .14);
+    --bss-white: #f6fbfa;
+    --bss-muted: rgba(230, 247, 244, .60);
+    --bss-line: rgba(224, 246, 243, .15);
+    --bss-ease: cubic-bezier(.22, 1, .36, 1);
+
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    overflow: clip;
+    color: var(--bss-white);
+    background:
+        radial-gradient(circle at 75% 18%, rgba(255, 76, 36, .09), transparent 29%),
+        linear-gradient(180deg, #081315 0%, var(--bss-bg) 100%);
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.bms-story *,
+.bms-story *::before,
+.bms-story *::after {
+    box-sizing: border-box;
+}
+
+.bms-story__container {
+    width: min(calc(100% - 72px), 1460px);
+    margin-inline: auto;
+}
+
+.bms-story__grid {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    opacity: .38;
+    background-image:
+        linear-gradient(rgba(114, 221, 210, .028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(114, 221, 210, .028) 1px, transparent 1px);
+    background-size: 76px 76px;
+    pointer-events: none;
+}
+
+.bms-story__glow {
+    position: absolute;
+    z-index: -1;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: .12;
+    background: var(--bss-accent);
+    pointer-events: none;
+}
+
+.bms-story__glow--one { top: 12%; right: -220px; }
+.bms-story__glow--two { top: 62%; left: -260px; }
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+.bms-story__intro {
+    padding: clamp(82px, 9vw, 142px) 0 clamp(68px, 7vw, 112px);
+}
+
+.bms-story__topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    padding-bottom: 23px;
+    border-bottom: 1px solid var(--bss-line);
+}
+
+.bms-story__section-id,
+.bms-story__status {
+    display: flex;
+    align-items: center;
+    color: rgba(233, 249, 247, .56);
+    font-size: 8px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+.bms-story__section-id { gap: 15px; }
+.bms-story__section-id > span:first-child { color: var(--bss-accent); }
+
+.bms-story__section-id i {
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: var(--bss-line);
+}
+
+.bms-story__status { gap: 9px; }
+
+.bms-story__status > span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #49dfa0;
+    box-shadow: 0 0 14px rgba(73, 223, 160, .75);
+    animation: bss-pulse 1.8s ease-in-out infinite;
+}
+
+.bms-story__intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(300px, .66fr);
+    align-items: end;
+    gap: clamp(50px, 8vw, 130px);
+    padding-top: clamp(54px, 7vw, 94px);
+}
+
+.bms-story__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 27px;
+    color: var(--bss-accent);
+    font-size: 8px;
+    letter-spacing: .17em;
+    text-transform: uppercase;
+}
+
+.bms-story__eyebrow > span {
+    width: 7px;
+    height: 7px;
+    border: 1px solid var(--bss-accent);
+    transform: rotate(45deg);
+}
+
+.bms-story__intro h2 {
+    margin: 0;
+    color: var(--bss-white);
+    font-size: clamp(52px, 6.2vw, 98px);
+    font-weight: 400;
+    line-height: .95;
+    letter-spacing: -.062em;
+}
+
+.bms-story__intro h2 em {
+    color: rgba(235, 249, 247, .43);
+    font-style: normal;
+}
+
+.bms-story__intro-copy {
+    padding-top: 25px;
+    border-top: 1px solid var(--bss-line);
+}
+
+.bms-story__intro-copy > p {
+    margin: 0;
+    color: var(--bss-muted);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.82;
+}
+
+.bms-story__intro-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 26px;
+}
+
+.bms-story__intro-tags span {
+    padding: 8px 10px;
+    border: 1px solid var(--bss-line);
+    color: rgba(240, 251, 249, .62);
+    background: rgba(240, 251, 249, .035);
+    font-size: 7px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   PINNED SCROLL STAGE
+========================================================= */
+.bms-story__stage {
+    position: relative;
+    height: 400svh;
+}
+
+.bms-story__sticky {
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    width: 100%;
+    height: 100svh;
+    min-height: 660px;
+    overflow: hidden;
+    background: rgba(6, 16, 18, .74);
+    backdrop-filter: blur(16px);
+}
+
+.bms-story__navigation {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 76px minmax(240px, 1fr) auto;
+    align-items: center;
+    gap: 30px;
+    min-height: 82px;
+    border-bottom: 1px solid var(--bss-line);
+}
+
+.bms-story__counter {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: rgba(232, 248, 245, .42);
+    font-size: 8px;
+    letter-spacing: .15em;
+}
+
+.bms-story__counter .bms-story__current {
+    color: var(--bss-accent);
+    font-size: 11px;
+}
+
+.bms-story__counter i {
+    width: 24px;
+    height: 1px;
+    background: var(--bss-line);
+}
+
+.bms-story__progress {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 22px;
+}
+
+.bms-story__progress::before,
+.bms-story__progress-fill {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    height: 1px;
+    transform: translateY(-50%);
+}
+
+.bms-story__progress::before { background: var(--bss-line); }
+
+.bms-story__progress-fill {
+    z-index: 1;
+    background: linear-gradient(90deg, var(--bss-accent), var(--bss-teal));
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: left;
+    will-change: transform;
+}
+
+.bms-story__progress button {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.bms-story__progress button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    border: 1px solid rgba(219, 246, 242, .45);
+    border-radius: 50%;
+    background: var(--bss-bg);
+    transform: translate(-50%, -50%);
+    transition: background .3s ease, box-shadow .3s ease, transform .3s ease;
+}
+
+.bms-story__progress button:last-child::after { left: 100%; }
+
+.bms-story__progress button.is-active::after {
+    background: var(--bss-accent);
+    box-shadow: 0 0 0 5px rgba(114, 221, 210, .10), 0 0 14px rgba(114, 221, 210, .65);
+    transform: translate(-50%, -50%) scale(1.15);
+}
+
+.bms-story__controls {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.bms-story__hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 12px;
+    color: rgba(232, 248, 245, .42);
+    font-size: 7px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.bms-story__hint i { color: var(--bss-accent); }
+
+.bms-story__arrow {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 1px solid var(--bss-line);
+    color: rgba(245, 252, 251, .72);
+    background: rgba(238, 251, 249, .035);
+    cursor: pointer;
+    transition: color .3s ease, border-color .3s ease, background .3s ease, transform .3s ease;
+}
+
+.bms-story__arrow:hover {
+    color: #082c2f;
+    border-color: var(--bss-accent);
+    background: var(--bss-accent);
+    transform: translateY(-2px);
+}
+
+.bms-story__track {
+    display: flex;
+    width: max-content;
+    min-height: 0;
+    will-change: transform;
+}
+
+.bms-story__slide {
+    flex: 0 0 100vw;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    min-width: 0;
+    min-height: 0;
+    padding: 28px 0 40px;
+}
+
+.bms-story__slide-shell {
+    display: grid;
+    grid-template-columns: minmax(330px, .70fr) minmax(0, 1.42fr);
+    width: min(calc(100% - 72px), 1460px);
+    height: min(73svh, 730px);
+    min-height: 500px;
+    margin-inline: auto;
+    overflow: hidden;
+    border: 1px solid var(--bss-line);
+    background: rgba(10, 21, 24, .82);
+    box-shadow: 0 34px 90px rgba(0, 0, 0, .34);
+}
+
+
+/* =========================================================
+   CONTENT PANEL — NEVER OVERLAPS THE IMAGE
+========================================================= */
+.bms-story__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    padding: clamp(30px, 3.7vw, 58px);
+    border-right: 1px solid var(--bss-line);
+    background:
+        linear-gradient(150deg, rgba(114, 221, 210, .055), transparent 35%),
+        var(--bss-panel);
+}
+
+.bms-story__content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 0;
+    background: var(--bss-accent);
+    transition: height 1s var(--bss-ease) .18s;
+}
+
+.bms-story__slide.is-active .bms-story__content::before { height: 100%; }
+
+.bms-story__chapter {
+    display: block;
+    margin-bottom: 23px;
+    color: var(--bss-accent);
+    font-size: 8px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+.bms-story__content h3 {
+    margin: 0;
+    color: var(--bss-white);
+    font-size: clamp(31px, 3vw, 50px);
+    font-weight: 400;
+    line-height: 1.06;
+    letter-spacing: -.052em;
+}
+
+.bms-story__content h3 em {
+    color: rgba(235, 249, 247, .43);
+    font-style: normal;
+}
+
+.bms-story__content > p {
+    margin: 23px 0 0;
+    color: var(--bss-muted);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.72;
+}
+
+.bms-story__feature-list {
+    display: grid;
+    gap: 9px;
+    margin: 23px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.bms-story__feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: rgba(237, 249, 247, .68);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 10.5px;
+    line-height: 1.45;
+}
+
+.bms-story__feature-list i {
+    width: 15px;
+    padding-top: 2px;
+    color: var(--bss-accent);
+    font-size: 8px;
+    text-align: center;
+}
+
+.bms-story__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 23px;
+}
+
+.bms-story__chips span {
+    padding: 7px 8px;
+    border: 1px solid var(--bss-line);
+    color: rgba(235, 249, 247, .57);
+    background: rgba(238, 251, 249, .035);
+    font-size: 6.5px;
+    letter-spacing: .10em;
+    text-transform: uppercase;
+}
+
+.bms-story__chips--protocols span {
+    color: rgba(204, 244, 240, .74);
+    border-color: rgba(114, 221, 210, .18);
+    background: rgba(114, 221, 210, .055);
+}
+
+.bms-story__hierarchy {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 25px;
+}
+
+.bms-story__hierarchy span {
+    color: rgba(239, 250, 248, .75);
+    font-size: 7px;
+    letter-spacing: .10em;
+    text-transform: uppercase;
+}
+
+.bms-story__hierarchy i {
+    color: var(--bss-accent);
+    font-size: 6px;
+}
+
+.bms-story__comparison {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+    margin-top: 24px;
+}
+
+.bms-story__comparison > div {
+    padding: 14px;
+    border: 1px solid var(--bss-line);
+    background: rgba(240, 252, 250, .035);
+}
+
+.bms-story__comparison i,
+.bms-story__comparison span,
+.bms-story__comparison small {
+    display: block;
+}
+
+.bms-story__comparison i {
+    margin-bottom: 12px;
+    color: var(--bss-accent);
+    font-size: 14px;
+}
+
+.bms-story__comparison span {
+    color: rgba(244, 252, 251, .88);
+    font-size: 8px;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+}
+
+.bms-story__comparison small {
+    margin-top: 8px;
+    color: rgba(225, 244, 241, .48);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 9px;
+    line-height: 1.48;
+}
+
+.bms-story__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.bms-story__actions a {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 40px;
+    padding: 0 14px;
+    border: 1px solid rgba(213, 246, 242, .30);
+    color: rgba(246, 252, 251, .84);
+    background: rgba(238, 251, 249, .045);
+    font-size: 7px;
+    letter-spacing: .12em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color .3s ease, background .3s ease, transform .3s ease;
+}
+
+.bms-story__actions a:hover {
+    color: #082c2f;
+    background: var(--bss-accent);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   IMAGE PANEL
+========================================================= */
+.bms-story__visual {
+    position: relative;
+    min-width: 0;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: #03090c;
+}
+
+.bms-story__visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+        linear-gradient(90deg, rgba(5, 14, 17, .20), transparent 24%),
+        linear-gradient(180deg, transparent 68%, rgba(2, 9, 11, .20));
+    pointer-events: none;
+}
+
+.bms-story__visual img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(.90) contrast(1.035);
+    transform: scale(1.065);
+    transition: transform 1.25s var(--bss-ease), filter .8s ease;
+}
+
+.bms-story__slide.is-active .bms-story__visual img {
+    filter: saturate(1) contrast(1.04);
+    transform: scale(1);
+}
+
+.bms-story__scan {
+    position: absolute;
+    top: -10%;
+    bottom: -10%;
+    left: -22%;
+    z-index: 3;
+    width: 17%;
+    opacity: 0;
+    background: linear-gradient(90deg, transparent, rgba(114, 221, 210, .18), transparent);
+    transform: skewX(-13deg);
+    pointer-events: none;
+}
+
+.bms-story__slide.is-active .bms-story__scan {
+    opacity: .7;
+    animation: bss-scan 6.8s linear infinite .3s;
+}
+
+.bms-story__corner {
+    position: absolute;
+    z-index: 4;
+    width: 44px;
+    height: 44px;
+    border-color: rgba(151, 239, 231, .64);
+    pointer-events: none;
+}
+
+.bms-story__corner--one {
+    top: 18px;
+    right: 18px;
+    border-top: 1px solid;
+    border-right: 1px solid;
+}
+
+.bms-story__corner--two {
+    bottom: 18px;
+    left: 18px;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+}
+
+
+/* =========================================================
+   MOTION
+========================================================= */
+@keyframes bss-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: .48; transform: scale(.82); }
+}
+
+@keyframes bss-scan {
+    from { left: -22%; }
+    to { left: 115%; }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 1200px) {
+    .bms-story__slide-shell {
+        grid-template-columns: minmax(315px, .78fr) minmax(0, 1.22fr);
+    }
+
+    .bms-story__content {
+        padding: 32px;
+    }
+
+    .bms-story__content h3 {
+        font-size: clamp(29px, 3.2vw, 42px);
+    }
+
+    .bms-story__content > p {
+        font-size: 11.5px;
+    }
+
+    .bms-story__chips {
+        margin-top: 18px;
+    }
+}
+
+@media (max-width: 900px), (prefers-reduced-motion: reduce) {
+    .bms-story__stage {
+        height: auto;
+        padding-bottom: 78px;
+    }
+
+    .bms-story__sticky {
+        position: relative;
+        top: auto;
+        display: block;
+        height: auto;
+        min-height: 0;
+        overflow: visible;
+    }
+
+    .bms-story__track {
+        display: flex;
+        gap: 18px;
+        width: auto;
+        padding: 26px max(26px, calc((100vw - 820px) / 2));
+        overflow-x: auto;
+        scroll-padding-inline: 26px;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        transform: none !important;
+    }
+
+    .bms-story__track::-webkit-scrollbar { display: none; }
+
+    .bms-story__slide {
+        flex: 0 0 min(88vw, 820px);
+        display: block;
+        width: min(88vw, 820px);
+        min-height: 0;
+        padding: 0;
+        scroll-snap-align: center;
+    }
+
+    .bms-story__slide-shell {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+    }
+
+    .bms-story__hint i::before { content: "\f337"; }
+    .bms-story__hint { font-size: 0; }
+    .bms-story__hint::after {
+        content: "Swipe to explore";
+        font-size: 7px;
+    }
+}
+
+@media (max-width: 900px) {
+    .bms-story__container {
+        width: min(calc(100% - 42px), 820px);
+    }
+
+    .bms-story__intro-grid {
+        grid-template-columns: 1fr;
+        align-items: start;
+        gap: 44px;
+    }
+
+    .bms-story__intro-copy { max-width: 650px; }
+
+    .bms-story__navigation {
+        width: min(calc(100% - 42px), 820px);
+        grid-template-columns: 62px minmax(100px, 1fr) auto;
+        gap: 16px;
+    }
+
+    .bms-story__slide-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .bms-story__content {
+        min-height: 430px;
+        border-right: 0;
+        border-bottom: 1px solid var(--bss-line);
+    }
+
+    .bms-story__visual {
+        aspect-ratio: 3 / 2;
+        height: auto;
+    }
+}
+
+@media (max-width: 575px) {
+    .bms-story__container {
+        width: calc(100% - 36px);
+    }
+
+    .bms-story__intro {
+        padding: 70px 0 62px;
+    }
+
+    .bms-story__status { display: none; }
+
+    .bms-story__section-id {
+        font-size: 7px;
+        letter-spacing: .12em;
+    }
+
+    .bms-story__section-id i { width: 30px; }
+
+    .bms-story__intro-grid { padding-top: 48px; }
+
+    .bms-story__intro h2 {
+        font-size: clamp(42px, 13vw, 61px);
+        line-height: .98;
+    }
+
+    .bms-story__navigation {
+        width: calc(100% - 36px);
+        grid-template-columns: 48px 1fr auto;
+        min-height: 72px;
+    }
+
+    .bms-story__controls { gap: 6px; }
+    .bms-story__hint { display: none; }
+
+    .bms-story__arrow {
+        width: 32px;
+        height: 32px;
+    }
+
+    .bms-story__track {
+        gap: 12px;
+        padding: 20px 18px;
+        scroll-padding-inline: 18px;
+    }
+
+    .bms-story__slide {
+        flex-basis: 92vw;
+        width: 92vw;
+    }
+
+    .bms-story__content {
+        min-height: 0;
+        padding: 30px 24px;
+    }
+
+    .bms-story__content h3 {
+        font-size: clamp(29px, 9vw, 38px);
+    }
+
+    .bms-story__comparison {
+        grid-template-columns: 1fr;
+    }
+
+    .bms-story__actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .bms-story__actions a {
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bms-story *,
+    .bms-story *::before,
+    .bms-story *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition-duration: .01ms !important;
+    }
+}
+</style>
+
+
+<script>
+(() => {
+    "use strict";
+
+    document.querySelectorAll(".bms-story").forEach((section) => {
+        const stage = section.querySelector(".bms-story__stage");
+        const track = section.querySelector(".bms-story__track");
+        const slides = [...section.querySelectorAll("[data-bms-slide]")];
+        const progressFill = section.querySelector(".bms-story__progress-fill");
+        const progressButtons = [...section.querySelectorAll("[data-bms-target]")];
+        const arrows = [...section.querySelectorAll("[data-bms-direction]")];
+        const currentLabel = section.querySelector(".bms-story__current");
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+        const mobileLayout = window.matchMedia("(max-width: 900px)");
+
+        if (!stage || !track || slides.length < 2) return;
+
+        let activeIndex = 0;
+        let frameRequested = false;
+
+        const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+        const isFreeScroll = () => mobileLayout.matches || reducedMotion.matches;
+
+        const setActive = (index, progress) => {
+            const nextIndex = clamp(index, 0, slides.length - 1);
+            activeIndex = nextIndex;
+
+            slides.forEach((slide, slideIndex) => {
+                slide.classList.toggle("is-active", slideIndex === nextIndex);
+                slide.setAttribute("aria-hidden", slideIndex === nextIndex ? "false" : "true");
+            });
+
+            progressButtons.forEach((button, buttonIndex) => {
+                button.classList.toggle("is-active", buttonIndex === nextIndex);
+                button.setAttribute("aria-current", buttonIndex === nextIndex ? "step" : "false");
+            });
+
+            if (currentLabel) currentLabel.textContent = String(nextIndex + 1).padStart(2, "0");
+            if (progressFill) progressFill.style.transform = `translateY(-50%) scaleX(${clamp(progress, 0, 1)})`;
+        };
+
+        const updatePinned = () => {
+            frameRequested = false;
+            if (isFreeScroll()) return;
+
+            const rect = stage.getBoundingClientRect();
+            const distance = Math.max(stage.offsetHeight - window.innerHeight, 1);
+            const progress = clamp(-rect.top / distance, 0, 1);
+            const maxTranslate = Math.max(track.scrollWidth - window.innerWidth, 0);
+            const translate = progress * maxTranslate;
+
+            track.style.transform = `translate3d(${-translate}px, 0, 0)`;
+            setActive(Math.round(progress * (slides.length - 1)), progress);
+        };
+
+        const requestPinnedUpdate = () => {
+            if (frameRequested || isFreeScroll()) return;
+            frameRequested = true;
+            window.requestAnimationFrame(updatePinned);
+        };
+
+        const updateFreeScroll = () => {
+            if (!isFreeScroll()) return;
+
+            const trackRect = track.getBoundingClientRect();
+            const trackCenter = trackRect.left + trackRect.width / 2;
+            let closestIndex = 0;
+            let closestDistance = Infinity;
+
+            slides.forEach((slide, index) => {
+                const rect = slide.getBoundingClientRect();
+                const distance = Math.abs(rect.left + rect.width / 2 - trackCenter);
+                if (distance < closestDistance) {
+                    closestDistance = distance;
+                    closestIndex = index;
+                }
+            });
+
+            const denominator = Math.max(track.scrollWidth - track.clientWidth, 1);
+            setActive(closestIndex, track.scrollLeft / denominator);
+        };
+
+        const goToSlide = (index) => {
+            const targetIndex = clamp(index, 0, slides.length - 1);
+
+            if (isFreeScroll()) {
+                slides[targetIndex].scrollIntoView({
+                    behavior: reducedMotion.matches ? "auto" : "smooth",
+                    block: "nearest",
+                    inline: "center"
+                });
+                return;
+            }
+
+            const stageTop = stage.getBoundingClientRect().top + window.scrollY;
+            const distance = Math.max(stage.offsetHeight - window.innerHeight, 1);
+            const targetTop = stageTop + (targetIndex / (slides.length - 1)) * distance;
+
+            window.scrollTo({
+                top: targetTop,
+                behavior: reducedMotion.matches ? "auto" : "smooth"
+            });
+        };
+
+        progressButtons.forEach((button) => {
+            button.addEventListener("click", () => goToSlide(Number(button.dataset.bmsTarget)));
+        });
+
+        arrows.forEach((button) => {
+            button.addEventListener("click", () => {
+                goToSlide(activeIndex + Number(button.dataset.bmsDirection));
+            });
+        });
+
+        window.addEventListener("scroll", requestPinnedUpdate, { passive: true });
+        window.addEventListener("resize", () => {
+            track.style.transform = "none";
+            if (isFreeScroll()) updateFreeScroll();
+            else updatePinned();
+        }, { passive: true });
+
+        track.addEventListener("scroll", () => {
+            if (!isFreeScroll()) return;
+            window.requestAnimationFrame(updateFreeScroll);
+        }, { passive: true });
+
+        mobileLayout.addEventListener?.("change", () => {
+            track.style.transform = "none";
+            if (isFreeScroll()) updateFreeScroll();
+            else updatePinned();
+        });
+
+        reducedMotion.addEventListener?.("change", () => {
+            track.style.transform = "none";
+            if (isFreeScroll()) updateFreeScroll();
+            else updatePinned();
+        });
+
+        if ("ResizeObserver" in window) {
+            new ResizeObserver(() => {
+                if (isFreeScroll()) updateFreeScroll();
+                else updatePinned();
+            }).observe(stage);
+        }
+
+        setActive(0, 0);
+        if (isFreeScroll()) updateFreeScroll();
+        else updatePinned();
+    });
+})();
+</script>
+
+
+
+
+     
+
 <!-- =========================================================
      ALPHA NUMERIC — PREMIUM CORE VALUES SECTION
      Architectural corporate layout | No curves
