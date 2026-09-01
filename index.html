@@ -730,8 +730,23 @@
         scale(.93);
 }
 
-.energy-preview-card[data-slot="current"] {
+.energy-preview-card[data-slot="3"] {
     z-index: 1;
+    opacity: .82;
+    transform:
+        translate3d(
+            calc(
+                var(--card-width) + var(--card-width) + var(--card-width) +
+                var(--card-gap) + var(--card-gap) + var(--card-gap)
+            ),
+            48px,
+            0
+        )
+        scale(.90);
+}
+
+.energy-preview-card[data-slot="current"] {
+    z-index: 0;
     opacity: 0;
     pointer-events: none;
     transform:
@@ -741,6 +756,23 @@
                 var(--card-gap) + var(--card-gap) + var(--card-gap)
             ),
             48px,
+            0
+        )
+        scale(.88);
+}
+
+.energy-preview-card[data-slot="hidden"] {
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform:
+        translate3d(
+            calc(
+                var(--card-width) + var(--card-width) + var(--card-width) + var(--card-width) +
+                var(--card-gap) + var(--card-gap) + var(--card-gap) + var(--card-gap)
+            ),
+            64px,
             0
         )
         scale(.88);
@@ -1366,11 +1398,15 @@
 }
 </style>
 
+<!-- =========================================================
+     HERO HTML
+========================================================= -->
+
 <header
     class="energy-hero"
     data-energy-hero
     data-interval="6000"
-    aria-label="Energy solutions">
+    aria-label="Power, energy and BMS IoT solutions">
 
     <div class="energy-hero__stage">
 
@@ -1530,9 +1566,48 @@
         </article>
 
 
+        <!-- SLIDE 05 — BMS IOT -->
+
+        <article
+            class="energy-slide"
+            data-accent="#55d7d0"
+            style="--slide-accent:#55d7d0;"
+            aria-hidden="true">
+
+            <img
+                class="energy-slide__image"
+                src="assets/img/banners/iotbanner1.png"
+                alt="Smart building management and IoT monitoring solutions">
+
+            <div class="energy-slide__overlay"></div>
+
+            <div class="energy-slide__content">
+
+                <div class="energy-kicker">
+                    Smart Building Automation
+                </div>
+
+                <h1 class="energy-slide__title">
+                    BMS IoT
+                </h1>
+
+                <p class="energy-slide__description">
+                    Connected building intelligence for centralized control,
+                    real-time monitoring and smarter energy performance.
+                </p>
+
+                <a class="energy-slide__button" href="bms-iot.html" tabindex="-1">
+                    Explore BMS IoT
+                </a>
+
+            </div>
+
+        </article>
+
+
         <!-- ANIMATED PREVIEW CARDS -->
 
-        <aside class="energy-preview-rail" aria-label="Choose an energy solution">
+        <aside class="energy-preview-rail" aria-label="Choose a solution">
 
             <button
                 class="energy-preview-card"
@@ -1666,6 +1741,38 @@
 
             </button>
 
+            <button
+                class="energy-preview-card"
+                type="button"
+                data-slide="4"
+                data-slot="3"
+                aria-label="Show BMS IoT slide"
+                aria-pressed="false"
+                style="--card-accent:#55d7d0;">
+
+                <span class="energy-preview-card__surface">
+
+                    <img
+                        class="energy-preview-card__image"
+                        src="assets/img/banners/iotbanner1.png"
+                        alt="">
+
+                    <span class="energy-preview-card__shade"></span>
+
+                    <span class="energy-preview-card__top">
+                        <span class="energy-preview-card__category">Smart Building Automation</span>
+                        <span class="energy-preview-card__index">05</span>
+                    </span>
+
+                    <span class="energy-preview-card__bottom">
+                        <span class="energy-preview-card__title">BMS IoT</span>
+                        <span class="energy-preview-card__arrow">→</span>
+                    </span>
+
+                </span>
+
+            </button>
+
         </aside>
 
 
@@ -1680,7 +1787,7 @@
                     <span class="energy-progress__fill"></span>
                 </span>
 
-                <span>04</span>
+                <span>05</span>
             </div>
 
             <div class="energy-dots" aria-label="Hero slides">
@@ -1688,6 +1795,7 @@
                 <button class="energy-dot" type="button" data-dot="1" aria-label="Show slide 2"></button>
                 <button class="energy-dot" type="button" data-dot="2" aria-label="Show slide 3"></button>
                 <button class="energy-dot" type="button" data-dot="3" aria-label="Show slide 4"></button>
+                <button class="energy-dot" type="button" data-dot="4" aria-label="Show slide 5"></button>
             </div>
 
             <div class="energy-arrows">
@@ -1711,7 +1819,6 @@
     </div>
 
 </header>
-
 
 <!-- =========================================================
      HERO JAVASCRIPT
@@ -1738,6 +1845,7 @@
         const total = slides.length;
         const interval = Number(hero.dataset.interval) || 6000;
         const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const compactCards = window.matchMedia("(max-width: 767px)");
 
         let activeIndex = 0;
         let transitionLocked = false;
@@ -1754,6 +1862,8 @@
 
 
         function setCardPositions() {
+            const maximumVisibleDistance = compactCards.matches ? 3 : 4;
+
             cards.forEach(function (card, cardIndex) {
                 const distance = (cardIndex - activeIndex + total) % total;
 
@@ -1761,10 +1871,14 @@
                     card.dataset.slot = "current";
                     card.setAttribute("aria-pressed", "true");
                     card.setAttribute("tabindex", "-1");
-                } else {
+                } else if (distance <= maximumVisibleDistance) {
                     card.dataset.slot = String(distance - 1);
                     card.setAttribute("aria-pressed", "false");
                     card.removeAttribute("tabindex");
+                } else {
+                    card.dataset.slot = "hidden";
+                    card.setAttribute("aria-pressed", "false");
+                    card.setAttribute("tabindex", "-1");
                 }
             });
         }
@@ -1937,6 +2051,13 @@
                 startAutoplay();
             }
         });
+
+
+        if (typeof compactCards.addEventListener === "function") {
+            compactCards.addEventListener("change", setCardPositions);
+        } else if (typeof compactCards.addListener === "function") {
+            compactCards.addListener(setCardPositions);
+        }
 
 
         if ("IntersectionObserver" in window) {
