@@ -309,6 +309,150 @@
     }
 }
 
+/* =========================================================
+   PRODUCTS DROPDOWN
+========================================================= */
+
+.product-dropdown{
+    position:relative;
+}
+
+.product-menu{
+    min-width:240px;
+
+    padding:10px 0;
+
+    margin-top:0!important;
+
+    border:0;
+
+    border-radius:10px;
+
+    background:#000;
+
+    box-shadow:0 20px 55px rgba(0,0,0,.25);
+
+    overflow:hidden;
+}
+
+.product-menu>a{
+    display:block;
+
+    position:relative;
+
+    padding:11px 24px;
+
+    color:#bdbdbd;
+
+    font-size:13.5px;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:
+        color .25s ease,
+        padding-left .25s ease,
+        background .25s ease;
+}
+
+.product-menu>a::before{
+    content:"";
+
+    position:absolute;
+
+    left:12px;
+
+    top:50%;
+
+    width:5px;
+
+    height:1px;
+
+    background:#666;
+
+    transform:translateY(-50%);
+
+    transition:
+        width .25s ease,
+        background .25s ease;
+}
+
+.product-menu>a:hover{
+    color:#fff;
+
+    background:#111;
+
+    padding-left:29px;
+}
+
+.product-menu>a:hover::before{
+    width:10px;
+
+    background:#fff;
+}
+
+
+/* Desktop hover */
+
+@media(min-width:992px){
+
+    .product-dropdown:hover>.product-menu{
+        display:block;
+    }
+
+    .product-menu{
+        opacity:0;
+
+        visibility:hidden;
+
+        pointer-events:none;
+
+        display:block;
+
+        transition:
+            opacity .2s ease,
+            visibility .2s ease;
+    }
+
+    .product-dropdown:hover>.product-menu,
+    .product-dropdown>.product-menu.show{
+        opacity:1;
+
+        visibility:visible;
+
+        pointer-events:auto;
+    }
+
+}
+
+
+/* Mobile */
+
+@media(max-width:991px){
+
+    .product-menu{
+        position:static!important;
+
+        width:100%;
+
+        margin:0!important;
+
+        border-radius:0;
+
+        box-shadow:none;
+
+        background:#000;
+    }
+
+    .product-menu>a{
+        padding:10px 22px;
+
+        color:#bdbdbd;
+    }
+
+}
+
 </style>
 
 </head>
@@ -374,7 +518,40 @@
                     </li>
 
                     <li class="nav-item"><a class="nav-link" href="bms.html">BMS</a></li>
-                    <li class="nav-item"><a class="nav-link" href="power-products.html">Products</a></li>
+                    <li class="nav-item dropdown product-dropdown">
+
+    <a class="nav-link dropdown-toggle"
+       href="#"
+       id="productsDropdown"
+       role="button"
+       data-bs-toggle="dropdown"
+       data-bs-auto-close="outside"
+       aria-expanded="false">
+        Products
+    </a>
+
+    <div class="dropdown-menu product-menu"
+         aria-labelledby="productsDropdown">
+
+        <a href="sensors.html">Sensors</a>
+
+        <a href="controllers.html">Controllers</a>
+
+        <a href="gateways.html">Gateways</a>
+
+        <a href="meters.html">Meters</a>
+
+        <a href="transformers.html">Transformers</a>
+
+        <a href="control-panels.html">Control Panels</a>
+
+        <a href="panel-boards.html">Panel Boards</a>
+
+        <a href="switchgears.html">Switchgears</a>
+
+    </div>
+
+</li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>

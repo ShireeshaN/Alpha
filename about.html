@@ -30,6 +30,382 @@
 
 
 <body>
+
+        <!-- =========================================================
+         PREMIUM GLOBAL NAVIGATION
+    ========================================================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/w-alpha.png" id="logoWhite" class="navbar-logo" alt="Alpha Numeric Innovations" style="display:none;">
+                <img src="assets/img/b-alpha.png" id="logoDark" class="navbar-logo" alt="Alpha Numeric Innovations">
+            </a>
+
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu <i class="fas fa-bars ms-1"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link " href="about.html">About</a></li>
+
+                    <li class="nav-item dropdown solution-dropdown position-static">
+                        <a class="nav-link dropdown-toggle " href="#" id="solutionsDropdown" role="button"
+                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Solutions</a>
+
+                        <div class="dropdown-menu mega-menu" aria-labelledby="solutionsDropdown">
+                            <div class="mega-menu-inner">
+                                <div class="mega-column">
+                                    <div class="mega-heading "><span>Energy</span></div>
+                                    <a href="solar-energy.html">Solar Energy</a>
+                                    <a href="wind-energy.html">Wind Energy</a>
+                                    <a href="hydel-energy.html">Hydel Energy</a>
+                                    <a href="biomass-energy.html">Biomass Energy</a>
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>Power</span></div>
+                                    <a href="transmission.html">Transmission</a>
+                                    <a href="distribution.html">Distribution</a>
+                                    <a href="control-panels.html">Control Panels</a>
+                                    <a href="panel-boards.html">Panel Boards</a>
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>Automation</span></div>
+                                    <a href="home-automation.html">Home Automation</a>
+                                    <a href="commercial-automation.html">Commercial Automation</a>
+                                    <a href="industrial-automation.html">Industrial Automation</a>
+                                    <a href="hospital-automation.html">Hospital Automation</a>
+                                    <a href="hotel-automation.html">Hotel Automation</a>
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>R&amp;D</span></div>
+                                    <a href="smart-pole-r&d.html">Smart Pole</a>
+                                    <a href="smart-bollard-r&d.html">Smart Bollard</a>
+                                    <a href="smart-conference-table.html">Smart Conference Table</a>
+                                    <a href="smart-bar-counter.html">Smart Bar Counter</a>
+                                    <a href="smart-window-leaf-ac.html">Smart Window Leaf AC</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="bms.html">BMS</a></li>
+                    <li class="nav-item dropdown product-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
+                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Products</a>
+
+                        <div class="dropdown-menu product-menu" aria-labelledby="productsDropdown">
+                            <a href="sensors.html">Sensors</a>
+                            <a href="controllers.html">Controllers</a>
+                            <a href="gateways.html">Gateways</a>
+                            <a href="meters.html">Meters</a>
+                            <a href="transformers.html">Transformers</a>
+                            <a href="control-panels.html">Control Panels</a>
+                            <a href="panel-boards.html">Panel Boards</a>
+                            <a href="switchgears.html">Switchgears</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <style>
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #ffffff;
+            color: #111111;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+        /* =====================================================
+           PREMIUM GLOBAL NAVBAR
+        ===================================================== */
+
+        .main-navbar { padding: 13px 0; background: transparent; transition: background .35s ease, padding .35s ease, box-shadow .35s ease; z-index: 9999; }
+        .main-navbar.navbar-shrink, .main-navbar.scrolled { background: #fff; padding: 8px 0; box-shadow: 0 8px 35px rgba(14,29,57,.08); }
+        .navbar-logo { height: 68px; width: auto; object-fit: contain; transition: height .3s ease; }
+        .main-navbar.navbar-shrink .navbar-logo, .main-navbar.scrolled .navbar-logo { height: 58px; }
+        .main-navbar .nav-link { position: relative; color: #fff; font-size: 14px; font-weight: 600; letter-spacing: .4px; margin: 0 5px; padding: 12px 11px !important; transition: color .3s ease; }
+        .main-navbar.navbar-shrink .nav-link, .main-navbar.scrolled .nav-link { color: #16243b; }
+        .main-navbar .nav-link:hover, .main-navbar .nav-link:focus { color: #4d73be; }
+
+        .solution-dropdown { position: static !important; }
+        .mega-menu { position: absolute !important; width: min(1180px, calc(100vw - 48px)); left: 50% !important; top: 100% !important; transform: translateX(-50%) !important; margin-top: 0 !important; padding: 0; border: 0; border-radius: 14px; background: #fff; box-shadow: 0 24px 70px rgba(14,29,57,.18); overflow: hidden; }
+        .mega-menu-inner { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); }
+        .mega-column { min-height: 270px; padding: 30px 30px 32px; border-right: 1px solid #e8edf5; background: #fff; }
+        .mega-column:last-child { border-right: 0; }
+        .mega-heading { display: flex; align-items: center; gap: 11px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid #edf1f7; color: #17243b; font-family: "Varela Round", sans-serif; font-size: 16px; font-weight: 600; }
+        .mega-heading i { width: 22px; color: #4d73be; font-size: 17px; }
+        .mega-column > a { display: block; position: relative; padding: 9px 0 9px 16px; color: #5d687b; font-size: 13.5px; font-weight: 600; text-decoration: none; transition: color .25s ease, padding .25s ease; }
+        .mega-column > a::before { content: ""; position: absolute; left: 0; top: 50%; width: 6px; height: 1px; background: #9eabc0; transform: translateY(-50%); transition: width .25s ease, background .25s ease; }
+        .mega-column > a:hover { color: #334a85; padding-left: 21px; }
+        .mega-column > a:hover::before { width: 12px; background: #4d73be; }
+
+        @media (min-width: 992px) {
+            .solution-dropdown > .mega-menu {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                display: block;
+                transition: opacity .22s ease, visibility .22s ease;
+            }
+
+            .solution-dropdown:hover > .mega-menu,
+            .solution-dropdown.mega-open > .mega-menu,
+            .solution-dropdown > .mega-menu.show {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+
+            /* Invisible hover bridge between Solutions and mega menu */
+            .solution-dropdown > .mega-menu::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: -18px;
+                height: 18px;
+                background: transparent;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .main-navbar { background: #fff; padding: 8px 0; }
+            .navbar-logo { height: 55px; }
+            #logoWhite { display: none !important; }
+            #logoDark { display: block !important; }
+            .main-navbar .navbar-toggler { color: #17243b; border-color: rgba(23,36,59,.2); }
+            .main-navbar .nav-link { color: #17243b; padding: 12px 7px !important; margin: 1px 0; }
+            .navbar-collapse { max-height: calc(100vh - 76px); overflow-y: auto; margin-top: 10px; padding: 15px 10px 22px; border-top: 1px solid #edf0f5; background: #fff; }
+            .mega-menu { position: static !important; transform: none !important; width: 100%; margin: 0 !important; box-shadow: none; border-left: 2px solid #334a85; border-radius: 0; overflow: visible; }
+            .mega-menu-inner { grid-template-columns: 1fr; }
+            .mega-column { min-height: 0; padding: 18px 18px 14px; border-right: 0; border-bottom: 1px solid #edf0f5; }
+            .mega-column:last-child { border-bottom: 0; }
+            .mega-heading { margin-bottom: 8px; padding-bottom: 10px; }
+            .mega-column > a { padding-top: 7px; padding-bottom: 7px; }
+        }
+
+
+        /* ABOUT PAGE: keep Index navbar in permanent white/scrolled state */
+       
+        .main-navbar {
+            background: #fff;
+            padding: 8px 0;
+            box-shadow: 0 8px 35px rgba(14,29,57,.08);
+        }
+        .main-navbar .navbar-logo { height: 58px; }
+        .main-navbar .nav-link { color: #16243b; }
+        #logoWhite { display: none !important; }
+        #logoDark { display: block !important; }
+        .main-navbar .nav-contact {
+            background: #334a85;
+            border-color: #334a85;
+            color: #fff !important;
+        }
+        .main-navbar .nav-contact:hover {
+            background: #17243b;
+            border-color: #17243b;
+            color: #fff !important;
+        }
+        .main-navbar .nav-link.active { color: #4d73be; }
+        .main-navbar .nav-link.active:not(.nav-contact)::after {
+            width: calc(100% - 24px);
+        }
+
+
+        
+    </style>
+    
+<style>
+/* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
+.main-navbar #solutionsDropdown,
+.main-navbar #solutionsDropdown:hover,
+.main-navbar #solutionsDropdown:focus,
+.main-navbar #solutionsDropdown:active,
+.main-navbar #solutionsDropdown.show {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.main-navbar #solutionsDropdown:hover,
+.main-navbar #solutionsDropdown:focus,
+.main-navbar #solutionsDropdown.show {
+    color: #4d73be !important;
+}
+</style>
+
+
+<style id="navbar-monochrome-final">
+/* =========================================================
+   NAVBAR — MONOCHROME BLACK THEME
+   Keep existing layout + mega-menu behavior unchanged
+========================================================= */
+
+/* Main nav links */
+.main-navbar .nav-link,
+.main-navbar.scrolled .nav-link,
+.main-navbar.navbar-shrink .nav-link {
+    color: #1a1a1a !important;
+}
+
+/* Normal */
+.main-navbar .nav-link {
+    font-weight: 600;
+}
+
+/* Hover / focus — black only */
+.main-navbar .nav-link:hover,
+.main-navbar .nav-link:focus {
+    color: #000000 !important;
+}
+
+/* Active — black + stronger weight */
+.main-navbar .nav-link.active,
+.main-navbar .nav-link.show,
+.main-navbar #solutionsDropdown.show {
+    color: #000000 !important;
+    font-weight: 800 !important;
+}
+
+/* No colored underline */
+.main-navbar .nav-link:not(.nav-contact):not(.dropdown-toggle)::after {
+    background: #000000 !important;
+}
+
+/* Solutions: text only, no box */
+.main-navbar #solutionsDropdown,
+.main-navbar #solutionsDropdown:hover,
+.main-navbar #solutionsDropdown:focus,
+.main-navbar #solutionsDropdown:active,
+.main-navbar #solutionsDropdown.show {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    color: #000000 !important;
+}
+
+/* Contact: monochrome */
+.main-navbar .nav-contact,
+.main-navbar.scrolled .nav-contact {
+    background: #000000 !important;
+    border-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+.main-navbar .nav-contact:hover,
+.main-navbar .nav-contact:focus,
+.main-navbar.scrolled .nav-contact:hover {
+    background: #222222 !important;
+    border-color: #222222 !important;
+    color: #ffffff !important;
+}
+
+/* =========================================================
+   MEGA MENU — BLACK
+========================================================= */
+
+.main-navbar .mega-menu {
+    background: #000000 !important;
+    border: 1px solid #1f1f1f !important;
+    box-shadow: 0 24px 70px rgba(0,0,0,.28) !important;
+}
+
+/* Columns */
+.main-navbar .mega-column {
+    background: #000000 !important;
+    border-right-color: #242424 !important;
+}
+
+.main-navbar .mega-column:last-child {
+    border-right-color: transparent !important;
+}
+
+/* Headings */
+.main-navbar .mega-heading {
+    color: #ffffff !important;
+    border-bottom-color: #2a2a2a !important;
+}
+
+/* Icons — monochrome */
+.main-navbar .mega-heading i {
+    color: #ffffff !important;
+}
+
+/* Menu links */
+.main-navbar .mega-column > a {
+    color: #bdbdbd !important;
+}
+
+/* Small line before links */
+.main-navbar .mega-column > a::before {
+    background: #666666 !important;
+}
+
+/* Hover inside mega menu */
+.main-navbar .mega-column > a:hover,
+.main-navbar .mega-column > a:focus {
+    color: #ffffff !important;
+}
+
+.main-navbar .mega-column > a:hover::before {
+    background: #ffffff !important;
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+    .main-navbar .nav-link {
+        color: #1a1a1a !important;
+    }
+
+    .main-navbar .mega-menu {
+        background: #000000 !important;
+        border-left-color: #000000 !important;
+    }
+
+    .main-navbar .mega-column {
+        background: #000000 !important;
+        border-bottom-color: #242424 !important;
+    }
+}
+</style>
+
+
+<style id="mega-heading-no-icons">
+.main-navbar .mega-heading {
+    gap: 0 !important;
+}
+</style>
     <!-- =========================================================
          PREMIUM GLOBAL NAVIGATION
     ========================================================= -->

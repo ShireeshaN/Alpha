@@ -1,0 +1,2350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMS + IoT | Alpha Numeric Innovations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Varela+Round&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;overflow-x:hidden}
+a{text-decoration:none}
+</style>
+
+<style id="bms-page-styles">
+:root{
+    --bms-bg:#06090d;
+    --bms-bg2:#0a1017;
+    --bms-card:#0d141d;
+    --bms-white:#fff;
+    --bms-text:#eef4f8;
+    --bms-muted:#8b99a8;
+    --bms-line:rgba(255,255,255,.09);
+    --bms-cyan:#62d9ff;
+    --bms-blue:#3d8cff;
+    --bms-green:#55d991;
+    --bms-orange:#ff5a1f;
+    --bms-light:#f5f7fa;
+}
+
+body{background:#fff;color:#111;overflow-x:hidden;}
+.bms-section{position:relative;padding:115px 0;}
+.bms-container{width:min(1240px,calc(100% - 42px));margin:auto;position:relative;z-index:2;}
+.bms-wide{width:min(1500px,calc(100% - 50px));margin:auto;position:relative;z-index:2;}
+.bms-kicker{display:inline-block;color:#52cef6;font-size:10px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:16px;}
+.bms-title{font-size:clamp(42px,5.3vw,74px);line-height:.98;letter-spacing:-3.4px;font-weight:800;margin:0;}
+.bms-copy{max-width:720px;margin-top:22px;color:#8b99a8;font-size:15px;line-height:1.85;}
+.bms-reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease;}
+.bms-reveal.active{opacity:1;transform:none;}
+
+/* HERO */
+.bms-hero{min-height:720px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(3,7,12,.96) 0%,rgba(3,7,12,.78) 42%,rgba(3,7,12,.26) 78%),url('assets/img/bms-hero.jpg') center/cover no-repeat;color:#fff;}
+.bms-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 76% 43%,rgba(41,179,241,.17),transparent 26%),linear-gradient(to bottom,transparent 72%,#06090d);}
+.bms-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:66px 66px;opacity:.55;}
+.bms-hero-content{max-width:820px;padding:95px 0 85px;position:relative;z-index:3;}
+.bms-hero-pill{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.13);background:rgba(5,12,20,.45);backdrop-filter:blur(14px);padding:10px 14px;border-radius:999px;font-size:10px;letter-spacing:2px;font-weight:700;color:#d9f7ff;}
+.bms-hero-pill i{font-size:7px;color:var(--bms-green);filter:drop-shadow(0 0 7px var(--bms-green));}
+.bms-hero h1{font-size:clamp(64px,9vw,122px);line-height:.86;letter-spacing:-7px;margin:25px 0 22px;font-weight:800;}
+.bms-hero h1 span{color:#79ddff;font-weight:300;}
+.bms-hero p{max-width:680px;color:#b3c0cd;font-size:17px;line-height:1.8;margin:0;}
+.bms-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px;}
+.bms-btn{display:inline-flex;align-items:center;gap:10px;padding:15px 21px;border:1px solid rgba(255,255,255,.14);border-radius:999px;color:#fff;font-size:11px;font-weight:700;letter-spacing:.4px;transition:.3s;background:rgba(255,255,255,.03);}
+.bms-btn.primary{background:#fff;color:#080d12;border-color:#fff;}
+.bms-btn:hover{transform:translateY(-2px);}
+.bms-hero-stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:44px;}
+.bms-stat{min-width:155px;padding:16px 18px;border:1px solid rgba(255,255,255,.1);background:rgba(5,12,20,.52);backdrop-filter:blur(12px);border-radius:17px;}
+.bms-stat strong{display:block;font-size:21px;}.bms-stat span{display:block;margin-top:4px;color:#8fa0b0;font-size:10px;}
+
+/* OVERVIEW */
+.bms-overview{background:var(--bms-light);}
+.bms-overview .bms-title{color:#0b1117;}.bms-overview .bms-copy{color:#677684;}
+.bms-overview-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;margin-top:58px;}
+.bms-building{min-height:650px;border-radius:30px;position:relative;overflow:hidden;background:linear-gradient(to top,rgba(3,9,15,.88),rgba(3,9,15,.05)),url('assets/img/bms-building-cutaway.jpg') center/cover no-repeat;box-shadow:0 28px 70px rgba(30,50,70,.13);}
+.bms-tag{position:absolute;z-index:3;display:flex;align-items:center;gap:8px;padding:9px 13px;border-radius:999px;background:rgba(4,11,18,.75);border:1px solid rgba(255,255,255,.13);backdrop-filter:blur(12px);color:#fff;font-size:10px;animation:bmsFloat 4s ease-in-out infinite;}
+.bms-tag i{color:#63d9ff;}.t1{top:16%;left:8%}.t2{top:31%;right:8%;animation-delay:.5s}.t3{top:51%;left:7%;animation-delay:1s}.t4{top:67%;right:10%;animation-delay:1.5s}.t5{bottom:8%;left:38%;animation-delay:2s}
+@keyframes bmsFloat{50%{transform:translateY(-8px)}}
+.bms-feature-stack{display:grid;gap:16px;}.bms-feature{padding:28px;background:#fff;border:1px solid #e4e9ed;border-radius:24px;box-shadow:0 14px 40px rgba(20,35,50,.05);transition:.3s;}.bms-feature:hover{transform:translateY(-5px);box-shadow:0 22px 50px rgba(20,35,50,.1)}
+.bms-feature-icon{width:50px;height:50px;border-radius:15px;background:#e8f7fd;display:flex;align-items:center;justify-content:center;color:#0c93cc;margin-bottom:18px;}.bms-feature h3{font-size:20px;margin:0 0 9px;}.bms-feature p{font-size:12px;color:#6d7a87;line-height:1.75;margin:0;}
+
+/* COMMAND */
+.bms-command{background:radial-gradient(circle at 15% 40%,rgba(39,175,237,.08),transparent 30%),#06090d;color:#fff;}
+.bms-command-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;}
+.bms-dashboard-frame{position:relative;padding:12px;border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.02));border:1px solid var(--bms-line);box-shadow:0 35px 90px rgba(0,0,0,.42);}.bms-dashboard-frame img{width:100%;border-radius:19px;display:block;}.bms-float-card{position:absolute;padding:13px 16px;border-radius:15px;background:rgba(7,17,28,.92);border:1px solid rgba(255,255,255,.09);backdrop-filter:blur(15px);}.bms-float-card strong{display:block;font-size:19px}.bms-float-card span{font-size:9px;color:#8495a6}.fc1{right:20px;top:-23px}.fc2{left:25px;bottom:-23px}
+.bms-list{margin-top:28px;border-top:1px solid var(--bms-line)}.bms-list div{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--bms-line);font-size:12px;color:#c5d0da}.bms-list i{color:#5ad7ff;}
+
+/* SYSTEM BENTO */
+.bms-systems{background:#0a1017;color:#fff;}.bms-bento{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:215px;gap:14px;margin-top:50px}.bms-bento-card{position:relative;overflow:hidden;border-radius:25px;border:1px solid rgba(255,255,255,.08);}.bms-bento-card img{width:100%;height:100%;object-fit:cover;transition:.6s}.bms-bento-card:hover img{transform:scale(1.05)}.bms-bento-card::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(3,8,13,.95),transparent 72%)}.bms-bento-copy{position:absolute;z-index:2;left:22px;bottom:20px}.bms-bento-copy small{color:#68dfff;font-size:9px}.bms-bento-copy h3{font-size:19px;margin:5px 0 0}.b1{grid-column:span 7;grid-row:span 2}.b2,.b3{grid-column:span 5}.b4,.b5,.b6{grid-column:span 4}
+
+/* MODULE STACK */
+.bms-modules{background:radial-gradient(circle at 18% 18%,rgba(39,171,235,.075),transparent 30%),#080d14;color:#fff;}
+.bms-module-head{text-align:center;max-width:900px;margin:0 auto 45px}.bms-module-head .bms-copy{margin-left:auto;margin-right:auto}.bms-module-head .bms-title span{color:#8ce3ff;font-weight:300}
+.bms-tabs-shell{position:relative;padding:14px 52px;border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.017));border:1px solid rgba(255,255,255,.09);backdrop-filter:blur(18px);}
+.bms-tabs{display:flex;align-items:center;gap:10px;overflow-x:auto;scrollbar-width:none;scroll-behavior:smooth}.bms-tabs::-webkit-scrollbar{display:none}.bms-tab{flex:0 0 auto;display:flex;align-items:center;gap:9px;padding:8px 18px 8px 8px;border:1px solid transparent;border-radius:999px;background:rgba(255,255,255,.045);color:#acb7c2;cursor:pointer;font-size:13px;font-weight:700;transition:.3s}.bms-tab:hover{color:#fff;background:rgba(255,255,255,.08);transform:translateY(-2px)}.bms-tab-icon{width:39px;height:39px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#101821;color:#7d91a4}.bms-tab.active{color:#fff;background:linear-gradient(135deg,#168ac8,#27b8e8);box-shadow:0 12px 34px rgba(32,166,224,.18)}.bms-tab.active .bms-tab-icon{color:#fff;background:rgba(3,25,38,.45)}
+.bms-tabs-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.1);background:#0e1822;color:#fff;cursor:pointer}.bms-tabs-arrow.left{left:8px}.bms-tabs-arrow.right{right:8px}
+.bms-stage{margin-top:16px;border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,.09);background:linear-gradient(145deg,#111821,#05080d);box-shadow:0 38px 95px rgba(0,0,0,.35)}
+.bms-panel{display:none;padding:25px;animation:bmsPanel .55s ease}.bms-panel.active{display:block}@keyframes bmsPanel{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.bms-panel-top{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:20px}.bms-panel-top small{display:block;color:#4ecff8;font-size:9px;font-weight:800;letter-spacing:2px;margin-bottom:6px}.bms-panel-top h3{font-size:clamp(22px,2.4vw,31px);margin:0}.bms-status{display:flex;align-items:center;gap:8px;border:1px solid rgba(85,217,145,.15);background:rgba(85,217,145,.055);padding:8px 13px;border-radius:999px;color:#9dacb8;font-size:9px;white-space:nowrap}.bms-status-dot{width:7px;height:7px;border-radius:50%;background:#55d991;box-shadow:0 0 12px #55d991}
+.bms-module-image{position:relative;min-height:500px;display:flex;align-items:center;justify-content:center;border-radius:20px;overflow:hidden;background:#030609;border:1px solid rgba(255,255,255,.06)}.bms-module-image img{width:100%;max-height:680px;object-fit:contain;display:block;background:#030609}.bms-module-image::before{content:"";position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,#5bd7ff,transparent);z-index:2}
+
+/* FLOW */
+.bms-flow-section{background:#05090e;color:#fff}.bms-flow{display:grid;grid-template-columns:repeat(7,1fr);gap:15px;position:relative;margin-top:60px}.bms-flow::before{content:"";position:absolute;left:7%;right:7%;top:30px;height:2px;background:linear-gradient(90deg,#258ed5,#5bddff)}.bms-flow-item{position:relative;z-index:2;text-align:center}.bms-flow-circle{width:60px;height:60px;border-radius:50%;margin:auto;display:flex;align-items:center;justify-content:center;border:1px solid rgba(91,221,255,.38);background:#08131d;color:#5bddff;box-shadow:0 0 0 8px #05090e}.bms-flow-item h4{font-size:12px;margin:15px 0 4px}.bms-flow-item p{font-size:9px;color:#7b8b9a;margin:0}
+
+/* CTA */
+.bms-cta{padding:135px 0;text-align:center;color:#fff;background:linear-gradient(rgba(3,8,13,.72),rgba(3,8,13,.9)),url('assets/img/bms-cta.jpg') center/cover no-repeat}.bms-cta .bms-title{max-width:900px;margin:auto}.bms-cta .bms-copy{margin:20px auto 30px;color:#aebcc8}.bms-cta .bms-actions{justify-content:center}
+
+@media(max-width:991px){
+    .bms-overview-grid,.bms-command-grid{grid-template-columns:1fr}.bms-building{min-height:520px}.bms-bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:270px}.b1,.b2,.b3,.b4,.b5,.b6{grid-column:span 1;grid-row:span 1}.bms-flow{grid-template-columns:repeat(4,1fr);row-gap:38px}.bms-flow::before{display:none}.bms-module-image{min-height:360px}
+}
+@media(max-width:680px){
+    .bms-section{padding:85px 0}.bms-hero{min-height:650px}.bms-hero h1{letter-spacing:-4px}.bms-title{letter-spacing:-2px}.bms-bento{grid-template-columns:1fr}.bms-module-head{text-align:left}.bms-tabs-shell{padding:11px 42px}.bms-panel{padding:14px}.bms-panel-top{align-items:flex-start;flex-direction:column}.bms-module-image{min-height:260px}.bms-flow{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+
+</head>
+<body>
+<style>
+    /* =====================================================
+           PREMIUM GLOBAL NAVBAR
+        ===================================================== */
+
+        .main-navbar { padding: 13px 0; background: transparent; transition: background .35s ease, padding .35s ease, box-shadow .35s ease; z-index: 9999; }
+        .main-navbar.navbar-shrink, .main-navbar.scrolled { background: #fff; padding: 8px 0; box-shadow: 0 8px 35px rgba(14,29,57,.08); }
+        .navbar-logo { height: 68px; width: auto; object-fit: contain; transition: height .3s ease; }
+        .main-navbar.navbar-shrink .navbar-logo, .main-navbar.scrolled .navbar-logo { height: 58px; }
+        .main-navbar .nav-link { position: relative; color: #fff; font-size: 14px; font-weight: 600; letter-spacing: .4px; margin: 0 5px; padding: 12px 11px !important; transition: color .3s ease; }
+        .main-navbar.navbar-shrink .nav-link, .main-navbar.scrolled .nav-link { color: #16243b; }
+        .main-navbar .nav-link:hover, .main-navbar .nav-link:focus { color: #4d73be; }
+
+        .solution-dropdown { position: static !important; }
+        .mega-menu { position: absolute !important; width: min(1180px, calc(100vw - 48px)); left: 50% !important; top: 100% !important; transform: translateX(-50%) !important; margin-top: 0 !important; padding: 0; border: 0; border-radius: 14px; background: #fff; box-shadow: 0 24px 70px rgba(14,29,57,.18); overflow: hidden; }
+        .mega-menu-inner { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); }
+        .mega-column { min-height: 270px; padding: 30px 30px 32px; border-right: 1px solid #e8edf5; background: #fff; }
+        .mega-column:last-child { border-right: 0; }
+        .mega-heading { display: flex; align-items: center; gap: 11px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid #edf1f7; color: #17243b; font-family: "Varela Round", sans-serif; font-size: 16px; font-weight: 600; }
+        .mega-heading i { width: 22px; color: #4d73be; font-size: 17px; }
+        .mega-column > a { display: block; position: relative; padding: 9px 0 9px 16px; color: #5d687b; font-size: 13.5px; font-weight: 600; text-decoration: none; transition: color .25s ease, padding .25s ease; }
+        .mega-column > a::before { content: ""; position: absolute; left: 0; top: 50%; width: 6px; height: 1px; background: #9eabc0; transform: translateY(-50%); transition: width .25s ease, background .25s ease; }
+        .mega-column > a:hover { color: #334a85; padding-left: 21px; }
+        .mega-column > a:hover::before { width: 12px; background: #4d73be; }
+
+        @media (min-width: 992px) {
+            .solution-dropdown:hover > .mega-menu { display: block; }
+            .mega-menu { opacity: 0; visibility: hidden; pointer-events: none; display: block; transition: opacity .22s ease, visibility .22s ease; }
+            .solution-dropdown:hover > .mega-menu, .solution-dropdown > .mega-menu.show { opacity: 1; visibility: visible; pointer-events: auto; }
+        }
+
+        @media (max-width: 991px) {
+            .main-navbar { background: #fff; padding: 8px 0; }
+            .navbar-logo { height: 55px; }
+            #logoWhite { display: none !important; }
+            #logoDark { display: block !important; }
+            .main-navbar .navbar-toggler { color: #17243b; border-color: rgba(23,36,59,.2); }
+            .main-navbar .nav-link { color: #17243b; padding: 12px 7px !important; margin: 1px 0; }
+            .navbar-collapse { max-height: calc(100vh - 76px); overflow-y: auto; margin-top: 10px; padding: 15px 10px 22px; border-top: 1px solid #edf0f5; background: #fff; }
+            .mega-menu { position: static !important; transform: none !important; width: 100%; margin: 0 !important; box-shadow: none; border-left: 2px solid #334a85; border-radius: 0; overflow: visible; }
+            .mega-menu-inner { grid-template-columns: 1fr; }
+            .mega-column { min-height: 0; padding: 18px 18px 14px; border-right: 0; border-bottom: 1px solid #edf0f5; }
+            .mega-column:last-child { border-bottom: 0; }
+            .mega-heading { margin-bottom: 8px; padding-bottom: 10px; }
+            .mega-column > a { padding-top: 7px; padding-bottom: 7px; }
+        }
+
+
+        /* ABOUT PAGE: keep Index navbar in permanent white/scrolled state */
+        body { padding-top: 74px; }
+        .main-navbar {
+            background: #fff;
+            padding: 8px 0;
+            box-shadow: 0 8px 35px rgba(14,29,57,.08);
+        }
+        .main-navbar .navbar-logo { height: 58px; }
+        .main-navbar .nav-link { color: #16243b; }
+        #logoWhite { display: none !important; }
+        #logoDark { display: block !important; }
+        .main-navbar .nav-contact {
+            background: #334a85;
+            border-color: #334a85;
+            color: #fff !important;
+        }
+        .main-navbar .nav-contact:hover {
+            background: #17243b;
+            border-color: #17243b;
+            color: #fff !important;
+        }
+        .main-navbar .nav-link.active { color: #4d73be; }
+        .main-navbar .nav-link.active:not(.nav-contact)::after {
+            width: calc(100% - 24px);
+        }
+
+</style>
+
+    <!-- =========================================================
+         PREMIUM GLOBAL NAVIGATION
+    ========================================================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/w-alpha.png" id="logoWhite" class="navbar-logo" alt="Alpha Numeric Innovations" style="display:none;">
+                <img src="assets/img/b-alpha.png" id="logoDark" class="navbar-logo" alt="Alpha Numeric Innovations">
+            </a>
+
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu <i class="fas fa-bars ms-1"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item "><a class="nav-link " href="about.html">About</a></li>
+
+                    <li class="nav-item dropdown solution-dropdown position-static">
+                        <a class="nav-link dropdown-toggle " href="#" id="solutionsDropdown" role="button"
+                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Solutions</a>
+
+                        <div class="dropdown-menu mega-menu" aria-labelledby="solutionsDropdown">
+                            <div class="mega-menu-inner">
+                                <div class="mega-column">
+                                    <div class="mega-heading "><span>Energy</span></div>
+                                    <a href="solar-energy.html">Solar Energy</a>
+                                    <a href="wind-energy.html">Wind Energy</a>
+                                    <a href="hydel-energy.html">Hydel Energy</a>
+                                    <a href="biomass-energy.html">Biomass Energy</a>
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>Power</span></div>
+                                    <a href="transmission.html">Transmission</a>
+                                    <a href="distribution.html">Distribution</a>
+                                    <a href="control-panels.html">Control Panels</a>
+                                    <a href="panel-boards.html">Panel Boards</a>
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>Automation</span></div>
+                                    <a href="home-automation.html">Home Automation</a>
+                                    <a href="commercial-automation.html">Commercial Automation</a>
+                                    <a href="industrial-automation.html">Industrial Automation</a>
+                                    <a href="hospital-automation.html">Hospital Automation</a>
+                                    <a href="hotel-automation.html">Hotel Automation</a>
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>R&amp;D</span></div>
+                                    <a href="smart-pole-r&d.html">Smart Pole</a>
+                                    <a href="smart-bollard-r&d.html">Smart Bollard</a>
+                                    <a href="smart-conference-table.html">Smart Conference Table</a>
+                                    <a href="smart-bar-counter.html">Smart Bar Counter</a>
+                                    <a href="smart-window-leaf-ac.html">Smart Window Leaf AC</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link active" href="bms.html">BMS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="power-products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <style>
+/* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
+.main-navbar #solutionsDropdown,
+.main-navbar #solutionsDropdown:hover,
+.main-navbar #solutionsDropdown:focus,
+.main-navbar #solutionsDropdown:active,
+.main-navbar #solutionsDropdown.show {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.main-navbar #solutionsDropdown:hover,
+.main-navbar #solutionsDropdown:focus,
+.main-navbar #solutionsDropdown.show {
+    color: #4d73be !important;
+}
+</style>
+
+
+<style id="navbar-monochrome-final">
+/* =========================================================
+   NAVBAR — MONOCHROME BLACK THEME
+   Keep existing layout + mega-menu behavior unchanged
+========================================================= */
+
+/* Main nav links */
+.main-navbar .nav-link,
+.main-navbar.scrolled .nav-link,
+.main-navbar.navbar-shrink .nav-link {
+    color: #1a1a1a !important;
+}
+
+/* Normal */
+.main-navbar .nav-link {
+    font-weight: 600;
+}
+
+/* Hover / focus — black only */
+.main-navbar .nav-link:hover,
+.main-navbar .nav-link:focus {
+    color: #000000 !important;
+}
+
+/* Active — black + stronger weight */
+.main-navbar .nav-link.active,
+.main-navbar .nav-link.show,
+.main-navbar #solutionsDropdown.show {
+    color: #000000 !important;
+    font-weight: 800 !important;
+}
+
+/* No colored underline */
+.main-navbar .nav-link:not(.nav-contact):not(.dropdown-toggle)::after {
+    background: #000000 !important;
+}
+
+/* Solutions: text only, no box */
+.main-navbar #solutionsDropdown,
+.main-navbar #solutionsDropdown:hover,
+.main-navbar #solutionsDropdown:focus,
+.main-navbar #solutionsDropdown:active,
+.main-navbar #solutionsDropdown.show {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    color: #000000 !important;
+}
+
+/* Contact: monochrome */
+.main-navbar .nav-contact,
+.main-navbar.scrolled .nav-contact {
+    background: #000000 !important;
+    border-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+.main-navbar .nav-contact:hover,
+.main-navbar .nav-contact:focus,
+.main-navbar.scrolled .nav-contact:hover {
+    background: #222222 !important;
+    border-color: #222222 !important;
+    color: #ffffff !important;
+}
+
+/* =========================================================
+   MEGA MENU — BLACK
+========================================================= */
+
+.main-navbar .mega-menu {
+    background: #000000 !important;
+    border: 1px solid #1f1f1f !important;
+    box-shadow: 0 24px 70px rgba(0,0,0,.28) !important;
+}
+
+/* Columns */
+.main-navbar .mega-column {
+    background: #000000 !important;
+    border-right-color: #242424 !important;
+}
+
+.main-navbar .mega-column:last-child {
+    border-right-color: transparent !important;
+}
+
+/* Headings */
+.main-navbar .mega-heading {
+    color: #ffffff !important;
+    border-bottom-color: #2a2a2a !important;
+}
+
+/* Icons — monochrome */
+.main-navbar .mega-heading i {
+    color: #ffffff !important;
+}
+
+/* Menu links */
+.main-navbar .mega-column > a {
+    color: #bdbdbd !important;
+}
+
+/* Small line before links */
+.main-navbar .mega-column > a::before {
+    background: #666666 !important;
+}
+
+/* Hover inside mega menu */
+.main-navbar .mega-column > a:hover,
+.main-navbar .mega-column > a:focus {
+    color: #ffffff !important;
+}
+
+.main-navbar .mega-column > a:hover::before {
+    background: #ffffff !important;
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+    .main-navbar .nav-link {
+        color: #1a1a1a !important;
+    }
+
+    .main-navbar .mega-menu {
+        background: #000000 !important;
+        border-left-color: #000000 !important;
+    }
+
+    .main-navbar .mega-column {
+        background: #000000 !important;
+        border-bottom-color: #242424 !important;
+    }
+}
+</style>
+
+
+<style id="mega-heading-no-icons">
+.main-navbar .mega-heading {
+    gap: 0 !important;
+}
+</style>
+
+   
+
+
+<!-- =========================================================
+     BMS + IoT PAGE CONTENT
+========================================================= -->
+<main>
+
+<section class="bms-hero" id="bms-home">
+    <div class="bms-hero-grid"></div>
+    <div class="bms-container">
+        <div class="bms-hero-content bms-reveal">
+            <div class="bms-hero-pill"><i class="fas fa-circle"></i> INTELLIGENT BUILDING INFRASTRUCTURE</div>
+            <h1>BMS <span>+ IoT</span></h1>
+            <p>Connect building systems, field assets, controllers, gateways and cloud intelligence through one unified ecosystem built for real-time visibility, intelligent automation and efficient facility operations.</p>
+            <div class="bms-actions">
+                <a href="#bms-modules" class="bms-btn primary">Explore Building Stack <i class="fas fa-arrow-right"></i></a>
+                <a href="#bms-systems" class="bms-btn">Connected Systems</a>
+            </div>
+            <div class="bms-hero-stats">
+                <div class="bms-stat"><strong>24/7</strong><span>Live Monitoring</span></div>
+                <div class="bms-stat"><strong>One</strong><span>Unified Platform</span></div>
+                <div class="bms-stat"><strong>Smart</strong><span>Automated Operations</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bms-section bms-overview" id="bms-overview">
+    <div class="bms-container">
+        <span class="bms-kicker bms-reveal">CONNECTED BUILDING INTELLIGENCE</span>
+        <h2 class="bms-title bms-reveal">Everything Connected.<br>Everything Visible.</h2>
+        <p class="bms-copy bms-reveal">Bring HVAC, energy, water, safety, security and environmental systems into one operational environment for centralized monitoring and intelligent control.</p>
+
+        <div class="bms-overview-grid">
+            <div class="bms-building bms-reveal">
+                <div class="bms-tag t1"><i class="fas fa-snowflake"></i> HVAC</div>
+                <div class="bms-tag t2"><i class="fas fa-lightbulb"></i> Lighting</div>
+                <div class="bms-tag t3"><i class="fas fa-bolt"></i> Energy</div>
+                <div class="bms-tag t4"><i class="fas fa-shield-halved"></i> Security</div>
+                <div class="bms-tag t5"><i class="fas fa-fire"></i> Life Safety</div>
+            </div>
+
+            <div class="bms-feature-stack">
+                <div class="bms-feature bms-reveal"><div class="bms-feature-icon"><i class="fas fa-eye"></i></div><h3>Unified Visibility</h3><p>Monitor connected assets, operating conditions and system health through a centralized BMS interface.</p></div>
+                <div class="bms-feature bms-reveal"><div class="bms-feature-icon"><i class="fas fa-gears"></i></div><h3>Intelligent Automation</h3><p>Coordinate building operations using occupancy, environmental conditions and equipment data.</p></div>
+                <div class="bms-feature bms-reveal"><div class="bms-feature-icon"><i class="fas fa-chart-line"></i></div><h3>Operational Insights</h3><p>Use alarms, trends and performance data to support better facility operations and maintenance decisions.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bms-section bms-command">
+    <div class="bms-container bms-command-grid">
+        <div class="bms-dashboard-frame bms-reveal">
+            <img src="assets/img/bms-dashboard.jpg" alt="BMS dashboard">
+            <div class="bms-float-card fc1"><strong>97%</strong><span>Systems Online</span></div>
+            <div class="bms-float-card fc2"><strong>LIVE</strong><span>Building Intelligence</span></div>
+        </div>
+        <div>
+            <span class="bms-kicker bms-reveal">CENTRAL COMMAND CENTER</span>
+            <h2 class="bms-title bms-reveal">One Dashboard.<br>Total Visibility.</h2>
+            <p class="bms-copy bms-reveal">Centralize system status, alarms, energy information, environmental data and equipment performance in one command interface.</p>
+            <div class="bms-list">
+                <div class="bms-reveal"><i class="fas fa-circle-check"></i> Live system status and alarms</div>
+                <div class="bms-reveal"><i class="fas fa-circle-check"></i> Energy and environmental monitoring</div>
+                <div class="bms-reveal"><i class="fas fa-circle-check"></i> Equipment health visibility</div>
+                <div class="bms-reveal"><i class="fas fa-circle-check"></i> Historical trends and analytics</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bms-section bms-systems" id="bms-systems">
+    <div class="bms-container">
+        <span class="bms-kicker bms-reveal">CONNECTED BUILDING SYSTEMS</span>
+        <h2 class="bms-title bms-reveal">Intelligence Across<br>Every Building System.</h2>
+        <div class="bms-bento">
+            <div class="bms-bento-card b1 bms-reveal"><img src="assets/img/bms-hvac.jpg" alt="HVAC"><div class="bms-bento-copy"><small>01</small><h3>HVAC & Climate Control</h3></div></div>
+            <div class="bms-bento-card b2 bms-reveal"><img src="assets/img/bms-lighting.jpg" alt="Lighting"><div class="bms-bento-copy"><small>02</small><h3>Lighting Automation</h3></div></div>
+            <div class="bms-bento-card b3 bms-reveal"><img src="assets/img/bms-energy.jpg" alt="Energy"><div class="bms-bento-copy"><small>03</small><h3>Energy Management</h3></div></div>
+            <div class="bms-bento-card b4 bms-reveal"><img src="assets/img/bms-access.jpg" alt="Access"><div class="bms-bento-copy"><small>04</small><h3>Access Control</h3></div></div>
+            <div class="bms-bento-card b5 bms-reveal"><img src="assets/img/bms-fire.jpg" alt="Fire"><div class="bms-bento-copy"><small>05</small><h3>Fire & Life Safety</h3></div></div>
+            <div class="bms-bento-card b6 bms-reveal"><img src="assets/img/bms-air-quality.jpg" alt="Air quality"><div class="bms-bento-copy"><small>06</small><h3>Indoor Air Quality</h3></div></div>
+        </div>
+    </div>
+</section>
+
+<section class="bms-section bms-modules" id="bms-modules">
+    <div class="bms-wide">
+        <div class="bms-module-head">
+            <span class="bms-kicker bms-reveal">BMS + IoT ECOSYSTEM</span>
+            <h2 class="bms-title bms-reveal">Modules Across Your <span>Building Stack</span></h2>
+            <p class="bms-copy bms-reveal">Select a module to view its dedicated field-to-cloud architecture. Each tab below loads the corresponding system architecture image without leaving the page.</p>
+        </div>
+
+        <div class="bms-tabs-shell bms-reveal">
+            <button class="bms-tabs-arrow left" type="button" onclick="scrollBmsTabs(-1)" aria-label="Scroll left"><i class="fas fa-chevron-left"></i></button>
+            <div class="bms-tabs" id="bmsTabs">
+                <button class="bms-tab active" data-target="bms-hvac-panel"><span class="bms-tab-icon"><i class="fas fa-snowflake"></i></span>HVAC</button>
+                <button class="bms-tab" data-target="bms-energy-panel"><span class="bms-tab-icon"><i class="fas fa-bolt"></i></span>Energy</button>
+                <button class="bms-tab" data-target="bms-water-panel"><span class="bms-tab-icon"><i class="fas fa-droplet"></i></span>Water</button>
+                <button class="bms-tab" data-target="bms-stp-panel"><span class="bms-tab-icon"><i class="fas fa-water"></i></span>STP / ETP</button>
+                <button class="bms-tab" data-target="bms-busbar-panel"><span class="bms-tab-icon"><i class="fas fa-plug-circle-bolt"></i></span>Busbar</button>
+                <button class="bms-tab" data-target="bms-fire-panel"><span class="bms-tab-icon"><i class="fas fa-fire-flame-curved"></i></span>Fire</button>
+                <button class="bms-tab" data-target="bms-air-panel"><span class="bms-tab-icon"><i class="fas fa-wind"></i></span>Air Quality</button>
+                <button class="bms-tab" data-target="bms-cctv-panel"><span class="bms-tab-icon"><i class="fas fa-video"></i></span>CCTV</button>
+                <button class="bms-tab" data-target="bms-access-panel"><span class="bms-tab-icon"><i class="fas fa-fingerprint"></i></span>Access</button>
+            </div>
+            <button class="bms-tabs-arrow right" type="button" onclick="scrollBmsTabs(1)" aria-label="Scroll right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="bms-stage bms-reveal">
+            <div class="bms-panel active" id="bms-hvac-panel"><div class="bms-panel-top"><div><small>HVAC INTELLIGENCE</small><h3>Connected HVAC Infrastructure</h3></div><div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div></div><div class="bms-module-image"><img src="assets/img/bms-modules/hvac-stack.jpg" alt="HVAC BMS IoT architecture"></div></div>
+            <div class="bms-panel" id="bms-energy-panel"><div class="bms-panel-top"><div><small>ENERGY INTELLIGENCE</small><h3>Smart Energy Monitoring</h3></div><div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div></div><div class="bms-module-image"><img src="assets/img/bms-modules/energy-stack.jpg" alt="Energy BMS IoT architecture"></div></div>
+            <div class="bms-panel" id="bms-water-panel"><div class="bms-panel-top"><div><small>WATER MANAGEMENT</small><h3>Intelligent Water Monitoring</h3></div><div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div></div><div class="bms-module-image"><img src="assets/img/bms-modules/water-stack.jpg" alt="Water BMS IoT architecture"></div></div>
+            <div class="bms-panel" id="bms-stp-panel"><div class="bms-panel-top"><div><small>STP / ETP AUTOMATION</small><h3>Treatment Plant Intelligence</h3></div><div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div></div><div class="bms-module-image"><img src="assets/img/bms-modules/stp-etp-stack.jpg" alt="STP ETP BMS IoT architecture"></div></div>
+            <div class="bms-panel" id="bms-busbar-panel"><div class="bms-panel-top"><div><small>ELECTRICAL DISTRIBUTION</small><h3>Busbar Monitoring System</h3></div><div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div></div><div class="bms-module-image"><img src="assets/img/bms-modules/busbar-stack.jpg" alt="Busbar BMS IoT architecture"></div></div>
+            <div class="bms-panel" id="bms-fire-panel"><div class="bms-panel-top"><div><small>LIFE SAFETY</small><h3>Fire Detection & Safety Integration</h3></div><div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div></div><div class="bms-module-image"><img src="assets/img/bms-modules/fire-stack.jpg" alt="Fire BMS IoT architecture"></div></div>
+            <div class="bms-panel" id="bms-air-panel"><div class="bms-panel-top"><div><small>ENVIRONMENTAL INTELLIGENCE</small><h3>Indoor Air Quality Monitoring</h3></div><div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div></div><div class="bms-module-image"><img src="assets/img/bms-modules/air-quality-stack.jpg" alt="Air quality BMS IoT architecture"></div></div>
+            <div class="bms-panel" id="bms-cctv-panel"><div class="bms-panel-top"><div><small>SMART SURVEILLANCE</small><h3>CCTV & Video Intelligence</h3></div><div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div></div><div class="bms-module-image"><img src="assets/img/bms-modules/cctv-stack.jpg" alt="CCTV BMS IoT architecture"></div></div>
+            <div class="bms-panel" id="bms-access-panel"><div class="bms-panel-top"><div><small>SMART ACCESS</small><h3>Integrated Access Control</h3></div><div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div></div><div class="bms-module-image"><img src="assets/img/bms-modules/access-stack.jpg" alt="Access control BMS IoT architecture"></div></div>
+        </div>
+    </div>
+</section>
+
+<section class="bms-section bms-flow-section">
+    <div class="bms-container">
+        <span class="bms-kicker bms-reveal">CONNECTED ARCHITECTURE</span>
+        <h2 class="bms-title bms-reveal">From Field Data<br>to Intelligent Action.</h2>
+        <div class="bms-flow">
+            <div class="bms-flow-item bms-reveal"><div class="bms-flow-circle"><i class="fas fa-wave-square"></i></div><h4>Sensors</h4><p>Real-time data</p></div>
+            <div class="bms-flow-item bms-reveal"><div class="bms-flow-circle"><i class="fas fa-microchip"></i></div><h4>Controllers</h4><p>Local automation</p></div>
+            <div class="bms-flow-item bms-reveal"><div class="bms-flow-circle"><i class="fas fa-router"></i></div><h4>Gateway</h4><p>Connectivity</p></div>
+            <div class="bms-flow-item bms-reveal"><div class="bms-flow-circle"><i class="fas fa-cloud"></i></div><h4>IoT Cloud</h4><p>Connected data</p></div>
+            <div class="bms-flow-item bms-reveal"><div class="bms-flow-circle"><i class="fas fa-chart-simple"></i></div><h4>Analytics</h4><p>Insights</p></div>
+            <div class="bms-flow-item bms-reveal"><div class="bms-flow-circle"><i class="fas fa-display"></i></div><h4>Dashboard</h4><p>Visibility</p></div>
+            <div class="bms-flow-item bms-reveal"><div class="bms-flow-circle"><i class="fas fa-bolt"></i></div><h4>Action</h4><p>Automation</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="bms-cta" id="contact">
+    <div class="bms-container">
+        <span class="bms-kicker bms-reveal">BUILD SMARTER</span>
+        <h2 class="bms-title bms-reveal">Make Your Building Intelligent.</h2>
+        <p class="bms-copy bms-reveal">Connect systems, centralize operations and turn building data into smarter operational decisions.</p>
+        <div class="bms-actions bms-reveal"><a href="contact.html" class="bms-btn primary">Discuss Your Project <i class="fas fa-arrow-right"></i></a></div>
+    </div>
+</section>
+
+</main>
+
+    <!-- footer start -->
+
+    <footer class="premium-footer">
+
+        <!-- Ambient Background -->
+        <div class="footer-grid"></div>
+        <div class="footer-glow footer-glow-1"></div>
+        <div class="footer-glow footer-glow-2"></div>
+
+        <div class="container">
+
+            <!-- =====================================================
+             TOP CTA
+             ===================================================== -->
+
+            <div class="footer-cta">
+
+                <div class="footer-cta-line">
+                    <span></span>
+                    <small>LET'S BUILD WHAT'S NEXT</small>
+                </div>
+
+                <div class="footer-cta-main">
+
+                    <div class="footer-cta-title">
+                        <h2>
+                            Engineering
+                            <span>the future.</span>
+                        </h2>
+                    </div>
+
+                    <a href="#contact" class="footer-cta-button">
+                        <span>Start a Conversation</span>
+                        <i>↗</i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+             MAIN FOOTER
+             ===================================================== -->
+
+            <div class="footer-main">
+
+                <!-- BRAND -->
+                <div class="footer-brand-column">
+
+                    <a href="index.html" class="footer-logo-wrap">
+
+                        <span class="footer-logo-ring"></span>
+
+                        <img src="assets/img/w-alpha.png" alt="Company Logo" class="premium-footer-logo">
+
+                    </a>
+
+                    <p class="footer-brand-text">
+                        Technology-driven solutions across
+                        <strong>Power, Energy, Automation and R&D</strong>
+                        — engineered for a smarter, connected and
+                        future-ready world.
+                    </p>
+
+                    <div class="footer-status">
+
+                        <span class="status-dot"></span>
+
+                        <span>Engineering Tomorrow</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COMPANY -->
+                <div class="footer-column">
+
+                    <div class="footer-column-label">
+                        <span>01</span>
+                        COMPANY
+                    </div>
+
+                    <ul class="premium-footer-links">
+
+                        <li>
+                            <a href="index.html">
+                                <span>Home</span>
+                                <b>↗</b>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="about.html">
+                                <span>About Us</span>
+                                <b>↗</b>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#contact">
+                                <span>Contact</span>
+                                <b>↗</b>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- SOLUTIONS -->
+                <div class="footer-column">
+
+                    <div class="footer-column-label">
+                        <span>02</span>
+                        SOLUTIONS
+                    </div>
+
+                    <ul class="premium-footer-links">
+
+                        <li>
+                            <a href="transmission.html">
+                                <span>Power Systems</span>
+                                <b>↗</b>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="solar-energy.html">
+                                <span>Energy</span>
+                                <b>↗</b>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="home-automation.html">
+                                <span>Automation</span>
+                                <b>↗</b>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="smart-pole.html">
+                                <span>R&amp;D</span>
+                                <b>↗</b>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="transformers.html">
+                                <span>Products</span>
+                                <b>↗</b>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- CONTACT -->
+                <div class="footer-column footer-contact-column">
+
+                    <div class="footer-column-label">
+                        <span>03</span>
+                        CONTACT
+                    </div>
+
+                    <div class="premium-contact-list">
+
+                        <!-- PHONE -->
+                        <a href="tel:+919000000000" class="premium-contact-item">
+
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+
+                            <div class="contact-info">
+
+                                <span>Phone</span>
+
+                                <strong>
+                                    +91 90000 00000
+                                </strong>
+
+                            </div>
+
+                        </a>
+
+
+                        <!-- EMAIL -->
+                        <a href="mailto:info@alphanumeric.com" class="premium-contact-item">
+
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+
+                            <div class="contact-info">
+
+                                <span>Email</span>
+
+                                <strong>
+                                    info@alphanumeric.com
+                                </strong>
+
+                            </div>
+
+                        </a>
+
+
+                        <!-- LOCATION -->
+                        <div class="premium-contact-item">
+
+                            <div class="contact-icon">
+                                <i class="fas fa-location-dot"></i>
+                            </div>
+
+                            <div class="contact-info">
+
+                                <span>Location</span>
+
+                                <strong>
+                                    Madhapur, Hyderabad
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+             TECHNOLOGY STRIP
+             ===================================================== -->
+
+            <div class="footer-tech-strip">
+
+                <span>POWER</span>
+                <i></i>
+
+                <span>ENERGY</span>
+                <i></i>
+
+                <span>AUTOMATION</span>
+                <i></i>
+
+                <span>R&amp;D</span>
+                <i></i>
+
+                <span>INNOVATION</span>
+
+            </div>
+
+
+            <!-- =====================================================
+             BOTTOM
+             ===================================================== -->
+
+            <div class="footer-bottom">
+
+                <div class="footer-copyright">
+
+                    © <span id="footerYear"></span>
+                    All Rights Reserved.
+
+                </div>
+
+                <div class="footer-bottom-center">
+
+                    <span>
+                        ENGINEERED FOR TOMORROW
+                    </span>
+
+                </div>
+
+                <div class="footer-bottom-links">
+
+                    <a href="#">
+                        Privacy
+                    </a>
+
+                    <a href="#">
+                        Terms
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <style>
+        /* =========================================================
+   PREMIUM FOOTER
+   ========================================================= */
+
+        .premium-footer {
+
+            --footer-bg: #030506;
+            --footer-bg-2: #070b0d;
+            --footer-white: #ffffff;
+            --footer-muted: rgba(255, 255, 255, .54);
+            --footer-soft: rgba(255, 255, 255, .30);
+            --footer-line: rgba(255, 255, 255, .10);
+            --footer-orange: #ff4b0b;
+
+            position: relative;
+
+            width: 100%;
+
+            background:
+                radial-gradient(circle at 75% 10%,
+                    rgba(255, 75, 11, .07),
+                    transparent 28%),
+                linear-gradient(135deg,
+                    var(--footer-bg),
+                    var(--footer-bg-2));
+
+            color: #fff;
+
+            overflow: hidden;
+
+            font-family:
+                "Varela Round",
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            isolation: isolate;
+
+        }
+
+
+        /* =========================================================
+   GRID
+   ========================================================= */
+
+        .footer-grid {
+
+            position: absolute;
+
+            inset: 0;
+
+            z-index: -2;
+
+            opacity: .25;
+
+            background-image:
+
+                linear-gradient(rgba(255, 255, 255, .035) 1px,
+                    transparent 1px),
+
+                linear-gradient(90deg,
+                    rgba(255, 255, 255, .035) 1px,
+                    transparent 1px);
+
+            background-size: 55px 55px;
+
+            mask-image:
+                linear-gradient(180deg,
+                    black,
+                    transparent 85%);
+
+        }
+
+
+        /* =========================================================
+   AMBIENT GLOW
+   ========================================================= */
+
+        .footer-glow {
+
+            position: absolute;
+
+            border-radius: 50%;
+
+            pointer-events: none;
+
+            filter: blur(90px);
+
+            z-index: -1;
+
+            animation:
+                footerGlowMove 9s ease-in-out infinite alternate;
+
+        }
+
+        .footer-glow-1 {
+
+            width: 350px;
+            height: 350px;
+
+            top: -200px;
+            right: 12%;
+
+            background:
+                rgba(255, 75, 11, .10);
+
+        }
+
+        .footer-glow-2 {
+
+            width: 260px;
+            height: 260px;
+
+            bottom: 80px;
+            left: 10%;
+
+            background:
+                rgba(255, 255, 255, .035);
+
+            animation-delay: 2s;
+
+        }
+
+
+        @keyframes footerGlowMove {
+
+            from {
+
+                transform:
+                    translate3d(-20px, 0, 0) scale(1);
+
+            }
+
+            to {
+
+                transform:
+                    translate3d(35px, 20px, 0) scale(1.15);
+
+            }
+
+        }
+
+
+        /* =========================================================
+   CONTAINER
+   ========================================================= */
+
+        .premium-footer .container {
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        /* =========================================================
+   CTA
+   ========================================================= */
+
+        .footer-cta {
+
+            padding:
+                90px 0 72px;
+
+            border-bottom:
+                1px solid var(--footer-line);
+
+        }
+
+
+        .footer-cta-line {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .footer-cta-line span {
+
+            width: 35px;
+
+            height: 1px;
+
+            background:
+                var(--footer-orange);
+
+        }
+
+
+        .footer-cta-line small {
+
+            color:
+                rgba(255, 255, 255, .42);
+
+            font-size: 8px;
+
+            letter-spacing:
+                .20rem;
+
+        }
+
+
+        .footer-cta-main {
+
+            display: flex;
+
+            align-items: flex-end;
+
+            justify-content: space-between;
+
+            gap: 40px;
+
+        }
+
+
+        .footer-cta-title h2 {
+
+            margin: 0;
+
+            font-size:
+                clamp(52px, 7vw, 100px);
+
+            font-weight: 400;
+
+            line-height: .90;
+
+            letter-spacing:
+                -.055em;
+
+        }
+
+
+        .footer-cta-title h2 span {
+
+            display: block;
+
+            color:
+                rgba(255, 255, 255, .28);
+
+        }
+
+
+        /* =========================================================
+   CTA BUTTON
+   ========================================================= */
+
+        .footer-cta-button {
+
+            position: relative;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+
+            min-width: 215px;
+
+            padding: 17px 20px;
+
+            color: #fff;
+
+            border:
+                1px solid rgba(255, 255, 255, .22);
+
+            text-decoration: none;
+
+            overflow: hidden;
+
+            transition:
+                color .4s ease,
+                border-color .4s ease,
+                transform .4s ease;
+
+        }
+
+
+        .footer-cta-button::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                var(--footer-orange);
+
+            transform:
+                translateX(-101%);
+
+            transition:
+                transform .45s cubic-bezier(.2, .7, .2, 1);
+
+            z-index: -1;
+
+        }
+
+
+        .footer-cta-button span {
+
+            position: relative;
+
+            z-index: 2;
+
+            font-size: 9px;
+
+            letter-spacing: .13rem;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .footer-cta-button i {
+
+            position: relative;
+
+            z-index: 2;
+
+            font-size: 18px;
+
+            font-style: normal;
+
+            transition:
+                transform .35s ease;
+
+        }
+
+
+        .footer-cta-button:hover {
+
+            color: #fff;
+
+            border-color:
+                var(--footer-orange);
+
+            transform:
+                translateY(-4px);
+
+        }
+
+
+        .footer-cta-button:hover::before {
+
+            transform:
+                translateX(0);
+
+        }
+
+
+        .footer-cta-button:hover i {
+
+            transform:
+                translate(5px, -5px);
+
+        }
+
+
+        /* =========================================================
+   MAIN FOOTER
+   ========================================================= */
+
+        .footer-main {
+
+            display: grid;
+
+            grid-template-columns:
+                1.45fr .7fr 1fr 1.15fr;
+
+            gap: 55px;
+
+            padding:
+                75px 0 70px;
+
+        }
+
+
+        /* =========================================================
+   LOGO
+   ========================================================= */
+
+        .footer-logo-wrap {
+
+            position: relative;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 190px;
+
+            height: 85px;
+
+            margin-bottom: 28px;
+
+            text-decoration: none;
+
+        }
+
+
+        .premium-footer-logo {
+
+            position: relative;
+
+            z-index: 2;
+
+            width: 175px;
+
+            height: auto;
+
+            object-fit: contain;
+
+            transform-origin: center;
+
+            filter:
+                drop-shadow(0 0 0 rgba(255, 75, 11, 0));
+
+            transition:
+                transform .6s cubic-bezier(.2, .7, .2, 1),
+                filter .6s ease;
+
+            animation:
+                footerLogoFloat 5s ease-in-out infinite;
+
+        }
+
+
+        .footer-logo-ring {
+
+            position: absolute;
+
+            width: 72px;
+
+            height: 72px;
+
+            border:
+                1px solid rgba(255, 75, 11, .15);
+
+            border-radius: 50%;
+
+            opacity: .8;
+
+            animation:
+                footerRing 7s linear infinite;
+
+        }
+
+
+        .footer-logo-ring::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: -8px;
+
+            border:
+                1px solid rgba(255, 255, 255, .04);
+
+            border-radius: 50%;
+
+        }
+
+
+        .footer-logo-wrap:hover .premium-footer-logo {
+
+            transform:
+                scale(1.055);
+
+            filter:
+                drop-shadow(0 0 20px rgba(255, 75, 11, .20));
+
+        }
+
+
+        @keyframes footerLogoFloat {
+
+            0%,
+            100% {
+
+                transform:
+                    translateY(0);
+
+            }
+
+            50% {
+
+                transform:
+                    translateY(-4px);
+
+            }
+
+        }
+
+
+        @keyframes footerRing {
+
+            from {
+
+                transform:
+                    rotate(0deg);
+
+            }
+
+            to {
+
+                transform:
+                    rotate(360deg);
+
+            }
+
+        }
+
+
+        /* =========================================================
+   BRAND TEXT
+   ========================================================= */
+
+        .footer-brand-text {
+
+            max-width: 390px;
+
+            margin: 0;
+
+            color:
+                var(--footer-muted);
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .footer-brand-text strong {
+
+            color:
+                rgba(255, 255, 255, .75);
+
+            font-weight: 400;
+
+        }
+
+
+        /* =========================================================
+   STATUS
+   ========================================================= */
+
+        .footer-status {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            margin-top: 27px;
+
+            color:
+                rgba(255, 255, 255, .38);
+
+            font-size: 8px;
+
+            letter-spacing:
+                .15rem;
+
+            text-transform:
+                uppercase;
+
+        }
+
+
+        .status-dot {
+
+            width: 6px;
+
+            height: 6px;
+
+            border-radius: 50%;
+
+            background:
+                var(--footer-orange);
+
+            box-shadow:
+                0 0 0 0 rgba(255, 75, 11, .45);
+
+            animation:
+                statusPulse 2s infinite;
+
+        }
+
+
+        @keyframes statusPulse {
+
+            0% {
+
+                box-shadow:
+                    0 0 0 0 rgba(255, 75, 11, .45);
+
+            }
+
+            70% {
+
+                box-shadow:
+                    0 0 0 7px rgba(255, 75, 11, 0);
+
+            }
+
+            100% {
+
+                box-shadow:
+                    0 0 0 0 rgba(255, 75, 11, 0);
+
+            }
+
+        }
+
+
+        /* =========================================================
+   COLUMN
+   ========================================================= */
+
+        .footer-column-label {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 27px;
+
+            color:
+                rgba(255, 255, 255, .43);
+
+            font-size: 8px;
+
+            letter-spacing:
+                .18rem;
+
+        }
+
+
+        .footer-column-label span {
+
+            color:
+                var(--footer-orange);
+
+            font-size: 8px;
+
+        }
+
+
+        /* =========================================================
+   LINKS
+   ========================================================= */
+
+        .premium-footer-links {
+
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+
+        }
+
+
+        .premium-footer-links li {
+
+            margin-bottom: 14px;
+
+        }
+
+
+        .premium-footer-links a {
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 12px;
+
+            width: 100%;
+
+            color:
+                rgba(255, 255, 255, .58);
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            transition:
+                color .3s ease,
+                padding-left .3s ease;
+
+        }
+
+
+        .premium-footer-links a b {
+
+            color:
+                rgba(255, 255, 255, .18);
+
+            font-size: 14px;
+
+            font-weight: 400;
+
+            opacity: 0;
+
+            transform:
+                translate(-5px, 5px);
+
+            transition:
+                opacity .3s ease,
+                transform .3s ease;
+
+        }
+
+
+        .premium-footer-links a:hover {
+
+            color: #fff;
+
+            padding-left: 6px;
+
+        }
+
+
+        .premium-footer-links a:hover b {
+
+            opacity: 1;
+
+            color:
+                var(--footer-orange);
+
+            transform:
+                translate(0, 0);
+
+        }
+
+
+        /* =========================================================
+   CONTACT
+   ========================================================= */
+
+        .premium-contact-list {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 21px;
+
+        }
+
+
+        .premium-contact-item {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 14px;
+
+            color: #fff;
+
+            text-decoration: none;
+
+        }
+
+
+        .contact-icon {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 34px;
+
+            height: 34px;
+
+            flex: 0 0 34px;
+
+            border:
+                1px solid rgba(255, 255, 255, .10);
+
+            color:
+                rgba(255, 255, 255, .55);
+
+            transition:
+                background .35s ease,
+                border-color .35s ease,
+                color .35s ease,
+                transform .35s ease;
+
+        }
+
+
+        .contact-icon i {
+
+            font-size: 12px;
+
+        }
+
+
+        .premium-contact-item:hover .contact-icon {
+
+            background:
+                var(--footer-orange);
+
+            border-color:
+                var(--footer-orange);
+
+            color: #fff;
+
+            transform:
+                translateY(-2px);
+
+        }
+
+
+        .contact-info {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 4px;
+
+        }
+
+
+        .contact-info span {
+
+            color:
+                rgba(255, 255, 255, .30);
+
+            font-size: 7px;
+
+            letter-spacing:
+                .15rem;
+
+            text-transform:
+                uppercase;
+
+        }
+
+
+        .contact-info strong {
+
+            color:
+                rgba(255, 255, 255, .72);
+
+            font-size: 12px;
+
+            font-weight: 400;
+
+            line-height: 1.5;
+
+            word-break: break-word;
+
+            transition:
+                color .3s ease;
+
+        }
+
+
+        .premium-contact-item:hover .contact-info strong {
+
+            color: #fff;
+
+        }
+
+
+        /* =========================================================
+   TECHNOLOGY STRIP
+   ========================================================= */
+
+        .footer-tech-strip {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 18px;
+
+            padding:
+                23px 0;
+
+            border-top:
+                1px solid var(--footer-line);
+
+            border-bottom:
+                1px solid var(--footer-line);
+
+        }
+
+
+        .footer-tech-strip span {
+
+            color:
+                rgba(255, 255, 255, .28);
+
+            font-size: 7px;
+
+            letter-spacing:
+                .18rem;
+
+            transition:
+                color .3s ease;
+
+        }
+
+
+        .footer-tech-strip span:hover {
+
+            color:
+                var(--footer-orange);
+
+        }
+
+
+        .footer-tech-strip i {
+
+            width: 3px;
+
+            height: 3px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255, 75, 11, .65);
+
+        }
+
+
+        /* =========================================================
+   BOTTOM
+   ========================================================= */
+
+        .footer-bottom {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr auto 1fr;
+
+            align-items: center;
+
+            gap: 25px;
+
+            min-height: 80px;
+
+        }
+
+
+        .footer-copyright {
+
+            color:
+                rgba(255, 255, 255, .28);
+
+            font-size: 10px;
+
+        }
+
+
+        .footer-bottom-center {
+
+            color:
+                rgba(255, 255, 255, .20);
+
+            font-size: 7px;
+
+            letter-spacing:
+                .18rem;
+
+            text-align: center;
+
+        }
+
+
+        .footer-bottom-links {
+
+            display: flex;
+
+            justify-content: flex-end;
+
+            gap: 22px;
+
+        }
+
+
+        .footer-bottom-links a {
+
+            color:
+                rgba(255, 255, 255, .28);
+
+            text-decoration: none;
+
+            font-size: 10px;
+
+            transition:
+                color .3s ease;
+
+        }
+
+
+        .footer-bottom-links a:hover {
+
+            color: #fff;
+
+        }
+
+
+        /* =========================================================
+   TABLET
+   ========================================================= */
+
+        @media (max-width: 991px) {
+
+            .footer-cta {
+
+                padding:
+                    65px 0 55px;
+
+            }
+
+
+            .footer-cta-main {
+
+                align-items: flex-start;
+
+                flex-direction: column;
+
+            }
+
+
+            .footer-cta-button {
+
+                min-width: 210px;
+
+            }
+
+
+            .footer-main {
+
+                grid-template-columns:
+                    1.3fr 1fr;
+
+                gap: 55px 40px;
+
+                padding:
+                    60px 0;
+
+            }
+
+
+            .footer-brand-column {
+
+                grid-column:
+                    1 / -1;
+
+            }
+
+
+            .footer-brand-text {
+
+                max-width: 520px;
+
+            }
+
+
+            .footer-bottom {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+                padding:
+                    22px 0;
+
+            }
+
+
+            .footer-bottom-center {
+
+                display: none;
+
+            }
+
+
+            .footer-bottom-links {
+
+                justify-content: flex-end;
+
+            }
+
+        }
+
+
+        /* =========================================================
+   MOBILE
+   ========================================================= */
+
+        @media (max-width: 767px) {
+
+            .premium-footer {
+
+                text-align: left;
+
+            }
+
+
+            .footer-cta {
+
+                padding:
+                    55px 0 45px;
+
+            }
+
+
+            .footer-cta-line {
+
+                margin-bottom: 20px;
+
+            }
+
+
+            .footer-cta-title h2 {
+
+                font-size:
+                    clamp(48px, 15vw, 65px);
+
+            }
+
+
+            .footer-cta-button {
+
+                width: 100%;
+
+                min-width: 0;
+
+                margin-top: 5px;
+
+            }
+
+
+            .footer-main {
+
+                display: flex;
+
+                flex-direction: column;
+
+                gap: 42px;
+
+                padding:
+                    48px 0;
+
+            }
+
+
+            .footer-brand-column {
+
+                width: 100%;
+
+            }
+
+
+            .footer-logo-wrap {
+
+                width: 175px;
+
+                height: 75px;
+
+            }
+
+
+            .premium-footer-logo {
+
+                width: 160px;
+
+            }
+
+
+            .footer-brand-text {
+
+                max-width: 100%;
+
+                font-size: 12px;
+
+                line-height: 1.75;
+
+            }
+
+
+            .footer-column {
+
+                width: 100%;
+
+            }
+
+
+            .footer-column-label {
+
+                margin-bottom: 20px;
+
+            }
+
+
+            .premium-footer-links li {
+
+                margin-bottom: 13px;
+
+            }
+
+
+            .premium-footer-links a {
+
+                font-size: 12px;
+
+            }
+
+
+            .premium-contact-list {
+
+                gap: 18px;
+
+            }
+
+
+            .contact-info strong {
+
+                font-size: 11px;
+
+            }
+
+
+            .footer-tech-strip {
+
+                justify-content: flex-start;
+
+                gap: 12px;
+
+                line-height: 2;
+
+            }
+
+
+            .footer-tech-strip span {
+
+                font-size: 6px;
+
+            }
+
+
+            .footer-tech-strip i {
+
+                width: 2px;
+
+                height: 2px;
+
+            }
+
+
+            .footer-bottom {
+
+                display: flex;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 14px;
+
+                padding:
+                    24px 0 28px;
+
+            }
+
+
+            .footer-bottom-links {
+
+                justify-content: flex-start;
+
+                gap: 20px;
+
+            }
+
+        }
+
+
+        /* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+        @media (max-width: 375px) {
+
+            .footer-cta-title h2 {
+
+                font-size: 45px;
+
+            }
+
+
+            .footer-cta {
+
+                padding-top: 45px;
+
+            }
+
+
+            .footer-main {
+
+                gap: 36px;
+
+            }
+
+
+            .footer-tech-strip {
+
+                gap: 9px;
+
+            }
+
+
+            .footer-tech-strip span {
+
+                letter-spacing:
+                    .10rem;
+
+            }
+
+        }
+
+
+        /* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .footer-glow,
+            .premium-footer-logo,
+            .footer-logo-ring,
+            .status-dot {
+
+                animation: none !important;
+
+            }
+
+            .footer-cta-button,
+            .premium-footer-links a,
+            .contact-icon,
+            .premium-footer-logo {
+
+                transition: none !important;
+
+            }
+
+        }
+    </style>
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                /* Dynamic year */
+
+                const year =
+                    document.getElementById(
+                        "footerYear"
+                    );
+
+                if (year) {
+
+                    year.textContent =
+                        new Date().getFullYear();
+
+                }
+
+
+                /* Subtle logo interaction */
+
+                const logo =
+                    document.querySelector(
+                        ".premium-footer-logo"
+                    );
+
+                if (logo) {
+
+                    logo.addEventListener(
+                        "mouseenter",
+                        function () {
+
+                            logo.style.animationPlayState =
+                                "paused";
+
+                        }
+                    );
+
+                    logo.addEventListener(
+                        "mouseleave",
+                        function () {
+
+                            logo.style.animationPlayState =
+                                "running";
+
+                        }
+                    );
+
+                }
+
+            }
+        );
+
+    </script>
+    <!-- footer end -->
+
+<script id="bms-page-script">
+document.addEventListener('DOMContentLoaded', function(){
+    const tabs = document.querySelectorAll('.bms-tab');
+    const panels = document.querySelectorAll('.bms-panel');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function(){
+            tabs.forEach(t => t.classList.remove('active'));
+            panels.forEach(p => p.classList.remove('active'));
+            this.classList.add('active');
+            const panel = document.getElementById(this.dataset.target);
+            if(panel) panel.classList.add('active');
+            this.scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
+        });
+    });
+
+    const reveal = document.querySelectorAll('.bms-reveal');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {threshold:.1});
+    reveal.forEach(el => observer.observe(el));
+});
+
+function scrollBmsTabs(direction){
+    const el = document.getElementById('bmsTabs');
+    if(el) el.scrollBy({left: direction * 340, behavior:'smooth'});
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
