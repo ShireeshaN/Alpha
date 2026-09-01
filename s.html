@@ -1,34 +1,1032 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BMS + IoT | Alpha Numeric Innovations</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-    <meta name="description"
-        content="Alpha Numeric Innovations Pvt Ltd - Website Under Development">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <title>Alpha Numeric Innovations | Coming Soon</title>
+<style>
+:root{
+  --bg:#050b14;
+  --bg2:#08111f;
+  --bg3:#0d1b2a;
+  --card:#0f1b2a;
+  --text:#f7fbff;
+  --muted:#9fb0c3;
+  --line:rgba(255,255,255,.10);
+  --blue:#27b7ff;
+  --cyan:#55e6ff;
+  --green:#55d98b;
+  --white:#ffffff;
+  --light:#f6f8fb;
+  --dark:#09111c;
+  --radius:28px;
+  --shadow:0 28px 80px rgba(0,0,0,.28);
+}
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+html{
+  scroll-behavior:smooth;
+}
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+body{
+  font-family:"Inter",sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(1180px,calc(100% - 40px));
+  margin:auto;
+}
+
+.section{
+  padding:120px 0;
+  position:relative;
+}
+
+.eyebrow{
+  color:var(--cyan);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:2.2px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+
+.section-title{
+  font-family:"Manrope",sans-serif;
+  font-size:clamp(38px,5vw,68px);
+  line-height:1.02;
+  letter-spacing:-2.5px;
+  max-width:900px;
+}
+
+.section-sub{
+  color:var(--muted);
+  font-size:17px;
+  line-height:1.8;
+  max-width:700px;
+  margin-top:24px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:54px;
+  padding:0 24px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  font-weight:700;
+  transition:.35s ease;
+}
+
+.btn-primary{
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  color:#03101b;
+  box-shadow:0 15px 40px rgba(39,183,255,.22);
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px);
+  box-shadow:0 20px 55px rgba(39,183,255,.30);
+}
+
+.btn-secondary:hover{
+  background:rgba(255,255,255,.07);
+}
+
+/* NAV */
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  padding:18px 0;
+  transition:.35s ease;
+}
+
+.navbar.scrolled{
+  background:rgba(5,11,20,.82);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  padding:12px 0;
+}
+
+.nav-wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo img{
+  height:58px;
+  width:auto;
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+  align-items:center;
+}
+
+.nav-links a{
+  font-size:14px;
+  color:#d9e5ef;
+  transition:.3s ease;
+}
+
+.nav-links a:hover{
+  color:var(--cyan);
+}
+
+.menu-btn{
+  display:none;
+  font-size:24px;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(4,9,17,.95) 0%,rgba(4,9,17,.72) 42%,rgba(4,9,17,.18) 78%),
+    url("assets/img/bms-hero.jpg") center/cover no-repeat;
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 70% 40%,rgba(39,183,255,.15),transparent 35%),
+    linear-gradient(to bottom,transparent 75%,var(--bg));
+}
+
+.hero-grid{
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:60px 60px;
+  mask-image:linear-gradient(to bottom,black,transparent 90%);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  padding-top:100px;
+  max-width:780px;
+}
+
+.hero-kicker{
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+  padding:10px 15px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(8,17,31,.4);
+  backdrop-filter:blur(15px);
+  color:#d8f6ff;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.hero-kicker span{
+  width:8px;
+  height:8px;
+  background:var(--green);
+  border-radius:50%;
+  box-shadow:0 0 14px var(--green);
+}
+
+.hero h1{
+  font-family:"Manrope",sans-serif;
+  font-size:clamp(56px,8vw,108px);
+  line-height:.92;
+  letter-spacing:-5px;
+  margin:26px 0 22px;
+}
+
+.hero h1 .grad{
+  background:linear-gradient(135deg,#fff,var(--cyan));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  color:#b9c8d6;
+  font-size:19px;
+  line-height:1.75;
+  max-width:660px;
+}
+
+.hero-actions{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:34px;
+}
+
+.hero-stats{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  margin-top:55px;
+}
+
+.hero-stat{
+  padding:15px 18px;
+  min-width:150px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(6,13,24,.55);
+  backdrop-filter:blur(15px);
+  border-radius:18px;
+}
+
+.hero-stat strong{
+  display:block;
+  font-size:22px;
+}
+
+.hero-stat span{
+  color:#8ea3b8;
+  font-size:12px;
+  margin-top:6px;
+  display:block;
+}
+
+/* BUILDING DIGITAL TWIN */
+.digital{
+  background:var(--light);
+  color:var(--dark);
+}
+
+.digital .section-sub{
+  color:#657383;
+}
+
+.digital-wrap{
+  margin-top:65px;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:26px;
+  align-items:stretch;
+}
+
+.building-panel{
+  min-height:700px;
+  border-radius:34px;
+  overflow:hidden;
+  position:relative;
+  box-shadow:var(--shadow);
+  background:
+    linear-gradient(to top,rgba(4,13,22,.88),rgba(4,13,22,.10)),
+    url("assets/img/bms-building-cutaway.jpg") center/cover no-repeat;
+}
+
+.building-panel:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at 50% 55%,rgba(53,213,255,.12),transparent 38%);
+}
+
+.system-pin{
+  position:absolute;
+  z-index:3;
+  padding:10px 14px;
+  border-radius:999px;
+  background:rgba(5,15,25,.78);
+  color:white;
+  backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,.15);
+  font-size:12px;
+  display:flex;
+  gap:8px;
+  align-items:center;
+  animation:float 4s ease-in-out infinite;
+}
+
+.system-pin i{
+  color:var(--cyan);
+}
+
+.pin1{top:18%;left:10%}
+.pin2{top:32%;right:9%;animation-delay:.5s}
+.pin3{top:51%;left:7%;animation-delay:1s}
+.pin4{top:68%;right:10%;animation-delay:1.5s}
+.pin5{bottom:7%;left:35%;animation-delay:2s}
+
+@keyframes float{
+  50%{transform:translateY(-8px)}
+}
+
+.intel-card-wrap{
+  display:grid;
+  gap:18px;
+}
+
+.intel-card{
+  border-radius:28px;
+  padding:30px;
+  background:white;
+  border:1px solid #e7edf2;
+  box-shadow:0 15px 40px rgba(20,40,60,.06);
+  transition:.35s ease;
+}
+
+.intel-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 22px 55px rgba(20,40,60,.10);
+}
+
+.intel-icon{
+  width:50px;
+  height:50px;
+  border-radius:16px;
+  background:#e8f7ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#018bd0;
+  font-size:20px;
+  margin-bottom:20px;
+}
+
+.intel-card h3{
+  font:700 22px "Manrope";
+  margin-bottom:10px;
+}
+
+.intel-card p{
+  color:#697989;
+  line-height:1.7;
+  font-size:14px;
+}
+
+/* COMMAND CENTER */
+.command{
+  background:
+    radial-gradient(circle at 20% 40%,rgba(39,183,255,.08),transparent 30%),
+    var(--bg);
+}
+
+.command-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  align-items:center;
+  gap:60px;
+}
+
+.dashboard-frame{
+  position:relative;
+  padding:14px;
+  border-radius:30px;
+  background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.10);
+  box-shadow:0 35px 100px rgba(0,0,0,.45);
+}
+
+.dashboard-frame img{
+  border-radius:22px;
+}
+
+.dashboard-float{
+  position:absolute;
+  background:rgba(9,20,34,.90);
+  backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,.10);
+  padding:16px;
+  border-radius:18px;
+  box-shadow:0 15px 40px rgba(0,0,0,.30);
+}
+
+.dashboard-float strong{
+  display:block;
+  font-size:21px;
+}
+
+.dashboard-float span{
+  color:#8ea2b5;
+  font-size:11px;
+}
+
+.float-a{
+  top:-28px;
+  right:25px;
+}
+
+.float-b{
+  bottom:-28px;
+  left:30px;
+}
+
+.feature-list{
+  display:grid;
+  gap:14px;
+  margin-top:32px;
+}
+
+.feature-item{
+  display:flex;
+  gap:14px;
+  align-items:center;
+  padding:15px 0;
+  border-bottom:1px solid var(--line);
+  color:#cbd9e6;
+}
+
+.feature-item i{
+  color:var(--cyan);
+}
+
+/* BENTO */
+.systems{
+  background:#07101c;
+}
+
+.bento{
+  margin-top:55px;
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  grid-auto-rows:220px;
+  gap:16px;
+}
+
+.bento-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:28px;
+  border:1px solid rgba(255,255,255,.08);
+  background:#111c2b;
+  cursor:pointer;
+}
+
+.bento-card img{
+  height:100%;
+  object-fit:cover;
+  transition:.6s ease;
+}
+
+.bento-card:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(4,10,18,.95),rgba(4,10,18,.15) 70%);
+}
+
+.bento-card:hover img{
+  transform:scale(1.06);
+}
+
+.bento-content{
+  position:absolute;
+  z-index:2;
+  left:24px;
+  right:24px;
+  bottom:24px;
+}
+
+.bento-content small{
+  color:var(--cyan);
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+.bento-content h3{
+  margin-top:7px;
+  font:700 23px "Manrope";
+}
+
+.b1{grid-column:span 7;grid-row:span 2}
+.b2{grid-column:span 5}
+.b3{grid-column:span 5}
+.b4{grid-column:span 4}
+.b5{grid-column:span 4}
+.b6{grid-column:span 4}
+
+/* FLOW */
+.flow{
+  background:#040a12;
+}
+
+.flow-line{
+  margin-top:70px;
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:18px;
+  position:relative;
+}
+
+.flow-line:before{
+  content:"";
+  position:absolute;
+  top:30px;
+  left:7%;
+  right:7%;
+  height:2px;
+  background:linear-gradient(90deg,var(--blue),var(--cyan));
+  box-shadow:0 0 20px rgba(85,230,255,.35);
+}
+
+.flow-item{
+  position:relative;
+  z-index:2;
+  text-align:center;
+}
+
+.flow-dot{
+  width:62px;
+  height:62px;
+  margin:auto;
+  border-radius:50%;
+  border:1px solid rgba(85,230,255,.40);
+  background:#07121f;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--cyan);
+  font-size:19px;
+  box-shadow:0 0 0 8px #040a12;
+}
+
+.flow-item h4{
+  margin-top:17px;
+  font-size:14px;
+}
+
+.flow-item p{
+  color:#778b9f;
+  font-size:11px;
+  margin-top:5px;
+}
+
+/* INTELLIGENCE METRICS */
+.metrics{
+  min-height:760px;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(90deg,rgba(4,10,18,.94),rgba(4,10,18,.35)),
+    url("assets/img/bms-floorplan.jpg") center/cover no-repeat;
+}
+
+.metric-grid{
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin-top:40px;
+  max-width:760px;
+}
+
+.metric{
+  padding:24px;
+  border-radius:22px;
+  background:rgba(7,17,29,.72);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,.10);
+}
+
+.metric strong{
+  display:block;
+  font-size:31px;
+  font-family:"Manrope";
+}
+
+.metric span{
+  color:#90a2b4;
+  font-size:12px;
+  display:block;
+  margin-top:8px;
+}
+
+/* SCENARIOS */
+.scenarios{
+  background:var(--light);
+  color:var(--dark);
+}
+
+.scenarios .section-sub{
+  color:#6e7d8c;
+}
+
+.scenario-wrap{
+  margin-top:60px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+}
+
+.scenario{
+  background:white;
+  padding:34px;
+  border-radius:28px;
+  border:1px solid #e8edf2;
+  box-shadow:0 14px 40px rgba(0,0,0,.05);
+}
+
+.scenario h3{
+  font:700 25px "Manrope";
+  margin-bottom:24px;
+}
+
+.sequence{
+  display:grid;
+  gap:13px;
+}
+
+.sequence span{
+  padding:16px 18px;
+  border-radius:16px;
+  background:#f5f8fb;
+  font-size:14px;
+  position:relative;
+}
+
+.sequence span:not(:last-child):after{
+  content:"↓";
+  position:absolute;
+  bottom:-18px;
+  left:50%;
+  transform:translateX(-50%);
+  color:#24a9e9;
+  z-index:3;
+}
+
+/* PREDICTIVE */
+.predictive{
+  background:#07101b;
+}
+
+.predictive-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:center;
+}
+
+.predictive-image{
+  height:620px;
+  border-radius:34px;
+  overflow:hidden;
+}
+
+.predictive-image img{
+  height:100%;
+  object-fit:cover;
+}
+
+/* DEVICES */
+.devices{
+  background:#050b14;
+  text-align:center;
+}
+
+.device-visual{
+  max-width:930px;
+  margin:60px auto 0;
+  position:relative;
+}
+
+.device-visual img{
+  border-radius:32px;
+}
+
+/* INDUSTRIES */
+.industries{
+  background:var(--light);
+  color:var(--dark);
+}
+
+.industries .section-sub{
+  color:#6a7a89;
+}
+
+.industry-strip{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:10px;
+  margin-top:55px;
+  height:480px;
+}
+
+.industry{
+  position:relative;
+  border-radius:24px;
+  overflow:hidden;
+  transition:.5s ease;
+}
+
+.industry img{
+  height:100%;
+  object-fit:cover;
+}
+
+.industry:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.85),transparent 65%);
+}
+
+.industry h4{
+  position:absolute;
+  z-index:2;
+  bottom:20px;
+  left:18px;
+  color:white;
+  font-size:15px;
+}
+
+.industry:hover{
+  transform:translateY(-8px);
+}
+
+/* INTEGRATION */
+.integration{
+  background:#07101c;
+}
+
+.architecture{
+  margin-top:60px;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:14px;
+  align-items:center;
+}
+
+.arch-box{
+  min-height:155px;
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:24px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  text-align:center;
+  background:rgba(255,255,255,.025);
+}
+
+.arch-box i{
+  font-size:27px;
+  color:var(--cyan);
+  margin-bottom:15px;
+}
+
+.arch-box h4{
+  font-size:14px;
+}
+
+.arch-box p{
+  font-size:11px;
+  color:#8294a7;
+  margin-top:6px;
+}
+
+.arch-arrow{
+  display:none;
+}
+
+/* CTA */
+.cta{
+  padding:150px 0;
+  text-align:center;
+  background:
+    linear-gradient(rgba(3,9,17,.70),rgba(3,9,17,.86)),
+    url("assets/img/bms-cta.jpg") center/cover no-repeat;
+}
+
+.cta h2{
+  font:800 clamp(48px,7vw,88px)/1 "Manrope";
+  letter-spacing:-4px;
+}
+
+.cta p{
+  color:#b3c3d2;
+  max-width:650px;
+  margin:24px auto 34px;
+  font-size:18px;
+  line-height:1.7;
+}
+
+/* FOOTER */
+.footer{
+  padding:32px 0;
+  border-top:1px solid var(--line);
+  background:#030810;
+  color:#7e90a3;
+  text-align:center;
+  font-size:13px;
+}
+
+/* REVEAL */
+.reveal{
+  opacity:0;
+  transform:translateY(35px);
+  transition:opacity .8s ease,transform .8s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:none;
+}
+
+
+
+  .menu-btn{display:block}
+
+  .digital-wrap,
+  .command-grid,
+  .predictive-grid{
+    grid-template-columns:1fr;
+  }
+
+  .building-panel{
+    min-height:550px;
+  }
+
+  .bento{
+    grid-template-columns:1fr 1fr;
+    grid-auto-rows:270px;
+  }
+
+  .b1,.b2,.b3,.b4,.b5,.b6{
+    grid-column:span 1;
+    grid-row:span 1;
+  }
+
+  .flow-line{
+    grid-template-columns:1fr;
+  }
+
+  .flow-line:before{
+    display:none;
+  }
+
+  .metric-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .scenario-wrap{
+    grid-template-columns:1fr;
+  }
+
+  .industry-strip{
+    grid-template-columns:repeat(2,1fr);
+    height:auto;
+  }
+
+  .industry{
+    height:300px;
+  }
+
+  .architecture{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:600px){
+  .section{
+    padding:85px 0;
+  }
+
+  .hero h1{
+    letter-spacing:-3px;
+  }
+
+  .hero-stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+
+  .bento{
+    grid-template-columns:1fr;
+  }
+
+  .metric-grid{
+    grid-template-columns:1fr;
+  }
+
+  .architecture{
+    grid-template-columns:1fr;
+  }
+
+  .industry-strip{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/w-alpha.png" id="logoWhite" class="navbar-logo" alt="Alpha Numeric Innovations" style="display:none;">
+                <img src="assets/img/b-alpha.png" id="logoDark" class="navbar-logo" alt="Alpha Numeric Innovations">
+            </a>
+
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu <i class="fas fa-bars ms-1"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link " href="about.html">About</a></li>
+
+                    <li class="nav-item dropdown solution-dropdown position-static">
+                        <a class="nav-link dropdown-toggle " href="#" id="solutionsDropdown" role="button"
+                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Solutions</a>
+
+                        <div class="dropdown-menu mega-menu" aria-labelledby="solutionsDropdown">
+                            <div class="mega-menu-inner">
+                                <div class="mega-column">
+                                    <div class="mega-heading "><span>Energy</span></div>
+                                    <a href="solar-energy.html">Solar Energy</a>
+                                    <a href="wind-energy.html">Wind Energy</a>
+                                    <a href="hydel-energy.html">Hydel Energy</a>
+                                    <a href="biomass-energy.html">Biomass Energy</a>
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>Power</span></div>
+                                    <a href="transmission.html">Transmission</a>
+                                    <a href="distribution.html">Distribution</a>
+                                    <a href="control-panels.html">Control Panels</a>
+                                    <a href="panel-boards.html">Panel Boards</a>
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>Automation</span></div>
+                                    <a href="home-automation.html">Home Automation</a>
+                                    <a href="commercial-automation.html">Commercial Automation</a>
+                                    <a href="industrial-automation.html">Industrial Automation</a>
+                                    <a href="hospital-automation.html">Hospital Automation</a>
+                                    <a href="hotel-automation.html">Hotel Automation</a>
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>R&amp;D</span></div>
+                                    <a href="smart-pole-r&d.html">Smart Pole</a>
+                                    <a href="smart-bollard-r&d.html">Smart Bollard</a>
+                                    <a href="smart-conference-table.html">Smart Conference Table</a>
+                                    <a href="smart-bar-counter.html">Smart Bar Counter</a>
+                                    <a href="smart-window-leaf-ac.html">Smart Window Leaf AC</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="bms.html">BMS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="power-products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
 
     <style>
-
         /* =====================================================
-           RESET
-        ====================================================== */
+           GLOBAL
+        ===================================================== */
 
         * {
             margin: 0;
@@ -36,967 +1034,969 @@
             box-sizing: border-box;
         }
 
-        html,
-        body {
-            width: 100%;
-            min-height: 100%;
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: "Manrope", sans-serif;
-            background: #0b1425;
-            color: #ffffff;
-            overflow: hidden;
+            font-family: "Inter", sans-serif;
+            background: #ffffff;
+            color: #111111;
+            overflow-x: hidden;
         }
 
         a {
             text-decoration: none;
-            color: inherit;
         }
 
-
+        img {
+            max-width: 100%;
+        }
         /* =====================================================
-           MAIN WRAPPER
-        ====================================================== */
-
-        .under-construction {
-
-            position: relative;
-
-            width: 100%;
-
-            min-height: 100vh;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            overflow: hidden;
-
-            background:
-
-                radial-gradient(
-                    circle at 20% 20%,
-                    rgba(51, 74, 133, 0.38),
-                    transparent 34%
-                ),
-
-                radial-gradient(
-                    circle at 85% 75%,
-                    rgba(41, 74, 122, 0.18),
-                    transparent 35%
-                ),
-
-                linear-gradient(
-                    135deg,
-                    #09111f 0%,
-                    #101b31 50%,
-                    #17243b 100%
-                );
-        }
-
-
-        /* =====================================================
-           ENGINEERING GRID BACKGROUND
-        ====================================================== */
-
-        .under-construction::before {
-
-            content: "";
-
-            position: absolute;
-
-            inset: 0;
-
-            background-image:
-
-                linear-gradient(
-                    rgba(255, 255, 255, 0.025) 1px,
-                    transparent 1px
-                ),
-
-                linear-gradient(
-                    90deg,
-                    rgba(255, 255, 255, 0.025) 1px,
-                    transparent 1px
-                );
-
-            background-size: 65px 65px;
-
-            opacity: 0.65;
-
-            pointer-events: none;
-
-        }
-
-
-        /* =====================================================
-           BACKGROUND LIGHT
-        ====================================================== */
-
-        .light {
-
-            position: absolute;
-
-            border-radius: 50%;
-
-            filter: blur(130px);
-
-            pointer-events: none;
-        }
-
-
-        .light-one {
-
-            width: 450px;
-
-            height: 450px;
-
-            background: rgba(51, 74, 133, 0.28);
-
-            top: -220px;
-
-            left: -170px;
-        }
-
-
-        .light-two {
-
-            width: 500px;
-
-            height: 500px;
-
-            background: rgba(27, 67, 120, 0.16);
-
-            right: -220px;
-
-            bottom: -250px;
-        }
-
-
-
-        /* =====================================================
-           HEADER
-        ====================================================== */
-
-        .top-header {
-
-            position: absolute;
-
-            top: 0;
-
-            left: 0;
-
-            width: 100%;
-
-            padding: 30px 6%;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            z-index: 10;
-        }
-
-
-        /* =====================================================
-           LOGO
-        ====================================================== */
-
-        .logo {
-
-            display: flex;
-
-            align-items: center;
-        }
-
-
-        .logo img {
-
-            width: 190px;
-
-            height: auto;
-
-            object-fit: contain;
-        }
-
-
-
-        /* =====================================================
-           STATUS
-        ====================================================== */
-
-        .status {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 10px;
-
-            padding: 10px 17px;
-
-            border-radius: 50px;
-
-            border: 1px solid rgba(255,255,255,0.09);
-
-            background: rgba(255,255,255,0.035);
-
-            backdrop-filter: blur(12px);
-
-            color: #b2bed1;
-
-            font-size: 11px;
-
-            font-weight: 600;
-
-            letter-spacing: 0.4px;
-        }
-
-
-        .status-dot {
-
-            width: 7px;
-
-            height: 7px;
-
-            border-radius: 50%;
-
-            background: #6f94e8;
-
-            box-shadow:
-                0 0 0 5px rgba(111,148,232,0.08);
-
-            animation: pulse 1.8s infinite;
-        }
-
-
-        @keyframes pulse {
-
-            0% {
-
-                box-shadow:
-                    0 0 0 0 rgba(111,148,232,0.4);
-
+           PREMIUM GLOBAL NAVBAR
+        ===================================================== */
+
+        .main-navbar { padding: 13px 0; background: transparent; transition: background .35s ease, padding .35s ease, box-shadow .35s ease; z-index: 9999; }
+        .main-navbar.navbar-shrink, .main-navbar.scrolled { background: #fff; padding: 8px 0; box-shadow: 0 8px 35px rgba(14,29,57,.08); }
+        .navbar-logo { height: 68px; width: auto; object-fit: contain; transition: height .3s ease; }
+        .main-navbar.navbar-shrink .navbar-logo, .main-navbar.scrolled .navbar-logo { height: 58px; }
+        .main-navbar .nav-link { position: relative; color: #fff; font-size: 14px; font-weight: 600; letter-spacing: .4px; margin: 0 5px; padding: 12px 11px !important; transition: color .3s ease; }
+        .main-navbar.navbar-shrink .nav-link, .main-navbar.scrolled .nav-link { color: #16243b; }
+        .main-navbar .nav-link:hover, .main-navbar .nav-link:focus { color: #4d73be; }
+
+        .solution-dropdown { position: static !important; }
+        .mega-menu { position: absolute !important; width: min(1180px, calc(100vw - 48px)); left: 50% !important; top: 100% !important; transform: translateX(-50%) !important; margin-top: 0 !important; padding: 0; border: 0; border-radius: 14px; background: #fff; box-shadow: 0 24px 70px rgba(14,29,57,.18); overflow: hidden; }
+        .mega-menu-inner { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); }
+        .mega-column { min-height: 270px; padding: 30px 30px 32px; border-right: 1px solid #e8edf5; background: #fff; }
+        .mega-column:last-child { border-right: 0; }
+        .mega-heading { display: flex; align-items: center; gap: 11px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid #edf1f7; color: #17243b; font-family: "Varela Round", sans-serif; font-size: 16px; font-weight: 600; }
+        .mega-heading i { width: 22px; color: #4d73be; font-size: 17px; }
+        .mega-column > a { display: block; position: relative; padding: 9px 0 9px 16px; color: #5d687b; font-size: 13.5px; font-weight: 600; text-decoration: none; transition: color .25s ease, padding .25s ease; }
+        .mega-column > a::before { content: ""; position: absolute; left: 0; top: 50%; width: 6px; height: 1px; background: #9eabc0; transform: translateY(-50%); transition: width .25s ease, background .25s ease; }
+        .mega-column > a:hover { color: #334a85; padding-left: 21px; }
+        .mega-column > a:hover::before { width: 12px; background: #4d73be; }
+
+        @media (min-width: 992px) {
+            .solution-dropdown > .mega-menu {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                display: block;
+                transition: opacity .22s ease, visibility .22s ease;
             }
 
-            70% {
-
-                box-shadow:
-                    0 0 0 9px rgba(111,148,232,0);
-
+            .solution-dropdown:hover > .mega-menu,
+            .solution-dropdown.mega-open > .mega-menu,
+            .solution-dropdown > .mega-menu.show {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
             }
 
-            100% {
-
-                box-shadow:
-                    0 0 0 0 rgba(111,148,232,0);
-
+            /* Invisible hover bridge between Solutions and mega menu */
+            .solution-dropdown > .mega-menu::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: -18px;
+                height: 18px;
+                background: transparent;
             }
+        }
 
+        @media (max-width: 991px) {
+            .main-navbar { background: #fff; padding: 8px 0; }
+            .navbar-logo { height: 55px; }
+            #logoWhite { display: none !important; }
+            #logoDark { display: block !important; }
+            .main-navbar .navbar-toggler { color: #17243b; border-color: rgba(23,36,59,.2); }
+            .main-navbar .nav-link { color: #17243b; padding: 12px 7px !important; margin: 1px 0; }
+            .navbar-collapse { max-height: calc(100vh - 76px); overflow-y: auto; margin-top: 10px; padding: 15px 10px 22px; border-top: 1px solid #edf0f5; background: #fff; }
+            .mega-menu { position: static !important; transform: none !important; width: 100%; margin: 0 !important; box-shadow: none; border-left: 2px solid #334a85; border-radius: 0; overflow: visible; }
+            .mega-menu-inner { grid-template-columns: 1fr; }
+            .mega-column { min-height: 0; padding: 18px 18px 14px; border-right: 0; border-bottom: 1px solid #edf0f5; }
+            .mega-column:last-child { border-bottom: 0; }
+            .mega-heading { margin-bottom: 8px; padding-bottom: 10px; }
+            .mega-column > a { padding-top: 7px; padding-bottom: 7px; }
         }
 
 
-
-        /* =====================================================
-           CENTER CONTENT
-        ====================================================== */
-
-        .content {
-
-            position: relative;
-
-            z-index: 5;
-
-            width: 90%;
-
-            max-width: 1050px;
-
-            text-align: center;
-
-            padding: 130px 20px 100px;
+        /* ABOUT PAGE: keep Index navbar in permanent white/scrolled state */
+       
+        .main-navbar {
+            background: #fff;
+            padding: 8px 0;
+            box-shadow: 0 8px 35px rgba(14,29,57,.08);
+        }
+        .main-navbar .navbar-logo { height: 58px; }
+        .main-navbar .nav-link { color: #16243b; }
+        #logoWhite { display: none !important; }
+        #logoDark { display: block !important; }
+        .main-navbar .nav-contact {
+            background: #334a85;
+            border-color: #334a85;
+            color: #fff !important;
+        }
+        .main-navbar .nav-contact:hover {
+            background: #17243b;
+            border-color: #17243b;
+            color: #fff !important;
+        }
+        .main-navbar .nav-link.active { color: #4d73be; }
+        .main-navbar .nav-link.active:not(.nav-contact)::after {
+            width: calc(100% - 24px);
         }
 
 
-
-        /* =====================================================
-           SMALL TAG
-        ====================================================== */
-
-        .eyebrow {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 10px;
-
-            padding: 10px 17px;
-
-            margin-bottom: 28px;
-
-            border-radius: 50px;
-
-            border:
-                1px solid rgba(120,151,214,0.18);
-
-            background:
-                rgba(51,74,133,0.16);
-
-            color: #9eb5e5;
-
-            font-size: 11px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-        }
-
-
-
-        /* =====================================================
-           HEADING
-        ====================================================== */
-
-        .heading {
-
-            max-width: 950px;
-
-            margin: auto;
-
-            font-size:
-                clamp(50px, 7vw, 90px);
-
-            line-height: 1;
-
-            letter-spacing: -4px;
-
-            font-weight: 800;
-        }
-
-
-        .heading span {
-
-            display: block;
-
-            margin-top: 8px;
-
-            color: #8fa7d8;
-        }
-
-
-
-        /* =====================================================
-           DESCRIPTION
-        ====================================================== */
-
-        .description {
-
-            max-width: 680px;
-
-            margin: 30px auto 0;
-
-            color: #9ba7ba;
-
-            font-size: 15px;
-
-            line-height: 1.85;
-
-            font-weight: 400;
-        }
-
-
-
-        /* =====================================================
-           BRAND DIVIDER
-        ====================================================== */
-
-        .brand-line {
-
-            width: 75px;
-
-            height: 2px;
-
-            margin: 34px auto;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    transparent,
-                    #6686c9,
-                    transparent
-                );
-        }
-
-
-
-        /* =====================================================
-           SECTORS
-        ====================================================== */
-
-        .sectors {
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            flex-wrap: wrap;
-
-            gap: 10px;
-
-            margin-top: 10px;
-        }
-
-
-        .sector {
-
-            padding: 9px 15px;
-
-            color: #7f8da5;
-
-            font-size: 10px;
-
-            font-weight: 700;
-
-            text-transform: uppercase;
-
-            letter-spacing: 1.3px;
-        }
-
-
-        .sector:not(:last-child)::after {
-
-            content: "";
-
-            display: inline-block;
-
-            width: 4px;
-
-            height: 4px;
-
-            margin-left: 25px;
-
-            border-radius: 50%;
-
-            background: #4966a4;
-
-            vertical-align: middle;
-        }
-
-
-
-        /* =====================================================
-           PROGRESS
-        ====================================================== */
-
-        .progress-wrapper {
-
-            width: 100%;
-
-            max-width: 470px;
-
-            margin: 45px auto 0;
-        }
-
-
-        .progress-info {
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-            margin-bottom: 12px;
-
-            color: #77859d;
-
-            font-size: 10px;
-
-            font-weight: 700;
-
-            letter-spacing: 1.2px;
-
-            text-transform: uppercase;
-        }
-
-
-        .progress-info strong {
-
-            color: #a9bde6;
-        }
-
-
-        .progress-track {
-
-            width: 100%;
-
-            height: 3px;
-
-            background:
-                rgba(255,255,255,0.07);
-
-            border-radius: 20px;
-
-            overflow: hidden;
-        }
-
-
-        .progress-bar {
-
-            width: 80%;
-
-            height: 100%;
-
-            background:
-
-                linear-gradient(
-                    90deg,
-                    #334a85,
-                    #7894ce
-                );
-
-            animation:
-                progressLoad 1.6s ease forwards;
-        }
-
-
-        @keyframes progressLoad {
-
-            from {
-
-                width: 0;
-
-            }
-
-            to {
-
-                width: 80%;
-
-            }
-
-        }
-
-
-
-        /* =====================================================
-           BOTTOM MESSAGE
-        ====================================================== */
-
-        .bottom-text {
-
-            margin-top: 35px;
-
-            color: #718097;
-
-            font-size: 12px;
-
-            letter-spacing: 0.3px;
-        }
-
-
-        .bottom-text strong {
-
-            color: #bbc7dc;
-
-            font-weight: 600;
-        }
-
-
-
-        /* =====================================================
-           FLOATING DECORATION
-        ====================================================== */
-
-        .circle {
-
-            position: absolute;
-
-            border:
-                1px solid rgba(116,145,204,0.06);
-
-            border-radius: 50%;
-
-            pointer-events: none;
-        }
-
-
-        .circle-one {
-
-            width: 440px;
-
-            height: 440px;
-
-            left: -240px;
-
-            top: 27%;
-        }
-
-
-        .circle-two {
-
-            width: 580px;
-
-            height: 580px;
-
-            right: -360px;
-
-            bottom: -100px;
-        }
-
-
-
-        /* =====================================================
-           FOOTER
-        ====================================================== */
-
-        footer {
-
-            position: absolute;
-
-            left: 50%;
-
-            bottom: 25px;
-
-            transform: translateX(-50%);
-
-            z-index: 10;
-
-            width: 90%;
-
-            text-align: center;
-
-            color: #59667a;
-
-            font-size: 10px;
-
-            letter-spacing: 0.4px;
-        }
-
-
-
-        /* =====================================================
-           MOBILE
-        ====================================================== */
-
-        @media(max-width:768px) {
-
-            body {
-
-                overflow-y: auto;
-            }
-
-
-            .under-construction {
-
-                min-height: 100vh;
-            }
-
-
-            .top-header {
-
-                padding: 22px 5%;
-            }
-
-
-            .logo img {
-
-                width: 145px;
-            }
-
-
-            .status {
-
-                font-size: 9px;
-
-                padding: 8px 11px;
-            }
-
-
-            .content {
-
-                padding-top: 145px;
-
-                padding-bottom: 120px;
-            }
-
-
-            .heading {
-
-                font-size:
-                    clamp(43px, 13vw, 65px);
-
-                letter-spacing: -3px;
-            }
-
-
-            .description {
-
-                font-size: 13px;
-
-                line-height: 1.8;
-            }
-
-
-            .sectors {
-
-                gap: 4px;
-            }
-
-
-            .sector {
-
-                font-size: 8px;
-
-                padding: 6px 8px;
-            }
-
-
-            .sector:not(:last-child)::after {
-
-                margin-left: 12px;
-            }
-
-
-        }
-
-
-
-        @media(max-width:480px) {
-
-
-            .status span:last-child {
-
-                display: none;
-            }
-
-
-            .heading {
-
-                letter-spacing: -2px;
-            }
-
-
-            .eyebrow {
-
-                font-size: 8px;
-
-                letter-spacing: 1.5px;
-            }
-
-
-            footer {
-
-                font-size: 9px;
-
-                bottom: 18px;
-            }
-
-        }
-
+        
     </style>
+    
+<style>
+/* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
+.main-navbar #solutionsDropdown,
+.main-navbar #solutionsDropdown:hover,
+.main-navbar #solutionsDropdown:focus,
+.main-navbar #solutionsDropdown:active,
+.main-navbar #solutionsDropdown.show {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
 
-</head>
-
-
-<body>
-
-
-<main class="under-construction">
-
-
-    <!-- Background Effects -->
-
-    <div class="light light-one"></div>
-
-    <div class="light light-two"></div>
-
-    <div class="circle circle-one"></div>
-
-    <div class="circle circle-two"></div>
-
-
-
-    <!-- =========================================
-         HEADER
-    ========================================== -->
-
-    <header class="top-header">
+.main-navbar #solutionsDropdown:hover,
+.main-navbar #solutionsDropdown:focus,
+.main-navbar #solutionsDropdown.show {
+    color: #4d73be !important;
+}
+</style>
 
 
-        <!-- Your Existing White Logo -->
+<style id="navbar-monochrome-final">
+/* =========================================================
+   NAVBAR — MONOCHROME BLACK THEME
+   Keep existing layout + mega-menu behavior unchanged
+========================================================= */
 
-        <a href="#" class="logo">
+/* Main nav links */
+.main-navbar .nav-link,
+.main-navbar.scrolled .nav-link,
+.main-navbar.navbar-shrink .nav-link {
+    color: #1a1a1a !important;
+}
 
-            <img
-                src="assets/img/w-alpha.png"
-                alt="Alpha Numeric Innovations Pvt Ltd"
-            >
+/* Normal */
+.main-navbar .nav-link {
+    font-weight: 600;
+}
 
+/* Hover / focus — black only */
+.main-navbar .nav-link:hover,
+.main-navbar .nav-link:focus {
+    color: #000000 !important;
+}
+
+/* Active — black + stronger weight */
+.main-navbar .nav-link.active,
+.main-navbar .nav-link.show,
+.main-navbar #solutionsDropdown.show {
+    color: #000000 !important;
+    font-weight: 800 !important;
+}
+
+/* No colored underline */
+.main-navbar .nav-link:not(.nav-contact):not(.dropdown-toggle)::after {
+    background: #000000 !important;
+}
+
+/* Solutions: text only, no box */
+.main-navbar #solutionsDropdown,
+.main-navbar #solutionsDropdown:hover,
+.main-navbar #solutionsDropdown:focus,
+.main-navbar #solutionsDropdown:active,
+.main-navbar #solutionsDropdown.show {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    color: #000000 !important;
+}
+
+/* Contact: monochrome */
+.main-navbar .nav-contact,
+.main-navbar.scrolled .nav-contact {
+    background: #000000 !important;
+    border-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+.main-navbar .nav-contact:hover,
+.main-navbar .nav-contact:focus,
+.main-navbar.scrolled .nav-contact:hover {
+    background: #222222 !important;
+    border-color: #222222 !important;
+    color: #ffffff !important;
+}
+
+/* =========================================================
+   MEGA MENU — BLACK
+========================================================= */
+
+.main-navbar .mega-menu {
+    background: #000000 !important;
+    border: 1px solid #1f1f1f !important;
+    box-shadow: 0 24px 70px rgba(0,0,0,.28) !important;
+}
+
+/* Columns */
+.main-navbar .mega-column {
+    background: #000000 !important;
+    border-right-color: #242424 !important;
+}
+
+.main-navbar .mega-column:last-child {
+    border-right-color: transparent !important;
+}
+
+/* Headings */
+.main-navbar .mega-heading {
+    color: #ffffff !important;
+    border-bottom-color: #2a2a2a !important;
+}
+
+/* Icons — monochrome */
+.main-navbar .mega-heading i {
+    color: #ffffff !important;
+}
+
+/* Menu links */
+.main-navbar .mega-column > a {
+    color: #bdbdbd !important;
+}
+
+/* Small line before links */
+.main-navbar .mega-column > a::before {
+    background: #666666 !important;
+}
+
+/* Hover inside mega menu */
+.main-navbar .mega-column > a:hover,
+.main-navbar .mega-column > a:focus {
+    color: #ffffff !important;
+}
+
+.main-navbar .mega-column > a:hover::before {
+    background: #ffffff !important;
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+    .main-navbar .nav-link {
+        color: #1a1a1a !important;
+    }
+
+    .main-navbar .mega-menu {
+        background: #000000 !important;
+        border-left-color: #000000 !important;
+    }
+
+    .main-navbar .mega-column {
+        background: #000000 !important;
+        border-bottom-color: #242424 !important;
+    }
+}
+</style>
+
+
+<style id="mega-heading-no-icons">
+.main-navbar .mega-heading {
+    gap: 0 !important;
+}
+</style>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+
+  <div class="container">
+    <div class="hero-content reveal">
+
+      <div class="hero-kicker">
+        <span></span>
+        Intelligent Building Infrastructure
+      </div>
+
+      <h1>
+        BMS <span class="grad">+ IoT</span>
+      </h1>
+
+      <p>
+        One intelligent ecosystem connecting building systems, devices,
+        data and operations for smarter control, real-time visibility
+        and optimized performance.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#overview" class="btn btn-primary">
+          Explore Intelligence
+          <i class="fa-solid fa-arrow-right"></i>
         </a>
 
+        <a href="#systems" class="btn btn-secondary">
+          Connected Systems
+        </a>
+      </div>
 
-
-        <div class="status">
-
-            <span class="status-dot"></span>
-
-            <span>
-                New Website In Development
-            </span>
-
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <strong>24/7</strong>
+          <span>Live Monitoring</span>
         </div>
 
-
-    </header>
-
-
-
-    <!-- =========================================
-         CENTER
-    ========================================== -->
-
-    <section class="content">
-
-
-        <div class="eyebrow">
-
-            <i class="fa-solid fa-gear"></i>
-
-            Engineering The Future
-
+        <div class="hero-stat">
+          <strong>One</strong>
+          <span>Unified Platform</span>
         </div>
 
+        <div class="hero-stat">
+          <strong>Smart</strong>
+          <span>Automated Response</span>
+        </div>
+      </div>
 
+    </div>
+  </div>
+</section>
 
-        <h1 class="heading">
+<!-- DIGITAL TWIN -->
+<section class="section digital" id="overview">
+  <div class="container">
 
-            Something Powerful
+    <div class="eyebrow reveal">Connected Building Intelligence</div>
 
-            <span>
-                Is Taking Shape.
-            </span>
+    <h2 class="section-title reveal">
+      Everything Connected.<br>
+      Everything Visible.
+    </h2>
 
-        </h1>
+    <p class="section-sub reveal">
+      Integrate critical building systems into one intelligent operational
+      environment that provides real-time monitoring, automation and actionable insights.
+    </p>
 
+    <div class="digital-wrap">
 
+      <div class="building-panel reveal">
 
-        <p class="description">
-
-            We are building a new digital experience
-            that reflects our engineering capabilities,
-            technology expertise and commitment to
-            delivering intelligent infrastructure solutions.
-
-        </p>
-
-
-
-        <div class="brand-line"></div>
-
-
-
-        <!-- Company Verticals -->
-
-        <div class="sectors">
-
-            <div class="sector">
-                Power
-            </div>
-
-            <div class="sector">
-                Energy
-            </div>
-
-            <div class="sector">
-                Automation
-            </div>
-
-            <div class="sector">
-                R&amp;D
-            </div>
-
+        <div class="system-pin pin1">
+          <i class="fa-solid fa-snowflake"></i>
+          HVAC
         </div>
 
-
-
-        <!-- Development Progress -->
-
-        <div class="progress-wrapper">
-
-
-            <div class="progress-info">
-
-                <span>
-                    Website Development
-                </span>
-
-                <strong>
-                    In Progress
-                </strong>
-
-            </div>
-
-
-            <div class="progress-track">
-
-                <div class="progress-bar"></div>
-
-            </div>
-
-
+        <div class="system-pin pin2">
+          <i class="fa-solid fa-lightbulb"></i>
+          Lighting
         </div>
 
-
-
-        <div class="bottom-text">
-
-            Our new website is coming soon.
-
-            <strong>
-                Stay connected.
-            </strong>
-
+        <div class="system-pin pin3">
+          <i class="fa-solid fa-bolt"></i>
+          Energy
         </div>
 
+        <div class="system-pin pin4">
+          <i class="fa-solid fa-shield-halved"></i>
+          Security
+        </div>
 
-    </section>
+        <div class="system-pin pin5">
+          <i class="fa-solid fa-fire"></i>
+          Life Safety
+        </div>
 
+      </div>
 
+      <div class="intel-card-wrap">
 
-    <!-- =========================================
-         FOOTER
-    ========================================== -->
+        <div class="intel-card reveal">
+          <div class="intel-icon">
+            <i class="fa-solid fa-eye"></i>
+          </div>
+          <h3>Unified Visibility</h3>
+          <p>
+            View connected building assets, operating conditions and
+            system health through a centralized interface.
+          </p>
+        </div>
 
-    <footer>
+        <div class="intel-card reveal">
+          <div class="intel-icon">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h3>Intelligent Automation</h3>
+          <p>
+            Automate routine building operations using occupancy,
+            environmental and equipment data.
+          </p>
+        </div>
 
-        © <span id="year"></span>
-        Alpha Numeric Innovations Pvt Ltd.
-        All Rights Reserved.
+        <div class="intel-card reveal">
+          <div class="intel-icon">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3>Operational Insights</h3>
+          <p>
+            Analyze trends, alarms and performance data to support
+            efficient facility operations.
+          </p>
+        </div>
 
-    </footer>
+      </div>
 
+    </div>
+  </div>
+</section>
 
-</main>
+<!-- COMMAND CENTER -->
+<section class="section command">
+  <div class="container command-grid">
 
+    <div class="dashboard-frame reveal">
+      <img src="assets/img/bms-dashboard.jpg" alt="BMS Dashboard">
 
+      <div class="dashboard-float float-a">
+        <strong>97%</strong>
+        <span>Systems Online</span>
+      </div>
+
+      <div class="dashboard-float float-b">
+        <strong>Live</strong>
+        <span>Building Intelligence</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="eyebrow reveal">Central Command Center</div>
+
+      <h2 class="section-title reveal">
+        One Dashboard.
+        Total Operational Visibility.
+      </h2>
+
+      <p class="section-sub reveal">
+        Bring building systems, equipment status, alarms and operational
+        information into one centralized BMS dashboard.
+      </p>
+
+      <div class="feature-list">
+
+        <div class="feature-item reveal">
+          <i class="fa-solid fa-circle-check"></i>
+          Live system status and alarms
+        </div>
+
+        <div class="feature-item reveal">
+          <i class="fa-solid fa-circle-check"></i>
+          Energy and environmental monitoring
+        </div>
+
+        <div class="feature-item reveal">
+          <i class="fa-solid fa-circle-check"></i>
+          Equipment health visibility
+        </div>
+
+        <div class="feature-item reveal">
+          <i class="fa-solid fa-circle-check"></i>
+          Historical trends and analytics
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SYSTEMS -->
+<section class="section systems" id="systems">
+  <div class="container">
+
+    <div class="eyebrow reveal">Connected Building Systems</div>
+
+    <h2 class="section-title reveal">
+      Intelligence Across
+      Every Building System.
+    </h2>
+
+    <div class="bento">
+
+      <div class="bento-card b1 reveal">
+        <img src="assets/img/bms-hvac.jpg">
+        <div class="bento-content">
+          <small>01</small>
+          <h3>HVAC & Climate Control</h3>
+        </div>
+      </div>
+
+      <div class="bento-card b2 reveal">
+        <img src="assets/img/bms-lighting.jpg">
+        <div class="bento-content">
+          <small>02</small>
+          <h3>Lighting Automation</h3>
+        </div>
+      </div>
+
+      <div class="bento-card b3 reveal">
+        <img src="assets/img/bms-energy.jpg">
+        <div class="bento-content">
+          <small>03</small>
+          <h3>Energy Management</h3>
+        </div>
+      </div>
+
+      <div class="bento-card b4 reveal">
+        <img src="assets/img/bms-access.jpg">
+        <div class="bento-content">
+          <small>04</small>
+          <h3>Access Control</h3>
+        </div>
+      </div>
+
+      <div class="bento-card b5 reveal">
+        <img src="assets/img/bms-fire.jpg">
+        <div class="bento-content">
+          <small>05</small>
+          <h3>Fire & Life Safety</h3>
+        </div>
+      </div>
+
+      <div class="bento-card b6 reveal">
+        <img src="assets/img/bms-air-quality.jpg">
+        <div class="bento-content">
+          <small>06</small>
+          <h3>Indoor Air Quality</h3>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DATA FLOW -->
+<section class="section flow">
+  <div class="container">
+
+    <div class="eyebrow reveal">Connected Architecture</div>
+
+    <h2 class="section-title reveal">
+      From Field Data
+      to Intelligent Action.
+    </h2>
+
+    <div class="flow-line">
+
+      <div class="flow-item reveal">
+        <div class="flow-dot">
+          <i class="fa-solid fa-wave-square"></i>
+        </div>
+        <h4>Sensors</h4>
+        <p>Real-time data</p>
+      </div>
+
+      <div class="flow-item reveal">
+        <div class="flow-dot">
+          <i class="fa-solid fa-microchip"></i>
+        </div>
+        <h4>Controllers</h4>
+        <p>Local automation</p>
+      </div>
+
+      <div class="flow-item reveal">
+        <div class="flow-dot">
+          <i class="fa-solid fa-network-wired"></i>
+        </div>
+        <h4>Gateway</h4>
+        <p>System connectivity</p>
+      </div>
+
+      <div class="flow-item reveal">
+        <div class="flow-dot">
+          <i class="fa-solid fa-cloud"></i>
+        </div>
+        <h4>IoT Platform</h4>
+        <p>Connected data</p>
+      </div>
+
+      <div class="flow-item reveal">
+        <div class="flow-dot">
+          <i class="fa-solid fa-chart-simple"></i>
+        </div>
+        <h4>Analytics</h4>
+        <p>Operational insight</p>
+      </div>
+
+      <div class="flow-item reveal">
+        <div class="flow-dot">
+          <i class="fa-solid fa-desktop"></i>
+        </div>
+        <h4>Dashboard</h4>
+        <p>Central visibility</p>
+      </div>
+
+      <div class="flow-item reveal">
+        <div class="flow-dot">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <h4>Action</h4>
+        <p>Automated response</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- REAL TIME -->
+<section class="section metrics">
+  <div class="container">
+
+    <div class="eyebrow reveal">Real-Time Building Intelligence</div>
+
+    <h2 class="section-title reveal">
+      Live Data.
+      Smarter Decisions.
+    </h2>
+
+    <div class="metric-grid">
+
+      <div class="metric reveal">
+        <strong>22.4°C</strong>
+        <span>Average Temperature</span>
+      </div>
+
+      <div class="metric reveal">
+        <strong>43%</strong>
+        <span>Humidity</span>
+      </div>
+
+      <div class="metric reveal">
+        <strong>97%</strong>
+        <span>Systems Online</span>
+      </div>
+
+      <div class="metric reveal">
+        <strong>42</strong>
+        <span>Indoor AQI</span>
+      </div>
+
+      <div class="metric reveal">
+        <strong>3</strong>
+        <span>Active Alerts</span>
+      </div>
+
+      <div class="metric reveal">
+        <strong>Live</strong>
+        <span>Energy Monitoring</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SCENARIOS -->
+<section class="section scenarios">
+  <div class="container">
+
+    <div class="eyebrow reveal">Automated Building Response</div>
+
+    <h2 class="section-title reveal">
+      The Building Responds
+      Automatically.
+    </h2>
+
+    <p class="section-sub reveal">
+      Connected systems can react to changing conditions without requiring
+      constant manual intervention.
+    </p>
+
+    <div class="scenario-wrap">
+
+      <div class="scenario reveal">
+        <h3>Occupancy Intelligence</h3>
+
+        <div class="sequence">
+          <span>Occupancy Detected</span>
+          <span>Lighting Adjusted</span>
+          <span>HVAC Optimized</span>
+          <span>Energy Usage Recorded</span>
+        </div>
+      </div>
+
+      <div class="scenario reveal">
+        <h3>Equipment Alert Workflow</h3>
+
+        <div class="sequence">
+          <span>Abnormal Condition Detected</span>
+          <span>BMS Alarm Generated</span>
+          <span>Equipment Status Evaluated</span>
+          <span>Maintenance Team Alerted</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PREDICTIVE -->
+<section class="section predictive">
+  <div class="container predictive-grid">
+
+    <div>
+      <div class="eyebrow reveal">Smart Maintenance</div>
+
+      <h2 class="section-title reveal">
+        From Reactive Maintenance
+        to Intelligent Operations.
+      </h2>
+
+      <p class="section-sub reveal">
+        Monitor equipment runtime, operating conditions and performance
+        trends to support timely maintenance and better asset management.
+      </p>
+
+      <div class="feature-list">
+        <div class="feature-item reveal">
+          <i class="fa-solid fa-check"></i>
+          Equipment runtime monitoring
+        </div>
+
+        <div class="feature-item reveal">
+          <i class="fa-solid fa-check"></i>
+          Abnormal-condition alerts
+        </div>
+
+        <div class="feature-item reveal">
+          <i class="fa-solid fa-check"></i>
+          Historical trend analysis
+        </div>
+
+        <div class="feature-item reveal">
+          <i class="fa-solid fa-check"></i>
+          Maintenance insights
+        </div>
+      </div>
+    </div>
+
+    <div class="predictive-image reveal">
+      <img src="assets/img/bms-equipment-monitoring.jpg">
+    </div>
+
+  </div>
+</section>
+
+<!-- DEVICES -->
+<section class="section devices">
+  <div class="container">
+
+    <div class="eyebrow reveal">Connected Control</div>
+
+    <h2 class="section-title reveal" style="margin:auto">
+      Control From Anywhere.
+    </h2>
+
+    <p class="section-sub reveal" style="margin:24px auto 0">
+      Access building status, alerts, trends and controls through
+      centralized desktop and mobile interfaces.
+    </p>
+
+    <div class="device-visual reveal">
+      <img src="assets/img/bms-mobile-dashboard.jpg">
+    </div>
+
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="section industries">
+  <div class="container">
+
+    <div class="eyebrow reveal">Applications</div>
+
+    <h2 class="section-title reveal">
+      Intelligent Infrastructure
+      Across Every Environment.
+    </h2>
+
+    <div class="industry-strip">
+
+      <div class="industry reveal">
+        <img src="assets/img/bms-commercial.jpg">
+        <h4>Commercial</h4>
+      </div>
+
+      <div class="industry reveal">
+        <img src="assets/img/bms-hospital.jpg">
+        <h4>Healthcare</h4>
+      </div>
+
+      <div class="industry reveal">
+        <img src="assets/img/bms-hotel.jpg">
+        <h4>Hospitality</h4>
+      </div>
+
+      <div class="industry reveal">
+        <img src="assets/img/bms-industrial.jpg">
+        <h4>Industrial</h4>
+      </div>
+
+      <div class="industry reveal">
+        <img src="assets/img/bms-residential.jpg">
+        <h4>Residential</h4>
+      </div>
+
+      <div class="industry reveal">
+        <img src="assets/img/bms-campus.jpg">
+        <h4>Campuses</h4>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- INTEGRATION -->
+<section class="section integration" id="integration">
+  <div class="container">
+
+    <div class="eyebrow reveal">Open Integration Architecture</div>
+
+    <h2 class="section-title reveal">
+      Connected From Field
+      to Cloud.
+    </h2>
+
+    <p class="section-sub reveal">
+      Integrate devices, controllers, BMS platforms and IoT applications
+      across modern building communication architectures.
+    </p>
+
+    <div class="architecture">
+
+      <div class="arch-box reveal">
+        <i class="fa-solid fa-temperature-half"></i>
+        <h4>Field Devices</h4>
+        <p>Sensors & meters</p>
+      </div>
+
+      <div class="arch-box reveal">
+        <i class="fa-solid fa-microchip"></i>
+        <h4>Controllers</h4>
+        <p>DDC / PLC</p>
+      </div>
+
+      <div class="arch-box reveal">
+        <i class="fa-solid fa-code-branch"></i>
+        <h4>Protocols</h4>
+        <p>BACnet / Modbus / KNX</p>
+      </div>
+
+      <div class="arch-box reveal">
+        <i class="fa-solid fa-building"></i>
+        <h4>BMS Platform</h4>
+        <p>Central operations</p>
+      </div>
+
+      <div class="arch-box reveal">
+        <i class="fa-solid fa-cloud-arrow-up"></i>
+        <h4>IoT & Cloud</h4>
+        <p>Analytics & APIs</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="container">
+
+    <div class="eyebrow reveal">Build Smarter</div>
+
+    <h2 class="reveal">
+      Make Your Building
+      Intelligent.
+    </h2>
+
+    <p class="reveal">
+      Connect systems, centralize operations and transform building
+      data into smarter operational decisions.
+    </p>
+
+    <div class="hero-actions reveal" style="justify-content:center">
+      <a href="contact.html" class="btn btn-primary">
+        Discuss Your Project
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+      <a href="automation.html" class="btn btn-secondary">
+        Explore Automation
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    © 2026 Alpha Numeric Innovations. All Rights Reserved.
+  </div>
+</footer>
 
 <script>
+const navbar = document.getElementById("navbar");
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
 
-    document.getElementById("year").textContent =
-        new Date().getFullYear();
+window.addEventListener("scroll", () => {
+  navbar.classList.toggle("scrolled", window.scrollY > 40);
+});
 
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("show");
+  });
+});
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const revealObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("active");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold:0.12
+  }
+);
+
+revealElements.forEach(el => revealObserver.observe(el));
+
+/* subtle hero parallax */
+window.addEventListener("scroll", () => {
+  const hero = document.querySelector(".hero");
+  const y = window.scrollY * 0.18;
+
+  if(hero){
+    hero.style.backgroundPosition = `center calc(50% + ${y}px)`;
+  }
+});
 </script>
 
-
 </body>
-
 </html>
