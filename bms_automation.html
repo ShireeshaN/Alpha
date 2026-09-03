@@ -1,195 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BMS + IoT | Alpha Numeric Innovations</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Varela+Round&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;overflow-x:hidden}
-a{text-decoration:none}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BMS and IoT building intelligence solutions from Alpha Numeric Innovations.">
+  <title>BMS + IoT | Alpha Numeric Innovations</title>
 
-<style id="bms-page-styles">
-:root{
-    --bms-bg:#06090d;
-    --bms-bg2:#0a1017;
-    --bms-card:#0d141d;
-    --bms-white:#fff;
-    --bms-text:#eef4f8;
-    --bms-muted:#8b99a8;
-    --bms-line:rgba(255,255,255,.09);
-    --bms-cyan:#62d9ff;
-    --bms-blue:#3d8cff;
-    --bms-green:#55d991;
-    --bms-orange:#ff5a1f;
-    --bms-light:#f5f7fa;
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Varela+Round&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+  <!-- SHARED BASE CSS -->
+  <style id="shared-base-css">
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box
 }
 
-body{background:#fff;color:#111;overflow-x:hidden;}
-.bms-section{position:relative;padding:115px 0;}
-.bms-container{width:min(1240px,calc(100% - 42px));margin:auto;position:relative;z-index:2;}
-.bms-wide{width:min(1500px,calc(100% - 50px));margin:auto;position:relative;z-index:2;}
-.bms-kicker{display:inline-block;color:#52cef6;font-size:10px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:16px;}
-.bms-title{font-size:clamp(42px,5.3vw,74px);line-height:.98;letter-spacing:-3.4px;font-weight:800;margin:0;}
-.bms-copy{max-width:720px;margin-top:22px;color:#8b99a8;font-size:15px;line-height:1.85;}
-.bms-reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease;}
-.bms-reveal.active{opacity:1;transform:none;}
-
-/* HERO */
-.bms-hero{min-height:720px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(3,7,12,.96) 0%,rgba(3,7,12,.78) 42%,rgba(3,7,12,.26) 78%),url('assets/img/bms-hero.jpg') center/cover no-repeat;color:#fff;}
-.bms-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 76% 43%,rgba(41,179,241,.17),transparent 26%),linear-gradient(to bottom,transparent 72%,#06090d);}
-.bms-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:66px 66px;opacity:.55;}
-.bms-hero-content{max-width:820px;padding:95px 0 85px;position:relative;z-index:3;}
-.bms-hero-pill{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.13);background:rgba(5,12,20,.45);backdrop-filter:blur(14px);padding:10px 14px;border-radius:999px;font-size:10px;letter-spacing:2px;font-weight:700;color:#d9f7ff;}
-.bms-hero-pill i{font-size:7px;color:var(--bms-green);filter:drop-shadow(0 0 7px var(--bms-green));}
-.bms-hero h1{font-size:clamp(64px,9vw,122px);line-height:.86;letter-spacing:-7px;margin:25px 0 22px;font-weight:800;}
-.bms-hero h1 span{color:#79ddff;font-weight:300;}
-.bms-hero p{max-width:680px;color:#b3c0cd;font-size:17px;line-height:1.8;margin:0;}
-.bms-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px;}
-.bms-btn{display:inline-flex;align-items:center;gap:10px;padding:15px 21px;border:1px solid rgba(255,255,255,.14);border-radius:999px;color:#fff;font-size:11px;font-weight:700;letter-spacing:.4px;transition:.3s;background:rgba(255,255,255,.03);}
-.bms-btn.primary{background:#fff;color:#080d12;border-color:#fff;}
-.bms-btn:hover{transform:translateY(-2px);}
-.bms-hero-stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:44px;}
-.bms-stat{min-width:155px;padding:16px 18px;border:1px solid rgba(255,255,255,.1);background:rgba(5,12,20,.52);backdrop-filter:blur(12px);border-radius:17px;}
-.bms-stat strong{display:block;font-size:21px;}.bms-stat span{display:block;margin-top:4px;color:#8fa0b0;font-size:10px;}
-
-/* OVERVIEW */
-.bms-overview{background:var(--bms-light);}
-.bms-overview .bms-title{color:#0b1117;}.bms-overview .bms-copy{color:#677684;}
-.bms-overview-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;margin-top:58px;}
-.bms-building{min-height:650px;border-radius:30px;position:relative;overflow:hidden;background:linear-gradient(to top,rgba(3,9,15,.88),rgba(3,9,15,.05)),url('assets/img/bms-building-cutaway.jpg') center/cover no-repeat;box-shadow:0 28px 70px rgba(30,50,70,.13);}
-.bms-tag{position:absolute;z-index:3;display:flex;align-items:center;gap:8px;padding:9px 13px;border-radius:999px;background:rgba(4,11,18,.75);border:1px solid rgba(255,255,255,.13);backdrop-filter:blur(12px);color:#fff;font-size:10px;animation:bmsFloat 4s ease-in-out infinite;}
-.bms-tag i{color:#63d9ff;}.t1{top:16%;left:8%}.t2{top:31%;right:8%;animation-delay:.5s}.t3{top:51%;left:7%;animation-delay:1s}.t4{top:67%;right:10%;animation-delay:1.5s}.t5{bottom:8%;left:38%;animation-delay:2s}
-@keyframes bmsFloat{50%{transform:translateY(-8px)}}
-.bms-feature-stack{display:grid;gap:16px;}.bms-feature{padding:28px;background:#fff;border:1px solid #e4e9ed;border-radius:24px;box-shadow:0 14px 40px rgba(20,35,50,.05);transition:.3s;}.bms-feature:hover{transform:translateY(-5px);box-shadow:0 22px 50px rgba(20,35,50,.1)}
-.bms-feature-icon{width:50px;height:50px;border-radius:15px;background:#e8f7fd;display:flex;align-items:center;justify-content:center;color:#0c93cc;margin-bottom:18px;}.bms-feature h3{font-size:20px;margin:0 0 9px;}.bms-feature p{font-size:12px;color:#6d7a87;line-height:1.75;margin:0;}
-
-/* COMMAND */
-.bms-command{background:radial-gradient(circle at 15% 40%,rgba(39,175,237,.08),transparent 30%),#06090d;color:#fff;}
-.bms-command-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;}
-.bms-dashboard-frame{position:relative;padding:12px;border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.02));border:1px solid var(--bms-line);box-shadow:0 35px 90px rgba(0,0,0,.42);}.bms-dashboard-frame img{width:100%;border-radius:19px;display:block;}.bms-float-card{position:absolute;padding:13px 16px;border-radius:15px;background:rgba(7,17,28,.92);border:1px solid rgba(255,255,255,.09);backdrop-filter:blur(15px);}.bms-float-card strong{display:block;font-size:19px}.bms-float-card span{font-size:9px;color:#8495a6}.fc1{right:20px;top:-23px}.fc2{left:25px;bottom:-23px}
-.bms-list{margin-top:28px;border-top:1px solid var(--bms-line)}.bms-list div{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--bms-line);font-size:12px;color:#c5d0da}.bms-list i{color:#5ad7ff;}
-
-/* SYSTEM BENTO */
-.bms-systems{background:#0a1017;color:#fff;}.bms-bento{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:215px;gap:14px;margin-top:50px}.bms-bento-card{position:relative;overflow:hidden;border-radius:25px;border:1px solid rgba(255,255,255,.08);}.bms-bento-card img{width:100%;height:100%;object-fit:cover;transition:.6s}.bms-bento-card:hover img{transform:scale(1.05)}.bms-bento-card::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(3,8,13,.95),transparent 72%)}.bms-bento-copy{position:absolute;z-index:2;left:22px;bottom:20px}.bms-bento-copy small{color:#68dfff;font-size:9px}.bms-bento-copy h3{font-size:19px;margin:5px 0 0}.b1{grid-column:span 7;grid-row:span 2}.b2,.b3{grid-column:span 5}.b4,.b5,.b6{grid-column:span 4}
-
-/* MODULE STACK */
-.bms-modules{background:radial-gradient(circle at 18% 18%,rgba(39,171,235,.075),transparent 30%),#080d14;color:#fff;}
-.bms-module-head{text-align:center;max-width:900px;margin:0 auto 45px}.bms-module-head .bms-copy{margin-left:auto;margin-right:auto}.bms-module-head .bms-title span{color:#8ce3ff;font-weight:300}
-.bms-tabs-shell{position:relative;padding:14px 52px;border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.017));border:1px solid rgba(255,255,255,.09);backdrop-filter:blur(18px);}
-.bms-tabs{display:flex;align-items:center;gap:10px;overflow-x:auto;scrollbar-width:none;scroll-behavior:smooth}.bms-tabs::-webkit-scrollbar{display:none}.bms-tab{flex:0 0 auto;display:flex;align-items:center;gap:9px;padding:8px 18px 8px 8px;border:1px solid transparent;border-radius:999px;background:rgba(255,255,255,.045);color:#acb7c2;cursor:pointer;font-size:13px;font-weight:700;transition:.3s}.bms-tab:hover{color:#fff;background:rgba(255,255,255,.08);transform:translateY(-2px)}.bms-tab-icon{width:39px;height:39px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#101821;color:#7d91a4}.bms-tab.active{color:#fff;background:linear-gradient(135deg,#168ac8,#27b8e8);box-shadow:0 12px 34px rgba(32,166,224,.18)}.bms-tab.active .bms-tab-icon{color:#fff;background:rgba(3,25,38,.45)}
-.bms-tabs-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.1);background:#0e1822;color:#fff;cursor:pointer}.bms-tabs-arrow.left{left:8px}.bms-tabs-arrow.right{right:8px}
-.bms-stage{margin-top:16px;border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,.09);background:linear-gradient(145deg,#111821,#05080d);box-shadow:0 38px 95px rgba(0,0,0,.35)}
-.bms-panel{display:none;padding:25px;animation:bmsPanel .55s ease}.bms-panel.active{display:block}@keyframes bmsPanel{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.bms-panel-top{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:20px}.bms-panel-top small{display:block;color:#4ecff8;font-size:9px;font-weight:800;letter-spacing:2px;margin-bottom:6px}.bms-panel-top h3{font-size:clamp(22px,2.4vw,31px);margin:0}.bms-status{display:flex;align-items:center;gap:8px;border:1px solid rgba(85,217,145,.15);background:rgba(85,217,145,.055);padding:8px 13px;border-radius:999px;color:#9dacb8;font-size:9px;white-space:nowrap}.bms-status-dot{width:7px;height:7px;border-radius:50%;background:#55d991;box-shadow:0 0 12px #55d991}
-.bms-module-image{position:relative;min-height:500px;display:flex;align-items:center;justify-content:center;border-radius:20px;overflow:hidden;background:#030609;border:1px solid rgba(255,255,255,.06)}.bms-module-image img{width:100%;max-height:680px;object-fit:contain;display:block;background:#030609}.bms-module-image::before{content:"";position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,#5bd7ff,transparent);z-index:2}
-
-/* FLOW */
-.bms-flow-section{background:#05090e;color:#fff}.bms-flow{display:grid;grid-template-columns:repeat(7,1fr);gap:15px;position:relative;margin-top:60px}.bms-flow::before{content:"";position:absolute;left:7%;right:7%;top:30px;height:2px;background:linear-gradient(90deg,#258ed5,#5bddff)}.bms-flow-item{position:relative;z-index:2;text-align:center}.bms-flow-circle{width:60px;height:60px;border-radius:50%;margin:auto;display:flex;align-items:center;justify-content:center;border:1px solid rgba(91,221,255,.38);background:#08131d;color:#5bddff;box-shadow:0 0 0 8px #05090e}.bms-flow-item h4{font-size:12px;margin:15px 0 4px}.bms-flow-item p{font-size:9px;color:#7b8b9a;margin:0}
-
-/* CTA */
-.bms-cta{padding:135px 0;text-align:center;color:#fff;background:linear-gradient(rgba(3,8,13,.72),rgba(3,8,13,.9)),url('assets/img/bms-cta.jpg') center/cover no-repeat}.bms-cta .bms-title{max-width:900px;margin:auto}.bms-cta .bms-copy{margin:20px auto 30px;color:#aebcc8}.bms-cta .bms-actions{justify-content:center}
-
-@media(max-width:991px){
-    .bms-overview-grid,.bms-command-grid{grid-template-columns:1fr}.bms-building{min-height:520px}.bms-bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:270px}.b1,.b2,.b3,.b4,.b5,.b6{grid-column:span 1;grid-row:span 1}.bms-flow{grid-template-columns:repeat(4,1fr);row-gap:38px}.bms-flow::before{display:none}.bms-module-image{min-height:360px}
+html {
+    scroll-behavior: smooth
 }
-@media(max-width:680px){
-    .bms-section{padding:85px 0}.bms-hero{min-height:650px}.bms-hero h1{letter-spacing:-4px}.bms-title{letter-spacing:-2px}.bms-bento{grid-template-columns:1fr}.bms-module-head{text-align:left}.bms-tabs-shell{padding:11px 42px}.bms-panel{padding:14px}.bms-panel-top{align-items:flex-start;flex-direction:column}.bms-module-image{min-height:260px}.bms-flow{grid-template-columns:repeat(2,1fr)}
-}
-</style>
 
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden
+}
+
+a {
+    text-decoration: none
+}
+
+
+:root {
+    --bms-bg: #06090d;
+    --bms-bg2: #0a1017;
+    --bms-card: #0d141d;
+    --bms-white: #fff;
+    --bms-text: #eef4f8;
+    --bms-muted: #8b99a8;
+    --bms-line: rgba(255, 255, 255, .09);
+    --bms-cyan: #62d9ff;
+    --bms-blue: #3d8cff;
+    --bms-green: #55d991;
+    --bms-orange: #ff5a1f;
+    --bms-light: #f5f7fa;
+}
+
+body {
+    background: #fff;
+    color: #111;
+    overflow-x: hidden;
+}
+
+.bms-section {
+    position: relative;
+    padding: 115px 0;
+}
+
+.bms-container {
+    width: min(1240px, calc(100% - 42px));
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.bms-wide {
+    width: min(1500px, calc(100% - 50px));
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.bms-kicker {
+    display: inline-block;
+    color: #52cef6;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.bms-title {
+    font-size: clamp(42px, 5.3vw, 74px);
+    line-height: .98;
+    letter-spacing: -3.4px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.bms-copy {
+    max-width: 720px;
+    margin-top: 22px;
+    color: #8b99a8;
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+.bms-reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.bms-reveal.active {
+    opacity: 1;
+    transform: none;
+}
+
+:where(section[id]) {
+  scroll-margin-top: 5.5rem;
+}
+
+:where(a, button):focus-visible {
+  outline: 3px solid #62d9ff;
+  outline-offset: 4px;
+}
+
+.site-loader {
+  min-height: calc(100vh - 4.625rem);
+  display: grid;
+  place-items: center;
+  background: #06090d;
+  color: #eef4f8;
+  font-size: 0.875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.site-module-error {
+  width: min(760px, calc(100% - 2rem));
+  margin: 2rem auto;
+  padding: 1.25rem;
+  border: 1px solid #d9dee6;
+  border-radius: 1rem;
+  background: #fff;
+  color: #17243b;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .bms-reveal { opacity: 1; transform: none; transition: none; }
+}
+
+@media (max-width: 680px) {
+  .bms-section { padding: 85px 0; }
+  .bms-title { letter-spacing: -2px; }
+}
+  </style>
+
+  <!-- SHARED REVEAL SCRIPT -->
+  <script id="shared-reveal-script">
+window.BMSModules = window.BMSModules || {};
+
+window.BMSModules.setupReveal = function setupReveal(root, { selector = '.bms-reveal', stagger = 0 } = {}) {
+  if (!root) return () => {};
+
+  const elements = [...root.querySelectorAll(selector)];
+  if (root.matches?.(selector)) elements.unshift(root);
+
+  if (stagger > 0) {
+    elements.forEach((element, index) => {
+      element.style.transitionDelay = `${Math.min(index * stagger, 420)}ms`;
+    });
+  }
+
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    elements.forEach((element) => element.classList.add('active'));
+    return () => {};
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('active');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+
+  elements.forEach((element) => observer.observe(element));
+  return () => observer.disconnect();
+};
+  </script>
 </head>
 <body>
-<style>
-    /* =====================================================
-           PREMIUM GLOBAL NAVBAR
-        ===================================================== */
 
-        .main-navbar { padding: 13px 0; background: transparent; transition: background .35s ease, padding .35s ease, box-shadow .35s ease; z-index: 9999; }
-        .main-navbar.navbar-shrink, .main-navbar.scrolled { background: #fff; padding: 8px 0; box-shadow: 0 8px 35px rgba(14,29,57,.08); }
-        .navbar-logo { height: 68px; width: auto; object-fit: contain; transition: height .3s ease; }
-        .main-navbar.navbar-shrink .navbar-logo, .main-navbar.scrolled .navbar-logo { height: 58px; }
-        .main-navbar .nav-link { position: relative; color: #fff; font-size: 14px; font-weight: 600; letter-spacing: .4px; margin: 0 5px; padding: 12px 11px !important; transition: color .3s ease; }
-        .main-navbar.navbar-shrink .nav-link, .main-navbar.scrolled .nav-link { color: #16243b; }
-        .main-navbar .nav-link:hover, .main-navbar .nav-link:focus { color: #4d73be; }
+  <!-- =========================================================
+       NAVBAR MODULE START
+  ========================================================== -->
 
-        .solution-dropdown { position: static !important; }
-        .mega-menu { position: absolute !important; width: min(1180px, calc(100vw - 48px)); left: 50% !important; top: 100% !important; transform: translateX(-50%) !important; margin-top: 0 !important; padding: 0; border: 0; border-radius: 14px; background: #fff; box-shadow: 0 24px 70px rgba(14,29,57,.18); overflow: hidden; }
-        .mega-menu-inner { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); }
-        .mega-column { min-height: 270px; padding: 30px 30px 32px; border-right: 1px solid #e8edf5; background: #fff; }
-        .mega-column:last-child { border-right: 0; }
-        .mega-heading { display: flex; align-items: center; gap: 11px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid #edf1f7; color: #17243b; font-family: "Varela Round", sans-serif; font-size: 16px; font-weight: 600; }
-        .mega-heading i { width: 22px; color: #4d73be; font-size: 17px; }
-        .mega-column > a { display: block; position: relative; padding: 9px 0 9px 16px; color: #5d687b; font-size: 13.5px; font-weight: 600; text-decoration: none; transition: color .25s ease, padding .25s ease; }
-        .mega-column > a::before { content: ""; position: absolute; left: 0; top: 50%; width: 6px; height: 1px; background: #9eabc0; transform: translateY(-50%); transition: width .25s ease, background .25s ease; }
-        .mega-column > a:hover { color: #334a85; padding-left: 21px; }
-        .mega-column > a:hover::before { width: 12px; background: #4d73be; }
-
-        @media (min-width: 992px) {
-            .solution-dropdown:hover > .mega-menu { display: block; }
-            .mega-menu { opacity: 0; visibility: hidden; pointer-events: none; display: block; transition: opacity .22s ease, visibility .22s ease; }
-            .solution-dropdown:hover > .mega-menu, .solution-dropdown > .mega-menu.show { opacity: 1; visibility: visible; pointer-events: auto; }
-        }
-
-        @media (max-width: 991px) {
-            .main-navbar { background: #fff; padding: 8px 0; }
-            .navbar-logo { height: 55px; }
-            #logoWhite { display: none !important; }
-            #logoDark { display: block !important; }
-            .main-navbar .navbar-toggler { color: #17243b; border-color: rgba(23,36,59,.2); }
-            .main-navbar .nav-link { color: #17243b; padding: 12px 7px !important; margin: 1px 0; }
-            .navbar-collapse { max-height: calc(100vh - 76px); overflow-y: auto; margin-top: 10px; padding: 15px 10px 22px; border-top: 1px solid #edf0f5; background: #fff; }
-            .mega-menu { position: static !important; transform: none !important; width: 100%; margin: 0 !important; box-shadow: none; border-left: 2px solid #334a85; border-radius: 0; overflow: visible; }
-            .mega-menu-inner { grid-template-columns: 1fr; }
-            .mega-column { min-height: 0; padding: 18px 18px 14px; border-right: 0; border-bottom: 1px solid #edf0f5; }
-            .mega-column:last-child { border-bottom: 0; }
-            .mega-heading { margin-bottom: 8px; padding-bottom: 10px; }
-            .mega-column > a { padding-top: 7px; padding-bottom: 7px; }
-        }
-
-
-        /* ABOUT PAGE: keep Index navbar in permanent white/scrolled state */
-        body { padding-top: 74px; }
-        .main-navbar {
-            background: #fff;
-            padding: 8px 0;
-            box-shadow: 0 8px 35px rgba(14,29,57,.08);
-        }
-        .main-navbar .navbar-logo { height: 58px; }
-        .main-navbar .nav-link { color: #16243b; }
-        #logoWhite { display: none !important; }
-        #logoDark { display: block !important; }
-        .main-navbar .nav-contact {
-            background: #334a85;
-            border-color: #334a85;
-            color: #fff !important;
-        }
-        .main-navbar .nav-contact:hover {
-            background: #17243b;
-            border-color: #17243b;
-            color: #fff !important;
-        }
-        .main-navbar .nav-link.active { color: #4d73be; }
-        .main-navbar .nav-link.active:not(.nav-contact)::after {
-            width: calc(100% - 24px);
-        }
-
-</style>
-
-    <!-- =========================================================
-         PREMIUM GLOBAL NAVIGATION
-    ========================================================= -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
+  <!-- NAVBAR: HTML -->
+<nav aria-label="Primary navigation" class="navbar navbar-expand-lg navbar-light fixed-top main-navbar scrolled" id="mainNav">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/img/w-alpha.png" id="logoWhite" class="navbar-logo" alt="Alpha Numeric Innovations" style="display:none;">
+                <img src="assets/img/w-alpha.png" id="logoWhite" class="navbar-logo" alt="Alpha Numeric Innovations"
+                   >
                 <img src="assets/img/b-alpha.png" id="logoDark" class="navbar-logo" alt="Alpha Numeric Innovations">
             </a>
 
@@ -244,7 +252,7 @@ body{background:#fff;color:#111;overflow-x:hidden;}
                         </div>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link active" href="bms.html">BMS</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="bms.html" aria-current="page">BMS</a></li>
                     <li class="nav-item"><a class="nav-link" href="power-products.html">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
@@ -252,8 +260,292 @@ body{background:#fff;color:#111;overflow-x:hidden;}
         </div>
     </nav>
 
+  <!-- NAVBAR: CSS -->
+  <style id="navbar-section-css">
+/* =====================================================
+   PREMIUM GLOBAL NAVBAR
+===================================================== */
 
-    <style>
+.main-navbar {
+    padding: 13px 0;
+    background: transparent;
+    transition: background .35s ease, padding .35s ease, box-shadow .35s ease;
+    z-index: 9999;
+}
+
+.main-navbar.navbar-shrink,
+.main-navbar.scrolled {
+    background: #fff;
+    padding: 8px 0;
+    box-shadow: 0 8px 35px rgba(14, 29, 57, .08);
+}
+
+.navbar-logo {
+    height: 68px;
+    width: auto;
+    object-fit: contain;
+    transition: height .3s ease;
+}
+
+.main-navbar.navbar-shrink .navbar-logo,
+.main-navbar.scrolled .navbar-logo {
+    height: 58px;
+}
+
+.main-navbar .nav-link {
+    position: relative;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .4px;
+    margin: 0 5px;
+    padding: 12px 11px !important;
+    transition: color .3s ease;
+}
+
+.main-navbar.navbar-shrink .nav-link,
+.main-navbar.scrolled .nav-link {
+    color: #16243b;
+}
+
+.main-navbar .nav-link:hover,
+.main-navbar .nav-link:focus {
+    color: #4d73be;
+}
+
+.solution-dropdown {
+    position: static !important;
+}
+
+.mega-menu {
+    position: absolute !important;
+    width: min(1180px, calc(100vw - 48px));
+    left: 50% !important;
+    top: 100% !important;
+    transform: translateX(-50%) !important;
+    margin-top: 0 !important;
+    padding: 0;
+    border: 0;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 24px 70px rgba(14, 29, 57, .18);
+    overflow: hidden;
+}
+
+.mega-menu-inner {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.mega-column {
+    min-height: 270px;
+    padding: 30px 30px 32px;
+    border-right: 1px solid #e8edf5;
+    background: #fff;
+}
+
+.mega-column:last-child {
+    border-right: 0;
+}
+
+.mega-heading {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid #edf1f7;
+    color: #17243b;
+    font-family: "Varela Round", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.mega-heading i {
+    width: 22px;
+    color: #4d73be;
+    font-size: 17px;
+}
+
+.mega-column>a {
+    display: block;
+    position: relative;
+    padding: 9px 0 9px 16px;
+    color: #5d687b;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color .25s ease, padding .25s ease;
+}
+
+.mega-column>a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 6px;
+    height: 1px;
+    background: #9eabc0;
+    transform: translateY(-50%);
+    transition: width .25s ease, background .25s ease;
+}
+
+.mega-column>a:hover {
+    color: #334a85;
+    padding-left: 21px;
+}
+
+.mega-column>a:hover::before {
+    width: 12px;
+    background: #4d73be;
+}
+
+@media (min-width: 992px) {
+    .solution-dropdown:hover>.mega-menu {
+        display: block;
+    }
+
+    .mega-menu {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        display: block;
+        transition: opacity .22s ease, visibility .22s ease;
+    }
+
+    .solution-dropdown:hover>.mega-menu,
+    .solution-dropdown>.mega-menu.show {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+}
+
+@media (max-width: 991px) {
+    .main-navbar {
+        background: #fff;
+        padding: 8px 0;
+    }
+
+    .navbar-logo {
+        height: 55px;
+    }
+
+    #logoWhite {
+        display: none !important;
+    }
+
+    #logoDark {
+        display: block !important;
+    }
+
+    .main-navbar .navbar-toggler {
+        color: #17243b;
+        border-color: rgba(23, 36, 59, .2);
+    }
+
+    .main-navbar .nav-link {
+        color: #17243b;
+        padding: 12px 7px !important;
+        margin: 1px 0;
+    }
+
+    .navbar-collapse {
+        max-height: calc(100vh - 76px);
+        overflow-y: auto;
+        margin-top: 10px;
+        padding: 15px 10px 22px;
+        border-top: 1px solid #edf0f5;
+        background: #fff;
+    }
+
+    .mega-menu {
+        position: static !important;
+        transform: none !important;
+        width: 100%;
+        margin: 0 !important;
+        box-shadow: none;
+        border-left: 2px solid #334a85;
+        border-radius: 0;
+        overflow: visible;
+    }
+
+    .mega-menu-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .mega-column {
+        min-height: 0;
+        padding: 18px 18px 14px;
+        border-right: 0;
+        border-bottom: 1px solid #edf0f5;
+    }
+
+    .mega-column:last-child {
+        border-bottom: 0;
+    }
+
+    .mega-heading {
+        margin-bottom: 8px;
+        padding-bottom: 10px;
+    }
+
+    .mega-column>a {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+}
+
+
+/* ABOUT PAGE: keep Index navbar in permanent white/scrolled state */
+body {
+    padding-top: 74px;
+}
+
+.main-navbar {
+    background: #fff;
+    padding: 8px 0;
+    box-shadow: 0 8px 35px rgba(14, 29, 57, .08);
+}
+
+.main-navbar .navbar-logo {
+    height: 58px;
+}
+
+.main-navbar .nav-link {
+    color: #16243b;
+}
+
+#logoWhite {
+    display: none !important;
+}
+
+#logoDark {
+    display: block !important;
+}
+
+.main-navbar .nav-contact {
+    background: #334a85;
+    border-color: #334a85;
+    color: #fff !important;
+}
+
+.main-navbar .nav-contact:hover {
+    background: #17243b;
+    border-color: #17243b;
+    color: #fff !important;
+}
+
+.main-navbar .nav-link.active {
+    color: #4d73be;
+}
+
+.main-navbar .nav-link.active:not(.nav-contact)::after {
+    width: calc(100% - 24px);
+}
+
+
+
 /* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
 .main-navbar #solutionsDropdown,
 .main-navbar #solutionsDropdown:hover,
@@ -271,307 +563,1462 @@ body{background:#fff;color:#111;overflow-x:hidden;}
 .main-navbar #solutionsDropdown.show {
     color: #4d73be !important;
 }
-</style>
 
 
-<style id="navbar-monochrome-final">
-/* =========================================================
+
+        /* =========================================================
    NAVBAR — MONOCHROME BLACK THEME
    Keep existing layout + mega-menu behavior unchanged
 ========================================================= */
 
-/* Main nav links */
-.main-navbar .nav-link,
-.main-navbar.scrolled .nav-link,
-.main-navbar.navbar-shrink .nav-link {
-    color: #1a1a1a !important;
-}
+        /* Main nav links */
+        .main-navbar .nav-link,
+        .main-navbar.scrolled .nav-link,
+        .main-navbar.navbar-shrink .nav-link {
+            color: #1a1a1a !important;
+        }
 
-/* Normal */
-.main-navbar .nav-link {
-    font-weight: 600;
-}
+        /* Normal */
+        .main-navbar .nav-link {
+            font-weight: 600;
+        }
 
-/* Hover / focus — black only */
-.main-navbar .nav-link:hover,
-.main-navbar .nav-link:focus {
-    color: #000000 !important;
-}
+        /* Hover / focus — black only */
+        .main-navbar .nav-link:hover,
+        .main-navbar .nav-link:focus {
+            color: #000000 !important;
+        }
 
-/* Active — black + stronger weight */
-.main-navbar .nav-link.active,
-.main-navbar .nav-link.show,
-.main-navbar #solutionsDropdown.show {
-    color: #000000 !important;
-    font-weight: 800 !important;
-}
+        /* Active — black + stronger weight */
+        .main-navbar .nav-link.active,
+        .main-navbar .nav-link.show,
+        .main-navbar #solutionsDropdown.show {
+            color: #000000 !important;
+            font-weight: 800 !important;
+        }
 
-/* No colored underline */
-.main-navbar .nav-link:not(.nav-contact):not(.dropdown-toggle)::after {
-    background: #000000 !important;
-}
+        /* No colored underline */
+        .main-navbar .nav-link:not(.nav-contact):not(.dropdown-toggle)::after {
+            background: #000000 !important;
+        }
 
-/* Solutions: text only, no box */
-.main-navbar #solutionsDropdown,
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown:active,
-.main-navbar #solutionsDropdown.show {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-    color: #000000 !important;
-}
+        /* Solutions: text only, no box */
+        .main-navbar #solutionsDropdown,
+        .main-navbar #solutionsDropdown:hover,
+        .main-navbar #solutionsDropdown:focus,
+        .main-navbar #solutionsDropdown:active,
+        .main-navbar #solutionsDropdown.show {
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+            outline: none !important;
+            color: #000000 !important;
+        }
 
-/* Contact: monochrome */
-.main-navbar .nav-contact,
-.main-navbar.scrolled .nav-contact {
-    background: #000000 !important;
-    border-color: #000000 !important;
-    color: #ffffff !important;
-}
+        /* Contact: monochrome */
+        .main-navbar .nav-contact,
+        .main-navbar.scrolled .nav-contact {
+            background: #000000 !important;
+            border-color: #000000 !important;
+            color: #ffffff !important;
+        }
 
-.main-navbar .nav-contact:hover,
-.main-navbar .nav-contact:focus,
-.main-navbar.scrolled .nav-contact:hover {
-    background: #222222 !important;
-    border-color: #222222 !important;
-    color: #ffffff !important;
-}
+        .main-navbar .nav-contact:hover,
+        .main-navbar .nav-contact:focus,
+        .main-navbar.scrolled .nav-contact:hover {
+            background: #222222 !important;
+            border-color: #222222 !important;
+            color: #ffffff !important;
+        }
 
-/* =========================================================
+        /* =========================================================
    MEGA MENU — BLACK
 ========================================================= */
 
-.main-navbar .mega-menu {
-    background: #000000 !important;
-    border: 1px solid #1f1f1f !important;
-    box-shadow: 0 24px 70px rgba(0,0,0,.28) !important;
-}
+        .main-navbar .mega-menu {
+            background: #000000 !important;
+            border: 1px solid #1f1f1f !important;
+            box-shadow: 0 24px 70px rgba(0, 0, 0, .28) !important;
+        }
 
-/* Columns */
-.main-navbar .mega-column {
-    background: #000000 !important;
-    border-right-color: #242424 !important;
-}
+        /* Columns */
+        .main-navbar .mega-column {
+            background: #000000 !important;
+            border-right-color: #242424 !important;
+        }
 
-.main-navbar .mega-column:last-child {
-    border-right-color: transparent !important;
-}
+        .main-navbar .mega-column:last-child {
+            border-right-color: transparent !important;
+        }
 
-/* Headings */
-.main-navbar .mega-heading {
-    color: #ffffff !important;
-    border-bottom-color: #2a2a2a !important;
-}
+        /* Headings */
+        .main-navbar .mega-heading {
+            color: #ffffff !important;
+            border-bottom-color: #2a2a2a !important;
+        }
 
-/* Icons — monochrome */
-.main-navbar .mega-heading i {
-    color: #ffffff !important;
-}
+        /* Icons — monochrome */
+        .main-navbar .mega-heading i {
+            color: #ffffff !important;
+        }
 
-/* Menu links */
-.main-navbar .mega-column > a {
-    color: #bdbdbd !important;
-}
+        /* Menu links */
+        .main-navbar .mega-column>a {
+            color: #bdbdbd !important;
+        }
 
-/* Small line before links */
-.main-navbar .mega-column > a::before {
-    background: #666666 !important;
-}
+        /* Small line before links */
+        .main-navbar .mega-column>a::before {
+            background: #666666 !important;
+        }
 
-/* Hover inside mega menu */
-.main-navbar .mega-column > a:hover,
-.main-navbar .mega-column > a:focus {
-    color: #ffffff !important;
-}
+        /* Hover inside mega menu */
+        .main-navbar .mega-column>a:hover,
+        .main-navbar .mega-column>a:focus {
+            color: #ffffff !important;
+        }
 
-.main-navbar .mega-column > a:hover::before {
-    background: #ffffff !important;
-}
+        .main-navbar .mega-column>a:hover::before {
+            background: #ffffff !important;
+        }
 
-/* Mobile */
-@media (max-width: 991px) {
-    .main-navbar .nav-link {
-        color: #1a1a1a !important;
-    }
+        /* Mobile */
+        @media (max-width: 991px) {
+            .main-navbar .nav-link {
+                color: #1a1a1a !important;
+            }
 
-    .main-navbar .mega-menu {
-        background: #000000 !important;
-        border-left-color: #000000 !important;
-    }
+            .main-navbar .mega-menu {
+                background: #000000 !important;
+                border-left-color: #000000 !important;
+            }
 
-    .main-navbar .mega-column {
-        background: #000000 !important;
-        border-bottom-color: #242424 !important;
-    }
-}
-</style>
+            .main-navbar .mega-column {
+                background: #000000 !important;
+                border-bottom-color: #242424 !important;
+            }
+        }
+    
 
 
-<style id="mega-heading-no-icons">
 .main-navbar .mega-heading {
     gap: 0 !important;
 }
-</style>
+  </style>
 
-   
+  <!-- NAVBAR: SCRIPT -->
+  <script type="module" id="navbar-section-script">
+function initNavbar(root) {
+  if (!root) return;
+  const collapseElement = root.querySelector('#navbarResponsive');
+  const links = root.querySelectorAll('.nav-link:not(.dropdown-toggle), .mega-column a');
 
+  links.forEach((link) => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth >= 992 || !collapseElement?.classList.contains('show')) return;
+      window.bootstrap?.Collapse.getOrCreateInstance(collapseElement).hide();
+    });
+  });
 
-<!-- =========================================================
-     BMS + IoT PAGE CONTENT
-========================================================= -->
-<main>
+  const syncHeight = () => {
+    document.documentElement.style.setProperty('--site-nav-height', `${root.offsetHeight}px`);
+  };
+  syncHeight();
+  window.addEventListener('resize', syncHeight, { passive: true });
+}
 
+initNavbar(document.querySelector('#mainNav'));
+  </script>
+
+  <!-- =========================================================
+       NAVBAR MODULE END
+  ========================================================== -->
+
+  <main>
+
+  <!-- =========================================================
+       SECTION 01 — HERO MODULE START
+  ========================================================== -->
+
+  <!-- SECTION 01 — HERO: HTML -->
 <section class="bms-hero" id="bms-home">
-    <div class="bms-hero-grid"></div>
-    <div class="bms-container">
-        <div class="bms-hero-content bms-reveal">
-            <div class="bms-hero-pill"><i class="fas fa-circle"></i> INTELLIGENT BUILDING INFRASTRUCTURE</div>
-            <h1>BMS <span>+ IoT</span></h1>
-            <p>Connect building systems, field assets, controllers, gateways and cloud intelligence through one unified ecosystem built for real-time visibility, intelligent automation and efficient facility operations.</p>
-            <div class="bms-actions">
-                <a href="#bms-modules" class="bms-btn primary">Explore Building Stack <i class="fas fa-arrow-right"></i></a>
-                <a href="#bms-systems" class="bms-btn">Connected Systems</a>
+            <div class="bms-hero-grid"></div>
+            <div class="bms-container">
+                <div class="bms-hero-content bms-reveal">
+                    <div class="bms-hero-pill"><i class="fas fa-circle"></i> INTELLIGENT BUILDING INFRASTRUCTURE</div>
+                    <h1>BMS <span>+ IoT</span></h1>
+                    <p>Connect building systems, field assets, controllers, gateways and cloud intelligence through one
+                        unified ecosystem built for real-time visibility, intelligent automation and efficient facility
+                        operations.</p>
+                    <div class="bms-actions">
+                        <a href="#bms-modules" class="bms-btn primary">Explore Building Stack <i
+                                class="fas fa-arrow-right"></i></a>
+                        <a href="#bms-systems" class="bms-btn">Connected Systems</a>
+                    </div>
+                    <div class="bms-hero-stats">
+                        <div class="bms-stat"><strong>24/7</strong><span>Live Monitoring</span></div>
+                        <div class="bms-stat"><strong>One</strong><span>Unified Platform</span></div>
+                        <div class="bms-stat"><strong>Smart</strong><span>Automated Operations</span></div>
+                    </div>
+                </div>
             </div>
-            <div class="bms-hero-stats">
-                <div class="bms-stat"><strong>24/7</strong><span>Live Monitoring</span></div>
-                <div class="bms-stat"><strong>One</strong><span>Unified Platform</span></div>
-                <div class="bms-stat"><strong>Smart</strong><span>Automated Operations</span></div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
+  <!-- SECTION 01 — HERO: CSS -->
+  <style id="hero-section-css">
+/* HERO */
+.bms-hero {
+    min-height: 720px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(3, 7, 12, .96) 0%, rgba(3, 7, 12, .78) 42%, rgba(3, 7, 12, .26) 78%), url('assets/img/banners/iotbanner.png') center/cover no-repeat;
+    color: #fff;
+}
+
+.bms-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 76% 43%, rgba(41, 179, 241, .17), transparent 26%), linear-gradient(to bottom, transparent 72%, #06090d);
+}
+
+.bms-hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, .025) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .025) 1px, transparent 1px);
+    background-size: 66px 66px;
+    opacity: .55;
+}
+
+.bms-hero-content {
+    max-width: 820px;
+    padding: 95px 0 85px;
+    position: relative;
+    z-index: 3;
+}
+
+.bms-hero-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(255, 255, 255, .13);
+    background: rgba(5, 12, 20, .45);
+    backdrop-filter: blur(14px);
+    padding: 10px 14px;
+    border-radius: 999px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #d9f7ff;
+}
+
+.bms-hero-pill i {
+    font-size: 7px;
+    color: var(--bms-green);
+    filter: drop-shadow(0 0 7px var(--bms-green));
+}
+
+.bms-hero h1 {
+    font-size: clamp(64px, 9vw, 122px);
+    line-height: .86;
+    letter-spacing: -7px;
+    margin: 25px 0 22px;
+    font-weight: 800;
+}
+
+.bms-hero h1 span {
+    color: #79ddff;
+    font-weight: 300;
+}
+
+.bms-hero p {
+    max-width: 680px;
+    color: #b3c0cd;
+    font-size: 17px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.bms-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.bms-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 21px;
+    border: 1px solid rgba(255, 255, 255, .14);
+    border-radius: 999px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .4px;
+    transition: .3s;
+    background: rgba(255, 255, 255, .03);
+}
+
+.bms-btn.primary {
+    background: #fff;
+    color: #080d12;
+    border-color: #fff;
+}
+
+.bms-btn:hover {
+    transform: translateY(-2px);
+}
+
+.bms-hero-stats {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 44px;
+}
+
+.bms-stat {
+    min-width: 155px;
+    padding: 16px 18px;
+    border: 1px solid rgba(255, 255, 255, .1);
+    background: rgba(5, 12, 20, .52);
+    backdrop-filter: blur(12px);
+    border-radius: 17px;
+}
+
+.bms-stat strong {
+    display: block;
+    font-size: 21px;
+}
+
+.bms-stat span {
+    display: block;
+    margin-top: 4px;
+    color: #8fa0b0;
+    font-size: 10px;
+}
+@media (max-width: 680px) {
+  .bms-hero { min-height: 650px; }
+  .bms-hero h1 { letter-spacing: -4px; }
+}
+  </style>
+
+  <!-- SECTION 01 — HERO: SCRIPT -->
+  <script type="module" id="hero-section-script">
+function initHero(root) {
+  root?.querySelectorAll('.bms-stat').forEach((item, index) => {
+    item.style.transitionDelay = `${180 + index * 90}ms`;
+  });
+  return window.BMSModules.setupReveal(root);
+}
+
+initHero(document.querySelector('#bms-home'));
+  </script>
+
+  <!-- =========================================================
+       SECTION 01 — HERO MODULE END
+  ========================================================== -->
+
+  <!-- =========================================================
+       SECTION 02 — OVERVIEW MODULE START
+  ========================================================== -->
+
+  <!-- SECTION 02 — OVERVIEW: HTML -->
 <section class="bms-section bms-overview" id="bms-overview">
-    <div class="bms-container">
-        <span class="bms-kicker bms-reveal">CONNECTED BUILDING INTELLIGENCE</span>
-        <h2 class="bms-title bms-reveal">Everything Connected.<br>Everything Visible.</h2>
-        <p class="bms-copy bms-reveal">Bring HVAC, energy, water, safety, security and environmental systems into one operational environment for centralized monitoring and intelligent control.</p>
+            <div class="bms-container">
+                <span class="bms-kicker bms-reveal">CONNECTED BUILDING INTELLIGENCE</span>
+                <h2 class="bms-title bms-reveal">Everything Connected.<br>Everything Visible.</h2>
+                <p class="bms-copy bms-reveal">Bring HVAC, energy, water, safety, security and environmental systems
+                    into one operational environment for centralized monitoring and intelligent control.</p>
 
-        <div class="bms-overview-grid">
-            <div class="bms-building bms-reveal">
-                <div class="bms-tag t1"><i class="fas fa-snowflake"></i> HVAC</div>
-                <div class="bms-tag t2"><i class="fas fa-lightbulb"></i> Lighting</div>
-                <div class="bms-tag t3"><i class="fas fa-bolt"></i> Energy</div>
-                <div class="bms-tag t4"><i class="fas fa-shield-halved"></i> Security</div>
-                <div class="bms-tag t5"><i class="fas fa-fire"></i> Life Safety</div>
+                <div class="bms-overview-grid">
+                    <div class="bms-building bms-reveal">
+                        <div class="bms-tag t1"><i class="fas fa-snowflake"></i> HVAC</div>
+                        <div class="bms-tag t2"><i class="fas fa-lightbulb"></i> Lighting</div>
+                        <div class="bms-tag t3"><i class="fas fa-bolt"></i> Energy</div>
+                        <div class="bms-tag t4"><i class="fas fa-shield-halved"></i> Security</div>
+                        <div class="bms-tag t5"><i class="fas fa-fire"></i> Life Safety</div>
+                    </div>
+
+                    <div class="bms-feature-stack">
+                        <div class="bms-feature bms-reveal">
+                            <div class="bms-feature-icon"><i class="fas fa-eye"></i></div>
+                            <h3>Unified Visibility</h3>
+                            <p>Monitor connected assets, operating conditions and system health through a centralized
+                                BMS interface.</p>
+                        </div>
+                        <div class="bms-feature bms-reveal">
+                            <div class="bms-feature-icon"><i class="fas fa-gears"></i></div>
+                            <h3>Intelligent Automation</h3>
+                            <p>Coordinate building operations using occupancy, environmental conditions and equipment
+                                data.</p>
+                        </div>
+                        <div class="bms-feature bms-reveal">
+                            <div class="bms-feature-icon"><i class="fas fa-chart-line"></i></div>
+                            <h3>Operational Insights</h3>
+                            <p>Use alarms, trends and performance data to support better facility operations and
+                                maintenance decisions.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="bms-feature-stack">
-                <div class="bms-feature bms-reveal"><div class="bms-feature-icon"><i class="fas fa-eye"></i></div><h3>Unified Visibility</h3><p>Monitor connected assets, operating conditions and system health through a centralized BMS interface.</p></div>
-                <div class="bms-feature bms-reveal"><div class="bms-feature-icon"><i class="fas fa-gears"></i></div><h3>Intelligent Automation</h3><p>Coordinate building operations using occupancy, environmental conditions and equipment data.</p></div>
-                <div class="bms-feature bms-reveal"><div class="bms-feature-icon"><i class="fas fa-chart-line"></i></div><h3>Operational Insights</h3><p>Use alarms, trends and performance data to support better facility operations and maintenance decisions.</p></div>
+  <!-- SECTION 02 — OVERVIEW: CSS -->
+  <style id="overview-section-css">
+/* OVERVIEW */
+.bms-overview {
+    background: var(--bms-light);
+}
+
+.bms-overview .bms-title {
+    color: #0b1117;
+}
+
+.bms-overview .bms-copy {
+    color: #677684;
+}
+
+.bms-overview-grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 24px;
+    margin-top: 58px;
+}
+
+.bms-building {
+    min-height: 650px;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to top, rgba(3, 9, 15, .88), rgba(3, 9, 15, .05)), url('assets/img/bms/Smart Building Systems Cutaway.png') center/cover no-repeat;
+    box-shadow: 0 28px 70px rgba(30, 50, 70, .13);
+}
+
+.bms-tag {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 13px;
+    border-radius: 999px;
+    background: rgba(4, 11, 18, .75);
+    border: 1px solid rgba(255, 255, 255, .13);
+    backdrop-filter: blur(12px);
+    color: #fff;
+    font-size: 10px;
+    animation: bmsFloat 4s ease-in-out infinite;
+}
+
+.bms-tag i {
+    color: #63d9ff;
+}
+
+.t1 {
+    top: 16%;
+    left: 8%
+}
+
+.t2 {
+    top: 31%;
+    right: 8%;
+    animation-delay: .5s
+}
+
+.t3 {
+    top: 51%;
+    left: 7%;
+    animation-delay: 1s
+}
+
+.t4 {
+    top: 67%;
+    right: 10%;
+    animation-delay: 1.5s
+}
+
+.t5 {
+    bottom: 8%;
+    left: 38%;
+    animation-delay: 2s
+}
+
+@keyframes bmsFloat {
+    50% {
+        transform: translateY(-8px)
+    }
+}
+
+.bms-feature-stack {
+    display: grid;
+    gap: 16px;
+}
+
+.bms-feature {
+    padding: 28px;
+    background: #fff;
+    border: 1px solid #e4e9ed;
+    border-radius: 24px;
+    box-shadow: 0 14px 40px rgba(20, 35, 50, .05);
+    transition: .3s;
+}
+
+.bms-feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 22px 50px rgba(20, 35, 50, .1)
+}
+
+.bms-feature-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background: #e8f7fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0c93cc;
+    margin-bottom: 18px;
+}
+
+.bms-feature h3 {
+    font-size: 20px;
+    margin: 0 0 9px;
+}
+
+.bms-feature p {
+    font-size: 12px;
+    color: #6d7a87;
+    line-height: 1.75;
+    margin: 0;
+}
+@media (max-width: 991px) {
+  .bms-overview-grid { grid-template-columns: 1fr; }
+  .bms-building { min-height: 520px; }
+}
+  </style>
+
+  <!-- SECTION 02 — OVERVIEW: SCRIPT -->
+  <script type="module" id="overview-section-script">
+function initOverview(root) {
+  root?.querySelectorAll('.bms-feature').forEach((item, index) => {
+    item.style.transitionDelay = `${index * 90}ms`;
+  });
+  return window.BMSModules.setupReveal(root);
+}
+
+initOverview(document.querySelector('#bms-overview'));
+  </script>
+
+  <!-- =========================================================
+       SECTION 02 — OVERVIEW MODULE END
+  ========================================================== -->
+
+  <!-- =========================================================
+       SECTION 03 — COMMAND CENTER MODULE START
+  ========================================================== -->
+
+  <!-- SECTION 03 — COMMAND CENTER: HTML -->
+<section class="bms-section bms-command" id="bms-command">
+            <div class="bms-container bms-command-grid">
+                <div class="bms-dashboard-frame bms-reveal">
+                    <img loading="lazy" decoding="async" src="assets/img/bms/Smart building command center.png" alt="BMS dashboard">
+                    <div class="bms-float-card fc1"><strong>97%</strong><span>Systems Online</span></div>
+                    <div class="bms-float-card fc2"><strong>LIVE</strong><span>Building Intelligence</span></div>
+                </div>
+                <div>
+                    <span class="bms-kicker bms-reveal">CENTRAL COMMAND CENTER</span>
+                    <h2 class="bms-title bms-reveal">One Dashboard.<br>Total Visibility.</h2>
+                    <p class="bms-copy bms-reveal">Centralize system status, alarms, energy information, environmental
+                        data and equipment performance in one command interface.</p>
+                    <div class="bms-list">
+                        <div class="bms-reveal"><i class="fas fa-circle-check"></i> Live system status and alarms</div>
+                        <div class="bms-reveal"><i class="fas fa-circle-check"></i> Energy and environmental monitoring
+                        </div>
+                        <div class="bms-reveal"><i class="fas fa-circle-check"></i> Equipment health visibility</div>
+                        <div class="bms-reveal"><i class="fas fa-circle-check"></i> Historical trends and analytics
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<section class="bms-section bms-command">
-    <div class="bms-container bms-command-grid">
-        <div class="bms-dashboard-frame bms-reveal">
-            <img src="assets/img/bms-dashboard.jpg" alt="BMS dashboard">
-            <div class="bms-float-card fc1"><strong>97%</strong><span>Systems Online</span></div>
-            <div class="bms-float-card fc2"><strong>LIVE</strong><span>Building Intelligence</span></div>
-        </div>
-        <div>
-            <span class="bms-kicker bms-reveal">CENTRAL COMMAND CENTER</span>
-            <h2 class="bms-title bms-reveal">One Dashboard.<br>Total Visibility.</h2>
-            <p class="bms-copy bms-reveal">Centralize system status, alarms, energy information, environmental data and equipment performance in one command interface.</p>
-            <div class="bms-list">
-                <div class="bms-reveal"><i class="fas fa-circle-check"></i> Live system status and alarms</div>
-                <div class="bms-reveal"><i class="fas fa-circle-check"></i> Energy and environmental monitoring</div>
-                <div class="bms-reveal"><i class="fas fa-circle-check"></i> Equipment health visibility</div>
-                <div class="bms-reveal"><i class="fas fa-circle-check"></i> Historical trends and analytics</div>
-            </div>
-        </div>
-    </div>
-</section>
+  <!-- SECTION 03 — COMMAND CENTER: CSS -->
+  <style id="command-center-section-css">
+/* COMMAND */
+.bms-command {
+    background: radial-gradient(circle at 15% 40%, rgba(39, 175, 237, .08), transparent 30%), #06090d;
+    color: #fff;
+}
 
+.bms-command-grid {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.bms-dashboard-frame {
+    position: relative;
+    padding: 12px;
+    border-radius: 28px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, .12), rgba(255, 255, 255, .02));
+    border: 1px solid var(--bms-line);
+    box-shadow: 0 35px 90px rgba(0, 0, 0, .42);
+}
+
+.bms-dashboard-frame img {
+    width: 100%;
+    border-radius: 19px;
+    display: block;
+}
+
+.bms-float-card {
+    position: absolute;
+    padding: 13px 16px;
+    border-radius: 15px;
+    background: rgba(7, 17, 28, .92);
+    border: 1px solid rgba(255, 255, 255, .09);
+    backdrop-filter: blur(15px);
+}
+
+.bms-float-card strong {
+    display: block;
+    font-size: 19px
+}
+
+.bms-float-card span {
+    font-size: 9px;
+    color: #8495a6
+}
+
+.fc1 {
+    right: 20px;
+    top: -23px
+}
+
+.fc2 {
+    left: 25px;
+    bottom: -23px
+}
+
+.bms-list {
+    margin-top: 28px;
+    border-top: 1px solid var(--bms-line)
+}
+
+.bms-list div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--bms-line);
+    font-size: 12px;
+    color: #c5d0da
+}
+
+.bms-list i {
+    color: #5ad7ff;
+}
+@media (max-width: 991px) {
+  .bms-command-grid { grid-template-columns: 1fr; }
+}
+  </style>
+
+  <!-- SECTION 03 — COMMAND CENTER: SCRIPT -->
+  <script type="module" id="command-center-section-script">
+function initCommandCenter(root) {
+  root?.querySelectorAll('.bms-list .bms-reveal').forEach((item, index) => {
+    item.style.transitionDelay = `${index * 80}ms`;
+  });
+  return window.BMSModules.setupReveal(root);
+}
+
+initCommandCenter(document.querySelector('#bms-command'));
+  </script>
+
+  <!-- =========================================================
+       SECTION 03 — COMMAND CENTER MODULE END
+  ========================================================== -->
+
+  <!-- =========================================================
+       SECTION 04 — CONNECTED SYSTEMS MODULE START
+  ========================================================== -->
+
+  <!-- SECTION 04 — CONNECTED SYSTEMS: HTML -->
 <section class="bms-section bms-systems" id="bms-systems">
-    <div class="bms-container">
-        <span class="bms-kicker bms-reveal">CONNECTED BUILDING SYSTEMS</span>
-        <h2 class="bms-title bms-reveal">Intelligence Across<br>Every Building System.</h2>
-        <div class="bms-bento">
-            <div class="bms-bento-card b1 bms-reveal"><img src="assets/img/bms-hvac.jpg" alt="HVAC"><div class="bms-bento-copy"><small>01</small><h3>HVAC & Climate Control</h3></div></div>
-            <div class="bms-bento-card b2 bms-reveal"><img src="assets/img/bms-lighting.jpg" alt="Lighting"><div class="bms-bento-copy"><small>02</small><h3>Lighting Automation</h3></div></div>
-            <div class="bms-bento-card b3 bms-reveal"><img src="assets/img/bms-energy.jpg" alt="Energy"><div class="bms-bento-copy"><small>03</small><h3>Energy Management</h3></div></div>
-            <div class="bms-bento-card b4 bms-reveal"><img src="assets/img/bms-access.jpg" alt="Access"><div class="bms-bento-copy"><small>04</small><h3>Access Control</h3></div></div>
-            <div class="bms-bento-card b5 bms-reveal"><img src="assets/img/bms-fire.jpg" alt="Fire"><div class="bms-bento-copy"><small>05</small><h3>Fire & Life Safety</h3></div></div>
-            <div class="bms-bento-card b6 bms-reveal"><img src="assets/img/bms-air-quality.jpg" alt="Air quality"><div class="bms-bento-copy"><small>06</small><h3>Indoor Air Quality</h3></div></div>
-        </div>
-    </div>
-</section>
-
-<section class="bms-section bms-modules" id="bms-modules">
-    <div class="bms-wide">
-        <div class="bms-module-head">
-            <span class="bms-kicker bms-reveal">BMS + IoT ECOSYSTEM</span>
-            <h2 class="bms-title bms-reveal">Modules Across Your <span>Building Stack</span></h2>
-            <p class="bms-copy bms-reveal">Select a module to view its dedicated field-to-cloud architecture. Each tab below loads the corresponding system architecture image without leaving the page.</p>
-        </div>
-
-        <div class="bms-tabs-shell bms-reveal">
-            <button class="bms-tabs-arrow left" type="button" onclick="scrollBmsTabs(-1)" aria-label="Scroll left"><i class="fas fa-chevron-left"></i></button>
-            <div class="bms-tabs" id="bmsTabs">
-                <button class="bms-tab active" data-target="bms-hvac-panel"><span class="bms-tab-icon"><i class="fas fa-snowflake"></i></span>HVAC</button>
-                <button class="bms-tab" data-target="bms-energy-panel"><span class="bms-tab-icon"><i class="fas fa-bolt"></i></span>Energy</button>
-                <button class="bms-tab" data-target="bms-water-panel"><span class="bms-tab-icon"><i class="fas fa-droplet"></i></span>Water</button>
-                <button class="bms-tab" data-target="bms-stp-panel"><span class="bms-tab-icon"><i class="fas fa-water"></i></span>STP / ETP</button>
-                <button class="bms-tab" data-target="bms-busbar-panel"><span class="bms-tab-icon"><i class="fas fa-plug-circle-bolt"></i></span>Busbar</button>
-                <button class="bms-tab" data-target="bms-fire-panel"><span class="bms-tab-icon"><i class="fas fa-fire-flame-curved"></i></span>Fire</button>
-                <button class="bms-tab" data-target="bms-air-panel"><span class="bms-tab-icon"><i class="fas fa-wind"></i></span>Air Quality</button>
-                <button class="bms-tab" data-target="bms-cctv-panel"><span class="bms-tab-icon"><i class="fas fa-video"></i></span>CCTV</button>
-                <button class="bms-tab" data-target="bms-access-panel"><span class="bms-tab-icon"><i class="fas fa-fingerprint"></i></span>Access</button>
+            <div class="bms-container">
+                <span class="bms-kicker bms-reveal">CONNECTED BUILDING SYSTEMS</span>
+                <h2 class="bms-title bms-reveal">Intelligence Across<br>Every Building System.</h2>
+                <div class="bms-bento">
+                    <div class="bms-bento-card b1 bms-reveal"><img loading="lazy" decoding="async" src="assets/img/bms/HVAC & Climate Control.png" alt="HVAC">
+                        <div class="bms-bento-copy"><small>01</small>
+                            <h3>HVAC & Climate Control</h3>
+                        </div>
+                    </div>
+                    <div class="bms-bento-card b2 bms-reveal"><img loading="lazy" decoding="async" src="assets/img/bms/Smart Lighting in a Luxury Interior.png" alt="Lighting">
+                        <div class="bms-bento-copy"><small>02</small>
+                            <h3>Lighting Automation</h3>
+                        </div>
+                    </div>
+                    <div class="bms-bento-card b3 bms-reveal"><img loading="lazy" decoding="async" src="assets/img/bms/Intelligent HVAC Climate Control.png" alt="Energy">
+                        <div class="bms-bento-copy"><small>03</small>
+                            <h3>Energy Management</h3>
+                        </div>
+                    </div> 
+                    <div class="bms-bento-card b4 bms-reveal"><img loading="lazy" decoding="async" src="assets/img/bms/Seamless Smart Lobby Access.png" alt="Access">
+                        <div class="bms-bento-copy"><small>04</small>
+                            <h3>Access Control</h3>
+                        </div>
+                    </div>
+                    <div class="bms-bento-card b5 bms-reveal"><img loading="lazy" decoding="async" src="assets/img/bms/Modern Facility Fire Safety System.png" alt="Fire">
+                        <div class="bms-bento-copy"><small>05</small>
+                            <h3>Fire & Life Safety</h3>
+                        </div>
+                    </div>
+                    <div class="bms-bento-card b6 bms-reveal"><img loading="lazy" decoding="async" src="assets/img/bms/Monitored Fresh Air, Modern Comfort.png"
+                            alt="Air quality">
+                        <div class="bms-bento-copy"><small>06</small>
+                            <h3>Indoor Air Quality</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button class="bms-tabs-arrow right" type="button" onclick="scrollBmsTabs(1)" aria-label="Scroll right"><i class="fas fa-chevron-right"></i></button>
-        </div>
+        </section>
 
-        <div class="bms-stage bms-reveal">
-            <div class="bms-panel active" id="bms-hvac-panel"><div class="bms-panel-top"><div><small>HVAC INTELLIGENCE</small><h3>Connected HVAC Infrastructure</h3></div><div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div></div><div class="bms-module-image"><img src="assets/img/bms-modules/hvac-stack.jpg" alt="HVAC BMS IoT architecture"></div></div>
-            <div class="bms-panel" id="bms-energy-panel"><div class="bms-panel-top"><div><small>ENERGY INTELLIGENCE</small><h3>Smart Energy Monitoring</h3></div><div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div></div><div class="bms-module-image"><img src="assets/img/bms-modules/energy-stack.jpg" alt="Energy BMS IoT architecture"></div></div>
-            <div class="bms-panel" id="bms-water-panel"><div class="bms-panel-top"><div><small>WATER MANAGEMENT</small><h3>Intelligent Water Monitoring</h3></div><div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div></div><div class="bms-module-image"><img src="assets/img/bms-modules/water-stack.jpg" alt="Water BMS IoT architecture"></div></div>
-            <div class="bms-panel" id="bms-stp-panel"><div class="bms-panel-top"><div><small>STP / ETP AUTOMATION</small><h3>Treatment Plant Intelligence</h3></div><div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div></div><div class="bms-module-image"><img src="assets/img/bms-modules/stp-etp-stack.jpg" alt="STP ETP BMS IoT architecture"></div></div>
-            <div class="bms-panel" id="bms-busbar-panel"><div class="bms-panel-top"><div><small>ELECTRICAL DISTRIBUTION</small><h3>Busbar Monitoring System</h3></div><div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div></div><div class="bms-module-image"><img src="assets/img/bms-modules/busbar-stack.jpg" alt="Busbar BMS IoT architecture"></div></div>
-            <div class="bms-panel" id="bms-fire-panel"><div class="bms-panel-top"><div><small>LIFE SAFETY</small><h3>Fire Detection & Safety Integration</h3></div><div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div></div><div class="bms-module-image"><img src="assets/img/bms-modules/fire-stack.jpg" alt="Fire BMS IoT architecture"></div></div>
-            <div class="bms-panel" id="bms-air-panel"><div class="bms-panel-top"><div><small>ENVIRONMENTAL INTELLIGENCE</small><h3>Indoor Air Quality Monitoring</h3></div><div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div></div><div class="bms-module-image"><img src="assets/img/bms-modules/air-quality-stack.jpg" alt="Air quality BMS IoT architecture"></div></div>
-            <div class="bms-panel" id="bms-cctv-panel"><div class="bms-panel-top"><div><small>SMART SURVEILLANCE</small><h3>CCTV & Video Intelligence</h3></div><div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div></div><div class="bms-module-image"><img src="assets/img/bms-modules/cctv-stack.jpg" alt="CCTV BMS IoT architecture"></div></div>
-            <div class="bms-panel" id="bms-access-panel"><div class="bms-panel-top"><div><small>SMART ACCESS</small><h3>Integrated Access Control</h3></div><div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div></div><div class="bms-module-image"><img src="assets/img/bms-modules/access-stack.jpg" alt="Access control BMS IoT architecture"></div></div>
-        </div>
-    </div>
-</section>
+  <!-- SECTION 04 — CONNECTED SYSTEMS: CSS -->
+  <style id="connected-systems-section-css">
+/* SYSTEM BENTO */
+.bms-systems {
+    background: #0a1017;
+    color: #fff;
+}
 
-<section class="bms-section bms-flow-section">
-    <div class="bms-container">
-        <span class="bms-kicker bms-reveal">CONNECTED ARCHITECTURE</span>
-        <h2 class="bms-title bms-reveal">From Field Data<br>to Intelligent Action.</h2>
-        <div class="bms-flow">
-            <div class="bms-flow-item bms-reveal"><div class="bms-flow-circle"><i class="fas fa-wave-square"></i></div><h4>Sensors</h4><p>Real-time data</p></div>
-            <div class="bms-flow-item bms-reveal"><div class="bms-flow-circle"><i class="fas fa-microchip"></i></div><h4>Controllers</h4><p>Local automation</p></div>
-            <div class="bms-flow-item bms-reveal"><div class="bms-flow-circle"><i class="fas fa-router"></i></div><h4>Gateway</h4><p>Connectivity</p></div>
-            <div class="bms-flow-item bms-reveal"><div class="bms-flow-circle"><i class="fas fa-cloud"></i></div><h4>IoT Cloud</h4><p>Connected data</p></div>
-            <div class="bms-flow-item bms-reveal"><div class="bms-flow-circle"><i class="fas fa-chart-simple"></i></div><h4>Analytics</h4><p>Insights</p></div>
-            <div class="bms-flow-item bms-reveal"><div class="bms-flow-circle"><i class="fas fa-display"></i></div><h4>Dashboard</h4><p>Visibility</p></div>
-            <div class="bms-flow-item bms-reveal"><div class="bms-flow-circle"><i class="fas fa-bolt"></i></div><h4>Action</h4><p>Automation</p></div>
-        </div>
-    </div>
-</section>
+.bms-bento {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 215px;
+    gap: 14px;
+    margin-top: 50px
+}
 
+.bms-bento-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, .08);
+}
+
+.bms-bento-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .6s
+}
+
+.bms-bento-card:hover img {
+    transform: scale(1.05)
+}
+
+.bms-bento-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(3, 8, 13, .95), transparent 72%)
+}
+
+.bms-bento-copy {
+    position: absolute;
+    z-index: 2;
+    left: 22px;
+    bottom: 20px
+}
+
+.bms-bento-copy small {
+    color: #68dfff;
+    font-size: 9px
+}
+
+.bms-bento-copy h3 {
+    font-size: 19px;
+    margin: 5px 0 0
+}
+
+.b1 {
+    grid-column: span 7;
+    grid-row: span 2
+}
+
+.b2,
+.b3 {
+    grid-column: span 5
+}
+
+.b4,
+.b5,
+.b6 {
+    grid-column: span 4
+}
+@media (max-width: 991px) {
+  .bms-bento {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 270px;
+  }
+
+  .b1, .b2, .b3, .b4, .b5, .b6 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 680px) {
+  .bms-bento { grid-template-columns: 1fr; }
+}
+  </style>
+
+  <!-- SECTION 04 — CONNECTED SYSTEMS: SCRIPT -->
+  <script type="module" id="connected-systems-section-script">
+function initConnectedSystems(root) {
+  root?.querySelectorAll('.bms-bento-card').forEach((card, index) => {
+    card.style.transitionDelay = `${Math.min(index * 70, 350)}ms`;
+  });
+  return window.BMSModules.setupReveal(root);
+}
+
+initConnectedSystems(document.querySelector('#bms-systems'));
+  </script>
+
+  <!-- =========================================================
+       SECTION 04 — CONNECTED SYSTEMS MODULE END
+  ========================================================== -->
+
+  <!-- =========================================================
+       SECTION 05 — BMS MODULES MODULE START
+  ========================================================== -->
+
+  <!-- SECTION 05 — BMS MODULES: HTML -->
+<section class="bms-section bms-modules" id="bms-modules">
+            <div class="bms-wide">
+                <div class="bms-module-head">
+                    <span class="bms-kicker bms-reveal">BMS + IoT ECOSYSTEM</span>
+                    <h2 class="bms-title bms-reveal">Modules Across Your <span>Building Stack</span></h2>
+                    <p class="bms-copy bms-reveal">Select a module to view its dedicated field-to-cloud architecture.
+                        Each tab below loads the corresponding system architecture image without leaving the page.</p>
+                </div>
+
+                <div class="bms-tabs-shell bms-reveal">
+                    <button class="bms-tabs-arrow left" type="button" aria-controls="bmsTabs" data-scroll-direction="-1"
+                        aria-label="Scroll left"><i class="fas fa-chevron-left"></i></button>
+                    <div class="bms-tabs" id="bmsTabs" role="tablist" aria-label="Building system modules">
+                        <button class="bms-tab active" id="bms-tab-hvac" type="button" role="tab" data-target="bms-hvac-panel" aria-controls="bms-hvac-panel" aria-selected="true" tabindex="0"><span class="bms-tab-icon"><i
+                                    class="fas fa-snowflake"></i></span>HVAC</button>
+                        <button class="bms-tab" id="bms-tab-energy" type="button" role="tab" data-target="bms-energy-panel" aria-controls="bms-energy-panel" aria-selected="false" tabindex="-1"><span class="bms-tab-icon"><i
+                                    class="fas fa-bolt"></i></span>Energy</button>
+                        <button class="bms-tab" id="bms-tab-water" type="button" role="tab" data-target="bms-water-panel" aria-controls="bms-water-panel" aria-selected="false" tabindex="-1"><span class="bms-tab-icon"><i
+                                    class="fas fa-droplet"></i></span>Water</button>
+                        <button class="bms-tab" id="bms-tab-stp" type="button" role="tab" data-target="bms-stp-panel" aria-controls="bms-stp-panel" aria-selected="false" tabindex="-1"><span class="bms-tab-icon"><i
+                                    class="fas fa-water"></i></span>STP / ETP</button>
+                        <button class="bms-tab" id="bms-tab-busbar" type="button" role="tab" data-target="bms-busbar-panel" aria-controls="bms-busbar-panel" aria-selected="false" tabindex="-1"><span class="bms-tab-icon"><i
+                                    class="fas fa-plug-circle-bolt"></i></span>Busbar</button>
+                        <button class="bms-tab" id="bms-tab-fire" type="button" role="tab" data-target="bms-fire-panel" aria-controls="bms-fire-panel" aria-selected="false" tabindex="-1"><span class="bms-tab-icon"><i
+                                    class="fas fa-fire-flame-curved"></i></span>Fire</button>
+                        <button class="bms-tab" id="bms-tab-air" type="button" role="tab" data-target="bms-air-panel" aria-controls="bms-air-panel" aria-selected="false" tabindex="-1"><span class="bms-tab-icon"><i
+                                    class="fas fa-wind"></i></span>Air Quality</button>
+                        <button class="bms-tab" id="bms-tab-cctv" type="button" role="tab" data-target="bms-cctv-panel" aria-controls="bms-cctv-panel" aria-selected="false" tabindex="-1"><span class="bms-tab-icon"><i
+                                    class="fas fa-video"></i></span>CCTV</button>
+                        <button class="bms-tab" id="bms-tab-access" type="button" role="tab" data-target="bms-access-panel" aria-controls="bms-access-panel" aria-selected="false" tabindex="-1"><span class="bms-tab-icon"><i
+                                    class="fas fa-fingerprint"></i></span>Access</button>
+                    </div>
+                    <button class="bms-tabs-arrow right" type="button" aria-controls="bmsTabs" data-scroll-direction="1"
+                        aria-label="Scroll right"><i class="fas fa-chevron-right"></i></button>
+                </div>
+
+                <div class="bms-stage bms-reveal" aria-live="polite">
+                    <div class="bms-panel active" id="bms-hvac-panel" role="tabpanel" aria-labelledby="bms-tab-hvac">
+                        <div class="bms-panel-top">
+                            <div><small>HVAC INTELLIGENCE</small>
+                                <h3>Connected HVAC Infrastructure</h3>
+                            </div>
+                            <div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div>
+                        </div>
+                        <div class="bms-module-image"><img loading="lazy" decoding="async" src="assets/img/bms-modules/hvac-stack.jpg"
+                                alt="HVAC BMS IoT architecture"></div>
+                    </div>
+                    <div class="bms-panel" id="bms-energy-panel" role="tabpanel" aria-labelledby="bms-tab-energy" hidden>
+                        <div class="bms-panel-top">
+                            <div><small>ENERGY INTELLIGENCE</small>
+                                <h3>Smart Energy Monitoring</h3>
+                            </div>
+                            <div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div>
+                        </div>
+                        <div class="bms-module-image"><img loading="lazy" decoding="async" src="assets/img/bms-modules/energy-stack.jpg"
+                                alt="Energy BMS IoT architecture"></div>
+                    </div>
+                    <div class="bms-panel" id="bms-water-panel" role="tabpanel" aria-labelledby="bms-tab-water" hidden>
+                        <div class="bms-panel-top">
+                            <div><small>WATER MANAGEMENT</small>
+                                <h3>Intelligent Water Monitoring</h3>
+                            </div>
+                            <div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div>
+                        </div>
+                        <div class="bms-module-image"><img loading="lazy" decoding="async" src="assets/img/bms-modules/water-stack.jpg"
+                                alt="Water BMS IoT architecture"></div>
+                    </div>
+                    <div class="bms-panel" id="bms-stp-panel" role="tabpanel" aria-labelledby="bms-tab-stp" hidden>
+                        <div class="bms-panel-top">
+                            <div><small>STP / ETP AUTOMATION</small>
+                                <h3>Treatment Plant Intelligence</h3>
+                            </div>
+                            <div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div>
+                        </div>
+                        <div class="bms-module-image"><img loading="lazy" decoding="async" src="assets/img/bms-modules/stp-etp-stack.jpg"
+                                alt="STP ETP BMS IoT architecture"></div>
+                    </div>
+                    <div class="bms-panel" id="bms-busbar-panel" role="tabpanel" aria-labelledby="bms-tab-busbar" hidden>
+                        <div class="bms-panel-top">
+                            <div><small>ELECTRICAL DISTRIBUTION</small>
+                                <h3>Busbar Monitoring System</h3>
+                            </div>
+                            <div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div>
+                        </div>
+                        <div class="bms-module-image"><img loading="lazy" decoding="async" src="assets/img/bms-modules/busbar-stack.jpg"
+                                alt="Busbar BMS IoT architecture"></div>
+                    </div>
+                    <div class="bms-panel" id="bms-fire-panel" role="tabpanel" aria-labelledby="bms-tab-fire" hidden>
+                        <div class="bms-panel-top">
+                            <div><small>LIFE SAFETY</small>
+                                <h3>Fire Detection & Safety Integration</h3>
+                            </div>
+                            <div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div>
+                        </div>
+                        <div class="bms-module-image"><img loading="lazy" decoding="async" src="assets/img/bms-modules/fire-stack.jpg"
+                                alt="Fire BMS IoT architecture"></div>
+                    </div>
+                    <div class="bms-panel" id="bms-air-panel" role="tabpanel" aria-labelledby="bms-tab-air" hidden>
+                        <div class="bms-panel-top">
+                            <div><small>ENVIRONMENTAL INTELLIGENCE</small>
+                                <h3>Indoor Air Quality Monitoring</h3>
+                            </div>
+                            <div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div>
+                        </div>
+                        <div class="bms-module-image"><img loading="lazy" decoding="async" src="assets/img/bms-modules/air-quality-stack.jpg"
+                                alt="Air quality BMS IoT architecture"></div>
+                    </div>
+                    <div class="bms-panel" id="bms-cctv-panel" role="tabpanel" aria-labelledby="bms-tab-cctv" hidden>
+                        <div class="bms-panel-top">
+                            <div><small>SMART SURVEILLANCE</small>
+                                <h3>CCTV & Video Intelligence</h3>
+                            </div>
+                            <div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div>
+                        </div>
+                        <div class="bms-module-image"><img loading="lazy" decoding="async" src="assets/img/bms-modules/cctv-stack.jpg"
+                                alt="CCTV BMS IoT architecture"></div>
+                    </div>
+                    <div class="bms-panel" id="bms-access-panel" role="tabpanel" aria-labelledby="bms-tab-access" hidden>
+                        <div class="bms-panel-top">
+                            <div><small>SMART ACCESS</small>
+                                <h3>Integrated Access Control</h3>
+                            </div>
+                            <div class="bms-status"><span class="bms-status-dot"></span>CONNECTED SYSTEM</div>
+                        </div>
+                        <div class="bms-module-image"><img loading="lazy" decoding="async" src="assets/img/bms-modules/access-stack.jpg"
+                                alt="Access control BMS IoT architecture"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+  <!-- SECTION 05 — BMS MODULES: CSS -->
+  <style id="modules-section-css">
+/* MODULE STACK */
+.bms-modules {
+    background: radial-gradient(circle at 18% 18%, rgba(39, 171, 235, .075), transparent 30%), #080d14;
+    color: #fff;
+}
+
+.bms-module-head {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 45px
+}
+
+.bms-module-head .bms-copy {
+    margin-left: auto;
+    margin-right: auto
+}
+
+.bms-module-head .bms-title span {
+    color: #8ce3ff;
+    font-weight: 300
+}
+
+.bms-tabs-shell {
+    position: relative;
+    padding: 14px 52px;
+    border-radius: 24px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, .055), rgba(255, 255, 255, .017));
+    border: 1px solid rgba(255, 255, 255, .09);
+    backdrop-filter: blur(18px);
+}
+
+.bms-tabs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth
+}
+
+.bms-tabs::-webkit-scrollbar {
+    display: none
+}
+
+.bms-tab {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 18px 8px 8px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .045);
+    color: #acb7c2;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .3s
+}
+
+.bms-tab:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, .08);
+    transform: translateY(-2px)
+}
+
+.bms-tab-icon {
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #101821;
+    color: #7d91a4
+}
+
+.bms-tab.active {
+    color: #fff;
+    background: linear-gradient(135deg, #168ac8, #27b8e8);
+    box-shadow: 0 12px 34px rgba(32, 166, 224, .18)
+}
+
+.bms-tab.active .bms-tab-icon {
+    color: #fff;
+    background: rgba(3, 25, 38, .45)
+}
+
+.bms-tabs-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, .1);
+    background: #0e1822;
+    color: #fff;
+    cursor: pointer
+}
+
+.bms-tabs-arrow.left {
+    left: 8px
+}
+
+.bms-tabs-arrow.right {
+    right: 8px
+}
+
+.bms-stage {
+    margin-top: 16px;
+    border-radius: 28px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .09);
+    background: linear-gradient(145deg, #111821, #05080d);
+    box-shadow: 0 38px 95px rgba(0, 0, 0, .35)
+}
+
+.bms-panel {
+    display: none;
+    padding: 25px;
+    animation: bmsPanel .55s ease
+}
+
+.bms-panel.active {
+    display: block
+}
+
+@keyframes bmsPanel {
+    from {
+        opacity: 0;
+        transform: translateY(14px)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.bms-panel-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px
+}
+
+.bms-panel-top small {
+    display: block;
+    color: #4ecff8;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 6px
+}
+
+.bms-panel-top h3 {
+    font-size: clamp(22px, 2.4vw, 31px);
+    margin: 0
+}
+
+.bms-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(85, 217, 145, .15);
+    background: rgba(85, 217, 145, .055);
+    padding: 8px 13px;
+    border-radius: 999px;
+    color: #9dacb8;
+    font-size: 9px;
+    white-space: nowrap
+}
+
+.bms-status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #55d991;
+    box-shadow: 0 0 12px #55d991
+}
+
+.bms-module-image {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #030609;
+    border: 1px solid rgba(255, 255, 255, .06)
+}
+
+.bms-module-image img {
+    width: 100%;
+    max-height: 680px;
+    object-fit: contain;
+    display: block;
+    background: #030609
+}
+
+.bms-module-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #5bd7ff, transparent);
+    z-index: 2
+}
+@media (max-width: 991px) {
+  .bms-module-image { min-height: 360px; }
+}
+
+@media (max-width: 680px) {
+  .bms-module-head { text-align: left; }
+  .bms-tabs-shell { padding: 11px 42px; }
+  .bms-panel { padding: 14px; }
+  .bms-panel-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .bms-module-image { min-height: 260px; }
+}
+  </style>
+
+  <!-- SECTION 05 — BMS MODULES: SCRIPT -->
+  <script type="module" id="modules-section-script">
+function initModules(root) {
+  if (!root) return;
+  const tabList = root.querySelector('[role="tablist"]');
+  const tabs = [...root.querySelectorAll('[role="tab"]')];
+  const panels = [...root.querySelectorAll('[role="tabpanel"]')];
+  const arrows = [...root.querySelectorAll('[data-scroll-direction]')];
+
+  const activateTab = (tab, { focus = false } = {}) => {
+    for (const currentTab of tabs) {
+      const active = currentTab === tab;
+      currentTab.classList.toggle('active', active);
+      currentTab.setAttribute('aria-selected', String(active));
+      currentTab.tabIndex = active ? 0 : -1;
+    }
+
+    for (const panel of panels) {
+      const active = panel.id === tab.dataset.target;
+      panel.classList.toggle('active', active);
+      panel.hidden = !active;
+    }
+
+    tab.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    if (focus) tab.focus({ preventScroll: true });
+  };
+
+  tabs.forEach((tab) => tab.addEventListener('click', () => activateTab(tab)));
+
+  tabList?.addEventListener('keydown', (event) => {
+    const currentIndex = tabs.indexOf(document.activeElement);
+    if (currentIndex < 0) return;
+    const keyMap = {
+      ArrowRight: (currentIndex + 1) % tabs.length,
+      ArrowLeft: (currentIndex - 1 + tabs.length) % tabs.length,
+      Home: 0,
+      End: tabs.length - 1,
+    };
+    if (!(event.key in keyMap)) return;
+    event.preventDefault();
+    activateTab(tabs[keyMap[event.key]], { focus: true });
+  });
+
+  arrows.forEach((button) => {
+    button.addEventListener('click', () => {
+      const direction = Number(button.dataset.scrollDirection || 0);
+      tabList?.scrollBy({ left: direction * 340, behavior: 'smooth' });
+    });
+  });
+
+  return window.BMSModules.setupReveal(root);
+}
+
+initModules(document.querySelector('#bms-modules'));
+  </script>
+
+  <!-- =========================================================
+       SECTION 05 — BMS MODULES MODULE END
+  ========================================================== -->
+
+  <!-- =========================================================
+       SECTION 06 — ARCHITECTURE FLOW MODULE START
+  ========================================================== -->
+
+  <!-- SECTION 06 — ARCHITECTURE FLOW: HTML -->
+<section class="bms-section bms-flow-section" id="bms-flow">
+            <div class="bms-container">
+                <span class="bms-kicker bms-reveal">CONNECTED ARCHITECTURE</span>
+                <h2 class="bms-title bms-reveal">From Field Data<br>to Intelligent Action.</h2>
+                <div class="bms-flow">
+                    <div class="bms-flow-item bms-reveal">
+                        <div class="bms-flow-circle"><i class="fas fa-wave-square"></i></div>
+                        <h4>Sensors</h4>
+                        <p>Real-time data</p>
+                    </div>
+                    <div class="bms-flow-item bms-reveal">
+                        <div class="bms-flow-circle"><i class="fas fa-microchip"></i></div>
+                        <h4>Controllers</h4>
+                        <p>Local automation</p>
+                    </div>
+                    <div class="bms-flow-item bms-reveal">
+                        <div class="bms-flow-circle"><i class="fas fa-router"></i></div>
+                        <h4>Gateway</h4>
+                        <p>Connectivity</p>
+                    </div>
+                    <div class="bms-flow-item bms-reveal">
+                        <div class="bms-flow-circle"><i class="fas fa-cloud"></i></div>
+                        <h4>IoT Cloud</h4>
+                        <p>Connected data</p>
+                    </div>
+                    <div class="bms-flow-item bms-reveal">
+                        <div class="bms-flow-circle"><i class="fas fa-chart-simple"></i></div>
+                        <h4>Analytics</h4>
+                        <p>Insights</p>
+                    </div>
+                    <div class="bms-flow-item bms-reveal">
+                        <div class="bms-flow-circle"><i class="fas fa-display"></i></div>
+                        <h4>Dashboard</h4>
+                        <p>Visibility</p>
+                    </div>
+                    <div class="bms-flow-item bms-reveal">
+                        <div class="bms-flow-circle"><i class="fas fa-bolt"></i></div>
+                        <h4>Action</h4>
+                        <p>Automation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+  <!-- SECTION 06 — ARCHITECTURE FLOW: CSS -->
+  <style id="architecture-flow-section-css">
+/* FLOW */
+.bms-flow-section {
+    background: #05090e;
+    color: #fff
+}
+
+.bms-flow {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+    position: relative;
+    margin-top: 60px
+}
+
+.bms-flow::before {
+    content: "";
+    position: absolute;
+    left: 7%;
+    right: 7%;
+    top: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, #258ed5, #5bddff)
+}
+
+.bms-flow-item {
+    position: relative;
+    z-index: 2;
+    text-align: center
+}
+
+.bms-flow-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(91, 221, 255, .38);
+    background: #08131d;
+    color: #5bddff;
+    box-shadow: 0 0 0 8px #05090e
+}
+
+.bms-flow-item h4 {
+    font-size: 12px;
+    margin: 15px 0 4px
+}
+
+.bms-flow-item p {
+    font-size: 9px;
+    color: #7b8b9a;
+    margin: 0
+}
+@media (max-width: 991px) {
+  .bms-flow {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 38px;
+  }
+  .bms-flow::before { display: none; }
+}
+
+@media (max-width: 680px) {
+  .bms-flow { grid-template-columns: repeat(2, 1fr); }
+}
+  </style>
+
+  <!-- SECTION 06 — ARCHITECTURE FLOW: SCRIPT -->
+  <script type="module" id="architecture-flow-section-script">
+function initArchitectureFlow(root) {
+  root?.querySelectorAll('.bms-flow-item').forEach((item, index) => {
+    item.style.transitionDelay = `${Math.min(index * 75, 420)}ms`;
+  });
+  return window.BMSModules.setupReveal(root);
+}
+
+initArchitectureFlow(document.querySelector('#bms-flow'));
+  </script>
+
+  <!-- =========================================================
+       SECTION 06 — ARCHITECTURE FLOW MODULE END
+  ========================================================== -->
+
+  <!-- =========================================================
+       SECTION 07 — CTA MODULE START
+  ========================================================== -->
+
+  <!-- SECTION 07 — CTA: HTML -->
 <section class="bms-cta" id="contact">
-    <div class="bms-container">
-        <span class="bms-kicker bms-reveal">BUILD SMARTER</span>
-        <h2 class="bms-title bms-reveal">Make Your Building Intelligent.</h2>
-        <p class="bms-copy bms-reveal">Connect systems, centralize operations and turn building data into smarter operational decisions.</p>
-        <div class="bms-actions bms-reveal"><a href="contact.html" class="bms-btn primary">Discuss Your Project <i class="fas fa-arrow-right"></i></a></div>
-    </div>
-</section>
+            <div class="bms-container">
+                <span class="bms-kicker bms-reveal">BUILD SMARTER</span>
+                <h2 class="bms-title bms-reveal">Make Your Building Intelligent.</h2>
+                <p class="bms-copy bms-reveal">Connect systems, centralize operations and turn building data into
+                    smarter operational decisions.</p>
+                <div class="bms-actions bms-reveal"><a href="contact.html" class="bms-btn primary">Discuss Your Project
+                        <i class="fas fa-arrow-right"></i></a></div>
+            </div>
+        </section>
 
-</main>
+  <!-- SECTION 07 — CTA: CSS -->
+  <style id="cta-section-css">
+/* CTA */
+.bms-cta {
+    padding: 135px 0;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(rgba(3, 8, 13, .72), rgba(3, 8, 13, .9)), url('assets/img/bms-cta.jpg') center/cover no-repeat
+}
 
-    <!-- footer start -->
+.bms-cta .bms-title {
+    max-width: 900px;
+    margin: auto
+}
 
-    <footer class="premium-footer">
+.bms-cta .bms-copy {
+    margin: 20px auto 30px;
+    color: #aebcc8
+}
+
+.bms-cta .bms-actions {
+    justify-content: center
+}
+  </style>
+
+  <!-- SECTION 07 — CTA: SCRIPT -->
+  <script type="module" id="cta-section-script">
+function initCta(root) {
+  return window.BMSModules.setupReveal(root, { stagger: 90 });
+}
+
+initCta(document.querySelector('#contact'));
+  </script>
+
+  <!-- =========================================================
+       SECTION 07 — CTA MODULE END
+  ========================================================== -->
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER MODULE START
+  ========================================================== -->
+
+  <!-- FOOTER: HTML -->
+<footer class="premium-footer">
 
         <!-- Ambient Background -->
         <div class="footer-grid"></div>
@@ -869,1482 +2316,1412 @@ body{background:#fff;color:#111;overflow-x:hidden;}
 
     </footer>
 
-    <style>
-        /* =========================================================
-   PREMIUM FOOTER
-   ========================================================= */
+  <!-- FOOTER: CSS -->
+  <style id="footer-section-css">
+/* =========================================================
+PREMIUM FOOTER
+========================================================= */
 
-        .premium-footer {
+     .premium-footer {
 
-            --footer-bg: #030506;
-            --footer-bg-2: #070b0d;
-            --footer-white: #ffffff;
-            --footer-muted: rgba(255, 255, 255, .54);
-            --footer-soft: rgba(255, 255, 255, .30);
-            --footer-line: rgba(255, 255, 255, .10);
-            --footer-orange: #ff4b0b;
+         --footer-bg: #030506;
+         --footer-bg-2: #070b0d;
+         --footer-white: #ffffff;
+         --footer-muted: rgba(255, 255, 255, .54);
+         --footer-soft: rgba(255, 255, 255, .30);
+         --footer-line: rgba(255, 255, 255, .10);
+         --footer-orange: #ff4b0b;
 
-            position: relative;
+         position: relative;
 
-            width: 100%;
+         width: 100%;
 
-            background:
-                radial-gradient(circle at 75% 10%,
-                    rgba(255, 75, 11, .07),
-                    transparent 28%),
-                linear-gradient(135deg,
-                    var(--footer-bg),
-                    var(--footer-bg-2));
+         background:
+             radial-gradient(circle at 75% 10%,
+                 rgba(255, 75, 11, .07),
+                 transparent 28%),
+             linear-gradient(135deg,
+                 var(--footer-bg),
+                 var(--footer-bg-2));
 
-            color: #fff;
+         color: #fff;
 
-            overflow: hidden;
+         overflow: hidden;
 
-            font-family:
-                "Varela Round",
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                sans-serif;
+         font-family:
+             "Varela Round",
+             -apple-system,
+             BlinkMacSystemFont,
+             "Segoe UI",
+             sans-serif;
 
-            isolation: isolate;
+         isolation: isolate;
 
-        }
+     }
 
 
-        /* =========================================================
-   GRID
-   ========================================================= */
+     /* =========================================================
+GRID
+========================================================= */
 
-        .footer-grid {
+     .footer-grid {
 
-            position: absolute;
+         position: absolute;
 
-            inset: 0;
+         inset: 0;
 
-            z-index: -2;
+         z-index: -2;
 
-            opacity: .25;
+         opacity: .25;
 
-            background-image:
+         background-image:
 
-                linear-gradient(rgba(255, 255, 255, .035) 1px,
-                    transparent 1px),
+             linear-gradient(rgba(255, 255, 255, .035) 1px,
+                 transparent 1px),
 
-                linear-gradient(90deg,
-                    rgba(255, 255, 255, .035) 1px,
-                    transparent 1px);
+             linear-gradient(90deg,
+                 rgba(255, 255, 255, .035) 1px,
+                 transparent 1px);
 
-            background-size: 55px 55px;
+         background-size: 55px 55px;
 
-            mask-image:
-                linear-gradient(180deg,
-                    black,
-                    transparent 85%);
+         mask-image:
+             linear-gradient(180deg,
+                 black,
+                 transparent 85%);
 
-        }
+     }
 
 
-        /* =========================================================
-   AMBIENT GLOW
-   ========================================================= */
+     /* =========================================================
+AMBIENT GLOW
+========================================================= */
 
-        .footer-glow {
+     .footer-glow {
 
-            position: absolute;
+         position: absolute;
 
-            border-radius: 50%;
+         border-radius: 50%;
 
-            pointer-events: none;
+         pointer-events: none;
 
-            filter: blur(90px);
+         filter: blur(90px);
 
-            z-index: -1;
+         z-index: -1;
 
-            animation:
-                footerGlowMove 9s ease-in-out infinite alternate;
+         animation:
+             footerGlowMove 9s ease-in-out infinite alternate;
 
-        }
+     }
 
-        .footer-glow-1 {
+     .footer-glow-1 {
 
-            width: 350px;
-            height: 350px;
+         width: 350px;
+         height: 350px;
 
-            top: -200px;
-            right: 12%;
+         top: -200px;
+         right: 12%;
 
-            background:
-                rgba(255, 75, 11, .10);
+         background:
+             rgba(255, 75, 11, .10);
 
-        }
+     }
 
-        .footer-glow-2 {
+     .footer-glow-2 {
 
-            width: 260px;
-            height: 260px;
+         width: 260px;
+         height: 260px;
 
-            bottom: 80px;
-            left: 10%;
+         bottom: 80px;
+         left: 10%;
 
-            background:
-                rgba(255, 255, 255, .035);
+         background:
+             rgba(255, 255, 255, .035);
 
-            animation-delay: 2s;
+         animation-delay: 2s;
 
-        }
+     }
 
 
-        @keyframes footerGlowMove {
+     @keyframes footerGlowMove {
 
-            from {
+         from {
 
-                transform:
-                    translate3d(-20px, 0, 0) scale(1);
+             transform:
+                 translate3d(-20px, 0, 0) scale(1);
 
-            }
+         }
 
-            to {
+         to {
 
-                transform:
-                    translate3d(35px, 20px, 0) scale(1.15);
+             transform:
+                 translate3d(35px, 20px, 0) scale(1.15);
 
-            }
+         }
 
-        }
+     }
 
 
-        /* =========================================================
-   CONTAINER
-   ========================================================= */
+     /* =========================================================
+CONTAINER
+========================================================= */
 
-        .premium-footer .container {
+     .premium-footer .container {
 
-            position: relative;
+         position: relative;
 
-            z-index: 2;
+         z-index: 2;
 
-        }
+     }
 
 
-        /* =========================================================
-   CTA
-   ========================================================= */
+     /* =========================================================
+CTA
+========================================================= */
 
-        .footer-cta {
+     .footer-cta {
 
-            padding:
-                90px 0 72px;
+         padding:
+             90px 0 72px;
 
-            border-bottom:
-                1px solid var(--footer-line);
+         border-bottom:
+             1px solid var(--footer-line);
 
-        }
+     }
 
 
-        .footer-cta-line {
+     .footer-cta-line {
 
-            display: flex;
+         display: flex;
 
-            align-items: center;
+         align-items: center;
 
-            gap: 12px;
+         gap: 12px;
 
-            margin-bottom: 25px;
+         margin-bottom: 25px;
 
-        }
+     }
 
 
-        .footer-cta-line span {
+     .footer-cta-line span {
 
-            width: 35px;
+         width: 35px;
 
-            height: 1px;
+         height: 1px;
 
-            background:
-                var(--footer-orange);
+         background:
+             var(--footer-orange);
 
-        }
+     }
 
 
-        .footer-cta-line small {
+     .footer-cta-line small {
 
-            color:
-                rgba(255, 255, 255, .42);
+         color:
+             rgba(255, 255, 255, .42);
 
-            font-size: 8px;
+         font-size: 8px;
 
-            letter-spacing:
-                .20rem;
+         letter-spacing:
+             .20rem;
 
-        }
+     }
 
 
-        .footer-cta-main {
+     .footer-cta-main {
 
-            display: flex;
+         display: flex;
 
-            align-items: flex-end;
+         align-items: flex-end;
 
-            justify-content: space-between;
+         justify-content: space-between;
 
-            gap: 40px;
+         gap: 40px;
 
-        }
+     }
 
 
-        .footer-cta-title h2 {
+     .footer-cta-title h2 {
 
-            margin: 0;
+         margin: 0;
 
-            font-size:
-                clamp(52px, 7vw, 100px);
+         font-size:
+             clamp(52px, 7vw, 100px);
 
-            font-weight: 400;
+         font-weight: 400;
 
-            line-height: .90;
+         line-height: .90;
 
-            letter-spacing:
-                -.055em;
+         letter-spacing:
+             -.055em;
 
-        }
+     }
 
 
-        .footer-cta-title h2 span {
+     .footer-cta-title h2 span {
 
-            display: block;
+         display: block;
 
-            color:
-                rgba(255, 255, 255, .28);
+         color:
+             rgba(255, 255, 255, .28);
 
-        }
+     }
 
 
-        /* =========================================================
-   CTA BUTTON
-   ========================================================= */
+     /* =========================================================
+CTA BUTTON
+========================================================= */
 
-        .footer-cta-button {
+     .footer-cta-button {
 
-            position: relative;
+         position: relative;
 
-            display: inline-flex;
+         display: inline-flex;
 
-            align-items: center;
+         align-items: center;
 
-            justify-content: space-between;
+         justify-content: space-between;
 
-            gap: 30px;
+         gap: 30px;
 
-            min-width: 215px;
+         min-width: 215px;
 
-            padding: 17px 20px;
+         padding: 17px 20px;
 
-            color: #fff;
+         color: #fff;
 
-            border:
-                1px solid rgba(255, 255, 255, .22);
+         border:
+             1px solid rgba(255, 255, 255, .22);
 
-            text-decoration: none;
+         text-decoration: none;
 
-            overflow: hidden;
+         overflow: hidden;
 
-            transition:
-                color .4s ease,
-                border-color .4s ease,
-                transform .4s ease;
+         transition:
+             color .4s ease,
+             border-color .4s ease,
+             transform .4s ease;
 
-        }
+     }
 
 
-        .footer-cta-button::before {
+     .footer-cta-button::before {
 
-            content: "";
+         content: "";
 
-            position: absolute;
+         position: absolute;
 
-            inset: 0;
+         inset: 0;
 
-            background:
-                var(--footer-orange);
+         background:
+             var(--footer-orange);
 
-            transform:
-                translateX(-101%);
+         transform:
+             translateX(-101%);
 
-            transition:
-                transform .45s cubic-bezier(.2, .7, .2, 1);
+         transition:
+             transform .45s cubic-bezier(.2, .7, .2, 1);
 
-            z-index: -1;
+         z-index: -1;
 
-        }
+     }
 
 
-        .footer-cta-button span {
+     .footer-cta-button span {
 
-            position: relative;
+         position: relative;
 
-            z-index: 2;
+         z-index: 2;
 
-            font-size: 9px;
+         font-size: 9px;
 
-            letter-spacing: .13rem;
+         letter-spacing: .13rem;
 
-            text-transform: uppercase;
+         text-transform: uppercase;
 
-        }
+     }
 
 
-        .footer-cta-button i {
+     .footer-cta-button i {
 
-            position: relative;
+         position: relative;
 
-            z-index: 2;
+         z-index: 2;
 
-            font-size: 18px;
+         font-size: 18px;
 
-            font-style: normal;
+         font-style: normal;
 
-            transition:
-                transform .35s ease;
+         transition:
+             transform .35s ease;
 
-        }
+     }
 
 
-        .footer-cta-button:hover {
+     .footer-cta-button:hover {
 
-            color: #fff;
+         color: #fff;
 
-            border-color:
-                var(--footer-orange);
+         border-color:
+             var(--footer-orange);
 
-            transform:
-                translateY(-4px);
+         transform:
+             translateY(-4px);
 
-        }
+     }
 
 
-        .footer-cta-button:hover::before {
+     .footer-cta-button:hover::before {
 
-            transform:
-                translateX(0);
+         transform:
+             translateX(0);
 
-        }
+     }
 
 
-        .footer-cta-button:hover i {
+     .footer-cta-button:hover i {
 
-            transform:
-                translate(5px, -5px);
+         transform:
+             translate(5px, -5px);
 
-        }
+     }
 
 
-        /* =========================================================
-   MAIN FOOTER
-   ========================================================= */
+     /* =========================================================
+MAIN FOOTER
+========================================================= */
 
-        .footer-main {
+     .footer-main {
 
-            display: grid;
+         display: grid;
 
-            grid-template-columns:
-                1.45fr .7fr 1fr 1.15fr;
+         grid-template-columns:
+             1.45fr .7fr 1fr 1.15fr;
 
-            gap: 55px;
+         gap: 55px;
 
-            padding:
-                75px 0 70px;
+         padding:
+             75px 0 70px;
 
-        }
+     }
 
 
-        /* =========================================================
-   LOGO
-   ========================================================= */
+     /* =========================================================
+LOGO
+========================================================= */
 
-        .footer-logo-wrap {
+     .footer-logo-wrap {
 
-            position: relative;
+         position: relative;
 
-            display: inline-flex;
+         display: inline-flex;
 
-            align-items: center;
+         align-items: center;
 
-            justify-content: center;
+         justify-content: center;
 
-            width: 190px;
+         width: 190px;
 
-            height: 85px;
+         height: 85px;
 
-            margin-bottom: 28px;
+         margin-bottom: 28px;
 
-            text-decoration: none;
+         text-decoration: none;
 
-        }
+     }
 
 
-        .premium-footer-logo {
+     .premium-footer-logo {
 
-            position: relative;
+         position: relative;
 
-            z-index: 2;
+         z-index: 2;
 
-            width: 175px;
+         width: 175px;
 
-            height: auto;
+         height: auto;
 
-            object-fit: contain;
+         object-fit: contain;
 
-            transform-origin: center;
+         transform-origin: center;
 
-            filter:
-                drop-shadow(0 0 0 rgba(255, 75, 11, 0));
+         filter:
+             drop-shadow(0 0 0 rgba(255, 75, 11, 0));
 
-            transition:
-                transform .6s cubic-bezier(.2, .7, .2, 1),
-                filter .6s ease;
+         transition:
+             transform .6s cubic-bezier(.2, .7, .2, 1),
+             filter .6s ease;
 
-            animation:
-                footerLogoFloat 5s ease-in-out infinite;
+         animation:
+             footerLogoFloat 5s ease-in-out infinite;
 
-        }
+     }
 
 
-        .footer-logo-ring {
+     .footer-logo-ring {
 
-            position: absolute;
+         position: absolute;
 
-            width: 72px;
+         width: 72px;
 
-            height: 72px;
+         height: 72px;
 
-            border:
-                1px solid rgba(255, 75, 11, .15);
+         border:
+             1px solid rgba(255, 75, 11, .15);
 
-            border-radius: 50%;
+         border-radius: 50%;
 
-            opacity: .8;
+         opacity: .8;
 
-            animation:
-                footerRing 7s linear infinite;
+         animation:
+             footerRing 7s linear infinite;
 
-        }
+     }
 
 
-        .footer-logo-ring::before {
+     .footer-logo-ring::before {
 
-            content: "";
+         content: "";
 
-            position: absolute;
+         position: absolute;
 
-            inset: -8px;
+         inset: -8px;
 
-            border:
-                1px solid rgba(255, 255, 255, .04);
+         border:
+             1px solid rgba(255, 255, 255, .04);
 
-            border-radius: 50%;
+         border-radius: 50%;
 
-        }
+     }
 
 
-        .footer-logo-wrap:hover .premium-footer-logo {
+     .footer-logo-wrap:hover .premium-footer-logo {
 
-            transform:
-                scale(1.055);
+         transform:
+             scale(1.055);
 
-            filter:
-                drop-shadow(0 0 20px rgba(255, 75, 11, .20));
+         filter:
+             drop-shadow(0 0 20px rgba(255, 75, 11, .20));
 
-        }
+     }
 
 
-        @keyframes footerLogoFloat {
+     @keyframes footerLogoFloat {
 
-            0%,
-            100% {
+         0%,
+         100% {
 
-                transform:
-                    translateY(0);
+             transform:
+                 translateY(0);
 
-            }
+         }
 
-            50% {
+         50% {
 
-                transform:
-                    translateY(-4px);
+             transform:
+                 translateY(-4px);
 
-            }
+         }
 
-        }
+     }
 
 
-        @keyframes footerRing {
+     @keyframes footerRing {
 
-            from {
+         from {
 
-                transform:
-                    rotate(0deg);
+             transform:
+                 rotate(0deg);
 
-            }
+         }
 
-            to {
+         to {
 
-                transform:
-                    rotate(360deg);
+             transform:
+                 rotate(360deg);
 
-            }
+         }
 
-        }
+     }
 
 
-        /* =========================================================
-   BRAND TEXT
-   ========================================================= */
+     /* =========================================================
+BRAND TEXT
+========================================================= */
 
-        .footer-brand-text {
+     .footer-brand-text {
 
-            max-width: 390px;
+         max-width: 390px;
 
-            margin: 0;
+         margin: 0;
 
-            color:
-                var(--footer-muted);
+         color:
+             var(--footer-muted);
 
-            font-size: 13px;
+         font-size: 13px;
 
-            line-height: 1.8;
+         line-height: 1.8;
 
-        }
+     }
 
 
-        .footer-brand-text strong {
+     .footer-brand-text strong {
 
-            color:
-                rgba(255, 255, 255, .75);
+         color:
+             rgba(255, 255, 255, .75);
 
-            font-weight: 400;
+         font-weight: 400;
 
-        }
+     }
 
 
-        /* =========================================================
-   STATUS
-   ========================================================= */
+     /* =========================================================
+STATUS
+========================================================= */
 
-        .footer-status {
+     .footer-status {
 
-            display: flex;
+         display: flex;
 
-            align-items: center;
+         align-items: center;
 
-            gap: 9px;
+         gap: 9px;
 
-            margin-top: 27px;
+         margin-top: 27px;
 
-            color:
-                rgba(255, 255, 255, .38);
+         color:
+             rgba(255, 255, 255, .38);
 
-            font-size: 8px;
+         font-size: 8px;
 
-            letter-spacing:
-                .15rem;
+         letter-spacing:
+             .15rem;
 
-            text-transform:
-                uppercase;
+         text-transform:
+             uppercase;
 
-        }
+     }
 
 
-        .status-dot {
+     .status-dot {
 
-            width: 6px;
+         width: 6px;
 
-            height: 6px;
+         height: 6px;
 
-            border-radius: 50%;
+         border-radius: 50%;
 
-            background:
-                var(--footer-orange);
+         background:
+             var(--footer-orange);
 
-            box-shadow:
-                0 0 0 0 rgba(255, 75, 11, .45);
+         box-shadow:
+             0 0 0 0 rgba(255, 75, 11, .45);
 
-            animation:
-                statusPulse 2s infinite;
+         animation:
+             statusPulse 2s infinite;
 
-        }
+     }
 
 
-        @keyframes statusPulse {
+     @keyframes statusPulse {
 
-            0% {
+         0% {
 
-                box-shadow:
-                    0 0 0 0 rgba(255, 75, 11, .45);
+             box-shadow:
+                 0 0 0 0 rgba(255, 75, 11, .45);
 
-            }
+         }
 
-            70% {
+         70% {
 
-                box-shadow:
-                    0 0 0 7px rgba(255, 75, 11, 0);
+             box-shadow:
+                 0 0 0 7px rgba(255, 75, 11, 0);
 
-            }
+         }
 
-            100% {
+         100% {
 
-                box-shadow:
-                    0 0 0 0 rgba(255, 75, 11, 0);
+             box-shadow:
+                 0 0 0 0 rgba(255, 75, 11, 0);
 
-            }
+         }
 
-        }
+     }
 
 
-        /* =========================================================
-   COLUMN
-   ========================================================= */
+     /* =========================================================
+COLUMN
+========================================================= */
 
-        .footer-column-label {
+     .footer-column-label {
 
-            display: flex;
+         display: flex;
 
-            align-items: center;
+         align-items: center;
 
-            gap: 12px;
+         gap: 12px;
 
-            margin-bottom: 27px;
+         margin-bottom: 27px;
 
-            color:
-                rgba(255, 255, 255, .43);
+         color:
+             rgba(255, 255, 255, .43);
 
-            font-size: 8px;
+         font-size: 8px;
 
-            letter-spacing:
-                .18rem;
+         letter-spacing:
+             .18rem;
 
-        }
+     }
 
 
-        .footer-column-label span {
+     .footer-column-label span {
 
-            color:
-                var(--footer-orange);
+         color:
+             var(--footer-orange);
 
-            font-size: 8px;
+         font-size: 8px;
 
-        }
+     }
 
 
-        /* =========================================================
-   LINKS
-   ========================================================= */
+     /* =========================================================
+LINKS
+========================================================= */
 
-        .premium-footer-links {
+     .premium-footer-links {
 
-            list-style: none;
+         list-style: none;
 
-            padding: 0;
+         padding: 0;
 
-            margin: 0;
+         margin: 0;
 
-        }
+     }
 
 
-        .premium-footer-links li {
+     .premium-footer-links li {
 
-            margin-bottom: 14px;
+         margin-bottom: 14px;
 
-        }
+     }
 
 
-        .premium-footer-links a {
+     .premium-footer-links a {
 
-            position: relative;
+         position: relative;
 
-            display: flex;
+         display: flex;
 
-            align-items: center;
+         align-items: center;
 
-            justify-content: space-between;
+         justify-content: space-between;
 
-            gap: 12px;
+         gap: 12px;
 
-            width: 100%;
+         width: 100%;
 
-            color:
-                rgba(255, 255, 255, .58);
+         color:
+             rgba(255, 255, 255, .58);
 
-            text-decoration: none;
+         text-decoration: none;
 
-            font-size: 13px;
+         font-size: 13px;
 
-            transition:
-                color .3s ease,
-                padding-left .3s ease;
+         transition:
+             color .3s ease,
+             padding-left .3s ease;
 
-        }
+     }
 
 
-        .premium-footer-links a b {
+     .premium-footer-links a b {
 
-            color:
-                rgba(255, 255, 255, .18);
+         color:
+             rgba(255, 255, 255, .18);
 
-            font-size: 14px;
+         font-size: 14px;
 
-            font-weight: 400;
+         font-weight: 400;
 
-            opacity: 0;
+         opacity: 0;
 
-            transform:
-                translate(-5px, 5px);
+         transform:
+             translate(-5px, 5px);
 
-            transition:
-                opacity .3s ease,
-                transform .3s ease;
+         transition:
+             opacity .3s ease,
+             transform .3s ease;
 
-        }
+     }
 
 
-        .premium-footer-links a:hover {
+     .premium-footer-links a:hover {
 
-            color: #fff;
+         color: #fff;
 
-            padding-left: 6px;
+         padding-left: 6px;
 
-        }
+     }
 
 
-        .premium-footer-links a:hover b {
+     .premium-footer-links a:hover b {
 
-            opacity: 1;
+         opacity: 1;
 
-            color:
-                var(--footer-orange);
+         color:
+             var(--footer-orange);
 
-            transform:
-                translate(0, 0);
+         transform:
+             translate(0, 0);
 
-        }
+     }
 
 
-        /* =========================================================
-   CONTACT
-   ========================================================= */
+     /* =========================================================
+CONTACT
+========================================================= */
 
-        .premium-contact-list {
+     .premium-contact-list {
 
-            display: flex;
+         display: flex;
 
-            flex-direction: column;
+         flex-direction: column;
 
-            gap: 21px;
+         gap: 21px;
 
-        }
+     }
 
 
-        .premium-contact-item {
+     .premium-contact-item {
 
-            display: flex;
+         display: flex;
 
-            align-items: flex-start;
+         align-items: flex-start;
 
-            gap: 14px;
+         gap: 14px;
 
-            color: #fff;
+         color: #fff;
 
-            text-decoration: none;
+         text-decoration: none;
 
-        }
+     }
 
 
-        .contact-icon {
+     .contact-icon {
 
-            display: flex;
+         display: flex;
 
-            align-items: center;
+         align-items: center;
 
-            justify-content: center;
+         justify-content: center;
 
-            width: 34px;
+         width: 34px;
 
-            height: 34px;
+         height: 34px;
 
-            flex: 0 0 34px;
+         flex: 0 0 34px;
 
-            border:
-                1px solid rgba(255, 255, 255, .10);
+         border:
+             1px solid rgba(255, 255, 255, .10);
 
-            color:
-                rgba(255, 255, 255, .55);
+         color:
+             rgba(255, 255, 255, .55);
 
-            transition:
-                background .35s ease,
-                border-color .35s ease,
-                color .35s ease,
-                transform .35s ease;
+         transition:
+             background .35s ease,
+             border-color .35s ease,
+             color .35s ease,
+             transform .35s ease;
 
-        }
+     }
 
 
-        .contact-icon i {
+     .contact-icon i {
 
-            font-size: 12px;
+         font-size: 12px;
 
-        }
+     }
 
 
-        .premium-contact-item:hover .contact-icon {
+     .premium-contact-item:hover .contact-icon {
 
-            background:
-                var(--footer-orange);
+         background:
+             var(--footer-orange);
 
-            border-color:
-                var(--footer-orange);
+         border-color:
+             var(--footer-orange);
 
-            color: #fff;
+         color: #fff;
 
-            transform:
-                translateY(-2px);
+         transform:
+             translateY(-2px);
 
-        }
+     }
 
 
-        .contact-info {
+     .contact-info {
 
-            display: flex;
+         display: flex;
 
-            flex-direction: column;
+         flex-direction: column;
 
-            gap: 4px;
+         gap: 4px;
 
-        }
+     }
 
 
-        .contact-info span {
+     .contact-info span {
 
-            color:
-                rgba(255, 255, 255, .30);
+         color:
+             rgba(255, 255, 255, .30);
 
-            font-size: 7px;
+         font-size: 7px;
 
-            letter-spacing:
-                .15rem;
+         letter-spacing:
+             .15rem;
 
-            text-transform:
-                uppercase;
+         text-transform:
+             uppercase;
 
-        }
+     }
 
 
-        .contact-info strong {
+     .contact-info strong {
 
-            color:
-                rgba(255, 255, 255, .72);
+         color:
+             rgba(255, 255, 255, .72);
 
-            font-size: 12px;
+         font-size: 12px;
 
-            font-weight: 400;
+         font-weight: 400;
 
-            line-height: 1.5;
+         line-height: 1.5;
 
-            word-break: break-word;
+         word-break: break-word;
 
-            transition:
-                color .3s ease;
+         transition:
+             color .3s ease;
 
-        }
+     }
 
 
-        .premium-contact-item:hover .contact-info strong {
+     .premium-contact-item:hover .contact-info strong {
 
-            color: #fff;
+         color: #fff;
 
-        }
+     }
 
 
-        /* =========================================================
-   TECHNOLOGY STRIP
-   ========================================================= */
+     /* =========================================================
+TECHNOLOGY STRIP
+========================================================= */
 
-        .footer-tech-strip {
+     .footer-tech-strip {
 
-            display: flex;
+         display: flex;
 
-            align-items: center;
+         align-items: center;
 
-            justify-content: center;
+         justify-content: center;
 
-            flex-wrap: wrap;
+         flex-wrap: wrap;
 
-            gap: 18px;
+         gap: 18px;
 
-            padding:
-                23px 0;
+         padding:
+             23px 0;
 
-            border-top:
-                1px solid var(--footer-line);
+         border-top:
+             1px solid var(--footer-line);
 
-            border-bottom:
-                1px solid var(--footer-line);
+         border-bottom:
+             1px solid var(--footer-line);
 
-        }
+     }
 
 
-        .footer-tech-strip span {
+     .footer-tech-strip span {
 
-            color:
-                rgba(255, 255, 255, .28);
+         color:
+             rgba(255, 255, 255, .28);
 
-            font-size: 7px;
+         font-size: 7px;
 
-            letter-spacing:
-                .18rem;
+         letter-spacing:
+             .18rem;
 
-            transition:
-                color .3s ease;
+         transition:
+             color .3s ease;
 
-        }
+     }
 
 
-        .footer-tech-strip span:hover {
+     .footer-tech-strip span:hover {
 
-            color:
-                var(--footer-orange);
+         color:
+             var(--footer-orange);
 
-        }
+     }
 
 
-        .footer-tech-strip i {
+     .footer-tech-strip i {
 
-            width: 3px;
+         width: 3px;
 
-            height: 3px;
+         height: 3px;
 
-            border-radius: 50%;
+         border-radius: 50%;
 
-            background:
-                rgba(255, 75, 11, .65);
+         background:
+             rgba(255, 75, 11, .65);
 
-        }
+     }
 
 
-        /* =========================================================
-   BOTTOM
-   ========================================================= */
+     /* =========================================================
+BOTTOM
+========================================================= */
 
-        .footer-bottom {
+     .footer-bottom {
 
-            display: grid;
+         display: grid;
 
-            grid-template-columns:
-                1fr auto 1fr;
+         grid-template-columns:
+             1fr auto 1fr;
 
-            align-items: center;
+         align-items: center;
 
-            gap: 25px;
+         gap: 25px;
 
-            min-height: 80px;
+         min-height: 80px;
 
-        }
+     }
 
 
-        .footer-copyright {
+     .footer-copyright {
 
-            color:
-                rgba(255, 255, 255, .28);
+         color:
+             rgba(255, 255, 255, .28);
 
-            font-size: 10px;
+         font-size: 10px;
 
-        }
+     }
 
 
-        .footer-bottom-center {
+     .footer-bottom-center {
 
-            color:
-                rgba(255, 255, 255, .20);
+         color:
+             rgba(255, 255, 255, .20);
 
-            font-size: 7px;
+         font-size: 7px;
 
-            letter-spacing:
-                .18rem;
+         letter-spacing:
+             .18rem;
 
-            text-align: center;
+         text-align: center;
 
-        }
+     }
 
 
-        .footer-bottom-links {
+     .footer-bottom-links {
 
-            display: flex;
+         display: flex;
 
-            justify-content: flex-end;
+         justify-content: flex-end;
 
-            gap: 22px;
+         gap: 22px;
 
-        }
+     }
 
 
-        .footer-bottom-links a {
+     .footer-bottom-links a {
 
-            color:
-                rgba(255, 255, 255, .28);
+         color:
+             rgba(255, 255, 255, .28);
 
-            text-decoration: none;
+         text-decoration: none;
 
-            font-size: 10px;
+         font-size: 10px;
 
-            transition:
-                color .3s ease;
+         transition:
+             color .3s ease;
 
-        }
+     }
 
 
-        .footer-bottom-links a:hover {
+     .footer-bottom-links a:hover {
 
-            color: #fff;
+         color: #fff;
 
-        }
+     }
 
 
-        /* =========================================================
-   TABLET
-   ========================================================= */
+     /* =========================================================
+TABLET
+========================================================= */
 
-        @media (max-width: 991px) {
+     @media (max-width: 991px) {
 
-            .footer-cta {
+         .footer-cta {
 
-                padding:
-                    65px 0 55px;
+             padding:
+                 65px 0 55px;
 
-            }
+         }
 
 
-            .footer-cta-main {
+         .footer-cta-main {
 
-                align-items: flex-start;
+             align-items: flex-start;
 
-                flex-direction: column;
+             flex-direction: column;
 
-            }
+         }
 
 
-            .footer-cta-button {
+         .footer-cta-button {
 
-                min-width: 210px;
+             min-width: 210px;
 
-            }
+         }
 
 
-            .footer-main {
+         .footer-main {
 
-                grid-template-columns:
-                    1.3fr 1fr;
+             grid-template-columns:
+                 1.3fr 1fr;
 
-                gap: 55px 40px;
+             gap: 55px 40px;
 
-                padding:
-                    60px 0;
+             padding:
+                 60px 0;
 
-            }
+         }
 
 
-            .footer-brand-column {
+         .footer-brand-column {
 
-                grid-column:
-                    1 / -1;
+             grid-column:
+                 1 / -1;
 
-            }
+         }
 
 
-            .footer-brand-text {
+         .footer-brand-text {
 
-                max-width: 520px;
+             max-width: 520px;
 
-            }
+         }
 
 
-            .footer-bottom {
+         .footer-bottom {
 
-                grid-template-columns:
-                    1fr 1fr;
+             grid-template-columns:
+                 1fr 1fr;
 
-                padding:
-                    22px 0;
+             padding:
+                 22px 0;
 
-            }
+         }
 
 
-            .footer-bottom-center {
+         .footer-bottom-center {
 
-                display: none;
+             display: none;
 
-            }
+         }
 
 
-            .footer-bottom-links {
+         .footer-bottom-links {
 
-                justify-content: flex-end;
+             justify-content: flex-end;
 
-            }
+         }
 
-        }
+     }
 
 
-        /* =========================================================
-   MOBILE
-   ========================================================= */
+     /* =========================================================
+MOBILE
+========================================================= */
 
-        @media (max-width: 767px) {
+     @media (max-width: 767px) {
 
-            .premium-footer {
+         .premium-footer {
 
-                text-align: left;
+             text-align: left;
 
-            }
+         }
 
 
-            .footer-cta {
+         .footer-cta {
 
-                padding:
-                    55px 0 45px;
+             padding:
+                 55px 0 45px;
 
-            }
+         }
 
 
-            .footer-cta-line {
+         .footer-cta-line {
 
-                margin-bottom: 20px;
+             margin-bottom: 20px;
 
-            }
+         }
 
 
-            .footer-cta-title h2 {
+         .footer-cta-title h2 {
 
-                font-size:
-                    clamp(48px, 15vw, 65px);
+             font-size:
+                 clamp(48px, 15vw, 65px);
 
-            }
+         }
 
 
-            .footer-cta-button {
+         .footer-cta-button {
 
-                width: 100%;
+             width: 100%;
 
-                min-width: 0;
+             min-width: 0;
 
-                margin-top: 5px;
+             margin-top: 5px;
 
-            }
+         }
 
 
-            .footer-main {
+         .footer-main {
 
-                display: flex;
+             display: flex;
 
-                flex-direction: column;
+             flex-direction: column;
 
-                gap: 42px;
+             gap: 42px;
 
-                padding:
-                    48px 0;
+             padding:
+                 48px 0;
 
-            }
+         }
 
 
-            .footer-brand-column {
+         .footer-brand-column {
 
-                width: 100%;
+             width: 100%;
 
-            }
+         }
 
 
-            .footer-logo-wrap {
+         .footer-logo-wrap {
 
-                width: 175px;
+             width: 175px;
 
-                height: 75px;
+             height: 75px;
 
-            }
+         }
 
 
-            .premium-footer-logo {
+         .premium-footer-logo {
 
-                width: 160px;
+             width: 160px;
 
-            }
+         }
 
 
-            .footer-brand-text {
+         .footer-brand-text {
 
-                max-width: 100%;
+             max-width: 100%;
 
-                font-size: 12px;
+             font-size: 12px;
 
-                line-height: 1.75;
+             line-height: 1.75;
 
-            }
+         }
 
 
-            .footer-column {
+         .footer-column {
 
-                width: 100%;
+             width: 100%;
 
-            }
+         }
 
 
-            .footer-column-label {
+         .footer-column-label {
 
-                margin-bottom: 20px;
+             margin-bottom: 20px;
 
-            }
+         }
 
 
-            .premium-footer-links li {
+         .premium-footer-links li {
 
-                margin-bottom: 13px;
+             margin-bottom: 13px;
 
-            }
+         }
 
 
-            .premium-footer-links a {
+         .premium-footer-links a {
 
-                font-size: 12px;
+             font-size: 12px;
 
-            }
+         }
 
 
-            .premium-contact-list {
+         .premium-contact-list {
 
-                gap: 18px;
+             gap: 18px;
 
-            }
+         }
 
 
-            .contact-info strong {
+         .contact-info strong {
 
-                font-size: 11px;
+             font-size: 11px;
 
-            }
+         }
 
 
-            .footer-tech-strip {
+         .footer-tech-strip {
 
-                justify-content: flex-start;
+             justify-content: flex-start;
 
-                gap: 12px;
+             gap: 12px;
 
-                line-height: 2;
+             line-height: 2;
 
-            }
+         }
 
 
-            .footer-tech-strip span {
+         .footer-tech-strip span {
 
-                font-size: 6px;
+             font-size: 6px;
 
-            }
+         }
 
 
-            .footer-tech-strip i {
+         .footer-tech-strip i {
 
-                width: 2px;
+             width: 2px;
 
-                height: 2px;
+             height: 2px;
 
-            }
+         }
 
 
-            .footer-bottom {
+         .footer-bottom {
 
-                display: flex;
+             display: flex;
 
-                flex-direction: column;
+             flex-direction: column;
 
-                align-items: flex-start;
+             align-items: flex-start;
 
-                gap: 14px;
+             gap: 14px;
 
-                padding:
-                    24px 0 28px;
+             padding:
+                 24px 0 28px;
 
-            }
+         }
 
 
-            .footer-bottom-links {
+         .footer-bottom-links {
 
-                justify-content: flex-start;
+             justify-content: flex-start;
 
-                gap: 20px;
+             gap: 20px;
 
-            }
+         }
 
-        }
+     }
 
 
-        /* =========================================================
-   SMALL MOBILE
-   ========================================================= */
+     /* =========================================================
+SMALL MOBILE
+========================================================= */
 
-        @media (max-width: 375px) {
+     @media (max-width: 375px) {
 
-            .footer-cta-title h2 {
+         .footer-cta-title h2 {
 
-                font-size: 45px;
+             font-size: 45px;
 
-            }
+         }
 
 
-            .footer-cta {
+         .footer-cta {
 
-                padding-top: 45px;
+             padding-top: 45px;
 
-            }
+         }
 
 
-            .footer-main {
+         .footer-main {
 
-                gap: 36px;
+             gap: 36px;
 
-            }
+         }
 
 
-            .footer-tech-strip {
+         .footer-tech-strip {
 
-                gap: 9px;
+             gap: 9px;
 
-            }
+         }
 
 
-            .footer-tech-strip span {
+         .footer-tech-strip span {
 
-                letter-spacing:
-                    .10rem;
+             letter-spacing:
+                 .10rem;
 
-            }
+         }
 
-        }
+     }
 
 
-        /* =========================================================
-   REDUCED MOTION
-   ========================================================= */
+     /* =========================================================
+REDUCED MOTION
+========================================================= */
 
-        @media (prefers-reduced-motion: reduce) {
+     @media (prefers-reduced-motion: reduce) {
 
-            .footer-glow,
-            .premium-footer-logo,
-            .footer-logo-ring,
-            .status-dot {
+         .footer-glow,
+         .premium-footer-logo,
+         .footer-logo-ring,
+         .status-dot {
 
-                animation: none !important;
+             animation: none !important;
 
-            }
+         }
 
-            .footer-cta-button,
-            .premium-footer-links a,
-            .contact-icon,
-            .premium-footer-logo {
+         .footer-cta-button,
+         .premium-footer-links a,
+         .contact-icon,
+         .premium-footer-logo {
 
-                transition: none !important;
+             transition: none !important;
 
-            }
+         }
 
-        }
-    </style>
-    <script>
+     }
+  </style>
 
-        document.addEventListener(
-            "DOMContentLoaded",
-            function () {
+  <!-- FOOTER: SCRIPT -->
+  <script type="module" id="footer-section-script">
+function initFooter(root) {
+  if (!root) return;
+  const year = root.querySelector('#footerYear');
+  if (year) year.textContent = new Date().getFullYear();
 
-                /* Dynamic year */
-
-                const year =
-                    document.getElementById(
-                        "footerYear"
-                    );
-
-                if (year) {
-
-                    year.textContent =
-                        new Date().getFullYear();
-
-                }
-
-
-                /* Subtle logo interaction */
-
-                const logo =
-                    document.querySelector(
-                        ".premium-footer-logo"
-                    );
-
-                if (logo) {
-
-                    logo.addEventListener(
-                        "mouseenter",
-                        function () {
-
-                            logo.style.animationPlayState =
-                                "paused";
-
-                        }
-                    );
-
-                    logo.addEventListener(
-                        "mouseleave",
-                        function () {
-
-                            logo.style.animationPlayState =
-                                "running";
-
-                        }
-                    );
-
-                }
-
-            }
-        );
-
-    </script>
-    <!-- footer end -->
-
-<script id="bms-page-script">
-document.addEventListener('DOMContentLoaded', function(){
-    const tabs = document.querySelectorAll('.bms-tab');
-    const panels = document.querySelectorAll('.bms-panel');
-    tabs.forEach(tab => {
-        tab.addEventListener('click', function(){
-            tabs.forEach(t => t.classList.remove('active'));
-            panels.forEach(p => p.classList.remove('active'));
-            this.classList.add('active');
-            const panel = document.getElementById(this.dataset.target);
-            if(panel) panel.classList.add('active');
-            this.scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
-        });
-    });
-
-    const reveal = document.querySelectorAll('.bms-reveal');
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {threshold:.1});
-    reveal.forEach(el => observer.observe(el));
-});
-
-function scrollBmsTabs(direction){
-    const el = document.getElementById('bmsTabs');
-    if(el) el.scrollBy({left: direction * 340, behavior:'smooth'});
+  const logo = root.querySelector('.premium-footer-logo');
+  logo?.addEventListener('mouseenter', () => { logo.style.animationPlayState = 'paused'; });
+  logo?.addEventListener('mouseleave', () => { logo.style.animationPlayState = 'running'; });
 }
-</script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+initFooter(document.querySelector('.premium-footer'));
+  </script>
+
+  <!-- =========================================================
+       FOOTER MODULE END
+  ========================================================== -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
