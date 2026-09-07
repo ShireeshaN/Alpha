@@ -1,299 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar Energy | Alpha Numeric Innovations</title>
-    <meta name="description" content="Alpha Numeric Innovations delivers engineered On-Grid, Off-Grid and Ground-Mounted solar solutions for homes, businesses, industries and infrastructure projects.">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <style>
-        /* =========================================================
-           01 — GLOBAL
-        ========================================================== */
-        :root {
-            --ink: #101010;
-            --muted: #6e6e6e;
-            --line: #e5e5e5;
-            --soft: #f5f5f2;
-            --solar: #f2c94c;
-            --solar-dark: #dcae20;
-            --white: #ffffff;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: "Inter", sans-serif; background: #fff; color: var(--ink); overflow-x: hidden; }
-        a { color: inherit; text-decoration: none; }
-        img { display: block; max-width: 100%; }
-        button, input, select, textarea { font-family: inherit; }
-        .solar-container { width: min(calc(100% - 80px), 1450px); margin: 0 auto; }
-        .section-kicker { display: inline-flex; align-items: center; gap: 12px; color: #777; font-size: 10px; font-weight: 700; letter-spacing: 2.8px; text-transform: uppercase; }
-        .section-kicker::before { content: ""; width: 38px; height: 2px; background: var(--solar); }
-        .section-title { margin: 19px 0 0; max-width: 900px; font-size: clamp(42px,5.2vw,78px); line-height: .98; letter-spacing: -3.5px; font-weight: 650; }
-        .section-title span { color: #777; font-weight: 300; }
-        .section-copy { color: #717171; font-size: 14px; line-height: 1.9; }
-
-        /* =========================================================
-           02 — ABOUT-STYLE NAVBAR
-        ========================================================== */
-        .main-navbar { padding: 8px 0; background: #fff; box-shadow: 0 8px 35px rgba(14,29,57,.08); z-index: 9999; }
-        .navbar-logo { height: 58px; width: auto; object-fit: contain; }
-        .main-navbar .nav-link { position: relative; color: #1a1a1a !important; font-size: 14px; font-weight: 600; letter-spacing: .4px; margin: 0 5px; padding: 12px 11px !important; }
-        .main-navbar .nav-link:hover, .main-navbar .nav-link:focus, .main-navbar .nav-link.show { color: #000 !important; }
-        #logoWhite { display: none !important; }
-        #logoDark { display: block !important; }
-
-        .solution-dropdown { position: static !important; }
-        .mega-menu { position: absolute !important; width: min(1180px, calc(100vw - 48px)); left: 50% !important; top: 100% !important; transform: translateX(-50%) !important; margin-top: 0 !important; padding: 0; border: 1px solid #1f1f1f; border-radius: 14px; background: #000; box-shadow: 0 24px 70px rgba(0,0,0,.28); overflow: hidden; }
-        .mega-menu-inner { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); }
-        .mega-column { min-height: 270px; padding: 30px 30px 32px; border-right: 1px solid #242424; background: #000; }
-        .mega-column:last-child { border-right: 0; }
-        .mega-heading { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid #2a2a2a; color: #fff; font-size: 16px; font-weight: 600; }
-        .mega-column > a { display: block; position: relative; padding: 9px 0 9px 16px; color: #bdbdbd; font-size: 13.5px; font-weight: 600; transition: .25s ease; }
-        .mega-column > a::before { content: ""; position: absolute; left: 0; top: 50%; width: 6px; height: 1px; background: #666; transform: translateY(-50%); transition: .25s ease; }
-        .mega-column > a:hover { color: #fff; padding-left: 21px; }
-        .mega-column > a:hover::before { width: 12px; background: #fff; }
-
-        .bms-dropdown .bms-menu { min-width: 190px; margin-top: 0; padding: 10px 0; border: 1px solid #1f1f1f; border-radius: 10px; background: #000; box-shadow: 0 18px 45px rgba(0,0,0,.24); }
-        .bms-dropdown .bms-menu .dropdown-item { padding: 10px 18px; color: #bdbdbd; font-size: 13.5px; font-weight: 600; background: transparent; transition: color .25s ease, padding-left .25s ease; }
-        .bms-dropdown .bms-menu .dropdown-item:hover { color: #fff; padding-left: 22px; }
-
-        @media (min-width: 992px) {
-            .solution-dropdown > .mega-menu, .bms-dropdown > .bms-menu { display: block; opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(6px); transition: opacity .22s ease, visibility .22s ease, transform .22s ease; }
-            .solution-dropdown > .mega-menu { transform: translateX(-50%) translateY(6px) !important; }
-            .solution-dropdown:hover > .mega-menu, .solution-dropdown > .mega-menu:hover, .solution-dropdown > .mega-menu.show { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0) !important; }
-            .bms-dropdown:hover > .bms-menu, .bms-dropdown > .bms-menu:hover, .bms-dropdown > .bms-menu.show { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); }
-            .solution-dropdown > .mega-menu::before { content: ""; position: absolute; left: 0; right: 0; top: -18px; height: 18px; background: transparent; }
-        }
-
-        /* =========================================================
-           03 — HERO
-        ========================================================== */
-        .solar-hero { position: relative; min-height: 760px; margin-top: 74px; overflow: hidden; color: #fff; background: #0a0a0a; }
-        .solar-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.78) 42%,rgba(0,0,0,.22) 78%,rgba(0,0,0,.08) 100%), url("assets/img/energy/solar-banner.png") center/cover no-repeat; }
-        .solar-hero::after { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px); background-size: 80px 80px; opacity: .25; }
-        .solar-hero-inner { position: relative; z-index: 2; min-height: 760px; display: grid; grid-template-columns: minmax(0,1.2fr) 390px; gap: 80px; align-items: center; }
-        .hero-badge { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 24px; color: #d5d5d5; font-size: 10px; font-weight: 700; letter-spacing: 2.4px; text-transform: uppercase; }
-        .hero-badge i { color: var(--solar); }
-        .solar-hero h1 { max-width: 950px; margin: 0; font-size: clamp(58px,7.2vw,108px); line-height: .89; letter-spacing: -6px; font-weight: 750; text-transform: uppercase; }
-        .solar-hero h1 span { display: block; color: rgba(255,255,255,.55); font-weight: 300; }
-        .hero-copy { max-width: 700px; margin-top: 30px; color: #c4c4c4; font-size: 14px; line-height: 1.9; }
-        .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
-        .btn-solar, .btn-outline-light-custom { min-height: 54px; display: inline-flex; align-items: center; justify-content: center; gap: 11px; padding: 0 23px; font-size: 10px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; transition: .3s ease; }
-        .btn-solar { background: var(--solar); color: #111; border: 1px solid var(--solar); }
-        .btn-solar:hover { background: #fff; border-color: #fff; color: #111; transform: translateY(-2px); }
-        .btn-outline-light-custom { border: 1px solid rgba(255,255,255,.35); color: #fff; }
-        .btn-outline-light-custom:hover { border-color: #fff; background: #fff; color: #111; }
-
-        .hero-enquiry { padding: 30px; background: rgba(8,8,8,.82); border: 1px solid rgba(255,255,255,.17); backdrop-filter: blur(12px); }
-        .hero-enquiry small { color: var(--solar); font-size: 9px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
-        .hero-enquiry h3 { margin: 10px 0 22px; font-size: 25px; line-height: 1.1; }
-        .hero-field { margin-bottom: 12px; }
-        .hero-field input, .hero-field select { width: 100%; height: 48px; padding: 0 13px; border: 1px solid #343434; outline: 0; background: rgba(255,255,255,.04); color: #fff; font-size: 11px; }
-        .hero-field select option { color: #111; }
-        .hero-submit { width: 100%; min-height: 50px; border: 0; background: var(--solar); color: #111; font-size: 10px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; }
-        .hero-enquiry p { margin: 14px 0 0; color: #777; font-size: 9px; line-height: 1.6; }
-
-        /* =========================================================
-           04 — TRUST STRIP
-        ========================================================== */
-        .trust-strip { background: #111; color: #fff; }
-        .trust-grid { display: grid; grid-template-columns: repeat(4,1fr); }
-        .trust-item { min-height: 130px; padding: 27px 28px; border-right: 1px solid #2c2c2c; display: flex; flex-direction: column; justify-content: space-between; }
-        .trust-item:first-child { border-left: 1px solid #2c2c2c; }
-        .trust-item span { color: #666; font-size: 8px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
-        .trust-item strong { font-size: 16px; font-weight: 550; }
-
-        /* =========================================================
-           05 — INTRO
-        ========================================================== */
-        .solar-intro { padding: 125px 0; background: #fff; }
-        .solar-intro-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(360px,470px); gap: 100px; align-items: end; }
-        .solar-intro-copy p { margin: 0 0 20px; }
-        .intro-points { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-        .intro-point { padding: 16px 18px; background: var(--soft); border-left: 3px solid var(--solar); font-size: 10px; font-weight: 650; }
-
-        /* =========================================================
-           06 — THREE SOLAR SYSTEMS
-        ========================================================== */
-        .systems-section { padding: 120px 0 130px; background: var(--soft); }
-        .systems-head { display: grid; grid-template-columns: minmax(0,1fr) minmax(300px,430px); gap: 80px; align-items: end; margin-bottom: 55px; }
-        .systems-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
-        .system-card { position: relative; min-height: 580px; overflow: hidden; background: #111; color: #fff; }
-        .system-card-image { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform .6s ease; }
-        .system-card:hover .system-card-image { transform: scale(1.04); }
-        .system-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top,rgba(0,0,0,.96) 0%,rgba(0,0,0,.60) 35%,rgba(0,0,0,.1) 72%); }
-        .system-card.on-grid .system-card-image { background-image: url("assets/img/energy/Rooftop Solar.png"); }
-        .system-card.off-grid .system-card-image { background-image: url("assets/img/energy/Solar Power Systems.png"); }
-        .system-card.ground .system-card-image { background-image: url("assets/img/energy/industrial solar.png"); }
-        .system-card-content { position: absolute; z-index: 3; left: 30px; right: 30px; bottom: 30px; }
-        .system-number { color: var(--solar); font-size: 9px; font-weight: 800; letter-spacing: 2px; }
-        .system-card h3 { margin: 12px 0 13px; font-size: 34px; letter-spacing: -1.5px; }
-        .system-card p { margin: 0; color: #b8b8b8; font-size: 11px; line-height: 1.75; }
-        .system-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
-        .system-tags span { padding: 7px 9px; border: 1px solid #4a4a4a; color: #d5d5d5; font-size: 7px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
-        .system-link { display: inline-flex; align-items: center; gap: 9px; margin-top: 20px; color: #fff; font-size: 9px; font-weight: 800; letter-spacing: 1.3px; text-transform: uppercase; }
-
-        /* =========================================================
-           07 — DETAILED SYSTEM BLOCKS
-        ========================================================== */
-        .solution-detail { padding: 125px 0; background: #fff; }
-        .solution-detail:nth-of-type(even) { background: #0e0e0e; color: #fff; }
-        .solution-detail-grid { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(360px,.9fr); gap: 90px; align-items: center; }
-        .solution-detail.reverse .solution-detail-grid { grid-template-columns: minmax(360px,.9fr) minmax(0,1.1fr); }
-        .solution-detail.reverse .detail-visual { order: 2; }
-        .solution-detail.reverse .detail-content { order: 1; }
-        .detail-visual { min-height: 610px; position: relative; overflow: hidden; background: #ddd center/cover no-repeat; }
-        .detail-visual.on { background-image: url("assets/img/energy/Rooftop Solar.png"); }
-        .detail-visual.off { background-image: url("assets/img/energy/Solar Power Systems.png"); }
-        .detail-visual.ground { background-image: url("assets/img/energy/industrial solar.png"); }
-        .detail-badge { position: absolute; left: 25px; top: 25px; padding: 11px 14px; background: #fff; color: #111; font-size: 8px; font-weight: 800; letter-spacing: 1.7px; text-transform: uppercase; }
-        .detail-content .section-title { font-size: clamp(40px,4.7vw,70px); }
-        .solution-detail:nth-of-type(even) .section-title { color: #fff; }
-        .solution-detail:nth-of-type(even) .section-title span { color: #777; }
-        .detail-content > p { max-width: 570px; margin-top: 25px; color: #747474; font-size: 13px; line-height: 1.9; }
-        .solution-detail:nth-of-type(even) .detail-content > p { color: #9d9d9d; }
-        .detail-feature-list { margin-top: 32px; border-top: 1px solid var(--line); }
-        .solution-detail:nth-of-type(even) .detail-feature-list { border-color: #2d2d2d; }
-        .detail-feature { display: grid; grid-template-columns: 42px 1fr; gap: 15px; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--line); }
-        .solution-detail:nth-of-type(even) .detail-feature { border-color: #2d2d2d; }
-        .detail-feature span { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--solar); color: #111; font-size: 8px; font-weight: 800; }
-        .detail-feature strong { font-size: 11px; font-weight: 650; }
-        .best-for { margin-top: 28px; padding: 18px 20px; background: var(--soft); border-left: 3px solid var(--solar); color: #333; font-size: 10px; line-height: 1.7; }
-        .solution-detail:nth-of-type(even) .best-for { background: #181818; color: #bbb; }
-
-        /* =========================================================
-           08 — COMPARISON
-        ========================================================== */
-        .comparison-section { padding: 125px 0; background: var(--soft); }
-        .comparison-head { max-width: 950px; margin-bottom: 50px; }
-        .comparison-table-wrap { overflow-x: auto; background: #fff; border: 1px solid #ddd; }
-        .comparison-table { width: 100%; min-width: 850px; border-collapse: collapse; }
-        .comparison-table th, .comparison-table td { padding: 20px 22px; border-right: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; text-align: left; vertical-align: top; }
-        .comparison-table th { background: #111; color: #fff; font-size: 11px; letter-spacing: 1.1px; text-transform: uppercase; }
-        .comparison-table th:first-child { background: var(--solar); color: #111; }
-        .comparison-table td:first-child { font-weight: 700; color: #111; }
-        .comparison-table td { color: #666; font-size: 11px; line-height: 1.6; }
-
-        /* =========================================================
-           09 — EPC PROCESS
-        ========================================================== */
-        .process-section { padding: 130px 0; background: #111; color: #fff; }
-        .process-section .section-title { color: #fff; }
-        .process-head { display: grid; grid-template-columns: minmax(0,1fr) minmax(300px,430px); gap: 80px; align-items: end; margin-bottom: 60px; }
-        .process-head .section-copy { color: #8f8f8f; }
-        .process-grid { display: grid; grid-template-columns: repeat(4,1fr); border-top: 1px solid #303030; border-left: 1px solid #303030; }
-        .process-card { min-height: 290px; padding: 28px; border-right: 1px solid #303030; border-bottom: 1px solid #303030; transition: .3s ease; }
-        .process-card:hover { background: #fff; color: #111; }
-        .process-card span { color: var(--solar); font-size: 9px; font-weight: 800; letter-spacing: 2px; }
-        .process-card h3 { margin: 75px 0 12px; font-size: 18px; }
-        .process-card p { margin: 0; color: #858585; font-size: 10px; line-height: 1.75; }
-        .process-card:hover p { color: #666; }
-
-        /* =========================================================
-           10 — APPLICATIONS
-        ========================================================== */
-        .applications-section { padding: 125px 0; background: #fff; }
-        .applications-grid { margin-top: 55px; display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
-        .application-card { min-height: 230px; padding: 28px; background: var(--soft); border: 1px solid #e6e6e6; transition: .3s ease; }
-        .application-card:hover { transform: translateY(-5px); border-color: #111; }
-        .application-card i { font-size: 24px; margin-bottom: 45px; }
-        .application-card h3 { font-size: 15px; margin-bottom: 10px; }
-        .application-card p { color: #747474; font-size: 10px; line-height: 1.7; }
-
-        /* =========================================================
-           11 — WHY ALPHA
-        ========================================================== */
-        .why-section { padding: 120px 0; background: #f3f3ef; }
-        .why-grid { display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); gap: 90px; align-items: center; }
-        .why-visual { min-height: 600px; background: url("assets/img/energy/epc-execution.png") center/cover no-repeat; position: relative; }
-        .why-visual::after { content: "ENGINEERED FOR PERFORMANCE"; position: absolute; left: 25px; bottom: 25px; padding: 12px 15px; background: #111; color: #fff; font-size: 8px; font-weight: 800; letter-spacing: 1.7px; }
-        .why-list { margin-top: 35px; }
-        .why-item { display: grid; grid-template-columns: 45px 1fr; gap: 15px; padding: 18px 0; border-bottom: 1px solid #d6d6d6; }
-        .why-item span { color: #aaa; font-size: 10px; font-weight: 800; }
-        .why-item strong { display: block; font-size: 13px; margin-bottom: 5px; }
-        .why-item p { margin: 0; color: #777; font-size: 10px; line-height: 1.7; }
-
-        /* =========================================================
-           12 — FINAL CTA
-        ========================================================== */
-        .solar-cta { padding: 110px 0; background: #fff; }
-        .solar-cta-inner { position: relative; overflow: hidden; min-height: 410px; display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; padding: 60px; color: #fff; background: linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.45)),url("assets/img/solar-cta.jpg") center/cover no-repeat; }
-        .solar-cta-inner h2 { max-width: 820px; margin: 0; font-size: clamp(42px,5.5vw,80px); line-height: .95; letter-spacing: -4px; }
-        .solar-cta-inner h2 span { color: #8b8b8b; font-weight: 300; }
-        .cta-side { padding-left: 35px; border-left: 1px solid #494949; }
-        .cta-side p { color: #aaa; font-size: 12px; line-height: 1.85; }
-
-        /* =========================================================
-           13 — FOOTER
-        ========================================================== */
-        .main-footer { background: #050505; color: #fff; padding: 75px 7% 25px; }
-        .footer-logo img { height: 55px; width: auto; margin-bottom: 22px; }
-        .footer-description { max-width: 370px; color: #888; font-size: 12px; line-height: 1.9; }
-        .footer-heading { color: #fff; font-size: 12px; font-weight: 600; letter-spacing: 1.5px; margin-bottom: 22px; }
-        .footer-links,.footer-contact { list-style: none; padding: 0; margin: 0; }
-        .footer-links li { margin-bottom: 11px; }
-        .footer-links a,.footer-contact li { color: #888; font-size: 12px; line-height: 1.8; }
-        .footer-contact li { display: flex; gap: 12px; margin-bottom: 15px; }
-        .footer-contact i { width: 18px; color: #fff; margin-top: 4px; }
-        .footer-bottom { margin-top: 55px; padding-top: 20px; border-top: 1px solid #222; display: flex; justify-content: space-between; gap: 20px; color: #666; font-size: 10px; }
-        .footer-bottom strong { color: #fff; font-weight: 500; }
-
-        /* =========================================================
-           14 — RESPONSIVE
-        ========================================================== */
-        @media (max-width: 1100px) {
-            .solar-hero-inner { grid-template-columns: 1fr; padding-top: 70px; padding-bottom: 70px; }
-            .hero-enquiry { max-width: 520px; }
-            .systems-grid { grid-template-columns: 1fr 1fr; }
-            .system-card:last-child { grid-column: 1 / -1; }
-            .applications-grid { grid-template-columns: 1fr 1fr; }
-            .process-grid { grid-template-columns: 1fr 1fr; }
-        }
-
-        @media (max-width: 991px) {
-            .main-navbar { padding: 8px 0; }
-            .navbar-logo { height: 55px; }
-            .main-navbar .navbar-toggler { color: #17243b; border-color: rgba(23,36,59,.2); }
-            .navbar-collapse { max-height: calc(100vh - 76px); overflow-y: auto; margin-top: 10px; padding: 15px 10px 22px; border-top: 1px solid #edf0f5; background: #fff; }
-            .mega-menu { position: static !important; transform: none !important; width: 100%; margin: 0 !important; box-shadow: none; border-left: 2px solid #000; border-radius: 0; overflow: visible; }
-            .mega-menu-inner { grid-template-columns: 1fr; }
-            .mega-column { min-height: 0; padding: 18px; border-right: 0; border-bottom: 1px solid #242424; }
-            .bms-dropdown .bms-menu { border-radius: 0; box-shadow: none; }
-            .solar-intro-grid,.systems-head,.solution-detail-grid,.solution-detail.reverse .solution-detail-grid,.process-head,.why-grid,.solar-cta-inner { grid-template-columns: 1fr; }
-            .solution-detail.reverse .detail-visual,.solution-detail.reverse .detail-content { order: initial; }
-            .cta-side { padding-left: 0; padding-top: 30px; border-left: 0; border-top: 1px solid #494949; }
-        }
-
-        @media (max-width: 767px) {
-            .solar-container { width: calc(100% - 40px); }
-            .solar-hero { margin-top: 70px; }
-            .solar-hero h1 { font-size: 54px; letter-spacing: -3px; }
-            .solar-hero-inner { gap: 45px; }
-            .trust-grid,.systems-grid,.process-grid,.applications-grid { grid-template-columns: 1fr; }
-            .system-card:last-child { grid-column: auto; }
-            .trust-item { border-left: 1px solid #2c2c2c; border-bottom: 1px solid #2c2c2c; }
-            .solar-intro,.systems-section,.solution-detail,.comparison-section,.process-section,.applications-section,.why-section,.solar-cta { padding-top: 85px; padding-bottom: 85px; }
-            .section-title { font-size: 44px; letter-spacing: -2px; }
-            .intro-points { grid-template-columns: 1fr; }
-            .detail-visual,.why-visual { min-height: 460px; }
-            .solar-cta-inner { padding: 38px 28px; }
-            .footer-bottom { flex-direction: column; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IoT Solutions | Alpha Numeric Innovations</title>
+<meta name="description" content="Alpha Numeric Innovations delivers end-to-end IoT solutions for connected assets, edge computing, gateways, cloud platforms, dashboards, alerts, APIs, analytics and intelligent operations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{--ink:#101010;--muted:#6e6e6e;--line:#e4e4e4;--soft:#f5f5f2;--iot:#7df0d4;--iot2:#6ca8ff;--dark:#080a0b;--white:#fff;}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:"Inter",sans-serif;background:#fff;color:var(--ink);overflow-x:hidden}a{color:inherit;text-decoration:none}button,input,select,textarea{font-family:inherit}img{display:block;max-width:100%}
+.iot-container{width:min(calc(100% - 80px),1450px);margin:0 auto}.section-kicker{display:inline-flex;align-items:center;gap:12px;color:#777;font-size:10px;font-weight:700;letter-spacing:2.8px;text-transform:uppercase}.section-kicker::before{content:"";width:38px;height:2px;background:var(--iot)}.section-title{margin:19px 0 0;max-width:930px;font-size:clamp(42px,5.2vw,78px);line-height:.98;letter-spacing:-3.5px;font-weight:650}.section-title span{color:#777;font-weight:300}.section-copy{color:#717171;font-size:14px;line-height:1.9}
+/* FIXED NAVBAR — SAME AS SOLAR */
+.main-navbar{padding:8px 0;background:#fff;box-shadow:0 8px 35px rgba(14,29,57,.08);z-index:9999}.navbar-logo{height:58px;width:auto;object-fit:contain}.main-navbar .nav-link{position:relative;color:#1a1a1a!important;font-size:14px;font-weight:600;letter-spacing:.4px;margin:0 5px;padding:12px 11px!important}.main-navbar .nav-link:hover,.main-navbar .nav-link:focus,.main-navbar .nav-link.show{color:#000!important}#logoWhite{display:none!important}#logoDark{display:block!important}.solution-dropdown{position:static!important}.mega-menu{position:absolute!important;width:min(1180px,calc(100vw - 48px));left:50%!important;top:100%!important;transform:translateX(-50%)!important;margin-top:0!important;padding:0;border:1px solid #1f1f1f;border-radius:14px;background:#000;box-shadow:0 24px 70px rgba(0,0,0,.28);overflow:hidden}.mega-menu-inner{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}.mega-column{min-height:270px;padding:30px 30px 32px;border-right:1px solid #242424;background:#000}.mega-column:last-child{border-right:0}.mega-heading{margin-bottom:18px;padding-bottom:14px;border-bottom:2px solid #2a2a2a;color:#fff;font-size:16px;font-weight:600}.mega-column>a{display:block;position:relative;padding:9px 0 9px 16px;color:#bdbdbd;font-size:13.5px;font-weight:600;transition:.25s ease}.mega-column>a::before{content:"";position:absolute;left:0;top:50%;width:6px;height:1px;background:#666;transform:translateY(-50%);transition:.25s ease}.mega-column>a:hover{color:#fff;padding-left:21px}.mega-column>a:hover::before{width:12px;background:#fff}.bms-dropdown .bms-menu{min-width:190px;margin-top:0;padding:10px 0;border:1px solid #1f1f1f;border-radius:10px;background:#000;box-shadow:0 18px 45px rgba(0,0,0,.24)}.bms-dropdown .bms-menu .dropdown-item{padding:10px 18px;color:#bdbdbd;font-size:13.5px;font-weight:600;background:transparent;transition:color .25s ease,padding-left .25s ease}.bms-dropdown .bms-menu .dropdown-item:hover{color:#fff;padding-left:22px}@media(min-width:992px){.solution-dropdown>.mega-menu,.bms-dropdown>.bms-menu{display:block;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(6px);transition:opacity .22s ease,visibility .22s ease,transform .22s ease}.solution-dropdown>.mega-menu{transform:translateX(-50%) translateY(6px)!important}.solution-dropdown:hover>.mega-menu,.solution-dropdown>.mega-menu:hover,.solution-dropdown>.mega-menu.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0)!important}.bms-dropdown:hover>.bms-menu,.bms-dropdown>.bms-menu:hover,.bms-dropdown>.bms-menu.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}.solution-dropdown>.mega-menu::before{content:"";position:absolute;left:0;right:0;top:-18px;height:18px;background:transparent}}
+/* HERO */
+.iot-hero{position:relative;min-height:780px;margin-top:74px;overflow:hidden;background:#070909;color:#fff}.iot-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 76% 45%,rgba(125,240,212,.13),transparent 25%),radial-gradient(circle at 88% 28%,rgba(108,168,255,.13),transparent 22%),linear-gradient(115deg,#070909 0%,#0c1112 58%,#0a0e10 100%)}.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(90deg,black,rgba(0,0,0,.9),transparent)}.iot-hero-inner{position:relative;z-index:2;min-height:780px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(420px,.85fr);gap:80px;align-items:center}.hero-badge{display:inline-flex;align-items:center;gap:10px;margin-bottom:25px;color:#c6d1d0;font-size:10px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase}.hero-badge i{color:var(--iot)}.iot-hero h1{max-width:940px;margin:0;font-size:clamp(62px,7.2vw,110px);line-height:.88;letter-spacing:-6px;font-weight:760;text-transform:uppercase}.iot-hero h1 span{display:block;color:rgba(255,255,255,.42);font-weight:300}.hero-copy{max-width:710px;margin-top:30px;color:#aeb6b5;font-size:14px;line-height:1.9}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}.btn-iot,.btn-ghost{min-height:54px;display:inline-flex;align-items:center;justify-content:center;gap:11px;padding:0 23px;font-size:10px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;transition:.3s ease}.btn-iot{background:var(--iot);border:1px solid var(--iot);color:#06100e}.btn-iot:hover{background:#fff;border-color:#fff;color:#111;transform:translateY(-2px)}.btn-ghost{border:1px solid rgba(255,255,255,.28);color:#fff}.btn-ghost:hover{background:#fff;color:#111;border-color:#fff}
+.hero-network{position:relative;min-height:520px;border:1px solid #283031;background:rgba(8,12,13,.7);overflow:hidden}.hero-network::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(125,240,212,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(125,240,212,.07) 1px,transparent 1px);background-size:48px 48px}.core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:128px;height:128px;border:1px solid var(--iot);display:grid;place-items:center;text-align:center;background:#0d1414;box-shadow:0 0 0 18px rgba(125,240,212,.04),0 0 60px rgba(125,240,212,.11)}.core i{font-size:28px;color:var(--iot);margin-bottom:7px}.core strong{display:block;font-size:11px;letter-spacing:1.6px;text-transform:uppercase}.node{position:absolute;width:112px;min-height:70px;padding:13px;border:1px solid #2e3738;background:#0c1011}.node span{display:block;color:#6f7b7a;font-size:7px;letter-spacing:1.4px;text-transform:uppercase}.node strong{display:block;margin-top:7px;font-size:11px;font-weight:550}.n1{left:7%;top:12%}.n2{right:7%;top:15%}.n3{left:5%;bottom:13%}.n4{right:8%;bottom:12%}.n5{left:50%;top:7%;transform:translateX(-50%)}.network-line{position:absolute;height:1px;background:linear-gradient(90deg,transparent,var(--iot),transparent);transform-origin:left center;opacity:.55}.l1{width:170px;left:23%;top:31%;transform:rotate(21deg)}.l2{width:170px;right:24%;top:31%;transform:rotate(-20deg)}.l3{width:170px;left:24%;bottom:30%;transform:rotate(-20deg)}.l4{width:170px;right:24%;bottom:30%;transform:rotate(20deg)}.pulse{position:absolute;width:9px;height:9px;border-radius:50%;background:var(--iot);box-shadow:0 0 18px var(--iot);animation:pulse 2.4s infinite}.p1{left:29%;top:34%}.p2{right:30%;top:34%;animation-delay:.7s}.p3{left:31%;bottom:31%;animation-delay:1.2s}@keyframes pulse{0%,100%{opacity:.25;transform:scale(.7)}50%{opacity:1;transform:scale(1.3)}}
+/* STRIP */
+.iot-strip{background:#101314;color:#fff}.strip-grid{display:grid;grid-template-columns:repeat(5,1fr)}.strip-item{min-height:128px;padding:26px;border-right:1px solid #2a3031;display:flex;flex-direction:column;justify-content:space-between}.strip-item:first-child{border-left:1px solid #2a3031}.strip-item span{color:#687170;font-size:8px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase}.strip-item strong{font-size:14px;font-weight:550}
+/* INTRO */
+.iot-intro{padding:125px 0;background:#fff}.intro-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,470px);gap:100px;align-items:end}.intro-points{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:10px}.intro-point{padding:16px 18px;background:var(--soft);border-left:3px solid var(--iot);font-size:10px;font-weight:650}
+/* ARCHITECTURE */
+.arch-section{padding:125px 0;background:var(--soft)}.arch-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(330px,440px);gap:80px;align-items:end;margin-bottom:58px}.arch-flow{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid #d7d7d7;border-left:1px solid #d7d7d7}.arch-card{min-height:260px;padding:28px 22px;background:#fff;border-right:1px solid #d7d7d7;border-bottom:1px solid #d7d7d7;display:flex;flex-direction:column;transition:.35s ease}.arch-card:hover{background:#0d1011;color:#fff;transform:translateY(-5px)}.arch-card .num{color:#aaa;font-size:8px;letter-spacing:2px}.arch-card i{margin-top:38px;font-size:24px;color:#111;transition:.35s}.arch-card:hover i{color:var(--iot)}.arch-card h3{margin-top:auto;font-size:17px;font-weight:600}.arch-card p{margin:10px 0 0;color:#777;font-size:10px;line-height:1.7}.arch-card:hover p{color:#a8b0af}
+/* PLATFORM CAPABILITIES */
+.cap-section{padding:125px 0;background:#0b0d0e;color:#fff}.cap-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(330px,440px);gap:80px;align-items:end;margin-bottom:58px}.cap-section .section-title span{color:#616a69}.cap-section .section-copy{color:#8f9998}.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.cap-card{min-height:300px;padding:30px;border:1px solid #252b2c;background:#101415;position:relative;overflow:hidden}.cap-card::before{content:"";position:absolute;left:0;top:0;width:0;height:2px;background:var(--iot);transition:.4s}.cap-card:hover::before{width:100%}.cap-icon{width:48px;height:48px;display:grid;place-items:center;border:1px solid #303839;color:var(--iot);font-size:18px}.cap-card h3{margin:65px 0 12px;font-size:20px}.cap-card p{margin:0;color:#8c9695;font-size:11px;line-height:1.8}.cap-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}.cap-tags span{padding:6px 8px;border:1px solid #293132;color:#a7b0af;font-size:7px;letter-spacing:1px;text-transform:uppercase}
+/* PROTOCOL BAND */
+.protocol-section{padding:100px 0;background:#fff}.protocol-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:90px;align-items:start}.protocol-cloud{display:flex;flex-wrap:wrap;gap:9px}.protocol-cloud span{padding:13px 15px;border:1px solid #dcdcdc;background:#fafafa;font-size:9px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;transition:.3s}.protocol-cloud span:hover{background:#111;color:#fff;border-color:#111}
+/* EDGE CLOUD */
+.edge-section{padding:125px 0;background:#f4f6f5}.edge-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,.85fr);gap:90px;align-items:center}.edge-visual{min-height:520px;background:#0b0e0f;padding:40px;display:grid;grid-template-rows:1fr auto 1fr;gap:22px;color:#fff}.edge-block{border:1px solid #283031;padding:28px;display:flex;justify-content:space-between;align-items:center}.edge-block span{color:#697372;font-size:8px;letter-spacing:2px;text-transform:uppercase}.edge-block strong{font-size:20px}.edge-path{height:74px;display:flex;align-items:center;justify-content:center;gap:12px;color:var(--iot)}.edge-path::before,.edge-path::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,#3e5954)}.edge-path::after{background:linear-gradient(90deg,#3e5954,transparent)}.edge-list{margin-top:28px;border-top:1px solid #d6d6d6}.edge-list div{padding:17px 0;border-bottom:1px solid #d6d6d6;display:grid;grid-template-columns:38px 1fr;gap:15px;align-items:center}.edge-list span{color:#aaa;font-size:8px}.edge-list strong{font-size:12px;font-weight:600}
+/* DATA TO ACTION */
+.action-section{padding:125px 0;background:#fff}.action-flow{margin-top:55px;display:grid;grid-template-columns:repeat(5,1fr)}.action-step{position:relative;min-height:220px;padding:27px;border-top:1px solid #d9d9d9;border-bottom:1px solid #d9d9d9;border-right:1px solid #d9d9d9}.action-step:first-child{border-left:1px solid #d9d9d9}.action-step span{color:#aaa;font-size:8px;letter-spacing:1.8px}.action-step h3{margin:56px 0 11px;font-size:18px}.action-step p{color:#777;font-size:10px;line-height:1.7}
+/* DASHBOARD */
+.dashboard-section{padding:125px 0;background:#0b0d0e;color:#fff}.dashboard-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px;align-items:center}.dash-window{border:1px solid #293031;background:#101415;box-shadow:0 30px 80px rgba(0,0,0,.28)}.dash-top{height:52px;padding:0 18px;border-bottom:1px solid #293031;display:flex;align-items:center;justify-content:space-between}.dash-dots{display:flex;gap:6px}.dash-dots i{width:7px;height:7px;border-radius:50%;background:#394142}.dash-live{font-size:8px;color:var(--iot);letter-spacing:1.5px}.dash-body{padding:20px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.metric{min-height:130px;padding:18px;border:1px solid #293031;background:#0c0f10}.metric span{color:#65706f;font-size:8px;letter-spacing:1.4px;text-transform:uppercase}.metric strong{display:block;margin-top:27px;font-size:28px;font-weight:500}.metric small{color:#808a89;font-size:9px}.metric.wide{grid-column:1/-1;min-height:190px}.bars{height:95px;margin-top:24px;display:flex;align-items:end;gap:8px}.bars i{flex:1;background:linear-gradient(to top,var(--iot),#21413a);min-height:16px}.bars i:nth-child(2){height:48%}.bars i:nth-child(3){height:75%}.bars i:nth-child(4){height:42%}.bars i:nth-child(5){height:88%}.bars i:nth-child(6){height:63%}.bars i:nth-child(7){height:95%}.bars i:nth-child(8){height:72%}
+/* USE CASES */
+.use-section{padding:125px 0;background:var(--soft)}.use-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(330px,440px);gap:80px;align-items:end;margin-bottom:55px}.use-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #d8d8d8;border-left:1px solid #d8d8d8}.use-card{min-height:250px;padding:28px;background:#fff;border-right:1px solid #d8d8d8;border-bottom:1px solid #d8d8d8;transition:.35s}.use-card:hover{background:#111;color:#fff}.use-card span{color:#aaa;font-size:8px;letter-spacing:1.8px}.use-card i{display:block;margin:38px 0 36px;font-size:22px}.use-card:hover i{color:var(--iot)}.use-card h3{font-size:15px;margin-bottom:10px}.use-card p{color:#777;font-size:10px;line-height:1.7}.use-card:hover p{color:#aaa}
+/* DELIVERY */
+.delivery-section{padding:125px 0;background:#fff}.delivery-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:100px}.delivery-list{border-top:1px solid #ddd}.delivery-item{min-height:116px;display:grid;grid-template-columns:60px 1fr auto;gap:24px;align-items:center;border-bottom:1px solid #ddd}.delivery-item span{color:#aaa;font-size:8px;letter-spacing:1.8px}.delivery-item h3{margin:0;font-size:20px;font-weight:550}.delivery-item small{color:#999;font-size:8px;letter-spacing:1.2px;text-transform:uppercase}
+/* DIFFERENTIATION */
+.why-section{padding:125px 0;background:#0a0c0d;color:#fff}.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}.why-visual{min-height:540px;border:1px solid #263031;background:linear-gradient(145deg,#111718,#080a0b);display:grid;place-items:center;position:relative;overflow:hidden}.why-visual::before{content:"";position:absolute;width:430px;height:430px;border:1px solid #243b37;border-radius:50%}.why-visual::after{content:"";position:absolute;width:270px;height:270px;border:1px dashed #31534b;border-radius:50%}.why-core{position:relative;z-index:2;width:130px;height:130px;border-radius:50%;background:var(--iot);color:#07110f;display:grid;place-items:center;text-align:center;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase}.why-list{margin-top:32px;border-top:1px solid #2d3334}.why-list div{padding:18px 0;border-bottom:1px solid #2d3334;display:grid;grid-template-columns:36px 1fr;gap:16px}.why-list span{color:#65706f;font-size:8px}.why-list strong{font-size:12px;font-weight:550}
+/* CTA */
+.iot-cta{padding:120px 0;background:#fff}.iot-cta-inner{padding:55px;background:#101314;color:#fff;display:grid;grid-template-columns:1fr 330px;gap:80px;align-items:end}.iot-cta h2{margin:0;max-width:850px;font-size:clamp(48px,5.8vw,86px);line-height:.94;letter-spacing:-4px}.iot-cta h2 span{display:block;color:#687170;font-weight:300}.cta-side{padding-left:30px;border-left:1px solid #343b3c}.cta-side p{color:#8d9796;font-size:11px;line-height:1.8;margin-bottom:22px}
+@media(max-width:1200px){.arch-flow{grid-template-columns:repeat(3,1fr)}.strip-grid{grid-template-columns:repeat(3,1fr)}.use-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:991px){.main-navbar{background:#fff;padding:8px 0}.navbar-logo{height:55px}#logoWhite{display:none!important}#logoDark{display:block!important}.main-navbar .navbar-toggler{color:#17243b;border-color:rgba(23,36,59,.2)}.main-navbar .nav-link{color:#17243b!important;padding:12px 7px!important;margin:1px 0}.navbar-collapse{max-height:calc(100vh - 76px);overflow-y:auto;margin-top:10px;padding:15px 10px 22px;border-top:1px solid #edf0f5;background:#fff}.mega-menu{position:static!important;transform:none!important;width:100%;margin:0!important;box-shadow:none;border-left:2px solid #000;border-radius:0;overflow:visible}.mega-menu-inner{grid-template-columns:1fr}.mega-column{min-height:0;padding:18px;border-right:0;border-bottom:1px solid #242424}.bms-dropdown .bms-menu{border-radius:0;box-shadow:none}.iot-hero-inner,.intro-grid,.arch-head,.cap-head,.protocol-grid,.edge-grid,.dashboard-grid,.use-head,.delivery-grid,.why-grid,.iot-cta-inner{grid-template-columns:1fr}.hero-network{min-height:430px}.cap-grid{grid-template-columns:repeat(2,1fr)}.action-flow{grid-template-columns:repeat(2,1fr)}.action-step:first-child{border-left:1px solid #d9d9d9}}
+@media(max-width:767px){.iot-container{width:calc(100% - 40px)}.iot-hero{margin-top:70px}.iot-hero-inner{gap:45px}.iot-hero h1{font-size:54px;letter-spacing:-3px}.hero-network{min-height:400px}.node{width:95px;padding:10px}.strip-grid,.cap-grid,.arch-flow,.use-grid,.action-flow{grid-template-columns:1fr}.strip-item{border-left:1px solid #2a3031;border-bottom:1px solid #2a3031}.iot-intro,.arch-section,.cap-section,.protocol-section,.edge-section,.action-section,.dashboard-section,.use-section,.delivery-section,.why-section,.iot-cta{padding-top:85px;padding-bottom:85px}.section-title{font-size:44px;letter-spacing:-2px}.intro-points{grid-template-columns:1fr}.dash-body{grid-template-columns:1fr}.metric.wide{grid-column:auto}.delivery-item{grid-template-columns:42px 1fr}.delivery-item small{grid-column:2}.iot-cta-inner{padding:38px 28px}.cta-side{padding-left:0;padding-top:28px;border-left:0;border-top:1px solid #343b3c}}
+</style>
 </head>
 <body>
-
-    <!-- =========================================================
-         MODULE 01 — NAVBAR
-    ========================================================== -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
+<!-- MODULE 01 — FIXED NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand" href="index.html">
                 <img src="assets/img/w-alpha.png" id="logoWhite" class="navbar-logo" alt="Alpha Numeric Innovations" style="display:none;">
@@ -359,333 +116,1229 @@
             </div>
         </div>
     </nav>
+<!-- MODULE 02 — IOT HERO -->
+<header class="iot-hero" id="page-top"><div class="hero-grid-bg"></div><div class="iot-container iot-hero-inner"><div><div class="hero-badge"><i class="fa-solid fa-circle-nodes"></i> Internet of Things • Connected Intelligence</div><h1>Connect Everything.<span>Understand Everything.</span></h1><p class="hero-copy">Alpha Numeric Innovations designs IoT systems that connect devices, machines, meters and field assets to a secure digital layer — turning live operational data into dashboards, alerts, automation triggers, analytics and actionable decisions.</p><div class="hero-actions"><a href="#iot-architecture" class="btn-iot">Explore IoT Architecture <i class="fa-solid fa-arrow-right"></i></a><a href="contact.html" class="btn-ghost">Discuss an IoT Project</a></div></div><div class="hero-network"><div class="core"><div><i class="fa-solid fa-microchip"></i><strong>IoT Core</strong></div></div><div class="node n1"><span>Field</span><strong>Sensors</strong></div><div class="node n2"><span>Assets</span><strong>Machines</strong></div><div class="node n3"><span>Edge</span><strong>Gateway</strong></div><div class="node n4"><span>Cloud</span><strong>Platform</strong></div><div class="node n5"><span>Users</span><strong>Dashboard</strong></div><i class="network-line l1"></i><i class="network-line l2"></i><i class="network-line l3"></i><i class="network-line l4"></i><i class="pulse p1"></i><i class="pulse p2"></i><i class="pulse p3"></i></div></div></header>
+<!-- MODULE 03 — CORE STRIP -->
+<section class="iot-strip"><div class="iot-container strip-grid"><div class="strip-item"><span>01 / Connect</span><strong>Devices & Assets</strong></div><div class="strip-item"><span>02 / Collect</span><strong>Real-Time Data</strong></div><div class="strip-item"><span>03 / Process</span><strong>Edge & Cloud</strong></div><div class="strip-item"><span>04 / Visualize</span><strong>Dashboards & Alerts</strong></div><div class="strip-item"><span>05 / Act</span><strong>Rules & Integrations</strong></div></div></section>
+<!-- MODULE 04 — INTRO -->
+<section class="iot-intro"><div class="iot-container intro-grid"><div><span class="section-kicker">IoT, not BMS</span><h2 class="section-title">A digital nervous system for <span>connected operations.</span></h2></div><div class="section-copy"><p>Our IoT scope starts at the device and data layer. We connect sensors, controllers, meters, machines and existing equipment, normalize their data, move intelligence to the edge or cloud, and give teams one reliable operational view.</p><p>BMS remains a separate building-management discipline. IoT is the wider connectivity and data architecture that can serve factories, utilities, infrastructure, energy systems, campuses, logistics, agriculture, equipment fleets and connected products.</p><div class="intro-points"><div class="intro-point">New + Legacy Device Connectivity</div><div class="intro-point">Edge / Cloud / Hybrid Deployment</div><div class="intro-point">Open APIs & Enterprise Integration</div><div class="intro-point">Custom Dashboards & Mobile Views</div></div></div></div></section>
+<!-- MODULE 05 — ARCHITECTURE -->
+<section class="arch-section" id="iot-architecture"><div class="iot-container"><div class="arch-head"><div><span class="section-kicker">End-to-End Architecture</span><h2 class="section-title">From physical signal to <span>business action.</span></h2></div><p class="section-copy">A scalable IoT solution is not just a dashboard. It is a coordinated stack where device connectivity, protocol conversion, edge processing, data storage, visualization and application logic work as one system.</p></div><div class="arch-flow"><article class="arch-card"><span class="num">01 / SENSE</span><i class="fa-solid fa-wave-square"></i><h3>Devices & Sensors</h3><p>Temperature, pressure, energy, level, vibration, occupancy, location, environmental and machine data.</p></article><article class="arch-card"><span class="num">02 / CONNECT</span><i class="fa-solid fa-tower-broadcast"></i><h3>Connectivity</h3><p>Wired, wireless and LPWAN communication selected around range, power, latency and environment.</p></article><article class="arch-card"><span class="num">03 / BRIDGE</span><i class="fa-solid fa-diagram-project"></i><h3>IoT Gateway</h3><p>Protocol conversion, legacy integration, buffering and secure northbound communication.</p></article><article class="arch-card"><span class="num">04 / PROCESS</span><i class="fa-solid fa-server"></i><h3>Edge Computing</h3><p>Local filtering, rules, calculations and near-real-time decisions close to the equipment.</p></article><article class="arch-card"><span class="num">05 / PLATFORM</span><i class="fa-solid fa-cloud"></i><h3>IoT Platform</h3><p>Device registry, telemetry, storage, APIs, rules, user management and application services.</p></article><article class="arch-card"><span class="num">06 / ACT</span><i class="fa-solid fa-chart-line"></i><h3>Insights & Action</h3><p>Dashboards, alarms, workflows, analytics, reports, mobile views and enterprise integration.</p></article></div></div></section>
+<!-- MODULE 06 — PLATFORM CAPABILITIES -->
+<section class="cap-section"><div class="iot-container"><div class="cap-head"><div><span class="section-kicker">Platform Capabilities</span><h2 class="section-title">One IoT layer. <span>Multiple operational outcomes.</span></h2></div><p class="section-copy">Built around open connectivity and modular deployment, our IoT architecture can start with one use case and expand across assets, sites and departments without redesigning the entire system.</p></div><div class="cap-grid"><article class="cap-card"><div class="cap-icon"><i class="fa-solid fa-microchip"></i></div><h3>Device & Asset Management</h3><p>Provision, identify, group, monitor and manage connected devices and assets throughout their lifecycle.</p><div class="cap-tags"><span>Registry</span><span>Health</span><span>Remote Config</span></div></article><article class="cap-card"><div class="cap-icon"><i class="fa-solid fa-shuffle"></i></div><h3>Data Collection & Normalization</h3><p>Ingest telemetry from heterogeneous sources and transform it into a consistent, usable operational data model.</p><div class="cap-tags"><span>Telemetry</span><span>Transform</span><span>Context</span></div></article><article class="cap-card"><div class="cap-icon"><i class="fa-solid fa-bell"></i></div><h3>Rules, Events & Alerts</h3><p>Build event-driven logic for thresholds, anomalies, inactivity, workflows, notifications and remote actions.</p><div class="cap-tags"><span>Rules</span><span>Alarms</span><span>Workflow</span></div></article><article class="cap-card"><div class="cap-icon"><i class="fa-solid fa-chart-pie"></i></div><h3>Dashboards & Visualization</h3><p>Create role-based views for operators, management, customers and field teams using live and historical data.</p><div class="cap-tags"><span>KPIs</span><span>Trends</span><span>Mobile</span></div></article><article class="cap-card"><div class="cap-icon"><i class="fa-solid fa-code"></i></div><h3>APIs & Enterprise Integration</h3><p>Connect IoT data with ERP, MES, SCADA, analytics, ticketing, mobile applications and custom enterprise systems.</p><div class="cap-tags"><span>REST</span><span>Webhooks</span><span>ERP / MES</span></div></article><article class="cap-card"><div class="cap-icon"><i class="fa-solid fa-shield-halved"></i></div><h3>Security & Access</h3><p>Design secure device communication, user roles, tenant separation, encryption and controlled data access.</p><div class="cap-tags"><span>RBAC</span><span>TLS</span><span>Audit</span></div></article></div></div></section>
+<!-- MODULE 07 — PROTOCOLS -->
+<section class="protocol-section"><div class="iot-container protocol-grid"><div><span class="section-kicker">Connectivity Layer</span><h2 class="section-title">Open to modern IoT. <span>Ready for legacy assets.</span></h2><p class="section-copy" style="margin-top:25px;max-width:560px">Protocol choice depends on the asset, distance, bandwidth, power availability and deployment environment. Gateways can bridge field and industrial protocols into modern IoT messaging and APIs.</p></div><div class="protocol-cloud"><span>MQTT</span><span>CoAP</span><span>HTTP / HTTPS</span><span>REST APIs</span><span>WebSockets</span><span>Modbus TCP / RTU</span><span>OPC UA</span><span>SNMP</span><span>BLE</span><span>Wi-Fi</span><span>LoRaWAN</span><span>NB-IoT</span><span>4G / 5G</span><span>Zigbee</span><span>RS-485</span><span>Custom TCP / UDP</span></div></div></section>
+<!-- MODULE 08 — EDGE + CLOUD -->
+<section class="edge-section"><div class="iot-container edge-grid"><div class="edge-visual"><div class="edge-block"><div><span>Field Layer</span><strong>Machines • Sensors • Meters</strong></div><i class="fa-solid fa-industry"></i></div><div class="edge-path"><i class="fa-solid fa-arrow-down-up-across-line"></i> Secure Data Path</div><div class="edge-block"><div><span>Digital Layer</span><strong>Edge • Cloud • Enterprise</strong></div><i class="fa-solid fa-cloud"></i></div></div><div><span class="section-kicker">Edge + Cloud + Hybrid</span><h2 class="section-title">Process locally. <span>Scale centrally.</span></h2><p class="section-copy" style="margin-top:25px">Critical applications may need fast decisions at the edge, while enterprise visibility benefits from centralized storage and analytics. We design the split based on latency, connectivity, privacy, resilience and scale.</p><div class="edge-list"><div><span>01</span><strong>Local buffering during network interruption</strong></div><div><span>02</span><strong>Edge calculations and rule execution</strong></div><div><span>03</span><strong>Selective cloud synchronization</strong></div><div><span>04</span><strong>Centralized multi-site visibility</strong></div><div><span>05</span><strong>On-premise, cloud or hybrid deployment</strong></div></div></div></div></section>
+<!-- MODULE 09 — DATA TO ACTION -->
+<section class="action-section"><div class="iot-container"><span class="section-kicker">Operational Intelligence</span><h2 class="section-title">Data is useful only when it <span>changes what happens next.</span></h2><div class="action-flow"><article class="action-step"><span>01 / CAPTURE</span><h3>Collect</h3><p>Bring reliable telemetry and event data from field devices and existing systems.</p></article><article class="action-step"><span>02 / CONTEXT</span><h3>Normalize</h3><p>Clean, transform and contextualize data into consistent operational models.</p></article><article class="action-step"><span>03 / OBSERVE</span><h3>Monitor</h3><p>Track live KPIs, trends, state changes and equipment health.</p></article><article class="action-step"><span>04 / UNDERSTAND</span><h3>Analyze</h3><p>Detect anomalies, patterns, inefficiencies and maintenance indicators.</p></article><article class="action-step"><span>05 / RESPOND</span><h3>Act</h3><p>Trigger alerts, workflows, integrations or approved remote-control actions.</p></article></div></div></section>
+<!-- MODULE 10 — DASHBOARDS -->
+<section class="dashboard-section"><div class="iot-container dashboard-grid"><div><span class="section-kicker">Real-Time Visibility</span><h2 class="section-title">One view for <span>every connected asset.</span></h2><p class="section-copy" style="margin-top:25px">Dashboards can be designed for plant operators, facility teams, management, customers or service engineers — with the right level of live data, history, alarms, maps, KPIs and controls for each role.</p><div class="intro-points" style="margin-top:30px"><div class="intro-point" style="background:#111719;border-color:var(--iot);color:#d8dfde">Live + Historical Trends</div><div class="intro-point" style="background:#111719;border-color:var(--iot);color:#d8dfde">Role-Based Access</div><div class="intro-point" style="background:#111719;border-color:var(--iot);color:#d8dfde">Alerts + Event History</div><div class="intro-point" style="background:#111719;border-color:var(--iot);color:#d8dfde">Web + Mobile Views</div></div></div><div class="dash-window"><div class="dash-top"><div class="dash-dots"><i></i><i></i><i></i></div><span class="dash-live">● LIVE / IOT OPERATIONS</span></div><div class="dash-body"><div class="metric"><span>Connected Assets</span><strong>248</strong><small>Across 4 sites</small></div><div class="metric"><span>Active Alerts</span><strong>07</strong><small>2 high priority</small></div><div class="metric wide"><span>Telemetry Activity</span><div class="bars"><i style="height:35%"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div></div></div></section>
+<!-- MODULE 11 — USE CASES -->
+<section class="use-section"><div class="iot-container"><div class="use-head"><div><span class="section-kicker">IoT Use Cases</span><h2 class="section-title">One connectivity foundation. <span>Many industries.</span></h2></div><p class="section-copy">The same core architecture can support different outcomes by changing sensors, workflows, dashboards, analytics and integrations around the operational requirement.</p></div><div class="use-grid"><article class="use-card"><span>01 / INDUSTRY</span><i class="fa-solid fa-gears"></i><h3>Machine & Equipment Monitoring</h3><p>Condition, utilization, alarms, production state and maintenance indicators.</p></article><article class="use-card"><span>02 / ENERGY</span><i class="fa-solid fa-bolt"></i><h3>Smart Energy & Metering</h3><p>Electricity, water, gas and renewable generation telemetry with alerts and analytics.</p></article><article class="use-card"><span>03 / INFRASTRUCTURE</span><i class="fa-solid fa-road"></i><h3>Remote Infrastructure</h3><p>Distributed pumps, tanks, telecom assets, street infrastructure and utility equipment.</p></article><article class="use-card"><span>04 / ENVIRONMENT</span><i class="fa-solid fa-seedling"></i><h3>Environmental Monitoring</h3><p>Air quality, temperature, humidity, soil, water quality and environmental conditions.</p></article><article class="use-card"><span>05 / LOGISTICS</span><i class="fa-solid fa-truck"></i><h3>Fleet & Asset Tracking</h3><p>Location, movement, state, route, geofencing and mobile asset visibility.</p></article><article class="use-card"><span>06 / AGRI</span><i class="fa-solid fa-droplet"></i><h3>Smart Agriculture</h3><p>Soil, irrigation, pumps, weather and resource-use monitoring.</p></article><article class="use-card"><span>07 / PRODUCTS</span><i class="fa-solid fa-cube"></i><h3>Connected Products</h3><p>Turn equipment into remotely visible, serviceable and data-enabled products.</p></article><article class="use-card"><span>08 / ENTERPRISE</span><i class="fa-solid fa-building"></i><h3>Multi-Site Operations</h3><p>Standardize monitoring across branches, campuses, plants and distributed facilities.</p></article></div></div></section>
+<!-- MODULE 12 — DELIVERY -->
+<section class="delivery-section"><div class="iot-container delivery-grid"><div><span class="section-kicker">Project Delivery</span><h2 class="section-title">From use case to <span>operational IoT.</span></h2><p class="section-copy" style="margin-top:25px">We approach IoT as an engineering project: define the outcome first, then select the sensing, connectivity, edge, platform and integration layers required to achieve it reliably.</p></div><div class="delivery-list"><div class="delivery-item"><span>01</span><h3>Use-Case & Site Assessment</h3><small>Need / Assets / Constraints</small></div><div class="delivery-item"><span>02</span><h3>Architecture & Protocol Design</h3><small>Device / Network / Data</small></div><div class="delivery-item"><span>03</span><h3>Gateway & Device Integration</h3><small>Field Connectivity</small></div><div class="delivery-item"><span>04</span><h3>Platform, Rules & Dashboards</h3><small>Digital Layer</small></div><div class="delivery-item"><span>05</span><h3>API / Enterprise Integration</h3><small>ERP / MES / Apps</small></div><div class="delivery-item"><span>06</span><h3>Testing, Deployment & Scale-Up</h3><small>Commission / Operate / Expand</small></div></div></div></section>
+<!-- MODULE 13 — WHY ALPHA -->
+<section class="why-section"><div class="iot-container why-grid"><div class="why-visual"><div class="why-core">Alpha Numeric<br>IoT Layer</div></div><div><span class="section-kicker">Why Alpha Numeric</span><h2 class="section-title">Engineering first. <span>Platform flexible.</span></h2><p class="section-copy" style="margin-top:25px">We do not force every project into one fixed product template. The architecture can be adapted around the devices, protocols, deployment model, security requirements and business systems already present at the site.</p><div class="why-list"><div><span>01</span><strong>End-to-end device-to-dashboard engineering</strong></div><div><span>02</span><strong>Retrofit existing and legacy equipment through gateways</strong></div><div><span>03</span><strong>Edge, cloud and on-premise deployment options</strong></div><div><span>04</span><strong>Open API and third-party system integration</strong></div><div><span>05</span><strong>Custom UI/UX instead of one-size-fits-all dashboards</strong></div><div><span>06</span><strong>Designed to scale from pilot to multi-site operations</strong></div></div></div></div></section>
+<!-- MODULE 14 — CTA -->
+<section class="iot-cta"><div class="iot-container"><div class="iot-cta-inner"><h2>Connect your assets.<span>Turn data into action.</span></h2><div class="cta-side"><p>Tell us what you want to monitor, connect, automate or analyze. We can define the right IoT architecture around your existing infrastructure.</p><a href="contact.html" class="btn-iot" style="width:100%">Discuss IoT Project <i class="fa-solid fa-arrow-right"></i></a></div></div></div></section>
+<!-- MODULE 15 — FIXED FOOTER — SAME AS SOLAR -->
+<footer class="corp-footer" aria-label="Website footer">
 
-    <!-- =========================================================
-         MODULE 02 — HERO
-    ========================================================== -->
-    <header class="solar-hero">
-        <div class="solar-container solar-hero-inner">
-            <div>
-                <div class="hero-badge"><i class="fa-solid fa-sun"></i> Solar EPC • Rooftop • Ground Mounted</div>
-                <h1>Power Your Future.<span>With The Sun.</span></h1>
-                <p class="hero-copy">Alpha Numeric Innovations engineers solar systems around your actual load, roof or land, grid availability and operational needs — from efficient On-Grid rooftops to battery-backed Off-Grid systems and large Ground-Mounted plants.</p>
-                <div class="hero-actions">
-                    <a href="#solar-systems" class="btn-solar">Explore Solar Systems <i class="fa-solid fa-arrow-right"></i></a>
-                    <a href="contact.html" class="btn-outline-light-custom">Book a Site Review</a>
+    <div class="corp-footer-container">
+
+        <!-- =====================================================
+             PRIMARY CTA
+        ====================================================== -->
+        <section class="corp-footer-cta" aria-labelledby="corp-footer-title">
+
+            <div class="corp-footer-cta-copy">
+
+                <p class="corp-footer-kicker">
+                    <span>01</span>
+                    <i></i>
+                    Start a project
+                </p>
+
+                <h2 id="corp-footer-title">
+                    Let’s engineer
+                    <span>what comes next.</span>
+                </h2>
+
+            </div>
+
+            <div class="corp-footer-cta-action">
+
+                <p>
+                    Intelligent engineering for power, energy,
+                    automation and future-ready systems.
+                </p>
+
+                <a href="contact.html" class="corp-footer-button">
+                    <span>Start a conversation</span>
+                    <i aria-hidden="true">↗</i>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             BRAND + NAVIGATION
+        ====================================================== -->
+        <div class="corp-footer-main">
+
+            <!-- BRAND -->
+            <section class="corp-footer-brand" aria-label="Alpha Numeric">
+
+                <a href="index.html" class="corp-footer-logo" aria-label="Alpha Numeric home">
+                    <img src="assets/img/b-alpha.png" alt="Alpha Numeric">
+                </a>
+
+                <p>
+                    Technology-driven engineering solutions
+                    designed for dependable performance,
+                    meaningful progress and long-term value.
+                </p>
+
+                <div class="corp-footer-status">
+                    <span></span>
+                    Engineering tomorrow
                 </div>
-            </div>
 
-            <div class="hero-enquiry">
-                <small>Engineer-Led Solar Review</small>
-                <h3>Tell us about your site.</h3>
-                <div class="hero-field"><input type="text" placeholder="Name"></div>
-                <div class="hero-field"><input type="tel" placeholder="Phone number"></div>
-                <div class="hero-field">
-                    <select>
-                        <option selected>Choose solar system</option>
-                        <option>On-Grid Solar</option>
-                        <option>Off-Grid Solar</option>
-                        <option>Ground-Mounted Solar</option>
-                    </select>
-                </div>
-                <div class="hero-field"><input type="text" placeholder="Monthly bill / connected load"></div>
-                <button class="hero-submit" type="button">Request Consultation</button>
-                <p>Site feasibility, system direction and next-step recommendation can be discussed after reviewing your requirement.</p>
-            </div>
-        </div>
-    </header>
+            </section>
 
-    <!-- =========================================================
-         MODULE 03 — TRUST STRIP
-    ========================================================== -->
-    <section class="trust-strip">
-        <div class="solar-container trust-grid">
-            <div class="trust-item"><span>01 / Engineering</span><strong>Site-Specific Design</strong></div>
-            <div class="trust-item"><span>02 / Execution</span><strong>Complete EPC Delivery</strong></div>
-            <div class="trust-item"><span>03 / Intelligence</span><strong>Monitoring & Performance</strong></div>
-            <div class="trust-item"><span>04 / Support</span><strong>Commissioning & O&amp;M</strong></div>
-        </div>
-    </section>
 
-    <!-- =========================================================
-         MODULE 04 — INTRO
-    ========================================================== -->
-    <section class="solar-intro">
-        <div class="solar-container solar-intro-grid">
-            <div>
-                <span class="section-kicker">Solar Energy Solutions</span>
-                <h2 class="section-title">The right solar system starts with <span>the right engineering choice.</span></h2>
-            </div>
-            <div class="solar-intro-copy section-copy">
-                <p>Not every site needs the same solar configuration. Grid quality, daytime consumption, backup requirement, available roof or land, tariff structure and future expansion all influence the right solution.</p>
-                <p>We simplify that decision into three core solar pathways and engineer each system for safe, practical and long-term operation.</p>
-                <div class="intro-points">
-                    <div class="intro-point">On-Grid — Savings First</div>
-                    <div class="intro-point">Off-Grid — Energy Independence</div>
-                    <div class="intro-point">Ground-Mounted — Scale & Output</div>
-                    <div class="intro-point">EPC — Design to Commissioning</div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <!-- NAVIGATION -->
+            <nav class="corp-footer-nav" aria-label="Footer navigation">
 
-    <!-- =========================================================
-         MODULE 05 — THREE SOLAR SYSTEMS
-    ========================================================== -->
-    <section class="systems-section" id="solar-systems">
-        <div class="solar-container">
-            <div class="systems-head">
-                <div>
-                    <span class="section-kicker">Choose Your Solar Path</span>
-                    <h2 class="section-title">Three systems. <span>Three different energy goals.</span></h2>
-                </div>
-                <p class="section-copy">Compare the purpose of each system first. Then we engineer capacity, components, layout and controls around your site.</p>
-            </div>
+                <!-- COMPANY -->
+                <div class="corp-footer-column">
 
-            <div class="systems-grid">
-                <article class="system-card on-grid">
-                    <div class="system-card-image"></div>
-                    <div class="system-card-content">
-                        <span class="system-number">01 / ON-GRID</span>
-                        <h3>On-Grid Solar</h3>
-                        <p>Grid-connected solar designed primarily to reduce daytime electricity consumption and enable energy exchange with the utility network where applicable.</p>
-                        <div class="system-tags"><span>Rooftop</span><span>Grid-Tied</span><span>Net Metering Ready</span></div>
-                        <a class="system-link" href="#on-grid">Explore On-Grid <i class="fa-solid fa-arrow-right"></i></a>
+                    <div class="corp-footer-column-heading">
+                        <span>01</span>
+                        <h3>Company</h3>
                     </div>
-                </article>
 
-                <article class="system-card off-grid">
-                    <div class="system-card-image"></div>
-                    <div class="system-card-content">
-                        <span class="system-number">02 / OFF-GRID</span>
-                        <h3>Off-Grid Solar</h3>
-                        <p>Battery-backed solar for sites where power availability, backup continuity or independence from the utility grid is more important than grid export.</p>
-                        <div class="system-tags"><span>Battery Storage</span><span>Backup</span><span>Independent</span></div>
-                        <a class="system-link" href="#off-grid">Explore Off-Grid <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </article>
-
-                <article class="system-card ground">
-                    <div class="system-card-image"></div>
-                    <div class="system-card-content">
-                        <span class="system-number">03 / GROUND-MOUNTED</span>
-                        <h3>Ground-Mounted Solar</h3>
-                        <p>High-capacity solar plants engineered on open land for industries, campuses, captive power requirements and utility-scale or MW-class projects.</p>
-                        <div class="system-tags"><span>C&amp;I</span><span>MW Scale</span><span>Open Land</span></div>
-                        <a class="system-link" href="#ground-mounted">Explore Ground-Mounted <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================================================
-         MODULE 06 — ON-GRID DETAIL
-    ========================================================== -->
-    <section class="solution-detail" id="on-grid">
-        <div class="solar-container solution-detail-grid">
-            <div class="detail-visual on"><span class="detail-badge">01 / ON-GRID SOLAR</span></div>
-            <div class="detail-content">
-                <span class="section-kicker">Grid Connected Solar</span>
-                <h2 class="section-title">Use solar first. <span>Use the grid when needed.</span></h2>
-                <p>On-Grid solar works together with the utility grid. Solar generation serves the connected loads during the day, while grid power supports demand whenever solar generation is insufficient. Where regulations permit, surplus energy can be exported through the applicable metering arrangement.</p>
-                <div class="detail-feature-list">
-                    <div class="detail-feature"><span>01</span><strong>Designed for electricity-bill reduction and daytime load offset</strong></div>
-                    <div class="detail-feature"><span>02</span><strong>No mandatory battery bank, keeping the architecture simpler</strong></div>
-                    <div class="detail-feature"><span>03</span><strong>Suitable for homes, offices, institutions and industrial rooftops</strong></div>
-                    <div class="detail-feature"><span>04</span><strong>Can include remote generation and inverter monitoring</strong></div>
-                </div>
-                <div class="best-for"><strong>Best for:</strong> Sites with reliable grid availability and a strong objective to reduce electricity cost through daytime solar generation.</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================================================
-         MODULE 07 — OFF-GRID DETAIL
-    ========================================================== -->
-    <section class="solution-detail reverse" id="off-grid">
-        <div class="solar-container solution-detail-grid">
-            <div class="detail-visual off"><span class="detail-badge">02 / OFF-GRID SOLAR</span></div>
-            <div class="detail-content">
-                <span class="section-kicker">Independent Solar Power</span>
-                <h2 class="section-title">Generate. Store. <span>Use power when the grid cannot.</span></h2>
-                <p>Off-Grid solar combines solar generation with battery storage so the site can operate independently of the utility network. System sizing must consider load profile, autonomy hours, battery capacity and seasonal solar availability.</p>
-                <div class="detail-feature-list">
-                    <div class="detail-feature"><span>01</span><strong>Battery storage for night-time use and backup continuity</strong></div>
-                    <div class="detail-feature"><span>02</span><strong>Useful for remote locations and unreliable-grid environments</strong></div>
-                    <div class="detail-feature"><span>03</span><strong>Engineered around essential loads and required backup duration</strong></div>
-                    <div class="detail-feature"><span>04</span><strong>Can support hybrid power architectures with additional sources</strong></div>
-                </div>
-                <div class="best-for"><strong>Best for:</strong> Remote sites, farms, facilities with frequent outages, critical loads and locations where dependable backup is the primary requirement.</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================================================
-         MODULE 08 — GROUND-MOUNTED DETAIL
-    ========================================================== -->
-    <section class="solution-detail" id="ground-mounted">
-        <div class="solar-container solution-detail-grid">
-            <div class="detail-visual ground"><span class="detail-badge">03 / GROUND-MOUNTED SOLAR</span></div>
-            <div class="detail-content">
-                <span class="section-kicker">Large-Scale Solar Plants</span>
-                <h2 class="section-title">When the project needs <span>space, scale and serious output.</span></h2>
-                <p>Ground-Mounted solar uses available land to build higher-capacity PV plants with engineered row spacing, tilt, access roads, evacuation planning, protection, monitoring and long-term maintainability in mind.</p>
-                <div class="detail-feature-list">
-                    <div class="detail-feature"><span>01</span><strong>Suitable for industrial captive use, campuses and MW-scale plants</strong></div>
-                    <div class="detail-feature"><span>02</span><strong>Layout optimized for land geometry, shading and energy yield</strong></div>
-                    <div class="detail-feature"><span>03</span><strong>Electrical evacuation, protection and SCADA options as required</strong></div>
-                    <div class="detail-feature"><span>04</span><strong>Designed for service access, cleaning and long-term O&amp;M</strong></div>
-                </div>
-                <div class="best-for"><strong>Best for:</strong> Industries, large institutions, developers and infrastructure projects with suitable land and higher energy demand.</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================================================
-         MODULE 09 — COMPARISON
-    ========================================================== -->
-    <section class="comparison-section">
-        <div class="solar-container">
-            <div class="comparison-head">
-                <span class="section-kicker">Quick Comparison</span>
-                <h2 class="section-title">Which solar system <span>fits your site?</span></h2>
-            </div>
-
-            <div class="comparison-table-wrap">
-                <table class="comparison-table">
-                    <thead>
-                        <tr><th>Decision Factor</th><th>On-Grid</th><th>Off-Grid</th><th>Ground-Mounted</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Main Objective</td><td>Reduce grid electricity consumption and cost</td><td>Backup and independent power availability</td><td>Higher-capacity solar generation at scale</td></tr>
-                        <tr><td>Grid Connection</td><td>Required</td><td>Not required for core operation</td><td>Depends on captive / grid-connected project model</td></tr>
-                        <tr><td>Battery Storage</td><td>Usually not required</td><td>Core part of the system</td><td>Optional depending on project requirement</td></tr>
-                        <tr><td>Typical Site</td><td>Homes, offices, commercial & industrial rooftops</td><td>Remote / outage-prone sites</td><td>Open land, industries, campuses, MW plants</td></tr>
-                        <tr><td>Engineering Focus</td><td>Roof, load profile, inverter, metering</td><td>Load, autonomy, battery sizing, controls</td><td>Land, layout, yield, evacuation, protection</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================================================
-         MODULE 10 — EPC PROCESS
-    ========================================================== -->
-    <section class="process-section">
-        <div class="solar-container">
-            <div class="process-head">
-                <div>
-                    <span class="section-kicker">End-to-End Solar EPC</span>
-                    <h2 class="section-title">From site review to <span>live solar.</span></h2>
-                </div>
-                <p class="section-copy">A solar plant performs well when engineering, procurement, execution and commissioning are treated as one connected process.</p>
-            </div>
-
-            <div class="process-grid">
-                <article class="process-card"><span>01 / REVIEW</span><h3>Feasibility & Site Survey</h3><p>We review electricity consumption, roof or land, shadows, access, structure and available electrical infrastructure.</p></article>
-                <article class="process-card"><span>02 / DESIGN</span><h3>Engineering & System Sizing</h3><p>Capacity, layout, inverter architecture, structures, protection and expected generation are engineered around the site.</p></article>
-                <article class="process-card"><span>03 / BUILD</span><h3>Procurement & EPC Execution</h3><p>Equipment, mounting, electrical works, safety systems and integration are executed through a coordinated EPC workflow.</p></article>
-                <article class="process-card"><span>04 / OPERATE</span><h3>Testing, Commissioning & Monitoring</h3><p>The system is tested, energized, documented and handed over with monitoring and service support options.</p></article>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================================================
-         MODULE 11 — APPLICATIONS
-    ========================================================== -->
-    <section class="applications-section">
-        <div class="solar-container">
-            <span class="section-kicker">Where We Apply Solar</span>
-            <h2 class="section-title">Solar for every <span>serious energy user.</span></h2>
-            <div class="applications-grid">
-                <article class="application-card"><i class="fa-solid fa-house"></i><h3>Residential</h3><p>Rooftop solar for independent homes, villas and residential properties.</p></article>
-                <article class="application-card"><i class="fa-solid fa-building"></i><h3>Commercial</h3><p>Solar systems for offices, retail, hotels, hospitals and institutional buildings.</p></article>
-                <article class="application-card"><i class="fa-solid fa-industry"></i><h3>Industrial</h3><p>High-consumption rooftop and ground-mounted plants for factories and warehouses.</p></article>
-                <article class="application-card"><i class="fa-solid fa-solar-panel"></i><h3>Large Solar Plants</h3><p>Engineered ground-mounted installations for captive, developer and infrastructure applications.</p></article>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================================================
-         MODULE 12 — WHY ALPHA NUMERIC
-    ========================================================== -->
-    <section class="why-section">
-        <div class="solar-container why-grid">
-            <div class="why-visual"></div>
-            <div>
-                <span class="section-kicker">Why Alpha Numeric</span>
-                <h2 class="section-title">More than panels. <span>A complete engineered energy system.</span></h2>
-                <div class="why-list">
-                    <div class="why-item"><span>01</span><div><strong>Engineering-Led Design</strong><p>System decisions are based on load, site conditions, electrical architecture and expected operation.</p></div></div>
-                    <div class="why-item"><span>02</span><div><strong>Complete EPC Capability</strong><p>Design, supply, installation, testing and commissioning are coordinated as one delivery scope.</p></div></div>
-                    <div class="why-item"><span>03</span><div><strong>Electrical & Automation Integration</strong><p>Solar can be aligned with existing power systems, monitoring, controls and broader energy infrastructure.</p></div></div>
-                    <div class="why-item"><span>04</span><div><strong>Lifecycle Thinking</strong><p>Access, safety, monitoring, maintainability and long-term performance are considered during engineering.</p></div></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================================================
-         MODULE 13 — CTA
-    ========================================================== -->
-    <section class="solar-cta">
-        <div class="solar-container solar-cta-inner">
-            <div>
-                <span class="section-kicker">Start Your Solar Project</span>
-                <h2>Tell us your roof, land or load. <span>We’ll define the right solar path.</span></h2>
-            </div>
-            <div class="cta-side">
-                <p>Whether your priority is bill savings, power backup or a large ground-mounted plant, start with a site-specific engineering review.</p>
-                <a href="contact.html" class="btn-solar">Discuss Your Solar Project <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================================================
-         MODULE 14 — FOOTER
-    ========================================================== -->
-    <footer class="main-footer">
-        <div class="container-fluid">
-            <div class="row g-5">
-                <div class="col-lg-5">
-                    <a href="index.html" class="footer-logo"><img src="assets/img/w-alpha.png" alt="Alpha Numeric Innovations"></a>
-                    <p class="footer-description">Engineering solutions across Power, Renewable Energy, Automation, BMS, IoT and R&amp;D — designed for reliable execution and long-term performance.</p>
-                </div>
-                <div class="col-6 col-lg-3">
-                    <div class="footer-heading">SOLAR SOLUTIONS</div>
-                    <ul class="footer-links">
-                        <li><a href="#on-grid">On-Grid Solar</a></li>
-                        <li><a href="#off-grid">Off-Grid Solar</a></li>
-                        <li><a href="#ground-mounted">Ground-Mounted Solar</a></li>
-                        <li><a href="contact.html">Solar EPC Enquiry</a></li>
+                    <ul>
+                        <li><a href="index.html"><span>Home</span><i>↗</i></a></li>
+                        <li><a href="about.html"><span>About</span><i>↗</i></a></li>
+                        <li><a href="contact.html"><span>Contact</span><i>↗</i></a></li>
                     </ul>
-                </div>
-                <div class="col-6 col-lg-4">
-                    <div class="footer-heading">CONTACT</div>
-                    <ul class="footer-contact">
-                        <li><i class="fa-solid fa-location-dot"></i><span>Hyderabad, Telangana, India</span></li>
-                        <li><i class="fa-solid fa-envelope"></i><span>alphanumericinnovations@gmail.com</span></li>
-                        <li><i class="fa-solid fa-phone"></i><span>+91 80083 78889</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom"><span>© <span id="year"></span> <strong>Alpha Numeric Innovations</strong>. All rights reserved.</span><span>Solar • Power • Automation • R&amp;D</span></div>
-        </div>
-    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const nav = document.getElementById("mainNav");
-            const white = document.getElementById("logoWhite");
-            const dark = document.getElementById("logoDark");
-            if (nav) nav.classList.add("scrolled", "navbar-shrink");
-            if (white) white.style.display = "none";
-            if (dark) dark.style.display = "block";
-            const year = document.getElementById("year");
-            if (year) year.textContent = new Date().getFullYear();
-        });
-    </script>
-</body>
-</html>
+                </div>
+
+
+                <!-- ENERGY -->
+                <div class="corp-footer-column">
+
+                    <div class="corp-footer-column-heading">
+                        <span>02</span>
+                        <h3>Energy</h3>
+                    </div>
+
+                    <ul>
+                        <li><a href="solar-energy.html"><span>Solar Energy</span><i>↗</i></a></li>
+                        <li><a href="wind-energy.html"><span>Wind Energy</span><i>↗</i></a></li>
+                        <li><a href="biomass-energy.html"><span>Biomass Energy</span><i>↗</i></a></li>
+                        <li><a href="hydel-energy.html"><span>Hydel Energy</span><i>↗</i></a></li>
+                    </ul>
+
+                </div>
+
+
+                <!-- POWER -->
+                <div class="corp-footer-column">
+
+                    <div class="corp-footer-column-heading">
+                        <span>03</span>
+                        <h3>Power</h3>
+                    </div>
+
+                    <ul>
+                        <li><a href="transmission.html"><span>Transmission</span><i>↗</i></a></li>
+                        <li><a href="distribution.html"><span>Distribution</span><i>↗</i></a></li>
+                        <li><a href="control-panels.html"><span>Control Panels</span><i>↗</i></a></li>
+                        <li><a href="panel-boards.html"><span>Panel Boards</span><i>↗</i></a></li>
+                    </ul>
+
+                </div>
+
+
+                <!-- AUTOMATION -->
+                <div class="corp-footer-column">
+
+                    <div class="corp-footer-column-heading">
+                        <span>04</span>
+                        <h3>Automation</h3>
+                    </div>
+
+                    <ul>
+                        <li><a href="home-automation.html"><span>Home Automation</span><i>↗</i></a></li>
+                        <li><a href="commercial-automation.html"><span>Commercial</span><i>↗</i></a></li>
+                        <li><a href="industrial-automation.html"><span>Industrial</span><i>↗</i></a></li>
+                        <li><a href="hospital-automation.html"><span>Hospital</span><i>↗</i></a></li>
+                        <li><a href="hotel-automation.html"><span>Hotel</span><i>↗</i></a></li>
+                    </ul>
+
+                </div>
+
+
+                <!-- R&D / PRODUCTS -->
+                <div class="corp-footer-column">
+
+                    <div class="corp-footer-column-heading">
+                        <span>05</span>
+                        <h3>R&amp;D / Products</h3>
+                    </div>
+
+                    <ul>
+                        <li><a href="smart-pole-r&d.html"><span>Smart Pole</span><i>↗</i></a></li>
+                        <li><a href="smart-bollard-r&d.html"><span>Smart Bollard</span><i>↗</i></a></li>
+                        <li><a href="power.html"><span>Power Products</span><i>↗</i></a></li>
+                    </ul>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+
+        <!-- =====================================================
+             CONTACT BAND
+        ====================================================== -->
+        <section class="corp-footer-contact" aria-label="Contact information">
+
+            <div class="corp-footer-contact-heading">
+                <span>Contact</span>
+                <h3>Let’s connect.</h3>
+            </div>
+
+            <a href="tel:+919000000000" class="corp-footer-contact-item">
+                <span>01 / Phone</span>
+                <strong>+91 90000 00000</strong>
+                <i aria-hidden="true">↗</i>
+            </a>
+
+            <a href="mailto:info@alphanumeric.com" class="corp-footer-contact-item">
+                <span>02 / Email</span>
+                <strong>info@alphanumeric.com</strong>
+                <i aria-hidden="true">↗</i>
+            </a>
+
+            <div class="corp-footer-contact-item">
+                <span>03 / Location</span>
+                <strong>Madhapur, Hyderabad</strong>
+                <i aria-hidden="true">—</i>
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             BOTTOM BAR
+        ====================================================== -->
+        <div class="corp-footer-bottom">
+
+            <p>
+                © <span id="corpFooterYear"></span> Alpha Numeric.
+                All rights reserved.
+            </p>
+
+            <div class="corp-footer-disciplines" aria-label="Core disciplines">
+                <span>Power</span>
+                <i></i>
+                <span>Energy</span>
+                <i></i>
+                <span>Automation</span>
+                <i></i>
+                <span>R&amp;D</span>
+            </div>
+
+            <div class="corp-footer-bottom-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+
+                <a href="#page-top" class="corp-footer-top-link">
+                    Back to top
+                    <span aria-hidden="true">↑</span>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- CSS -->
+<style>
+
+/* =========================================================
+   CORPORATE WHITE FOOTER — DESIGN SYSTEM
+========================================================== */
+
+.corp-footer {
+    --footer-bg: #f5f5f1;
+    --footer-white: #ffffff;
+    --footer-ink: #102729;
+    --footer-text: #4f6062;
+    --footer-muted: #7a8889;
+    --footer-line: rgba(16, 39, 41, 0.16);
+    --footer-line-light: rgba(16, 39, 41, 0.09);
+    --footer-accent: #ee5a29;
+
+    position: relative;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    color: var(--footer-ink);
+    background: var(--footer-bg);
+
+    font-family:
+        "Varela Round",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+}
+
+.corp-footer::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--footer-accent) 0 12%,
+            var(--footer-ink) 12% 100%
+        );
+}
+
+.corp-footer *,
+.corp-footer *::before,
+.corp-footer *::after {
+    box-sizing: border-box;
+
+    /* Intentionally sharp: no curved or toy-like UI */
+    border-radius: 0 !important;
+}
+
+.corp-footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.corp-footer-container {
+    width: min(calc(100% - 64px), 1500px);
+
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   CTA
+========================================================== */
+
+.corp-footer-cta {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(300px, 0.55fr);
+    align-items: end;
+    gap: clamp(55px, 8vw, 140px);
+
+    padding: clamp(80px, 9vw, 140px) 0 clamp(64px, 7vw, 105px);
+}
+
+.corp-footer-kicker {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    margin: 0 0 26px;
+
+    color: var(--footer-muted);
+
+    font-size: 9px;
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+.corp-footer-kicker span {
+    color: var(--footer-accent);
+}
+
+.corp-footer-kicker i {
+    width: 45px;
+    height: 1px;
+
+    background: var(--footer-line);
+}
+
+.corp-footer-cta h2 {
+    max-width: 970px;
+
+    margin: 0;
+
+    color: var(--footer-ink);
+
+    font-size: clamp(57px, 7.2vw, 112px);
+    font-weight: 400;
+    line-height: 0.91;
+    letter-spacing: -0.065em;
+}
+
+.corp-footer-cta h2 span {
+    display: block;
+
+    color: rgba(16, 39, 41, 0.35);
+}
+
+.corp-footer-cta-action {
+    padding-bottom: 6px;
+}
+
+.corp-footer-cta-action > p {
+    margin: 0 0 29px;
+
+    color: var(--footer-text);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.corp-footer-button {
+    position: relative;
+    isolation: isolate;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+
+    width: 100%;
+    min-height: 60px;
+
+    padding: 0 19px 0 22px;
+    overflow: hidden;
+
+    border: 1px solid var(--footer-ink);
+
+    color: #ffffff !important;
+    background: var(--footer-ink);
+
+    font-size: 9px;
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+
+    transition:
+        color 0.35s ease,
+        background-color 0.35s ease;
+}
+
+.corp-footer-button::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 4px;
+
+    background: var(--footer-accent);
+
+    transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.corp-footer-button i {
+    font-size: 18px;
+    font-style: normal;
+
+    transition: transform 0.3s ease;
+}
+
+.corp-footer-button:hover::before {
+    width: 100%;
+}
+
+.corp-footer-button:hover i {
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   BRAND + NAVIGATION STRUCTURE
+========================================================== */
+
+.corp-footer-main {
+    display: grid;
+    grid-template-columns: minmax(265px, 0.72fr) minmax(0, 2.28fr);
+
+    border-top: 1px solid var(--footer-line);
+    border-bottom: 1px solid var(--footer-line);
+}
+
+.corp-footer-brand {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    padding: clamp(38px, 4vw, 62px) clamp(28px, 4vw, 58px) clamp(38px, 4vw, 62px) 0;
+
+    border-right: 1px solid var(--footer-line);
+}
+
+.corp-footer-logo {
+    align-self: flex-start;
+}
+
+.corp-footer-logo img {
+    display: block;
+
+    width: auto;
+    max-width: min(100%, 220px);
+    height: 78px;
+
+    object-fit: contain;
+}
+
+.corp-footer-brand > p {
+    max-width: 360px;
+
+    margin: 34px 0 50px;
+
+    color: var(--footer-text);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+.corp-footer-status {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    margin-top: auto;
+
+    color: var(--footer-muted);
+
+    font-size: 8px;
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+}
+
+.corp-footer-status span {
+    width: 19px;
+    height: 2px;
+
+    background: var(--footer-accent);
+}
+
+.corp-footer-nav {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    min-width: 0;
+}
+
+.corp-footer-column {
+    min-width: 0;
+
+    padding: clamp(38px, 3.5vw, 58px) clamp(20px, 2.6vw, 42px);
+
+    border-right: 1px solid var(--footer-line-light);
+}
+
+.corp-footer-column:last-child {
+    border-right: 0;
+}
+
+.corp-footer-column-heading {
+    margin-bottom: 29px;
+}
+
+.corp-footer-column-heading span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--footer-accent);
+
+    font-size: 8px;
+    letter-spacing: 0.14em;
+}
+
+.corp-footer-column-heading h3 {
+    margin: 0;
+
+    color: var(--footer-ink);
+
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    line-height: 1.4;
+
+    text-transform: uppercase;
+}
+
+.corp-footer-column ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.corp-footer-column li + li {
+    margin-top: 14px;
+}
+
+.corp-footer-column a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    color: var(--footer-text);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    font-size: 12.5px;
+    line-height: 1.4;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.corp-footer-column a i {
+    flex: 0 0 auto;
+
+    color: var(--footer-accent);
+
+    font-style: normal;
+
+    opacity: 0;
+    transform: translate(-4px, 4px);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.corp-footer-column a:hover {
+    color: var(--footer-ink);
+    transform: translateX(4px);
+}
+
+.corp-footer-column a:hover i {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+/* =========================================================
+   CONTACT BAND
+========================================================== */
+
+.corp-footer-contact {
+    display: grid;
+    grid-template-columns: minmax(210px, 0.72fr) repeat(3, minmax(0, 1fr));
+
+    border-bottom: 1px solid var(--footer-line);
+}
+
+.corp-footer-contact-heading,
+.corp-footer-contact-item {
+    min-width: 0;
+
+    padding: 32px clamp(20px, 3vw, 42px);
+
+    border-right: 1px solid var(--footer-line-light);
+}
+
+.corp-footer-contact-heading {
+    padding-left: 0;
+}
+
+.corp-footer-contact-item:last-child {
+    border-right: 0;
+}
+
+.corp-footer-contact-heading > span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--footer-accent);
+
+    font-size: 8px;
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+}
+
+.corp-footer-contact-heading h3 {
+    margin: 0;
+
+    color: var(--footer-ink);
+
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: -0.035em;
+}
+
+.corp-footer-contact-item {
+    position: relative;
+
+    display: block;
+}
+
+.corp-footer-contact-item > span,
+.corp-footer-contact-item > strong {
+    display: block;
+}
+
+.corp-footer-contact-item > span {
+    margin-bottom: 9px;
+
+    color: var(--footer-muted);
+
+    font-size: 8px;
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+}
+
+.corp-footer-contact-item > strong {
+    overflow-wrap: anywhere;
+
+    color: var(--footer-ink);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    font-size: 12.5px;
+    font-weight: 500;
+    line-height: 1.45;
+}
+
+.corp-footer-contact-item > i {
+    position: absolute;
+    top: 50%;
+    right: 24px;
+
+    color: var(--footer-accent);
+
+    font-size: 14px;
+    font-style: normal;
+
+    opacity: 0.62;
+    transform: translateY(-50%);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+a.corp-footer-contact-item:hover > i {
+    opacity: 1;
+    transform: translate(3px, calc(-50% - 3px));
+}
+
+
+/* =========================================================
+   BOTTOM BAR
+========================================================== */
+
+.corp-footer-bottom {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 28px;
+
+    min-height: 88px;
+}
+
+.corp-footer-bottom > p {
+    margin: 0;
+
+    color: var(--footer-muted);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    font-size: 10px;
+}
+
+.corp-footer-disciplines {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: rgba(16, 39, 41, 0.50);
+
+    font-size: 8px;
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+}
+
+.corp-footer-disciplines i {
+    width: 18px;
+    height: 1px;
+
+    background: var(--footer-line);
+}
+
+.corp-footer-bottom-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 21px;
+
+    color: var(--footer-muted);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    font-size: 10px;
+}
+
+.corp-footer-bottom-links > a {
+    transition: color 0.25s ease;
+}
+
+.corp-footer-bottom-links > a:hover {
+    color: var(--footer-ink);
+}
+
+.corp-footer-top-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding-left: 21px;
+
+    border-left: 1px solid var(--footer-line);
+
+    color: var(--footer-ink) !important;
+
+    font-family:
+        "Varela Round",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 8px;
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+.corp-footer-top-link span {
+    display: grid;
+    place-items: center;
+
+    width: 31px;
+    height: 31px;
+
+    border: 1px solid var(--footer-line);
+
+    color: var(--footer-accent);
+
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.corp-footer-top-link:hover span {
+    color: #ffffff;
+    background: var(--footer-ink);
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================== */
+
+.corp-footer a:focus-visible {
+    outline: 2px solid var(--footer-accent);
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — LAPTOP
+========================================================== */
+
+@media (max-width: 1250px) {
+
+    .corp-footer-main {
+        grid-template-columns: 1fr;
+    }
+
+    .corp-footer-brand {
+        display: grid;
+        grid-template-columns: 230px minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 42px;
+
+        padding: 38px 0;
+
+        border-right: 0;
+        border-bottom: 1px solid var(--footer-line);
+    }
+
+    .corp-footer-brand > p {
+        max-width: 650px;
+        margin: 0;
+    }
+
+    .corp-footer-status {
+        margin: 0;
+    }
+
+    .corp-footer-nav {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .corp-footer-column:first-child {
+        padding-left: 0;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================== */
+
+@media (max-width: 960px) {
+
+    .corp-footer-container {
+        width: min(calc(100% - 44px), 860px);
+    }
+
+    .corp-footer-cta {
+        grid-template-columns: 1fr;
+        gap: 43px;
+
+        padding: 86px 0 70px;
+    }
+
+    .corp-footer-cta-action {
+        max-width: 430px;
+    }
+
+    .corp-footer-brand {
+        grid-template-columns: 220px minmax(0, 1fr);
+    }
+
+    .corp-footer-status {
+        grid-column: 1 / -1;
+    }
+
+    .corp-footer-nav {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .corp-footer-column {
+        border-bottom: 1px solid var(--footer-line-light);
+    }
+
+    .corp-footer-column:nth-child(3) {
+        border-right: 0;
+    }
+
+    .corp-footer-column:nth-child(4) {
+        padding-left: 0;
+    }
+
+    .corp-footer-column:nth-child(n + 4) {
+        border-bottom: 0;
+    }
+
+    .corp-footer-column:last-child {
+        border-right: 1px solid var(--footer-line-light);
+    }
+
+    .corp-footer-contact {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .corp-footer-contact-heading {
+        grid-column: 1 / -1;
+
+        padding-left: 0;
+
+        border-right: 0;
+        border-bottom: 1px solid var(--footer-line);
+    }
+
+    .corp-footer-bottom {
+        grid-template-columns: 1fr auto;
+    }
+
+    .corp-footer-disciplines {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================== */
+
+@media (max-width: 650px) {
+
+    .corp-footer-container {
+        width: calc(100% - 30px);
+    }
+
+    .corp-footer-cta {
+        gap: 35px;
+
+        padding: 72px 0 58px;
+    }
+
+    .corp-footer-kicker {
+        margin-bottom: 20px;
+
+        font-size: 8px;
+    }
+
+    .corp-footer-cta h2 {
+        font-size: clamp(47px, 15vw, 68px);
+    }
+
+    .corp-footer-cta-action > p {
+        font-size: 13px;
+    }
+
+    .corp-footer-brand {
+        display: flex;
+        align-items: flex-start;
+        gap: 0;
+
+        padding: 35px 0;
+    }
+
+    .corp-footer-logo img {
+        height: 70px;
+    }
+
+    .corp-footer-brand > p {
+        margin: 28px 0 34px;
+
+        font-size: 12.5px;
+    }
+
+    .corp-footer-nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .corp-footer-column,
+    .corp-footer-column:first-child,
+    .corp-footer-column:nth-child(4) {
+        padding: 31px 18px;
+        border-right: 1px solid var(--footer-line-light);
+        border-bottom: 1px solid var(--footer-line-light);
+    }
+
+    .corp-footer-column:nth-child(odd) {
+        padding-left: 0;
+    }
+
+    .corp-footer-column:nth-child(even) {
+        padding-right: 0;
+        border-right: 0;
+    }
+
+    .corp-footer-column:nth-child(4) {
+        border-bottom: 1px solid var(--footer-line-light);
+    }
+
+    .corp-footer-column:last-child {
+        grid-column: 1 / -1;
+
+        padding-right: 0;
+        padding-left: 0;
+
+        border-right: 0;
+        border-bottom: 0;
+    }
+
+    .corp-footer-column-heading {
+        margin-bottom: 24px;
+    }
+
+    .corp-footer-column a i {
+        opacity: 0.45;
+        transform: none;
+    }
+
+    .corp-footer-contact {
+        grid-template-columns: 1fr;
+    }
+
+    .corp-footer-contact-heading,
+    .corp-footer-contact-item {
+        padding: 25px 0;
+
+        border-right: 0;
+        border-bottom: 1px solid var(--footer-line-light);
+    }
+
+    .corp-footer-contact-item:last-child {
+        border-bottom: 0;
+    }
+
+    .corp-footer-contact-item > i {
+        right: 0;
+    }
+
+    .corp-footer-bottom {
+        grid-template-columns: 1fr;
+        gap: 19px;
+
+        padding: 25px 0;
+    }
+
+    .corp-footer-bottom > p {
+        text-align: center;
+    }
+
+    .corp-footer-bottom-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================== */
+
+@media (max-width: 390px) {
+
+    .corp-footer-container {
+        width: calc(100% - 24px);
+    }
+
+    .corp-footer-cta h2 {
+        font-size: 45px;
+    }
+
+    .corp-footer-nav {
+        grid-template-columns: 1fr;
+    }
+
+    .corp-footer-column,
+    .corp-footer-column:first-child,
+    .corp-footer-column:nth-child(4),
+    .corp-footer-column:last-child,
+    .corp-footer-column:nth-child(odd),
+    .corp-footer-column:nth-child(even) {
+        grid-column: auto;
+
+        padding: 28px 0;
+
+        border-right: 0;
+        border-bottom: 1px solid var(--footer-line-light);
+    }
+
+    .corp-footer-column:last-child {
+        border-bottom: 0;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .corp-footer-button,
+    .corp-footer-button::before,
+    .corp-footer-button i,
+    .corp-footer-column a,
+    .corp-footer-column a i,
+    .corp-footer-contact-item > i,
+    .corp-footer-bottom-links > a,
+    .corp-footer-top-link span {
+        transition: none;
+    }
+}
+
+</style>
+
+<!-- JAVASCRIPT -->
+<script>
+document.getElementById("corpFooterYear").textContent = new Date().getFullYear();
+</script>
+
+<!-- END MODULE — FOOTER -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){const nav=document.getElementById("mainNav");const white=document.getElementById("logoWhite");const dark=document.getElementById("logoDark");if(nav)nav.classList.add("scrolled","navbar-shrink");if(white)white.style.display="none";if(dark)dark.style.display="block";});</script>
+</body></html>
