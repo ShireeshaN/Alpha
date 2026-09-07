@@ -1,37 +1,28 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Commercial Automation | Alpha Numeric</title>
+ Google Font 
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+ Bootstrap 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+ Font Awesome 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
 
-    <title>Commercial Automation | Alpha Numeric</title>
+<!-- =========================================================
+     MODULE — GLOBAL BASE STYLES
+========================================================= -->
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet">
-
-    <!-- Bootstrap -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <style>
-
-        /* =========================================================
-           GLOBAL
-        ========================================================= */
-
-        * {
+<!-- GLOBAL BASE STYLES: CSS -->
+<style>
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -56,1190 +47,22 @@
             max-width: 100%;
             display: block;
         }
+</style>
 
+<!-- GLOBAL BASE STYLES: HTML -->
 
-       
-        /* =========================================================
-           HERO
-        ========================================================= */
 
-        .hero {
-            min-height: 690px;
-            
-
-            display: flex;
-            align-items: center;
-
-            position: relative;
-            overflow: hidden;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(0,0,0,.96) 0%,
-                    rgba(0,0,0,.84) 40%,
-                    rgba(0,0,0,.42) 75%,
-                    rgba(0,0,0,.12) 100%
-                ),
-                url("assets/img/commercial automation/banner.png");
-
-            background-size: cover;
-            background-position: center;
-        }
-
-        .hero-content {
-            width: 100%;
-            max-width: 1350px;
-            margin: auto;
-
-            padding: 100px 7%;
-
-            color: #fff;
-
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-label {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-
-            margin-bottom: 24px;
-
-            color: #bbb;
-
-            font-size: 11px;
-            font-weight: 700;
-
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
-
-        .hero-label::before {
-            content: "";
-
-            width: 42px;
-            height: 1px;
-
-            background: #fff;
-        }
-
-        .hero h1 {
-            max-width: 950px;
-
-            color: #fff;
-
-            font-size: clamp(48px, 7vw, 92px);
-
-            line-height: .95;
-
-            font-weight: 700;
-
-            letter-spacing: -5px;
-
-            margin-bottom: 30px;
-
-            text-transform: uppercase;
-        }
-
-        .hero h1 span {
-            font-weight: 300;
-        }
-
-        .hero p {
-            max-width: 690px;
-
-            color: #d4d4d4;
-
-            font-size: 15px;
-
-            line-height: 1.9;
-
-            margin-bottom: 35px;
-        }
-
-        .hero-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-
-            padding: 15px 28px;
-
-            background: #fff;
-            color: #111;
-
-            border: 1px solid #fff;
-
-            font-size: 11px;
-            font-weight: 700;
-
-            letter-spacing: 1px;
-
-            transition: .3s ease;
-        }
-
-        .hero-button:hover {
-            background: #111;
-            color: #fff;
-
-            transform: translateY(-3px);
-        }
-
-
-        /* =========================================================
-           HIGHLIGHTS
-        ========================================================= */
-
-        .highlights {
-            width: 86%;
-            margin: -45px auto 0;
-
-            position: relative;
-            z-index: 10;
-
-            display: grid;
-            grid-template-columns: repeat(4,1fr);
-
-            background: #fff;
-
-            box-shadow: 0 20px 55px rgba(0,0,0,.12);
-        }
-
-        .highlight {
-            min-height: 115px;
-
-            display: flex;
-            align-items: center;
-
-            gap: 16px;
-
-            padding: 20px 25px;
-
-            border-right: 1px solid #e5e5e5;
-        }
-
-        .highlight:last-child {
-            border-right: none;
-        }
-
-        .highlight-icon {
-            width: 44px;
-            height: 44px;
-
-            flex-shrink: 0;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            background: #111;
-            color: #fff;
-
-            font-size: 17px;
-        }
-
-        .highlight h4 {
-            color: #111;
-
-            font-size: 12px;
-            font-weight: 600;
-
-            margin-bottom: 6px;
-        }
-
-        .highlight p {
-            color: #777;
-
-            font-size: 10px;
-
-            line-height: 1.6;
-
-            margin: 0;
-        }
-
-
-        /* =========================================================
-           COMMON
-        ========================================================= */
-
-        .section-label {
-            color: #777;
-
-            font-size: 10px;
-            font-weight: 700;
-
-            letter-spacing: 3px;
-
-            text-transform: uppercase;
-
-            margin-bottom: 14px;
-        }
-
-        .section-title {
-            color: #111;
-
-            font-size: clamp(34px,4vw,58px);
-
-            line-height: 1.08;
-
-            font-weight: 600;
-
-            letter-spacing: -2px;
-
-            margin-bottom: 0;
-        }
-
-        .section-line {
-            width: 45px;
-            height: 3px;
-
-            background: #111;
-
-            margin: 20px 0 25px;
-        }
-
-
-
-        /* =========================================================
-           BMS SECTION
-        ========================================================= */
-
-        .bms-section {
-            padding: 110px 8%;
-
-            background: #fff;
-        }
-
-        .bms-layout {
-            max-width: 1250px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns: 1fr 1fr;
-
-            gap: 80px;
-
-            align-items: center;
-        }
-
-        .bms-image {
-            min-height: 510px;
-
-            position: relative;
-
-            background:
-                linear-gradient(
-                    rgba(0,0,0,.20),
-                    rgba(0,0,0,.20)
-                ),
-                url("assets/img/commercial automation/BMS + IoT INTEGRATION.png");
-
-            background-size: cover;
-            background-position: center;
-        }
-
-        .bms-tag {
-            position: absolute;
-
-            left: 25px;
-            bottom: 25px;
-
-            padding: 18px 22px;
-
-            background: #111;
-
-            color: #fff;
-
-            border-left: 4px solid #fff;
-        }
-
-        .bms-tag strong {
-            display: block;
-
-            color: #fff;
-
-            font-size: 13px;
-
-            margin-bottom: 5px;
-        }
-
-        .bms-tag span {
-            color: #aaa;
-
-            font-size: 9px;
-
-            letter-spacing: 1px;
-        }
-
-        .bms-content p {
-            color: #666;
-
-            font-size: 13px;
-
-            line-height: 1.9;
-
-            margin-bottom: 25px;
-        }
-
-        .bms-list {
-            display: grid;
-
-            grid-template-columns: 1fr 1fr;
-
-            gap: 10px;
-        }
-
-        .bms-item {
-            padding: 17px;
-
-            background: #f5f5f5;
-
-            border-left: 3px solid #111;
-
-            color: #222;
-
-            font-size: 10px;
-
-            font-weight: 600;
-        }
-
-
-        /* =========================================================
-           CENTRAL CONTROL
-        ========================================================= */
-
-        .control-section {
-            padding: 110px 8%;
-
-            background: #050505;
-
-            color: #fff;
-        }
-
-        .control-header {
-            max-width: 780px;
-
-            margin: 0 auto 55px;
-
-            text-align: center;
-        }
-
-        .control-header .section-label {
-            color: #aaa;
-        }
-
-        .control-header .section-title {
-            color: #fff;
-        }
-
-        .control-header .section-line {
-            background: #fff;
-
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .control-header p {
-            color: #aaa;
-
-            font-size: 13px;
-
-            line-height: 1.8;
-        }
-
-        .control-grid {
-            max-width: 1200px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns: repeat(5,1fr);
-
-            gap: 10px;
-        }
-
-        .control-card {
-            min-height: 210px;
-
-            padding: 25px 15px;
-
-            text-align: center;
-
-            border: 1px solid #333;
-
-            background: rgba(255,255,255,.03);
-
-            transition: .3s ease;
-        }
-
-        .control-card:hover {
-            background: #fff;
-
-            transform: translateY(-6px);
-        }
-
-        .control-number {
-            width: 45px;
-            height: 45px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            margin: 0 auto 16px;
-
-            background: #fff;
-            color: #111;
-
-            border-radius: 50%;
-
-            font-size: 12px;
-            font-weight: 800;
-        }
-
-        .control-card h4 {
-            color: #fff;
-
-            font-size: 10px;
-
-            margin-bottom: 8px;
-
-            transition: .3s;
-        }
-
-        .control-card p {
-            color: #aaa;
-
-            font-size: 9px;
-
-            line-height: 1.6;
-
-            transition: .3s;
-        }
-
-        .control-card:hover h4 {
-            color: #111;
-        }
-
-        .control-card:hover p {
-            color: #555;
-        }
-
-
-        /* =========================================================
-           FEATURES
-        ========================================================= */
-
-        .features-section {
-            padding: 105px 8%;
-
-            background: #f5f5f5;
-        }
-
-        .features-header {
-            max-width: 1250px;
-
-            margin: auto;
-        }
-
-        .features-grid {
-            max-width: 1250px;
-
-            margin: 45px auto 0;
-
-            display: grid;
-
-            grid-template-columns: repeat(4,1fr);
-
-            gap: 16px;
-        }
-
-        .feature-card {
-            padding: 28px 22px;
-
-            background: #fff;
-
-            border: 1px solid #e5e5e5;
-
-            transition: .3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-6px);
-
-            border-color: #111;
-        }
-
-        .feature-card i {
-            color: #111;
-
-            font-size: 23px;
-
-            margin-bottom: 17px;
-        }
-
-        .feature-card h4 {
-            color: #111;
-
-            font-size: 12px;
-
-            margin-bottom: 8px;
-        }
-
-        .feature-card p {
-            color: #777;
-
-            font-size: 10px;
-
-            line-height: 1.7;
-        }
-
-
-        /* =========================================================
-           ENERGY MANAGEMENT
-        ========================================================= */
-
-        .energy-section {
-            padding: 110px 8%;
-
-            background: #fff;
-        }
-
-        .energy-layout {
-            max-width: 1250px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns: .8fr 1.2fr;
-
-            gap: 70px;
-
-            align-items: center;
-        }
-
-        .energy-description {
-            color: #666;
-
-            font-size: 13px;
-
-            line-height: 1.9;
-        }
-
-        .energy-list {
-            display: grid;
-
-            grid-template-columns: repeat(2,1fr);
-
-            gap: 12px;
-        }
-
-        .energy-item {
-            padding: 22px;
-
-            background: #f7f7f7;
-
-            border: 1px solid #e5e5e5;
-
-            transition: .3s ease;
-        }
-
-        .energy-item:hover {
-            background: #111;
-
-            transform: translateY(-5px);
-        }
-
-        .energy-item i {
-            color: #111;
-
-            font-size: 17px;
-
-            margin-bottom: 12px;
-
-            transition: .3s;
-        }
-
-        .energy-item strong {
-            display: block;
-
-            color: #111;
-
-            font-size: 11px;
-
-            margin-bottom: 6px;
-
-            transition: .3s;
-        }
-
-        .energy-item span {
-            color: #777;
-
-            font-size: 9px;
-
-            line-height: 1.6;
-
-            transition: .3s;
-        }
-
-        .energy-item:hover i,
-        .energy-item:hover strong {
-            color: #fff;
-        }
-
-        .energy-item:hover span {
-            color: #aaa;
-        }
-
-
-        /* =========================================================
-           APPLICATIONS
-        ========================================================= */
-
-        .applications-section {
-            padding: 105px 8%;
-
-            background: #f5f5f5;
-        }
-
-        .applications-content {
-            max-width: 1250px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns: .8fr 1.2fr;
-
-            gap: 70px;
-
-            align-items: center;
-        }
-
-        .application-description {
-            color: #666;
-
-            font-size: 13px;
-
-            line-height: 1.9;
-        }
-
-        .application-list {
-            display: grid;
-
-            grid-template-columns: repeat(2,1fr);
-
-            gap: 12px;
-        }
-
-        .application-item {
-            padding: 21px;
-
-            background: #fff;
-
-            border: 1px solid #e5e5e5;
-
-            transition: .3s ease;
-        }
-
-        .application-item:hover {
-            transform: translateY(-5px);
-
-            border-color: #111;
-        }
-
-        .application-item strong {
-            display: block;
-
-            color: #111;
-
-            font-size: 11px;
-
-            margin-bottom: 6px;
-        }
-
-        .application-item span {
-            color: #777;
-
-            font-size: 9px;
-
-            line-height: 1.5;
-        }
-
-
-        /* =========================================================
-           CTA
-        ========================================================= */
-
-        .cta {
-            max-width: 1250px;
-
-            margin: 80px auto;
-
-            min-height: 290px;
-
-            display: grid;
-
-            grid-template-columns: 1.3fr .7fr;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(0,0,0,1),
-                    rgba(0,0,0,.68)
-                ),
-                url("images/commercial-automation-cta.jpg");
-
-            background-size: cover;
-
-            background-position: center;
-        }
-
-        .cta-content {
-            padding: 50px;
-
-            color: #fff;
-        }
-
-        .cta-content h2 {
-            color: #fff;
-
-            font-size: 32px;
-
-            line-height: 1.2;
-
-            margin-bottom: 15px;
-        }
-
-        .cta-content p {
-            max-width: 650px;
-
-            color: #ccc;
-
-            font-size: 12px;
-
-            line-height: 1.8;
-        }
-
-        .cta-button {
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 10px;
-
-            margin-top: 15px;
-
-            padding: 13px 23px;
-
-            background: #fff;
-
-            color: #111;
-
-            font-size: 10px;
-
-            font-weight: 700;
-
-            transition: .3s ease;
-        }
-
-        .cta-button:hover {
-            background: #111;
-
-            color: #fff;
-
-            border: 1px solid #fff;
-        }
-
-        .cta-side {
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            border-left: 1px solid #333;
-        }
-
-        .cta-side strong {
-            display: block;
-
-            color: #fff;
-
-            font-size: 18px;
-
-            margin-bottom: 6px;
-        }
-
-        .cta-side span {
-            color: #aaa;
-
-            font-size: 9px;
-
-            letter-spacing: 1.5px;
-        }
-
-
-        /* =========================================================
-           FOOTER
-        ========================================================= */
-
-        .main-footer {
-            background: #050505;
-
-            color: #fff;
-
-            padding: 75px 7% 25px;
-        }
-
-        .footer-logo img {
-            height: 55px;
-
-            width: auto;
-
-            margin-bottom: 22px;
-        }
-
-        .footer-description {
-            max-width: 370px;
-
-            color: #888;
-
-            font-size: 12px;
-
-            line-height: 1.9;
-        }
-
-        .footer-heading {
-            color: #fff;
-
-            font-size: 12px;
-
-            font-weight: 600;
-
-            letter-spacing: 1.5px;
-
-            margin-bottom: 22px;
-        }
-
-        .footer-links {
-            list-style: none;
-
-            padding: 0;
-
-            margin: 0;
-        }
-
-        .footer-links li {
-            margin-bottom: 11px;
-        }
-
-        .footer-links a {
-            color: #888;
-
-            font-size: 12px;
-
-            transition: .3s ease;
-        }
-
-        .footer-links a:hover {
-            color: #fff;
-
-            padding-left: 4px;
-        }
-
-        .footer-contact {
-            list-style: none;
-
-            padding: 0;
-
-            margin: 0;
-        }
-
-        .footer-contact li {
-            display: flex;
-
-            align-items: flex-start;
-
-            gap: 12px;
-
-            color: #888;
-
-            font-size: 12px;
-
-            line-height: 1.8;
-
-            margin-bottom: 15px;
-        }
-
-        .footer-contact i {
-            width: 18px;
-
-            color: #fff;
-
-            margin-top: 4px;
-        }
-
-        .footer-social {
-            display: flex;
-
-            gap: 9px;
-
-            margin-top: 24px;
-        }
-
-        .footer-social a {
-            width: 35px;
-            height: 35px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border: 1px solid #2b2b2b;
-
-            color: #999;
-
-            font-size: 13px;
-
-            transition: .3s ease;
-        }
-
-        .footer-social a:hover {
-            background: #fff;
-
-            color: #000;
-
-            border-color: #fff;
-        }
-
-        .footer-bottom {
-            margin-top: 55px;
-
-            padding-top: 20px;
-
-            border-top: 1px solid #222;
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-            gap: 20px;
-
-            color: #666;
-
-            font-size: 10px;
-        }
-
-        .footer-bottom strong {
-            color: #fff;
-
-            font-weight: 500;
-        }
-
-
-        /* =========================================================
-           RESPONSIVE
-        ========================================================= */
-
-        @media (max-width:1100px) {
-
-            .main-navbar .navbar-nav {
-                gap: 18px;
-            }
-
-            .systems-grid {
-                grid-template-columns: repeat(2,1fr);
-            }
-
-            .control-grid {
-                grid-template-columns: repeat(3,1fr);
-            }
-
-            .features-grid {
-                grid-template-columns: repeat(2,1fr);
-            }
-        }
-
-
-        @media (max-width:991px) {
-
-            .main-navbar {
-                height: auto;
-
-                min-height: 80px;
-
-                padding: 10px 5%;
-            }
-
-            .main-navbar .navbar-brand img {
-                height: 48px;
-            }
-
-            .main-navbar .navbar-collapse {
-                margin-top: 15px;
-
-                padding: 15px 0;
-
-                background: #fff;
-            }
-
-            .main-navbar .navbar-nav {
-                align-items: flex-start;
-
-                gap: 0;
-            }
-
-            .main-navbar .nav-item {
-                width: 100%;
-            }
-
-            .main-navbar .nav-link {
-                padding: 12px 5px !important;
-            }
-
-            .main-navbar .dropdown-menu {
-                margin-top: 0;
-
-                border: none;
-
-                box-shadow: none;
-            }
-
-            .hero {
-                margin-top: 80px;
-            }
-
-            .intro,
-            .bms-layout,
-            .energy-layout,
-            .applications-content {
-                grid-template-columns: 1fr;
-            }
-
-            .cta {
-                margin-left: 6%;
-                margin-right: 6%;
-            }
-        }
-
-
-        @media (max-width:767px) {
-
-            .hero {
-                min-height: 650px;
-            }
-
-            .hero-content {
-                padding: 90px 7%;
-            }
-
-            .hero h1 {
-                font-size: 52px;
-
-                letter-spacing: -3px;
-            }
-
-            .highlights {
-                width: 100%;
-
-                margin: 0;
-
-                grid-template-columns: 1fr;
-            }
-
-            .highlight {
-                border-right: none;
-
-                border-bottom: 1px solid #e5e5e5;
-            }
-
-            .intro,
-            .systems-section,
-            .bms-section,
-            .control-section,
-            .features-section,
-            .energy-section,
-            .applications-section {
-                padding-left: 7%;
-
-                padding-right: 7%;
-            }
-
-            .systems-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .bms-list {
-                grid-template-columns: 1fr;
-            }
-
-            .control-grid {
-                grid-template-columns: repeat(2,1fr);
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .energy-list,
-            .application-list {
-                grid-template-columns: 1fr;
-            }
-
-            .cta {
-                margin: 40px 6%;
-
-                grid-template-columns: 1fr;
-            }
-
-            .cta-side {
-                min-height: 120px;
-
-                border-left: none;
-
-                border-top: 1px solid #333;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-
-                align-items: flex-start;
-            }
-        }
-
-
-        @media (max-width:430px) {
-
-            .main-navbar .navbar-brand img {
-                height: 42px;
-            }
-
-            .hero h1 {
-                font-size: 43px;
-            }
-
-            .control-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-    </style>
+<!-- END MODULE — GLOBAL BASE STYLES -->
 
 </head>
 
-
 <body>
 
+<!-- =========================================================
+     MODULE — NAVBAR
+========================================================= -->
 
+<!-- HTML -->
     <!-- =========================================================
          PREMIUM GLOBAL NAVIGATION
     ========================================================= -->
@@ -1259,7 +82,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
+                    <li class="nav-item active"><a class="nav-link " href="about.html">About</a></li>
 
                     <li class="nav-item dropdown solution-dropdown position-static">
                         <a class="nav-link dropdown-toggle " href="#" id="solutionsDropdown" role="button"
@@ -1268,21 +91,22 @@
                         <div class="dropdown-menu mega-menu" aria-labelledby="solutionsDropdown">
                             <div class="mega-menu-inner">
                                 <div class="mega-column">
-                                    <div class="mega-heading "><span>Energy</span></div>
-                                    <a href="solar-energy.html">Solar Energy</a>
-                                    <a href="wind-energy.html">Wind Energy</a>
+                                    <div class="mega-heading "><span>Renewable Energy</span></div>
+                                    <a href="solar-energy.html">Solar </a>
+                                    <!-- <a href="wind-energy.html">Wind Energy</a>
                                     <a href="hydel-energy.html">Hydel Energy</a>
-                                    <a href="biomass-energy.html">Biomass Energy</a>
+                                    <a href="biomass-energy.html">Biomass Energy</a> -->
                                 </div>
                                 <div class="mega-column">
                                     <div class="mega-heading"><span>Power</span></div>
-                                    <a href="transmission.html">Transmission</a>
-                                    <a href="distribution.html">Distribution</a>
+                                    <a href="lt.html">LT</a>
+                                    <a href="ht.html">HT</a>
+                                    <a href="eht.html">EHT</a>
                                     <a href="control-panels.html">Control Panels</a>
                                     <a href="panel-boards.html">Panel Boards</a>
                                 </div>
                                 <div class="mega-column">
-                                    <div class="mega-heading active"><span>Automation</span></div>
+                                    <div class="mega-heading"><span>Automation</span></div>
                                     <a href="home-automation.html">Home Automation</a>
                                     <a href="commercial-automation.html">Commercial Automation</a>
                                     <a href="industrial-automation.html">Industrial Automation</a>
@@ -1301,7 +125,15 @@
                         </div>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="bms_automation.html">BMS</a></li>
+                    <li class="nav-item dropdown bms-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="bmsDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">IoT</a>
+                        <ul class="dropdown-menu bms-menu" aria-labelledby="bmsDropdown">
+                            <li><a class="dropdown-item" href="iot.html">IoT</a></li>
+                            <li><a class="dropdown-item" href="bms.html">BMS</a></li>
+                            <li><a class="dropdown-item" href="iot-bms.html">IoT+BMS</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="power-products.html">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
@@ -1309,8 +141,8 @@
         </div>
     </nav>
 
-
-    <style>
+<!-- CSS -->
+<style>
         /* =====================================================
            GLOBAL
         ===================================================== */
@@ -1363,7 +195,53 @@
         .mega-column > a:hover { color: #334a85; padding-left: 21px; }
         .mega-column > a:hover::before { width: 12px; background: #4d73be; }
 
+        /* BMS DROPDOWN */
+        .bms-dropdown .bms-menu {
+            min-width: 190px;
+            margin-top: 0;
+            padding: 10px 0;
+            border: 1px solid #1f1f1f;
+            border-radius: 10px;
+            background: #000000;
+            box-shadow: 0 18px 45px rgba(0,0,0,.24);
+        }
+
+        .bms-dropdown .bms-menu .dropdown-item {
+            padding: 10px 18px;
+            color: #bdbdbd;
+            font-size: 13.5px;
+            font-weight: 600;
+            background: transparent;
+            transition: color .25s ease, padding-left .25s ease;
+        }
+
+        .bms-dropdown .bms-menu .dropdown-item:hover,
+        .bms-dropdown .bms-menu .dropdown-item:focus {
+            color: #ffffff;
+            background: transparent;
+            padding-left: 22px;
+        }
+
         @media (min-width: 992px) {
+            /* BMS dropdown: open on hover and stay open while hovering menu */
+            .bms-dropdown > .bms-menu {
+                display: block;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transform: translateY(6px);
+                transition: opacity .22s ease, visibility .22s ease, transform .22s ease;
+            }
+
+            .bms-dropdown:hover > .bms-menu,
+            .bms-dropdown > .bms-menu:hover,
+            .bms-dropdown > .bms-menu.show {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+                transform: translateY(0);
+            }
+
             .solution-dropdown > .mega-menu {
                 opacity: 0;
                 visibility: hidden;
@@ -1437,9 +315,6 @@
 
 
         
-    </style>
-
-    <style>
 /* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
 .main-navbar #solutionsDropdown,
 .main-navbar #solutionsDropdown:hover,
@@ -1457,10 +332,6 @@
 .main-navbar #solutionsDropdown.show {
     color: #4d73be !important;
 }
-</style>
-
-
-<style id="navbar-monochrome-final">
 /* =========================================================
    NAVBAR — MONOCHROME BLACK THEME
    Keep existing layout + mega-menu behavior unchanged
@@ -1593,45 +464,172 @@
         border-bottom-color: #242424 !important;
     }
 }
-</style>
-
-
-<style id="mega-heading-no-icons">
 .main-navbar .mega-heading {
     gap: 0 !important;
 }
 </style>
 
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const nav = document.getElementById("mainNav");
+    const white = document.getElementById("logoWhite");
+    const dark = document.getElementById("logoDark");
 
+    if (nav) nav.classList.add("scrolled", "navbar-shrink");
+    if (white) white.style.display = "none";
+    if (dark) dark.style.display = "block";
+});
+</script>
+
+<!-- END MODULE — NAVBAR -->
 
 <!-- =========================================================
-     HERO
+     MODULE — HERO
 ========================================================= -->
 
+<!-- HERO: CSS -->
+<style>
+.hero {
+            min-height: 690px;
+            
+
+            display: flex;
+            align-items: center;
+
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,.96) 0%,
+                    rgba(0,0,0,.84) 40%,
+                    rgba(0,0,0,.42) 75%,
+                    rgba(0,0,0,.12) 100%
+                ),
+                url("assets/img/commercial automation/banner.png");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 1350px;
+            margin: auto;
+
+            padding: 100px 7%;
+
+            color: #fff;
+
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            margin-bottom: 24px;
+
+            color: #bbb;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .hero-label::before {
+            content: "";
+
+            width: 42px;
+            height: 1px;
+
+            background: #fff;
+        }
+
+        .hero h1 {
+            max-width: 950px;
+
+            color: #fff;
+
+            font-size: clamp(48px, 7vw, 92px);
+
+            line-height: .95;
+
+            font-weight: 700;
+
+            letter-spacing: -5px;
+
+            margin-bottom: 30px;
+
+            text-transform: uppercase;
+        }
+
+        .hero h1 span {
+            font-weight: 300;
+        }
+
+        .hero p {
+            max-width: 690px;
+
+            color: #d4d4d4;
+
+            font-size: 15px;
+
+            line-height: 1.9;
+
+            margin-bottom: 35px;
+        }
+
+        .hero-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+
+            padding: 15px 28px;
+
+            background: #fff;
+            color: #111;
+
+            border: 1px solid #fff;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            transition: .3s ease;
+        }
+
+        .hero-button:hover {
+            background: #111;
+            color: #fff;
+
+            transform: translateY(-3px);
+        }
+</style>
+
+<!-- HERO: HTML -->
 <section class="hero">
-
-    <div class="hero-content">
-
-
-        <div class="hero-label">
+<div class="hero-content">
+<div class="hero-label">
 
             Intelligent Buildings • Connected Operations
 
         </div>
-
-
-        <h1>
+<h1>
 
             Commercial
 
-            <br>
-
-            <span>Automation</span>
-
-        </h1>
-
-
-        <p>
+            <br/>
+<span>Automation</span>
+</h1>
+<p>
 
             Intelligent automation solutions that connect
             building systems, optimize operations and create
@@ -1639,236 +637,203 @@
             control, IoT connectivity and real-time monitoring.
 
         </p>
-
-
-        <a
-            href="#systems"
-            class="hero-button">
+<a class="hero-button" href="#systems">
 
             EXPLORE SOLUTIONS
 
             <i class="fas fa-arrow-right"></i>
-
-        </a>
-
-
-    </div>
-
+</a>
+</div>
 </section>
 
-
+<!-- END MODULE — HERO -->
 
 <!-- =========================================================
-     HIGHLIGHTS
+     MODULE — HIGHLIGHTS
 ========================================================= -->
 
+<!-- HIGHLIGHTS: CSS -->
+<style>
+.highlights {
+            width: 86%;
+            margin: -45px auto 0;
+
+            position: relative;
+            z-index: 10;
+
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+
+            background: #fff;
+
+            box-shadow: 0 20px 55px rgba(0,0,0,.12);
+        }
+
+        .highlight {
+            min-height: 115px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 16px;
+
+            padding: 20px 25px;
+
+            border-right: 1px solid #e5e5e5;
+        }
+
+        .highlight:last-child {
+            border-right: none;
+        }
+
+        .highlight-icon {
+            width: 44px;
+            height: 44px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #111;
+            color: #fff;
+
+            font-size: 17px;
+        }
+
+        .highlight h4 {
+            color: #111;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            margin-bottom: 6px;
+        }
+
+        .highlight p {
+            color: #777;
+
+            font-size: 10px;
+
+            line-height: 1.6;
+
+            margin: 0;
+        }
+</style>
+
+<!-- HIGHLIGHTS: HTML -->
 <section class="highlights">
-
-
-    <div class="highlight">
-
-        <div class="highlight-icon">
-
-            <i class="fas fa-building"></i>
-
-        </div>
-
-        <div>
-
-            <h4>
+<div class="highlight">
+<div class="highlight-icon">
+<i class="fas fa-building"></i>
+</div>
+<div>
+<h4>
                 Smart Buildings
             </h4>
-
-            <p>
+<p>
                 Connected systems for intelligent building operations.
             </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="highlight">
-
-        <div class="highlight-icon">
-
-            <i class="fas fa-gears"></i>
-
-        </div>
-
-        <div>
-
-            <h4>
+</div>
+</div>
+<div class="highlight">
+<div class="highlight-icon">
+<i class="fas fa-gears"></i>
+</div>
+<div>
+<h4>
                 Centralized Control
             </h4>
-
-            <p>
+<p>
                 Monitor and manage multiple systems from one platform.
             </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="highlight">
-
-        <div class="highlight-icon">
-
-            <i class="fas fa-chart-line"></i>
-
-        </div>
-
-        <div>
-
-            <h4>
+</div>
+</div>
+<div class="highlight">
+<div class="highlight-icon">
+<i class="fas fa-chart-line"></i>
+</div>
+<div>
+<h4>
                 Energy Management
             </h4>
-
-            <p>
+<p>
                 Improve visibility and operational efficiency.
             </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="highlight">
-
-        <div class="highlight-icon">
-
-            <i class="fas fa-cloud"></i>
-
-        </div>
-
-        <div>
-
-            <h4>
+</div>
+</div>
+<div class="highlight">
+<div class="highlight-icon">
+<i class="fas fa-cloud"></i>
+</div>
+<div>
+<h4>
                 IoT Connectivity
             </h4>
-
-            <p>
+<p>
                 Connected devices and real-time monitoring.
             </p>
-
-        </div>
-
-    </div>
-
-
+</div>
+</div>
 </section>
 
-
+<!-- END MODULE — HIGHLIGHTS -->
 
 <!-- =========================================================
-     COMMERCIAL AUTOMATION INTRO
+     MODULE — SECTION COMMON STYLES
 ========================================================= -->
 
-<section class="ca-intro-section">
-
-    <div class="ca-intro-container">
-
-        <!-- LEFT CONTENT -->
-        <article class="ca-intro-primary">
-
-            <div class="ca-intro-number">01</div>
-
-            <div class="ca-intro-label">
-                Intelligent Commercial Spaces
-            </div>
-
-            <h2 class="ca-intro-title">
-                Buildings That
-                <span>Think Ahead.</span>
-            </h2>
-
-            <div class="ca-intro-line"></div>
-
-            <p class="ca-intro-description">
-                Modern commercial buildings depend on multiple
-                electrical, mechanical and operational systems.
-                Commercial automation brings these systems together
-                through intelligent control and monitoring.
-            </p>
-
-            <div class="ca-intro-status">
-                <span class="ca-intro-status-dot"></span>
-                Integrated Building Intelligence
-            </div>
-
-        </article>
-
-
-        <!-- RIGHT CONTENT -->
-        <article class="ca-intro-secondary">
-
-            <div class="ca-intro-top">
-
-                <div class="ca-intro-label">
-                    Connected Operations
-                </div>
-
-                <div class="ca-intro-number ca-intro-number-light">
-                    02
-                </div>
-
-            </div>
-
-            <h2 class="ca-intro-title ca-intro-title-dark">
-                One Platform.
-                <span>Multiple Systems.</span>
-            </h2>
-
-            <div class="ca-intro-line"></div>
-
-            <p class="ca-intro-description ca-intro-description-dark">
-                From HVAC and lighting to energy monitoring,
-                access control and building management systems,
-                automation creates a connected operating environment.
-            </p>
-
-            <p class="ca-intro-description ca-intro-description-dark">
-                The result is improved visibility, better control,
-                efficient resource usage and a more responsive
-                building experience.
-            </p>
-
-
-            <!-- CONNECTED SYSTEMS -->
-            <div class="ca-system-grid">
-
-                <div class="ca-system-item">
-                    <span>01</span>
-                    <strong>HVAC Control</strong>
-                </div>
-
-                <div class="ca-system-item">
-                    <span>02</span>
-                    <strong>Smart Lighting</strong>
-                </div>
-
-                <div class="ca-system-item">
-                    <span>03</span>
-                    <strong>Energy Monitoring</strong>
-                </div>
-
-                <div class="ca-system-item">
-                    <span>04</span>
-                    <strong>Access Management</strong>
-                </div>
-
-            </div>
-
-        </article>
-
-    </div>
-
-</section>
-
-
+<!-- SECTION COMMON STYLES: CSS -->
 <style>
+.section-label {
+            color: #777;
 
+            font-size: 10px;
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 14px;
+        }
+
+        .section-title {
+            color: #111;
+
+            font-size: clamp(34px,4vw,58px);
+
+            line-height: 1.08;
+
+            font-weight: 600;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 0;
+        }
+
+        .section-line {
+            width: 45px;
+            height: 3px;
+
+            background: #111;
+
+            margin: 20px 0 25px;
+        }
+</style>
+
+<!-- SECTION COMMON STYLES: HTML -->
+
+
+<!-- END MODULE — SECTION COMMON STYLES -->
+
+<!-- =========================================================
+     MODULE — COMMERCIAL AUTOMATION INTRO
+========================================================= -->
+
+<!-- COMMERCIAL AUTOMATION INTRO: CSS -->
+<style>
 /* =========================================================
    COMMERCIAL AUTOMATION INTRO
 ========================================================= */
@@ -2201,424 +1166,89 @@
     }
 
 }
-
 </style>
 
-
-
-<!-- =========================================================
-     COMMERCIAL AUTOMATION SYSTEMS
-========================================================= -->
-
-<section class="ca-systems-section" id="systems">
-
-    <!-- SECTION HEADING -->
-    <div class="ca-systems-heading">
-
-        <div class="ca-heading-title">
-
-            <div class="ca-section-label">
-                Commercial Automation Solutions
+<!-- COMMERCIAL AUTOMATION INTRO: HTML -->
+<section class="ca-intro-section">
+<div class="ca-intro-container">
+<!-- LEFT CONTENT -->
+<article class="ca-intro-primary">
+<div class="ca-intro-number">01</div>
+<div class="ca-intro-label">
+                Intelligent Commercial Spaces
             </div>
-
-            <h2>
-                Intelligent Control
-                <span>Across Your Building.</span>
-            </h2>
-
-        </div>
-
-        <div class="ca-heading-description">
-
-            <div class="ca-heading-line"></div>
-
-            <p>
-                Integrated automation solutions designed for
-                offices, commercial buildings, retail spaces,
-                business parks and other modern facilities.
+<h2 class="ca-intro-title">
+                Buildings That
+                <span>Think Ahead.</span>
+</h2>
+<div class="ca-intro-line"></div>
+<p class="ca-intro-description">
+                Modern commercial buildings depend on multiple
+                electrical, mechanical and operational systems.
+                Commercial automation brings these systems together
+                through intelligent control and monitoring.
             </p>
-
-        </div>
-
-    </div>
-
-
-    <!-- SYSTEMS BENTO GRID -->
-    <div class="ca-systems-grid">
-
-
-        <!-- 01: BMS -->
-        <article class="ca-system-card ca-card-bms">
-
-            <img
-                src="assets/img/commercial automation/building-management-system.png"
-                alt="Building management system control room"
-                loading="lazy"
-            >
-
-            <div class="ca-card-shade"></div>
-
-            <div class="ca-card-top">
-
-                <span class="ca-card-number">01</span>
-
-                <div class="ca-card-icon">
-                    <i class="fas fa-building-circle-check"></i>
-                </div>
-
+<div class="ca-intro-status">
+<span class="ca-intro-status-dot"></span>
+                Integrated Building Intelligence
             </div>
-
-            <div class="ca-card-content">
-
-                <div class="ca-card-status">
-                    <span></span>
-                    Centralized Intelligence
-                </div>
-
-                <h3>Building Management System</h3>
-
-                <p>
-                    Centralized monitoring and control of building
-                    services, providing operators with improved
-                    visibility across critical systems.
-                </p>
-
-            </div>
-
-        </article>
-
-
-        <!-- 02: HVAC -->
-        <article class="ca-system-card ca-card-hvac">
-
-            <img
-                src="assets/img/commercial automation/hvac-automation.png"
-                alt="Commercial HVAC automation system"
-                loading="lazy"
-            >
-
-            <div class="ca-card-shade"></div>
-
-            <div class="ca-card-top">
-
-                <span class="ca-card-number">02</span>
-
-                <div class="ca-card-icon">
-                    <i class="fas fa-temperature-half"></i>
-                </div>
-
-            </div>
-
-            <div class="ca-card-content">
-
-                <div class="ca-card-status">
-                    <span></span>
-                    Climate Intelligence
-                </div>
-
-                <h3>HVAC Automation</h3>
-
-                <p>
-                    Intelligent control of heating, ventilation and
-                    air-conditioning based on schedules, occupancy
-                    and operating conditions.
-                </p>
-
-            </div>
-
-        </article>
-
-
-        <!-- 03: LIGHTING -->
-        <article class="ca-system-card ca-card-standard">
-
-            <img
-                src="assets/img/commercial automation/lighting-automation.png"
-                alt="Automated lighting in a commercial building"
-                loading="lazy"
-            >
-
-            <div class="ca-card-shade"></div>
-
-            <div class="ca-card-top">
-
-                <span class="ca-card-number">03</span>
-
-                <div class="ca-card-icon">
-                    <i class="fas fa-lightbulb"></i>
-                </div>
-
-            </div>
-
-            <div class="ca-card-content">
-
-                <div class="ca-card-status">
-                    <span></span>
-                    Adaptive Lighting
-                </div>
-
-                <h3>Lighting Automation</h3>
-
-                <p>
-                    Automated commercial lighting using schedules,
-                    occupancy sensing, daylight response and
-                    centralized controls.
-                </p>
-
-            </div>
-
-        </article>
-
-
-        <!-- 04: ENERGY -->
-        <article class="ca-system-card ca-card-standard">
-
-            <img
-                src="assets/img/commercial automation/energy-monitoring.jpg"
-                alt="Commercial building energy monitoring"
-                loading="lazy"
-            >
-
-            <div class="ca-card-shade"></div>
-
-            <div class="ca-card-top">
-
-                <span class="ca-card-number">04</span>
-
-                <div class="ca-card-icon">
-                    <i class="fas fa-bolt"></i>
-                </div>
-
-            </div>
-
-            <div class="ca-card-content">
-
-                <div class="ca-card-status">
-                    <span></span>
-                    Energy Visibility
-                </div>
-
-                <h3>Energy Monitoring</h3>
-
-                <p>
-                    Monitor electrical consumption across panels,
-                    equipment and building zones for improved
-                    energy management.
-                </p>
-
-            </div>
-
-        </article>
-
-
-        <!-- 05: IOT -->
-        <article class="ca-system-card ca-card-standard">
-
-            <img
-                src="assets/img/commercial automation/iot-integration.png"
-                alt="IoT-connected commercial building systems"
-                loading="lazy"
-            >
-
-            <div class="ca-card-shade"></div>
-
-            <div class="ca-card-top">
-
-                <span class="ca-card-number">05</span>
-
-                <div class="ca-card-icon">
-                    <i class="fas fa-wifi"></i>
-                </div>
-
-            </div>
-
-            <div class="ca-card-content">
-
-                <div class="ca-card-status">
-                    <span></span>
+</article>
+<!-- RIGHT CONTENT -->
+<article class="ca-intro-secondary">
+<div class="ca-intro-top">
+<div class="ca-intro-label">
                     Connected Operations
                 </div>
-
-                <h3>IoT Integration</h3>
-
-                <p>
-                    Connect equipment, meters, sensors and existing
-                    systems to an IoT-enabled monitoring environment.
-                </p>
-
-            </div>
-
-        </article>
-
-
-        <!-- 06: ACCESS -->
-        <article class="ca-system-card ca-card-access">
-
-            <img
-                src="assets/img/commercial automation/access-integration.png"
-                alt="Smart commercial access control system"
-                loading="lazy"
-            >
-
-            <div class="ca-card-shade"></div>
-
-            <div class="ca-card-top">
-
-                <span class="ca-card-number">06</span>
-
-                <div class="ca-card-icon">
-                    <i class="fas fa-id-card"></i>
+<div class="ca-intro-number ca-intro-number-light">
+                    02
                 </div>
-
-            </div>
-
-            <div class="ca-card-content">
-
-                <div class="ca-card-status">
-                    <span></span>
-                    Secure Entry
-                </div>
-
-                <h3>Access Integration</h3>
-
-                <p>
-                    Integrated access and security systems supporting
-                    controlled entry and improved building visibility.
-                </p>
-
-            </div>
-
-        </article>
-
-
-        <!-- 07: OCCUPANCY -->
-        <article class="ca-system-card ca-card-occupancy">
-
-            <img
-                src="assets/img/commercial automation/occupancy-management.png"
-                alt="Smart occupancy management in an office"
-                loading="lazy"
-            >
-
-            <div class="ca-card-shade"></div>
-
-            <div class="ca-card-top">
-
-                <span class="ca-card-number">07</span>
-
-                <div class="ca-card-icon">
-                    <i class="fas fa-users-viewfinder"></i>
-                </div>
-
-            </div>
-
-            <div class="ca-card-content">
-
-                <div class="ca-card-status">
-                    <span></span>
-                    Space Intelligence
-                </div>
-
-                <h3>Occupancy Management</h3>
-
-                <p>
-                    Optimize lighting, HVAC and other services using
-                    accurate information based on actual space usage.
-                </p>
-
-            </div>
-
-        </article>
-
-
-        <!-- 08: EQUIPMENT -->
-        <article class="ca-system-card ca-card-equipment">
-
-            <img
-                src="assets/img/commercial automation/equipment-monitoring.png"
-                alt="Commercial mechanical equipment monitoring"
-                loading="lazy"
-            >
-
-            <div class="ca-card-shade"></div>
-
-            <div class="ca-card-top">
-
-                <span class="ca-card-number">08</span>
-
-                <div class="ca-card-icon">
-                    <i class="fas fa-industry"></i>
-                </div>
-
-            </div>
-
-            <div class="ca-card-content">
-
-                <div class="ca-card-status">
-                    <span></span>
-                    Operational Awareness
-                </div>
-
-                <h3>Equipment Monitoring</h3>
-
-                <p>
-                    Monitor electrical and mechanical equipment
-                    to improve operational awareness and support
-                    maintenance planning.
-                </p>
-
-            </div>
-
-        </article>
-
-
-        <!-- 09: DASHBOARD -->
-        <article class="ca-system-card ca-card-dashboard">
-
-            <img
-                src="assets/img/commercial automation/centralized-dashboard.png"
-                alt="Centralized commercial building automation dashboard"
-                loading="lazy"
-            >
-
-            <div class="ca-card-shade"></div>
-
-            <div class="ca-card-top">
-
-                <span class="ca-card-number">09</span>
-
-                <div class="ca-card-icon">
-                    <i class="fas fa-display"></i>
-                </div>
-
-            </div>
-
-            <div class="ca-card-content">
-
-                <div class="ca-card-status">
-                    <span></span>
-                    Real-Time Intelligence
-                </div>
-
-                <h3>Centralized Dashboard</h3>
-
-                <p>
-                    Bring important operational information into
-                    intuitive dashboards for faster monitoring
-                    and informed decision-making.
-                </p>
-
-            </div>
-
-        </article>
-
-    </div>
-
+</div>
+<h2 class="ca-intro-title ca-intro-title-dark">
+                One Platform.
+                <span>Multiple Systems.</span>
+</h2>
+<div class="ca-intro-line"></div>
+<p class="ca-intro-description ca-intro-description-dark">
+                From HVAC and lighting to energy monitoring,
+                access control and building management systems,
+                automation creates a connected operating environment.
+            </p>
+<p class="ca-intro-description ca-intro-description-dark">
+                The result is improved visibility, better control,
+                efficient resource usage and a more responsive
+                building experience.
+            </p>
+<!-- CONNECTED SYSTEMS -->
+<div class="ca-system-grid">
+<div class="ca-system-item">
+<span>01</span>
+<strong>HVAC Control</strong>
+</div>
+<div class="ca-system-item">
+<span>02</span>
+<strong>Smart Lighting</strong>
+</div>
+<div class="ca-system-item">
+<span>03</span>
+<strong>Energy Monitoring</strong>
+</div>
+<div class="ca-system-item">
+<span>04</span>
+<strong>Access Management</strong>
+</div>
+</div>
+</article>
+</div>
 </section>
 
+<!-- END MODULE — COMMERCIAL AUTOMATION INTRO -->
 
+<!-- =========================================================
+     MODULE — COMMERCIAL AUTOMATION SYSTEMS
+========================================================= -->
+
+<!-- COMMERCIAL AUTOMATION SYSTEMS: CSS -->
 <style>
-
 /* =========================================================
    COMMERCIAL AUTOMATION SYSTEMS
 ========================================================= */
@@ -3031,54 +1661,374 @@
     }
 
 }
-
 </style>
 
+<!-- COMMERCIAL AUTOMATION SYSTEMS: HTML -->
+<section class="ca-systems-section" id="systems">
+<!-- SECTION HEADING -->
+<div class="ca-systems-heading">
+<div class="ca-heading-title">
+<div class="ca-section-label">
+                Commercial Automation Solutions
+            </div>
+<h2>
+                Intelligent Control
+                <span>Across Your Building.</span>
+</h2>
+</div>
+<div class="ca-heading-description">
+<div class="ca-heading-line"></div>
+<p>
+                Integrated automation solutions designed for
+                offices, commercial buildings, retail spaces,
+                business parks and other modern facilities.
+            </p>
+</div>
+</div>
+<!-- SYSTEMS BENTO GRID -->
+<div class="ca-systems-grid">
+<!-- 01: BMS -->
+<article class="ca-system-card ca-card-bms">
+<img alt="Building management system control room" loading="lazy" src="assets/img/commercial automation/building-management-system.png"/>
+<div class="ca-card-shade"></div>
+<div class="ca-card-top">
+<span class="ca-card-number">01</span>
+<div class="ca-card-icon">
+<i class="fas fa-building-circle-check"></i>
+</div>
+</div>
+<div class="ca-card-content">
+<div class="ca-card-status">
+<span></span>
+                    Centralized Intelligence
+                </div>
+<h3>Building Management System</h3>
+<p>
+                    Centralized monitoring and control of building
+                    services, providing operators with improved
+                    visibility across critical systems.
+                </p>
+</div>
+</article>
+<!-- 02: HVAC -->
+<article class="ca-system-card ca-card-hvac">
+<img alt="Commercial HVAC automation system" loading="lazy" src="assets/img/commercial automation/hvac-automation.png"/>
+<div class="ca-card-shade"></div>
+<div class="ca-card-top">
+<span class="ca-card-number">02</span>
+<div class="ca-card-icon">
+<i class="fas fa-temperature-half"></i>
+</div>
+</div>
+<div class="ca-card-content">
+<div class="ca-card-status">
+<span></span>
+                    Climate Intelligence
+                </div>
+<h3>HVAC Automation</h3>
+<p>
+                    Intelligent control of heating, ventilation and
+                    air-conditioning based on schedules, occupancy
+                    and operating conditions.
+                </p>
+</div>
+</article>
+<!-- 03: LIGHTING -->
+<article class="ca-system-card ca-card-standard">
+<img alt="Automated lighting in a commercial building" loading="lazy" src="assets/img/commercial automation/lighting-automation.png"/>
+<div class="ca-card-shade"></div>
+<div class="ca-card-top">
+<span class="ca-card-number">03</span>
+<div class="ca-card-icon">
+<i class="fas fa-lightbulb"></i>
+</div>
+</div>
+<div class="ca-card-content">
+<div class="ca-card-status">
+<span></span>
+                    Adaptive Lighting
+                </div>
+<h3>Lighting Automation</h3>
+<p>
+                    Automated commercial lighting using schedules,
+                    occupancy sensing, daylight response and
+                    centralized controls.
+                </p>
+</div>
+</article>
+<!-- 04: ENERGY -->
+<article class="ca-system-card ca-card-standard">
+<img alt="Commercial building energy monitoring" loading="lazy" src="assets/img/commercial automation/energy-monitoring.jpg"/>
+<div class="ca-card-shade"></div>
+<div class="ca-card-top">
+<span class="ca-card-number">04</span>
+<div class="ca-card-icon">
+<i class="fas fa-bolt"></i>
+</div>
+</div>
+<div class="ca-card-content">
+<div class="ca-card-status">
+<span></span>
+                    Energy Visibility
+                </div>
+<h3>Energy Monitoring</h3>
+<p>
+                    Monitor electrical consumption across panels,
+                    equipment and building zones for improved
+                    energy management.
+                </p>
+</div>
+</article>
+<!-- 05: IOT -->
+<article class="ca-system-card ca-card-standard">
+<img alt="IoT-connected commercial building systems" loading="lazy" src="assets/img/commercial automation/iot-integration.png"/>
+<div class="ca-card-shade"></div>
+<div class="ca-card-top">
+<span class="ca-card-number">05</span>
+<div class="ca-card-icon">
+<i class="fas fa-wifi"></i>
+</div>
+</div>
+<div class="ca-card-content">
+<div class="ca-card-status">
+<span></span>
+                    Connected Operations
+                </div>
+<h3>IoT Integration</h3>
+<p>
+                    Connect equipment, meters, sensors and existing
+                    systems to an IoT-enabled monitoring environment.
+                </p>
+</div>
+</article>
+<!-- 06: ACCESS -->
+<article class="ca-system-card ca-card-access">
+<img alt="Smart commercial access control system" loading="lazy" src="assets/img/commercial automation/access-integration.png"/>
+<div class="ca-card-shade"></div>
+<div class="ca-card-top">
+<span class="ca-card-number">06</span>
+<div class="ca-card-icon">
+<i class="fas fa-id-card"></i>
+</div>
+</div>
+<div class="ca-card-content">
+<div class="ca-card-status">
+<span></span>
+                    Secure Entry
+                </div>
+<h3>Access Integration</h3>
+<p>
+                    Integrated access and security systems supporting
+                    controlled entry and improved building visibility.
+                </p>
+</div>
+</article>
+<!-- 07: OCCUPANCY -->
+<article class="ca-system-card ca-card-occupancy">
+<img alt="Smart occupancy management in an office" loading="lazy" src="assets/img/commercial automation/occupancy-management.png"/>
+<div class="ca-card-shade"></div>
+<div class="ca-card-top">
+<span class="ca-card-number">07</span>
+<div class="ca-card-icon">
+<i class="fas fa-users-viewfinder"></i>
+</div>
+</div>
+<div class="ca-card-content">
+<div class="ca-card-status">
+<span></span>
+                    Space Intelligence
+                </div>
+<h3>Occupancy Management</h3>
+<p>
+                    Optimize lighting, HVAC and other services using
+                    accurate information based on actual space usage.
+                </p>
+</div>
+</article>
+<!-- 08: EQUIPMENT -->
+<article class="ca-system-card ca-card-equipment">
+<img alt="Commercial mechanical equipment monitoring" loading="lazy" src="assets/img/commercial automation/equipment-monitoring.png"/>
+<div class="ca-card-shade"></div>
+<div class="ca-card-top">
+<span class="ca-card-number">08</span>
+<div class="ca-card-icon">
+<i class="fas fa-industry"></i>
+</div>
+</div>
+<div class="ca-card-content">
+<div class="ca-card-status">
+<span></span>
+                    Operational Awareness
+                </div>
+<h3>Equipment Monitoring</h3>
+<p>
+                    Monitor electrical and mechanical equipment
+                    to improve operational awareness and support
+                    maintenance planning.
+                </p>
+</div>
+</article>
+<!-- 09: DASHBOARD -->
+<article class="ca-system-card ca-card-dashboard">
+<img alt="Centralized commercial building automation dashboard" loading="lazy" src="assets/img/commercial automation/centralized-dashboard.png"/>
+<div class="ca-card-shade"></div>
+<div class="ca-card-top">
+<span class="ca-card-number">09</span>
+<div class="ca-card-icon">
+<i class="fas fa-display"></i>
+</div>
+</div>
+<div class="ca-card-content">
+<div class="ca-card-status">
+<span></span>
+                    Real-Time Intelligence
+                </div>
+<h3>Centralized Dashboard</h3>
+<p>
+                    Bring important operational information into
+                    intuitive dashboards for faster monitoring
+                    and informed decision-making.
+                </p>
+</div>
+</article>
+</div>
+</section>
 
+<!-- END MODULE — COMMERCIAL AUTOMATION SYSTEMS -->
 
 <!-- =========================================================
-     BMS + IoT
+     MODULE — BMS + IOT INTEGRATION
 ========================================================= -->
 
+<!-- BMS + IOT INTEGRATION: CSS -->
+<style>
+.bms-section {
+            padding: 110px 8%;
+
+            background: #fff;
+        }
+
+        .bms-layout {
+            max-width: 1250px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 80px;
+
+            align-items: center;
+        }
+
+        .bms-image {
+            min-height: 510px;
+
+            position: relative;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.20),
+                    rgba(0,0,0,.20)
+                ),
+                url("assets/img/commercial automation/BMS + IoT INTEGRATION.png");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .bms-tag {
+            position: absolute;
+
+            left: 25px;
+            bottom: 25px;
+
+            padding: 18px 22px;
+
+            background: #111;
+
+            color: #fff;
+
+            border-left: 4px solid #fff;
+        }
+
+        .bms-tag strong {
+            display: block;
+
+            color: #fff;
+
+            font-size: 13px;
+
+            margin-bottom: 5px;
+        }
+
+        .bms-tag span {
+            color: #aaa;
+
+            font-size: 9px;
+
+            letter-spacing: 1px;
+        }
+
+        .bms-content p {
+            color: #666;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+
+            margin-bottom: 25px;
+        }
+
+        .bms-list {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 10px;
+        }
+
+        .bms-item {
+            padding: 17px;
+
+            background: #f5f5f5;
+
+            border-left: 3px solid #111;
+
+            color: #222;
+
+            font-size: 10px;
+
+            font-weight: 600;
+        }
+</style>
+
+<!-- BMS + IOT INTEGRATION: HTML -->
 <section class="bms-section">
-
-
-    <div class="bms-layout">
-
-
-        <div class="bms-image">
-
-            <div class="bms-tag">
-
-                <strong>
+<div class="bms-layout">
+<div class="bms-image">
+<div class="bms-tag">
+<strong>
                     BMS + IoT INTEGRATION
                 </strong>
-
-                <span>
+<span>
                     CONNECT • MONITOR • OPTIMIZE
                 </span>
-
-            </div>
-
-        </div>
-
-
-        <div class="bms-content">
-
-            <div class="section-label">
+</div>
+</div>
+<div class="bms-content">
+<div class="section-label">
                 Connected Building Intelligence
             </div>
-
-            <h2 class="section-title">
+<h2 class="section-title">
 
                 Connect Existing
                 Systems With IoT
 
             </h2>
-
-            <div class="section-line"></div>
-
-            <p>
+<div class="section-line"></div>
+<p>
 
                 Commercial facilities often contain multiple
                 systems operating independently. IoT integration
@@ -3086,8 +2036,7 @@
                 a connected monitoring environment.
 
             </p>
-
-            <p>
+<p>
 
                 Existing BMS, electrical panels, meters,
                 sensors and equipment can be connected to
@@ -3095,405 +2044,568 @@
                 greater operational visibility.
 
             </p>
-
-
-            <div class="bms-list">
-
-                <div class="bms-item">
+<div class="bms-list">
+<div class="bms-item">
                     BMS Integration
                 </div>
-
-                <div class="bms-item">
+<div class="bms-item">
                     IoT Monitoring
                 </div>
-
-                <div class="bms-item">
+<div class="bms-item">
                     HT Panel Monitoring
                 </div>
-
-                <div class="bms-item">
+<div class="bms-item">
                     Transformer Monitoring
                 </div>
-
-                <div class="bms-item">
+<div class="bms-item">
                     LT Panel Monitoring
                 </div>
-
-                <div class="bms-item">
+<div class="bms-item">
                     Energy Metering
                 </div>
-
-                <div class="bms-item">
+<div class="bms-item">
                     Real-Time Dashboards
                 </div>
-
-                <div class="bms-item">
-                    Alerts & Notifications
+<div class="bms-item">
+                    Alerts &amp; Notifications
                 </div>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
+</div>
+</div>
+</div>
 </section>
 
-
+<!-- END MODULE — BMS + IOT INTEGRATION -->
 
 <!-- =========================================================
-     CENTRAL CONTROL
+     MODULE — CENTRAL CONTROL
 ========================================================= -->
 
+<!-- CENTRAL CONTROL: CSS -->
+<style>
+.control-section {
+            padding: 110px 8%;
+
+            background: #050505;
+
+            color: #fff;
+        }
+
+        .control-header {
+            max-width: 780px;
+
+            margin: 0 auto 55px;
+
+            text-align: center;
+        }
+
+        .control-header .section-label {
+            color: #aaa;
+        }
+
+        .control-header .section-title {
+            color: #fff;
+        }
+
+        .control-header .section-line {
+            background: #fff;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .control-header p {
+            color: #aaa;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+        .control-grid {
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(5,1fr);
+
+            gap: 10px;
+        }
+
+        .control-card {
+            min-height: 210px;
+
+            padding: 25px 15px;
+
+            text-align: center;
+
+            border: 1px solid #333;
+
+            background: rgba(255,255,255,.03);
+
+            transition: .3s ease;
+        }
+
+        .control-card:hover {
+            background: #fff;
+
+            transform: translateY(-6px);
+        }
+
+        .control-number {
+            width: 45px;
+            height: 45px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0 auto 16px;
+
+            background: #fff;
+            color: #111;
+
+            border-radius: 50%;
+
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .control-card h4 {
+            color: #fff;
+
+            font-size: 10px;
+
+            margin-bottom: 8px;
+
+            transition: .3s;
+        }
+
+        .control-card p {
+            color: #aaa;
+
+            font-size: 9px;
+
+            line-height: 1.6;
+
+            transition: .3s;
+        }
+
+        .control-card:hover h4 {
+            color: #111;
+        }
+
+        .control-card:hover p {
+            color: #555;
+        }
+</style>
+
+<!-- CENTRAL CONTROL: HTML -->
 <section class="control-section">
-
-
-    <div class="control-header">
-
-        <div class="section-label">
+<div class="control-header">
+<div class="section-label">
             Intelligent Building Workflow
         </div>
-
-        <h2 class="section-title">
+<h2 class="section-title">
 
             From Data To
             Better Decisions
 
         </h2>
-
-        <div class="section-line"></div>
-
-        <p>
+<div class="section-line"></div>
+<p>
 
             Commercial automation transforms information from
             connected building systems into actionable insights
             and automated responses.
 
         </p>
-
-    </div>
-
-
-    <div class="control-grid">
-
-
-        <div class="control-card">
-
-            <div class="control-number">
+</div>
+<div class="control-grid">
+<div class="control-card">
+<div class="control-number">
                 01
             </div>
-
-            <h4>
+<h4>
                 CONNECT
             </h4>
-
-            <p>
+<p>
 
                 Connect meters, sensors, equipment and
                 supported building systems.
 
             </p>
-
-        </div>
-
-
-        <div class="control-card">
-
-            <div class="control-number">
+</div>
+<div class="control-card">
+<div class="control-number">
                 02
             </div>
-
-            <h4>
+<h4>
                 COLLECT
             </h4>
-
-            <p>
+<p>
 
                 Collect relevant operational and energy
                 information from connected assets.
 
             </p>
-
-        </div>
-
-
-        <div class="control-card">
-
-            <div class="control-number">
+</div>
+<div class="control-card">
+<div class="control-number">
                 03
             </div>
-
-            <h4>
+<h4>
                 ANALYZE
             </h4>
-
-            <p>
+<p>
 
                 Convert collected information into useful
                 operational visibility.
 
             </p>
-
-        </div>
-
-
-        <div class="control-card">
-
-            <div class="control-number">
+</div>
+<div class="control-card">
+<div class="control-number">
                 04
             </div>
-
-            <h4>
+<h4>
                 AUTOMATE
             </h4>
-
-            <p>
+<p>
 
                 Apply configured rules and automated responses
                 where required.
 
             </p>
-
-        </div>
-
-
-        <div class="control-card">
-
-            <div class="control-number">
+</div>
+<div class="control-card">
+<div class="control-number">
                 05
             </div>
-
-            <h4>
+<h4>
                 OPTIMIZE
             </h4>
-
-            <p>
+<p>
 
                 Use insights to improve operational efficiency
                 and system performance.
 
             </p>
-
-        </div>
-
-
-    </div>
-
+</div>
+</div>
 </section>
 
-
+<!-- END MODULE — CENTRAL CONTROL -->
 
 <!-- =========================================================
-     FEATURES
+     MODULE — FEATURES
 ========================================================= -->
 
+<!-- FEATURES: CSS -->
+<style>
+.features-section {
+            padding: 105px 8%;
+
+            background: #f5f5f5;
+        }
+
+        .features-header {
+            max-width: 1250px;
+
+            margin: auto;
+        }
+
+        .features-grid {
+            max-width: 1250px;
+
+            margin: 45px auto 0;
+
+            display: grid;
+
+            grid-template-columns: repeat(4,1fr);
+
+            gap: 16px;
+        }
+
+        .feature-card {
+            padding: 28px 22px;
+
+            background: #fff;
+
+            border: 1px solid #e5e5e5;
+
+            transition: .3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+
+            border-color: #111;
+        }
+
+        .feature-card i {
+            color: #111;
+
+            font-size: 23px;
+
+            margin-bottom: 17px;
+        }
+
+        .feature-card h4 {
+            color: #111;
+
+            font-size: 12px;
+
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            color: #777;
+
+            font-size: 10px;
+
+            line-height: 1.7;
+        }
+</style>
+
+<!-- FEATURES: HTML -->
 <section class="features-section">
-
-
-    <div class="features-header">
-
-        <div class="section-label">
+<div class="features-header">
+<div class="section-label">
             Key Capabilities
         </div>
-
-        <h2 class="section-title">
+<h2 class="section-title">
 
             Designed For
             Modern Commercial Operations
 
         </h2>
-
-        <div class="section-line"></div>
-
-    </div>
-
-
-    <div class="features-grid">
-
-
-        <div class="feature-card">
-
-            <i class="fas fa-gauge-high"></i>
-
-            <h4>
+<div class="section-line"></div>
+</div>
+<div class="features-grid">
+<div class="feature-card">
+<i class="fas fa-gauge-high"></i>
+<h4>
                 Real-Time Monitoring
             </h4>
-
-            <p>
+<p>
 
                 Monitor selected building parameters
                 through centralized dashboards.
 
             </p>
-
-        </div>
-
-
-        <div class="feature-card">
-
-            <i class="fas fa-bell"></i>
-
-            <h4>
-                Alerts & Notifications
+</div>
+<div class="feature-card">
+<i class="fas fa-bell"></i>
+<h4>
+                Alerts &amp; Notifications
             </h4>
-
-            <p>
+<p>
 
                 Receive configured alerts when selected
                 conditions require attention.
 
             </p>
-
-        </div>
-
-
-        <div class="feature-card">
-
-            <i class="fas fa-clock"></i>
-
-            <h4>
+</div>
+<div class="feature-card">
+<i class="fas fa-clock"></i>
+<h4>
                 Scheduling
             </h4>
-
-            <p>
+<p>
 
                 Automate equipment and building systems
                 around operating schedules.
 
             </p>
-
-        </div>
-
-
-        <div class="feature-card">
-
-            <i class="fas fa-users"></i>
-
-            <h4>
+</div>
+<div class="feature-card">
+<i class="fas fa-users"></i>
+<h4>
                 Occupancy Based Control
             </h4>
-
-            <p>
+<p>
 
                 Adjust selected systems according to
                 occupancy and space utilization.
 
             </p>
-
-        </div>
-
-
-        <div class="feature-card">
-
-            <i class="fas fa-chart-column"></i>
-
-            <h4>
+</div>
+<div class="feature-card">
+<i class="fas fa-chart-column"></i>
+<h4>
                 Energy Analytics
             </h4>
-
-            <p>
+<p>
 
                 Improve understanding of energy consumption
                 through organized monitoring data.
 
             </p>
-
-        </div>
-
-
-        <div class="feature-card">
-
-            <i class="fas fa-mobile-screen"></i>
-
-            <h4>
+</div>
+<div class="feature-card">
+<i class="fas fa-mobile-screen"></i>
+<h4>
                 Remote Access
             </h4>
-
-            <p>
+<p>
 
                 Access supported dashboards and monitoring
                 systems remotely.
 
             </p>
-
-        </div>
-
-
-        <div class="feature-card">
-
-            <i class="fas fa-database"></i>
-
-            <h4>
+</div>
+<div class="feature-card">
+<i class="fas fa-database"></i>
+<h4>
                 Data Logging
             </h4>
-
-            <p>
+<p>
 
                 Maintain operational information for analysis,
                 reporting and review.
 
             </p>
-
-        </div>
-
-
-        <div class="feature-card">
-
-            <i class="fas fa-layer-group"></i>
-
-            <h4>
+</div>
+<div class="feature-card">
+<i class="fas fa-layer-group"></i>
+<h4>
                 Scalable Architecture
             </h4>
-
-            <p>
+<p>
 
                 Build automation systems that can expand
                 as facility requirements evolve.
 
             </p>
-
-        </div>
-
-
-    </div>
-
+</div>
+</div>
 </section>
 
-
+<!-- END MODULE — FEATURES -->
 
 <!-- =========================================================
-     ENERGY MANAGEMENT
+     MODULE — ENERGY MANAGEMENT
 ========================================================= -->
 
+<!-- ENERGY MANAGEMENT: CSS -->
+<style>
+.energy-section {
+            padding: 110px 8%;
+
+            background: #fff;
+        }
+
+        .energy-layout {
+            max-width: 1250px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: .8fr 1.2fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .energy-description {
+            color: #666;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+        .energy-list {
+            display: grid;
+
+            grid-template-columns: repeat(2,1fr);
+
+            gap: 12px;
+        }
+
+        .energy-item {
+            padding: 22px;
+
+            background: #f7f7f7;
+
+            border: 1px solid #e5e5e5;
+
+            transition: .3s ease;
+        }
+
+        .energy-item:hover {
+            background: #111;
+
+            transform: translateY(-5px);
+        }
+
+        .energy-item i {
+            color: #111;
+
+            font-size: 17px;
+
+            margin-bottom: 12px;
+
+            transition: .3s;
+        }
+
+        .energy-item strong {
+            display: block;
+
+            color: #111;
+
+            font-size: 11px;
+
+            margin-bottom: 6px;
+
+            transition: .3s;
+        }
+
+        .energy-item span {
+            color: #777;
+
+            font-size: 9px;
+
+            line-height: 1.6;
+
+            transition: .3s;
+        }
+
+        .energy-item:hover i,
+        .energy-item:hover strong {
+            color: #fff;
+        }
+
+        .energy-item:hover span {
+            color: #aaa;
+        }
+</style>
+
+<!-- ENERGY MANAGEMENT: HTML -->
 <section class="energy-section">
-
-
-    <div class="energy-layout">
-
-
-        <div>
-
-            <div class="section-label">
-                Energy & Operational Efficiency
+<div class="energy-layout">
+<div>
+<div class="section-label">
+                Energy &amp; Operational Efficiency
             </div>
-
-            <h2 class="section-title">
+<h2 class="section-title">
 
                 Make Energy
                 Visible
 
             </h2>
-
-            <div class="section-line"></div>
-
-            <p class="energy-description">
+<div class="section-line"></div>
+<p class="energy-description">
 
                 Commercial facilities can contain numerous
                 electrical loads operating across different
                 areas and schedules.
 
-                <br><br>
+                <br/><br/>
 
                 Energy monitoring and intelligent automation
                 provide better visibility into consumption
@@ -3501,144 +2613,166 @@
                 informed operational decisions.
 
             </p>
-
-        </div>
-
-
-        <div class="energy-list">
-
-
-            <div class="energy-item">
-
-                <i class="fas fa-plug"></i>
-
-                <strong>
+</div>
+<div class="energy-list">
+<div class="energy-item">
+<i class="fas fa-plug"></i>
+<strong>
                     Electrical Monitoring
                 </strong>
-
-                <span>
+<span>
                     Monitor selected electrical parameters
                     across connected assets.
                 </span>
-
-            </div>
-
-
-            <div class="energy-item">
-
-                <i class="fas fa-chart-line"></i>
-
-                <strong>
+</div>
+<div class="energy-item">
+<i class="fas fa-chart-line"></i>
+<strong>
                     Consumption Trends
                 </strong>
-
-                <span>
+<span>
                     Review energy information to understand
                     changing usage patterns.
                 </span>
-
-            </div>
-
-
-            <div class="energy-item">
-
-                <i class="fas fa-bolt"></i>
-
-                <strong>
+</div>
+<div class="energy-item">
+<i class="fas fa-bolt"></i>
+<strong>
                     Load Visibility
                 </strong>
-
-                <span>
+<span>
                     Improve visibility across important
                     electrical loads and systems.
                 </span>
-
-            </div>
-
-
-            <div class="energy-item">
-
-                <i class="fas fa-clock"></i>
-
-                <strong>
+</div>
+<div class="energy-item">
+<i class="fas fa-clock"></i>
+<strong>
                     Schedule Optimization
                 </strong>
-
-                <span>
+<span>
                     Coordinate selected systems with
                     operating schedules.
                 </span>
-
-            </div>
-
-
-            <div class="energy-item">
-
-                <i class="fas fa-triangle-exclamation"></i>
-
-                <strong>
+</div>
+<div class="energy-item">
+<i class="fas fa-triangle-exclamation"></i>
+<strong>
                     Exception Alerts
                 </strong>
-
-                <span>
+<span>
                     Identify configured abnormal conditions
                     through automated notifications.
                 </span>
-
-            </div>
-
-
-            <div class="energy-item">
-
-                <i class="fas fa-leaf"></i>
-
-                <strong>
+</div>
+<div class="energy-item">
+<i class="fas fa-leaf"></i>
+<strong>
                     Efficiency Awareness
                 </strong>
-
-                <span>
+<span>
                     Support informed decisions for better
                     resource utilization.
                 </span>
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
+</div>
+</div>
+</div>
 </section>
 
-
+<!-- END MODULE — ENERGY MANAGEMENT -->
 
 <!-- =========================================================
-     APPLICATIONS
+     MODULE — APPLICATIONS
 ========================================================= -->
 
+<!-- APPLICATIONS: CSS -->
+<style>
+.applications-section {
+            padding: 105px 8%;
+
+            background: #f5f5f5;
+        }
+
+        .applications-content {
+            max-width: 1250px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: .8fr 1.2fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .application-description {
+            color: #666;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+        .application-list {
+            display: grid;
+
+            grid-template-columns: repeat(2,1fr);
+
+            gap: 12px;
+        }
+
+        .application-item {
+            padding: 21px;
+
+            background: #fff;
+
+            border: 1px solid #e5e5e5;
+
+            transition: .3s ease;
+        }
+
+        .application-item:hover {
+            transform: translateY(-5px);
+
+            border-color: #111;
+        }
+
+        .application-item strong {
+            display: block;
+
+            color: #111;
+
+            font-size: 11px;
+
+            margin-bottom: 6px;
+        }
+
+        .application-item span {
+            color: #777;
+
+            font-size: 9px;
+
+            line-height: 1.5;
+        }
+</style>
+
+<!-- APPLICATIONS: HTML -->
 <section class="applications-section">
-
-
-    <div class="applications-content">
-
-
-        <div>
-
-            <div class="section-label">
+<div class="applications-content">
+<div>
+<div class="section-label">
                 Commercial Applications
             </div>
-
-            <h2 class="section-title">
+<h2 class="section-title">
 
                 Automation For
                 Every Commercial Space
 
             </h2>
-
-            <div class="section-line"></div>
-
-            <p class="application-description">
+<div class="section-line"></div>
+<p class="application-description">
 
                 Commercial automation can be adapted to
                 different building types and operational
@@ -3646,120 +2780,190 @@
                 to multi-zone environments.
 
             </p>
-
-        </div>
-
-
-        <div class="application-list">
-
-
-            <div class="application-item">
-
-                <strong>
+</div>
+<div class="application-list">
+<div class="application-item">
+<strong>
                     Corporate Offices
                 </strong>
-
-                <span>
+<span>
                     Lighting, HVAC, access, energy monitoring
                     and workspace automation.
                 </span>
-
-            </div>
-
-
-            <div class="application-item">
-
-                <strong>
+</div>
+<div class="application-item">
+<strong>
                     Business Parks
                 </strong>
-
-                <span>
+<span>
                     Centralized monitoring across multiple
                     building systems and zones.
                 </span>
-
-            </div>
-
-
-            <div class="application-item">
-
-                <strong>
+</div>
+<div class="application-item">
+<strong>
                     Retail Spaces
                 </strong>
-
-                <span>
+<span>
                     Lighting, HVAC, energy and operational
                     automation for retail environments.
                 </span>
-
-            </div>
-
-
-            <div class="application-item">
-
-                <strong>
+</div>
+<div class="application-item">
+<strong>
                     Shopping Centres
                 </strong>
-
-                <span>
+<span>
                     Integrated building services and
                     centralized facility monitoring.
                 </span>
-
-            </div>
-
-
-            <div class="application-item">
-
-                <strong>
+</div>
+<div class="application-item">
+<strong>
                     Educational Facilities
                 </strong>
-
-                <span>
+<span>
                     Smart lighting, HVAC and energy monitoring
                     across classrooms and common areas.
                 </span>
-
-            </div>
-
-
-            <div class="application-item">
-
-                <strong>
+</div>
+<div class="application-item">
+<strong>
                     Mixed-Use Buildings
                 </strong>
-
-                <span>
+<span>
                     Connected systems across different
                     functional areas and operating zones.
                 </span>
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
+</div>
+</div>
+</div>
 </section>
 
-
+<!-- END MODULE — APPLICATIONS -->
 
 <!-- =========================================================
-     CTA
+     MODULE — CTA
 ========================================================= -->
 
+<!-- CTA: CSS -->
+<style>
+.cta {
+            max-width: 1250px;
+
+            margin: 80px auto;
+
+            min-height: 290px;
+
+            display: grid;
+
+            grid-template-columns: 1.3fr .7fr;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,1),
+                    rgba(0,0,0,.68)
+                ),
+                url("images/commercial-automation-cta.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+        .cta-content {
+            padding: 50px;
+
+            color: #fff;
+        }
+
+        .cta-content h2 {
+            color: #fff;
+
+            font-size: 32px;
+
+            line-height: 1.2;
+
+            margin-bottom: 15px;
+        }
+
+        .cta-content p {
+            max-width: 650px;
+
+            color: #ccc;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-top: 15px;
+
+            padding: 13px 23px;
+
+            background: #fff;
+
+            color: #111;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            transition: .3s ease;
+        }
+
+        .cta-button:hover {
+            background: #111;
+
+            color: #fff;
+
+            border: 1px solid #fff;
+        }
+
+        .cta-side {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-left: 1px solid #333;
+        }
+
+        .cta-side strong {
+            display: block;
+
+            color: #fff;
+
+            font-size: 18px;
+
+            margin-bottom: 6px;
+        }
+
+        .cta-side span {
+            color: #aaa;
+
+            font-size: 9px;
+
+            letter-spacing: 1.5px;
+        }
+</style>
+
+<!-- CTA: HTML -->
 <section class="cta">
-
-
-    <div class="cta-content">
-
-        <h2>
+<div class="cta-content">
+<h2>
             Build A Smarter Commercial Environment.
         </h2>
-
-        <p>
+<p>
 
             Connect your building systems, improve operational
             visibility and create a more intelligent commercial
@@ -3767,280 +2971,33 @@
             solutions.
 
         </p>
-
-        <a
-            href="index.html#contact"
-            class="cta-button">
+<a class="cta-button" href="index.html#contact">
 
             DISCUSS YOUR PROJECT
 
             <i class="fas fa-arrow-right"></i>
-
-        </a>
-
-    </div>
-
-
-    <div class="cta-side">
-
-        <div>
-
-            <strong>
+</a>
+</div>
+<div class="cta-side">
+<div>
+<strong>
                 CONNECT • MONITOR • AUTOMATE
             </strong>
-
-            <span>
+<span>
                 INTELLIGENT COMMERCIAL SOLUTIONS
             </span>
-
-        </div>
-
-    </div>
-
-
+</div>
+</div>
 </section>
 
+<!-- END MODULE — CTA -->
 
+<!-- =========================================================
+     MODULE — FOOTER
+========================================================= -->
 
- <!-- =========================================================
-     ALPHA NUMERIC — PREMIUM CORPORATE WHITE FOOTER
-     Sharp architectural layout | No curves | No toy styling
-     Complete HTML + CSS + automatic year
-========================================================== -->
-
-<footer class="corp-footer" aria-label="Website footer">
-
-    <div class="corp-footer-container">
-
-        <!-- =====================================================
-             PRIMARY CTA
-        ====================================================== -->
-        <section class="corp-footer-cta" aria-labelledby="corp-footer-title">
-
-            <div class="corp-footer-cta-copy">
-
-                <p class="corp-footer-kicker">
-                    <span>01</span>
-                    <i></i>
-                    Start a project
-                </p>
-
-                <h2 id="corp-footer-title">
-                    Let’s engineer
-                    <span>what comes next.</span>
-                </h2>
-
-            </div>
-
-            <div class="corp-footer-cta-action">
-
-                <p>
-                    Intelligent engineering for power, energy,
-                    automation and future-ready systems.
-                </p>
-
-                <a href="contact.html" class="corp-footer-button">
-                    <span>Start a conversation</span>
-                    <i aria-hidden="true">↗</i>
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             BRAND + NAVIGATION
-        ====================================================== -->
-        <div class="corp-footer-main">
-
-            <!-- BRAND -->
-            <section class="corp-footer-brand" aria-label="Alpha Numeric">
-
-                <a href="index.html" class="corp-footer-logo" aria-label="Alpha Numeric home">
-                    <img src="assets/img/b-alpha.png" alt="Alpha Numeric">
-                </a>
-
-                <p>
-                    Technology-driven engineering solutions
-                    designed for dependable performance,
-                    meaningful progress and long-term value.
-                </p>
-
-                <div class="corp-footer-status">
-                    <span></span>
-                    Engineering tomorrow
-                </div>
-
-            </section>
-
-
-            <!-- NAVIGATION -->
-            <nav class="corp-footer-nav" aria-label="Footer navigation">
-
-                <!-- COMPANY -->
-                <div class="corp-footer-column">
-
-                    <div class="corp-footer-column-heading">
-                        <span>01</span>
-                        <h3>Company</h3>
-                    </div>
-
-                    <ul>
-                        <li><a href="index.html"><span>Home</span><i>↗</i></a></li>
-                        <li><a href="about.html"><span>About</span><i>↗</i></a></li>
-                        <li><a href="contact.html"><span>Contact</span><i>↗</i></a></li>
-                    </ul>
-
-                </div>
-
-
-                <!-- ENERGY -->
-                <div class="corp-footer-column">
-
-                    <div class="corp-footer-column-heading">
-                        <span>02</span>
-                        <h3>Energy</h3>
-                    </div>
-
-                    <ul>
-                        <li><a href="solar-energy.html"><span>Solar Energy</span><i>↗</i></a></li>
-                        <li><a href="wind-energy.html"><span>Wind Energy</span><i>↗</i></a></li>
-                        <li><a href="biomass-energy.html"><span>Biomass Energy</span><i>↗</i></a></li>
-                        <li><a href="hydel-energy.html"><span>Hydel Energy</span><i>↗</i></a></li>
-                    </ul>
-
-                </div>
-
-
-                <!-- POWER -->
-                <div class="corp-footer-column">
-
-                    <div class="corp-footer-column-heading">
-                        <span>03</span>
-                        <h3>Power</h3>
-                    </div>
-
-                    <ul>
-                        <li><a href="transmission.html"><span>Transmission</span><i>↗</i></a></li>
-                        <li><a href="distribution.html"><span>Distribution</span><i>↗</i></a></li>
-                        <li><a href="control-panels.html"><span>Control Panels</span><i>↗</i></a></li>
-                        <li><a href="panel-boards.html"><span>Panel Boards</span><i>↗</i></a></li>
-                    </ul>
-
-                </div>
-
-
-                <!-- AUTOMATION -->
-                <div class="corp-footer-column">
-
-                    <div class="corp-footer-column-heading">
-                        <span>04</span>
-                        <h3>Automation</h3>
-                    </div>
-
-                    <ul>
-                        <li><a href="home-automation.html"><span>Home Automation</span><i>↗</i></a></li>
-                        <li><a href="commercial-automation.html"><span>Commercial</span><i>↗</i></a></li>
-                        <li><a href="industrial-automation.html"><span>Industrial</span><i>↗</i></a></li>
-                        <li><a href="hospital-automation.html"><span>Hospital</span><i>↗</i></a></li>
-                        <li><a href="hotel-automation.html"><span>Hotel</span><i>↗</i></a></li>
-                    </ul>
-
-                </div>
-
-
-                <!-- R&D / PRODUCTS -->
-                <div class="corp-footer-column">
-
-                    <div class="corp-footer-column-heading">
-                        <span>05</span>
-                        <h3>R&amp;D / Products</h3>
-                    </div>
-
-                    <ul>
-                        <li><a href="smart-pole-r&d.html"><span>Smart Pole</span><i>↗</i></a></li>
-                        <li><a href="smart-bollard-r&d.html"><span>Smart Bollard</span><i>↗</i></a></li>
-                        <li><a href="power.html"><span>Power Products</span><i>↗</i></a></li>
-                    </ul>
-
-                </div>
-
-            </nav>
-
-        </div>
-
-
-        <!-- =====================================================
-             CONTACT BAND
-        ====================================================== -->
-        <section class="corp-footer-contact" aria-label="Contact information">
-
-            <div class="corp-footer-contact-heading">
-                <span>Contact</span>
-                <h3>Let’s connect.</h3>
-            </div>
-
-            <a href="tel:+919000000000" class="corp-footer-contact-item">
-                <span>01 / Phone</span>
-                <strong>+91 90000 00000</strong>
-                <i aria-hidden="true">↗</i>
-            </a>
-
-            <a href="mailto:info@alphanumeric.com" class="corp-footer-contact-item">
-                <span>02 / Email</span>
-                <strong>info@alphanumeric.com</strong>
-                <i aria-hidden="true">↗</i>
-            </a>
-
-            <div class="corp-footer-contact-item">
-                <span>03 / Location</span>
-                <strong>Madhapur, Hyderabad</strong>
-                <i aria-hidden="true">—</i>
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             BOTTOM BAR
-        ====================================================== -->
-        <div class="corp-footer-bottom">
-
-            <p>
-                © <span id="corpFooterYear"></span> Alpha Numeric.
-                All rights reserved.
-            </p>
-
-            <div class="corp-footer-disciplines" aria-label="Core disciplines">
-                <span>Power</span>
-                <i></i>
-                <span>Energy</span>
-                <i></i>
-                <span>Automation</span>
-                <i></i>
-                <span>R&amp;D</span>
-            </div>
-
-            <div class="corp-footer-bottom-links">
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-
-                <a href="#page-top" class="corp-footer-top-link">
-                    Back to top
-                    <span aria-hidden="true">↑</span>
-                </a>
-            </div>
-
-        </div>
-
-    </div>
-
-</footer>
-
-
+<!-- FOOTER: CSS -->
 <style>
-
 /* =========================================================
    CORPORATE WHITE FOOTER — DESIGN SYSTEM
 ========================================================== */
@@ -4993,57 +3950,384 @@ a.corp-footer-contact-item:hover > i {
         transition: none;
     }
 }
-
 </style>
 
+<!-- FOOTER: HTML -->
+<footer aria-label="Website footer" class="corp-footer">
+<div class="corp-footer-container">
+<!-- =====================================================
+             PRIMARY CTA
+        ====================================================== -->
+<section aria-labelledby="corp-footer-title" class="corp-footer-cta">
+<div class="corp-footer-cta-copy">
+<p class="corp-footer-kicker">
+<span>01</span>
+<i></i>
+                    Start a project
+                </p>
+<h2 id="corp-footer-title">
+                    Let’s engineer
+                    <span>what comes next.</span>
+</h2>
+</div>
+<div class="corp-footer-cta-action">
+<p>
+                    Intelligent engineering for power, energy,
+                    automation and future-ready systems.
+                </p>
+<a class="corp-footer-button" href="contact.html">
+<span>Start a conversation</span>
+<i aria-hidden="true">↗</i>
+</a>
+</div>
+</section>
+<!-- =====================================================
+             BRAND + NAVIGATION
+        ====================================================== -->
+<div class="corp-footer-main">
+<!-- BRAND -->
+<section aria-label="Alpha Numeric" class="corp-footer-brand">
+<a aria-label="Alpha Numeric home" class="corp-footer-logo" href="index.html">
+<img alt="Alpha Numeric" src="assets/img/b-alpha.png"/>
+</a>
+<p>
+                    Technology-driven engineering solutions
+                    designed for dependable performance,
+                    meaningful progress and long-term value.
+                </p>
+<div class="corp-footer-status">
+<span></span>
+                    Engineering tomorrow
+                </div>
+</section>
+<!-- NAVIGATION -->
+<nav aria-label="Footer navigation" class="corp-footer-nav">
+<!-- COMPANY -->
+<div class="corp-footer-column">
+<div class="corp-footer-column-heading">
+<span>01</span>
+<h3>Company</h3>
+</div>
+<ul>
+<li><a href="index.html"><span>Home</span><i>↗</i></a></li>
+<li><a href="about.html"><span>About</span><i>↗</i></a></li>
+<li><a href="contact.html"><span>Contact</span><i>↗</i></a></li>
+</ul>
+</div>
+<!-- ENERGY -->
+<div class="corp-footer-column">
+<div class="corp-footer-column-heading">
+<span>02</span>
+<h3>Energy</h3>
+</div>
+<ul>
+<li><a href="solar-energy.html"><span>Solar Energy</span><i>↗</i></a></li>
+<li><a href="wind-energy.html"><span>Wind Energy</span><i>↗</i></a></li>
+<li><a href="biomass-energy.html"><span>Biomass Energy</span><i>↗</i></a></li>
+<li><a href="hydel-energy.html"><span>Hydel Energy</span><i>↗</i></a></li>
+</ul>
+</div>
+<!-- POWER -->
+<div class="corp-footer-column">
+<div class="corp-footer-column-heading">
+<span>03</span>
+<h3>Power</h3>
+</div>
+<ul>
+<li><a href="transmission.html"><span>Transmission</span><i>↗</i></a></li>
+<li><a href="distribution.html"><span>Distribution</span><i>↗</i></a></li>
+<li><a href="control-panels.html"><span>Control Panels</span><i>↗</i></a></li>
+<li><a href="panel-boards.html"><span>Panel Boards</span><i>↗</i></a></li>
+</ul>
+</div>
+<!-- AUTOMATION -->
+<div class="corp-footer-column">
+<div class="corp-footer-column-heading">
+<span>04</span>
+<h3>Automation</h3>
+</div>
+<ul>
+<li><a href="home-automation.html"><span>Home Automation</span><i>↗</i></a></li>
+<li><a href="commercial-automation.html"><span>Commercial</span><i>↗</i></a></li>
+<li><a href="industrial-automation.html"><span>Industrial</span><i>↗</i></a></li>
+<li><a href="hospital-automation.html"><span>Hospital</span><i>↗</i></a></li>
+<li><a href="hotel-automation.html"><span>Hotel</span><i>↗</i></a></li>
+</ul>
+</div>
+<!-- R&D / PRODUCTS -->
+<div class="corp-footer-column">
+<div class="corp-footer-column-heading">
+<span>05</span>
+<h3>R&amp;D / Products</h3>
+</div>
+<ul>
+<li><a href="smart-pole-r&amp;d.html"><span>Smart Pole</span><i>↗</i></a></li>
+<li><a href="smart-bollard-r&amp;d.html"><span>Smart Bollard</span><i>↗</i></a></li>
+<li><a href="power.html"><span>Power Products</span><i>↗</i></a></li>
+</ul>
+</div>
+</nav>
+</div>
+<!-- =====================================================
+             CONTACT BAND
+        ====================================================== -->
+<section aria-label="Contact information" class="corp-footer-contact">
+<div class="corp-footer-contact-heading">
+<span>Contact</span>
+<h3>Let’s connect.</h3>
+</div>
+<a class="corp-footer-contact-item" href="tel:+919000000000">
+<span>01 / Phone</span>
+<strong>+91 90000 00000</strong>
+<i aria-hidden="true">↗</i>
+</a>
+<a class="corp-footer-contact-item" href="mailto:info@alphanumeric.com">
+<span>02 / Email</span>
+<strong>info@alphanumeric.com</strong>
+<i aria-hidden="true">↗</i>
+</a>
+<div class="corp-footer-contact-item">
+<span>03 / Location</span>
+<strong>Madhapur, Hyderabad</strong>
+<i aria-hidden="true">—</i>
+</div>
+</section>
+<!-- =====================================================
+             BOTTOM BAR
+        ====================================================== -->
+<div class="corp-footer-bottom">
+<p>
+                © <span id="corpFooterYear"></span> Alpha Numeric.
+                All rights reserved.
+            </p>
+<div aria-label="Core disciplines" class="corp-footer-disciplines">
+<span>Power</span>
+<i></i>
+<span>Energy</span>
+<i></i>
+<span>Automation</span>
+<i></i>
+<span>R&amp;D</span>
+</div>
+<div class="corp-footer-bottom-links">
+<a href="#">Privacy</a>
+<a href="#">Terms</a>
+<a class="corp-footer-top-link" href="#page-top">
+                    Back to top
+                    <span aria-hidden="true">↑</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
 
+<!-- FOOTER: JAVASCRIPT -->
 <script>
-    document.getElementById("corpFooterYear").textContent = new Date().getFullYear();
+document.getElementById("corpFooterYear").textContent = new Date().getFullYear();
 </script>
-    
-    <!-- =========================================================
-     PREMIUM TECHNOLOGY FOOTER END
-     ========================================================= -->
 
-
+<!-- END MODULE — FOOTER -->
 
 <!-- =========================================================
-     BOOTSTRAP JS
+     MODULE — GLOBAL RESPONSIVE OVERRIDES
 ========================================================= -->
 
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>
+<!-- GLOBAL RESPONSIVE OVERRIDES: CSS -->
+<style>
+@media (max-width:1100px) {
 
+            .main-navbar .navbar-nav {
+                gap: 18px;
+            }
 
+            .systems-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
 
-<!-- =========================================================
-     NAVBAR SCROLL EFFECT
-========================================================= -->
+            .control-grid {
+                grid-template-columns: repeat(3,1fr);
+            }
 
-<script>
-
-    window.addEventListener("scroll", function () {
-
-        const navbar =
-            document.querySelector(".main-navbar");
-
-        if (window.scrollY > 30) {
-
-            navbar.style.boxShadow =
-                "0 5px 25px rgba(0,0,0,.07)";
-
-        } else {
-
-            navbar.style.boxShadow =
-                "none";
-
+            .features-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
         }
 
-    });
 
+        @media (max-width:991px) {
+
+            .main-navbar {
+                height: auto;
+
+                min-height: 80px;
+
+                padding: 10px 5%;
+            }
+
+            .main-navbar .navbar-brand img {
+                height: 48px;
+            }
+
+            .main-navbar .navbar-collapse {
+                margin-top: 15px;
+
+                padding: 15px 0;
+
+                background: #fff;
+            }
+
+            .main-navbar .navbar-nav {
+                align-items: flex-start;
+
+                gap: 0;
+            }
+
+            .main-navbar .nav-item {
+                width: 100%;
+            }
+
+            .main-navbar .nav-link {
+                padding: 12px 5px !important;
+            }
+
+            .main-navbar .dropdown-menu {
+                margin-top: 0;
+
+                border: none;
+
+                box-shadow: none;
+            }
+
+            .hero {
+                margin-top: 80px;
+            }
+
+            .intro,
+            .bms-layout,
+            .energy-layout,
+            .applications-content {
+                grid-template-columns: 1fr;
+            }
+
+            .cta {
+                margin-left: 6%;
+                margin-right: 6%;
+            }
+        }
+
+
+        @media (max-width:767px) {
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .hero-content {
+                padding: 90px 7%;
+            }
+
+            .hero h1 {
+                font-size: 52px;
+
+                letter-spacing: -3px;
+            }
+
+            .highlights {
+                width: 100%;
+
+                margin: 0;
+
+                grid-template-columns: 1fr;
+            }
+
+            .highlight {
+                border-right: none;
+
+                border-bottom: 1px solid #e5e5e5;
+            }
+
+            .intro,
+            .systems-section,
+            .bms-section,
+            .control-section,
+            .features-section,
+            .energy-section,
+            .applications-section {
+                padding-left: 7%;
+
+                padding-right: 7%;
+            }
+
+            .systems-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bms-list {
+                grid-template-columns: 1fr;
+            }
+
+            .control-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .energy-list,
+            .application-list {
+                grid-template-columns: 1fr;
+            }
+
+            .cta {
+                margin: 40px 6%;
+
+                grid-template-columns: 1fr;
+            }
+
+            .cta-side {
+                min-height: 120px;
+
+                border-left: none;
+
+                border-top: 1px solid #333;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+        }
+
+
+        @media (max-width:430px) {
+
+            .main-navbar .navbar-brand img {
+                height: 42px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .control-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+</style>
+
+<!-- GLOBAL RESPONSIVE OVERRIDES: HTML -->
+
+
+<!-- END MODULE — GLOBAL RESPONSIVE OVERRIDES -->
+
+<!-- =========================================================
+     BOOTSTRAP JAVASCRIPT
+========================================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
 </script>
-
 
 </body>
 

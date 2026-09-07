@@ -1251,65 +1251,7 @@
         ========================================================== */
 
         @media (max-width: 991px) {
-
-
-            .about-navbar {
-
-                height: auto;
-
-                min-height: 80px;
-
-                padding: 10px 5%;
-            }
-
-
-            .about-logo img {
-
-                height: 70px;
-            }
-
-
-            .about-navbar .navbar-collapse {
-
-                margin-top: 15px;
-
-                padding: 15px 0;
-
-                background: #ffffff;
-            }
-
-
-            .about-navbar .navbar-nav {
-
-                align-items: flex-start;
-
-                gap: 0;
-            }
-
-
-            .about-navbar .nav-item {
-
-                width: 100%;
-            }
-
-
-            .about-navbar .nav-link {
-
-                padding: 12px 5px !important;
-            }
-
-
-            .about-navbar .dropdown-menu {
-
-                margin-top: 0;
-
-                border: 0;
-
-                box-shadow: none;
-            }
-
-
-            .power-products-page {
+.power-products-page {
 
                 padding-top: 80px;
             }
@@ -1474,6 +1416,11 @@
 
 
 
+<!-- =========================================================
+     MODULE — NAVBAR
+========================================================= -->
+
+<!-- HTML -->
     <!-- =========================================================
          PREMIUM GLOBAL NAVIGATION
     ========================================================= -->
@@ -1493,7 +1440,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
 
                     <li class="nav-item dropdown solution-dropdown position-static">
                         <a class="nav-link dropdown-toggle " href="#" id="solutionsDropdown" role="button"
@@ -1502,16 +1449,17 @@
                         <div class="dropdown-menu mega-menu" aria-labelledby="solutionsDropdown">
                             <div class="mega-menu-inner">
                                 <div class="mega-column">
-                                    <div class="mega-heading active"><span>Energy</span></div>
-                                    <a href="solar-energy.html">Solar Energy</a>
-                                    <a href="wind-energy.html">Wind Energy</a>
+                                    <div class="mega-heading "><span>Renewable Energy</span></div>
+                                    <a href="solar-energy.html">Solar </a>
+                                    <!-- <a href="wind-energy.html">Wind Energy</a>
                                     <a href="hydel-energy.html">Hydel Energy</a>
-                                    <a href="biomass-energy.html">Biomass Energy</a>
+                                    <a href="biomass-energy.html">Biomass Energy</a> -->
                                 </div>
                                 <div class="mega-column">
                                     <div class="mega-heading"><span>Power</span></div>
-                                    <a href="transmission.html">Transmission</a>
-                                    <a href="distribution.html">Distribution</a>
+                                    <a href="lt.html">LT</a>
+                                    <a href="ht.html">HT</a>
+                                    <a href="eht.html">EHT</a>
                                     <a href="control-panels.html">Control Panels</a>
                                     <a href="panel-boards.html">Panel Boards</a>
                                 </div>
@@ -1535,16 +1483,24 @@
                         </div>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="bms_automation.html">BMS</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="power-products.html">Products</a></li>
+                    <li class="nav-item dropdown bms-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="bmsDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">IoT</a>
+                        <ul class="dropdown-menu bms-menu" aria-labelledby="bmsDropdown">
+                            <li><a class="dropdown-item" href="iot.html">IoT</a></li>
+                            <li><a class="dropdown-item" href="bms.html">BMS</a></li>
+                            <li><a class="dropdown-item" href="iot-bms.html">IoT+BMS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item active"><a class="nav-link active" href="power-products.html">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-
-    <style>
+<!-- CSS -->
+<style>
         /* =====================================================
            GLOBAL
         ===================================================== */
@@ -1597,7 +1553,53 @@
         .mega-column > a:hover { color: #334a85; padding-left: 21px; }
         .mega-column > a:hover::before { width: 12px; background: #4d73be; }
 
+        /* BMS DROPDOWN */
+        .bms-dropdown .bms-menu {
+            min-width: 190px;
+            margin-top: 0;
+            padding: 10px 0;
+            border: 1px solid #1f1f1f;
+            border-radius: 10px;
+            background: #000000;
+            box-shadow: 0 18px 45px rgba(0,0,0,.24);
+        }
+
+        .bms-dropdown .bms-menu .dropdown-item {
+            padding: 10px 18px;
+            color: #bdbdbd;
+            font-size: 13.5px;
+            font-weight: 600;
+            background: transparent;
+            transition: color .25s ease, padding-left .25s ease;
+        }
+
+        .bms-dropdown .bms-menu .dropdown-item:hover,
+        .bms-dropdown .bms-menu .dropdown-item:focus {
+            color: #ffffff;
+            background: transparent;
+            padding-left: 22px;
+        }
+
         @media (min-width: 992px) {
+            /* BMS dropdown: open on hover and stay open while hovering menu */
+            .bms-dropdown > .bms-menu {
+                display: block;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transform: translateY(6px);
+                transition: opacity .22s ease, visibility .22s ease, transform .22s ease;
+            }
+
+            .bms-dropdown:hover > .bms-menu,
+            .bms-dropdown > .bms-menu:hover,
+            .bms-dropdown > .bms-menu.show {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+                transform: translateY(0);
+            }
+
             .solution-dropdown > .mega-menu {
                 opacity: 0;
                 visibility: hidden;
@@ -1671,9 +1673,6 @@
 
 
         
-    </style>
-
-    <style>
 /* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
 .main-navbar #solutionsDropdown,
 .main-navbar #solutionsDropdown:hover,
@@ -1691,10 +1690,6 @@
 .main-navbar #solutionsDropdown.show {
     color: #4d73be !important;
 }
-</style>
-
-
-<style id="navbar-monochrome-final">
 /* =========================================================
    NAVBAR — MONOCHROME BLACK THEME
    Keep existing layout + mega-menu behavior unchanged
@@ -1827,16 +1822,29 @@
         border-bottom-color: #242424 !important;
     }
 }
-</style>
-
-
-<style id="mega-heading-no-icons">
 .main-navbar .mega-heading {
     gap: 0 !important;
 }
 </style>
 
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const nav = document.getElementById("mainNav");
+    const white = document.getElementById("logoWhite");
+    const dark = document.getElementById("logoDark");
 
+    if (nav) nav.classList.add("scrolled", "navbar-shrink");
+    if (white) white.style.display = "none";
+    if (dark) dark.style.display = "block";
+});
+</script>
+
+<!-- END MODULE — NAVBAR -->
+
+<!-- =========================================================
+     MODULE — PRODUCT CATALOGUE PAGE
+========================================================= -->
 
 <!-- =============================================================
      PAGE
@@ -2221,6 +2229,10 @@
 
 
 <script>
+
+/* =============================================================
+   MODULE — PRODUCT DATABASE / CATALOGUE DATA
+============================================================= */
 
 /* =============================================================
    POWER PRODUCT DATABASE
@@ -3968,45 +3980,6 @@ showProduct(
 );
 
 
-
-/* =============================================================
-   NAVBAR SHADOW
-============================================================= */
-
-window.addEventListener(
-
-    "scroll",
-
-    function() {
-
-
-        const navbar =
-            document.querySelector(
-                ".about-navbar"
-            );
-
-
-        if (!navbar) return;
-
-
-        if (window.scrollY > 30) {
-
-
-            navbar.style.boxShadow =
-                "0 5px 25px rgba(0,0,0,.06)";
-
-
-        } else {
-
-
-            navbar.style.boxShadow =
-                "none";
-
-        }
-
-    }
-
-);
 
 </script>
 
