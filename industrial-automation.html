@@ -23,8 +23,10 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
-    <style>
-
+<style>
+/* =========================================================
+   GLOBAL BASE STYLES
+========================================================= */
         /* =========================================================
            GLOBAL
         ========================================================= */
@@ -58,1073 +60,14 @@
 
       
 
-
-        /* =========================================================
-           HERO
-        ========================================================= */
-
-        .hero {
-            min-height: 700px;
-            
-
-            display: flex;
-            align-items: center;
-
-            position: relative;
-            overflow: hidden;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(0,0,0,.97) 0%,
-                    rgba(0,0,0,.87) 42%,
-                    rgba(0,0,0,.48) 76%,
-                    rgba(0,0,0,.15) 100%
-                ),
-                url("assets/img/industrial automation/banner.png");
-
-            background-size: cover;
-            background-position: center;
-        }
-
-        .hero-content {
-            width: 100%;
-            max-width: 1400px;
-            margin: auto;
-            padding: 100px 7%;
-
-            color: #fff;
-
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-label {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-
-            margin-bottom: 24px;
-
-            color: #bbb;
-
-            font-size: 11px;
-            font-weight: 700;
-
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
-
-        .hero-label::before {
-            content: "";
-
-            width: 42px;
-            height: 1px;
-
-            background: #fff;
-        }
-
-        .hero h1 {
-            max-width: 1000px;
-
-            color: #fff;
-
-            font-size: clamp(48px, 7vw, 92px);
-
-            line-height: .94;
-
-            font-weight: 700;
-
-            letter-spacing: -5px;
-
-            margin-bottom: 30px;
-
-            text-transform: uppercase;
-        }
-
-        .hero h1 span {
-            font-weight: 300;
-        }
-
-        .hero p {
-            max-width: 720px;
-
-            color: #d4d4d4;
-
-            font-size: 15px;
-
-            line-height: 1.9;
-
-            margin-bottom: 35px;
-        }
-
-        .hero-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-
-            padding: 15px 28px;
-
-            background: #fff;
-            color: #111;
-
-            border: 1px solid #fff;
-
-            font-size: 11px;
-            font-weight: 700;
-
-            letter-spacing: 1px;
-
-            transition: .3s ease;
-        }
-
-        .hero-button:hover {
-            background: #111;
-            color: #fff;
-
-            transform: translateY(-3px);
-        }
-
-
-        /* =========================================================
-           HIGHLIGHTS
-        ========================================================= */
-
-        .highlights {
-            width: 86%;
-            margin: -45px auto 0;
-
-            position: relative;
-            z-index: 10;
-
-            display: grid;
-            grid-template-columns: repeat(4,1fr);
-
-            background: #fff;
-
-            box-shadow: 0 20px 55px rgba(0,0,0,.12);
-        }
-
-        .highlight {
-            min-height: 115px;
-
-            display: flex;
-            align-items: center;
-
-            gap: 16px;
-
-            padding: 20px 25px;
-
-            border-right: 1px solid #e5e5e5;
-        }
-
-        .highlight:last-child {
-            border-right: none;
-        }
-
-        .highlight-icon {
-            width: 44px;
-            height: 44px;
-
-            flex-shrink: 0;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            background: #111;
-            color: #fff;
-
-            font-size: 17px;
-        }
-
-        .highlight h4 {
-            color: #111;
-
-            font-size: 12px;
-            font-weight: 600;
-
-            margin-bottom: 6px;
-        }
-
-        .highlight p {
-            color: #777;
-
-            font-size: 10px;
-
-            line-height: 1.6;
-
-            margin: 0;
-        }
-
-
-        /* =========================================================
-           COMMON
-        ========================================================= */
-
-        .section-label {
-            color: #777;
-
-            font-size: 10px;
-            font-weight: 700;
-
-            letter-spacing: 3px;
-
-            text-transform: uppercase;
-
-            margin-bottom: 14px;
-        }
-
-        .section-title {
-            color: #111;
-
-            font-size: clamp(34px,4vw,58px);
-
-            line-height: 1.08;
-
-            font-weight: 600;
-
-            letter-spacing: -2px;
-
-            margin-bottom: 0;
-        }
-
-        .section-line {
-            width: 45px;
-            height: 3px;
-
-            background: #111;
-
-            margin: 20px 0 25px;
-        }
-
-
-       
-
-
-      
-        /* =========================================================
-           INDUSTRIAL WORKFLOW
-        ========================================================= */
-
-        .workflow-section {
-            padding: 110px 8%;
-
-            background: #050505;
-
-            color: #fff;
-        }
-
-        .workflow-header {
-            max-width: 780px;
-
-            margin: 0 auto 55px;
-
-            text-align: center;
-        }
-
-        .workflow-header .section-label {
-            color: #aaa;
-        }
-
-        .workflow-header .section-title {
-            color: #fff;
-        }
-
-        .workflow-header .section-line {
-            background: #fff;
-
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .workflow-header p {
-            color: #aaa;
-
-            font-size: 13px;
-
-            line-height: 1.8;
-        }
-
-        .workflow-grid {
-            max-width: 1200px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns: repeat(5,1fr);
-
-            gap: 10px;
-        }
-
-        .workflow-card {
-            min-height: 215px;
-
-            padding: 25px 15px;
-
-            text-align: center;
-
-            border: 1px solid #333;
-
-            background: rgba(255,255,255,.03);
-
-            transition: .3s ease;
-        }
-
-        .workflow-card:hover {
-            background: #fff;
-
-            transform: translateY(-6px);
-        }
-
-        .workflow-number {
-            width: 45px;
-            height: 45px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            margin: 0 auto 16px;
-
-            background: #fff;
-            color: #111;
-
-            border-radius: 50%;
-
-            font-size: 12px;
-            font-weight: 800;
-        }
-
-        .workflow-card h4 {
-            color: #fff;
-
-            font-size: 10px;
-
-            margin-bottom: 8px;
-
-            transition: .3s;
-        }
-
-        .workflow-card p {
-            color: #aaa;
-
-            font-size: 9px;
-
-            line-height: 1.6;
-
-            transition: .3s;
-        }
-
-        .workflow-card:hover h4 {
-            color: #111;
-        }
-
-        .workflow-card:hover p {
-            color: #555;
-        }
-
-
-        /* =========================================================
-           FEATURES
-        ========================================================= */
-
-        .features-section {
-            padding: 105px 8%;
-
-            background: #f5f5f5;
-        }
-
-        .features-header {
-            max-width: 1250px;
-
-            margin: auto;
-        }
-
-        .features-grid {
-            max-width: 1250px;
-
-            margin: 45px auto 0;
-
-            display: grid;
-
-            grid-template-columns: repeat(4,1fr);
-
-            gap: 16px;
-        }
-
-        .feature-card {
-            padding: 28px 22px;
-
-            background: #fff;
-
-            border: 1px solid #e5e5e5;
-
-            transition: .3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-6px);
-
-            border-color: #111;
-        }
-
-        .feature-card i {
-            color: #111;
-
-            font-size: 23px;
-
-            margin-bottom: 17px;
-        }
-
-        .feature-card h4 {
-            color: #111;
-
-            font-size: 12px;
-
-            margin-bottom: 8px;
-        }
-
-        .feature-card p {
-            color: #777;
-
-            font-size: 10px;
-
-            line-height: 1.7;
-        }
-
-
-        /* =========================================================
-           IIOT SECTION
-        ========================================================= */
-
-        .iiot-section {
-            padding: 110px 8%;
-
-            background: #fff;
-        }
-
-        .iiot-layout {
-            max-width: 1250px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns: .8fr 1.2fr;
-
-            gap: 70px;
-
-            align-items: center;
-        }
-
-        .iiot-description {
-            color: #666;
-
-            font-size: 13px;
-
-            line-height: 1.9;
-        }
-
-        .iiot-list {
-            display: grid;
-
-            grid-template-columns: repeat(2,1fr);
-
-            gap: 12px;
-        }
-
-        .iiot-item {
-            padding: 22px;
-
-            background: #f7f7f7;
-
-            border: 1px solid #e5e5e5;
-
-            transition: .3s ease;
-        }
-
-        .iiot-item:hover {
-            background: #111;
-
-            transform: translateY(-5px);
-        }
-
-        .iiot-item i {
-            color: #111;
-
-            font-size: 17px;
-
-            margin-bottom: 12px;
-
-            transition: .3s;
-        }
-
-        .iiot-item strong {
-            display: block;
-
-            color: #111;
-
-            font-size: 11px;
-
-            margin-bottom: 6px;
-
-            transition: .3s;
-        }
-
-        .iiot-item span {
-            color: #777;
-
-            font-size: 9px;
-
-            line-height: 1.6;
-
-            transition: .3s;
-        }
-
-        .iiot-item:hover i,
-        .iiot-item:hover strong {
-            color: #fff;
-        }
-
-        .iiot-item:hover span {
-            color: #aaa;
-        }
-
-
-        /* =========================================================
-           APPLICATIONS
-        ========================================================= */
-
-        .applications-section {
-            padding: 105px 8%;
-
-            background: #f5f5f5;
-        }
-
-        .applications-content {
-            max-width: 1250px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns: .8fr 1.2fr;
-
-            gap: 70px;
-
-            align-items: center;
-        }
-
-        .application-description {
-            color: #666;
-
-            font-size: 13px;
-
-            line-height: 1.9;
-        }
-
-        .application-list {
-            display: grid;
-
-            grid-template-columns: repeat(2,1fr);
-
-            gap: 12px;
-        }
-
-        .application-item {
-            padding: 21px;
-
-            background: #fff;
-
-            border: 1px solid #e5e5e5;
-
-            transition: .3s ease;
-        }
-
-        .application-item:hover {
-            transform: translateY(-5px);
-
-            border-color: #111;
-        }
-
-        .application-item strong {
-            display: block;
-
-            color: #111;
-
-            font-size: 11px;
-
-            margin-bottom: 6px;
-        }
-
-        .application-item span {
-            color: #777;
-
-            font-size: 9px;
-
-            line-height: 1.5;
-        }
-
-
-        /* =========================================================
-           CTA
-        ========================================================= */
-
-        .cta {
-            max-width: 1250px;
-
-            margin: 80px auto;
-
-            min-height: 290px;
-
-            display: grid;
-
-            grid-template-columns: 1.3fr .7fr;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(0,0,0,1),
-                    rgba(0,0,0,.68)
-                ),
-                url("images/industrial-automation-cta.jpg");
-
-            background-size: cover;
-
-            background-position: center;
-        }
-
-        .cta-content {
-            padding: 50px;
-
-            color: #fff;
-        }
-
-        .cta-content h2 {
-            color: #fff;
-
-            font-size: 32px;
-
-            line-height: 1.2;
-
-            margin-bottom: 15px;
-        }
-
-        .cta-content p {
-            max-width: 650px;
-
-            color: #ccc;
-
-            font-size: 12px;
-
-            line-height: 1.8;
-        }
-
-        .cta-button {
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 10px;
-
-            margin-top: 15px;
-
-            padding: 13px 23px;
-
-            background: #fff;
-
-            color: #111;
-
-            font-size: 10px;
-
-            font-weight: 700;
-
-            transition: .3s ease;
-        }
-
-        .cta-button:hover {
-            background: #111;
-
-            color: #fff;
-
-            border: 1px solid #fff;
-        }
-
-        .cta-side {
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            border-left: 1px solid #333;
-        }
-
-        .cta-side strong {
-            display: block;
-
-            color: #fff;
-
-            font-size: 18px;
-
-            margin-bottom: 6px;
-        }
-
-        .cta-side span {
-            color: #aaa;
-
-            font-size: 9px;
-
-            letter-spacing: 1.5px;
-        }
-
-
-        /* =========================================================
-           FOOTER
-        ========================================================= */
-
-        .main-footer {
-            background: #050505;
-
-            color: #fff;
-
-            padding: 75px 7% 25px;
-        }
-
-        .footer-logo img {
-            height: 55px;
-
-            width: auto;
-
-            margin-bottom: 22px;
-        }
-
-        .footer-description {
-            max-width: 370px;
-
-            color: #888;
-
-            font-size: 12px;
-
-            line-height: 1.9;
-        }
-
-        .footer-heading {
-            color: #fff;
-
-            font-size: 12px;
-
-            font-weight: 600;
-
-            letter-spacing: 1.5px;
-
-            margin-bottom: 22px;
-        }
-
-        .footer-links {
-            list-style: none;
-
-            padding: 0;
-
-            margin: 0;
-        }
-
-        .footer-links li {
-            margin-bottom: 11px;
-        }
-
-        .footer-links a {
-            color: #888;
-
-            font-size: 12px;
-
-            transition: .3s ease;
-        }
-
-        .footer-links a:hover {
-            color: #fff;
-
-            padding-left: 4px;
-        }
-
-        .footer-contact {
-            list-style: none;
-
-            padding: 0;
-
-            margin: 0;
-        }
-
-        .footer-contact li {
-            display: flex;
-
-            align-items: flex-start;
-
-            gap: 12px;
-
-            color: #888;
-
-            font-size: 12px;
-
-            line-height: 1.8;
-
-            margin-bottom: 15px;
-        }
-
-        .footer-contact i {
-            width: 18px;
-
-            color: #fff;
-
-            margin-top: 4px;
-        }
-
-        .footer-social {
-            display: flex;
-
-            gap: 9px;
-
-            margin-top: 24px;
-        }
-
-        .footer-social a {
-            width: 35px;
-            height: 35px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border: 1px solid #2b2b2b;
-
-            color: #999;
-
-            font-size: 13px;
-
-            transition: .3s ease;
-        }
-
-        .footer-social a:hover {
-            background: #fff;
-
-            color: #000;
-
-            border-color: #fff;
-        }
-
-        .footer-bottom {
-            margin-top: 55px;
-
-            padding-top: 20px;
-
-            border-top: 1px solid #222;
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-            gap: 20px;
-
-            color: #666;
-
-            font-size: 10px;
-        }
-
-        .footer-bottom strong {
-            color: #fff;
-
-            font-weight: 500;
-        }
-
-
-        /* =========================================================
-           RESPONSIVE
-        ========================================================= */
-
-        @media (max-width:1100px) {
-
-            .main-navbar .navbar-nav {
-                gap: 18px;
-            }
-
-            .systems-grid {
-                grid-template-columns: repeat(2,1fr);
-            }
-
-            .workflow-grid {
-                grid-template-columns: repeat(3,1fr);
-            }
-
-            .features-grid {
-                grid-template-columns: repeat(2,1fr);
-            }
-
-        }
-
-
-        @media (max-width:991px) {
-
-            .main-navbar {
-                height: auto;
-                min-height: 80px;
-                padding: 10px 5%;
-            }
-
-            .main-navbar .navbar-brand img {
-                height: 48px;
-            }
-
-            .main-navbar .navbar-collapse {
-                margin-top: 15px;
-                padding: 15px 0;
-                background: #fff;
-            }
-
-            .main-navbar .navbar-nav {
-                align-items: flex-start;
-                gap: 0;
-            }
-
-            .main-navbar .nav-item {
-                width: 100%;
-            }
-
-            .main-navbar .nav-link {
-                padding: 12px 5px !important;
-            }
-
-            .main-navbar .dropdown-menu {
-                margin-top: 0;
-                border: none;
-                box-shadow: none;
-            }
-
-            .hero {
-                margin-top: 80px;
-            }
-
-            .intro,
-            .plc-layout,
-            .iiot-layout,
-            .applications-content {
-                grid-template-columns: 1fr;
-            }
-
-            .cta {
-                margin-left: 6%;
-                margin-right: 6%;
-            }
-
-        }
-
-
-        @media (max-width:767px) {
-
-            .hero {
-                min-height: 650px;
-            }
-
-            .hero-content {
-                padding: 90px 7%;
-            }
-
-            .hero h1 {
-                font-size: 52px;
-                letter-spacing: -3px;
-            }
-
-            .highlights {
-                width: 100%;
-                margin: 0;
-                grid-template-columns: 1fr;
-            }
-
-            .highlight {
-                border-right: none;
-                border-bottom: 1px solid #e5e5e5;
-            }
-
-            .intro,
-            .systems-section,
-            .plc-section,
-            .workflow-section,
-            .features-section,
-            .iiot-section,
-            .applications-section {
-                padding-left: 7%;
-                padding-right: 7%;
-            }
-
-            .systems-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .plc-list {
-                grid-template-columns: 1fr;
-            }
-
-            .workflow-grid {
-                grid-template-columns: repeat(2,1fr);
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .iiot-list,
-            .application-list {
-                grid-template-columns: 1fr;
-            }
-
-            .cta {
-                margin: 40px 6%;
-                grid-template-columns: 1fr;
-            }
-
-            .cta-side {
-                min-height: 120px;
-                border-left: none;
-                border-top: 1px solid #333;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-        }
-
-
-        @media (max-width:430px) {
-
-            .main-navbar .navbar-brand img {
-                height: 42px;
-            }
-
-            .hero h1 {
-                font-size: 43px;
-            }
-
-            .workflow-grid {
-                grid-template-columns: 1fr;
-            }
-
-        }
-
-    </style>
-
+</style>
 </head>
-
-
 <body>
 
-
-    <!-- =========================================================
+<!-- =========================================================
+     MODULE — NAVBAR
+========================================================= -->
+<!-- =========================================================
          PREMIUM GLOBAL NAVIGATION
     ========================================================= -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
@@ -1140,7 +83,7 @@
                 Menu <i class="fas fa-bars ms-1"></i>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarResponsive">
+           <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
@@ -1152,21 +95,22 @@
                         <div class="dropdown-menu mega-menu" aria-labelledby="solutionsDropdown">
                             <div class="mega-menu-inner">
                                 <div class="mega-column">
-                                    <div class="mega-heading "><span>Energy</span></div>
-                                    <a href="solar-energy.html">Solar Energy</a>
-                                    <a href="wind-energy.html">Wind Energy</a>
+                                    <div class="mega-heading "><span>Renewable Energy</span></div>
+                                    <a href="solar-energy.html">Solar </a>
+                                    <!-- <a href="wind-energy.html">Wind Energy</a>
                                     <a href="hydel-energy.html">Hydel Energy</a>
-                                    <a href="biomass-energy.html">Biomass Energy</a>
+                                    <a href="biomass-energy.html">Biomass Energy</a> -->
                                 </div>
                                 <div class="mega-column">
                                     <div class="mega-heading"><span>Power</span></div>
-                                    <a href="transmission.html">Transmission</a>
-                                    <a href="distribution.html">Distribution</a>
+                                    <a href="lt.html">LT</a>
+                                    <a href="ht.html">HT</a>
+                                    <a href="eht.html">EHT</a>
                                     <a href="control-panels.html">Control Panels</a>
                                     <a href="panel-boards.html">Panel Boards</a>
                                 </div>
                                 <div class="mega-column">
-                                    <div class="mega-heading active"><span>Automation</span></div>
+                                    <div class="mega-heading"><span>Automation</span></div>
                                     <a href="home-automation.html">Home Automation</a>
                                     <a href="commercial-automation.html">Commercial Automation</a>
                                     <a href="industrial-automation.html">Industrial Automation</a>
@@ -1185,7 +129,15 @@
                         </div>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="bms_automation.html">BMS</a></li>
+                    <li class="nav-item dropdown bms-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="bmsDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">IoT</a>
+                        <ul class="dropdown-menu bms-menu" aria-labelledby="bmsDropdown">
+                            <li><a class="dropdown-item" href="iot.html">IoT</a></li>
+                            <li><a class="dropdown-item" href="bms.html">BMS</a></li>
+                            <li><a class="dropdown-item" href="iot_bms.html">IoT+BMS</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="power-products.html">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
@@ -1193,37 +145,9 @@
         </div>
     </nav>
 
-
-    <style>
-        /* =====================================================
-           GLOBAL
-        ===================================================== */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: "Inter", sans-serif;
-            background: #ffffff;
-            color: #111111;
-            overflow-x: hidden;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        img {
-            max-width: 100%;
-        }
-        /* =====================================================
+<style>
+/* MODULE CSS — NAVBAR */
+/* =====================================================
            PREMIUM GLOBAL NAVBAR
         ===================================================== */
 
@@ -1321,9 +245,8 @@
 
 
         
-    </style>
+    
 
-    <style>
 /* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
 .main-navbar #solutionsDropdown,
 .main-navbar #solutionsDropdown:hover,
@@ -1341,10 +264,8 @@
 .main-navbar #solutionsDropdown.show {
     color: #4d73be !important;
 }
-</style>
 
 
-<style id="navbar-monochrome-final">
 /* =========================================================
    NAVBAR — MONOCHROME BLACK THEME
    Keep existing layout + mega-menu behavior unchanged
@@ -1477,17 +398,130 @@
         border-bottom-color: #242424 !important;
     }
 }
-</style>
 
 
-<style id="mega-heading-no-icons">
 .main-navbar .mega-heading {
     gap: 0 !important;
 }
+
+
+/* =========================================================
+   BMS DROPDOWN — ABOUT PAGE PATTERN
+========================================================= */
+.bms-dropdown .bms-menu {
+    min-width: 190px;
+    margin-top: 0;
+    padding: 10px 0;
+    border: 1px solid #1f1f1f;
+    border-radius: 10px;
+    background: #000000;
+    box-shadow: 0 18px 45px rgba(0,0,0,.24);
+}
+
+.bms-dropdown .bms-menu .dropdown-item {
+    padding: 10px 18px;
+    color: #bdbdbd;
+    font-size: 13.5px;
+    font-weight: 600;
+    background: transparent;
+    transition: color .25s ease, padding-left .25s ease;
+}
+
+.bms-dropdown .bms-menu .dropdown-item:hover,
+.bms-dropdown .bms-menu .dropdown-item:focus {
+    color: #ffffff;
+    background: transparent;
+    padding-left: 22px;
+}
+
+@media (min-width: 992px) {
+    .bms-dropdown > .bms-menu {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(6px);
+        transition: opacity .22s ease, visibility .22s ease, transform .22s ease;
+    }
+
+    .bms-dropdown:hover > .bms-menu,
+    .bms-dropdown > .bms-menu:hover,
+    .bms-dropdown > .bms-menu.show {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+}
 </style>
 
+<script>
+/* MODULE JS — NAVBAR */
+document.addEventListener("DOMContentLoaded", function () {
+    const nav = document.getElementById("mainNav");
+    const white = document.getElementById("logoWhite");
+    const dark = document.getElementById("logoDark");
+
+    if (nav) nav.classList.add("scrolled", "navbar-shrink");
+    if (white) white.style.display = "none";
+    if (dark) dark.style.display = "block";
+});
+</script>
+
+<style>
+/* =========================================================
+   COMMON SECTION STYLES
+========================================================= */
+        /* =========================================================
+           COMMON
+        ========================================================= */
+
+        .section-label {
+            color: #777;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 14px;
+        }
+
+        .section-title {
+            color: #111;
+
+            font-size: clamp(34px,4vw,58px);
+
+            line-height: 1.08;
+
+            font-weight: 600;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 0;
+        }
+
+        .section-line {
+            width: 45px;
+            height: 3px;
+
+            background: #111;
+
+            margin: 20px 0 25px;
+        }
 
 
+       
+
+
+      
+</style>
+
+<!-- =========================================================
+     MODULE — HERO
+========================================================= -->
 <!-- =========================================================
      HERO
 ========================================================= -->
@@ -1540,6 +574,141 @@
 
 
 
+
+<style>
+/* MODULE CSS — HERO */
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            min-height: 700px;
+            
+
+            display: flex;
+            align-items: center;
+
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,.97) 0%,
+                    rgba(0,0,0,.87) 42%,
+                    rgba(0,0,0,.48) 76%,
+                    rgba(0,0,0,.15) 100%
+                ),
+                url("assets/img/industrial automation/banner.png");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+            padding: 100px 7%;
+
+            color: #fff;
+
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            margin-bottom: 24px;
+
+            color: #bbb;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .hero-label::before {
+            content: "";
+
+            width: 42px;
+            height: 1px;
+
+            background: #fff;
+        }
+
+        .hero h1 {
+            max-width: 1000px;
+
+            color: #fff;
+
+            font-size: clamp(48px, 7vw, 92px);
+
+            line-height: .94;
+
+            font-weight: 700;
+
+            letter-spacing: -5px;
+
+            margin-bottom: 30px;
+
+            text-transform: uppercase;
+        }
+
+        .hero h1 span {
+            font-weight: 300;
+        }
+
+        .hero p {
+            max-width: 720px;
+
+            color: #d4d4d4;
+
+            font-size: 15px;
+
+            line-height: 1.9;
+
+            margin-bottom: 35px;
+        }
+
+        .hero-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+
+            padding: 15px 28px;
+
+            background: #fff;
+            color: #111;
+
+            border: 1px solid #fff;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            transition: .3s ease;
+        }
+
+        .hero-button:hover {
+            background: #111;
+            color: #fff;
+
+            transform: translateY(-3px);
+        }
+
+
+</style>
+
+<!-- =========================================================
+     MODULE — HIGHLIGHTS
+========================================================= -->
 <!-- =========================================================
      HIGHLIGHTS
 ========================================================= -->
@@ -1635,6 +804,86 @@
 
 
 
+
+<style>
+/* MODULE CSS — HIGHLIGHTS */
+        /* =========================================================
+           HIGHLIGHTS
+        ========================================================= */
+
+        .highlights {
+            width: 86%;
+            margin: -45px auto 0;
+
+            position: relative;
+            z-index: 10;
+
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+
+            background: #fff;
+
+            box-shadow: 0 20px 55px rgba(0,0,0,.12);
+        }
+
+        .highlight {
+            min-height: 115px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 16px;
+
+            padding: 20px 25px;
+
+            border-right: 1px solid #e5e5e5;
+        }
+
+        .highlight:last-child {
+            border-right: none;
+        }
+
+        .highlight-icon {
+            width: 44px;
+            height: 44px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #111;
+            color: #fff;
+
+            font-size: 17px;
+        }
+
+        .highlight h4 {
+            color: #111;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            margin-bottom: 6px;
+        }
+
+        .highlight p {
+            color: #777;
+
+            font-size: 10px;
+
+            line-height: 1.6;
+
+            margin: 0;
+        }
+
+
+</style>
+
+<!-- =========================================================
+     MODULE — INDUSTRIAL AUTOMATION INTRO
+========================================================= -->
 <!-- =========================================================
      INDUSTRIAL AUTOMATION INTRO
 ========================================================= -->
@@ -2296,6 +1545,10 @@
 </style>
 
 
+
+<!-- =========================================================
+     MODULE — INDUSTRIAL AUTOMATION SYSTEMS
+========================================================= -->
 <!-- =========================================================
      MODULE 01 — INDUSTRIAL AUTOMATION SYSTEMS
 ========================================================= -->
@@ -3424,6 +2677,10 @@
 
 
 
+
+<!-- =========================================================
+     MODULE — PLC + SCADA SYSTEMS
+========================================================= -->
 <!-- =========================================================
      MODULE 02 — PLC + SCADA SYSTEMS
 ========================================================= -->
@@ -4404,6 +3661,10 @@
 
 
 
+
+<!-- =========================================================
+     MODULE — INDUSTRIAL WORKFLOW
+========================================================= -->
 <!-- =========================================================
      WORKFLOW
 ========================================================= -->
@@ -4546,6 +3807,137 @@
 
 
 
+
+<style>
+/* MODULE CSS — INDUSTRIAL WORKFLOW */
+        /* =========================================================
+           INDUSTRIAL WORKFLOW
+        ========================================================= */
+
+        .workflow-section {
+            padding: 110px 8%;
+
+            background: #050505;
+
+            color: #fff;
+        }
+
+        .workflow-header {
+            max-width: 780px;
+
+            margin: 0 auto 55px;
+
+            text-align: center;
+        }
+
+        .workflow-header .section-label {
+            color: #aaa;
+        }
+
+        .workflow-header .section-title {
+            color: #fff;
+        }
+
+        .workflow-header .section-line {
+            background: #fff;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .workflow-header p {
+            color: #aaa;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+        .workflow-grid {
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(5,1fr);
+
+            gap: 10px;
+        }
+
+        .workflow-card {
+            min-height: 215px;
+
+            padding: 25px 15px;
+
+            text-align: center;
+
+            border: 1px solid #333;
+
+            background: rgba(255,255,255,.03);
+
+            transition: .3s ease;
+        }
+
+        .workflow-card:hover {
+            background: #fff;
+
+            transform: translateY(-6px);
+        }
+
+        .workflow-number {
+            width: 45px;
+            height: 45px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0 auto 16px;
+
+            background: #fff;
+            color: #111;
+
+            border-radius: 50%;
+
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .workflow-card h4 {
+            color: #fff;
+
+            font-size: 10px;
+
+            margin-bottom: 8px;
+
+            transition: .3s;
+        }
+
+        .workflow-card p {
+            color: #aaa;
+
+            font-size: 9px;
+
+            line-height: 1.6;
+
+            transition: .3s;
+        }
+
+        .workflow-card:hover h4 {
+            color: #111;
+        }
+
+        .workflow-card:hover p {
+            color: #555;
+        }
+
+
+</style>
+
+<!-- =========================================================
+     MODULE — FEATURES
+========================================================= -->
 <!-- =========================================================
      FEATURES
 ========================================================= -->
@@ -4724,6 +4116,83 @@
 
 
 
+
+<style>
+/* MODULE CSS — FEATURES */
+        /* =========================================================
+           FEATURES
+        ========================================================= */
+
+        .features-section {
+            padding: 105px 8%;
+
+            background: #f5f5f5;
+        }
+
+        .features-header {
+            max-width: 1250px;
+
+            margin: auto;
+        }
+
+        .features-grid {
+            max-width: 1250px;
+
+            margin: 45px auto 0;
+
+            display: grid;
+
+            grid-template-columns: repeat(4,1fr);
+
+            gap: 16px;
+        }
+
+        .feature-card {
+            padding: 28px 22px;
+
+            background: #fff;
+
+            border: 1px solid #e5e5e5;
+
+            transition: .3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+
+            border-color: #111;
+        }
+
+        .feature-card i {
+            color: #111;
+
+            font-size: 23px;
+
+            margin-bottom: 17px;
+        }
+
+        .feature-card h4 {
+            color: #111;
+
+            font-size: 12px;
+
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            color: #777;
+
+            font-size: 10px;
+
+            line-height: 1.7;
+        }
+
+
+</style>
+
+<!-- =========================================================
+     MODULE — INDUSTRIAL IoT
+========================================================= -->
 <!-- =========================================================
      IIOT
 ========================================================= -->
@@ -4875,6 +4344,112 @@
 
 
 
+
+<style>
+/* MODULE CSS — INDUSTRIAL IoT */
+        /* =========================================================
+           IIOT SECTION
+        ========================================================= */
+
+        .iiot-section {
+            padding: 110px 8%;
+
+            background: #fff;
+        }
+
+        .iiot-layout {
+            max-width: 1250px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: .8fr 1.2fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .iiot-description {
+            color: #666;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+        .iiot-list {
+            display: grid;
+
+            grid-template-columns: repeat(2,1fr);
+
+            gap: 12px;
+        }
+
+        .iiot-item {
+            padding: 22px;
+
+            background: #f7f7f7;
+
+            border: 1px solid #e5e5e5;
+
+            transition: .3s ease;
+        }
+
+        .iiot-item:hover {
+            background: #111;
+
+            transform: translateY(-5px);
+        }
+
+        .iiot-item i {
+            color: #111;
+
+            font-size: 17px;
+
+            margin-bottom: 12px;
+
+            transition: .3s;
+        }
+
+        .iiot-item strong {
+            display: block;
+
+            color: #111;
+
+            font-size: 11px;
+
+            margin-bottom: 6px;
+
+            transition: .3s;
+        }
+
+        .iiot-item span {
+            color: #777;
+
+            font-size: 9px;
+
+            line-height: 1.6;
+
+            transition: .3s;
+        }
+
+        .iiot-item:hover i,
+        .iiot-item:hover strong {
+            color: #fff;
+        }
+
+        .iiot-item:hover span {
+            color: #aaa;
+        }
+
+
+</style>
+
+<!-- =========================================================
+     MODULE — APPLICATIONS
+========================================================= -->
 <!-- =========================================================
      APPLICATIONS
 ========================================================= -->
@@ -5007,6 +4582,89 @@
 
 
 
+
+<style>
+/* MODULE CSS — APPLICATIONS */
+        /* =========================================================
+           APPLICATIONS
+        ========================================================= */
+
+        .applications-section {
+            padding: 105px 8%;
+
+            background: #f5f5f5;
+        }
+
+        .applications-content {
+            max-width: 1250px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: .8fr 1.2fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .application-description {
+            color: #666;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+        .application-list {
+            display: grid;
+
+            grid-template-columns: repeat(2,1fr);
+
+            gap: 12px;
+        }
+
+        .application-item {
+            padding: 21px;
+
+            background: #fff;
+
+            border: 1px solid #e5e5e5;
+
+            transition: .3s ease;
+        }
+
+        .application-item:hover {
+            transform: translateY(-5px);
+
+            border-color: #111;
+        }
+
+        .application-item strong {
+            display: block;
+
+            color: #111;
+
+            font-size: 11px;
+
+            margin-bottom: 6px;
+        }
+
+        .application-item span {
+            color: #777;
+
+            font-size: 9px;
+
+            line-height: 1.5;
+        }
+
+
+</style>
+
+<!-- =========================================================
+     MODULE — CTA
+========================================================= -->
 <!-- =========================================================
      CTA
 ========================================================= -->
@@ -5064,6 +4722,127 @@
 
   <!-- footer start -->
 
+
+<style>
+/* MODULE CSS — CTA */
+        /* =========================================================
+           CTA
+        ========================================================= */
+
+        .cta {
+            max-width: 1250px;
+
+            margin: 80px auto;
+
+            min-height: 290px;
+
+            display: grid;
+
+            grid-template-columns: 1.3fr .7fr;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,1),
+                    rgba(0,0,0,.68)
+                ),
+                url("images/industrial-automation-cta.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+        .cta-content {
+            padding: 50px;
+
+            color: #fff;
+        }
+
+        .cta-content h2 {
+            color: #fff;
+
+            font-size: 32px;
+
+            line-height: 1.2;
+
+            margin-bottom: 15px;
+        }
+
+        .cta-content p {
+            max-width: 650px;
+
+            color: #ccc;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-top: 15px;
+
+            padding: 13px 23px;
+
+            background: #fff;
+
+            color: #111;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            transition: .3s ease;
+        }
+
+        .cta-button:hover {
+            background: #111;
+
+            color: #fff;
+
+            border: 1px solid #fff;
+        }
+
+        .cta-side {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-left: 1px solid #333;
+        }
+
+        .cta-side strong {
+            display: block;
+
+            color: #fff;
+
+            font-size: 18px;
+
+            margin-bottom: 6px;
+        }
+
+        .cta-side span {
+            color: #aaa;
+
+            font-size: 9px;
+
+            letter-spacing: 1.5px;
+        }
+
+
+</style>
+
+<!-- =========================================================
+     MODULE — CORPORATE FOOTER
+========================================================= -->
     <footer class="premium-footer">
 
         <!-- Ambient Background -->
@@ -6808,6 +6587,185 @@
 
 
 
+<style>
+/* =========================================================
+   GLOBAL RESPONSIVE OVERRIDES
+========================================================= */
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width:1100px) {
+
+            .main-navbar .navbar-nav {
+                gap: 18px;
+            }
+
+            .systems-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .workflow-grid {
+                grid-template-columns: repeat(3,1fr);
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+        }
+
+
+        @media (max-width:991px) {
+
+            .main-navbar {
+                height: auto;
+                min-height: 80px;
+                padding: 10px 5%;
+            }
+
+            .main-navbar .navbar-brand img {
+                height: 48px;
+            }
+
+            .main-navbar .navbar-collapse {
+                margin-top: 15px;
+                padding: 15px 0;
+                background: #fff;
+            }
+
+            .main-navbar .navbar-nav {
+                align-items: flex-start;
+                gap: 0;
+            }
+
+            .main-navbar .nav-item {
+                width: 100%;
+            }
+
+            .main-navbar .nav-link {
+                padding: 12px 5px !important;
+            }
+
+            .main-navbar .dropdown-menu {
+                margin-top: 0;
+                border: none;
+                box-shadow: none;
+            }
+
+            .hero {
+                margin-top: 80px;
+            }
+
+            .intro,
+            .plc-layout,
+            .iiot-layout,
+            .applications-content {
+                grid-template-columns: 1fr;
+            }
+
+            .cta {
+                margin-left: 6%;
+                margin-right: 6%;
+            }
+
+        }
+
+
+        @media (max-width:767px) {
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .hero-content {
+                padding: 90px 7%;
+            }
+
+            .hero h1 {
+                font-size: 52px;
+                letter-spacing: -3px;
+            }
+
+            .highlights {
+                width: 100%;
+                margin: 0;
+                grid-template-columns: 1fr;
+            }
+
+            .highlight {
+                border-right: none;
+                border-bottom: 1px solid #e5e5e5;
+            }
+
+            .intro,
+            .systems-section,
+            .plc-section,
+            .workflow-section,
+            .features-section,
+            .iiot-section,
+            .applications-section {
+                padding-left: 7%;
+                padding-right: 7%;
+            }
+
+            .systems-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .plc-list {
+                grid-template-columns: 1fr;
+            }
+
+            .workflow-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .iiot-list,
+            .application-list {
+                grid-template-columns: 1fr;
+            }
+
+            .cta {
+                margin: 40px 6%;
+                grid-template-columns: 1fr;
+            }
+
+            .cta-side {
+                min-height: 120px;
+                border-left: none;
+                border-top: 1px solid #333;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+        }
+
+
+        @media (max-width:430px) {
+
+            .main-navbar .navbar-brand img {
+                height: 42px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .workflow-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+</style>
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
 </script>

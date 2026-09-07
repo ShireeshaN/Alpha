@@ -12,6 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <style>
+        /* =========================================================
+           GLOBAL BASE STYLES
+        ========================================================= */
+
+    
         * {
             margin: 0;
             padding: 0;
@@ -45,879 +50,18 @@
         }
 
        
-        /* CONTROL PANEL PAGE — FIRST FILE VISUAL LANGUAGE */
-        .hero {
-            min-height: 650px;
-            
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(90deg, rgba(0, 0, 0, .94) 0%, rgba(0, 0, 0, .82) 40%, rgba(0, 0, 0, .35) 75%, rgba(0, 0, 0, .10) 100%), url("assets/img/controlpanels/control-panels.png");
-            background-size: cover;
-            background-position: center
-        }
 
-        .hero-content {
-            width: 100%;
-            max-width: 1350px;
-            margin: auto;
-            padding: 100px 7%;
-            color: #fff;
-            position: relative;
-            z-index: 2
-        }
-
-        .small-title {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 24px;
-            color: #bbb;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 3px;
-            text-transform: uppercase
-        }
-
-        .small-title:before {
-            content: "";
-            width: 42px;
-            height: 1px;
-            background: #fff;
-            flex: 0 0 auto
-        }
-
-        .hero h1 {
-            max-width: 850px;
-            color: #fff;
-            font-size: clamp(50px, 7vw, 94px);
-            line-height: .96;
-            font-weight: 700;
-            letter-spacing: -4px;
-            margin-bottom: 30px;
-            text-transform: none
-        }
-
-        .hero h1 span {
-            font-weight: 300;
-            color: #fff
-        }
-
-        .hero-description {
-            max-width: 650px;
-            color: #d4d4d4;
-            font-size: 15px;
-            line-height: 1.9;
-            margin-bottom: 35px
-        }
-
-        .hero-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            padding: 15px 25px;
-            background: #fff;
-            color: #111;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            transition: .3s ease;
-            border-radius: 0
-        }
-
-        .hero-btn:hover {
-            background: #ddd;
-            color: #000;
-            transform: translateY(-3px)
-        }
-
-        .highlights {
-            width: 86%;
-            margin: -45px auto 0;
-            position: relative;
-            z-index: 10;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            background: #fff;
-            box-shadow: 0 20px 55px rgba(0, 0, 0, .12)
-        }
-
-        .highlight {
-            min-height: 115px;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            padding: 20px 25px;
-            border-right: 1px solid #e5e5e5
-        }
-
-        .highlight:last-child {
-            border-right: none
-        }
-
-        .highlight-icon {
-            width: 44px;
-            height: 44px;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #111;
-            color: #fff;
-            font-size: 17px;
-            border-radius: 0
-        }
-
-        .highlight h4 {
-            color: #111;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 6px
-        }
-
-        .highlight p {
-            color: #777;
-            font-size: 10px;
-            line-height: 1.6;
-            margin: 0
-        }
-
-        .intro {
-            padding: 110px 8%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 90px;
-            align-items: center
-        }
-
-        .section-label {
-            color: #777;
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 14px
-        }
-
-        .section-title {
-            color: #111;
-            font-size: clamp(34px, 4vw, 58px);
-            line-height: 1.08;
-            font-weight: 600;
-            letter-spacing: -2px;
-            margin-bottom: 0
-        }
-
-        .section-line {
-            width: 45px;
-            height: 3px;
-            background: #111;
-            margin: 20px 0 25px
-        }
-
-        .intro-text {
-            color: #666;
-            font-size: 13px;
-            line-height: 1.9
-        }
-
-        .panel-section {
-            padding: 105px 8%;
-            background: #f5f5f5
-        }
-
-        .panel-heading {
-            max-width: 720px;
-            text-align: center;
-            margin: 0 auto 50px
-        }
-
-        .panel-heading .section-line {
-            margin: 20px auto 25px
-        }
-
-        .panel-heading p {
-            color: #666;
-            font-size: 13px;
-            line-height: 1.9
-        }
-
-        .panel-grid {
-            max-width: 1250px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px
-        }
-
-        .panel-card {
-            min-height: 245px;
-            position: relative;
-            padding: 32px;
-            background: #fafafa;
-            border: 1px solid #e5e5e5;
-            overflow: hidden;
-            transition: .35s ease
-        }
-
-        .panel-card:before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 0;
-            height: 3px;
-            background: #111;
-            transition: .35s ease
-        }
-
-        .panel-card:after {
-            display: none
-        }
-
-        .panel-card:hover {
-            background: #111;
-            transform: translateY(-7px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, .12)
-        }
-
-        .panel-card:hover:before {
-            width: 100%
-        }
-
-        .panel-icon {
-            width: 48px;
-            height: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 23px;
-            background: #111;
-            color: #fff;
-            font-size: 18px;
-            border-radius: 0;
-            transition: .3s
-        }
-
-        .panel-card:hover .panel-icon {
-            background: #fff;
-            color: #111
-        }
-
-        .panel-card h3 {
-            color: #111;
-            font-size: 15px;
-            font-weight: 600;
-            margin-bottom: 10px;
-            transition: .3s
-        }
-
-        .panel-card p {
-            color: #777;
-            font-size: 11px;
-            line-height: 1.75;
-            transition: .3s
-        }
-
-        .panel-card:hover h3 {
-            color: #fff
-        }
-
-        .panel-card:hover p {
-            color: #aaa
-        }
-
-        .technical-section {
-            padding: 110px 8%;
-            background: #fff
-        }
-
-        .technical-header {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            gap: 50px;
-            margin: 0 auto 50px;
-            max-width: 1250px
-        }
-
-        .technical-description {
-            max-width: 500px;
-            color: #666;
-            font-size: 13px;
-            line-height: 1.9
-        }
-
-        .technical-grid {
-            max-width: 1250px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px
-        }
-
-        .technical-card {
-            min-height: 170px;
-            padding: 25px 20px;
-            background: #fafafa;
-            border: 1px solid #e5e5e5;
-            position: relative;
-            transition: .35s
-        }
-
-        .technical-card:hover {
-            transform: translateY(-6px);
-            border-color: #111;
-            box-shadow: 0 12px 25px rgba(0, 0, 0, .10)
-        }
-
-        .technical-number {
-            position: absolute;
-            right: 18px;
-            top: 14px;
-            color: #e4e4e4;
-            font-size: 25px;
-            font-weight: 800
-        }
-
-        .technical-card h4 {
-            color: #111;
-            font-size: 12px;
-            margin-bottom: 10px
-        }
-
-        .technical-card p {
-            color: #777;
-            font-size: 10px;
-            line-height: 1.7
-        }
-
-        .components-section {
-            padding: 110px 8%;
-            background: #f6f6f6
-        }
-
-        .components-layout {
-            max-width: 1250px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: .85fr 1.15fr;
-            gap: 80px;
-            align-items: center
-        }
-
-        .components-text p {
-            color: #666;
-            font-size: 13px;
-            line-height: 1.9;
-            margin-bottom: 25px
-        }
-
-        .component-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px
-        }
-
-        .component-item {
-            padding: 18px;
-            background: #fff;
-            border-left: 3px solid #111;
-            color: #111;
-            font-size: 11px;
-            font-weight: 600
-        }
-
-        .components-visual {
-            min-height: 500px;
-            background: linear-gradient(rgba(0, 0, 0, .12), rgba(0, 0, 0, .12)), url("assets/img/controlpanels/Panel Construction.png");
-            background-size: cover;
-            background-position: center;
-            position: relative
-        }
-
-        .visual-label {
-            position: absolute;
-            left: 25px;
-            bottom: 25px;
-            padding: 18px 22px;
-            background: #111;
-            color: #fff
-        }
-
-        .visual-label strong {
-            display: block;
-            color: #fff;
-            font-size: 18px;
-            margin-bottom: 4px
-        }
-
-        .visual-label span {
-            font-size: 9px;
-            color: #aaa;
-            text-transform: uppercase;
-            letter-spacing: 1px
-        }
-
-        .process-section {
-            padding: 110px 8%;
-            background: #111;
-            color: #fff;
-            position: relative;
-            overflow: hidden
-        }
-
-        .process-header {
-            max-width: 700px;
-            margin: 0 auto 60px;
-        }
-
-        .process-header .section-label {
-            color: #888
-        }
-
-        .process-header .section-title {
-            color: #fff
-        }
-
-        .process-header p {
-            color: #aaa;
-            font-size: 13px;
-            line-height: 1.8
-        }
-
-        .process-grid {
-            max-width: 1250px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 0;
-            position: relative
-        }
-
-        .process-grid:before {
-            content: "";
-            position: absolute;
-            left: 30px;
-            right: 30px;
-            top: 25px;
-            height: 1px;
-            background: #333
-        }
-
-        .process-step {
-            position: relative;
-            padding-right: 25px;
-            min-height: 170px;
-            background: transparent;
-            border: none;
-            transition: .3s
-        }
-
-        .process-step:hover {
-            background: transparent;
-            transform: translateY(-5px)
-        }
-
-        .process-number {
-            width: 50px;
-            height: 50px;
-            margin: 0 0 23px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            z-index: 2;
-            background: #111;
-            border: 1px solid #fff;
-            color: #fff;
-            border-radius: 50%;
-            font-size: 11px;
-            font-weight: 700
-        }
-
-        .process-step h4 {
-            color: #fff;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 8px
-        }
-
-        .process-step p {
-            max-width: 160px;
-            color: #888;
-            font-size: 9px;
-            line-height: 1.7
-        }
-
-        .testing-section {
-            padding: 110px 8%;
-            background: #fff
-        }
-
-        .testing-grid {
-            max-width: 1250px;
-            margin: 40px auto 0;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px
-        }
-
-        .test-card {
-            padding: 25px 20px;
-            border: 1px solid #e5e5e5;
-            background: #fafafa;
-            transition: .35s
-        }
-
-        .test-card:hover {
-            border-color: #111;
-            transform: translateY(-5px)
-        }
-
-        .test-card span {
-            display: block;
-            color: #111;
-            font-size: 20px;
-            font-weight: 800;
-            margin-bottom: 12px
-        }
-
-        .test-card h4 {
-            color: #111;
-            font-size: 12px;
-            margin-bottom: 7px
-        }
-
-        .test-card p {
-            color: #777;
-            font-size: 10px;
-            line-height: 1.6
-        }
-
-        .cta {
-            max-width: 1250px;
-            margin: 0 auto 100px;
-            min-height: 300px;
-            display: grid;
-            grid-template-columns: 1.4fr .6fr;
-            background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, .35)), url("images/control-panel-cta.jpg");
-            background-size: cover;
-            background-position: center;
-            overflow: hidden
-        }
-
-        .cta-content {
-            padding: 50px;
-            color: #fff
-        }
-
-        .cta-content h2 {
-            font-size: 31px;
-            line-height: 1.2;
-            margin-bottom: 17px
-        }
-
-        .cta-content p {
-            max-width: 650px;
-            color: #aaa;
-            font-size: 12px;
-            line-height: 1.8
-        }
-
-        .cta-side {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-left: 1px solid rgba(255, 255, 255, .18)
-        }
-
-        .cta-side strong {
-            color: #fff;
-            font-size: 27px
-        }
-
-        .cta-side span {
-            display: block;
-            color: #999;
-            font-size: 9px;
-            letter-spacing: 1px
-        }
-
-        .main-footer {
-            background: #050505;
-            color: #fff;
-            padding: 75px 7% 25px
-        }
-
-        .footer-logo img {
-            height: 55px;
-            width: auto;
-            margin-bottom: 22px
-        }
-
-        .footer-description {
-            max-width: 370px;
-            color: #888;
-            font-size: 12px;
-            line-height: 1.9
-        }
-
-        .footer-heading {
-            color: #fff;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            margin-bottom: 22px
-        }
-
-        .footer-links {
-            list-style: none;
-            padding: 0;
-            margin: 0
-        }
-
-        .footer-links li {
-            margin-bottom: 11px
-        }
-
-        .footer-links a {
-            color: #888;
-            font-size: 12px;
-            transition: .3s
-        }
-
-        .footer-links a:hover {
-            color: #fff;
-            padding-left: 4px
-        }
-
-        .footer-contact {
-            list-style: none;
-            padding: 0;
-            margin: 0
-        }
-
-        .footer-contact li {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            color: #888;
-            font-size: 12px;
-            line-height: 1.8;
-            margin-bottom: 15px
-        }
-
-        .footer-contact i {
-            width: 18px;
-            color: #fff;
-            margin-top: 4px
-        }
-
-        .footer-social {
-            display: flex;
-            gap: 9px;
-            margin-top: 24px
-        }
-
-        .footer-social a {
-            width: 35px;
-            height: 35px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #2b2b2b;
-            color: #999;
-            font-size: 13px;
-            transition: .3s
-        }
-
-        .footer-social a:hover {
-            background: #fff;
-            color: #000;
-            border-color: #fff
-        }
-
-        .footer-bottom {
-            margin-top: 55px;
-            padding-top: 20px;
-            border-top: 1px solid #222;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-            color: #666;
-            font-size: 10px;
-            letter-spacing: .5px
-        }
-
-        .footer-bottom strong {
-            color: #fff;
-            font-weight: 500
-        }
-
-        @media(max-width:1100px) {
-            .main-navbar .navbar-nav {
-                gap: 18px
-            }
-
-            .panel-grid {
-                grid-template-columns: repeat(2, 1fr)
-            }
-
-            .technical-grid {
-                grid-template-columns: repeat(2, 1fr)
-            }
-
-            .process-grid {
-                grid-template-columns: repeat(3, 1fr);
-                row-gap: 50px
-            }
-
-            .process-grid:before {
-                display: none
-            }
-
-            .testing-grid {
-                grid-template-columns: repeat(2, 1fr)
-            }
-        }
-
-        @media(max-width:991px) {
-            .main-navbar {
-                height: auto;
-                min-height: 80px;
-                padding: 10px 5%
-            }
-
-            .main-navbar .navbar-brand img {
-                height: 48px
-            }
-
-            .main-navbar .navbar-collapse {
-                margin-top: 15px;
-                padding: 15px 0;
-                background: #fff
-            }
-
-            .main-navbar .navbar-nav {
-                align-items: flex-start;
-                gap: 0
-            }
-
-            .main-navbar .nav-item {
-                width: 100%
-            }
-
-            .main-navbar .nav-link {
-                padding: 12px 0 !important
-            }
-
-            .hero {
-                margin-top: 80px
-            }
-
-            .intro,
-            .components-layout {
-                grid-template-columns: 1fr
-            }
-
-            .intro {
-                gap: 55px
-            }
-
-            .technical-header {
-                flex-direction: column;
-                align-items: flex-start
-            }
-
-            .cta {
-                margin-left: 6%;
-                margin-right: 6%
-            }
-
-            .main-footer {
-                padding: 65px 7% 25px
-            }
-        }
-
-        @media(max-width:600px) {
-            .main-navbar {
-                padding: 10px 5%
-            }
-
-            .hero {
-                min-height: 600px
-            }
-
-            .hero-content {
-                padding: 80px 6%
-            }
-
-            .hero h1 {
-                font-size: 48px;
-                letter-spacing: -2px
-            }
-
-            .highlights {
-                width: 100%;
-                margin: 0;
-                grid-template-columns: 1fr
-            }
-
-            .highlight {
-                border-right: none;
-                border-bottom: 1px solid #e5e5e5
-            }
-
-            .intro,
-            .panel-section,
-            .technical-section,
-            .components-section,
-            .process-section,
-            .testing-section {
-                padding-left: 6%;
-                padding-right: 6%
-            }
-
-            .panel-grid,
-            .technical-grid,
-            .testing-grid {
-                grid-template-columns: 1fr
-            }
-
-            .component-list {
-                grid-template-columns: 1fr
-            }
-
-            .process-grid {
-                grid-template-columns: 1fr 1fr
-            }
-
-            .cta {
-                margin: 40px 6%;
-                grid-template-columns: 1fr
-            }
-
-            .cta-side {
-                min-height: 120px;
-                border-left: none;
-                border-top: 1px solid rgba(255, 255, 255, .18)
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px
-            }
-        }
     </style>
 </head>
 
 <body>
-    <div class="control-page">
-          <!-- =========================================================
+<div class="control-page">
+
+     MODULE — NAVBAR
+========================================================= -->
+
+<!-- HTML -->
+    <!-- =========================================================
          PREMIUM GLOBAL NAVIGATION
     ========================================================= -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
@@ -936,7 +80,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
+                    <li class="nav-item active"><a class="nav-link " href="about.html">About</a></li>
 
                     <li class="nav-item dropdown solution-dropdown position-static">
                         <a class="nav-link dropdown-toggle " href="#" id="solutionsDropdown" role="button"
@@ -945,16 +89,17 @@
                         <div class="dropdown-menu mega-menu" aria-labelledby="solutionsDropdown">
                             <div class="mega-menu-inner">
                                 <div class="mega-column">
-                                    <div class="mega-heading "><span>Energy</span></div>
-                                    <a href="solar-energy.html">Solar Energy</a>
-                                    <a href="wind-energy.html">Wind Energy</a>
+                                    <div class="mega-heading "><span>Renewable Energy</span></div>
+                                    <a href="solar-energy.html">Solar </a>
+                                    <!-- <a href="wind-energy.html">Wind Energy</a>
                                     <a href="hydel-energy.html">Hydel Energy</a>
-                                    <a href="biomass-energy.html">Biomass Energy</a>
+                                    <a href="biomass-energy.html">Biomass Energy</a> -->
                                 </div>
                                 <div class="mega-column">
-                                    <div class="mega-heading active"><span>Power</span></div>
-                                    <a href="transmission.html">Transmission</a>
-                                    <a href="distribution.html">Distribution</a>
+                                    <div class="mega-heading"><span>Power</span></div>
+                                    <a href="lt.html">LT</a>
+                                    <a href="ht.html">HT</a>
+                                    <a href="eht.html">EHT</a>
                                     <a href="control-panels.html">Control Panels</a>
                                     <a href="panel-boards.html">Panel Boards</a>
                                 </div>
@@ -978,7 +123,15 @@
                         </div>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="bms_automation.html">BMS</a></li>
+                    <li class="nav-item dropdown bms-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="bmsDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">IoT</a>
+                        <ul class="dropdown-menu bms-menu" aria-labelledby="bmsDropdown">
+                            <li><a class="dropdown-item" href="iot.html">IoT</a></li>
+                            <li><a class="dropdown-item" href="bms.html">BMS</a></li>
+                            <li><a class="dropdown-item" href="iot_bms.html">IoT+BMS</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="power-products.html">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
@@ -986,8 +139,8 @@
         </div>
     </nav>
 
-
-    <style>
+<!-- CSS -->
+<style>
         /* =====================================================
            GLOBAL
         ===================================================== */
@@ -1040,7 +193,53 @@
         .mega-column > a:hover { color: #334a85; padding-left: 21px; }
         .mega-column > a:hover::before { width: 12px; background: #4d73be; }
 
+        /* BMS DROPDOWN */
+        .bms-dropdown .bms-menu {
+            min-width: 190px;
+            margin-top: 0;
+            padding: 10px 0;
+            border: 1px solid #1f1f1f;
+            border-radius: 10px;
+            background: #000000;
+            box-shadow: 0 18px 45px rgba(0,0,0,.24);
+        }
+
+        .bms-dropdown .bms-menu .dropdown-item {
+            padding: 10px 18px;
+            color: #bdbdbd;
+            font-size: 13.5px;
+            font-weight: 600;
+            background: transparent;
+            transition: color .25s ease, padding-left .25s ease;
+        }
+
+        .bms-dropdown .bms-menu .dropdown-item:hover,
+        .bms-dropdown .bms-menu .dropdown-item:focus {
+            color: #ffffff;
+            background: transparent;
+            padding-left: 22px;
+        }
+
         @media (min-width: 992px) {
+            /* BMS dropdown: open on hover and stay open while hovering menu */
+            .bms-dropdown > .bms-menu {
+                display: block;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transform: translateY(6px);
+                transition: opacity .22s ease, visibility .22s ease, transform .22s ease;
+            }
+
+            .bms-dropdown:hover > .bms-menu,
+            .bms-dropdown > .bms-menu:hover,
+            .bms-dropdown > .bms-menu.show {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+                transform: translateY(0);
+            }
+
             .solution-dropdown > .mega-menu {
                 opacity: 0;
                 visibility: hidden;
@@ -1114,9 +313,6 @@
 
 
         
-    </style>
-
-    <style>
 /* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
 .main-navbar #solutionsDropdown,
 .main-navbar #solutionsDropdown:hover,
@@ -1134,10 +330,6 @@
 .main-navbar #solutionsDropdown.show {
     color: #4d73be !important;
 }
-</style>
-
-
-<style id="navbar-monochrome-final">
 /* =========================================================
    NAVBAR — MONOCHROME BLACK THEME
    Keep existing layout + mega-menu behavior unchanged
@@ -1270,17 +462,118 @@
         border-bottom-color: #242424 !important;
     }
 }
-</style>
-
-
-<style id="mega-heading-no-icons">
 .main-navbar .mega-heading {
     gap: 0 !important;
 }
 </style>
 
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const nav = document.getElementById("mainNav");
+    const white = document.getElementById("logoWhite");
+    const dark = document.getElementById("logoDark");
 
+    if (nav) nav.classList.add("scrolled", "navbar-shrink");
+    if (white) white.style.display = "none";
+    if (dark) dark.style.display = "block";
+});
+</script>
 
+<!-- END MODULE — NAVBAR -->
+
+<!-- =========================================================
+     MODULE — HERO
+========================================================= -->
+<style>
+        /* CONTROL PANEL PAGE — FIRST FILE VISUAL LANGUAGE */
+        .hero {
+            min-height: 650px;
+            
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(90deg, rgba(0, 0, 0, .94) 0%, rgba(0, 0, 0, .82) 40%, rgba(0, 0, 0, .35) 75%, rgba(0, 0, 0, .10) 100%), url("assets/img/controlpanels/control-panels.png");
+            background-size: cover;
+            background-position: center
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 1350px;
+            margin: auto;
+            padding: 100px 7%;
+            color: #fff;
+            position: relative;
+            z-index: 2
+        }
+
+        .small-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            color: #bbb;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase
+        }
+
+        .small-title:before {
+            content: "";
+            width: 42px;
+            height: 1px;
+            background: #fff;
+            flex: 0 0 auto
+        }
+
+        .hero h1 {
+            max-width: 850px;
+            color: #fff;
+            font-size: clamp(50px, 7vw, 94px);
+            line-height: .96;
+            font-weight: 700;
+            letter-spacing: -4px;
+            margin-bottom: 30px;
+            text-transform: none
+        }
+
+        .hero h1 span {
+            font-weight: 300;
+            color: #fff
+        }
+
+        .hero-description {
+            max-width: 650px;
+            color: #d4d4d4;
+            font-size: 15px;
+            line-height: 1.9;
+            margin-bottom: 35px
+        }
+
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 25px;
+            background: #fff;
+            color: #111;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: .3s ease;
+            border-radius: 0
+        }
+
+        .hero-btn:hover {
+            background: #ddd;
+            color: #000;
+            transform: translateY(-3px)
+        }
+
+</style>
 
         <!-- =========================================
          HERO
@@ -1320,6 +613,65 @@
         </section>
 
 
+<!-- END MODULE — HERO -->
+
+
+<!-- =========================================================
+     MODULE — HIGHLIGHTS
+========================================================= -->
+<style>
+        .highlights {
+            width: 86%;
+            margin: -45px auto 0;
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: #fff;
+            box-shadow: 0 20px 55px rgba(0, 0, 0, .12)
+        }
+
+        .highlight {
+            min-height: 115px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px 25px;
+            border-right: 1px solid #e5e5e5
+        }
+
+        .highlight:last-child {
+            border-right: none
+        }
+
+        .highlight-icon {
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #111;
+            color: #fff;
+            font-size: 17px;
+            border-radius: 0
+        }
+
+        .highlight h4 {
+            color: #111;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 6px
+        }
+
+        .highlight p {
+            color: #777;
+            font-size: 10px;
+            line-height: 1.6;
+            margin: 0
+        }
+
+</style>
 
         <!-- =========================================
          HIGHLIGHTS
@@ -1415,6 +767,53 @@
         </section>
 
 
+<!-- END MODULE — HIGHLIGHTS -->
+
+
+<!-- =========================================================
+     MODULE — INTRO / COMMON SECTION TITLES
+========================================================= -->
+<style>
+        .intro {
+            padding: 110px 8%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 90px;
+            align-items: center
+        }
+
+        .section-label {
+            color: #777;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 14px
+        }
+
+        .section-title {
+            color: #111;
+            font-size: clamp(34px, 4vw, 58px);
+            line-height: 1.08;
+            font-weight: 600;
+            letter-spacing: -2px;
+            margin-bottom: 0
+        }
+
+        .section-line {
+            width: 45px;
+            height: 3px;
+            background: #111;
+            margin: 20px 0 25px
+        }
+
+        .intro-text {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.9
+        }
+
+</style>
 
         <!-- =========================================
          INTRO
@@ -1484,6 +883,122 @@
         </section>
 
 
+<!-- END MODULE — INTRO / COMMON SECTION TITLES -->
+
+
+<!-- =========================================================
+     MODULE — CONTROL PANEL RANGE
+========================================================= -->
+<style>
+
+        .panel-section {
+            padding: 105px 8%;
+            background: #f5f5f5
+        }
+
+        .panel-heading {
+            max-width: 720px;
+            text-align: center;
+            margin: 0 auto 50px
+        }
+
+        .panel-heading .section-line {
+            margin: 20px auto 25px
+        }
+
+        .panel-heading p {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.9
+        }
+
+        .panel-grid {
+            max-width: 1250px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .panel-card {
+            min-height: 245px;
+            position: relative;
+            padding: 32px;
+            background: #fafafa;
+            border: 1px solid #e5e5e5;
+            overflow: hidden;
+            transition: .35s ease
+        }
+
+        .panel-card:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 3px;
+            background: #111;
+            transition: .35s ease
+        }
+
+        .panel-card:after {
+            display: none
+        }
+
+        .panel-card:hover {
+            background: #111;
+            transform: translateY(-7px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .12)
+        }
+
+        .panel-card:hover:before {
+            width: 100%
+        }
+
+        .panel-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 23px;
+            background: #111;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 0;
+            transition: .3s
+        }
+
+        .panel-card:hover .panel-icon {
+            background: #fff;
+            color: #111
+        }
+
+        .panel-card h3 {
+            color: #111;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            transition: .3s
+        }
+
+        .panel-card p {
+            color: #777;
+            font-size: 11px;
+            line-height: 1.75;
+            transition: .3s
+        }
+
+        .panel-card:hover h3 {
+            color: #fff
+        }
+
+        .panel-card:hover p {
+            color: #aaa
+        }
+
+
+</style>
 
 <!-- =========================================================
      PREMIUM CONTROL PANEL RANGE
@@ -2592,7 +2107,79 @@
 
 </style>
 
+<!-- END MODULE — CONTROL PANEL RANGE -->
 
+
+<!-- =========================================================
+     MODULE — TECHNICAL CAPABILITIES
+========================================================= -->
+<style>
+        .technical-section {
+            padding: 110px 8%;
+            background: #fff
+        }
+
+        .technical-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 50px;
+            margin: 0 auto 50px;
+            max-width: 1250px
+        }
+
+        .technical-description {
+            max-width: 500px;
+            color: #666;
+            font-size: 13px;
+            line-height: 1.9
+        }
+
+        .technical-grid {
+            max-width: 1250px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px
+        }
+
+        .technical-card {
+            min-height: 170px;
+            padding: 25px 20px;
+            background: #fafafa;
+            border: 1px solid #e5e5e5;
+            position: relative;
+            transition: .35s
+        }
+
+        .technical-card:hover {
+            transform: translateY(-6px);
+            border-color: #111;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, .10)
+        }
+
+        .technical-number {
+            position: absolute;
+            right: 18px;
+            top: 14px;
+            color: #e4e4e4;
+            font-size: 25px;
+            font-weight: 800
+        }
+
+        .technical-card h4 {
+            color: #111;
+            font-size: 12px;
+            margin-bottom: 10px
+        }
+
+        .technical-card p {
+            color: #777;
+            font-size: 10px;
+            line-height: 1.7
+        }
+
+</style>
 
         <!-- =========================================
          TECHNICAL CAPABILITIES
@@ -2785,7 +2372,81 @@
 
         </section>
 
+<!-- END MODULE — TECHNICAL CAPABILITIES -->
 
+
+<!-- =========================================================
+     MODULE — COMPONENTS / PANEL CONSTRUCTION
+========================================================= -->
+<style>
+        .components-section {
+            padding: 110px 8%;
+            background: #f6f6f6
+        }
+
+        .components-layout {
+            max-width: 1250px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: .85fr 1.15fr;
+            gap: 80px;
+            align-items: center
+        }
+
+        .components-text p {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.9;
+            margin-bottom: 25px
+        }
+
+        .component-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px
+        }
+
+        .component-item {
+            padding: 18px;
+            background: #fff;
+            border-left: 3px solid #111;
+            color: #111;
+            font-size: 11px;
+            font-weight: 600
+        }
+
+        .components-visual {
+            min-height: 500px;
+            background: linear-gradient(rgba(0, 0, 0, .12), rgba(0, 0, 0, .12)), url("assets/img/controlpanels/Panel Construction.png");
+            background-size: cover;
+            background-position: center;
+            position: relative
+        }
+
+        .visual-label {
+            position: absolute;
+            left: 25px;
+            bottom: 25px;
+            padding: 18px 22px;
+            background: #111;
+            color: #fff
+        }
+
+        .visual-label strong {
+            display: block;
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 4px
+        }
+
+        .visual-label span {
+            font-size: 9px;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1px
+        }
+
+</style>
 
         <!-- =========================================
          COMPONENTS
@@ -2888,7 +2549,105 @@
 
         </section>
 
+<!-- END MODULE — COMPONENTS / PANEL CONSTRUCTION -->
 
+
+<!-- =========================================================
+     MODULE — MANUFACTURING PROCESS
+========================================================= -->
+<style>
+        .process-section {
+            padding: 110px 8%;
+            background: #111;
+            color: #fff;
+            position: relative;
+            overflow: hidden
+        }
+
+        .process-header {
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .process-header .section-label {
+            color: #888
+        }
+
+        .process-header .section-title {
+            color: #fff
+        }
+
+        .process-header p {
+            color: #aaa;
+            font-size: 13px;
+            line-height: 1.8
+        }
+
+        .process-grid {
+            max-width: 1250px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 0;
+            position: relative
+        }
+
+        .process-grid:before {
+            content: "";
+            position: absolute;
+            left: 30px;
+            right: 30px;
+            top: 25px;
+            height: 1px;
+            background: #333
+        }
+
+        .process-step {
+            position: relative;
+            padding-right: 25px;
+            min-height: 170px;
+            background: transparent;
+            border: none;
+            transition: .3s
+        }
+
+        .process-step:hover {
+            background: transparent;
+            transform: translateY(-5px)
+        }
+
+        .process-number {
+            width: 50px;
+            height: 50px;
+            margin: 0 0 23px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+            background: #111;
+            border: 1px solid #fff;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 11px;
+            font-weight: 700
+        }
+
+        .process-step h4 {
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 8px
+        }
+
+        .process-step p {
+            max-width: 160px;
+            color: #888;
+            font-size: 9px;
+            line-height: 1.7
+        }
+
+</style>
 
         <!-- =========================================
          MANUFACTURING PROCESS
@@ -3030,7 +2789,59 @@
 
         </section>
 
+<!-- END MODULE — MANUFACTURING PROCESS -->
 
+
+<!-- =========================================================
+     MODULE — TESTING & QUALITY
+========================================================= -->
+<style>
+        .testing-section {
+            padding: 110px 8%;
+            background: #fff
+        }
+
+        .testing-grid {
+            max-width: 1250px;
+            margin: 40px auto 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px
+        }
+
+        .test-card {
+            padding: 25px 20px;
+            border: 1px solid #e5e5e5;
+            background: #fafafa;
+            transition: .35s
+        }
+
+        .test-card:hover {
+            border-color: #111;
+            transform: translateY(-5px)
+        }
+
+        .test-card span {
+            display: block;
+            color: #111;
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 12px
+        }
+
+        .test-card h4 {
+            color: #111;
+            font-size: 12px;
+            margin-bottom: 7px
+        }
+
+        .test-card p {
+            color: #777;
+            font-size: 10px;
+            line-height: 1.6
+        }
+
+</style>
 
         <!-- =========================================
          TESTING & QUALITY
@@ -3129,7 +2940,63 @@
 
         </section>
 
+<!-- END MODULE — TESTING & QUALITY -->
 
+
+<!-- =========================================================
+     MODULE — CTA
+========================================================= -->
+<style>
+        .cta {
+            max-width: 1250px;
+            margin: 0 auto 100px;
+            min-height: 300px;
+            display: grid;
+            grid-template-columns: 1.4fr .6fr;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, .35)), url("images/control-panel-cta.jpg");
+            background-size: cover;
+            background-position: center;
+            overflow: hidden
+        }
+
+        .cta-content {
+            padding: 50px;
+            color: #fff
+        }
+
+        .cta-content h2 {
+            font-size: 31px;
+            line-height: 1.2;
+            margin-bottom: 17px
+        }
+
+        .cta-content p {
+            max-width: 650px;
+            color: #aaa;
+            font-size: 12px;
+            line-height: 1.8
+        }
+
+        .cta-side {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-left: 1px solid rgba(255, 255, 255, .18)
+        }
+
+        .cta-side strong {
+            color: #fff;
+            font-size: 27px
+        }
+
+        .cta-side span {
+            display: block;
+            color: #999;
+            font-size: 9px;
+            letter-spacing: 1px
+        }
+
+</style>
 
         <!-- =========================================
          CTA
@@ -3175,6 +3042,12 @@
 
         </section>
 
+<!-- END MODULE — CTA -->
+
+
+<!-- =========================================================
+     MODULE — CORPORATE FOOTER
+========================================================= -->
 
  <!-- =========================================================
      ALPHA NUMERIC — PREMIUM CORPORATE WHITE FOOTER
@@ -4374,14 +4247,174 @@ a.corp-footer-contact-item:hover > i {
 <script>
     document.getElementById("corpFooterYear").textContent = new Date().getFullYear();
 </script>
-    
-    <!-- =========================================================
-     PREMIUM TECHNOLOGY FOOTER END
-     ========================================================= -->
 
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>window.addEventListener("scroll", function () { const navbar = document.querySelector(".main-navbar"); if (window.scrollY > 30) { navbar.style.boxShadow = "0 5px 25px rgba(0,0,0,0.07)"; } else { navbar.style.boxShadow = "none"; } });</script>
+<!-- END MODULE — CORPORATE FOOTER -->
+
+<!-- =========================================================
+     GLOBAL RESPONSIVE OVERRIDES
+     Shared breakpoint rules retained from original page
+========================================================= -->
+<style>
+
+        @media(max-width:1100px) {
+            .main-navbar .navbar-nav {
+                gap: 18px
+            }
+
+            .panel-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .technical-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(3, 1fr);
+                row-gap: 50px
+            }
+
+            .process-grid:before {
+                display: none
+            }
+
+            .testing-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(max-width:991px) {
+            .main-navbar {
+                height: auto;
+                min-height: 80px;
+                padding: 10px 5%
+            }
+
+            .main-navbar .navbar-brand img {
+                height: 48px
+            }
+
+            .main-navbar .navbar-collapse {
+                margin-top: 15px;
+                padding: 15px 0;
+                background: #fff
+            }
+
+            .main-navbar .navbar-nav {
+                align-items: flex-start;
+                gap: 0
+            }
+
+            .main-navbar .nav-item {
+                width: 100%
+            }
+
+            .main-navbar .nav-link {
+                padding: 12px 0 !important
+            }
+
+            .hero {
+                margin-top: 80px
+            }
+
+            .intro,
+            .components-layout {
+                grid-template-columns: 1fr
+            }
+
+            .intro {
+                gap: 55px
+            }
+
+            .technical-header {
+                flex-direction: column;
+                align-items: flex-start
+            }
+
+            .cta {
+                margin-left: 6%;
+                margin-right: 6%
+            }
+
+            .main-footer {
+                padding: 65px 7% 25px
+            }
+        }
+
+        @media(max-width:600px) {
+            .main-navbar {
+                padding: 10px 5%
+            }
+
+            .hero {
+                min-height: 600px
+            }
+
+            .hero-content {
+                padding: 80px 6%
+            }
+
+            .hero h1 {
+                font-size: 48px;
+                letter-spacing: -2px
+            }
+
+            .highlights {
+                width: 100%;
+                margin: 0;
+                grid-template-columns: 1fr
+            }
+
+            .highlight {
+                border-right: none;
+                border-bottom: 1px solid #e5e5e5
+            }
+
+            .intro,
+            .panel-section,
+            .technical-section,
+            .components-section,
+            .process-section,
+            .testing-section {
+                padding-left: 6%;
+                padding-right: 6%
+            }
+
+            .panel-grid,
+            .technical-grid,
+            .testing-grid {
+                grid-template-columns: 1fr
+            }
+
+            .component-list {
+                grid-template-columns: 1fr
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .cta {
+                margin: 40px 6%;
+                grid-template-columns: 1fr
+            }
+
+            .cta-side {
+                min-height: 120px;
+                border-left: none;
+                border-top: 1px solid rgba(255, 255, 255, .18)
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px
+            }
+        }
+
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</div>
 </body>
-
 </html>
