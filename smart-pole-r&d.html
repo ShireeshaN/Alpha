@@ -58,8 +58,7 @@
 
 
     <style>
-
-        /* =========================================================
+/* =========================================================
            GLOBAL
         ========================================================== */
 
@@ -103,12 +102,7 @@
             font-family: inherit;
         }
 
-
-
-       
-
-
-        /* =========================================================
+/* =========================================================
            COMMON
         ========================================================== */
 
@@ -184,10 +178,444 @@
 
             line-height: 1.9;
         }
+</style>
+
+<!-- END MODULE — GLOBAL BASE + COMMON STYLES -->
+</head>
+
+<body>
+
+<!-- =========================================================
+     MODULE — NAVBAR
+========================================================= -->
+
+<!-- HTML -->
+    <!-- =========================================================
+         PREMIUM GLOBAL NAVIGATION
+    ========================================================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/w-alpha.png" id="logoWhite" class="navbar-logo" alt="Alpha Numeric Innovations" style="display:none;">
+                <img src="assets/img/b-alpha.png" id="logoDark" class="navbar-logo" alt="Alpha Numeric Innovations">
+            </a>
+
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu <i class="fas fa-bars ms-1"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
+
+                    <li class="nav-item dropdown solution-dropdown position-static">
+                        <a class="nav-link dropdown-toggle " href="#" id="solutionsDropdown" role="button"
+                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Solutions</a>
+
+                        <div class="dropdown-menu mega-menu" aria-labelledby="solutionsDropdown">
+                            <div class="mega-menu-inner">
+                                <div class="mega-column">
+                                    <div class="mega-heading "><span>Renewable Energy</span></div>
+                                    <a href="solar-energy.html">Solar </a>
+                                    <!-- <a href="wind-energy.html">Wind Energy</a>
+                                    <a href="hydel-energy.html">Hydel Energy</a>
+                                    <a href="biomass-energy.html">Biomass Energy</a> -->
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>Power</span></div>
+                                    <a href="lt.html">LT</a>
+                                    <a href="ht.html">HT</a>
+                                    <a href="eht.html">EHT</a>
+                                    <a href="control-panels.html">Control Panels</a>
+                                    <a href="panel-boards.html">Panel Boards</a>
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>Automation</span></div>
+                                    <a href="home-automation.html">Home Automation</a>
+                                    <a href="commercial-automation.html">Commercial Automation</a>
+                                    <a href="industrial-automation.html">Industrial Automation</a>
+                                    <a href="hospital-automation.html">Hospital Automation</a>
+                                    <a href="hotel-automation.html">Hotel Automation</a>
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>R&amp;D</span></div>
+                                    <a href="smart-pole-r&d.html">Smart Pole</a>
+                                    <a href="smart-bollard-r&d.html">Smart Bollard</a>
+                                    <a href="smart-conference-table.html">Smart Conference Table</a>
+                                    <a href="smart-bar-counter.html">Smart Bar Counter</a>
+                                    <a href="smart-window-leaf-ac.html">Smart Window Leaf AC</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown bms-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="bmsDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">IoT</a>
+                        <ul class="dropdown-menu bms-menu" aria-labelledby="bmsDropdown">
+                            <li><a class="dropdown-item" href="iot.html">IoT</a></li>
+                            <li><a class="dropdown-item" href="bms.html">BMS</a></li>
+                            <li><a class="dropdown-item" href="iot-bms.html">IoT+BMS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="power-products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- CSS -->
+<style>
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #ffffff;
+            color: #111111;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+        /* =====================================================
+           PREMIUM GLOBAL NAVBAR
+        ===================================================== */
+
+        .main-navbar { padding: 13px 0; background: transparent; transition: background .35s ease, padding .35s ease, box-shadow .35s ease; z-index: 9999; }
+        .main-navbar.navbar-shrink, .main-navbar.scrolled { background: #fff; padding: 8px 0; box-shadow: 0 8px 35px rgba(14,29,57,.08); }
+        .navbar-logo { height: 68px; width: auto; object-fit: contain; transition: height .3s ease; }
+        .main-navbar.navbar-shrink .navbar-logo, .main-navbar.scrolled .navbar-logo { height: 58px; }
+        .main-navbar .nav-link { position: relative; color: #fff; font-size: 14px; font-weight: 600; letter-spacing: .4px; margin: 0 5px; padding: 12px 11px !important; transition: color .3s ease; }
+        .main-navbar.navbar-shrink .nav-link, .main-navbar.scrolled .nav-link { color: #16243b; }
+        .main-navbar .nav-link:hover, .main-navbar .nav-link:focus { color: #4d73be; }
+
+        .solution-dropdown { position: static !important; }
+        .mega-menu { position: absolute !important; width: min(1180px, calc(100vw - 48px)); left: 50% !important; top: 100% !important; transform: translateX(-50%) !important; margin-top: 0 !important; padding: 0; border: 0; border-radius: 14px; background: #fff; box-shadow: 0 24px 70px rgba(14,29,57,.18); overflow: hidden; }
+        .mega-menu-inner { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); }
+        .mega-column { min-height: 270px; padding: 30px 30px 32px; border-right: 1px solid #e8edf5; background: #fff; }
+        .mega-column:last-child { border-right: 0; }
+        .mega-heading { display: flex; align-items: center; gap: 11px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid #edf1f7; color: #17243b; font-family: "Varela Round", sans-serif; font-size: 16px; font-weight: 600; }
+        .mega-heading i { width: 22px; color: #4d73be; font-size: 17px; }
+        .mega-column > a { display: block; position: relative; padding: 9px 0 9px 16px; color: #5d687b; font-size: 13.5px; font-weight: 600; text-decoration: none; transition: color .25s ease, padding .25s ease; }
+        .mega-column > a::before { content: ""; position: absolute; left: 0; top: 50%; width: 6px; height: 1px; background: #9eabc0; transform: translateY(-50%); transition: width .25s ease, background .25s ease; }
+        .mega-column > a:hover { color: #334a85; padding-left: 21px; }
+        .mega-column > a:hover::before { width: 12px; background: #4d73be; }
+
+        /* BMS DROPDOWN */
+        .bms-dropdown .bms-menu {
+            min-width: 190px;
+            margin-top: 0;
+            padding: 10px 0;
+            border: 1px solid #1f1f1f;
+            border-radius: 10px;
+            background: #000000;
+            box-shadow: 0 18px 45px rgba(0,0,0,.24);
+        }
+
+        .bms-dropdown .bms-menu .dropdown-item {
+            padding: 10px 18px;
+            color: #bdbdbd;
+            font-size: 13.5px;
+            font-weight: 600;
+            background: transparent;
+            transition: color .25s ease, padding-left .25s ease;
+        }
+
+        .bms-dropdown .bms-menu .dropdown-item:hover,
+        .bms-dropdown .bms-menu .dropdown-item:focus {
+            color: #ffffff;
+            background: transparent;
+            padding-left: 22px;
+        }
+
+        @media (min-width: 992px) {
+            /* BMS dropdown: open on hover and stay open while hovering menu */
+            .bms-dropdown > .bms-menu {
+                display: block;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transform: translateY(6px);
+                transition: opacity .22s ease, visibility .22s ease, transform .22s ease;
+            }
+
+            .bms-dropdown:hover > .bms-menu,
+            .bms-dropdown > .bms-menu:hover,
+            .bms-dropdown > .bms-menu.show {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+                transform: translateY(0);
+            }
+
+            .solution-dropdown > .mega-menu {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                display: block;
+                transition: opacity .22s ease, visibility .22s ease;
+            }
+
+            .solution-dropdown:hover > .mega-menu,
+            .solution-dropdown.mega-open > .mega-menu,
+            .solution-dropdown > .mega-menu.show {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+
+            /* Invisible hover bridge between Solutions and mega menu */
+            .solution-dropdown > .mega-menu::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: -18px;
+                height: 18px;
+                background: transparent;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .main-navbar { background: #fff; padding: 8px 0; }
+            .navbar-logo { height: 55px; }
+            #logoWhite { display: none !important; }
+            #logoDark { display: block !important; }
+            .main-navbar .navbar-toggler { color: #17243b; border-color: rgba(23,36,59,.2); }
+            .main-navbar .nav-link { color: #17243b; padding: 12px 7px !important; margin: 1px 0; }
+            .navbar-collapse { max-height: calc(100vh - 76px); overflow-y: auto; margin-top: 10px; padding: 15px 10px 22px; border-top: 1px solid #edf0f5; background: #fff; }
+            .mega-menu { position: static !important; transform: none !important; width: 100%; margin: 0 !important; box-shadow: none; border-left: 2px solid #334a85; border-radius: 0; overflow: visible; }
+            .mega-menu-inner { grid-template-columns: 1fr; }
+            .mega-column { min-height: 0; padding: 18px 18px 14px; border-right: 0; border-bottom: 1px solid #edf0f5; }
+            .mega-column:last-child { border-bottom: 0; }
+            .mega-heading { margin-bottom: 8px; padding-bottom: 10px; }
+            .mega-column > a { padding-top: 7px; padding-bottom: 7px; }
+        }
 
 
+        /* ABOUT PAGE: keep Index navbar in permanent white/scrolled state */
+       
+        .main-navbar {
+            background: #fff;
+            padding: 8px 0;
+            box-shadow: 0 8px 35px rgba(14,29,57,.08);
+        }
+        .main-navbar .navbar-logo { height: 58px; }
+        .main-navbar .nav-link { color: #16243b; }
+        #logoWhite { display: none !important; }
+        #logoDark { display: block !important; }
+        .main-navbar .nav-contact {
+            background: #334a85;
+            border-color: #334a85;
+            color: #fff !important;
+        }
+        .main-navbar .nav-contact:hover {
+            background: #17243b;
+            border-color: #17243b;
+            color: #fff !important;
+        }
+        .main-navbar .nav-link.active { color: #4d73be; }
+        .main-navbar .nav-link.active:not(.nav-contact)::after {
+            width: calc(100% - 24px);
+        }
 
-        /* =========================================================
+
+        
+/* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
+.main-navbar #solutionsDropdown,
+.main-navbar #solutionsDropdown:hover,
+.main-navbar #solutionsDropdown:focus,
+.main-navbar #solutionsDropdown:active,
+.main-navbar #solutionsDropdown.show {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.main-navbar #solutionsDropdown:hover,
+.main-navbar #solutionsDropdown:focus,
+.main-navbar #solutionsDropdown.show {
+    color: #4d73be !important;
+}
+/* =========================================================
+   NAVBAR — MONOCHROME BLACK THEME
+   Keep existing layout + mega-menu behavior unchanged
+========================================================= */
+
+/* Main nav links */
+.main-navbar .nav-link,
+.main-navbar.scrolled .nav-link,
+.main-navbar.navbar-shrink .nav-link {
+    color: #1a1a1a !important;
+}
+
+/* Normal */
+.main-navbar .nav-link {
+    font-weight: 600;
+}
+
+/* Hover / focus — black only */
+.main-navbar .nav-link:hover,
+.main-navbar .nav-link:focus {
+    color: #000000 !important;
+}
+
+/* Active — black + stronger weight */
+.main-navbar .nav-link.active,
+.main-navbar .nav-link.show,
+.main-navbar #solutionsDropdown.show {
+    color: #000000 !important;
+    font-weight: 800 !important;
+}
+
+/* No colored underline */
+.main-navbar .nav-link:not(.nav-contact):not(.dropdown-toggle)::after {
+    background: #000000 !important;
+}
+
+/* Solutions: text only, no box */
+.main-navbar #solutionsDropdown,
+.main-navbar #solutionsDropdown:hover,
+.main-navbar #solutionsDropdown:focus,
+.main-navbar #solutionsDropdown:active,
+.main-navbar #solutionsDropdown.show {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    color: #000000 !important;
+}
+
+/* Contact: monochrome */
+.main-navbar .nav-contact,
+.main-navbar.scrolled .nav-contact {
+    background: #000000 !important;
+    border-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+.main-navbar .nav-contact:hover,
+.main-navbar .nav-contact:focus,
+.main-navbar.scrolled .nav-contact:hover {
+    background: #222222 !important;
+    border-color: #222222 !important;
+    color: #ffffff !important;
+}
+
+/* =========================================================
+   MEGA MENU — BLACK
+========================================================= */
+
+.main-navbar .mega-menu {
+    background: #000000 !important;
+    border: 1px solid #1f1f1f !important;
+    box-shadow: 0 24px 70px rgba(0,0,0,.28) !important;
+}
+
+/* Columns */
+.main-navbar .mega-column {
+    background: #000000 !important;
+    border-right-color: #242424 !important;
+}
+
+.main-navbar .mega-column:last-child {
+    border-right-color: transparent !important;
+}
+
+/* Headings */
+.main-navbar .mega-heading {
+    color: #ffffff !important;
+    border-bottom-color: #2a2a2a !important;
+}
+
+/* Icons — monochrome */
+.main-navbar .mega-heading i {
+    color: #ffffff !important;
+}
+
+/* Menu links */
+.main-navbar .mega-column > a {
+    color: #bdbdbd !important;
+}
+
+/* Small line before links */
+.main-navbar .mega-column > a::before {
+    background: #666666 !important;
+}
+
+/* Hover inside mega menu */
+.main-navbar .mega-column > a:hover,
+.main-navbar .mega-column > a:focus {
+    color: #ffffff !important;
+}
+
+.main-navbar .mega-column > a:hover::before {
+    background: #ffffff !important;
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+    .main-navbar .nav-link {
+        color: #1a1a1a !important;
+    }
+
+    .main-navbar .mega-menu {
+        background: #000000 !important;
+        border-left-color: #000000 !important;
+    }
+
+    .main-navbar .mega-column {
+        background: #000000 !important;
+        border-bottom-color: #242424 !important;
+    }
+}
+.main-navbar .mega-heading {
+    gap: 0 !important;
+}
+</style>
+
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const nav = document.getElementById("mainNav");
+    const white = document.getElementById("logoWhite");
+    const dark = document.getElementById("logoDark");
+
+    if (nav) nav.classList.add("scrolled", "navbar-shrink");
+    if (white) white.style.display = "none";
+    if (dark) dark.style.display = "block";
+});
+</script>
+
+<!-- END MODULE — NAVBAR -->
+
+<!-- =========================================================
+     MODULE — PRODUCT INTRO
+========================================================= -->
+<style>
+/* =========================================================
            PAGE INTRO
         ========================================================== */
 
@@ -257,10 +685,73 @@
 
             text-transform: uppercase;
         }
+</style>
+
+<section class="smart-pole-intro">
+
+    <div class="smart-container">
+
+        <div class="smart-intro-grid">
 
 
+            <div>
 
-        /* =========================================================
+                <span class="smart-eyebrow">
+
+                    R&D / Smart Infrastructure
+
+                </span>
+
+
+                <h1 class="smart-title">
+
+                    One intelligent pole.
+                    <span>
+                        Multiple urban systems.
+                    </span>
+
+                </h1>
+
+            </div>
+
+
+            <div class="smart-intro-copy">
+
+                <p>
+
+                    Alpha Numeric Smart Pole integrates mobility,
+                    public safety, connectivity, environmental
+                    monitoring, intelligent lighting and AI-enabled
+                    communication into one connected urban
+                    infrastructure platform.
+
+                </p>
+
+
+                <div class="smart-intro-tags">
+
+                    <span>Smart City</span>
+                    <span>IoT</span>
+                    <span>AI Enabled</span>
+                    <span>Connected Infrastructure</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- END MODULE — PRODUCT INTRO -->
+
+<!-- =========================================================
+     MODULE — MAIN PRODUCT VISUAL
+========================================================= -->
+<style>
+/* =========================================================
            PRODUCT HERO VISUAL
         ========================================================== */
 
@@ -422,10 +913,90 @@
 
             font-weight: 500;
         }
+</style>
+
+<section class="smart-product-visual">
 
 
+    <div class="smart-product-visual-grid">
 
-        /* =========================================================
+
+        <!-- IMAGE -->
+
+        <div class="smart-product-image">
+
+            <div class="smart-product-image-label">
+
+                Alpha Numeric / R&D Product
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTENT -->
+
+        <div class="smart-product-side">
+
+
+            <div class="smart-product-side-number">
+
+                01 / SMART POLE
+
+            </div>
+
+
+            <div>
+
+                <h2>
+
+                    Smart
+                    <span>
+                        Pole.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    A multifunctional urban infrastructure system
+                    designed to combine electrical services,
+                    connectivity, public communication, monitoring,
+                    charging and intelligent digital technologies
+                    within one integrated structure.
+
+                </p>
+
+            </div>
+
+
+            <div class="smart-product-side-bottom">
+
+                <span>
+                    Product Direction
+                </span>
+
+                <strong>
+                    Connected • Intelligent • Multi-functional
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- END MODULE — MAIN PRODUCT VISUAL -->
+
+<!-- =========================================================
+     MODULE — FEATURES INTRO
+========================================================= -->
+<style>
+/* =========================================================
            FEATURE INTRO
         ========================================================== */
 
@@ -449,10 +1020,58 @@
 
             align-items: end;
         }
+</style>
+
+<section class="features-intro">
+
+    <div class="smart-container">
+
+        <div class="features-intro-grid">
 
 
+            <div>
 
-        /* =========================================================
+                <span class="smart-eyebrow">
+
+                    Integrated Features
+
+                </span>
+
+
+                <h2 class="smart-title">
+
+                    One platform.
+                    <span>
+                        Sixteen capabilities.
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <p class="smart-copy">
+
+                Smart Pole brings multiple city services together
+                in a single infrastructure asset — reducing
+                standalone equipment while enabling a more
+                connected and intelligent public environment.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- END MODULE — FEATURES INTRO -->
+
+<!-- =========================================================
+     MODULE — FEATURE GRID — 16 CAPABILITIES
+========================================================= -->
+<style>
+/* =========================================================
            FEATURE GRID
         ========================================================== */
 
@@ -615,1309 +1234,7 @@
 
             color: #aaaaaa;
         }
-
-
-
-        /* =========================================================
-           FEATURE ARCHITECTURE
-        ========================================================== */
-
-        .feature-architecture {
-
-            padding: 130px 0;
-
-            background: #ffffff;
-        }
-
-
-        .feature-architecture-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                minmax(320px, .75fr)
-                minmax(0, 1.25fr);
-
-            gap: 100px;
-
-            align-items: start;
-        }
-
-
-        .architecture-sticky {
-
-            position: sticky;
-
-            top: 150px;
-        }
-
-
-        .architecture-sticky p {
-
-            max-width: 430px;
-
-            margin-top: 26px;
-
-            color: #777777;
-
-            font-size: 13px;
-
-            line-height: 1.9;
-        }
-
-
-        .architecture-list {
-
-            border-top: 1px solid #dddddd;
-        }
-
-
-        .architecture-item {
-
-            display: grid;
-
-            grid-template-columns:
-                70px
-                1fr
-                minmax(150px, auto);
-
-            gap: 25px;
-
-            align-items: center;
-
-            min-height: 115px;
-
-            border-bottom: 1px solid #dddddd;
-
-            transition: padding .35s ease;
-        }
-
-
-        .architecture-item:hover {
-
-            padding-left: 15px;
-        }
-
-
-        .architecture-number {
-
-            color: #aaaaaa;
-
-            font-size: 9px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-        }
-
-
-        .architecture-item h3 {
-
-            margin: 0;
-
-            font-size: 20px;
-
-            font-weight: 500;
-        }
-
-
-        .architecture-item span:last-child {
-
-            color: #999999;
-
-            font-size: 8px;
-
-            font-weight: 700;
-
-            letter-spacing: 1.6px;
-
-            text-transform: uppercase;
-        }
-
-
-
-        /* =========================================================
-           TECHNOLOGY BAND
-        ========================================================== */
-
-        .technology-band {
-
-            position: relative;
-
-            min-height: 650px;
-
-            display: flex;
-
-            align-items: flex-end;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(0,0,0,.92),
-                    rgba(0,0,0,.35)
-                ),
-                url("assets/img/rnd/smart-pole/smart-pole-city.jpg");
-
-            background-size: cover;
-
-            background-position: center;
-
-            color: #ffffff;
-        }
-
-
-        .technology-band-content {
-
-            width: min(calc(100% - 80px),1500px);
-
-            margin: 0 auto;
-
-            padding: 95px 0;
-        }
-
-
-        .technology-band .smart-eyebrow {
-
-            color: rgba(255,255,255,.60);
-        }
-
-
-        .technology-band h2 {
-
-            max-width: 900px;
-
-            margin: 22px 0 26px;
-
-            font-size: clamp(44px,5vw,76px);
-
-            line-height: .98;
-
-            letter-spacing: -3px;
-
-            font-weight: 500;
-        }
-
-
-        .technology-band h2 span {
-
-            color: rgba(255,255,255,.58);
-
-            font-weight: 300;
-        }
-
-
-        .technology-band p {
-
-            max-width: 620px;
-
-            margin: 0;
-
-            color: rgba(255,255,255,.68);
-
-            font-size: 13px;
-
-            line-height: 1.9;
-        }
-
-
-
-        /* =========================================================
-           CAPABILITY STRIP
-        ========================================================== */
-
-        .capability-strip {
-
-            background: #111111;
-
-            color: #ffffff;
-        }
-
-
-        .capability-strip-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(4,1fr);
-        }
-
-
-        .capability-strip-item {
-
-            min-height: 145px;
-
-            padding: 30px 28px;
-
-            border-right: 1px solid #2f2f2f;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: space-between;
-        }
-
-
-        .capability-strip-item:first-child {
-
-            border-left: 1px solid #2f2f2f;
-        }
-
-
-        .capability-strip-item span {
-
-            color: #666666;
-
-            font-size: 8px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-        }
-
-
-        .capability-strip-item strong {
-
-            font-size: 14px;
-
-            font-weight: 500;
-        }
-
-
-
-        /* =========================================================
-           APPLICATIONS
-        ========================================================== */
-
-        .smart-applications {
-
-            padding: 130px 0;
-
-            background: #f7f7f5;
-        }
-
-
-        .applications-head {
-
-            display: grid;
-
-            grid-template-columns:
-                minmax(0,1fr)
-                minmax(300px,430px);
-
-            gap: 90px;
-
-            align-items: end;
-
-            margin-bottom: 60px;
-        }
-
-
-        .application-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3,1fr);
-
-            gap: 14px;
-        }
-
-
-        .application-card {
-
-            min-height: 230px;
-
-            padding: 30px;
-
-            background: #ffffff;
-
-            border: 1px solid #e2e2e2;
-
-            transition: .35s ease;
-        }
-
-
-        .application-card:hover {
-
-            transform: translateY(-5px);
-
-            border-color: #111111;
-        }
-
-
-        .application-card span {
-
-            display: block;
-
-            margin-bottom: 55px;
-
-            color: #aaaaaa;
-
-            font-size: 8px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-        }
-
-
-        .application-card h3 {
-
-            margin-bottom: 12px;
-
-            font-size: 18px;
-
-            font-weight: 600;
-        }
-
-
-        .application-card p {
-
-            margin: 0;
-
-            color: #777777;
-
-            font-size: 11px;
-
-            line-height: 1.75;
-        }
-
-
-
-        /* =========================================================
-           CTA
-        ========================================================== */
-
-        .smart-cta {
-
-            padding: 120px 0;
-
-            background: #ffffff;
-        }
-
-
-        .smart-cta-inner {
-
-            display: grid;
-
-            grid-template-columns:
-                minmax(0,1fr)
-                320px;
-
-            gap: 90px;
-
-            align-items: end;
-
-            padding-top: 65px;
-
-            border-top: 1px solid #dddddd;
-        }
-
-
-        .smart-cta h2 {
-
-            max-width: 850px;
-
-            margin: 0;
-
-            font-size: clamp(45px,5.5vw,82px);
-
-            line-height: .98;
-
-            letter-spacing: -4px;
-
-            font-weight: 600;
-        }
-
-
-        .smart-cta h2 span {
-
-            color: #777777;
-
-            font-weight: 300;
-        }
-
-
-        .smart-cta-side p {
-
-            margin: 0 0 26px;
-
-            color: #777777;
-
-            font-size: 13px;
-
-            line-height: 1.8;
-        }
-
-
-        .smart-cta-button {
-
-            width: 100%;
-
-            min-height: 58px;
-
-            padding: 0 22px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            background: #111111;
-
-            color: #ffffff;
-
-            font-size: 10px;
-
-            font-weight: 700;
-
-            letter-spacing: 1.5px;
-
-            text-transform: uppercase;
-
-            transition: .35s ease;
-        }
-
-
-        .smart-cta-button:hover {
-
-            background: #303030;
-
-            color: #ffffff;
-        }
-
-
-
-        /* =========================================================
-           RESPONSIVE
-        ========================================================== */
-
-        @media (max-width: 1200px) {
-
-            .feature-grid {
-
-                grid-template-columns:
-                    repeat(3,1fr);
-            }
-
-
-            .smart-product-visual-grid {
-
-                grid-template-columns:
-                    minmax(0,1.25fr)
-                    minmax(300px,.75fr);
-            }
-
-        }
-
-
-        @media (max-width: 991px) {
-
-            .about-navbar {
-
-                height: auto;
-
-                min-height: 80px;
-
-                padding: 10px 5%;
-            }
-
-
-            .about-logo img {
-
-                height: 70px;
-            }
-
-
-            .about-navbar .navbar-collapse {
-
-                margin-top: 15px;
-
-                padding: 15px 0;
-
-                background: #ffffff;
-            }
-
-
-            .about-navbar .navbar-nav {
-
-                align-items: flex-start;
-
-                gap: 0;
-            }
-
-
-            .about-navbar .nav-item {
-
-                width: 100%;
-            }
-
-
-            .about-navbar .nav-link {
-
-                padding: 12px 5px !important;
-            }
-
-
-            .about-navbar .dropdown-menu {
-
-                margin-top: 0;
-
-                border: none;
-
-                box-shadow: none;
-            }
-
-
-            .smart-intro-grid,
-            .features-intro-grid,
-            .feature-architecture-grid,
-            .applications-head,
-            .smart-cta-inner {
-
-                grid-template-columns: 1fr;
-
-                gap: 45px;
-            }
-
-
-            .smart-product-visual-grid {
-
-                grid-template-columns: 1fr;
-            }
-
-
-            .smart-product-side {
-
-                min-height: 400px;
-            }
-
-
-            .architecture-sticky {
-
-                position: static;
-            }
-
-
-            .feature-grid {
-
-                grid-template-columns:
-                    repeat(2,1fr);
-            }
-
-
-            .capability-strip-grid {
-
-                grid-template-columns:
-                    repeat(2,1fr);
-            }
-
-
-            .application-grid {
-
-                grid-template-columns:
-                    repeat(2,1fr);
-            }
-
-        }
-
-
-        @media (max-width: 767px) {
-
-            .smart-container,
-            .technology-band-content {
-
-                width: calc(100% - 40px);
-            }
-
-
-            .smart-pole-intro {
-
-                padding:
-                    130px 0
-                    70px;
-            }
-
-
-            .smart-title {
-
-                font-size: 44px;
-
-                letter-spacing: -2px;
-            }
-
-
-            .smart-product-image {
-
-                min-height: 560px;
-            }
-
-
-            .smart-product-side {
-
-                padding: 45px 25px;
-            }
-
-
-            .features-intro,
-            .feature-architecture,
-            .smart-applications,
-            .smart-cta {
-
-                padding-top: 85px;
-
-                padding-bottom: 85px;
-            }
-
-
-            .smart-features {
-
-                padding-bottom: 85px;
-            }
-
-
-            .feature-grid {
-
-                grid-template-columns: 1fr;
-            }
-
-
-            .feature-card {
-
-                min-height: 250px;
-            }
-
-
-            .architecture-item {
-
-                grid-template-columns:
-                    45px 1fr;
-
-                gap: 15px;
-
-                padding: 22px 0;
-            }
-
-
-            .architecture-item span:last-child {
-
-                grid-column: 2;
-            }
-
-
-            .technology-band {
-
-                min-height: 590px;
-            }
-
-
-            .technology-band h2 {
-
-                font-size: 46px;
-
-                letter-spacing: -2px;
-            }
-
-
-            .capability-strip-grid {
-
-                grid-template-columns: 1fr;
-            }
-
-
-            .capability-strip-item {
-
-                border-left: 1px solid #2f2f2f;
-                border-bottom: 1px solid #2f2f2f;
-            }
-
-
-            .application-grid {
-
-                grid-template-columns: 1fr;
-            }
-
-
-            .smart-cta h2 {
-
-                font-size: 48px;
-
-                letter-spacing: -2.5px;
-            }
-
-        }
-
-    </style>
-
-</head>
-
-
-<body>
-
-
-    <!-- =========================================================
-         PREMIUM GLOBAL NAVIGATION
-    ========================================================= -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
-        <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="index.html">
-                <img src="assets/img/w-alpha.png" id="logoWhite" class="navbar-logo" alt="Alpha Numeric Innovations" style="display:none;">
-                <img src="assets/img/b-alpha.png" id="logoDark" class="navbar-logo" alt="Alpha Numeric Innovations">
-            </a>
-
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-                Menu <i class="fas fa-bars ms-1"></i>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
-
-                    <li class="nav-item dropdown solution-dropdown position-static">
-                        <a class="nav-link dropdown-toggle " href="#" id="solutionsDropdown" role="button"
-                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Solutions</a>
-
-                        <div class="dropdown-menu mega-menu" aria-labelledby="solutionsDropdown">
-                            <div class="mega-menu-inner">
-                                <div class="mega-column">
-                                    <div class="mega-heading active"><span>Energy</span></div>
-                                    <a href="solar-energy.html">Solar Energy</a>
-                                    <a href="wind-energy.html">Wind Energy</a>
-                                    <a href="hydel-energy.html">Hydel Energy</a>
-                                    <a href="biomass-energy.html">Biomass Energy</a>
-                                </div>
-                                <div class="mega-column">
-                                    <div class="mega-heading"><span>Power</span></div>
-                                    <a href="transmission.html">Transmission</a>
-                                    <a href="distribution.html">Distribution</a>
-                                    <a href="control-panels.html">Control Panels</a>
-                                    <a href="panel-boards.html">Panel Boards</a>
-                                </div>
-                                <div class="mega-column">
-                                    <div class="mega-heading"><span>Automation</span></div>
-                                    <a href="home-automation.html">Home Automation</a>
-                                    <a href="commercial-automation.html">Commercial Automation</a>
-                                    <a href="industrial-automation.html">Industrial Automation</a>
-                                    <a href="hospital-automation.html">Hospital Automation</a>
-                                    <a href="hotel-automation.html">Hotel Automation</a>
-                                </div>
-                                <div class="mega-column">
-                                    <div class="mega-heading active"><span>R&amp;D</span></div>
-                                    <a href="smart-pole-r&d.html">Smart Pole</a>
-                                    <a href="smart-bollard-r&d.html">Smart Bollard</a>
-                                    <a href="smart-conference-table.html">Smart Conference Table</a>
-                                    <a href="smart-bar-counter.html">Smart Bar Counter</a>
-                                    <a href="smart-window-leaf-ac.html">Smart Window Leaf AC</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="nav-item"><a class="nav-link" href="bms_automation.html">BMS</a></li>
-                    <li class="nav-item"><a class="nav-link" href="power-products.html">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
-    <style>
-        /* =====================================================
-           GLOBAL
-        ===================================================== */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: "Inter", sans-serif;
-            background: #ffffff;
-            color: #111111;
-            overflow-x: hidden;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        img {
-            max-width: 100%;
-        }
-        /* =====================================================
-           PREMIUM GLOBAL NAVBAR
-        ===================================================== */
-
-        .main-navbar { padding: 13px 0; background: transparent; transition: background .35s ease, padding .35s ease, box-shadow .35s ease; z-index: 9999; }
-        .main-navbar.navbar-shrink, .main-navbar.scrolled { background: #fff; padding: 8px 0; box-shadow: 0 8px 35px rgba(14,29,57,.08); }
-        .navbar-logo { height: 68px; width: auto; object-fit: contain; transition: height .3s ease; }
-        .main-navbar.navbar-shrink .navbar-logo, .main-navbar.scrolled .navbar-logo { height: 58px; }
-        .main-navbar .nav-link { position: relative; color: #fff; font-size: 14px; font-weight: 600; letter-spacing: .4px; margin: 0 5px; padding: 12px 11px !important; transition: color .3s ease; }
-        .main-navbar.navbar-shrink .nav-link, .main-navbar.scrolled .nav-link { color: #16243b; }
-        .main-navbar .nav-link:hover, .main-navbar .nav-link:focus { color: #4d73be; }
-
-        .solution-dropdown { position: static !important; }
-        .mega-menu { position: absolute !important; width: min(1180px, calc(100vw - 48px)); left: 50% !important; top: 100% !important; transform: translateX(-50%) !important; margin-top: 0 !important; padding: 0; border: 0; border-radius: 14px; background: #fff; box-shadow: 0 24px 70px rgba(14,29,57,.18); overflow: hidden; }
-        .mega-menu-inner { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); }
-        .mega-column { min-height: 270px; padding: 30px 30px 32px; border-right: 1px solid #e8edf5; background: #fff; }
-        .mega-column:last-child { border-right: 0; }
-        .mega-heading { display: flex; align-items: center; gap: 11px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid #edf1f7; color: #17243b; font-family: "Varela Round", sans-serif; font-size: 16px; font-weight: 600; }
-        .mega-heading i { width: 22px; color: #4d73be; font-size: 17px; }
-        .mega-column > a { display: block; position: relative; padding: 9px 0 9px 16px; color: #5d687b; font-size: 13.5px; font-weight: 600; text-decoration: none; transition: color .25s ease, padding .25s ease; }
-        .mega-column > a::before { content: ""; position: absolute; left: 0; top: 50%; width: 6px; height: 1px; background: #9eabc0; transform: translateY(-50%); transition: width .25s ease, background .25s ease; }
-        .mega-column > a:hover { color: #334a85; padding-left: 21px; }
-        .mega-column > a:hover::before { width: 12px; background: #4d73be; }
-
-        @media (min-width: 992px) {
-            .solution-dropdown > .mega-menu {
-                opacity: 0;
-                visibility: hidden;
-                pointer-events: none;
-                display: block;
-                transition: opacity .22s ease, visibility .22s ease;
-            }
-
-            .solution-dropdown:hover > .mega-menu,
-            .solution-dropdown.mega-open > .mega-menu,
-            .solution-dropdown > .mega-menu.show {
-                opacity: 1;
-                visibility: visible;
-                pointer-events: auto;
-            }
-
-            /* Invisible hover bridge between Solutions and mega menu */
-            .solution-dropdown > .mega-menu::before {
-                content: "";
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: -18px;
-                height: 18px;
-                background: transparent;
-            }
-        }
-
-        @media (max-width: 991px) {
-            .main-navbar { background: #fff; padding: 8px 0; }
-            .navbar-logo { height: 55px; }
-            #logoWhite { display: none !important; }
-            #logoDark { display: block !important; }
-            .main-navbar .navbar-toggler { color: #17243b; border-color: rgba(23,36,59,.2); }
-            .main-navbar .nav-link { color: #17243b; padding: 12px 7px !important; margin: 1px 0; }
-            .navbar-collapse { max-height: calc(100vh - 76px); overflow-y: auto; margin-top: 10px; padding: 15px 10px 22px; border-top: 1px solid #edf0f5; background: #fff; }
-            .mega-menu { position: static !important; transform: none !important; width: 100%; margin: 0 !important; box-shadow: none; border-left: 2px solid #334a85; border-radius: 0; overflow: visible; }
-            .mega-menu-inner { grid-template-columns: 1fr; }
-            .mega-column { min-height: 0; padding: 18px 18px 14px; border-right: 0; border-bottom: 1px solid #edf0f5; }
-            .mega-column:last-child { border-bottom: 0; }
-            .mega-heading { margin-bottom: 8px; padding-bottom: 10px; }
-            .mega-column > a { padding-top: 7px; padding-bottom: 7px; }
-        }
-
-
-        /* ABOUT PAGE: keep Index navbar in permanent white/scrolled state */
-       
-        .main-navbar {
-            background: #fff;
-            padding: 8px 0;
-            box-shadow: 0 8px 35px rgba(14,29,57,.08);
-        }
-        .main-navbar .navbar-logo { height: 58px; }
-        .main-navbar .nav-link { color: #16243b; }
-        #logoWhite { display: none !important; }
-        #logoDark { display: block !important; }
-        .main-navbar .nav-contact {
-            background: #334a85;
-            border-color: #334a85;
-            color: #fff !important;
-        }
-        .main-navbar .nav-contact:hover {
-            background: #17243b;
-            border-color: #17243b;
-            color: #fff !important;
-        }
-        .main-navbar .nav-link.active { color: #4d73be; }
-        .main-navbar .nav-link.active:not(.nav-contact)::after {
-            width: calc(100% - 24px);
-        }
-
-
-        
-    </style>
-
-    <style>
-/* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
-.main-navbar #solutionsDropdown,
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown:active,
-.main-navbar #solutionsDropdown.show {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown.show {
-    color: #4d73be !important;
-}
 </style>
-
-
-<style id="navbar-monochrome-final">
-/* =========================================================
-   NAVBAR — MONOCHROME BLACK THEME
-   Keep existing layout + mega-menu behavior unchanged
-========================================================= */
-
-/* Main nav links */
-.main-navbar .nav-link,
-.main-navbar.scrolled .nav-link,
-.main-navbar.navbar-shrink .nav-link {
-    color: #1a1a1a !important;
-}
-
-/* Normal */
-.main-navbar .nav-link {
-    font-weight: 600;
-}
-
-/* Hover / focus — black only */
-.main-navbar .nav-link:hover,
-.main-navbar .nav-link:focus {
-    color: #000000 !important;
-}
-
-/* Active — black + stronger weight */
-.main-navbar .nav-link.active,
-.main-navbar .nav-link.show,
-.main-navbar #solutionsDropdown.show {
-    color: #000000 !important;
-    font-weight: 800 !important;
-}
-
-/* No colored underline */
-.main-navbar .nav-link:not(.nav-contact):not(.dropdown-toggle)::after {
-    background: #000000 !important;
-}
-
-/* Solutions: text only, no box */
-.main-navbar #solutionsDropdown,
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown:active,
-.main-navbar #solutionsDropdown.show {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-    color: #000000 !important;
-}
-
-/* Contact: monochrome */
-.main-navbar .nav-contact,
-.main-navbar.scrolled .nav-contact {
-    background: #000000 !important;
-    border-color: #000000 !important;
-    color: #ffffff !important;
-}
-
-.main-navbar .nav-contact:hover,
-.main-navbar .nav-contact:focus,
-.main-navbar.scrolled .nav-contact:hover {
-    background: #222222 !important;
-    border-color: #222222 !important;
-    color: #ffffff !important;
-}
-
-/* =========================================================
-   MEGA MENU — BLACK
-========================================================= */
-
-.main-navbar .mega-menu {
-    background: #000000 !important;
-    border: 1px solid #1f1f1f !important;
-    box-shadow: 0 24px 70px rgba(0,0,0,.28) !important;
-}
-
-/* Columns */
-.main-navbar .mega-column {
-    background: #000000 !important;
-    border-right-color: #242424 !important;
-}
-
-.main-navbar .mega-column:last-child {
-    border-right-color: transparent !important;
-}
-
-/* Headings */
-.main-navbar .mega-heading {
-    color: #ffffff !important;
-    border-bottom-color: #2a2a2a !important;
-}
-
-/* Icons — monochrome */
-.main-navbar .mega-heading i {
-    color: #ffffff !important;
-}
-
-/* Menu links */
-.main-navbar .mega-column > a {
-    color: #bdbdbd !important;
-}
-
-/* Small line before links */
-.main-navbar .mega-column > a::before {
-    background: #666666 !important;
-}
-
-/* Hover inside mega menu */
-.main-navbar .mega-column > a:hover,
-.main-navbar .mega-column > a:focus {
-    color: #ffffff !important;
-}
-
-.main-navbar .mega-column > a:hover::before {
-    background: #ffffff !important;
-}
-
-/* Mobile */
-@media (max-width: 991px) {
-    .main-navbar .nav-link {
-        color: #1a1a1a !important;
-    }
-
-    .main-navbar .mega-menu {
-        background: #000000 !important;
-        border-left-color: #000000 !important;
-    }
-
-    .main-navbar .mega-column {
-        background: #000000 !important;
-        border-bottom-color: #242424 !important;
-    }
-}
-</style>
-
-
-<style id="mega-heading-no-icons">
-.main-navbar .mega-heading {
-    gap: 0 !important;
-}
-</style>
-
-
-
-<!-- =============================================================
-     PRODUCT INTRO
-============================================================= -->
-
-<section class="smart-pole-intro">
-
-    <div class="smart-container">
-
-        <div class="smart-intro-grid">
-
-
-            <div>
-
-                <span class="smart-eyebrow">
-
-                    R&D / Smart Infrastructure
-
-                </span>
-
-
-                <h1 class="smart-title">
-
-                    One intelligent pole.
-                    <span>
-                        Multiple urban systems.
-                    </span>
-
-                </h1>
-
-            </div>
-
-
-            <div class="smart-intro-copy">
-
-                <p>
-
-                    Alpha Numeric Smart Pole integrates mobility,
-                    public safety, connectivity, environmental
-                    monitoring, intelligent lighting and AI-enabled
-                    communication into one connected urban
-                    infrastructure platform.
-
-                </p>
-
-
-                <div class="smart-intro-tags">
-
-                    <span>Smart City</span>
-                    <span>IoT</span>
-                    <span>AI Enabled</span>
-                    <span>Connected Infrastructure</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =============================================================
-     MAIN PRODUCT VISUAL
-============================================================= -->
-
-<section class="smart-product-visual">
-
-
-    <div class="smart-product-visual-grid">
-
-
-        <!-- IMAGE -->
-
-        <div class="smart-product-image">
-
-            <div class="smart-product-image-label">
-
-                Alpha Numeric / R&D Product
-
-            </div>
-
-        </div>
-
-
-        <!-- CONTENT -->
-
-        <div class="smart-product-side">
-
-
-            <div class="smart-product-side-number">
-
-                01 / SMART POLE
-
-            </div>
-
-
-            <div>
-
-                <h2>
-
-                    Smart
-                    <span>
-                        Pole.
-                    </span>
-
-                </h2>
-
-
-                <p>
-
-                    A multifunctional urban infrastructure system
-                    designed to combine electrical services,
-                    connectivity, public communication, monitoring,
-                    charging and intelligent digital technologies
-                    within one integrated structure.
-
-                </p>
-
-            </div>
-
-
-            <div class="smart-product-side-bottom">
-
-                <span>
-                    Product Direction
-                </span>
-
-                <strong>
-                    Connected • Intelligent • Multi-functional
-                </strong>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =============================================================
-     FEATURES INTRO
-============================================================= -->
-
-<section class="features-intro">
-
-    <div class="smart-container">
-
-        <div class="features-intro-grid">
-
-
-            <div>
-
-                <span class="smart-eyebrow">
-
-                    Integrated Features
-
-                </span>
-
-
-                <h2 class="smart-title">
-
-                    One platform.
-                    <span>
-                        Sixteen capabilities.
-                    </span>
-
-                </h2>
-
-            </div>
-
-
-            <p class="smart-copy">
-
-                Smart Pole brings multiple city services together
-                in a single infrastructure asset — reducing
-                standalone equipment while enabling a more
-                connected and intelligent public environment.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =============================================================
-     FEATURE GRID
-============================================================= -->
 
 <section class="smart-features">
 
@@ -2317,11 +1634,128 @@
 
 </section>
 
+<!-- END MODULE — FEATURE GRID — 16 CAPABILITIES -->
+
+<!-- =========================================================
+     MODULE — SYSTEM ARCHITECTURE
+========================================================= -->
+<style>
+/* =========================================================
+           FEATURE ARCHITECTURE
+        ========================================================== */
+
+        .feature-architecture {
+
+            padding: 130px 0;
+
+            background: #ffffff;
+        }
 
 
-<!-- =============================================================
-     SYSTEM ARCHITECTURE
-============================================================= -->
+        .feature-architecture-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(320px, .75fr)
+                minmax(0, 1.25fr);
+
+            gap: 100px;
+
+            align-items: start;
+        }
+
+
+        .architecture-sticky {
+
+            position: sticky;
+
+            top: 150px;
+        }
+
+
+        .architecture-sticky p {
+
+            max-width: 430px;
+
+            margin-top: 26px;
+
+            color: #777777;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+
+        .architecture-list {
+
+            border-top: 1px solid #dddddd;
+        }
+
+
+        .architecture-item {
+
+            display: grid;
+
+            grid-template-columns:
+                70px
+                1fr
+                minmax(150px, auto);
+
+            gap: 25px;
+
+            align-items: center;
+
+            min-height: 115px;
+
+            border-bottom: 1px solid #dddddd;
+
+            transition: padding .35s ease;
+        }
+
+
+        .architecture-item:hover {
+
+            padding-left: 15px;
+        }
+
+
+        .architecture-number {
+
+            color: #aaaaaa;
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+        }
+
+
+        .architecture-item h3 {
+
+            margin: 0;
+
+            font-size: 20px;
+
+            font-weight: 500;
+        }
+
+
+        .architecture-item span:last-child {
+
+            color: #999999;
+
+            font-size: 8px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.6px;
+
+            text-transform: uppercase;
+        }
+</style>
 
 <section class="feature-architecture">
 
@@ -2480,11 +1914,95 @@
 
 </section>
 
+<!-- END MODULE — SYSTEM ARCHITECTURE -->
+
+<!-- =========================================================
+     MODULE — TECHNOLOGY BAND
+========================================================= -->
+<style>
+/* =========================================================
+           TECHNOLOGY BAND
+        ========================================================== */
+
+        .technology-band {
+
+            position: relative;
+
+            min-height: 650px;
+
+            display: flex;
+
+            align-items: flex-end;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,.92),
+                    rgba(0,0,0,.35)
+                ),
+                url("assets/img/rnd/smart-pole/smart-pole-city.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            color: #ffffff;
+        }
 
 
-<!-- =============================================================
-     TECHNOLOGY BAND
-============================================================= -->
+        .technology-band-content {
+
+            width: min(calc(100% - 80px),1500px);
+
+            margin: 0 auto;
+
+            padding: 95px 0;
+        }
+
+
+        .technology-band .smart-eyebrow {
+
+            color: rgba(255,255,255,.60);
+        }
+
+
+        .technology-band h2 {
+
+            max-width: 900px;
+
+            margin: 22px 0 26px;
+
+            font-size: clamp(44px,5vw,76px);
+
+            line-height: .98;
+
+            letter-spacing: -3px;
+
+            font-weight: 500;
+        }
+
+
+        .technology-band h2 span {
+
+            color: rgba(255,255,255,.58);
+
+            font-weight: 300;
+        }
+
+
+        .technology-band p {
+
+            max-width: 620px;
+
+            margin: 0;
+
+            color: rgba(255,255,255,.68);
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+</style>
 
 <section class="technology-band">
 
@@ -2524,11 +2042,74 @@
 
 </section>
 
+<!-- END MODULE — TECHNOLOGY BAND -->
+
+<!-- =========================================================
+     MODULE — CAPABILITY STRIP
+========================================================= -->
+<style>
+/* =========================================================
+           CAPABILITY STRIP
+        ========================================================== */
+
+        .capability-strip {
+
+            background: #111111;
+
+            color: #ffffff;
+        }
 
 
-<!-- =============================================================
-     CAPABILITY STRIP
-============================================================= -->
+        .capability-strip-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4,1fr);
+        }
+
+
+        .capability-strip-item {
+
+            min-height: 145px;
+
+            padding: 30px 28px;
+
+            border-right: 1px solid #2f2f2f;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+        }
+
+
+        .capability-strip-item:first-child {
+
+            border-left: 1px solid #2f2f2f;
+        }
+
+
+        .capability-strip-item span {
+
+            color: #666666;
+
+            font-size: 8px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+        }
+
+
+        .capability-strip-item strong {
+
+            font-size: 14px;
+
+            font-weight: 500;
+        }
+</style>
 
 <section class="capability-strip">
 
@@ -2596,11 +2177,110 @@
 
 </section>
 
+<!-- END MODULE — CAPABILITY STRIP -->
+
+<!-- =========================================================
+     MODULE — APPLICATIONS
+========================================================= -->
+<style>
+/* =========================================================
+           APPLICATIONS
+        ========================================================== */
+
+        .smart-applications {
+
+            padding: 130px 0;
+
+            background: #f7f7f5;
+        }
 
 
-<!-- =============================================================
-     APPLICATIONS
-============================================================= -->
+        .applications-head {
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0,1fr)
+                minmax(300px,430px);
+
+            gap: 90px;
+
+            align-items: end;
+
+            margin-bottom: 60px;
+        }
+
+
+        .application-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 14px;
+        }
+
+
+        .application-card {
+
+            min-height: 230px;
+
+            padding: 30px;
+
+            background: #ffffff;
+
+            border: 1px solid #e2e2e2;
+
+            transition: .35s ease;
+        }
+
+
+        .application-card:hover {
+
+            transform: translateY(-5px);
+
+            border-color: #111111;
+        }
+
+
+        .application-card span {
+
+            display: block;
+
+            margin-bottom: 55px;
+
+            color: #aaaaaa;
+
+            font-size: 8px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+        }
+
+
+        .application-card h3 {
+
+            margin-bottom: 12px;
+
+            font-size: 18px;
+
+            font-weight: 600;
+        }
+
+
+        .application-card p {
+
+            margin: 0;
+
+            color: #777777;
+
+            font-size: 11px;
+
+            line-height: 1.75;
+        }
+</style>
 
 <section class="smart-applications">
 
@@ -2760,11 +2440,115 @@
 
 </section>
 
+<!-- END MODULE — APPLICATIONS -->
+
+<!-- =========================================================
+     MODULE — CTA
+========================================================= -->
+<style>
+/* =========================================================
+           CTA
+        ========================================================== */
+
+        .smart-cta {
+
+            padding: 120px 0;
+
+            background: #ffffff;
+        }
 
 
-<!-- =============================================================
-     CTA
-============================================================= -->
+        .smart-cta-inner {
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0,1fr)
+                320px;
+
+            gap: 90px;
+
+            align-items: end;
+
+            padding-top: 65px;
+
+            border-top: 1px solid #dddddd;
+        }
+
+
+        .smart-cta h2 {
+
+            max-width: 850px;
+
+            margin: 0;
+
+            font-size: clamp(45px,5.5vw,82px);
+
+            line-height: .98;
+
+            letter-spacing: -4px;
+
+            font-weight: 600;
+        }
+
+
+        .smart-cta h2 span {
+
+            color: #777777;
+
+            font-weight: 300;
+        }
+
+
+        .smart-cta-side p {
+
+            margin: 0 0 26px;
+
+            color: #777777;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+
+        .smart-cta-button {
+
+            width: 100%;
+
+            min-height: 58px;
+
+            padding: 0 22px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            background: #111111;
+
+            color: #ffffff;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            transition: .35s ease;
+        }
+
+
+        .smart-cta-button:hover {
+
+            background: #303030;
+
+            color: #ffffff;
+        }
+</style>
 
 <section class="smart-cta">
 
@@ -2818,52 +2602,278 @@
 
 </section>
 
+<!-- END MODULE — CTA -->
+
+<!-- =========================================================
+     MODULE — GLOBAL RESPONSIVE OVERRIDES
+========================================================= -->
+<style>
+/* =========================================================
+           RESPONSIVE
+        ========================================================== */
+
+        @media (max-width: 1200px) {
+
+            .feature-grid {
+
+                grid-template-columns:
+                    repeat(3,1fr);
+            }
 
 
-<!-- =============================================================
-     BOOTSTRAP JS
-============================================================= -->
+            .smart-product-visual-grid {
 
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>
-
-
-<!-- =============================================================
-     NAVBAR SHADOW
-============================================================= -->
-
-<script>
-
-window.addEventListener(
-    "scroll",
-    function() {
-
-        const navbar =
-            document.querySelector(".about-navbar");
-
-
-        if (!navbar) return;
-
-
-        if (window.scrollY > 30) {
-
-            navbar.style.boxShadow =
-                "0 5px 25px rgba(0,0,0,.06)";
-
-        } else {
-
-            navbar.style.boxShadow =
-                "none";
+                grid-template-columns:
+                    minmax(0,1.25fr)
+                    minmax(300px,.75fr);
+            }
 
         }
 
-    }
-);
 
-</script>
+        @media (max-width: 991px) {
 
+            .about-navbar {
+
+                height: auto;
+
+                min-height: 80px;
+
+                padding: 10px 5%;
+            }
+
+
+            .about-logo img {
+
+                height: 70px;
+            }
+
+
+            .about-navbar .navbar-collapse {
+
+                margin-top: 15px;
+
+                padding: 15px 0;
+
+                background: #ffffff;
+            }
+
+
+            .about-navbar .navbar-nav {
+
+                align-items: flex-start;
+
+                gap: 0;
+            }
+
+
+            .about-navbar .nav-item {
+
+                width: 100%;
+            }
+
+
+            .about-navbar .nav-link {
+
+                padding: 12px 5px !important;
+            }
+
+
+            .about-navbar .dropdown-menu {
+
+                margin-top: 0;
+
+                border: none;
+
+                box-shadow: none;
+            }
+
+
+            .smart-intro-grid,
+            .features-intro-grid,
+            .feature-architecture-grid,
+            .applications-head,
+            .smart-cta-inner {
+
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+
+            .smart-product-visual-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .smart-product-side {
+
+                min-height: 400px;
+            }
+
+
+            .architecture-sticky {
+
+                position: static;
+            }
+
+
+            .feature-grid {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+
+            .capability-strip-grid {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+
+            .application-grid {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+        }
+
+
+        @media (max-width: 767px) {
+
+            .smart-container,
+            .technology-band-content {
+
+                width: calc(100% - 40px);
+            }
+
+
+            .smart-pole-intro {
+
+                padding:
+                    130px 0
+                    70px;
+            }
+
+
+            .smart-title {
+
+                font-size: 44px;
+
+                letter-spacing: -2px;
+            }
+
+
+            .smart-product-image {
+
+                min-height: 560px;
+            }
+
+
+            .smart-product-side {
+
+                padding: 45px 25px;
+            }
+
+
+            .features-intro,
+            .feature-architecture,
+            .smart-applications,
+            .smart-cta {
+
+                padding-top: 85px;
+
+                padding-bottom: 85px;
+            }
+
+
+            .smart-features {
+
+                padding-bottom: 85px;
+            }
+
+
+            .feature-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .feature-card {
+
+                min-height: 250px;
+            }
+
+
+            .architecture-item {
+
+                grid-template-columns:
+                    45px 1fr;
+
+                gap: 15px;
+
+                padding: 22px 0;
+            }
+
+
+            .architecture-item span:last-child {
+
+                grid-column: 2;
+            }
+
+
+            .technology-band {
+
+                min-height: 590px;
+            }
+
+
+            .technology-band h2 {
+
+                font-size: 46px;
+
+                letter-spacing: -2px;
+            }
+
+
+            .capability-strip-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .capability-strip-item {
+
+                border-left: 1px solid #2f2f2f;
+                border-bottom: 1px solid #2f2f2f;
+            }
+
+
+            .application-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .smart-cta h2 {
+
+                font-size: 48px;
+
+                letter-spacing: -2.5px;
+            }
+
+        }
+</style>
+<!-- END MODULE — GLOBAL RESPONSIVE OVERRIDES -->
+
+<!-- =========================================================
+     MODULE — BOOTSTRAP JAVASCRIPT
+========================================================= -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- END MODULE — BOOTSTRAP JAVASCRIPT -->
 
 </body>
-
 </html>
