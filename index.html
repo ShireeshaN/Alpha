@@ -558,7 +558,24 @@
         </div>
     </nav>
 
-   <!-- =========================================================
+<!--
+ALPHA NUMERIC INNOVATIONS — COMPLETE SIX-SLIDE REPLACEMENT MODULE
+Paste this entire CSS + HTML + JavaScript module in place of the old hero.
+Existing theme, font stack and animated preview rail are retained.
+Image paths (recommended artwork: 1935 x 813 px):
+  assets/img/banners/solar.png            [existing path]
+  assets/img/banners/lt-11kv.png          [add LT / 11 kV artwork]
+  assets/img/banners/ht-33kv.png          [add HT artwork]
+  assets/img/banners/transmission-1.png   [existing path]
+  assets/img/banners/control-panels.png   [add panels artwork]
+  assets/img/banners/iotbanner1.png       [existing path]
+The first five CTA links retain #about from the supplied module.
+Replace these with your actual service-page URLs when available.
+The IoT CTA retains the supplied bms-iot.html destination.
+Images are website assets, not embedded in this HTML file.
+LT & 11 kV is a combined service grouping, not a voltage classification.
+-->
+ <!-- =========================================================
      PINTEREST-STYLE ENERGY HERO CAROUSEL
      Full background + animated preview cards
      Pure HTML / CSS / JavaScript — Bootstrap not required
@@ -572,9 +589,9 @@
 .energy-hero {
     --nav-offset: 72px;
     --active-accent: #55c5ea;
-    --card-width: clamp(158px, 14vw, 210px);
-    --card-height: clamp(240px, 42vh, 350px);
-    --card-gap: 16px;
+    --card-width: clamp(112px, 9.2vw, 144px);
+    --card-height: clamp(160px, 25vh, 210px);
+    --card-gap: 12px;
     --autoplay-duration: 6000ms;
     --ease-premium: cubic-bezier(.16, 1, .3, 1);
 
@@ -849,12 +866,13 @@
 
 .energy-preview-rail {
     position: absolute;
-    top: 53%;
+    top: auto;
+    bottom: 124px;
     left: 55%;
     right: 0;
     z-index: 8;
     height: var(--card-height);
-    transform: translateY(-50%);
+    transform: none;
     pointer-events: none;
 }
 
@@ -1304,9 +1322,9 @@
 
 @media (max-width: 1199px) {
     .energy-hero {
-        --card-width: 158px;
-        --card-height: 280px;
-        --card-gap: 13px;
+        --card-width: 116px;
+        --card-height: 174px;
+        --card-gap: 10px;
         min-height: 610px;
     }
 
@@ -1336,8 +1354,8 @@
 @media (max-width: 991px) {
     .energy-hero {
         --nav-offset: 68px;
-        --card-width: 142px;
-        --card-height: 235px;
+        --card-width: 106px;
+        --card-height: 156px;
         --card-gap: 11px;
         min-height: 590px;
     }
@@ -1385,8 +1403,8 @@
 @media (max-width: 767px) {
     .energy-hero {
         --nav-offset: 64px;
-        --card-width: 128px;
-        --card-height: 172px;
+        --card-width: 100px;
+        --card-height: 134px;
         --card-gap: 10px;
         height: calc(100svh - var(--nav-offset));
         min-height: 720px;
@@ -1528,8 +1546,8 @@
 
 @media (max-width: 420px) {
     .energy-hero {
-        --card-width: 116px;
-        --card-height: 158px;
+        --card-width: 92px;
+        --card-height: 124px;
         --card-gap: 9px;
     }
 
@@ -1573,6 +1591,86 @@
         filter: none;
     }
 }
+
+/* SIX-SOLUTION CONTENT AND ACCESSIBLE MOBILE CONTROLS */
+.energy-slide__title { font-size: clamp(40px, 4.1vw, 66px); line-height: 1.07; letter-spacing: -.045em; }
+.energy-kicker { letter-spacing: .13rem; }
+.energy-dot { position: relative; }
+.energy-dot::before { content: ""; position: absolute; inset: -10px -4px; }
+.energy-slide__content { max-width: 600px; }
+@media (max-width: 1199px) { .energy-slide__title { font-size: clamp(36px, 4.2vw, 50px); } }
+@media (max-width: 767px) {
+    .energy-hero { min-height: 780px; }
+    .energy-slide__title { font-size: clamp(33px, 7.8vw, 50px); }
+    .energy-slide__content { top: 40px; transform: none; }
+    .energy-slide__description { max-width: 480px; }
+    .energy-preview-rail { bottom: 106px; }
+    .energy-hero__navigation { display: grid; grid-template-columns: 1fr auto; gap: 18px 12px; bottom: 18px; }
+    .energy-dots { grid-column: 1 / -1; grid-row: 1; min-height: 20px; gap: 14px; }
+    .energy-arrows { display: flex; }
+    .energy-arrow { width: 44px; height: 44px; }
+    .energy-progress { min-width: 0; }
+}
+
+
+/* COMPACT PREVIEW CARD DETAILS — KEEP THE BANNER IN FOCUS */
+.energy-preview-card__top,
+.energy-preview-card__bottom { left: 10px; right: 10px; }
+.energy-preview-card__top { top: 10px; }
+.energy-preview-card__bottom { bottom: 12px; gap: 6px; }
+.energy-preview-card__category { font-size: 6px; letter-spacing: .045rem; }
+.energy-preview-card__index { width: 22px; height: 22px; font-size: 7px; }
+.energy-preview-card__title { max-width: 100%; font-size: clamp(11px, .95vw, 14px); line-height: 1.2; overflow-wrap: normal; }
+.energy-preview-card__arrow { width: 22px; height: 22px; font-size: 12px; }
+.energy-preview-card:hover .energy-preview-card__surface,
+.energy-preview-card:focus-visible .energy-preview-card__surface { transform: translateY(-6px); }
+@media (max-width: 991px) {
+    .energy-preview-card__arrow { display: none; }
+    .energy-preview-card__title { font-size: 12px; }
+}
+@media (max-width: 767px) {
+    .energy-preview-card__title { font-size: 11px; }
+    .energy-preview-card__bottom { bottom: 10px; }
+    .energy-preview-card__index { width: 20px; height: 20px; }
+}
+
+
+/* THREE VISIBLE PREVIEWS — FIRST CARD EMPHASIS */
+.energy-preview-rail {
+    left: auto;
+    right: clamp(24px, 4vw, 64px);
+    width: calc(var(--card-width) * 3 + var(--card-gap) * 2);
+}
+/* Hide a stale fourth slot even before JavaScript initializes. */
+.energy-preview-card[data-slot="3"] {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.energy-preview-card[data-slot="0"] .energy-preview-card__surface {
+    border: 2px solid var(--card-accent);
+    box-shadow: 0 0 0 1px rgba(255,255,255,.35),
+                0 0 22px color-mix(in srgb, var(--card-accent) 32%, transparent),
+                0 18px 38px rgba(1,26,39,.4);
+}
+.energy-preview-card[data-slot="0"] .energy-preview-card__image {
+    filter: saturate(1.08) contrast(1.04) brightness(1.08);
+}
+.energy-preview-card[data-slot="0"] .energy-preview-card__index {
+    color: #082c3d;
+    background: var(--card-accent);
+    border-color: var(--card-accent);
+}
+.energy-preview-card[data-slot="1"],
+.energy-preview-card[data-slot="2"] { opacity: .78; }
+.energy-preview-card[data-slot="1"]:hover,
+.energy-preview-card[data-slot="2"]:hover,
+.energy-preview-card[data-slot="1"]:focus-visible,
+.energy-preview-card[data-slot="2"]:focus-visible { opacity: 1; }
+@media (max-width: 767px) {
+    .energy-preview-rail { left: 7%; right: auto; }
+}
+
 </style>
 
 <!-- =========================================================
@@ -1582,376 +1680,134 @@
 <header
     class="energy-hero"
     data-energy-hero
-    data-interval="6000"
-    aria-label="Power, energy and BMS IoT solutions">
+    data-interval="7500"
+    role="region" aria-roledescription="carousel" aria-label="Engineering progress: six power, energy and building intelligence solutions">
 
     <div class="energy-hero__stage">
 
-        <!-- SLIDE 01 — POWER -->
-
-        <article
-            class="energy-slide is-active"
-            data-accent="#55c5ea"
-            style="--slide-accent:#55c5ea;"
-            aria-hidden="false">
-
-            <img
-                class="energy-slide__image"
-                src="assets/img/banners/transmission-1.png"
-                alt="Power transmission infrastructure">
-
+        <!-- SLIDE 01 — Solar Energy -->
+        <article class="energy-slide is-active" data-accent="#f3c45c" style="--slide-accent:#f3c45c;" aria-hidden="false" role="group" aria-roledescription="slide" aria-label="1 of 6: Solar Energy">
+            <img class="energy-slide__image" src="assets/img/banners/so2.png" alt="Solar photovoltaic installation" decoding="async" fetchpriority="high">
             <div class="energy-slide__overlay"></div>
-
             <div class="energy-slide__content">
-
-                <div class="energy-kicker">
-                    Power & Energy
-                </div>
-
-                <h1 class="energy-slide__title">
-                    Power
-                </h1>
-
-                <p class="energy-slide__description">
-                    Reliable power infrastructure for a smarter and
-                    sustainable future.
-                </p>
-
-                <a class="energy-slide__button" href="#about">
-                    Read More
-                </a>
-
+                <div class="energy-kicker">Renewable Energy · Solar</div>
+                <h2 class="energy-slide__title">A Brighter Sun.<br>A Stronger Nation.</h2>
+                <p class="energy-slide__description">From rooftops to large-scale solar installations, we deliver engineering, procurement and commissioning that turn clean energy into lasting progress.</p>
+                <a class="energy-slide__button" href="#about" tabindex="0">Explore Solar</a>
             </div>
-
         </article>
 
-
-        <!-- SLIDE 02 — WIND -->
-
-        <article
-            class="energy-slide"
-            data-accent="#67d2b0"
-            style="--slide-accent:#67d2b0;"
-            aria-hidden="true">
-
-            <img
-                class="energy-slide__image"
-                src="assets/img/banners/wind.png"
-                alt="Wind energy solutions">
-
+        <!-- SLIDE 02 — LT &amp; 11 kV -->
+        <article class="energy-slide" data-accent="#67d2b0" style="--slide-accent:#67d2b0;" aria-hidden="true" role="group" aria-roledescription="slide" aria-label="2 of 6: LT &amp; 11 kV">
+            <img class="energy-slide__image" src="assets/img/banners/11 kV.png" alt="Electrical distribution infrastructure and transformer installation" decoding="async" loading="lazy">
             <div class="energy-slide__overlay"></div>
-
             <div class="energy-slide__content">
-
-                <div class="energy-kicker">
-                    Renewable Energy
-                </div>
-
-                <h1 class="energy-slide__title">
-                    Wind Energy
-                </h1>
-
-                <p class="energy-slide__description">
-                    Harnessing the power of wind to create clean and
-                    dependable energy.
-                </p>
-
-                <a class="energy-slide__button" href="#about" tabindex="-1">
-                    Read More
-                </a>
-
+                <div class="energy-kicker">LT &amp; 11 kV Infrastructure</div>
+                <h2 class="energy-slide__title">Powering Places.<br>Enabling Progress.</h2>
+                <p class="energy-slide__description">From LT distribution to 11 kV infrastructure, we connect buildings, businesses and communities with dependable electrical systems, from design through commissioning.</p>
+                <a class="energy-slide__button" href="#about" tabindex="-1">Explore LT &amp; 11 kV</a>
             </div>
-
         </article>
 
-
-        <!-- SLIDE 03 — SOLAR -->
-
-        <article
-            class="energy-slide"
-            data-accent="#f3c45c"
-            style="--slide-accent:#f3c45c;"
-            aria-hidden="true">
-
-            <img
-                class="energy-slide__image"
-                src="assets/img/banners/solar.png"
-                alt="Solar energy solutions">
-
+        <!-- SLIDE 03 — HT · 11–33 kV -->
+        <article class="energy-slide" data-accent="#55c5ea" style="--slide-accent:#55c5ea;" aria-hidden="true" role="group" aria-roledescription="slide" aria-label="3 of 6: HT · 11–33 kV">
+            <img class="energy-slide__image" src="assets/img/banners/33kv.png" alt="High voltage substation and cable infrastructure" decoding="async" loading="lazy">
             <div class="energy-slide__overlay"></div>
-
             <div class="energy-slide__content">
-
-                <div class="energy-kicker">
-                    Clean Energy
-                </div>
-
-                <h1 class="energy-slide__title">
-                    Solar Energy
-                </h1>
-
-                <p class="energy-slide__description">
-                    Intelligent solar solutions designed for a cleaner
-                    tomorrow.
-                </p>
-
-                <a class="energy-slide__button" href="#about" tabindex="-1">
-                    Read More
-                </a>
-
+                <div class="energy-kicker">HT Infrastructure · 11–33 kV</div>
+                <h2 class="energy-slide__title">Reliable Power.<br>Resilient Industry.</h2>
+                <p class="energy-slide__description">HT networks, substations and cable systems engineered for dependable supply—supporting industrial growth and the infrastructure our nation relies on.</p>
+                <a class="energy-slide__button" href="#about" tabindex="-1">Explore HT Solutions</a>
             </div>
-
         </article>
 
-
-        <!-- SLIDE 04 — HYDEL -->
-
-        <article
-            class="energy-slide"
-            data-accent="#65aaf5"
-            style="--slide-accent:#65aaf5;"
-            aria-hidden="true">
-
-            <img
-                class="energy-slide__image"
-                src="assets/img/banners/Energy-1.png"
-                alt="Hydropower energy solutions">
-
+        <!-- SLIDE 04 — EHT · 132–765 kV -->
+        <article class="energy-slide" data-accent="#65aaf5" style="--slide-accent:#65aaf5;" aria-hidden="true" role="group" aria-roledescription="slide" aria-label="4 of 6: EHT · 132–765 kV">
+            <img class="energy-slide__image" src="assets/img/banners/eht.png" alt="Extra high voltage transmission towers" decoding="async" loading="lazy">
             <div class="energy-slide__overlay"></div>
-
             <div class="energy-slide__content">
-
-                <div class="energy-kicker">
-                    Hydropower
-                </div>
-
-                <h1 class="energy-slide__title">
-                    Hydel Energy
-                </h1>
-
-                <p class="energy-slide__description">
-                    Harnessing the power of water through advanced energy
-                    solutions.
-                </p>
-
-                <a class="energy-slide__button" href="#about" tabindex="-1">
-                    Read More
-                </a>
-
+                <div class="energy-kicker">EHT Transmission · 132–765 kV</div>
+                <h2 class="energy-slide__title">Spanning Distances.<br>Uniting a Nation.</h2>
+                <p class="energy-slide__description">Transmission lines and substation infrastructure that connect generation to demand, with coordinated engineering, field execution, testing and commissioning.</p>
+                <a class="energy-slide__button" href="#about" tabindex="-1">Explore EHT Solutions</a>
             </div>
-
         </article>
 
-
-        <!-- SLIDE 05 — BMS IOT -->
-
-        <article
-            class="energy-slide"
-            data-accent="#55d7d0"
-            style="--slide-accent:#55d7d0;"
-            aria-hidden="true">
-
-            <img
-                class="energy-slide__image"
-                src="assets/img/banners/iotbanner1.png"
-                alt="Smart building management and IoT monitoring solutions">
-
+        <!-- SLIDE 05 — Control Panels &amp; Panel Boards -->
+        <article class="energy-slide" data-accent="#e5b583" style="--slide-accent:#e5b583;" aria-hidden="true" role="group" aria-roledescription="slide" aria-label="5 of 6: Control Panels &amp; Panel Boards">
+            <img class="energy-slide__image" src="assets/img/banners/panel and control.png" alt="Engineered control panels and electrical panel boards" decoding="async" loading="lazy">
             <div class="energy-slide__overlay"></div>
-
             <div class="energy-slide__content">
-
-                <div class="energy-kicker">
-                    Smart Building Automation
-                </div>
-
-                <h1 class="energy-slide__title">
-                    BMS IoT
-                </h1>
-
-                <p class="energy-slide__description">
-                    Connected building intelligence for centralized control,
-                    real-time monitoring and smarter energy performance.
-                </p>
-
-                <a class="energy-slide__button" href="bms-iot.html" tabindex="-1">
-                    Explore BMS IoT
-                </a>
-
+                <div class="energy-kicker">Control Panels &amp; Panel Boards</div>
+                <h2 class="energy-slide__title">Precision Within.<br>Progress Beyond.</h2>
+                <p class="energy-slide__description">Purpose-built control panels and panel boards bring protection, distribution and automation together—supporting reliable operations across buildings and industry.</p>
+                <a class="energy-slide__button" href="#about" tabindex="-1">Explore Our Panels</a>
             </div>
-
         </article>
 
+        <!-- SLIDE 06 — IoT · BMS · IoT + BMS -->
+        <article class="energy-slide" data-accent="#55d7d0" style="--slide-accent:#55d7d0;" aria-hidden="true" role="group" aria-roledescription="slide" aria-label="6 of 6: IoT · BMS · IoT + BMS">
+            <img class="energy-slide__image" src="assets/img/banners/iotbanner1.png" alt="Connected building management and IoT monitoring" decoding="async" loading="lazy">
+            <div class="energy-slide__overlay"></div>
+            <div class="energy-slide__content">
+                <div class="energy-kicker">IoT · BMS · Integrated IoT + BMS</div>
+                <h2 class="energy-slide__title">Smarter Buildings.<br>Stronger Futures.</h2>
+                <p class="energy-slide__description">Standalone IoT, complete BMS and IoT upgrades for existing BMS connect building systems through live monitoring, centralized control and actionable energy insights.</p>
+                <a class="energy-slide__button" href="bms-iot.html" tabindex="-1">Explore IoT &amp; BMS</a>
+            </div>
+        </article>
 
-        <!-- ANIMATED PREVIEW CARDS -->
-
+        <!-- ANIMATED PREVIEW CARDS — SIX SOLUTIONS -->
         <aside class="energy-preview-rail" aria-label="Choose a solution">
-
-            <button
-                class="energy-preview-card"
-                type="button"
-                data-slide="0"
-                data-slot="current"
-                aria-label="Show Power slide"
-                aria-pressed="true"
-                tabindex="-1"
-                style="--card-accent:#55c5ea;">
-
+            <button class="energy-preview-card" type="button" data-slide="0" data-slot="current" aria-label="Show Solar Energy" aria-pressed="true" tabindex="-1" style="--card-accent:#f3c45c;">
                 <span class="energy-preview-card__surface">
-
-                    <img
-                        class="energy-preview-card__image"
-                        src="assets/img/banners/transmission-1.png"
-                        alt="">
-
+                    <img class="energy-preview-card__image" src="assets/img/banners/so2.png" alt="" loading="lazy" decoding="async">
                     <span class="energy-preview-card__shade"></span>
-
-                    <span class="energy-preview-card__top">
-                        <span class="energy-preview-card__category">Power & Energy</span>
-                        <span class="energy-preview-card__index">01</span>
-                    </span>
-
-                    <span class="energy-preview-card__bottom">
-                        <span class="energy-preview-card__title">Power</span>
-                        <span class="energy-preview-card__arrow">→</span>
-                    </span>
-
+                    <span class="energy-preview-card__top"><span class="energy-preview-card__category">Solar Energy</span><span class="energy-preview-card__index">01</span></span>
+                    <span class="energy-preview-card__bottom"><span class="energy-preview-card__title">Solar Energy</span><span class="energy-preview-card__arrow" aria-hidden="true">→</span></span>
                 </span>
-
             </button>
-
-
-            <button
-                class="energy-preview-card"
-                type="button"
-                data-slide="1"
-                data-slot="0"
-                aria-label="Show Wind Energy slide"
-                aria-pressed="false"
-                style="--card-accent:#67d2b0;">
-
+            <button class="energy-preview-card" type="button" data-slide="1" data-slot="0" aria-label="Show LT &amp; 11 kV" aria-pressed="false"  style="--card-accent:#67d2b0;">
                 <span class="energy-preview-card__surface">
-
-                    <img
-                        class="energy-preview-card__image"
-                        src="assets/img/banners/wind.png"
-                        alt="">
-
+                    <img class="energy-preview-card__image" src="assets/img/banners/11 kV.png" alt="" loading="lazy" decoding="async">
                     <span class="energy-preview-card__shade"></span>
-
-                    <span class="energy-preview-card__top">
-                        <span class="energy-preview-card__category">Renewable Energy</span>
-                        <span class="energy-preview-card__index">02</span>
-                    </span>
-
-                    <span class="energy-preview-card__bottom">
-                        <span class="energy-preview-card__title">Wind Energy</span>
-                        <span class="energy-preview-card__arrow">→</span>
-                    </span>
-
+                    <span class="energy-preview-card__top"><span class="energy-preview-card__category">LT &amp; 11 kV</span><span class="energy-preview-card__index">02</span></span>
+                    <span class="energy-preview-card__bottom"><span class="energy-preview-card__title">LT &amp; 11 kV</span><span class="energy-preview-card__arrow" aria-hidden="true">→</span></span>
                 </span>
-
             </button>
-
-
-            <button
-                class="energy-preview-card"
-                type="button"
-                data-slide="2"
-                data-slot="1"
-                aria-label="Show Solar Energy slide"
-                aria-pressed="false"
-                style="--card-accent:#f3c45c;">
-
+            <button class="energy-preview-card" type="button" data-slide="2" data-slot="1" aria-label="Show HT · 11–33 kV" aria-pressed="false"  style="--card-accent:#55c5ea;">
                 <span class="energy-preview-card__surface">
-
-                    <img
-                        class="energy-preview-card__image"
-                        src="assets/img/banners/solar.png"
-                        alt="">
-
+                    <img class="energy-preview-card__image" src="assets/img/banners/33kv.png" alt="" loading="lazy" decoding="async">
                     <span class="energy-preview-card__shade"></span>
-
-                    <span class="energy-preview-card__top">
-                        <span class="energy-preview-card__category">Clean Energy</span>
-                        <span class="energy-preview-card__index">03</span>
-                    </span>
-
-                    <span class="energy-preview-card__bottom">
-                        <span class="energy-preview-card__title">Solar Energy</span>
-                        <span class="energy-preview-card__arrow">→</span>
-                    </span>
-
+                    <span class="energy-preview-card__top"><span class="energy-preview-card__category">HT · 11–33 kV</span><span class="energy-preview-card__index">03</span></span>
+                    <span class="energy-preview-card__bottom"><span class="energy-preview-card__title">HT · 11–33 kV</span><span class="energy-preview-card__arrow" aria-hidden="true">→</span></span>
                 </span>
-
             </button>
-
-
-            <button
-                class="energy-preview-card"
-                type="button"
-                data-slide="3"
-                data-slot="2"
-                aria-label="Show Hydel Energy slide"
-                aria-pressed="false"
-                style="--card-accent:#65aaf5;">
-
+            <button class="energy-preview-card" type="button" data-slide="3" data-slot="2" aria-label="Show EHT · 132–765 kV" aria-pressed="false"  style="--card-accent:#65aaf5;">
                 <span class="energy-preview-card__surface">
-
-                    <img
-                        class="energy-preview-card__image"
-                        src="assets/img/banners/Energy-1.png"
-                        alt="">
-
+                    <img class="energy-preview-card__image" src="assets/img/banners/eht.png" alt="" loading="lazy" decoding="async">
                     <span class="energy-preview-card__shade"></span>
-
-                    <span class="energy-preview-card__top">
-                        <span class="energy-preview-card__category">Hydropower</span>
-                        <span class="energy-preview-card__index">04</span>
-                    </span>
-
-                    <span class="energy-preview-card__bottom">
-                        <span class="energy-preview-card__title">Hydel Energy</span>
-                        <span class="energy-preview-card__arrow">→</span>
-                    </span>
-
+                    <span class="energy-preview-card__top"><span class="energy-preview-card__category">EHT · 132–765 kV</span><span class="energy-preview-card__index">04</span></span>
+                    <span class="energy-preview-card__bottom"><span class="energy-preview-card__title">EHT · 132–765 kV</span><span class="energy-preview-card__arrow" aria-hidden="true">→</span></span>
                 </span>
-
             </button>
-
-            <button
-                class="energy-preview-card"
-                type="button"
-                data-slide="4"
-                data-slot="3"
-                aria-label="Show BMS IoT slide"
-                aria-pressed="false"
-                style="--card-accent:#55d7d0;">
-
+            <button class="energy-preview-card" type="button" data-slide="4" data-slot="hidden" tabindex="-1" aria-label="Show Control Panels &amp; Panel Boards" aria-pressed="false"  style="--card-accent:#e5b583;">
                 <span class="energy-preview-card__surface">
-
-                    <img
-                        class="energy-preview-card__image"
-                        src="assets/img/banners/iotbanner1.png"
-                        alt="">
-
+                    <img class="energy-preview-card__image" src="assets/img/banners/panel and control.png" alt="" loading="lazy" decoding="async">
                     <span class="energy-preview-card__shade"></span>
-
-                    <span class="energy-preview-card__top">
-                        <span class="energy-preview-card__category">Smart Building Automation</span>
-                        <span class="energy-preview-card__index">05</span>
-                    </span>
-
-                    <span class="energy-preview-card__bottom">
-                        <span class="energy-preview-card__title">BMS IoT</span>
-                        <span class="energy-preview-card__arrow">→</span>
-                    </span>
-
+                    <span class="energy-preview-card__top"><span class="energy-preview-card__category">Control Panels &amp; Panel Boards</span><span class="energy-preview-card__index">05</span></span>
+                    <span class="energy-preview-card__bottom"><span class="energy-preview-card__title">Control Panels &amp; Panel Boards</span><span class="energy-preview-card__arrow" aria-hidden="true">→</span></span>
                 </span>
-
             </button>
-
+            <button class="energy-preview-card" type="button" data-slide="5" data-slot="hidden" aria-label="Show IoT · BMS · IoT + BMS" aria-pressed="false" tabindex="-1" style="--card-accent:#55d7d0;">
+                <span class="energy-preview-card__surface">
+                    <img class="energy-preview-card__image" src="assets/img/banners/iotbanner1.png" alt="" loading="lazy" decoding="async">
+                    <span class="energy-preview-card__shade"></span>
+                    <span class="energy-preview-card__top"><span class="energy-preview-card__category">IoT · BMS · IoT + BMS</span><span class="energy-preview-card__index">06</span></span>
+                    <span class="energy-preview-card__bottom"><span class="energy-preview-card__title">IoT · BMS · IoT + BMS</span><span class="energy-preview-card__arrow" aria-hidden="true">→</span></span>
+                </span>
+            </button>
         </aside>
-
 
         <!-- BOTTOM NAVIGATION -->
 
@@ -1964,15 +1820,16 @@
                     <span class="energy-progress__fill"></span>
                 </span>
 
-                <span>05</span>
+                <span data-energy-total>06</span>
             </div>
 
             <div class="energy-dots" aria-label="Hero slides">
-                <button class="energy-dot is-active" type="button" data-dot="0" aria-label="Show slide 1"></button>
-                <button class="energy-dot" type="button" data-dot="1" aria-label="Show slide 2"></button>
-                <button class="energy-dot" type="button" data-dot="2" aria-label="Show slide 3"></button>
-                <button class="energy-dot" type="button" data-dot="3" aria-label="Show slide 4"></button>
-                <button class="energy-dot" type="button" data-dot="4" aria-label="Show slide 5"></button>
+                <button class="energy-dot is-active" type="button" data-dot="0" aria-label="Show Solar Energy" aria-current="true"></button>
+                <button class="energy-dot" type="button" data-dot="1" aria-label="Show LT &amp; 11 kV" aria-current="false"></button>
+                <button class="energy-dot" type="button" data-dot="2" aria-label="Show HT · 11–33 kV" aria-current="false"></button>
+                <button class="energy-dot" type="button" data-dot="3" aria-label="Show EHT · 132–765 kV" aria-current="false"></button>
+                <button class="energy-dot" type="button" data-dot="4" aria-label="Show Control Panels &amp; Panel Boards" aria-current="false"></button>
+                <button class="energy-dot" type="button" data-dot="5" aria-label="Show IoT · BMS · IoT + BMS" aria-current="false"></button>
             </div>
 
             <div class="energy-arrows">
@@ -1990,7 +1847,7 @@
         </div>
 
         <span class="energy-hero__status" data-energy-status aria-live="polite">
-            Power slide
+            Solar Energy slide
         </span>
 
     </div>
@@ -2020,6 +1877,8 @@
         const status = hero.querySelector("[data-energy-status]");
 
         const total = slides.length;
+        if (!total) return;
+        hero.querySelector("[data-energy-total]").textContent = String(total).padStart(2, "0");
         const interval = Number(hero.dataset.interval) || 6000;
         const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         const compactCards = window.matchMedia("(max-width: 767px)");
@@ -2029,6 +1888,7 @@
         let autoplayTimer = null;
         let heroInView = true;
         let autoplayEnabled = !reduceMotion;
+        let focusWithin = false;
 
         hero.style.setProperty("--autoplay-duration", interval + "ms");
 
@@ -2039,7 +1899,7 @@
 
 
         function setCardPositions() {
-            const maximumVisibleDistance = compactCards.matches ? 3 : 4;
+            const maximumVisibleDistance = 3; // Show exactly three upcoming previews on every screen.
 
             cards.forEach(function (card, cardIndex) {
                 const distance = (cardIndex - activeIndex + total) % total;
@@ -2087,7 +1947,7 @@
             });
 
             currentNumber.textContent = formatNumber(activeIndex);
-            status.textContent = title + " slide";
+            status.textContent = activeSlide.getAttribute("aria-label");
 
             setCardPositions();
         }
@@ -2119,6 +1979,7 @@
 
             if (
                 !autoplayEnabled ||
+                focusWithin ||
                 !heroInView ||
                 document.hidden
             ) {
@@ -2207,6 +2068,11 @@
             }
         });
 
+
+        hero.addEventListener("focusin", function () { focusWithin = true; stopAutoplay(); });
+        hero.addEventListener("focusout", function (event) {
+            if (!hero.contains(event.relatedTarget)) { focusWithin = false; startAutoplay(); }
+        });
 
         hero.addEventListener("keydown", function (event) {
             if (event.key === "ArrowLeft") {
