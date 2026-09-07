@@ -1,1429 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Energy | Alpha Numeric Innovations</title>
+    <meta name="description" content="Alpha Numeric Innovations delivers engineered On-Grid, Off-Grid and Ground-Mounted solar solutions for homes, businesses, industries and infrastructure projects.">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Power Products | Alpha Numeric</title>
-
-
-    <!-- =========================================================
-         BOOTSTRAP
-    ========================================================== -->
-
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet">
-
-
-    <!-- =========================================================
-         FONT AWESOME
-    ========================================================== -->
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-
-    <!-- =========================================================
-         BOOTSTRAP ICONS
-    ========================================================== -->
-
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-
-    <!-- =========================================================
-         INTER FONT
-    ========================================================== -->
-
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
+        /* =========================================================
+           01 — GLOBAL
+        ========================================================== */
+        :root {
+            --ink: #101010;
+            --muted: #6e6e6e;
+            --line: #e5e5e5;
+            --soft: #f5f5f2;
+            --solar: #f2c94c;
+            --solar-dark: #dcae20;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: "Inter", sans-serif; background: #fff; color: var(--ink); overflow-x: hidden; }
+        a { color: inherit; text-decoration: none; }
+        img { display: block; max-width: 100%; }
+        button, input, select, textarea { font-family: inherit; }
+        .solar-container { width: min(calc(100% - 80px), 1450px); margin: 0 auto; }
+        .section-kicker { display: inline-flex; align-items: center; gap: 12px; color: #777; font-size: 10px; font-weight: 700; letter-spacing: 2.8px; text-transform: uppercase; }
+        .section-kicker::before { content: ""; width: 38px; height: 2px; background: var(--solar); }
+        .section-title { margin: 19px 0 0; max-width: 900px; font-size: clamp(42px,5.2vw,78px); line-height: .98; letter-spacing: -3.5px; font-weight: 650; }
+        .section-title span { color: #777; font-weight: 300; }
+        .section-copy { color: #717171; font-size: 14px; line-height: 1.9; }
 
         /* =========================================================
-           GLOBAL
+           02 — ABOUT-STYLE NAVBAR
         ========================================================== */
+        .main-navbar { padding: 8px 0; background: #fff; box-shadow: 0 8px 35px rgba(14,29,57,.08); z-index: 9999; }
+        .navbar-logo { height: 58px; width: auto; object-fit: contain; }
+        .main-navbar .nav-link { position: relative; color: #1a1a1a !important; font-size: 14px; font-weight: 600; letter-spacing: .4px; margin: 0 5px; padding: 12px 11px !important; }
+        .main-navbar .nav-link:hover, .main-navbar .nav-link:focus, .main-navbar .nav-link.show { color: #000 !important; }
+        #logoWhite { display: none !important; }
+        #logoDark { display: block !important; }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .solution-dropdown { position: static !important; }
+        .mega-menu { position: absolute !important; width: min(1180px, calc(100vw - 48px)); left: 50% !important; top: 100% !important; transform: translateX(-50%) !important; margin-top: 0 !important; padding: 0; border: 1px solid #1f1f1f; border-radius: 14px; background: #000; box-shadow: 0 24px 70px rgba(0,0,0,.28); overflow: hidden; }
+        .mega-menu-inner { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); }
+        .mega-column { min-height: 270px; padding: 30px 30px 32px; border-right: 1px solid #242424; background: #000; }
+        .mega-column:last-child { border-right: 0; }
+        .mega-heading { margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid #2a2a2a; color: #fff; font-size: 16px; font-weight: 600; }
+        .mega-column > a { display: block; position: relative; padding: 9px 0 9px 16px; color: #bdbdbd; font-size: 13.5px; font-weight: 600; transition: .25s ease; }
+        .mega-column > a::before { content: ""; position: absolute; left: 0; top: 50%; width: 6px; height: 1px; background: #666; transform: translateY(-50%); transition: .25s ease; }
+        .mega-column > a:hover { color: #fff; padding-left: 21px; }
+        .mega-column > a:hover::before { width: 12px; background: #fff; }
+
+        .bms-dropdown .bms-menu { min-width: 190px; margin-top: 0; padding: 10px 0; border: 1px solid #1f1f1f; border-radius: 10px; background: #000; box-shadow: 0 18px 45px rgba(0,0,0,.24); }
+        .bms-dropdown .bms-menu .dropdown-item { padding: 10px 18px; color: #bdbdbd; font-size: 13.5px; font-weight: 600; background: transparent; transition: color .25s ease, padding-left .25s ease; }
+        .bms-dropdown .bms-menu .dropdown-item:hover { color: #fff; padding-left: 22px; }
+
+        @media (min-width: 992px) {
+            .solution-dropdown > .mega-menu, .bms-dropdown > .bms-menu { display: block; opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(6px); transition: opacity .22s ease, visibility .22s ease, transform .22s ease; }
+            .solution-dropdown > .mega-menu { transform: translateX(-50%) translateY(6px) !important; }
+            .solution-dropdown:hover > .mega-menu, .solution-dropdown > .mega-menu:hover, .solution-dropdown > .mega-menu.show { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0) !important; }
+            .bms-dropdown:hover > .bms-menu, .bms-dropdown > .bms-menu:hover, .bms-dropdown > .bms-menu.show { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); }
+            .solution-dropdown > .mega-menu::before { content: ""; position: absolute; left: 0; right: 0; top: -18px; height: 18px; background: transparent; }
         }
-
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-
-        body {
-
-            font-family: "Inter", sans-serif;
-
-            background: #ffffff;
-
-            color: #111111;
-
-            overflow-x: hidden;
-        }
-
-
-        img {
-
-            max-width: 100%;
-
-            display: block;
-        }
-
-
-        button,
-        input,
-        textarea,
-        select {
-
-            font-family: inherit;
-        }
-
-
-        button {
-
-            border-radius: 0;
-        }
-
-
-        a {
-
-            color: inherit;
-
-            text-decoration: none;
-        }
-
-
-
-        
-
-
-
-
-       
-
-
 
         /* =========================================================
-           PAGE
+           03 — HERO
         ========================================================== */
+        .solar-hero { position: relative; min-height: 760px; margin-top: 74px; overflow: hidden; color: #fff; background: #0a0a0a; }
+        .solar-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.78) 42%,rgba(0,0,0,.22) 78%,rgba(0,0,0,.08) 100%), url("assets/img/energy/solar-banner.png") center/cover no-repeat; }
+        .solar-hero::after { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px); background-size: 80px 80px; opacity: .25; }
+        .solar-hero-inner { position: relative; z-index: 2; min-height: 760px; display: grid; grid-template-columns: minmax(0,1.2fr) 390px; gap: 80px; align-items: center; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 24px; color: #d5d5d5; font-size: 10px; font-weight: 700; letter-spacing: 2.4px; text-transform: uppercase; }
+        .hero-badge i { color: var(--solar); }
+        .solar-hero h1 { max-width: 950px; margin: 0; font-size: clamp(58px,7.2vw,108px); line-height: .89; letter-spacing: -6px; font-weight: 750; text-transform: uppercase; }
+        .solar-hero h1 span { display: block; color: rgba(255,255,255,.55); font-weight: 300; }
+        .hero-copy { max-width: 700px; margin-top: 30px; color: #c4c4c4; font-size: 14px; line-height: 1.9; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+        .btn-solar, .btn-outline-light-custom { min-height: 54px; display: inline-flex; align-items: center; justify-content: center; gap: 11px; padding: 0 23px; font-size: 10px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; transition: .3s ease; }
+        .btn-solar { background: var(--solar); color: #111; border: 1px solid var(--solar); }
+        .btn-solar:hover { background: #fff; border-color: #fff; color: #111; transform: translateY(-2px); }
+        .btn-outline-light-custom { border: 1px solid rgba(255,255,255,.35); color: #fff; }
+        .btn-outline-light-custom:hover { border-color: #fff; background: #fff; color: #111; }
 
-        .power-products-page {
-
-            width: 100%;
-
-            padding-top: 100px;
-
-            background: #ffffff;
-        }
-
-
+        .hero-enquiry { padding: 30px; background: rgba(8,8,8,.82); border: 1px solid rgba(255,255,255,.17); backdrop-filter: blur(12px); }
+        .hero-enquiry small { color: var(--solar); font-size: 9px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
+        .hero-enquiry h3 { margin: 10px 0 22px; font-size: 25px; line-height: 1.1; }
+        .hero-field { margin-bottom: 12px; }
+        .hero-field input, .hero-field select { width: 100%; height: 48px; padding: 0 13px; border: 1px solid #343434; outline: 0; background: rgba(255,255,255,.04); color: #fff; font-size: 11px; }
+        .hero-field select option { color: #111; }
+        .hero-submit { width: 100%; min-height: 50px; border: 0; background: var(--solar); color: #111; font-size: 10px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; }
+        .hero-enquiry p { margin: 14px 0 0; color: #777; font-size: 9px; line-height: 1.6; }
 
         /* =========================================================
-           SMALL INTRO
+           04 — TRUST STRIP
         ========================================================== */
-
-        .power-products-intro {
-
-            padding: 60px 5% 48px;
-
-            border-bottom: 1px solid #e5e5e5;
-
-            background: #ffffff;
-        }
-
-
-        .power-products-intro-inner {
-
-            width: 100%;
-
-            max-width: 1600px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns:
-                minmax(0,1fr)
-                minmax(300px,420px);
-
-            gap: 80px;
-
-            align-items: end;
-        }
-
-
-        .power-products-eyebrow {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 12px;
-
-            margin-bottom: 18px;
-
-            color: #666666;
-
-            font-size: 9px;
-
-            font-weight: 700;
-
-            letter-spacing: 3px;
-
-            text-transform: uppercase;
-        }
-
-
-        .power-products-eyebrow::before {
-
-            content: "";
-
-            width: 38px;
-
-            height: 1px;
-
-            background: #111111;
-        }
-
-
-        .power-products-intro h1 {
-
-            max-width: 800px;
-
-            margin: 0;
-
-            color: #111111;
-
-            font-size: clamp(42px, 4.7vw, 70px);
-
-            line-height: 1;
-
-            letter-spacing: -3px;
-
-            font-weight: 600;
-        }
-
-
-        .power-products-intro h1 span {
-
-            color: #777777;
-
-            font-weight: 300;
-        }
-
-
-        .power-products-intro p {
-
-            margin: 0;
-
-            color: #777777;
-
-            font-size: 13px;
-
-            line-height: 1.9;
-        }
-
-
+        .trust-strip { background: #111; color: #fff; }
+        .trust-grid { display: grid; grid-template-columns: repeat(4,1fr); }
+        .trust-item { min-height: 130px; padding: 27px 28px; border-right: 1px solid #2c2c2c; display: flex; flex-direction: column; justify-content: space-between; }
+        .trust-item:first-child { border-left: 1px solid #2c2c2c; }
+        .trust-item span { color: #666; font-size: 8px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+        .trust-item strong { font-size: 16px; font-weight: 550; }
 
         /* =========================================================
-           MAIN CATALOGUE
+           05 — INTRO
         ========================================================== */
-
-        .power-catalogue {
-
-            width: 100%;
-
-            min-height: 820px;
-
-            display: grid;
-
-            grid-template-columns:
-
-                minmax(320px, 24%)
-
-                minmax(0, 76%);
-        }
-
-
+        .solar-intro { padding: 125px 0; background: #fff; }
+        .solar-intro-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(360px,470px); gap: 100px; align-items: end; }
+        .solar-intro-copy p { margin: 0 0 20px; }
+        .intro-points { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .intro-point { padding: 16px 18px; background: var(--soft); border-left: 3px solid var(--solar); font-size: 10px; font-weight: 650; }
 
         /* =========================================================
-           LEFT SIDEBAR
+           06 — THREE SOLAR SYSTEMS
         ========================================================== */
-
-        .catalogue-sidebar {
-
-            position: relative;
-
-            background: #f7f7f5;
-
-            border-right: 1px solid #dddddd;
-        }
-
-
-        .catalogue-sidebar-inner {
-
-            position: sticky;
-
-            top: 100px;
-
-            max-height: calc(100vh - 100px);
-
-            overflow-y: auto;
-
-            scrollbar-width: thin;
-        }
-
-
-        .catalogue-sidebar-inner::-webkit-scrollbar {
-
-            width: 5px;
-        }
-
-
-        .catalogue-sidebar-inner::-webkit-scrollbar-thumb {
-
-            background: #cfcfcf;
-        }
-
-
+        .systems-section { padding: 120px 0 130px; background: var(--soft); }
+        .systems-head { display: grid; grid-template-columns: minmax(0,1fr) minmax(300px,430px); gap: 80px; align-items: end; margin-bottom: 55px; }
+        .systems-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+        .system-card { position: relative; min-height: 580px; overflow: hidden; background: #111; color: #fff; }
+        .system-card-image { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform .6s ease; }
+        .system-card:hover .system-card-image { transform: scale(1.04); }
+        .system-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top,rgba(0,0,0,.96) 0%,rgba(0,0,0,.60) 35%,rgba(0,0,0,.1) 72%); }
+        .system-card.on-grid .system-card-image { background-image: url("assets/img/energy/Rooftop Solar.png"); }
+        .system-card.off-grid .system-card-image { background-image: url("assets/img/energy/Solar Power Systems.png"); }
+        .system-card.ground .system-card-image { background-image: url("assets/img/energy/industrial solar.png"); }
+        .system-card-content { position: absolute; z-index: 3; left: 30px; right: 30px; bottom: 30px; }
+        .system-number { color: var(--solar); font-size: 9px; font-weight: 800; letter-spacing: 2px; }
+        .system-card h3 { margin: 12px 0 13px; font-size: 34px; letter-spacing: -1.5px; }
+        .system-card p { margin: 0; color: #b8b8b8; font-size: 11px; line-height: 1.75; }
+        .system-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
+        .system-tags span { padding: 7px 9px; border: 1px solid #4a4a4a; color: #d5d5d5; font-size: 7px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+        .system-link { display: inline-flex; align-items: center; gap: 9px; margin-top: 20px; color: #fff; font-size: 9px; font-weight: 800; letter-spacing: 1.3px; text-transform: uppercase; }
 
         /* =========================================================
-           SIDEBAR HEADER
+           07 — DETAILED SYSTEM BLOCKS
         ========================================================== */
-
-        .catalogue-sidebar-header {
-
-            padding: 28px 32px;
-
-            border-bottom: 1px solid #dddddd;
-
-            background: #f7f7f5;
-        }
-
-
-        .catalogue-sidebar-header span {
-
-            display: block;
-
-            margin-bottom: 7px;
-
-            color: #999999;
-
-            font-size: 8px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-        }
-
-
-        .catalogue-sidebar-header h2 {
-
-            margin: 0;
-
-            color: #111111;
-
-            font-size: 20px;
-
-            font-weight: 600;
-
-            letter-spacing: -.5px;
-        }
-
-
+        .solution-detail { padding: 125px 0; background: #fff; }
+        .solution-detail:nth-of-type(even) { background: #0e0e0e; color: #fff; }
+        .solution-detail-grid { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(360px,.9fr); gap: 90px; align-items: center; }
+        .solution-detail.reverse .solution-detail-grid { grid-template-columns: minmax(360px,.9fr) minmax(0,1.1fr); }
+        .solution-detail.reverse .detail-visual { order: 2; }
+        .solution-detail.reverse .detail-content { order: 1; }
+        .detail-visual { min-height: 610px; position: relative; overflow: hidden; background: #ddd center/cover no-repeat; }
+        .detail-visual.on { background-image: url("assets/img/energy/Rooftop Solar.png"); }
+        .detail-visual.off { background-image: url("assets/img/energy/Solar Power Systems.png"); }
+        .detail-visual.ground { background-image: url("assets/img/energy/industrial solar.png"); }
+        .detail-badge { position: absolute; left: 25px; top: 25px; padding: 11px 14px; background: #fff; color: #111; font-size: 8px; font-weight: 800; letter-spacing: 1.7px; text-transform: uppercase; }
+        .detail-content .section-title { font-size: clamp(40px,4.7vw,70px); }
+        .solution-detail:nth-of-type(even) .section-title { color: #fff; }
+        .solution-detail:nth-of-type(even) .section-title span { color: #777; }
+        .detail-content > p { max-width: 570px; margin-top: 25px; color: #747474; font-size: 13px; line-height: 1.9; }
+        .solution-detail:nth-of-type(even) .detail-content > p { color: #9d9d9d; }
+        .detail-feature-list { margin-top: 32px; border-top: 1px solid var(--line); }
+        .solution-detail:nth-of-type(even) .detail-feature-list { border-color: #2d2d2d; }
+        .detail-feature { display: grid; grid-template-columns: 42px 1fr; gap: 15px; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--line); }
+        .solution-detail:nth-of-type(even) .detail-feature { border-color: #2d2d2d; }
+        .detail-feature span { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--solar); color: #111; font-size: 8px; font-weight: 800; }
+        .detail-feature strong { font-size: 11px; font-weight: 650; }
+        .best-for { margin-top: 28px; padding: 18px 20px; background: var(--soft); border-left: 3px solid var(--solar); color: #333; font-size: 10px; line-height: 1.7; }
+        .solution-detail:nth-of-type(even) .best-for { background: #181818; color: #bbb; }
 
         /* =========================================================
-           CATEGORY
+           08 — COMPARISON
         ========================================================== */
-
-        .power-category {
-
-            border-bottom: 1px solid #dddddd;
-        }
-
-
-        .category-button {
-
-            width: 100%;
-
-            min-height: 82px;
-
-            padding: 0 28px;
-
-            display: grid;
-
-            grid-template-columns:
-
-                34px
-
-                1fr
-
-                auto;
-
-            align-items: center;
-
-            gap: 13px;
-
-            border: 0;
-
-            background: #ffffff;
-
-            color: #111111;
-
-            text-align: left;
-
-            cursor: pointer;
-
-            transition: .3s ease;
-        }
-
-
-        .category-button:hover {
-
-            background: #f1f1ef;
-        }
-
-
-        .category-number {
-
-            color: #aaaaaa;
-
-            font-size: 9px;
-
-            font-weight: 600;
-
-            letter-spacing: 1px;
-        }
-
-
-        .category-content {
-
-            min-width: 0;
-        }
-
-
-        .category-title {
-
-            display: block;
-
-            color: #111111;
-
-            font-size: 14px;
-
-            font-weight: 600;
-
-            line-height: 1.25;
-        }
-
-
-        .category-count {
-
-            display: block;
-
-            margin-top: 5px;
-
-            color: #999999;
-
-            font-size: 8px;
-
-            font-weight: 600;
-
-            letter-spacing: 1.2px;
-
-            text-transform: uppercase;
-        }
-
-
-        .category-toggle {
-
-            width: 28px;
-
-            height: 28px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            border: 1px solid #dddddd;
-
-            color: #777777;
-
-            font-size: 12px;
-        }
-
-
-
-        /* ACTIVE CATEGORY */
-
-        .power-category.open .category-button {
-
-            background: #111111;
-
-            color: #ffffff;
-        }
-
-
-        .power-category.open .category-title {
-
-            color: #ffffff;
-        }
-
-
-        .power-category.open .category-number {
-
-            color: #777777;
-        }
-
-
-        .power-category.open .category-count {
-
-            color: #888888;
-        }
-
-
-        .power-category.open .category-toggle {
-
-            background: #ffffff;
-
-            border-color: #ffffff;
-
-            color: #111111;
-        }
-
-
+        .comparison-section { padding: 125px 0; background: var(--soft); }
+        .comparison-head { max-width: 950px; margin-bottom: 50px; }
+        .comparison-table-wrap { overflow-x: auto; background: #fff; border: 1px solid #ddd; }
+        .comparison-table { width: 100%; min-width: 850px; border-collapse: collapse; }
+        .comparison-table th, .comparison-table td { padding: 20px 22px; border-right: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; text-align: left; vertical-align: top; }
+        .comparison-table th { background: #111; color: #fff; font-size: 11px; letter-spacing: 1.1px; text-transform: uppercase; }
+        .comparison-table th:first-child { background: var(--solar); color: #111; }
+        .comparison-table td:first-child { font-weight: 700; color: #111; }
+        .comparison-table td { color: #666; font-size: 11px; line-height: 1.6; }
 
         /* =========================================================
-           CATEGORY PRODUCTS
+           09 — EPC PROCESS
         ========================================================== */
-
-        .category-products {
-
-            max-height: 0;
-
-            overflow: hidden;
-
-            background: #ffffff;
-
-            transition:
-                max-height .55s cubic-bezier(.22,1,.36,1);
-        }
-
-
-        .power-category.open .category-products {
-
-            max-height: 1600px;
-        }
-
-
-        .sidebar-product {
-
-            position: relative;
-
-            width: 100%;
-
-            min-height: 62px;
-
-            padding:
-
-                0 20px
-
-                0 64px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            gap: 20px;
-
-            border: 0;
-
-            border-top: 1px solid #eeeeee;
-
-            background: #ffffff;
-
-            color: #555555;
-
-            text-align: left;
-
-            cursor: pointer;
-
-            transition: .3s ease;
-        }
-
-
-        .sidebar-product::before {
-
-            content: "";
-
-            position: absolute;
-
-            left: 33px;
-
-            width: 12px;
-
-            height: 1px;
-
-            background: #bbbbbb;
-
-            transition: .3s ease;
-        }
-
-
-        .sidebar-product-name {
-
-            font-size: 12px;
-
-            font-weight: 500;
-
-            line-height: 1.4;
-        }
-
-
-        .sidebar-product-count {
-
-            white-space: nowrap;
-
-            color: #aaaaaa;
-
-            font-size: 8px;
-
-            font-weight: 600;
-
-            letter-spacing: 1px;
-        }
-
-
-        .sidebar-product:hover {
-
-            padding-left: 70px;
-
-            background: #f7f7f5;
-
-            color: #111111;
-        }
-
-
-        .sidebar-product.active {
-
-            background: #ececea;
-
-            color: #111111;
-        }
-
-
-        .sidebar-product.active::before {
-
-            width: 20px;
-
-            background: #111111;
-        }
-
-
-        .sidebar-product.active
-        .sidebar-product-name {
-
-            font-weight: 600;
-        }
-
-
+        .process-section { padding: 130px 0; background: #111; color: #fff; }
+        .process-section .section-title { color: #fff; }
+        .process-head { display: grid; grid-template-columns: minmax(0,1fr) minmax(300px,430px); gap: 80px; align-items: end; margin-bottom: 60px; }
+        .process-head .section-copy { color: #8f8f8f; }
+        .process-grid { display: grid; grid-template-columns: repeat(4,1fr); border-top: 1px solid #303030; border-left: 1px solid #303030; }
+        .process-card { min-height: 290px; padding: 28px; border-right: 1px solid #303030; border-bottom: 1px solid #303030; transition: .3s ease; }
+        .process-card:hover { background: #fff; color: #111; }
+        .process-card span { color: var(--solar); font-size: 9px; font-weight: 800; letter-spacing: 2px; }
+        .process-card h3 { margin: 75px 0 12px; font-size: 18px; }
+        .process-card p { margin: 0; color: #858585; font-size: 10px; line-height: 1.75; }
+        .process-card:hover p { color: #666; }
 
         /* =========================================================
-           RIGHT SIDE
+           10 — APPLICATIONS
         ========================================================== */
-
-        .catalogue-display {
-
-            min-width: 0;
-
-            background: #ffffff;
-        }
-
-
+        .applications-section { padding: 125px 0; background: #fff; }
+        .applications-grid { margin-top: 55px; display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
+        .application-card { min-height: 230px; padding: 28px; background: var(--soft); border: 1px solid #e6e6e6; transition: .3s ease; }
+        .application-card:hover { transform: translateY(-5px); border-color: #111; }
+        .application-card i { font-size: 24px; margin-bottom: 45px; }
+        .application-card h3 { font-size: 15px; margin-bottom: 10px; }
+        .application-card p { color: #747474; font-size: 10px; line-height: 1.7; }
 
         /* =========================================================
-           DISPLAY HEADER
+           11 — WHY ALPHA
         ========================================================== */
-
-        .catalogue-display-header {
-
-            min-height: 72px;
-
-            padding: 0 42px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            gap: 30px;
-
-            border-bottom: 1px solid #e5e5e5;
-
-            background: #ffffff;
-        }
-
-
-        .catalogue-breadcrumb {
-
-            color: #999999;
-
-            font-size: 8px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-        }
-
-
-        .catalogue-product-index {
-
-            color: #999999;
-
-            font-size: 9px;
-
-            font-weight: 600;
-
-            letter-spacing: 2px;
-        }
-
-
+        .why-section { padding: 120px 0; background: #f3f3ef; }
+        .why-grid { display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); gap: 90px; align-items: center; }
+        .why-visual { min-height: 600px; background: url("assets/img/energy/epc-execution.png") center/cover no-repeat; position: relative; }
+        .why-visual::after { content: "ENGINEERED FOR PERFORMANCE"; position: absolute; left: 25px; bottom: 25px; padding: 12px 15px; background: #111; color: #fff; font-size: 8px; font-weight: 800; letter-spacing: 1.7px; }
+        .why-list { margin-top: 35px; }
+        .why-item { display: grid; grid-template-columns: 45px 1fr; gap: 15px; padding: 18px 0; border-bottom: 1px solid #d6d6d6; }
+        .why-item span { color: #aaa; font-size: 10px; font-weight: 800; }
+        .why-item strong { display: block; font-size: 13px; margin-bottom: 5px; }
+        .why-item p { margin: 0; color: #777; font-size: 10px; line-height: 1.7; }
 
         /* =========================================================
-           MAIN PRODUCT VISUAL
+           12 — FINAL CTA
         ========================================================== */
-
-        .product-visual {
-
-            position: relative;
-
-            width: 100%;
-
-            min-height: 590px;
-
-            overflow: hidden;
-
-            background: #e9e9e6;
-        }
-
-
-        .product-visual-image {
-
-            position: absolute;
-
-            inset: 0;
-
-            width: 100%;
-
-            height: 100%;
-
-            object-fit: cover;
-
-            object-position: center;
-
-            opacity: 1;
-
-            transform: scale(1.01);
-
-            transition:
-
-                opacity .35s ease,
-
-                transform .7s
-                cubic-bezier(.22,1,.36,1);
-        }
-
-
-        .product-visual.image-changing
-        .product-visual-image {
-
-            opacity: 0;
-
-            transform: scale(1.04);
-        }
-
-
-
-        /* DARK GRADIENT */
-
-        .product-visual::after {
-
-            content: "";
-
-            position: absolute;
-
-            inset: 0;
-
-            z-index: 2;
-
-            pointer-events: none;
-
-            background:
-
-                linear-gradient(
-
-                    to top,
-
-                    rgba(0,0,0,.92) 0%,
-
-                    rgba(0,0,0,.54) 34%,
-
-                    rgba(0,0,0,.12) 65%,
-
-                    rgba(0,0,0,.02) 100%
-
-                );
-        }
-
-
+        .solar-cta { padding: 110px 0; background: #fff; }
+        .solar-cta-inner { position: relative; overflow: hidden; min-height: 410px; display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; padding: 60px; color: #fff; background: linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.45)),url("assets/img/solar-cta.jpg") center/cover no-repeat; }
+        .solar-cta-inner h2 { max-width: 820px; margin: 0; font-size: clamp(42px,5.5vw,80px); line-height: .95; letter-spacing: -4px; }
+        .solar-cta-inner h2 span { color: #8b8b8b; font-weight: 300; }
+        .cta-side { padding-left: 35px; border-left: 1px solid #494949; }
+        .cta-side p { color: #aaa; font-size: 12px; line-height: 1.85; }
 
         /* =========================================================
-           IMAGE COUNTER
+           13 — FOOTER
         ========================================================== */
-
-        .gallery-image-counter {
-
-            position: absolute;
-
-            z-index: 6;
-
-            top: 28px;
-
-            right: 30px;
-
-            min-width: 84px;
-
-            height: 38px;
-
-            padding: 0 14px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            gap: 6px;
-
-            background: rgba(255,255,255,.94);
-
-            color: #111111;
-
-            font-size: 9px;
-
-            font-weight: 700;
-
-            letter-spacing: 1.4px;
-        }
-
-
+        .main-footer { background: #050505; color: #fff; padding: 75px 7% 25px; }
+        .footer-logo img { height: 55px; width: auto; margin-bottom: 22px; }
+        .footer-description { max-width: 370px; color: #888; font-size: 12px; line-height: 1.9; }
+        .footer-heading { color: #fff; font-size: 12px; font-weight: 600; letter-spacing: 1.5px; margin-bottom: 22px; }
+        .footer-links,.footer-contact { list-style: none; padding: 0; margin: 0; }
+        .footer-links li { margin-bottom: 11px; }
+        .footer-links a,.footer-contact li { color: #888; font-size: 12px; line-height: 1.8; }
+        .footer-contact li { display: flex; gap: 12px; margin-bottom: 15px; }
+        .footer-contact i { width: 18px; color: #fff; margin-top: 4px; }
+        .footer-bottom { margin-top: 55px; padding-top: 20px; border-top: 1px solid #222; display: flex; justify-content: space-between; gap: 20px; color: #666; font-size: 10px; }
+        .footer-bottom strong { color: #fff; font-weight: 500; }
 
         /* =========================================================
-           PRODUCT CONTENT
+           14 — RESPONSIVE
         ========================================================== */
-
-        .product-visual-content {
-
-            position: absolute;
-
-            z-index: 5;
-
-            left: 44px;
-
-            right: 44px;
-
-            bottom: 42px;
-
-            color: #ffffff;
-
-            transition:
-
-                opacity .35s ease,
-
-                transform .4s ease;
+        @media (max-width: 1100px) {
+            .solar-hero-inner { grid-template-columns: 1fr; padding-top: 70px; padding-bottom: 70px; }
+            .hero-enquiry { max-width: 520px; }
+            .systems-grid { grid-template-columns: 1fr 1fr; }
+            .system-card:last-child { grid-column: 1 / -1; }
+            .applications-grid { grid-template-columns: 1fr 1fr; }
+            .process-grid { grid-template-columns: 1fr 1fr; }
         }
-
-
-        .product-visual.image-changing
-        .product-visual-content {
-
-            opacity: .35;
-        }
-
-
-        .display-category {
-
-            display: block;
-
-            margin-bottom: 12px;
-
-            color: rgba(255,255,255,.58);
-
-            font-size: 9px;
-
-            font-weight: 700;
-
-            letter-spacing: 2.5px;
-
-            text-transform: uppercase;
-        }
-
-
-        .display-title {
-
-            max-width: 900px;
-
-            margin: 0 0 17px;
-
-            color: #ffffff;
-
-            font-size: clamp(44px,5vw,78px);
-
-            line-height: .95;
-
-            letter-spacing: -3px;
-
-            font-weight: 500;
-        }
-
-
-        .display-description {
-
-            max-width: 680px;
-
-            margin: 0;
-
-            color: rgba(255,255,255,.73);
-
-            font-size: 13px;
-
-            line-height: 1.85;
-        }
-
-
-
-        /* =========================================================
-           GALLERY
-        ========================================================== */
-
-        .product-gallery-wrapper {
-
-            width: 100%;
-
-            padding: 28px 32px 34px;
-
-            background: #ffffff;
-
-            border-top: 1px solid #e2e2e2;
-        }
-
-
-        .gallery-heading {
-
-            display: flex;
-
-            align-items: flex-end;
-
-            justify-content: space-between;
-
-            gap: 30px;
-
-            margin-bottom: 20px;
-        }
-
-
-        .gallery-heading-label {
-
-            display: block;
-
-            margin-bottom: 6px;
-
-            color: #999999;
-
-            font-size: 8px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-        }
-
-
-        .gallery-heading strong {
-
-            display: block;
-
-            color: #111111;
-
-            font-size: 15px;
-
-            font-weight: 600;
-        }
-
-
-
-        /* =========================================================
-           GALLERY CONTROLS
-        ========================================================== */
-
-        .gallery-controls {
-
-            display: flex;
-
-            gap: 6px;
-        }
-
-
-        .gallery-nav {
-
-            width: 40px;
-
-            height: 40px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            padding: 0;
-
-            border: 1px solid #dddddd;
-
-            background: #ffffff;
-
-            color: #111111;
-
-            cursor: pointer;
-
-            transition: .3s ease;
-        }
-
-
-        .gallery-nav:hover {
-
-            background: #111111;
-
-            border-color: #111111;
-
-            color: #ffffff;
-        }
-
-
-
-        /* =========================================================
-           THUMBNAILS
-        ========================================================== */
-
-        .product-thumbnails {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(6,minmax(0,1fr));
-
-            gap: 9px;
-        }
-
-
-        .product-thumbnail {
-
-            position: relative;
-
-            width: 100%;
-
-            aspect-ratio: 4 / 3;
-
-            padding: 0;
-
-            overflow: hidden;
-
-            border: 1px solid transparent;
-
-            background: #eeeeee;
-
-            cursor: pointer;
-
-            transition: .3s ease;
-        }
-
-
-        .product-thumbnail img {
-
-            width: 100%;
-
-            height: 100%;
-
-            object-fit: cover;
-
-            transition:
-                transform .5s
-                cubic-bezier(.22,1,.36,1);
-        }
-
-
-        .product-thumbnail:hover img {
-
-            transform: scale(1.05);
-        }
-
-
-        .thumbnail-number {
-
-            position: absolute;
-
-            z-index: 3;
-
-            right: 6px;
-
-            bottom: 6px;
-
-            min-width: 25px;
-
-            height: 22px;
-
-            padding: 0 5px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            background: rgba(0,0,0,.75);
-
-            color: #ffffff;
-
-            font-size: 7px;
-
-            font-weight: 700;
-
-            letter-spacing: 1px;
-        }
-
-
-        .product-thumbnail.active {
-
-            border-color: #111111;
-        }
-
-
-        .product-thumbnail.active::after {
-
-            content: "";
-
-            position: absolute;
-
-            z-index: 4;
-
-            left: 0;
-
-            right: 0;
-
-            bottom: 0;
-
-            height: 3px;
-
-            background: #111111;
-        }
-
-
-
-        /* =========================================================
-           PRODUCT INFO STRIP
-        ========================================================== */
-
-        .product-info-strip {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3,1fr);
-
-            background: #f7f7f5;
-
-            border-top: 1px solid #dddddd;
-        }
-
-
-        .product-info-item {
-
-            min-height: 115px;
-
-            padding: 26px 30px;
-
-            border-right: 1px solid #dddddd;
-        }
-
-
-        .product-info-item:last-child {
-
-            border-right: 0;
-        }
-
-
-        .product-info-label {
-
-            display: block;
-
-            margin-bottom: 10px;
-
-            color: #999999;
-
-            font-size: 8px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-        }
-
-
-        .product-info-value {
-
-            color: #222222;
-
-            font-size: 14px;
-
-            font-weight: 500;
-        }
-
-
-
-        /* =========================================================
-           RESPONSIVE - 1200
-        ========================================================== */
-
-        @media (max-width: 1200px) {
-
-            .power-catalogue {
-
-                grid-template-columns:
-                    330px minmax(0,1fr);
-            }
-
-
-            .product-thumbnails {
-
-                grid-template-columns:
-                    repeat(3,minmax(0,1fr));
-            }
-
-        }
-
-
-
-        /* =========================================================
-           RESPONSIVE - TABLET
-        ========================================================== */
 
         @media (max-width: 991px) {
-.power-products-page {
-
-                padding-top: 80px;
-            }
-
-
-            .power-products-intro-inner {
-
-                grid-template-columns: 1fr;
-
-                gap: 25px;
-            }
-
-
-            .power-catalogue {
-
-                grid-template-columns:
-                    300px minmax(0,1fr);
-            }
-
-
-            .product-visual {
-
-                min-height: 560px;
-            }
-
-
-            .display-title {
-
-                font-size: 55px;
-            }
-
+            .main-navbar { padding: 8px 0; }
+            .navbar-logo { height: 55px; }
+            .main-navbar .navbar-toggler { color: #17243b; border-color: rgba(23,36,59,.2); }
+            .navbar-collapse { max-height: calc(100vh - 76px); overflow-y: auto; margin-top: 10px; padding: 15px 10px 22px; border-top: 1px solid #edf0f5; background: #fff; }
+            .mega-menu { position: static !important; transform: none !important; width: 100%; margin: 0 !important; box-shadow: none; border-left: 2px solid #000; border-radius: 0; overflow: visible; }
+            .mega-menu-inner { grid-template-columns: 1fr; }
+            .mega-column { min-height: 0; padding: 18px; border-right: 0; border-bottom: 1px solid #242424; }
+            .bms-dropdown .bms-menu { border-radius: 0; box-shadow: none; }
+            .solar-intro-grid,.systems-head,.solution-detail-grid,.solution-detail.reverse .solution-detail-grid,.process-head,.why-grid,.solar-cta-inner { grid-template-columns: 1fr; }
+            .solution-detail.reverse .detail-visual,.solution-detail.reverse .detail-content { order: initial; }
+            .cta-side { padding-left: 0; padding-top: 30px; border-left: 0; border-top: 1px solid #494949; }
         }
-
-
-
-        /* =========================================================
-           MOBILE
-        ========================================================== */
 
         @media (max-width: 767px) {
-
-
-            .power-products-intro {
-
-                padding:
-                    48px 20px
-                    38px;
-            }
-
-
-            .power-products-intro h1 {
-
-                font-size: 44px;
-
-                letter-spacing: -2px;
-            }
-
-
-            .power-catalogue {
-
-                display: block;
-            }
-
-
-            .catalogue-sidebar {
-
-                border-right: 0;
-
-                border-bottom: 1px solid #dddddd;
-            }
-
-
-            .catalogue-sidebar-inner {
-
-                position: relative;
-
-                top: auto;
-
-                max-height: none;
-            }
-
-
-            .catalogue-display-header {
-
-                padding: 0 20px;
-            }
-
-
-            .product-visual {
-
-                min-height: 500px;
-            }
-
-
-            .product-visual-content {
-
-                left: 24px;
-
-                right: 24px;
-
-                bottom: 28px;
-            }
-
-
-            .display-title {
-
-                font-size: 43px;
-
-                letter-spacing: -2px;
-            }
-
-
-            .gallery-image-counter {
-
-                top: 20px;
-
-                right: 20px;
-            }
-
-
-            .product-gallery-wrapper {
-
-                padding: 22px 20px 25px;
-            }
-
-
-            .product-thumbnails {
-
-                grid-template-columns:
-                    repeat(2,minmax(0,1fr));
-            }
-
-
-            .product-info-strip {
-
-                grid-template-columns: 1fr;
-            }
-
-
-            .product-info-item {
-
-                border-right: 0;
-
-                border-bottom: 1px solid #dddddd;
-            }
-
-
-            .product-info-item:last-child {
-
-                border-bottom: 0;
-            }
-
+            .solar-container { width: calc(100% - 40px); }
+            .solar-hero { margin-top: 70px; }
+            .solar-hero h1 { font-size: 54px; letter-spacing: -3px; }
+            .solar-hero-inner { gap: 45px; }
+            .trust-grid,.systems-grid,.process-grid,.applications-grid { grid-template-columns: 1fr; }
+            .system-card:last-child { grid-column: auto; }
+            .trust-item { border-left: 1px solid #2c2c2c; border-bottom: 1px solid #2c2c2c; }
+            .solar-intro,.systems-section,.solution-detail,.comparison-section,.process-section,.applications-section,.why-section,.solar-cta { padding-top: 85px; padding-bottom: 85px; }
+            .section-title { font-size: 44px; letter-spacing: -2px; }
+            .intro-points { grid-template-columns: 1fr; }
+            .detail-visual,.why-visual { min-height: 460px; }
+            .solar-cta-inner { padding: 38px 28px; }
+            .footer-bottom { flex-direction: column; }
         }
-
     </style>
-
 </head>
-
-
-
 <body>
 
-
-
-<!-- =========================================================
-     MODULE — NAVBAR
-========================================================= -->
-
-<!-- HTML -->
     <!-- =========================================================
-         PREMIUM GLOBAL NAVIGATION
-    ========================================================= -->
+         MODULE 01 — NAVBAR
+    ========================================================== -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand" href="index.html">
@@ -1431,9 +300,7 @@
                 <img src="assets/img/b-alpha.png" id="logoDark" class="navbar-logo" alt="Alpha Numeric Innovations">
             </a>
 
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu <i class="fas fa-bars ms-1"></i>
             </button>
 
@@ -1443,17 +310,12 @@
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
 
                     <li class="nav-item dropdown solution-dropdown position-static">
-                        <a class="nav-link dropdown-toggle " href="#" id="solutionsDropdown" role="button"
-                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Solutions</a>
-
+                        <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Solutions</a>
                         <div class="dropdown-menu mega-menu" aria-labelledby="solutionsDropdown">
                             <div class="mega-menu-inner">
                                 <div class="mega-column">
-                                    <div class="mega-heading "><span>Renewable Energy</span></div>
-                                    <a href="solar-energy.html">Solar </a>
-                                    <!-- <a href="wind-energy.html">Wind Energy</a>
-                                    <a href="hydel-energy.html">Hydel Energy</a>
-                                    <a href="biomass-energy.html">Biomass Energy</a> -->
+                                    <div class="mega-heading"><span>Renewable Energy</span></div>
+                                    <a href="solar-energy.html">Solar</a>
                                 </div>
                                 <div class="mega-column">
                                     <div class="mega-heading"><span>Power</span></div>
@@ -1484,2506 +346,1514 @@
                     </li>
 
                     <li class="nav-item dropdown bms-dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="bmsDropdown" role="button"
-                           data-bs-toggle="dropdown" aria-expanded="false">BMS</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="bmsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">BMS</a>
                         <ul class="dropdown-menu bms-menu" aria-labelledby="bmsDropdown">
                             <li><a class="dropdown-item" href="iot.html">IoT</a></li>
                             <li><a class="dropdown-item" href="bms.html">BMS</a></li>
                             <li><a class="dropdown-item" href="iot-bms.html">IoT+BMS</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item active"><a class="nav-link active" href="power-products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="power-products.html">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-<!-- CSS -->
-<style>
-        /* =====================================================
-           GLOBAL
-        ===================================================== */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: "Inter", sans-serif;
-            background: #ffffff;
-            color: #111111;
-            overflow-x: hidden;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        img {
-            max-width: 100%;
-        }
-        /* =====================================================
-           PREMIUM GLOBAL NAVBAR
-        ===================================================== */
-
-        .main-navbar { padding: 13px 0; background: transparent; transition: background .35s ease, padding .35s ease, box-shadow .35s ease; z-index: 9999; }
-        .main-navbar.navbar-shrink, .main-navbar.scrolled { background: #fff; padding: 8px 0; box-shadow: 0 8px 35px rgba(14,29,57,.08); }
-        .navbar-logo { height: 68px; width: auto; object-fit: contain; transition: height .3s ease; }
-        .main-navbar.navbar-shrink .navbar-logo, .main-navbar.scrolled .navbar-logo { height: 58px; }
-        .main-navbar .nav-link { position: relative; color: #fff; font-size: 14px; font-weight: 600; letter-spacing: .4px; margin: 0 5px; padding: 12px 11px !important; transition: color .3s ease; }
-        .main-navbar.navbar-shrink .nav-link, .main-navbar.scrolled .nav-link { color: #16243b; }
-        .main-navbar .nav-link:hover, .main-navbar .nav-link:focus { color: #4d73be; }
-
-        .solution-dropdown { position: static !important; }
-        .mega-menu { position: absolute !important; width: min(1180px, calc(100vw - 48px)); left: 50% !important; top: 100% !important; transform: translateX(-50%) !important; margin-top: 0 !important; padding: 0; border: 0; border-radius: 14px; background: #fff; box-shadow: 0 24px 70px rgba(14,29,57,.18); overflow: hidden; }
-        .mega-menu-inner { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); }
-        .mega-column { min-height: 270px; padding: 30px 30px 32px; border-right: 1px solid #e8edf5; background: #fff; }
-        .mega-column:last-child { border-right: 0; }
-        .mega-heading { display: flex; align-items: center; gap: 11px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid #edf1f7; color: #17243b; font-family: "Varela Round", sans-serif; font-size: 16px; font-weight: 600; }
-        .mega-heading i { width: 22px; color: #4d73be; font-size: 17px; }
-        .mega-column > a { display: block; position: relative; padding: 9px 0 9px 16px; color: #5d687b; font-size: 13.5px; font-weight: 600; text-decoration: none; transition: color .25s ease, padding .25s ease; }
-        .mega-column > a::before { content: ""; position: absolute; left: 0; top: 50%; width: 6px; height: 1px; background: #9eabc0; transform: translateY(-50%); transition: width .25s ease, background .25s ease; }
-        .mega-column > a:hover { color: #334a85; padding-left: 21px; }
-        .mega-column > a:hover::before { width: 12px; background: #4d73be; }
-
-        /* BMS DROPDOWN */
-        .bms-dropdown .bms-menu {
-            min-width: 190px;
-            margin-top: 0;
-            padding: 10px 0;
-            border: 1px solid #1f1f1f;
-            border-radius: 10px;
-            background: #000000;
-            box-shadow: 0 18px 45px rgba(0,0,0,.24);
-        }
-
-        .bms-dropdown .bms-menu .dropdown-item {
-            padding: 10px 18px;
-            color: #bdbdbd;
-            font-size: 13.5px;
-            font-weight: 600;
-            background: transparent;
-            transition: color .25s ease, padding-left .25s ease;
-        }
-
-        .bms-dropdown .bms-menu .dropdown-item:hover,
-        .bms-dropdown .bms-menu .dropdown-item:focus {
-            color: #ffffff;
-            background: transparent;
-            padding-left: 22px;
-        }
-
-        @media (min-width: 992px) {
-            /* BMS dropdown: open on hover and stay open while hovering menu */
-            .bms-dropdown > .bms-menu {
-                display: block;
-                opacity: 0;
-                visibility: hidden;
-                pointer-events: none;
-                transform: translateY(6px);
-                transition: opacity .22s ease, visibility .22s ease, transform .22s ease;
-            }
-
-            .bms-dropdown:hover > .bms-menu,
-            .bms-dropdown > .bms-menu:hover,
-            .bms-dropdown > .bms-menu.show {
-                opacity: 1;
-                visibility: visible;
-                pointer-events: auto;
-                transform: translateY(0);
-            }
-
-            .solution-dropdown > .mega-menu {
-                opacity: 0;
-                visibility: hidden;
-                pointer-events: none;
-                display: block;
-                transition: opacity .22s ease, visibility .22s ease;
-            }
-
-            .solution-dropdown:hover > .mega-menu,
-            .solution-dropdown.mega-open > .mega-menu,
-            .solution-dropdown > .mega-menu.show {
-                opacity: 1;
-                visibility: visible;
-                pointer-events: auto;
-            }
-
-            /* Invisible hover bridge between Solutions and mega menu */
-            .solution-dropdown > .mega-menu::before {
-                content: "";
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: -18px;
-                height: 18px;
-                background: transparent;
-            }
-        }
-
-        @media (max-width: 991px) {
-            .main-navbar { background: #fff; padding: 8px 0; }
-            .navbar-logo { height: 55px; }
-            #logoWhite { display: none !important; }
-            #logoDark { display: block !important; }
-            .main-navbar .navbar-toggler { color: #17243b; border-color: rgba(23,36,59,.2); }
-            .main-navbar .nav-link { color: #17243b; padding: 12px 7px !important; margin: 1px 0; }
-            .navbar-collapse { max-height: calc(100vh - 76px); overflow-y: auto; margin-top: 10px; padding: 15px 10px 22px; border-top: 1px solid #edf0f5; background: #fff; }
-            .mega-menu { position: static !important; transform: none !important; width: 100%; margin: 0 !important; box-shadow: none; border-left: 2px solid #334a85; border-radius: 0; overflow: visible; }
-            .mega-menu-inner { grid-template-columns: 1fr; }
-            .mega-column { min-height: 0; padding: 18px 18px 14px; border-right: 0; border-bottom: 1px solid #edf0f5; }
-            .mega-column:last-child { border-bottom: 0; }
-            .mega-heading { margin-bottom: 8px; padding-bottom: 10px; }
-            .mega-column > a { padding-top: 7px; padding-bottom: 7px; }
-        }
-
-
-        /* ABOUT PAGE: keep Index navbar in permanent white/scrolled state */
-       
-        .main-navbar {
-            background: #fff;
-            padding: 8px 0;
-            box-shadow: 0 8px 35px rgba(14,29,57,.08);
-        }
-        .main-navbar .navbar-logo { height: 58px; }
-        .main-navbar .nav-link { color: #16243b; }
-        #logoWhite { display: none !important; }
-        #logoDark { display: block !important; }
-        .main-navbar .nav-contact {
-            background: #334a85;
-            border-color: #334a85;
-            color: #fff !important;
-        }
-        .main-navbar .nav-contact:hover {
-            background: #17243b;
-            border-color: #17243b;
-            color: #fff !important;
-        }
-        .main-navbar .nav-link.active { color: #4d73be; }
-        .main-navbar .nav-link.active:not(.nav-contact)::after {
-            width: calc(100% - 24px);
-        }
-
-
-        
-/* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
-.main-navbar #solutionsDropdown,
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown:active,
-.main-navbar #solutionsDropdown.show {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown.show {
-    color: #4d73be !important;
-}
-/* =========================================================
-   NAVBAR — MONOCHROME BLACK THEME
-   Keep existing layout + mega-menu behavior unchanged
-========================================================= */
-
-/* Main nav links */
-.main-navbar .nav-link,
-.main-navbar.scrolled .nav-link,
-.main-navbar.navbar-shrink .nav-link {
-    color: #1a1a1a !important;
-}
-
-/* Normal */
-.main-navbar .nav-link {
-    font-weight: 600;
-}
-
-/* Hover / focus — black only */
-.main-navbar .nav-link:hover,
-.main-navbar .nav-link:focus {
-    color: #000000 !important;
-}
-
-/* Active — black + stronger weight */
-.main-navbar .nav-link.active,
-.main-navbar .nav-link.show,
-.main-navbar #solutionsDropdown.show {
-    color: #000000 !important;
-    font-weight: 800 !important;
-}
-
-/* No colored underline */
-.main-navbar .nav-link:not(.nav-contact):not(.dropdown-toggle)::after {
-    background: #000000 !important;
-}
-
-/* Solutions: text only, no box */
-.main-navbar #solutionsDropdown,
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown:active,
-.main-navbar #solutionsDropdown.show {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-    color: #000000 !important;
-}
-
-/* Contact: monochrome */
-.main-navbar .nav-contact,
-.main-navbar.scrolled .nav-contact {
-    background: #000000 !important;
-    border-color: #000000 !important;
-    color: #ffffff !important;
-}
-
-.main-navbar .nav-contact:hover,
-.main-navbar .nav-contact:focus,
-.main-navbar.scrolled .nav-contact:hover {
-    background: #222222 !important;
-    border-color: #222222 !important;
-    color: #ffffff !important;
-}
-
-/* =========================================================
-   MEGA MENU — BLACK
-========================================================= */
-
-.main-navbar .mega-menu {
-    background: #000000 !important;
-    border: 1px solid #1f1f1f !important;
-    box-shadow: 0 24px 70px rgba(0,0,0,.28) !important;
-}
-
-/* Columns */
-.main-navbar .mega-column {
-    background: #000000 !important;
-    border-right-color: #242424 !important;
-}
-
-.main-navbar .mega-column:last-child {
-    border-right-color: transparent !important;
-}
-
-/* Headings */
-.main-navbar .mega-heading {
-    color: #ffffff !important;
-    border-bottom-color: #2a2a2a !important;
-}
-
-/* Icons — monochrome */
-.main-navbar .mega-heading i {
-    color: #ffffff !important;
-}
-
-/* Menu links */
-.main-navbar .mega-column > a {
-    color: #bdbdbd !important;
-}
-
-/* Small line before links */
-.main-navbar .mega-column > a::before {
-    background: #666666 !important;
-}
-
-/* Hover inside mega menu */
-.main-navbar .mega-column > a:hover,
-.main-navbar .mega-column > a:focus {
-    color: #ffffff !important;
-}
-
-.main-navbar .mega-column > a:hover::before {
-    background: #ffffff !important;
-}
-
-/* Mobile */
-@media (max-width: 991px) {
-    .main-navbar .nav-link {
-        color: #1a1a1a !important;
-    }
-
-    .main-navbar .mega-menu {
-        background: #000000 !important;
-        border-left-color: #000000 !important;
-    }
-
-    .main-navbar .mega-column {
-        background: #000000 !important;
-        border-bottom-color: #242424 !important;
-    }
-}
-.main-navbar .mega-heading {
-    gap: 0 !important;
-}
-</style>
-
-<!-- JAVASCRIPT -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const nav = document.getElementById("mainNav");
-    const white = document.getElementById("logoWhite");
-    const dark = document.getElementById("logoDark");
-
-    if (nav) nav.classList.add("scrolled", "navbar-shrink");
-    if (white) white.style.display = "none";
-    if (dark) dark.style.display = "block";
-});
-</script>
-
-<!-- END MODULE — NAVBAR -->
-
-<!-- =========================================================
-     MODULE — PRODUCT CATALOGUE PAGE
-========================================================= -->
-
-<!-- =============================================================
-     PAGE
-============================================================= -->
-
-<main class="power-products-page">
-
-
-
     <!-- =========================================================
-         INTRO
+         MODULE 02 — HERO
     ========================================================== -->
-
-    <section class="power-products-intro">
-
-
-        <div class="power-products-intro-inner">
-
-
+    <header class="solar-hero">
+        <div class="solar-container solar-hero-inner">
             <div>
-
-
-                <span class="power-products-eyebrow">
-
-                    Power Products
-
-                </span>
-
-
-                <h1>
-
-                    Engineering products
-                    for
-
-                    <span>
-                        dependable power.
-                    </span>
-
-                </h1>
-
-
+                <div class="hero-badge"><i class="fa-solid fa-sun"></i> Solar EPC • Rooftop • Ground Mounted</div>
+                <h1>Power Your Future.<span>With The Sun.</span></h1>
+                <p class="hero-copy">Alpha Numeric Innovations engineers solar systems around your actual load, roof or land, grid availability and operational needs — from efficient On-Grid rooftops to battery-backed Off-Grid systems and large Ground-Mounted plants.</p>
+                <div class="hero-actions">
+                    <a href="#solar-systems" class="btn-solar">Explore Solar Systems <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="contact.html" class="btn-outline-light-custom">Book a Site Review</a>
+                </div>
             </div>
 
-
-
-            <p>
-
-                Explore our complete range of control panels,
-                panel boards, transformers, switchgear and
-                intelligent controllers. Select a product from
-                the catalogue to view its complete image gallery.
-
-            </p>
-
-
+            <div class="hero-enquiry">
+                <small>Engineer-Led Solar Review</small>
+                <h3>Tell us about your site.</h3>
+                <div class="hero-field"><input type="text" placeholder="Name"></div>
+                <div class="hero-field"><input type="tel" placeholder="Phone number"></div>
+                <div class="hero-field">
+                    <select>
+                        <option selected>Choose solar system</option>
+                        <option>On-Grid Solar</option>
+                        <option>Off-Grid Solar</option>
+                        <option>Ground-Mounted Solar</option>
+                    </select>
+                </div>
+                <div class="hero-field"><input type="text" placeholder="Monthly bill / connected load"></div>
+                <button class="hero-submit" type="button">Request Consultation</button>
+                <p>Site feasibility, system direction and next-step recommendation can be discussed after reviewing your requirement.</p>
+            </div>
         </div>
+    </header>
 
-
+    <!-- =========================================================
+         MODULE 03 — TRUST STRIP
+    ========================================================== -->
+    <section class="trust-strip">
+        <div class="solar-container trust-grid">
+            <div class="trust-item"><span>01 / Engineering</span><strong>Site-Specific Design</strong></div>
+            <div class="trust-item"><span>02 / Execution</span><strong>Complete EPC Delivery</strong></div>
+            <div class="trust-item"><span>03 / Intelligence</span><strong>Monitoring & Performance</strong></div>
+            <div class="trust-item"><span>04 / Support</span><strong>Commissioning & O&amp;M</strong></div>
+        </div>
     </section>
 
-
+    <!-- =========================================================
+         MODULE 04 — INTRO
+    ========================================================== -->
+    <section class="solar-intro">
+        <div class="solar-container solar-intro-grid">
+            <div>
+                <span class="section-kicker">Solar Energy Solutions</span>
+                <h2 class="section-title">The right solar system starts with <span>the right engineering choice.</span></h2>
+            </div>
+            <div class="solar-intro-copy section-copy">
+                <p>Not every site needs the same solar configuration. Grid quality, daytime consumption, backup requirement, available roof or land, tariff structure and future expansion all influence the right solution.</p>
+                <p>We simplify that decision into three core solar pathways and engineer each system for safe, practical and long-term operation.</p>
+                <div class="intro-points">
+                    <div class="intro-point">On-Grid — Savings First</div>
+                    <div class="intro-point">Off-Grid — Energy Independence</div>
+                    <div class="intro-point">Ground-Mounted — Scale & Output</div>
+                    <div class="intro-point">EPC — Design to Commissioning</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- =========================================================
-         CATALOGUE
+         MODULE 05 — THREE SOLAR SYSTEMS
     ========================================================== -->
+    <section class="systems-section" id="solar-systems">
+        <div class="solar-container">
+            <div class="systems-head">
+                <div>
+                    <span class="section-kicker">Choose Your Solar Path</span>
+                    <h2 class="section-title">Three systems. <span>Three different energy goals.</span></h2>
+                </div>
+                <p class="section-copy">Compare the purpose of each system first. Then we engineer capacity, components, layout and controls around your site.</p>
+            </div>
 
-    <section class="power-catalogue">
+            <div class="systems-grid">
+                <article class="system-card on-grid">
+                    <div class="system-card-image"></div>
+                    <div class="system-card-content">
+                        <span class="system-number">01 / ON-GRID</span>
+                        <h3>On-Grid Solar</h3>
+                        <p>Grid-connected solar designed primarily to reduce daytime electricity consumption and enable energy exchange with the utility network where applicable.</p>
+                        <div class="system-tags"><span>Rooftop</span><span>Grid-Tied</span><span>Net Metering Ready</span></div>
+                        <a class="system-link" href="#on-grid">Explore On-Grid <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
 
+                <article class="system-card off-grid">
+                    <div class="system-card-image"></div>
+                    <div class="system-card-content">
+                        <span class="system-number">02 / OFF-GRID</span>
+                        <h3>Off-Grid Solar</h3>
+                        <p>Battery-backed solar for sites where power availability, backup continuity or independence from the utility grid is more important than grid export.</p>
+                        <div class="system-tags"><span>Battery Storage</span><span>Backup</span><span>Independent</span></div>
+                        <a class="system-link" href="#off-grid">Explore Off-Grid <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
 
+                <article class="system-card ground">
+                    <div class="system-card-image"></div>
+                    <div class="system-card-content">
+                        <span class="system-number">03 / GROUND-MOUNTED</span>
+                        <h3>Ground-Mounted Solar</h3>
+                        <p>High-capacity solar plants engineered on open land for industries, campuses, captive power requirements and utility-scale or MW-class projects.</p>
+                        <div class="system-tags"><span>C&amp;I</span><span>MW Scale</span><span>Open Land</span></div>
+                        <a class="system-link" href="#ground-mounted">Explore Ground-Mounted <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         MODULE 06 — ON-GRID DETAIL
+    ========================================================== -->
+    <section class="solution-detail" id="on-grid">
+        <div class="solar-container solution-detail-grid">
+            <div class="detail-visual on"><span class="detail-badge">01 / ON-GRID SOLAR</span></div>
+            <div class="detail-content">
+                <span class="section-kicker">Grid Connected Solar</span>
+                <h2 class="section-title">Use solar first. <span>Use the grid when needed.</span></h2>
+                <p>On-Grid solar works together with the utility grid. Solar generation serves the connected loads during the day, while grid power supports demand whenever solar generation is insufficient. Where regulations permit, surplus energy can be exported through the applicable metering arrangement.</p>
+                <div class="detail-feature-list">
+                    <div class="detail-feature"><span>01</span><strong>Designed for electricity-bill reduction and daytime load offset</strong></div>
+                    <div class="detail-feature"><span>02</span><strong>No mandatory battery bank, keeping the architecture simpler</strong></div>
+                    <div class="detail-feature"><span>03</span><strong>Suitable for homes, offices, institutions and industrial rooftops</strong></div>
+                    <div class="detail-feature"><span>04</span><strong>Can include remote generation and inverter monitoring</strong></div>
+                </div>
+                <div class="best-for"><strong>Best for:</strong> Sites with reliable grid availability and a strong objective to reduce electricity cost through daytime solar generation.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         MODULE 07 — OFF-GRID DETAIL
+    ========================================================== -->
+    <section class="solution-detail reverse" id="off-grid">
+        <div class="solar-container solution-detail-grid">
+            <div class="detail-visual off"><span class="detail-badge">02 / OFF-GRID SOLAR</span></div>
+            <div class="detail-content">
+                <span class="section-kicker">Independent Solar Power</span>
+                <h2 class="section-title">Generate. Store. <span>Use power when the grid cannot.</span></h2>
+                <p>Off-Grid solar combines solar generation with battery storage so the site can operate independently of the utility network. System sizing must consider load profile, autonomy hours, battery capacity and seasonal solar availability.</p>
+                <div class="detail-feature-list">
+                    <div class="detail-feature"><span>01</span><strong>Battery storage for night-time use and backup continuity</strong></div>
+                    <div class="detail-feature"><span>02</span><strong>Useful for remote locations and unreliable-grid environments</strong></div>
+                    <div class="detail-feature"><span>03</span><strong>Engineered around essential loads and required backup duration</strong></div>
+                    <div class="detail-feature"><span>04</span><strong>Can support hybrid power architectures with additional sources</strong></div>
+                </div>
+                <div class="best-for"><strong>Best for:</strong> Remote sites, farms, facilities with frequent outages, critical loads and locations where dependable backup is the primary requirement.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         MODULE 08 — GROUND-MOUNTED DETAIL
+    ========================================================== -->
+    <section class="solution-detail" id="ground-mounted">
+        <div class="solar-container solution-detail-grid">
+            <div class="detail-visual ground"><span class="detail-badge">03 / GROUND-MOUNTED SOLAR</span></div>
+            <div class="detail-content">
+                <span class="section-kicker">Large-Scale Solar Plants</span>
+                <h2 class="section-title">When the project needs <span>space, scale and serious output.</span></h2>
+                <p>Ground-Mounted solar uses available land to build higher-capacity PV plants with engineered row spacing, tilt, access roads, evacuation planning, protection, monitoring and long-term maintainability in mind.</p>
+                <div class="detail-feature-list">
+                    <div class="detail-feature"><span>01</span><strong>Suitable for industrial captive use, campuses and MW-scale plants</strong></div>
+                    <div class="detail-feature"><span>02</span><strong>Layout optimized for land geometry, shading and energy yield</strong></div>
+                    <div class="detail-feature"><span>03</span><strong>Electrical evacuation, protection and SCADA options as required</strong></div>
+                    <div class="detail-feature"><span>04</span><strong>Designed for service access, cleaning and long-term O&amp;M</strong></div>
+                </div>
+                <div class="best-for"><strong>Best for:</strong> Industries, large institutions, developers and infrastructure projects with suitable land and higher energy demand.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         MODULE 09 — COMPARISON
+    ========================================================== -->
+    <section class="comparison-section">
+        <div class="solar-container">
+            <div class="comparison-head">
+                <span class="section-kicker">Quick Comparison</span>
+                <h2 class="section-title">Which solar system <span>fits your site?</span></h2>
+            </div>
+
+            <div class="comparison-table-wrap">
+                <table class="comparison-table">
+                    <thead>
+                        <tr><th>Decision Factor</th><th>On-Grid</th><th>Off-Grid</th><th>Ground-Mounted</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Main Objective</td><td>Reduce grid electricity consumption and cost</td><td>Backup and independent power availability</td><td>Higher-capacity solar generation at scale</td></tr>
+                        <tr><td>Grid Connection</td><td>Required</td><td>Not required for core operation</td><td>Depends on captive / grid-connected project model</td></tr>
+                        <tr><td>Battery Storage</td><td>Usually not required</td><td>Core part of the system</td><td>Optional depending on project requirement</td></tr>
+                        <tr><td>Typical Site</td><td>Homes, offices, commercial & industrial rooftops</td><td>Remote / outage-prone sites</td><td>Open land, industries, campuses, MW plants</td></tr>
+                        <tr><td>Engineering Focus</td><td>Roof, load profile, inverter, metering</td><td>Load, autonomy, battery sizing, controls</td><td>Land, layout, yield, evacuation, protection</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         MODULE 10 — EPC PROCESS
+    ========================================================== -->
+    <section class="process-section">
+        <div class="solar-container">
+            <div class="process-head">
+                <div>
+                    <span class="section-kicker">End-to-End Solar EPC</span>
+                    <h2 class="section-title">From site review to <span>live solar.</span></h2>
+                </div>
+                <p class="section-copy">A solar plant performs well when engineering, procurement, execution and commissioning are treated as one connected process.</p>
+            </div>
+
+            <div class="process-grid">
+                <article class="process-card"><span>01 / REVIEW</span><h3>Feasibility & Site Survey</h3><p>We review electricity consumption, roof or land, shadows, access, structure and available electrical infrastructure.</p></article>
+                <article class="process-card"><span>02 / DESIGN</span><h3>Engineering & System Sizing</h3><p>Capacity, layout, inverter architecture, structures, protection and expected generation are engineered around the site.</p></article>
+                <article class="process-card"><span>03 / BUILD</span><h3>Procurement & EPC Execution</h3><p>Equipment, mounting, electrical works, safety systems and integration are executed through a coordinated EPC workflow.</p></article>
+                <article class="process-card"><span>04 / OPERATE</span><h3>Testing, Commissioning & Monitoring</h3><p>The system is tested, energized, documented and handed over with monitoring and service support options.</p></article>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         MODULE 11 — APPLICATIONS
+    ========================================================== -->
+    <section class="applications-section">
+        <div class="solar-container">
+            <span class="section-kicker">Where We Apply Solar</span>
+            <h2 class="section-title">Solar for every <span>serious energy user.</span></h2>
+            <div class="applications-grid">
+                <article class="application-card"><i class="fa-solid fa-house"></i><h3>Residential</h3><p>Rooftop solar for independent homes, villas and residential properties.</p></article>
+                <article class="application-card"><i class="fa-solid fa-building"></i><h3>Commercial</h3><p>Solar systems for offices, retail, hotels, hospitals and institutional buildings.</p></article>
+                <article class="application-card"><i class="fa-solid fa-industry"></i><h3>Industrial</h3><p>High-consumption rooftop and ground-mounted plants for factories and warehouses.</p></article>
+                <article class="application-card"><i class="fa-solid fa-solar-panel"></i><h3>Large Solar Plants</h3><p>Engineered ground-mounted installations for captive, developer and infrastructure applications.</p></article>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         MODULE 12 — WHY ALPHA NUMERIC
+    ========================================================== -->
+    <section class="why-section">
+        <div class="solar-container why-grid">
+            <div class="why-visual"></div>
+            <div>
+                <span class="section-kicker">Why Alpha Numeric</span>
+                <h2 class="section-title">More than panels. <span>A complete engineered energy system.</span></h2>
+                <div class="why-list">
+                    <div class="why-item"><span>01</span><div><strong>Engineering-Led Design</strong><p>System decisions are based on load, site conditions, electrical architecture and expected operation.</p></div></div>
+                    <div class="why-item"><span>02</span><div><strong>Complete EPC Capability</strong><p>Design, supply, installation, testing and commissioning are coordinated as one delivery scope.</p></div></div>
+                    <div class="why-item"><span>03</span><div><strong>Electrical & Automation Integration</strong><p>Solar can be aligned with existing power systems, monitoring, controls and broader energy infrastructure.</p></div></div>
+                    <div class="why-item"><span>04</span><div><strong>Lifecycle Thinking</strong><p>Access, safety, monitoring, maintainability and long-term performance are considered during engineering.</p></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         MODULE 13 — CTA
+    ========================================================== -->
+    <section class="solar-cta">
+        <div class="solar-container solar-cta-inner">
+            <div>
+                <span class="section-kicker">Start Your Solar Project</span>
+                <h2>Tell us your roof, land or load. <span>We’ll define the right solar path.</span></h2>
+            </div>
+            <div class="cta-side">
+                <p>Whether your priority is bill savings, power backup or a large ground-mounted plant, start with a site-specific engineering review.</p>
+                <a href="contact.html" class="btn-solar">Discuss Your Solar Project <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         MODULE 14 — FOOTER — LOCKED TO ABOUT PAGE
+    ========================================================== -->
+<footer class="corp-footer" aria-label="Website footer">
+
+    <div class="corp-footer-container">
 
         <!-- =====================================================
-             LEFT
+             PRIMARY CTA
         ====================================================== -->
+        <section class="corp-footer-cta" aria-labelledby="corp-footer-title">
 
-        <aside class="catalogue-sidebar">
+            <div class="corp-footer-cta-copy">
 
+                <p class="corp-footer-kicker">
+                    <span>01</span>
+                    <i></i>
+                    Start a project
+                </p>
 
-            <div class="catalogue-sidebar-inner">
-
-
-                <div class="catalogue-sidebar-header">
-
-                    <span>
-                        Product Catalogue
-                    </span>
-
-                    <h2>
-                        Power Products
-                    </h2>
-
-                </div>
-
-
-
-                <div id="categoryList">
-
-                    <!-- AUTO GENERATED -->
-
-                </div>
-
+                <h2 id="corp-footer-title">
+                    Let’s engineer
+                    <span>what comes next.</span>
+                </h2>
 
             </div>
 
+            <div class="corp-footer-cta-action">
 
-        </aside>
+                <p>
+                    Intelligent engineering for power, energy,
+                    automation and future-ready systems.
+                </p>
 
-
-
-        <!-- =====================================================
-             RIGHT
-        ====================================================== -->
-
-        <section class="catalogue-display">
-
-
-
-            <!-- HEADER -->
-
-            <div class="catalogue-display-header">
-
-
-                <div
-                    class="catalogue-breadcrumb"
-                    id="displayBreadcrumb">
-
-                    POWER PRODUCTS / CONTROL PANELS
-
-                </div>
-
-
-                <div
-                    class="catalogue-product-index"
-                    id="displayProductIndex">
-
-                    01 / 10
-
-                </div>
-
+                <a href="contact.html" class="corp-footer-button">
+                    <span>Start a conversation</span>
+                    <i aria-hidden="true">↗</i>
+                </a>
 
             </div>
-
-
-
-            <!-- =================================================
-                 MAIN IMAGE
-            ================================================== -->
-
-            <div
-                class="product-visual"
-                id="productVisual">
-
-
-                <img
-                    src="assets/img/controlpanels/PCC Panels.png"
-                    alt="PCC Panel"
-                    class="product-visual-image"
-                    id="displayImage">
-
-
-
-                <!-- IMAGE COUNTER -->
-
-                <div class="gallery-image-counter">
-
-                    <span id="currentImageNumber">
-                        01
-                    </span>
-
-                    <span>/</span>
-
-                    <span id="totalImageNumber">
-                        06
-                    </span>
-
-                </div>
-
-
-
-                <!-- CONTENT -->
-
-                <div class="product-visual-content">
-
-
-                    <span
-                        class="display-category"
-                        id="displayCategory">
-
-                        Control Panels
-
-                    </span>
-
-
-                    <h2
-                        class="display-title"
-                        id="displayTitle">
-
-                        PCC Panel
-
-                    </h2>
-
-
-                    <p
-                        class="display-description"
-                        id="displayDescription">
-
-                        Power Control Centre designed for reliable
-                        electrical distribution, protection and
-                        centralized control across industrial
-                        electrical systems.
-
-                    </p>
-
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- =================================================
-                 GALLERY
-            ================================================== -->
-
-            <div class="product-gallery-wrapper">
-
-
-                <div class="gallery-heading">
-
-
-                    <div>
-
-                        <span class="gallery-heading-label">
-
-                            Product Gallery
-
-                        </span>
-
-
-                        <strong id="galleryProductName">
-
-                            PCC Panel
-
-                        </strong>
-
-                    </div>
-
-
-
-                    <div class="gallery-controls">
-
-
-                        <button
-                            class="gallery-nav"
-                            id="galleryPrevious"
-                            type="button"
-                            aria-label="Previous image">
-
-                            <i class="bi bi-arrow-left"></i>
-
-                        </button>
-
-
-                        <button
-                            class="gallery-nav"
-                            id="galleryNext"
-                            type="button"
-                            aria-label="Next image">
-
-                            <i class="bi bi-arrow-right"></i>
-
-                        </button>
-
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- THUMBNAILS -->
-
-                <div
-                    class="product-thumbnails"
-                    id="productThumbnails">
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- =================================================
-                 PRODUCT INFO
-            ================================================== -->
-
-            <div class="product-info-strip">
-
-
-                <div class="product-info-item">
-
-                    <span class="product-info-label">
-
-                        Category
-
-                    </span>
-
-                    <div
-                        class="product-info-value"
-                        id="infoCategory">
-
-                        Control Panels
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="product-info-item">
-
-                    <span class="product-info-label">
-
-                        Application
-
-                    </span>
-
-                    <div
-                        class="product-info-value"
-                        id="infoApplication">
-
-                        Industrial Power Distribution
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="product-info-item">
-
-                    <span class="product-info-label">
-
-                        Engineering Focus
-
-                    </span>
-
-                    <div
-                        class="product-info-value"
-                        id="infoFocus">
-
-                        Distribution & Protection
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
 
         </section>
 
 
-    </section>
+        <!-- =====================================================
+             BRAND + NAVIGATION
+        ====================================================== -->
+        <div class="corp-footer-main">
+
+            <!-- BRAND -->
+            <section class="corp-footer-brand" aria-label="Alpha Numeric">
+
+                <a href="index.html" class="corp-footer-logo" aria-label="Alpha Numeric home">
+                    <img src="assets/img/b-alpha.png" alt="Alpha Numeric">
+                </a>
+
+                <p>
+                    Technology-driven engineering solutions
+                    designed for dependable performance,
+                    meaningful progress and long-term value.
+                </p>
+
+                <div class="corp-footer-status">
+                    <span></span>
+                    Engineering tomorrow
+                </div>
+
+            </section>
 
 
-</main>
+            <!-- NAVIGATION -->
+            <nav class="corp-footer-nav" aria-label="Footer navigation">
+
+                <!-- COMPANY -->
+                <div class="corp-footer-column">
+
+                    <div class="corp-footer-column-heading">
+                        <span>01</span>
+                        <h3>Company</h3>
+                    </div>
+
+                    <ul>
+                        <li><a href="index.html"><span>Home</span><i>↗</i></a></li>
+                        <li><a href="about.html"><span>About</span><i>↗</i></a></li>
+                        <li><a href="contact.html"><span>Contact</span><i>↗</i></a></li>
+                    </ul>
+
+                </div>
+
+
+                <!-- ENERGY -->
+                <div class="corp-footer-column">
+
+                    <div class="corp-footer-column-heading">
+                        <span>02</span>
+                        <h3>Energy</h3>
+                    </div>
+
+                    <ul>
+                        <li><a href="solar-energy.html"><span>Solar Energy</span><i>↗</i></a></li>
+                        <li><a href="wind-energy.html"><span>Wind Energy</span><i>↗</i></a></li>
+                        <li><a href="biomass-energy.html"><span>Biomass Energy</span><i>↗</i></a></li>
+                        <li><a href="hydel-energy.html"><span>Hydel Energy</span><i>↗</i></a></li>
+                    </ul>
+
+                </div>
+
+
+                <!-- POWER -->
+                <div class="corp-footer-column">
+
+                    <div class="corp-footer-column-heading">
+                        <span>03</span>
+                        <h3>Power</h3>
+                    </div>
+
+                    <ul>
+                        <li><a href="transmission.html"><span>Transmission</span><i>↗</i></a></li>
+                        <li><a href="distribution.html"><span>Distribution</span><i>↗</i></a></li>
+                        <li><a href="control-panels.html"><span>Control Panels</span><i>↗</i></a></li>
+                        <li><a href="panel-boards.html"><span>Panel Boards</span><i>↗</i></a></li>
+                    </ul>
+
+                </div>
+
+
+                <!-- AUTOMATION -->
+                <div class="corp-footer-column">
+
+                    <div class="corp-footer-column-heading">
+                        <span>04</span>
+                        <h3>Automation</h3>
+                    </div>
+
+                    <ul>
+                        <li><a href="home-automation.html"><span>Home Automation</span><i>↗</i></a></li>
+                        <li><a href="commercial-automation.html"><span>Commercial</span><i>↗</i></a></li>
+                        <li><a href="industrial-automation.html"><span>Industrial</span><i>↗</i></a></li>
+                        <li><a href="hospital-automation.html"><span>Hospital</span><i>↗</i></a></li>
+                        <li><a href="hotel-automation.html"><span>Hotel</span><i>↗</i></a></li>
+                    </ul>
+
+                </div>
+
+
+                <!-- R&D / PRODUCTS -->
+                <div class="corp-footer-column">
+
+                    <div class="corp-footer-column-heading">
+                        <span>05</span>
+                        <h3>R&amp;D / Products</h3>
+                    </div>
+
+                    <ul>
+                        <li><a href="smart-pole-r&d.html"><span>Smart Pole</span><i>↗</i></a></li>
+                        <li><a href="smart-bollard-r&d.html"><span>Smart Bollard</span><i>↗</i></a></li>
+                        <li><a href="power.html"><span>Power Products</span><i>↗</i></a></li>
+                    </ul>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+
+        <!-- =====================================================
+             CONTACT BAND
+        ====================================================== -->
+        <section class="corp-footer-contact" aria-label="Contact information">
+
+            <div class="corp-footer-contact-heading">
+                <span>Contact</span>
+                <h3>Let’s connect.</h3>
+            </div>
+
+            <a href="tel:+919000000000" class="corp-footer-contact-item">
+                <span>01 / Phone</span>
+                <strong>+91 90000 00000</strong>
+                <i aria-hidden="true">↗</i>
+            </a>
+
+            <a href="mailto:info@alphanumeric.com" class="corp-footer-contact-item">
+                <span>02 / Email</span>
+                <strong>info@alphanumeric.com</strong>
+                <i aria-hidden="true">↗</i>
+            </a>
+
+            <div class="corp-footer-contact-item">
+                <span>03 / Location</span>
+                <strong>Madhapur, Hyderabad</strong>
+                <i aria-hidden="true">—</i>
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             BOTTOM BAR
+        ====================================================== -->
+        <div class="corp-footer-bottom">
+
+            <p>
+                © <span id="corpFooterYear"></span> Alpha Numeric.
+                All rights reserved.
+            </p>
+
+            <div class="corp-footer-disciplines" aria-label="Core disciplines">
+                <span>Power</span>
+                <i></i>
+                <span>Energy</span>
+                <i></i>
+                <span>Automation</span>
+                <i></i>
+                <span>R&amp;D</span>
+            </div>
+
+            <div class="corp-footer-bottom-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+
+                <a href="#page-top" class="corp-footer-top-link">
+                    Back to top
+                    <span aria-hidden="true">↑</span>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
 
 
 
-<!-- =============================================================
-     BOOTSTRAP JS
-============================================================= -->
+<!-- CSS -->
+<style>
 
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>
+/* =========================================================
+   CORPORATE WHITE FOOTER — DESIGN SYSTEM
+========================================================== */
+
+.corp-footer {
+    --footer-bg: #f5f5f1;
+    --footer-white: #ffffff;
+    --footer-ink: #102729;
+    --footer-text: #4f6062;
+    --footer-muted: #7a8889;
+    --footer-line: rgba(16, 39, 41, 0.16);
+    --footer-line-light: rgba(16, 39, 41, 0.09);
+    --footer-accent: #ee5a29;
+
+    position: relative;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    color: var(--footer-ink);
+    background: var(--footer-bg);
+
+    font-family:
+        "Varela Round",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+}
+
+.corp-footer::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--footer-accent) 0 12%,
+            var(--footer-ink) 12% 100%
+        );
+}
+
+.corp-footer *,
+.corp-footer *::before,
+.corp-footer *::after {
+    box-sizing: border-box;
+
+    /* Intentionally sharp: no curved or toy-like UI */
+    border-radius: 0 !important;
+}
+
+.corp-footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.corp-footer-container {
+    width: min(calc(100% - 64px), 1500px);
+
+    margin-inline: auto;
+}
 
 
+/* =========================================================
+   CTA
+========================================================== */
 
+.corp-footer-cta {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(300px, 0.55fr);
+    align-items: end;
+    gap: clamp(55px, 8vw, 140px);
+
+    padding: clamp(80px, 9vw, 140px) 0 clamp(64px, 7vw, 105px);
+}
+
+.corp-footer-kicker {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    margin: 0 0 26px;
+
+    color: var(--footer-muted);
+
+    font-size: 9px;
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+.corp-footer-kicker span {
+    color: var(--footer-accent);
+}
+
+.corp-footer-kicker i {
+    width: 45px;
+    height: 1px;
+
+    background: var(--footer-line);
+}
+
+.corp-footer-cta h2 {
+    max-width: 970px;
+
+    margin: 0;
+
+    color: var(--footer-ink);
+
+    font-size: clamp(57px, 7.2vw, 112px);
+    font-weight: 400;
+    line-height: 0.91;
+    letter-spacing: -0.065em;
+}
+
+.corp-footer-cta h2 span {
+    display: block;
+
+    color: rgba(16, 39, 41, 0.35);
+}
+
+.corp-footer-cta-action {
+    padding-bottom: 6px;
+}
+
+.corp-footer-cta-action > p {
+    margin: 0 0 29px;
+
+    color: var(--footer-text);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.corp-footer-button {
+    position: relative;
+    isolation: isolate;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+
+    width: 100%;
+    min-height: 60px;
+
+    padding: 0 19px 0 22px;
+    overflow: hidden;
+
+    border: 1px solid var(--footer-ink);
+
+    color: #ffffff !important;
+    background: var(--footer-ink);
+
+    font-size: 9px;
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+
+    transition:
+        color 0.35s ease,
+        background-color 0.35s ease;
+}
+
+.corp-footer-button::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 4px;
+
+    background: var(--footer-accent);
+
+    transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.corp-footer-button i {
+    font-size: 18px;
+    font-style: normal;
+
+    transition: transform 0.3s ease;
+}
+
+.corp-footer-button:hover::before {
+    width: 100%;
+}
+
+.corp-footer-button:hover i {
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   BRAND + NAVIGATION STRUCTURE
+========================================================== */
+
+.corp-footer-main {
+    display: grid;
+    grid-template-columns: minmax(265px, 0.72fr) minmax(0, 2.28fr);
+
+    border-top: 1px solid var(--footer-line);
+    border-bottom: 1px solid var(--footer-line);
+}
+
+.corp-footer-brand {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    padding: clamp(38px, 4vw, 62px) clamp(28px, 4vw, 58px) clamp(38px, 4vw, 62px) 0;
+
+    border-right: 1px solid var(--footer-line);
+}
+
+.corp-footer-logo {
+    align-self: flex-start;
+}
+
+.corp-footer-logo img {
+    display: block;
+
+    width: auto;
+    max-width: min(100%, 220px);
+    height: 78px;
+
+    object-fit: contain;
+}
+
+.corp-footer-brand > p {
+    max-width: 360px;
+
+    margin: 34px 0 50px;
+
+    color: var(--footer-text);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+.corp-footer-status {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    margin-top: auto;
+
+    color: var(--footer-muted);
+
+    font-size: 8px;
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+}
+
+.corp-footer-status span {
+    width: 19px;
+    height: 2px;
+
+    background: var(--footer-accent);
+}
+
+.corp-footer-nav {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    min-width: 0;
+}
+
+.corp-footer-column {
+    min-width: 0;
+
+    padding: clamp(38px, 3.5vw, 58px) clamp(20px, 2.6vw, 42px);
+
+    border-right: 1px solid var(--footer-line-light);
+}
+
+.corp-footer-column:last-child {
+    border-right: 0;
+}
+
+.corp-footer-column-heading {
+    margin-bottom: 29px;
+}
+
+.corp-footer-column-heading span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--footer-accent);
+
+    font-size: 8px;
+    letter-spacing: 0.14em;
+}
+
+.corp-footer-column-heading h3 {
+    margin: 0;
+
+    color: var(--footer-ink);
+
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    line-height: 1.4;
+
+    text-transform: uppercase;
+}
+
+.corp-footer-column ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.corp-footer-column li + li {
+    margin-top: 14px;
+}
+
+.corp-footer-column a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    color: var(--footer-text);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    font-size: 12.5px;
+    line-height: 1.4;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.corp-footer-column a i {
+    flex: 0 0 auto;
+
+    color: var(--footer-accent);
+
+    font-style: normal;
+
+    opacity: 0;
+    transform: translate(-4px, 4px);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.corp-footer-column a:hover {
+    color: var(--footer-ink);
+    transform: translateX(4px);
+}
+
+.corp-footer-column a:hover i {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+/* =========================================================
+   CONTACT BAND
+========================================================== */
+
+.corp-footer-contact {
+    display: grid;
+    grid-template-columns: minmax(210px, 0.72fr) repeat(3, minmax(0, 1fr));
+
+    border-bottom: 1px solid var(--footer-line);
+}
+
+.corp-footer-contact-heading,
+.corp-footer-contact-item {
+    min-width: 0;
+
+    padding: 32px clamp(20px, 3vw, 42px);
+
+    border-right: 1px solid var(--footer-line-light);
+}
+
+.corp-footer-contact-heading {
+    padding-left: 0;
+}
+
+.corp-footer-contact-item:last-child {
+    border-right: 0;
+}
+
+.corp-footer-contact-heading > span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--footer-accent);
+
+    font-size: 8px;
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+}
+
+.corp-footer-contact-heading h3 {
+    margin: 0;
+
+    color: var(--footer-ink);
+
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: -0.035em;
+}
+
+.corp-footer-contact-item {
+    position: relative;
+
+    display: block;
+}
+
+.corp-footer-contact-item > span,
+.corp-footer-contact-item > strong {
+    display: block;
+}
+
+.corp-footer-contact-item > span {
+    margin-bottom: 9px;
+
+    color: var(--footer-muted);
+
+    font-size: 8px;
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+}
+
+.corp-footer-contact-item > strong {
+    overflow-wrap: anywhere;
+
+    color: var(--footer-ink);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    font-size: 12.5px;
+    font-weight: 500;
+    line-height: 1.45;
+}
+
+.corp-footer-contact-item > i {
+    position: absolute;
+    top: 50%;
+    right: 24px;
+
+    color: var(--footer-accent);
+
+    font-size: 14px;
+    font-style: normal;
+
+    opacity: 0.62;
+    transform: translateY(-50%);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+a.corp-footer-contact-item:hover > i {
+    opacity: 1;
+    transform: translate(3px, calc(-50% - 3px));
+}
+
+
+/* =========================================================
+   BOTTOM BAR
+========================================================== */
+
+.corp-footer-bottom {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 28px;
+
+    min-height: 88px;
+}
+
+.corp-footer-bottom > p {
+    margin: 0;
+
+    color: var(--footer-muted);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    font-size: 10px;
+}
+
+.corp-footer-disciplines {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: rgba(16, 39, 41, 0.50);
+
+    font-size: 8px;
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+}
+
+.corp-footer-disciplines i {
+    width: 18px;
+    height: 1px;
+
+    background: var(--footer-line);
+}
+
+.corp-footer-bottom-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 21px;
+
+    color: var(--footer-muted);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    font-size: 10px;
+}
+
+.corp-footer-bottom-links > a {
+    transition: color 0.25s ease;
+}
+
+.corp-footer-bottom-links > a:hover {
+    color: var(--footer-ink);
+}
+
+.corp-footer-top-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding-left: 21px;
+
+    border-left: 1px solid var(--footer-line);
+
+    color: var(--footer-ink) !important;
+
+    font-family:
+        "Varela Round",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 8px;
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+.corp-footer-top-link span {
+    display: grid;
+    place-items: center;
+
+    width: 31px;
+    height: 31px;
+
+    border: 1px solid var(--footer-line);
+
+    color: var(--footer-accent);
+
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.corp-footer-top-link:hover span {
+    color: #ffffff;
+    background: var(--footer-ink);
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================== */
+
+.corp-footer a:focus-visible {
+    outline: 2px solid var(--footer-accent);
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — LAPTOP
+========================================================== */
+
+@media (max-width: 1250px) {
+
+    .corp-footer-main {
+        grid-template-columns: 1fr;
+    }
+
+    .corp-footer-brand {
+        display: grid;
+        grid-template-columns: 230px minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 42px;
+
+        padding: 38px 0;
+
+        border-right: 0;
+        border-bottom: 1px solid var(--footer-line);
+    }
+
+    .corp-footer-brand > p {
+        max-width: 650px;
+        margin: 0;
+    }
+
+    .corp-footer-status {
+        margin: 0;
+    }
+
+    .corp-footer-nav {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .corp-footer-column:first-child {
+        padding-left: 0;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================== */
+
+@media (max-width: 960px) {
+
+    .corp-footer-container {
+        width: min(calc(100% - 44px), 860px);
+    }
+
+    .corp-footer-cta {
+        grid-template-columns: 1fr;
+        gap: 43px;
+
+        padding: 86px 0 70px;
+    }
+
+    .corp-footer-cta-action {
+        max-width: 430px;
+    }
+
+    .corp-footer-brand {
+        grid-template-columns: 220px minmax(0, 1fr);
+    }
+
+    .corp-footer-status {
+        grid-column: 1 / -1;
+    }
+
+    .corp-footer-nav {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .corp-footer-column {
+        border-bottom: 1px solid var(--footer-line-light);
+    }
+
+    .corp-footer-column:nth-child(3) {
+        border-right: 0;
+    }
+
+    .corp-footer-column:nth-child(4) {
+        padding-left: 0;
+    }
+
+    .corp-footer-column:nth-child(n + 4) {
+        border-bottom: 0;
+    }
+
+    .corp-footer-column:last-child {
+        border-right: 1px solid var(--footer-line-light);
+    }
+
+    .corp-footer-contact {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .corp-footer-contact-heading {
+        grid-column: 1 / -1;
+
+        padding-left: 0;
+
+        border-right: 0;
+        border-bottom: 1px solid var(--footer-line);
+    }
+
+    .corp-footer-bottom {
+        grid-template-columns: 1fr auto;
+    }
+
+    .corp-footer-disciplines {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================== */
+
+@media (max-width: 650px) {
+
+    .corp-footer-container {
+        width: calc(100% - 30px);
+    }
+
+    .corp-footer-cta {
+        gap: 35px;
+
+        padding: 72px 0 58px;
+    }
+
+    .corp-footer-kicker {
+        margin-bottom: 20px;
+
+        font-size: 8px;
+    }
+
+    .corp-footer-cta h2 {
+        font-size: clamp(47px, 15vw, 68px);
+    }
+
+    .corp-footer-cta-action > p {
+        font-size: 13px;
+    }
+
+    .corp-footer-brand {
+        display: flex;
+        align-items: flex-start;
+        gap: 0;
+
+        padding: 35px 0;
+    }
+
+    .corp-footer-logo img {
+        height: 70px;
+    }
+
+    .corp-footer-brand > p {
+        margin: 28px 0 34px;
+
+        font-size: 12.5px;
+    }
+
+    .corp-footer-nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .corp-footer-column,
+    .corp-footer-column:first-child,
+    .corp-footer-column:nth-child(4) {
+        padding: 31px 18px;
+        border-right: 1px solid var(--footer-line-light);
+        border-bottom: 1px solid var(--footer-line-light);
+    }
+
+    .corp-footer-column:nth-child(odd) {
+        padding-left: 0;
+    }
+
+    .corp-footer-column:nth-child(even) {
+        padding-right: 0;
+        border-right: 0;
+    }
+
+    .corp-footer-column:nth-child(4) {
+        border-bottom: 1px solid var(--footer-line-light);
+    }
+
+    .corp-footer-column:last-child {
+        grid-column: 1 / -1;
+
+        padding-right: 0;
+        padding-left: 0;
+
+        border-right: 0;
+        border-bottom: 0;
+    }
+
+    .corp-footer-column-heading {
+        margin-bottom: 24px;
+    }
+
+    .corp-footer-column a i {
+        opacity: 0.45;
+        transform: none;
+    }
+
+    .corp-footer-contact {
+        grid-template-columns: 1fr;
+    }
+
+    .corp-footer-contact-heading,
+    .corp-footer-contact-item {
+        padding: 25px 0;
+
+        border-right: 0;
+        border-bottom: 1px solid var(--footer-line-light);
+    }
+
+    .corp-footer-contact-item:last-child {
+        border-bottom: 0;
+    }
+
+    .corp-footer-contact-item > i {
+        right: 0;
+    }
+
+    .corp-footer-bottom {
+        grid-template-columns: 1fr;
+        gap: 19px;
+
+        padding: 25px 0;
+    }
+
+    .corp-footer-bottom > p {
+        text-align: center;
+    }
+
+    .corp-footer-bottom-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================== */
+
+@media (max-width: 390px) {
+
+    .corp-footer-container {
+        width: calc(100% - 24px);
+    }
+
+    .corp-footer-cta h2 {
+        font-size: 45px;
+    }
+
+    .corp-footer-nav {
+        grid-template-columns: 1fr;
+    }
+
+    .corp-footer-column,
+    .corp-footer-column:first-child,
+    .corp-footer-column:nth-child(4),
+    .corp-footer-column:last-child,
+    .corp-footer-column:nth-child(odd),
+    .corp-footer-column:nth-child(even) {
+        grid-column: auto;
+
+        padding: 28px 0;
+
+        border-right: 0;
+        border-bottom: 1px solid var(--footer-line-light);
+    }
+
+    .corp-footer-column:last-child {
+        border-bottom: 0;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .corp-footer-button,
+    .corp-footer-button::before,
+    .corp-footer-button i,
+    .corp-footer-column a,
+    .corp-footer-column a i,
+    .corp-footer-contact-item > i,
+    .corp-footer-bottom-links > a,
+    .corp-footer-top-link span {
+        transition: none;
+    }
+}
+
+</style>
+
+<!-- JAVASCRIPT -->
 <script>
-
-/* =============================================================
-   MODULE — PRODUCT DATABASE / CATALOGUE DATA
-============================================================= */
-
-/* =============================================================
-   POWER PRODUCT DATABASE
-
-   Add all new products here.
-
-   images[] = unlimited images supported.
-============================================================= */
-
-
-const powerCategories = [
-
-
-    /* =========================================================
-       01 CONTROL PANELS
-    ========================================================== */
-
-    {
-
-        number: "01",
-
-        name: "Control Panels",
-
-        products: [
-
-
-            /* PCC PANEL */
-
-            {
-
-                name: "PCC Panel",
-
-                application:
-                    "Industrial Power Distribution",
-
-                focus:
-                    "Distribution & Protection",
-
-                description:
-                    "Power Control Centre designed for reliable electrical distribution, protection and centralized control across industrial electrical systems.",
-
-                images: [
-
-                    "assets/img/controlpanels/PCC Panels.png",
-
-                    "assets/img/controlpanels/PCC Panels.png",
-
-                    "assets/img/controlpanels/PCC Panels.png",
-
-                    "assets/img/controlpanels/PCC Panels.png",
-
-                    "assets/img/controlpanels/PCC Panels.png",
-
-                    "assets/img/controlpanels/PCC Panels.png"
-
-                ]
-
-            },
-
-
-
-            /* MCC PANEL */
-
-            {
-
-                name: "MCC Panel",
-
-                application:
-                    "Motor Control Systems",
-
-                focus:
-                    "Motor Protection & Control",
-
-                description:
-                    "Motor Control Centre engineered for centralized control, protection and efficient operation of industrial motors and connected equipment.",
-
-                images: [
-
-                    "assets/img/controlpanels/MCC Panels.png",
-
-                    "assets/img/controlpanels/MCC Panels.png",
-
-                    "assets/img/controlpanels/MCC Panels.png",
-
-                    "assets/img/controlpanels/MCC Panels.png",
-
-                    "assets/img/controlpanels/MCC Panels.png",
-
-                    "assets/img/controlpanels/MCC Panels.png"
-
-                ]
-
-            },
-
-
-
-            /* APFC PANEL */
-
-            {
-
-                name: "APFC Panel",
-
-                application:
-                    "Power Factor Correction",
-
-                focus:
-                    "Energy Efficiency",
-
-                description:
-                    "Automatic Power Factor Correction panel engineered to improve power factor, reduce electrical losses and maintain efficient electrical system performance.",
-
-                images: [
-
-                    "assets/img/controlpanels/APFC Panels.jpg",
-
-                    "assets/img/controlpanels/APFC Panels.jpg",
-
-                    "assets/img/controlpanels/APFC Panels.jpg",
-
-                    "assets/img/controlpanels/APFC Panels.jpg",
-
-                    "assets/img/controlpanels/APFC Panels.jpg",
-
-                    "assets/img/controlpanels/APFC Panels.jpg"
-
-                ]
-
-            },
-
-
-
-            /* AMF PANEL */
-
-            {
-
-                name: "AMF Panel",
-
-                application:
-                    "Mains & Generator Control",
-
-                focus:
-                    "Automatic Power Transfer",
-
-                description:
-                    "Automatic Mains Failure panel designed for dependable automatic switching between mains supply and standby generator power.",
-
-                images: [
-
-                    "assets/img/controlpanels/AMF Panels.png",
-
-                    "assets/img/controlpanels/AMF Panels.png",
-
-                    "assets/img/controlpanels/AMF Panels.png",
-
-                    "assets/img/controlpanels/AMF Panels.png",
-
-                    "assets/img/controlpanels/AMF Panels.png",
-
-                    "assets/img/controlpanels/AMF Panels.png"
-
-                ]
-
-            },
-
-
-
-            /* PLC PANEL */
-
-            {
-
-                name: "PLC Control Panel",
-
-                application:
-                    "Industrial Automation",
-
-                focus:
-                    "Process Control",
-
-                description:
-                    "PLC control panel engineered for intelligent industrial automation, monitoring, process control and reliable machine operation.",
-
-                images: [
-
-                    "assets/img/controlpanels/PLC Control Panels.png",
-
-                    "assets/img/controlpanels/PLC Control Panels.png",
-
-                   "assets/img/controlpanels/PLC Control Panels.png",
-
-                    "assets/img/controlpanels/PLC Control Panels.png",
-
-                   "assets/img/controlpanels/PLC Control Panels.png",
-
-                    "assets/img/controlpanels/PLC Control Panels.png"
-
-                ]
-
-            },
-
-
-
-            /* VFD PANEL */
-
-            {
-
-                name: "VFD Panel",
-
-                application:
-                    "Motor Speed Control",
-
-                focus:
-                    "Efficiency & Automation",
-
-                description:
-                    "Variable Frequency Drive panel designed for precise motor speed control, smooth operation and improved energy efficiency.",
-
-                images: [
-
-                    "assets/img/controlpanels/VFD Panels.png",
-
-                    "assets/img/controlpanels/VFD Panels.png",
-
-                    "assets/img/controlpanels/VFD Panels.png",
-
-                    "assets/img/controlpanels/VFD Panels.png",
-
-                    "assets/img/controlpanels/VFD Panels.png",
-
-                    "assets/img/controlpanels/VFD Panels.png"
-
-                ]
-
-            },
-
-
-             /* Synchronizing PANEL */
-
-            {
-
-                name: "Synchronizing Panel",
-
-                application:
-                    "Industrial Power Distribution",
-
-                focus:
-                    "Distribution & Protection",
-
-                description:
-                    "Power Control Centre designed for reliable electrical distribution, protection and centralized control across industrial electrical systems.",
-
-                images: [
-
-                    "assets/img/controlpanels/Synchronizing Panels.png",
-
-                    "assets/img/controlpanels/Synchronizing Panels.png",
-
-                    "assets/img/controlpanels/Synchronizing Panels.png",
-
-                    "assets/img/controlpanels/Synchronizing Panels.png",
-
-                    "assets/img/controlpanels/Synchronizing Panels.png",
-
-                    "assets/img/controlpanels/Synchronizing Panels.png"
-
-                ]
-
-            },
-
-             /* Control & Relay PANELs */
-
-            {
-
-                name: "Control & Relay Panel",
-
-                application:
-                    "Industrial Power Distribution",
-
-                focus:
-                    "Distribution & Protection",
-
-                description:
-                    "Power Control Centre designed for reliable electrical distribution, protection and centralized control across industrial electrical systems.",
-
-                images: [
-
-                    "assets/img/controlpanels/Control & Relay Panels.png",
-
-                    "assets/img/controlpanels/Control & Relay Panels.png",
-
-                    "assets/img/controlpanels/Control & Relay Panels.png",
-
-                    "assets/img/controlpanels/Control & Relay Panels.png",
-
-                    "assets/img/controlpanels/Control & Relay Panels.png",
-
-                    "assets/img/controlpanels/Control & Relay Panels.png"
-
-                ]
-
-            },
-
-
-
-        ]
-
-    },
-
-
-
-    /* =========================================================
-       02 PANEL BOARDS
-    ========================================================== */
-
-    {
-
-        number: "02",
-
-        name: "Panel Boards",
-
-        products: [
-
-
-            {
-
-                name: "Main Distribution Board",
-
-                application:
-                    "Main Power Distribution",
-
-                focus:
-                    "Distribution & Protection",
-
-                description:
-                    "Main Distribution Board engineered for organized and reliable electrical power distribution across industrial and commercial installations.",
-
-                images: [
-
-                    "assets/img/panel-boards/main-distribution-board.png",
-
-                    "assets/img/panel-boards/main-distribution-board.png",
-
-                    "assets/img/panel-boards/main-distribution-board.png",
-
-                    "assets/img/panel-boards/main-distribution-board.png",
-
-                    "assets/img/panel-boards/main-distribution-board.png",
-
-                    "assets/img/panel-boards/main-distribution-board.png"
-
-                ]
-
-            },
-
-
-
-            {
-
-                name: "Sub Distribution Board",
-
-                application:
-                    "Secondary Distribution",
-
-                focus:
-                    "Safe Load Distribution",
-
-                description:
-                    "Sub Distribution Board developed for safe and organized downstream electrical distribution across buildings and industrial systems.",
-
-                images: [
-
-                    "assets/img/panel-boards/sub-distribution-board.png",
-
-                    "assets/img/panel-boards/sub-distribution-board.png",
-
-                    "assets/img/panel-boards/sub-distribution-board.png",
-
-                    "assets/img/panel-boards/sub-distribution-board.png",
-
-                    "assets/img/panel-boards/sub-distribution-board.png",
-
-                    "assets/img/panel-boards/sub-distribution-board.png"
-
-                    
-
-                ]
-
-            },
-
-
-
-            {
-
-                name: "Feeder Pillar Panel",
-
-                application:
-                    "Outdoor Distribution",
-
-                focus:
-                    "Feeder Distribution",
-
-                description:
-                    "Feeder pillar panel designed for safe outdoor electrical distribution, feeder control and dependable infrastructure operation.",
-
-                images: [
-
-                    "assets/img/panel-boards/feeder-pillar-panel.png",
-
-                    "assets/img/panel-boards/feeder-pillar-panel.png",
-
-                    "assets/img/panel-boards/feeder-pillar-panel.png",
-
-                    "assets/img/panel-boards/feeder-pillar-panel.png",
-
-                    "assets/img/panel-boards/feeder-pillar-panel.png",
-
-                    "assets/img/panel-boards/feeder-pillar-panel.png",
-
-                    
-
-                ]
-
-            },
-
-             {
-
-                name: "APFC Panel Boards",
-
-                application:
-                    "Outdoor Distribution",
-
-                focus:
-                    "Feeder Distribution",
-
-                description:
-                    "Feeder pillar panel designed for safe outdoor electrical distribution, feeder control and dependable infrastructure operation.",
-
-                images: [
-
-                    "assets/img/panel-boards/apfc-panel-board.png",
-
-                    "assets/img/panel-boards/apfc-panel-board.png",
-
-                    "assets/img/panel-boards/apfc-panel-board.png",
-
-                    "assets/img/panel-boards/apfc-panel-board.png",
-
-                    "assets/img/panel-boards/apfc-panel-board.png",
-
-                    "assets/img/panel-boards/apfc-panel-board.png",
-
-                ]
-
-            },
-
-            {
-
-                name: "Motor Distribution Boards",
-
-                application:
-                    "Outdoor Distribution",
-
-                focus:
-                    "Feeder Distribution",
-
-                description:
-                    "Feeder pillar panel designed for safe outdoor electrical distribution, feeder control and dependable infrastructure operation.",
-
-                images: [
-
-                    "assets/img/panel-boards/motor-distribution-board.png",
-
-                    "assets/img/panel-boards/motor-distribution-board.png",
-
-                    "assets/img/panel-boards/motor-distribution-board.png",
-
-                    "assets/img/panel-boards/motor-distribution-board.png",
-
-                    "assets/img/panel-boards/motor-distribution-board.png",
-
-                   "assets/img/panel-boards/motor-distribution-board.png",
-
-                ]
-
-            },
-
-             {
-
-                name: "Outdoor Panel Boards",
-
-                application:
-                    "Outdoor Distribution",
-
-                focus:
-                    "Feeder Distribution",
-
-                description:
-                    "Feeder pillar panel designed for safe outdoor electrical distribution, feeder control and dependable infrastructure operation.",
-
-                images: [
-
-                    "assets/img/panel-boards/outdoor-panel-board.png",
-
-                    "assets/img/panel-boards/outdoor-panel-board.png",
-
-                    "assets/img/panel-boards/outdoor-panel-board.png",
-
-                    "assets/img/panel-boards/outdoor-panel-board.png",
-
-                    "assets/img/panel-boards/outdoor-panel-board.png",
-
-                   "assets/img/panel-boards/outdoor-panel-board.png",
-
-                ]
-
-            },
-
-            {
-
-                name: "Metering Panels",
-
-                application:
-                    "Outdoor Distribution",
-
-                focus:
-                    "Feeder Distribution",
-
-                description:
-                    "Feeder pillar panel designed for safe outdoor electrical distribution, feeder control and dependable infrastructure operation.",
-
-                images: [
-
-                    "assets/img/panel-boards/metering-panel.png",
-
-                    "assets/img/panel-boards/metering-panel.png",
-
-                    "assets/img/panel-boards/metering-panel.png",
-
-                    "assets/img/panel-boards/metering-panel.png",
-
-                    "assets/img/panel-boards/metering-panel.png",
-
-                   "assets/img/panel-boards/metering-panel.png",
-
-                ]
-
-            },
-
-             {
-
-                name: "Changeover Panels",
-
-                application:
-                    "Outdoor Distribution",
-
-                focus:
-                    "Feeder Distribution",
-
-                description:
-                    "Feeder pillar panel designed for safe outdoor electrical distribution, feeder control and dependable infrastructure operation.",
-
-                images: [
-
-                    "assets/img/panel-boards/changeover-panel.png",
-
-                   "assets/img/panel-boards/changeover-panel.png",
-
-                   "assets/img/panel-boards/changeover-panel.png",
-
-                   "assets/img/panel-boards/changeover-panel.png",
-
-                   "assets/img/panel-boards/changeover-panel.png",
-
-                   "assets/img/panel-boards/changeover-panel.png",
-
-
-                ]
-
-            },
-
-
-            {
-
-                name: "Customized Panel Boards",
-
-                application:
-                    "Outdoor Distribution",
-
-                focus:
-                    "Feeder Distribution",
-
-                description:
-                    "Feeder pillar panel designed for safe outdoor electrical distribution, feeder control and dependable infrastructure operation.",
-
-                images: [
-
-                    "assets/img/panel-boards/customized-panel-board.png",
-
-                   "assets/img/panel-boards/customized-panel-board.png",
-
-                   "assets/img/panel-boards/customized-panel-board.png",
-
-                   "assets/img/panel-boards/customized-panel-board.png",
-
-                   "assets/img/panel-boards/customized-panel-board.png",
-
-                   "assets/img/panel-boards/customized-panel-board.png",
-
-                ]
-
-            }
-
-
-
-
-        ]
-
-    },
-
-
-
-    /* =========================================================
-       03 TRANSFORMERS
-    ========================================================== */
-
-    {
-
-        number: "03",
-
-        name: "Transformers",
-
-        products: [
-
-
-            {
-
-                name: "Distribution Transformer",
-
-                application:
-                    "Utility & Distribution",
-
-                focus:
-                    "Voltage Transformation",
-
-                description:
-                    "Distribution transformer engineered for reliable voltage transformation and efficient power delivery across electrical distribution networks.",
-
-                images: [
-
-                    "assets/img/products/transformers/distribution-transformer/distribution-transformer-01.jpg",
-
-                    "assets/img/products/transformers/distribution-transformer/distribution-transformer-02.jpg",
-
-                    "assets/img/products/transformers/distribution-transformer/distribution-transformer-03.jpg",
-
-                    "assets/img/products/transformers/distribution-transformer/distribution-transformer-04.jpg",
-
-                    "assets/img/products/transformers/distribution-transformer/distribution-transformer-05.jpg",
-
-                    "assets/img/products/transformers/distribution-transformer/distribution-transformer-06.jpg"
-
-                ]
-
-            },
-
-
-
-            {
-
-                name: "Dry Type Transformer",
-
-                application:
-                    "Indoor Installations",
-
-                focus:
-                    "Safety & Reliability",
-
-                description:
-                    "Dry type transformer engineered for safe indoor power transformation with dependable operation and reduced maintenance requirements.",
-
-                images: [
-
-                    "assets/img/products/transformers/dry-type-transformer/dry-type-transformer-01.jpg",
-
-                    "assets/img/products/transformers/dry-type-transformer/dry-type-transformer-02.jpg",
-
-                    "assets/img/products/transformers/dry-type-transformer/dry-type-transformer-03.jpg",
-
-                    "assets/img/products/transformers/dry-type-transformer/dry-type-transformer-04.jpg",
-
-                    "assets/img/products/transformers/dry-type-transformer/dry-type-transformer-05.jpg",
-
-                    "assets/img/products/transformers/dry-type-transformer/dry-type-transformer-06.jpg"
-
-                ]
-
-            }
-
-        ]
-
-    },
-
-
-
-    /* =========================================================
-       04 SWITCHGEARS
-    ========================================================== */
-
-    {
-
-        number: "04",
-
-        name: "Switchgears",
-
-        products: [
-
-
-            {
-
-                name: "LV Switchgear",
-
-                application:
-                    "Low Voltage Distribution",
-
-                focus:
-                    "Switching & Protection",
-
-                description:
-                    "Low-voltage switchgear engineered for safe switching, protection and isolation of electrical distribution systems.",
-
-                images: [
-
-                    "assets/img/products/switchgears/lv-switchgear/lv-switchgear-01.jpg",
-
-                    "assets/img/products/switchgears/lv-switchgear/lv-switchgear-02.jpg",
-
-                    "assets/img/products/switchgears/lv-switchgear/lv-switchgear-03.jpg",
-
-                    "assets/img/products/switchgears/lv-switchgear/lv-switchgear-04.jpg",
-
-                    "assets/img/products/switchgears/lv-switchgear/lv-switchgear-05.jpg",
-
-                    "assets/img/products/switchgears/lv-switchgear/lv-switchgear-06.jpg"
-
-                ]
-
-            },
-
-
-
-            {
-
-                name: "MV Switchgear",
-
-                application:
-                    "Medium Voltage Networks",
-
-                focus:
-                    "Protection & Isolation",
-
-                description:
-                    "Medium-voltage switchgear developed for reliable protection, switching and safe operation of electrical distribution networks.",
-
-                images: [
-
-                    "assets/img/products/switchgears/mv-switchgear/mv-switchgear-01.jpg",
-
-                    "assets/img/products/switchgears/mv-switchgear/mv-switchgear-02.jpg",
-
-                    "assets/img/products/switchgears/mv-switchgear/mv-switchgear-03.jpg",
-
-                    "assets/img/products/switchgears/mv-switchgear/mv-switchgear-04.jpg",
-
-                    "assets/img/products/switchgears/mv-switchgear/mv-switchgear-05.jpg",
-
-                    "assets/img/products/switchgears/mv-switchgear/mv-switchgear-06.jpg"
-
-                ]
-
-            }
-
-        ]
-
-    },
-
-
-
-    /* =========================================================
-       05 CONTROLLERS
-    ========================================================== */
-
-    {
-
-        number: "05",
-
-        name: "Controllers",
-
-        products: [
-
-
-            {
-
-                name: "Power Controller",
-
-                application:
-                    "Power Management",
-
-                focus:
-                    "Monitoring & Control",
-
-                description:
-                    "Intelligent power controller developed for monitoring, management and optimized control of modern electrical systems.",
-
-                images: [
-
-                    "assets/img/products/controllers/power-controller/power-controller-01.jpg",
-
-                    "assets/img/products/controllers/power-controller/power-controller-02.jpg",
-
-                    "assets/img/products/controllers/power-controller/power-controller-03.jpg",
-
-                    "assets/img/products/controllers/power-controller/power-controller-04.jpg",
-
-                    "assets/img/products/controllers/power-controller/power-controller-05.jpg",
-
-                    "assets/img/products/controllers/power-controller/power-controller-06.jpg"
-
-                ]
-
-            },
-
-
-
-            {
-
-                name: "Motor Controller",
-
-                application:
-                    "Motor Management",
-
-                focus:
-                    "Motor Monitoring & Protection",
-
-                description:
-                    "Motor controller engineered for precise motor management, protection, monitoring and dependable industrial operation.",
-
-                images: [
-
-                    "assets/img/products/controllers/motor-controller/motor-controller-01.jpg",
-
-                    "assets/img/products/controllers/motor-controller/motor-controller-02.jpg",
-
-                    "assets/img/products/controllers/motor-controller/motor-controller-03.jpg",
-
-                    "assets/img/products/controllers/motor-controller/motor-controller-04.jpg",
-
-                    "assets/img/products/controllers/motor-controller/motor-controller-05.jpg",
-
-                    "assets/img/products/controllers/motor-controller/motor-controller-06.jpg"
-
-                ]
-
-            }
-
-        ]
-
-    }
-
-];
-
-
-
-/* =============================================================
-   DOM ELEMENTS
-============================================================= */
-
-const categoryList =
-    document.getElementById("categoryList");
-
-
-const productVisual =
-    document.getElementById("productVisual");
-
-
-const displayImage =
-    document.getElementById("displayImage");
-
-
-const displayCategory =
-    document.getElementById("displayCategory");
-
-
-const displayTitle =
-    document.getElementById("displayTitle");
-
-
-const displayDescription =
-    document.getElementById("displayDescription");
-
-
-const displayBreadcrumb =
-    document.getElementById("displayBreadcrumb");
-
-
-const displayProductIndex =
-    document.getElementById("displayProductIndex");
-
-
-const productThumbnails =
-    document.getElementById("productThumbnails");
-
-
-const galleryProductName =
-    document.getElementById("galleryProductName");
-
-
-const currentImageNumber =
-    document.getElementById("currentImageNumber");
-
-
-const totalImageNumber =
-    document.getElementById("totalImageNumber");
-
-
-const galleryPrevious =
-    document.getElementById("galleryPrevious");
-
-
-const galleryNext =
-    document.getElementById("galleryNext");
-
-
-const infoCategory =
-    document.getElementById("infoCategory");
-
-
-const infoApplication =
-    document.getElementById("infoApplication");
-
-
-const infoFocus =
-    document.getElementById("infoFocus");
-
-
-
-/* =============================================================
-   STATE
-============================================================= */
-
-let currentProduct = null;
-
-let currentCategory = null;
-
-let currentImageIndex = 0;
-
-
-
-/* =============================================================
-   TOTAL PRODUCTS
-============================================================= */
-
-const totalProducts =
-    powerCategories.reduce(
-
-        function(total, category) {
-
-            return total +
-                category.products.length;
-
-        },
-
-        0
-    );
-
-
-
-/* =============================================================
-   GLOBAL PRODUCT NUMBER
-============================================================= */
-
-function getGlobalProductNumber(
-    categoryIndex,
-    productIndex
-) {
-
-    let number = 0;
-
-
-    for (
-        let i = 0;
-        i < categoryIndex;
-        i++
-    ) {
-
-        number +=
-            powerCategories[i].products.length;
-
-    }
-
-
-    number += productIndex + 1;
-
-
-    return number;
-
-}
-
-
-
-/* =============================================================
-   RENDER SIDEBAR
-============================================================= */
-
-function renderCategories() {
-
-
-    categoryList.innerHTML = "";
-
-
-    powerCategories.forEach(
-
-        function(category, categoryIndex) {
-
-
-            const wrapper =
-                document.createElement("div");
-
-
-            wrapper.className =
-                "power-category";
-
-
-            if (categoryIndex === 0) {
-
-                wrapper.classList.add("open");
-
-            }
-
-
-
-            /* CATEGORY BUTTON */
-
-            const categoryButton =
-                document.createElement("button");
-
-
-            categoryButton.type =
-                "button";
-
-
-            categoryButton.className =
-                "category-button";
-
-
-            categoryButton.innerHTML = `
-
-                <span class="category-number">
-
-                    ${category.number}
-
-                </span>
-
-
-                <span class="category-content">
-
-                    <span class="category-title">
-
-                        ${category.name}
-
-                    </span>
-
-
-                    <span class="category-count">
-
-                        ${category.products.length}
-                        Products
-
-                    </span>
-
-                </span>
-
-
-                <span class="category-toggle">
-
-                    <i class="bi ${
-                        categoryIndex === 0
-                        ? "bi-dash"
-                        : "bi-plus"
-                    }"></i>
-
-                </span>
-
-            `;
-
-
-
-            /* PRODUCTS */
-
-            const productsContainer =
-                document.createElement("div");
-
-
-            productsContainer.className =
-                "category-products";
-
-
-
-            category.products.forEach(
-
-                function(product, productIndex) {
-
-
-                    const productButton =
-                        document.createElement("button");
-
-
-                    productButton.type =
-                        "button";
-
-
-                    productButton.className =
-                        "sidebar-product";
-
-
-                    if (
-                        categoryIndex === 0 &&
-                        productIndex === 0
-                    ) {
-
-                        productButton.classList.add(
-                            "active"
-                        );
-
-                    }
-
-
-                    productButton.innerHTML = `
-
-                        <span class="sidebar-product-name">
-
-                            ${product.name}
-
-                        </span>
-
-
-                        <span class="sidebar-product-count">
-
-                            ${product.images.length}
-                            IMG
-
-                        </span>
-
-                    `;
-
-
-
-                    productButton.addEventListener(
-
-                        "click",
-
-                        function(event) {
-
-
-                            event.stopPropagation();
-
-
-                            document
-                                .querySelectorAll(
-                                    ".sidebar-product"
-                                )
-                                .forEach(
-
-                                    function(button) {
-
-                                        button.classList.remove(
-                                            "active"
-                                        );
-
-                                    }
-
-                                );
-
-
-                            productButton.classList.add(
-                                "active"
-                            );
-
-
-                            const globalNumber =
-                                getGlobalProductNumber(
-                                    categoryIndex,
-                                    productIndex
-                                );
-
-
-                            showProduct(
-                                category,
-                                product,
-                                globalNumber
-                            );
-
-                        }
-
-                    );
-
-
-                    productsContainer.appendChild(
-                        productButton
-                    );
-
-                }
-
-            );
-
-
-
-            /* CATEGORY OPEN / CLOSE */
-
-            categoryButton.addEventListener(
-
-                "click",
-
-                function() {
-
-
-                    const isOpen =
-                        wrapper.classList.contains(
-                            "open"
-                        );
-
-
-                    document
-                        .querySelectorAll(
-                            ".power-category"
-                        )
-                        .forEach(
-
-                            function(item) {
-
-
-                                item.classList.remove(
-                                    "open"
-                                );
-
-
-                                const icon =
-                                    item.querySelector(
-                                        ".category-toggle i"
-                                    );
-
-
-                                if (icon) {
-
-                                    icon.className =
-                                        "bi bi-plus";
-
-                                }
-
-                            }
-
-                        );
-
-
-                    if (!isOpen) {
-
-
-                        wrapper.classList.add(
-                            "open"
-                        );
-
-
-                        const icon =
-                            wrapper.querySelector(
-                                ".category-toggle i"
-                            );
-
-
-                        if (icon) {
-
-                            icon.className =
-                                "bi bi-dash";
-
-                        }
-
-                    }
-
-                }
-
-            );
-
-
-
-            wrapper.appendChild(
-                categoryButton
-            );
-
-
-            wrapper.appendChild(
-                productsContainer
-            );
-
-
-            categoryList.appendChild(
-                wrapper
-            );
-
-        }
-
-    );
-
-}
-
-
-
-/* =============================================================
-   SHOW PRODUCT
-============================================================= */
-
-function showProduct(
-    category,
-    product,
-    globalNumber
-) {
-
-
-    currentCategory = category;
-
-    currentProduct = product;
-
-    currentImageIndex = 0;
-
-
-    productVisual.classList.add(
-        "image-changing"
-    );
-
-
-    setTimeout(
-
-        function() {
-
-
-            displayCategory.textContent =
-                category.name;
-
-
-            displayTitle.textContent =
-                product.name;
-
-
-            displayDescription.textContent =
-                product.description;
-
-
-            displayBreadcrumb.textContent =
-                "POWER PRODUCTS / " +
-                category.name.toUpperCase();
-
-
-            displayProductIndex.textContent =
-
-                String(globalNumber)
-                    .padStart(2,"0")
-
-                +
-
-                " / "
-
-                +
-
-                String(totalProducts)
-                    .padStart(2,"0");
-
-
-            galleryProductName.textContent =
-                product.name;
-
-
-            infoCategory.textContent =
-                category.name;
-
-
-            infoApplication.textContent =
-                product.application;
-
-
-            infoFocus.textContent =
-                product.focus;
-
-
-            renderGallery(product);
-
-
-            changeGalleryImage(
-                0,
-                false
-            );
-
-
-            productVisual.classList.remove(
-                "image-changing"
-            );
-
-
-        },
-
-        240
-    );
-
-}
-
-
-
-/* =============================================================
-   RENDER IMAGE THUMBNAILS
-============================================================= */
-
-function renderGallery(product) {
-
-
-    productThumbnails.innerHTML = "";
-
-
-    totalImageNumber.textContent =
-        String(product.images.length)
-            .padStart(2,"0");
-
-
-    product.images.forEach(
-
-        function(image, index) {
-
-
-            const thumbnail =
-                document.createElement("button");
-
-
-            thumbnail.type =
-                "button";
-
-
-            thumbnail.className =
-                "product-thumbnail";
-
-
-            if (index === 0) {
-
-                thumbnail.classList.add(
-                    "active"
-                );
-
-            }
-
-
-            thumbnail.innerHTML = `
-
-                <img
-                    src="${image}"
-                    alt="${product.name} ${index + 1}"
-                    loading="lazy">
-
-
-                <span class="thumbnail-number">
-
-                    ${String(index + 1)
-                        .padStart(2,"0")}
-
-                </span>
-
-            `;
-
-
-            thumbnail.addEventListener(
-
-                "click",
-
-                function() {
-
-
-                    changeGalleryImage(
-                        index,
-                        true
-                    );
-
-                }
-
-            );
-
-
-            productThumbnails.appendChild(
-                thumbnail
-            );
-
-        }
-
-    );
-
-}
-
-
-
-/* =============================================================
-   CHANGE MAIN IMAGE
-============================================================= */
-
-function changeGalleryImage(
-    index,
-    animate = true
-) {
-
-
-    if (
-        !currentProduct ||
-        !currentProduct.images ||
-        !currentProduct.images.length
-    ) {
-
-        return;
-
-    }
-
-
-    currentImageIndex = index;
-
-
-    const image =
-        currentProduct.images[index];
-
-
-
-    function updateImage() {
-
-
-        displayImage.src =
-            image;
-
-
-        displayImage.alt =
-            currentProduct.name +
-            " image " +
-            (index + 1);
-
-
-        currentImageNumber.textContent =
-            String(index + 1)
-                .padStart(2,"0");
-
-
-        document
-            .querySelectorAll(
-                ".product-thumbnail"
-            )
-            .forEach(
-
-                function(thumbnail, thumbIndex) {
-
-
-                    thumbnail.classList.toggle(
-
-                        "active",
-
-                        thumbIndex === index
-
-                    );
-
-                }
-
-            );
-
-    }
-
-
-
-    if (!animate) {
-
-        updateImage();
-
-        return;
-
-    }
-
-
-    productVisual.classList.add(
-        "image-changing"
-    );
-
-
-    setTimeout(
-
-        function() {
-
-
-            updateImage();
-
-
-            productVisual.classList.remove(
-                "image-changing"
-            );
-
-
-        },
-
-        200
-    );
-
-}
-
-
-
-/* =============================================================
-   NEXT IMAGE
-============================================================= */
-
-galleryNext.addEventListener(
-
-    "click",
-
-    function() {
-
-
-        if (!currentProduct) {
-
-            return;
-
-        }
-
-
-        let next =
-            currentImageIndex + 1;
-
-
-        if (
-            next >=
-            currentProduct.images.length
-        ) {
-
-            next = 0;
-
-        }
-
-
-        changeGalleryImage(
-            next,
-            true
-        );
-
-    }
-
-);
-
-
-
-/* =============================================================
-   PREVIOUS IMAGE
-============================================================= */
-
-galleryPrevious.addEventListener(
-
-    "click",
-
-    function() {
-
-
-        if (!currentProduct) {
-
-            return;
-
-        }
-
-
-        let previous =
-            currentImageIndex - 1;
-
-
-        if (previous < 0) {
-
-            previous =
-                currentProduct.images.length - 1;
-
-        }
-
-
-        changeGalleryImage(
-            previous,
-            true
-        );
-
-    }
-
-);
-
-
-
-/* =============================================================
-   KEYBOARD ARROWS
-============================================================= */
-
-document.addEventListener(
-
-    "keydown",
-
-    function(event) {
-
-
-        if (!currentProduct) return;
-
-
-        if (event.key === "ArrowRight") {
-
-            galleryNext.click();
-
-        }
-
-
-        if (event.key === "ArrowLeft") {
-
-            galleryPrevious.click();
-
-        }
-
-    }
-
-);
-
-
-
-/* =============================================================
-   INITIAL PRODUCT
-============================================================= */
-
-renderCategories();
-
-
-const firstCategory =
-    powerCategories[0];
-
-
-const firstProduct =
-    firstCategory.products[0];
-
-
-showProduct(
-    firstCategory,
-    firstProduct,
-    1
-);
-
-
-
+document.getElementById("corpFooterYear").textContent = new Date().getFullYear();
 </script>
 
+<!-- END MODULE — FOOTER -->
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const nav = document.getElementById("mainNav");
+            const white = document.getElementById("logoWhite");
+            const dark = document.getElementById("logoDark");
+            if (nav) nav.classList.add("scrolled", "navbar-shrink");
+            if (white) white.style.display = "none";
+            if (dark) dark.style.display = "block";
+            const year = document.getElementById("year");
+            if (year) year.textContent = new Date().getFullYear();
+        });
+    </script>
 </body>
-
 </html>
