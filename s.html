@@ -8,10 +8,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Smart Pole | Alpha Numeric R&D</title>
-
-    <meta name="description"
-          content="Alpha Numeric Smart Pole integrates EV charging, emergency communication, air quality monitoring, smart lighting, public connectivity, AI communication and intelligent surveillance in one urban infrastructure platform.">
+    <title>Power Products | Alpha Numeric</title>
 
 
     <!-- =========================================================
@@ -57,8 +54,10 @@
         rel="stylesheet">
 
 
+
     <style>
-/* =========================================================
+
+        /* =========================================================
            GLOBAL
         ========================================================== */
 
@@ -86,41 +85,105 @@
         }
 
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-
         img {
+
             max-width: 100%;
+
             display: block;
         }
 
 
-        button {
+        button,
+        input,
+        textarea,
+        select {
+
             font-family: inherit;
         }
 
-/* =========================================================
-           COMMON
-        ========================================================== */
 
-        .smart-container {
+        button {
 
-            width: min(calc(100% - 80px), 1500px);
-
-            margin: 0 auto;
+            border-radius: 0;
         }
 
 
-        .smart-eyebrow {
+        a {
+
+            color: inherit;
+
+            text-decoration: none;
+        }
+
+
+
+        
+
+
+
+
+       
+
+
+
+        /* =========================================================
+           PAGE
+        ========================================================== */
+
+        .power-products-page {
+
+            width: 100%;
+
+            padding-top: 100px;
+
+            background: #ffffff;
+        }
+
+
+
+        /* =========================================================
+           SMALL INTRO
+        ========================================================== */
+
+        .power-products-intro {
+
+            padding: 60px 5% 48px;
+
+            border-bottom: 1px solid #e5e5e5;
+
+            background: #ffffff;
+        }
+
+
+        .power-products-intro-inner {
+
+            width: 100%;
+
+            max-width: 1600px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0,1fr)
+                minmax(300px,420px);
+
+            gap: 80px;
+
+            align-items: end;
+        }
+
+
+        .power-products-eyebrow {
 
             display: inline-flex;
 
             align-items: center;
 
             gap: 12px;
+
+            margin-bottom: 18px;
 
             color: #666666;
 
@@ -134,7 +197,7 @@
         }
 
 
-        .smart-eyebrow::before {
+        .power-products-eyebrow::before {
 
             content: "";
 
@@ -142,27 +205,29 @@
 
             height: 1px;
 
-            background: currentColor;
+            background: #111111;
         }
 
 
-        .smart-title {
+        .power-products-intro h1 {
 
-            margin: 20px 0 0;
+            max-width: 800px;
 
-            font-size: clamp(42px, 5vw, 76px);
+            margin: 0;
 
-            line-height: .98;
+            color: #111111;
+
+            font-size: clamp(42px, 4.7vw, 70px);
+
+            line-height: 1;
 
             letter-spacing: -3px;
 
             font-weight: 600;
-
-            color: #111111;
         }
 
 
-        .smart-title span {
+        .power-products-intro h1 span {
 
             color: #777777;
 
@@ -170,20 +235,1186 @@
         }
 
 
-        .smart-copy {
+        .power-products-intro p {
 
-            color: #717171;
+            margin: 0;
 
-            font-size: 14px;
+            color: #777777;
+
+            font-size: 13px;
 
             line-height: 1.9;
         }
-</style>
 
-<!-- END MODULE — GLOBAL BASE + COMMON STYLES -->
+
+
+        /* =========================================================
+           MAIN CATALOGUE
+        ========================================================== */
+
+        .power-catalogue {
+
+            width: 100%;
+
+            min-height: 820px;
+
+            display: grid;
+
+            grid-template-columns:
+
+                minmax(320px, 24%)
+
+                minmax(0, 76%);
+        }
+
+
+
+        /* =========================================================
+           LEFT SIDEBAR
+        ========================================================== */
+
+        .catalogue-sidebar {
+
+            position: relative;
+
+            background: #f7f7f5;
+
+            border-right: 1px solid #dddddd;
+        }
+
+
+        .catalogue-sidebar-inner {
+
+            position: sticky;
+
+            top: 100px;
+
+            max-height: calc(100vh - 100px);
+
+            overflow-y: auto;
+
+            scrollbar-width: thin;
+        }
+
+
+        .catalogue-sidebar-inner::-webkit-scrollbar {
+
+            width: 5px;
+        }
+
+
+        .catalogue-sidebar-inner::-webkit-scrollbar-thumb {
+
+            background: #cfcfcf;
+        }
+
+
+
+        /* =========================================================
+           SIDEBAR HEADER
+        ========================================================== */
+
+        .catalogue-sidebar-header {
+
+            padding: 28px 32px;
+
+            border-bottom: 1px solid #dddddd;
+
+            background: #f7f7f5;
+        }
+
+
+        .catalogue-sidebar-header span {
+
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: #999999;
+
+            font-size: 8px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+        }
+
+
+        .catalogue-sidebar-header h2 {
+
+            margin: 0;
+
+            color: #111111;
+
+            font-size: 20px;
+
+            font-weight: 600;
+
+            letter-spacing: -.5px;
+        }
+
+
+
+        /* =========================================================
+           CATEGORY
+        ========================================================== */
+
+        .power-category {
+
+            border-bottom: 1px solid #dddddd;
+        }
+
+
+        .category-button {
+
+            width: 100%;
+
+            min-height: 82px;
+
+            padding: 0 28px;
+
+            display: grid;
+
+            grid-template-columns:
+
+                34px
+
+                1fr
+
+                auto;
+
+            align-items: center;
+
+            gap: 13px;
+
+            border: 0;
+
+            background: #ffffff;
+
+            color: #111111;
+
+            text-align: left;
+
+            cursor: pointer;
+
+            transition: .3s ease;
+        }
+
+
+        .category-button:hover {
+
+            background: #f1f1ef;
+        }
+
+
+        .category-number {
+
+            color: #aaaaaa;
+
+            font-size: 9px;
+
+            font-weight: 600;
+
+            letter-spacing: 1px;
+        }
+
+
+        .category-content {
+
+            min-width: 0;
+        }
+
+
+        .category-title {
+
+            display: block;
+
+            color: #111111;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            line-height: 1.25;
+        }
+
+
+        .category-count {
+
+            display: block;
+
+            margin-top: 5px;
+
+            color: #999999;
+
+            font-size: 8px;
+
+            font-weight: 600;
+
+            letter-spacing: 1.2px;
+
+            text-transform: uppercase;
+        }
+
+
+        .category-toggle {
+
+            width: 28px;
+
+            height: 28px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border: 1px solid #dddddd;
+
+            color: #777777;
+
+            font-size: 12px;
+        }
+
+
+
+        /* ACTIVE CATEGORY */
+
+        .power-category.open .category-button {
+
+            background: #111111;
+
+            color: #ffffff;
+        }
+
+
+        .power-category.open .category-title {
+
+            color: #ffffff;
+        }
+
+
+        .power-category.open .category-number {
+
+            color: #777777;
+        }
+
+
+        .power-category.open .category-count {
+
+            color: #888888;
+        }
+
+
+        .power-category.open .category-toggle {
+
+            background: #ffffff;
+
+            border-color: #ffffff;
+
+            color: #111111;
+        }
+
+
+
+        /* =========================================================
+           CATEGORY PRODUCTS
+        ========================================================== */
+
+        .category-products {
+
+            max-height: 0;
+
+            overflow: hidden;
+
+            background: #ffffff;
+
+            transition:
+                max-height .55s cubic-bezier(.22,1,.36,1);
+        }
+
+
+        .power-category.open .category-products {
+
+            max-height: 1600px;
+        }
+
+
+        .sidebar-product {
+
+            position: relative;
+
+            width: 100%;
+
+            min-height: 62px;
+
+            padding:
+
+                0 20px
+
+                0 64px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            border: 0;
+
+            border-top: 1px solid #eeeeee;
+
+            background: #ffffff;
+
+            color: #555555;
+
+            text-align: left;
+
+            cursor: pointer;
+
+            transition: .3s ease;
+        }
+
+
+        .sidebar-product::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 33px;
+
+            width: 12px;
+
+            height: 1px;
+
+            background: #bbbbbb;
+
+            transition: .3s ease;
+        }
+
+
+        .sidebar-product-name {
+
+            font-size: 12px;
+
+            font-weight: 500;
+
+            line-height: 1.4;
+        }
+
+
+        .sidebar-product-count {
+
+            white-space: nowrap;
+
+            color: #aaaaaa;
+
+            font-size: 8px;
+
+            font-weight: 600;
+
+            letter-spacing: 1px;
+        }
+
+
+        .sidebar-product:hover {
+
+            padding-left: 70px;
+
+            background: #f7f7f5;
+
+            color: #111111;
+        }
+
+
+        .sidebar-product.active {
+
+            background: #ececea;
+
+            color: #111111;
+        }
+
+
+        .sidebar-product.active::before {
+
+            width: 20px;
+
+            background: #111111;
+        }
+
+
+        .sidebar-product.active
+        .sidebar-product-name {
+
+            font-weight: 600;
+        }
+
+
+
+        /* =========================================================
+           RIGHT SIDE
+        ========================================================== */
+
+        .catalogue-display {
+
+            min-width: 0;
+
+            background: #ffffff;
+        }
+
+
+
+        /* =========================================================
+           DISPLAY HEADER
+        ========================================================== */
+
+        .catalogue-display-header {
+
+            min-height: 72px;
+
+            padding: 0 42px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+
+            border-bottom: 1px solid #e5e5e5;
+
+            background: #ffffff;
+        }
+
+
+        .catalogue-breadcrumb {
+
+            color: #999999;
+
+            font-size: 8px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+        }
+
+
+        .catalogue-product-index {
+
+            color: #999999;
+
+            font-size: 9px;
+
+            font-weight: 600;
+
+            letter-spacing: 2px;
+        }
+
+
+
+        /* =========================================================
+           MAIN PRODUCT VISUAL
+        ========================================================== */
+
+        .product-visual {
+
+            position: relative;
+
+            width: 100%;
+
+            min-height: 590px;
+
+            overflow: hidden;
+
+            background: #e9e9e6;
+        }
+
+
+        .product-visual-image {
+
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            object-position: center;
+
+            opacity: 1;
+
+            transform: scale(1.01);
+
+            transition:
+
+                opacity .35s ease,
+
+                transform .7s
+                cubic-bezier(.22,1,.36,1);
+        }
+
+
+        .product-visual.image-changing
+        .product-visual-image {
+
+            opacity: 0;
+
+            transform: scale(1.04);
+        }
+
+
+
+        /* DARK GRADIENT */
+
+        .product-visual::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            z-index: 2;
+
+            pointer-events: none;
+
+            background:
+
+                linear-gradient(
+
+                    to top,
+
+                    rgba(0,0,0,.92) 0%,
+
+                    rgba(0,0,0,.54) 34%,
+
+                    rgba(0,0,0,.12) 65%,
+
+                    rgba(0,0,0,.02) 100%
+
+                );
+        }
+
+
+
+        /* =========================================================
+           IMAGE COUNTER
+        ========================================================== */
+
+        .gallery-image-counter {
+
+            position: absolute;
+
+            z-index: 6;
+
+            top: 28px;
+
+            right: 30px;
+
+            min-width: 84px;
+
+            height: 38px;
+
+            padding: 0 14px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 6px;
+
+            background: rgba(255,255,255,.94);
+
+            color: #111111;
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.4px;
+        }
+
+
+
+        /* =========================================================
+           PRODUCT CONTENT
+        ========================================================== */
+
+        .product-visual-content {
+
+            position: absolute;
+
+            z-index: 5;
+
+            left: 44px;
+
+            right: 44px;
+
+            bottom: 42px;
+
+            color: #ffffff;
+
+            transition:
+
+                opacity .35s ease,
+
+                transform .4s ease;
+        }
+
+
+        .product-visual.image-changing
+        .product-visual-content {
+
+            opacity: .35;
+        }
+
+
+        .display-category {
+
+            display: block;
+
+            margin-bottom: 12px;
+
+            color: rgba(255,255,255,.58);
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            letter-spacing: 2.5px;
+
+            text-transform: uppercase;
+        }
+
+
+        .display-title {
+
+            max-width: 900px;
+
+            margin: 0 0 17px;
+
+            color: #ffffff;
+
+            font-size: clamp(44px,5vw,78px);
+
+            line-height: .95;
+
+            letter-spacing: -3px;
+
+            font-weight: 500;
+        }
+
+
+        .display-description {
+
+            max-width: 680px;
+
+            margin: 0;
+
+            color: rgba(255,255,255,.73);
+
+            font-size: 13px;
+
+            line-height: 1.85;
+        }
+
+
+
+        /* =========================================================
+           GALLERY
+        ========================================================== */
+
+        .product-gallery-wrapper {
+
+            width: 100%;
+
+            padding: 28px 32px 34px;
+
+            background: #ffffff;
+
+            border-top: 1px solid #e2e2e2;
+        }
+
+
+        .gallery-heading {
+
+            display: flex;
+
+            align-items: flex-end;
+
+            justify-content: space-between;
+
+            gap: 30px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .gallery-heading-label {
+
+            display: block;
+
+            margin-bottom: 6px;
+
+            color: #999999;
+
+            font-size: 8px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+        }
+
+
+        .gallery-heading strong {
+
+            display: block;
+
+            color: #111111;
+
+            font-size: 15px;
+
+            font-weight: 600;
+        }
+
+
+
+        /* =========================================================
+           GALLERY CONTROLS
+        ========================================================== */
+
+        .gallery-controls {
+
+            display: flex;
+
+            gap: 6px;
+        }
+
+
+        .gallery-nav {
+
+            width: 40px;
+
+            height: 40px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 0;
+
+            border: 1px solid #dddddd;
+
+            background: #ffffff;
+
+            color: #111111;
+
+            cursor: pointer;
+
+            transition: .3s ease;
+        }
+
+
+        .gallery-nav:hover {
+
+            background: #111111;
+
+            border-color: #111111;
+
+            color: #ffffff;
+        }
+
+
+
+        /* =========================================================
+           THUMBNAILS
+        ========================================================== */
+
+        .product-thumbnails {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(6,minmax(0,1fr));
+
+            gap: 9px;
+        }
+
+
+        .product-thumbnail {
+
+            position: relative;
+
+            width: 100%;
+
+            aspect-ratio: 4 / 3;
+
+            padding: 0;
+
+            overflow: hidden;
+
+            border: 1px solid transparent;
+
+            background: #eeeeee;
+
+            cursor: pointer;
+
+            transition: .3s ease;
+        }
+
+
+        .product-thumbnail img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform .5s
+                cubic-bezier(.22,1,.36,1);
+        }
+
+
+        .product-thumbnail:hover img {
+
+            transform: scale(1.05);
+        }
+
+
+        .thumbnail-number {
+
+            position: absolute;
+
+            z-index: 3;
+
+            right: 6px;
+
+            bottom: 6px;
+
+            min-width: 25px;
+
+            height: 22px;
+
+            padding: 0 5px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: rgba(0,0,0,.75);
+
+            color: #ffffff;
+
+            font-size: 7px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+        }
+
+
+        .product-thumbnail.active {
+
+            border-color: #111111;
+        }
+
+
+        .product-thumbnail.active::after {
+
+            content: "";
+
+            position: absolute;
+
+            z-index: 4;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 0;
+
+            height: 3px;
+
+            background: #111111;
+        }
+
+
+
+        /* =========================================================
+           PRODUCT INFO STRIP
+        ========================================================== */
+
+        .product-info-strip {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            background: #f7f7f5;
+
+            border-top: 1px solid #dddddd;
+        }
+
+
+        .product-info-item {
+
+            min-height: 115px;
+
+            padding: 26px 30px;
+
+            border-right: 1px solid #dddddd;
+        }
+
+
+        .product-info-item:last-child {
+
+            border-right: 0;
+        }
+
+
+        .product-info-label {
+
+            display: block;
+
+            margin-bottom: 10px;
+
+            color: #999999;
+
+            font-size: 8px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+        }
+
+
+        .product-info-value {
+
+            color: #222222;
+
+            font-size: 14px;
+
+            font-weight: 500;
+        }
+
+
+
+        /* =========================================================
+           RESPONSIVE - 1200
+        ========================================================== */
+
+        @media (max-width: 1200px) {
+
+            .power-catalogue {
+
+                grid-template-columns:
+                    330px minmax(0,1fr);
+            }
+
+
+            .product-thumbnails {
+
+                grid-template-columns:
+                    repeat(3,minmax(0,1fr));
+            }
+
+        }
+
+
+
+        /* =========================================================
+           RESPONSIVE - TABLET
+        ========================================================== */
+
+        @media (max-width: 991px) {
+.power-products-page {
+
+                padding-top: 80px;
+            }
+
+
+            .power-products-intro-inner {
+
+                grid-template-columns: 1fr;
+
+                gap: 25px;
+            }
+
+
+            .power-catalogue {
+
+                grid-template-columns:
+                    300px minmax(0,1fr);
+            }
+
+
+            .product-visual {
+
+                min-height: 560px;
+            }
+
+
+            .display-title {
+
+                font-size: 55px;
+            }
+
+        }
+
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================== */
+
+        @media (max-width: 767px) {
+
+
+            .power-products-intro {
+
+                padding:
+                    48px 20px
+                    38px;
+            }
+
+
+            .power-products-intro h1 {
+
+                font-size: 44px;
+
+                letter-spacing: -2px;
+            }
+
+
+            .power-catalogue {
+
+                display: block;
+            }
+
+
+            .catalogue-sidebar {
+
+                border-right: 0;
+
+                border-bottom: 1px solid #dddddd;
+            }
+
+
+            .catalogue-sidebar-inner {
+
+                position: relative;
+
+                top: auto;
+
+                max-height: none;
+            }
+
+
+            .catalogue-display-header {
+
+                padding: 0 20px;
+            }
+
+
+            .product-visual {
+
+                min-height: 500px;
+            }
+
+
+            .product-visual-content {
+
+                left: 24px;
+
+                right: 24px;
+
+                bottom: 28px;
+            }
+
+
+            .display-title {
+
+                font-size: 43px;
+
+                letter-spacing: -2px;
+            }
+
+
+            .gallery-image-counter {
+
+                top: 20px;
+
+                right: 20px;
+            }
+
+
+            .product-gallery-wrapper {
+
+                padding: 22px 20px 25px;
+            }
+
+
+            .product-thumbnails {
+
+                grid-template-columns:
+                    repeat(2,minmax(0,1fr));
+            }
+
+
+            .product-info-strip {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .product-info-item {
+
+                border-right: 0;
+
+                border-bottom: 1px solid #dddddd;
+            }
+
+
+            .product-info-item:last-child {
+
+                border-bottom: 0;
+            }
+
+        }
+
+    </style>
+
 </head>
 
+
+
 <body>
+
+
 
 <!-- =========================================================
      MODULE — NAVBAR
@@ -209,7 +1440,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
 
                     <li class="nav-item dropdown solution-dropdown position-static">
                         <a class="nav-link dropdown-toggle " href="#" id="solutionsDropdown" role="button"
@@ -261,7 +1492,7 @@
                             <li><a class="dropdown-item" href="iot-bms.html">IoT+BMS</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="power-products.html">Products</a></li>
+                    <li class="nav-item active"><a class="nav-link active" href="power-products.html">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -612,1295 +1843,220 @@ document.addEventListener("DOMContentLoaded", function () {
 <!-- END MODULE — NAVBAR -->
 
 <!-- =========================================================
-     MODULE — PRODUCT INTRO
+     MODULE — PRODUCT CATALOGUE PAGE
 ========================================================= -->
-<style>
-/* =========================================================
-           PAGE INTRO
-        ========================================================== */
 
-        .smart-pole-intro {
+<!-- =============================================================
+     PAGE
+============================================================= -->
 
-            padding: 170px 0 90px;
-
-            background: #ffffff;
-        }
+<main class="power-products-page">
 
 
-        .smart-intro-grid {
 
-            display: grid;
+    <!-- =========================================================
+         INTRO
+    ========================================================== -->
 
-            grid-template-columns:
-                minmax(0, 1.05fr)
-                minmax(360px, .72fr);
-
-            gap: 100px;
-
-            align-items: end;
-        }
+    <section class="power-products-intro">
 
 
-        .smart-intro-copy {
-
-            max-width: 480px;
-        }
-
-
-        .smart-intro-copy p {
-
-            margin: 0 0 28px;
-
-            color: #6f6f6f;
-
-            font-size: 14px;
-
-            line-height: 1.9;
-        }
-
-
-        .smart-intro-tags {
-
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 9px;
-        }
-
-
-        .smart-intro-tags span {
-
-            padding: 9px 13px;
-
-            border: 1px solid #dddddd;
-
-            color: #555555;
-
-            font-size: 8px;
-
-            font-weight: 700;
-
-            letter-spacing: 1.5px;
-
-            text-transform: uppercase;
-        }
-</style>
-
-<section class="smart-pole-intro">
-
-    <div class="smart-container">
-
-        <div class="smart-intro-grid">
+        <div class="power-products-intro-inner">
 
 
             <div>
 
-                <span class="smart-eyebrow">
 
-                    R&D / Smart Infrastructure
+                <span class="power-products-eyebrow">
+
+                    Power Products
 
                 </span>
 
 
-                <h1 class="smart-title">
+                <h1>
 
-                    One intelligent pole.
+                    Engineering products
+                    for
+
                     <span>
-                        Multiple urban systems.
+                        dependable power.
                     </span>
 
                 </h1>
 
-            </div>
-
-
-            <div class="smart-intro-copy">
-
-                <p>
-
-                    Alpha Numeric Smart Pole integrates mobility,
-                    public safety, connectivity, environmental
-                    monitoring, intelligent lighting and AI-enabled
-                    communication into one connected urban
-                    infrastructure platform.
-
-                </p>
-
-
-                <div class="smart-intro-tags">
-
-                    <span>Smart City</span>
-                    <span>IoT</span>
-                    <span>AI Enabled</span>
-                    <span>Connected Infrastructure</span>
-
-                </div>
 
             </div>
 
-        </div>
 
-    </div>
 
-</section>
+            <p>
 
-<!-- END MODULE — PRODUCT INTRO -->
-
-<!-- =========================================================
-     MODULE — MAIN PRODUCT VISUAL
-========================================================= -->
-<style>
-/* =========================================================
-           PRODUCT HERO VISUAL
-        ========================================================== */
-
-        .smart-product-visual {
-
-            background: #111111;
-
-            overflow: hidden;
-        }
-
-
-        .smart-product-visual-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                minmax(0, 1.4fr)
-                minmax(320px, .6fr);
-
-            min-height: 720px;
-        }
-
-
-        .smart-product-image {
-
-            position: relative;
-
-            min-height: 720px;
-
-            background:
-                linear-gradient(
-                    to top,
-                    rgba(0,0,0,.62),
-                    rgba(0,0,0,.05)
-                ),
-                url("assets/img/rnd/smart-pole/smart-pole-main.jpg");
-
-            background-size: cover;
-
-            background-position: center;
-        }
-
-
-        .smart-product-image-label {
-
-            position: absolute;
-
-            left: 35px;
-
-            top: 35px;
-
-            padding: 10px 14px;
-
-            background: rgba(255,255,255,.94);
-
-            color: #111111;
-
-            font-size: 8px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-        }
-
-
-        .smart-product-side {
-
-            padding: 60px 45px;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: space-between;
-
-            color: #ffffff;
-        }
-
-
-        .smart-product-side-number {
-
-            color: #777777;
-
-            font-size: 9px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-        }
-
-
-        .smart-product-side h2 {
-
-            margin: 0 0 20px;
-
-            font-size: clamp(38px, 4vw, 60px);
-
-            line-height: .98;
-
-            letter-spacing: -2.5px;
-
-            font-weight: 500;
-        }
-
-
-        .smart-product-side h2 span {
-
-            display: block;
-
-            color: #7f7f7f;
-
-            font-weight: 300;
-        }
-
-
-        .smart-product-side p {
-
-            margin: 0;
-
-            color: #9a9a9a;
-
-            font-size: 13px;
-
-            line-height: 1.9;
-        }
-
-
-        .smart-product-side-bottom {
-
-            border-top: 1px solid #2f2f2f;
-
-            padding-top: 28px;
-        }
-
-
-        .smart-product-side-bottom span {
-
-            display: block;
-
-            margin-bottom: 8px;
-
-            color: #686868;
-
-            font-size: 8px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-        }
-
-
-        .smart-product-side-bottom strong {
-
-            font-size: 14px;
-
-            font-weight: 500;
-        }
-</style>
-
-<section class="smart-product-visual">
-
-
-    <div class="smart-product-visual-grid">
-
-
-        <!-- IMAGE -->
-
-        <div class="smart-product-image">
-
-            <div class="smart-product-image-label">
-
-                Alpha Numeric / R&D Product
-
-            </div>
-
-        </div>
-
-
-        <!-- CONTENT -->
-
-        <div class="smart-product-side">
-
-
-            <div class="smart-product-side-number">
-
-                01 / SMART POLE
-
-            </div>
-
-
-            <div>
-
-                <h2>
-
-                    Smart
-                    <span>
-                        Pole.
-                    </span>
-
-                </h2>
-
-
-                <p>
-
-                    A multifunctional urban infrastructure system
-                    designed to combine electrical services,
-                    connectivity, public communication, monitoring,
-                    charging and intelligent digital technologies
-                    within one integrated structure.
-
-                </p>
-
-            </div>
-
-
-            <div class="smart-product-side-bottom">
-
-                <span>
-                    Product Direction
-                </span>
-
-                <strong>
-                    Connected • Intelligent • Multi-functional
-                </strong>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- END MODULE — MAIN PRODUCT VISUAL -->
-
-<!-- =========================================================
-     MODULE — FEATURES INTRO
-========================================================= -->
-<style>
-/* =========================================================
-           FEATURE INTRO
-        ========================================================== */
-
-        .features-intro {
-
-            padding: 125px 0 70px;
-
-            background: #f7f7f5;
-        }
-
-
-        .features-intro-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                minmax(0, 1fr)
-                minmax(300px, 430px);
-
-            gap: 90px;
-
-            align-items: end;
-        }
-</style>
-
-<section class="features-intro">
-
-    <div class="smart-container">
-
-        <div class="features-intro-grid">
-
-
-            <div>
-
-                <span class="smart-eyebrow">
-
-                    Integrated Features
-
-                </span>
-
-
-                <h2 class="smart-title">
-
-                    One platform.
-                    <span>
-                        Sixteen capabilities.
-                    </span>
-
-                </h2>
-
-            </div>
-
-
-            <p class="smart-copy">
-
-                Smart Pole brings multiple city services together
-                in a single infrastructure asset — reducing
-                standalone equipment while enabling a more
-                connected and intelligent public environment.
+                Explore our complete range of control panels,
+                panel boards, transformers, switchgear and
+                intelligent controllers. Select a product from
+                the catalogue to view its complete image gallery.
 
             </p>
 
-        </div>
-
-    </div>
-
-</section>
-
-<!-- END MODULE — FEATURES INTRO -->
-
-<!-- =========================================================
-     MODULE — FEATURE GRID — 16 CAPABILITIES
-========================================================= -->
-<style>
-/* =========================================================
-           FEATURE GRID
-        ========================================================== */
-
-        .smart-features {
-
-            padding: 0 0 130px;
-
-            background: #f7f7f5;
-        }
-
-
-        .feature-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(4, minmax(0,1fr));
-
-            border-top: 1px solid #dddddd;
-
-            border-left: 1px solid #dddddd;
-        }
-
-
-        .feature-card {
-
-            position: relative;
-
-            min-height: 285px;
-
-            padding: 32px 28px;
-
-            background: #ffffff;
-
-            border-right: 1px solid #dddddd;
-
-            border-bottom: 1px solid #dddddd;
-
-            overflow: hidden;
-
-            transition:
-                background .35s ease,
-                color .35s ease,
-                transform .35s ease;
-        }
-
-
-        .feature-card::before {
-
-            content: "";
-
-            position: absolute;
-
-            top: 0;
-            left: 0;
-
-            width: 0;
-
-            height: 2px;
-
-            background: #111111;
-
-            transition: width .4s ease;
-        }
-
-
-        .feature-card:hover::before {
-
-            width: 100%;
-        }
-
-
-        .feature-card:hover {
-
-            background: #111111;
-
-            color: #ffffff;
-        }
-
-
-        .feature-number {
-
-            display: block;
-
-            margin-bottom: 42px;
-
-            color: #aaaaaa;
-
-            font-size: 8px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-        }
-
-
-        .feature-icon {
-
-            width: 46px;
-
-            height: 46px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            margin-bottom: 28px;
-
-            border: 1px solid #dedede;
-
-            background: #fafafa;
-
-            color: #111111;
-
-            font-size: 17px;
-
-            transition: .35s ease;
-        }
-
-
-        .feature-card:hover .feature-icon {
-
-            background: #ffffff;
-
-            border-color: #ffffff;
-
-            color: #111111;
-        }
-
-
-        .feature-card h3 {
-
-            margin: 0 0 12px;
-
-            font-size: 17px;
-
-            font-weight: 600;
-
-            line-height: 1.3;
-        }
-
-
-        .feature-card p {
-
-            margin: 0;
-
-            color: #777777;
-
-            font-size: 11px;
-
-            line-height: 1.75;
-
-            transition: .35s ease;
-        }
-
-
-        .feature-card:hover p {
-
-            color: #aaaaaa;
-        }
-</style>
-
-<section class="smart-features">
-
-    <div class="smart-container">
-
-
-        <div class="feature-grid">
-
-
-            <!-- 01 -->
-
-            <article class="feature-card">
-
-                <span class="feature-number">
-                    01
-                </span>
-
-                <div class="feature-icon">
-                    <i class="fa-solid fa-charging-station"></i>
-                </div>
-
-                <h3>
-                    EV Charger
-                </h3>
-
-                <p>
-                    Integrated electric vehicle charging support
-                    for smart mobility infrastructure.
-                </p>
-
-            </article>
-
-
-            <!-- 02 -->
-
-            <article class="feature-card">
-
-                <span class="feature-number">
-                    02
-                </span>
-
-                <div class="feature-icon">
-                    <i class="fa-solid fa-triangle-exclamation"></i>
-                </div>
-
-                <h3>
-                    Emergency SOS Alert
-                </h3>
-
-                <p>
-                    Emergency assistance interface for rapid
-                    public safety communication.
-                </p>
-
-            </article>
-
-
-            <!-- 03 -->
-
-            <article class="feature-card">
-
-                <span class="feature-number">
-                    03
-                </span>
-
-                <div class="feature-icon">
-                    <i class="fa-solid fa-plug"></i>
-                </div>
-
-                <h3>
-                    Wired Charging
-                </h3>
-
-                <p>
-                    Public device charging capability through
-                    integrated wired charging points.
-                </p>
-
-            </article>
-
-
-            <!-- 04 -->
-
-            <article class="feature-card">
-
-                <span class="feature-number">
-                    04
-                </span>
-
-                <div class="feature-icon">
-                    <i class="fa-solid fa-bolt"></i>
-                </div>
-
-                <h3>
-                    Wireless Charging
-                </h3>
-
-                <p>
-                    Convenient wireless charging support for
-                    compatible mobile devices.
-                </p>
-
-            </article>
-
-
-            <!-- 05 -->
-
-            <article class="feature-card">
-
-                <span class="feature-number">
-                    05
-                </span>
-
-                <div class="feature-icon">
-                    <i class="fa-solid fa-wind"></i>
-                </div>
-
-                <h3>
-                    Air Quality Sensor
-                </h3>
-
-                <p>
-                    Environmental sensing capability for monitoring
-                    local air quality conditions.
-                </p>
-
-            </article>
-
-
-            <!-- 06 -->
-
-            <article class="feature-card">
-
-                <span class="feature-number">
-                    06
-                </span>
-
-                <div class="feature-icon">
-                    <i class="fa-solid fa-display"></i>
-                </div>
-
-                <h3>
-                    Air Quality Screen
-                </h3>
-
-                <p>
-                    Public-facing display for communicating
-                    environmental and air quality information.
-                </p>
-
-            </article>
-
-
-            <!-- 07 -->
-
-            <article class="feature-card">
-
-                <span class="feature-number">
-                    07
-                </span>
-
-                <div class="feature-icon">
-                    <i class="fa-solid fa-lightbulb"></i>
-                </div>
-
-                <h3>
-                    Street Lighting
-                </h3>
-
-                <p>
-                    Integrated public lighting for safer and more
-                    efficient urban environments.
-                </p>
-
-            </article>
-
-
-            <!-- 08 -->
-
-            <article class="feature-card">
-
-                <span class="feature-number">
-                    08
-                </span>
-
-                <div class="feature-icon">
-                    <i class="fa-solid fa-volume-high"></i>
-                </div>
-
-                <h3>
-                    PA Loudspeaker
-                </h3>
-
-                <p>
-                    Public announcement system for alerts,
-                    information and emergency communication.
-                </p>
-
-            </article>
-
-
-            <!-- 09 -->
-
-            <article class="feature-card">
-
-                <span class="feature-number">
-                    09
-                </span>
-
-                <div class="feature-icon">
-                    <i class="fa-solid fa-solar-panel"></i>
-                </div>
-
-                <h3>
-                    Power Generation System
-                </h3>
-
-                <p>
-                    Integrated power generation capability to
-                    support smart pole system operation.
-                </p>
-
-            </article>
-
-
-            <!-- 10 -->
-
-            <article class="feature-card">
-
-                <span class="feature-number">
-                    10
-                </span>
-
-                <div class="feature-icon">
-                    <i class="fa-solid fa-tv"></i>
-                </div>
-
-                <h3>
-                    RGB Pixel LED Screen
-                </h3>
-
-                <p>
-                    Dynamic digital display for messages,
-                    information and visual communication.
-                </p>
-
-            </article>
-
-
-            <!-- 11 -->
-
-            <article class="feature-card">
-
-                <span class="feature-number">
-                    11
-                </span>
-
-                <div class="feature-icon">
-                    <i class="fa-solid fa-person-rays"></i>
-                </div>
-
-                <h3>
-                    Motion Detector
-                </h3>
-
-                <p>
-                    Motion sensing for responsive lighting,
-                    monitoring and intelligent system actions.
-                </p>
-
-            </article>
-
-
-            <!-- 12 -->
-
-            <article class="feature-card">
-
-                <span class="feature-number">
-                    12
-                </span>
-
-                <div class="feature-icon">
-                    <i class="fa-solid fa-wifi"></i>
-                </div>
-
-                <h3>
-                    Wi-Fi Hotspot
-                </h3>
-
-                <p>
-                    Public wireless connectivity supporting
-                    connected urban environments.
-                </p>
-
-            </article>
-
-
-            <!-- 13 -->
-
-            <article class="feature-card">
-
-                <span class="feature-number">
-                    13
-                </span>
-
-                <div class="feature-icon">
-                    <i class="fa-solid fa-phone-volume"></i>
-                </div>
-
-                <h3>
-                    Intercom
-                </h3>
-
-                <p>
-                    Two-way communication interface for public
-                    assistance and emergency interaction.
-                </p>
-
-            </article>
-
-
-            <!-- 14 -->
-
-            <article class="feature-card">
-
-                <span class="feature-number">
-                    14
-                </span>
-
-                <div class="feature-icon">
-                    <i class="fa-solid fa-tablet-screen-button"></i>
-                </div>
-
-                <h3>
-                    Android Touch Screen
-                </h3>
-
-                <p>
-                    Interactive touch interface for digital services,
-                    public information and smart applications.
-                </p>
-
-            </article>
-
-
-            <!-- 15 -->
-
-            <article class="feature-card">
-
-                <span class="feature-number">
-                    15
-                </span>
-
-                <div class="feature-icon">
-                    <i class="fa-solid fa-microphone-lines"></i>
-                </div>
-
-                <h3>
-                    AI-Based Voice Communication
-                </h3>
-
-                <p>
-                    AI-enabled voice interaction designed for
-                    intelligent public communication experiences.
-                </p>
-
-            </article>
-
-
-            <!-- 16 -->
-
-            <article class="feature-card">
-
-                <span class="feature-number">
-                    16
-                </span>
-
-                <div class="feature-icon">
-                    <i class="fa-solid fa-camera"></i>
-                </div>
-
-                <h3>
-                    AI-Based Camera
-                </h3>
-
-                <p>
-                    Intelligent camera capability for monitoring,
-                    visual analytics and smart infrastructure use.
-                </p>
-
-            </article>
-
 
         </div>
 
-    </div>
 
-</section>
+    </section>
 
-<!-- END MODULE — FEATURE GRID — 16 CAPABILITIES -->
 
-<!-- =========================================================
-     MODULE — SYSTEM ARCHITECTURE
-========================================================= -->
-<style>
-/* =========================================================
-           FEATURE ARCHITECTURE
-        ========================================================== */
 
-        .feature-architecture {
+    <!-- =========================================================
+         CATALOGUE
+    ========================================================== -->
 
-            padding: 130px 0;
+    <section class="power-catalogue">
 
-            background: #ffffff;
-        }
 
 
-        .feature-architecture-grid {
+        <!-- =====================================================
+             LEFT
+        ====================================================== -->
 
-            display: grid;
+        <aside class="catalogue-sidebar">
 
-            grid-template-columns:
-                minmax(320px, .75fr)
-                minmax(0, 1.25fr);
 
-            gap: 100px;
+            <div class="catalogue-sidebar-inner">
 
-            align-items: start;
-        }
 
+                <div class="catalogue-sidebar-header">
 
-        .architecture-sticky {
-
-            position: sticky;
-
-            top: 150px;
-        }
-
-
-        .architecture-sticky p {
-
-            max-width: 430px;
-
-            margin-top: 26px;
-
-            color: #777777;
-
-            font-size: 13px;
-
-            line-height: 1.9;
-        }
-
-
-        .architecture-list {
-
-            border-top: 1px solid #dddddd;
-        }
-
-
-        .architecture-item {
-
-            display: grid;
-
-            grid-template-columns:
-                70px
-                1fr
-                minmax(150px, auto);
-
-            gap: 25px;
-
-            align-items: center;
-
-            min-height: 115px;
-
-            border-bottom: 1px solid #dddddd;
-
-            transition: padding .35s ease;
-        }
-
-
-        .architecture-item:hover {
-
-            padding-left: 15px;
-        }
-
-
-        .architecture-number {
-
-            color: #aaaaaa;
-
-            font-size: 9px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-        }
-
-
-        .architecture-item h3 {
-
-            margin: 0;
-
-            font-size: 20px;
-
-            font-weight: 500;
-        }
-
-
-        .architecture-item span:last-child {
-
-            color: #999999;
-
-            font-size: 8px;
-
-            font-weight: 700;
-
-            letter-spacing: 1.6px;
-
-            text-transform: uppercase;
-        }
-</style>
-
-<section class="feature-architecture">
-
-    <div class="smart-container">
-
-
-        <div class="feature-architecture-grid">
-
-
-            <!-- LEFT -->
-
-            <div class="architecture-sticky">
-
-                <span class="smart-eyebrow">
-
-                    System Architecture
-
-                </span>
-
-
-                <h2 class="smart-title">
-
-                    Designed as one
                     <span>
-                        connected ecosystem.
+                        Product Catalogue
                     </span>
 
-                </h2>
+                    <h2>
+                        Power Products
+                    </h2>
+
+                </div>
 
 
-                <p>
 
-                    Instead of operating as isolated urban devices,
-                    Smart Pole combines key services into coordinated
-                    functional layers.
+                <div id="categoryList">
 
-                </p>
+                    <!-- AUTO GENERATED -->
+
+                </div>
+
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =====================================================
+             RIGHT
+        ====================================================== -->
+
+        <section class="catalogue-display">
+
+
+
+            <!-- HEADER -->
+
+            <div class="catalogue-display-header">
+
+
+                <div
+                    class="catalogue-breadcrumb"
+                    id="displayBreadcrumb">
+
+                    POWER PRODUCTS / CONTROL PANELS
+
+                </div>
+
+
+                <div
+                    class="catalogue-product-index"
+                    id="displayProductIndex">
+
+                    01 / 10
+
+                </div>
+
 
             </div>
 
 
 
-            <!-- RIGHT -->
+            <!-- =================================================
+                 MAIN IMAGE
+            ================================================== -->
 
-            <div class="architecture-list">
+            <div
+                class="product-visual"
+                id="productVisual">
 
 
-                <div class="architecture-item">
+                <img
+                    src="assets/img/controlpanels/PCC Panels.png"
+                    alt="PCC Panel"
+                    class="product-visual-image"
+                    id="displayImage">
 
-                    <span class="architecture-number">
+
+
+                <!-- IMAGE COUNTER -->
+
+                <div class="gallery-image-counter">
+
+                    <span id="currentImageNumber">
                         01
                     </span>
 
-                    <h3>
-                        Energy & Charging
-                    </h3>
+                    <span>/</span>
 
-                    <span>
-                        EV • Wired • Wireless • Generation
-                    </span>
-
-                </div>
-
-
-                <div class="architecture-item">
-
-                    <span class="architecture-number">
-                        02
-                    </span>
-
-                    <h3>
-                        Safety & Emergency
-                    </h3>
-
-                    <span>
-                        SOS • Intercom • PA • Camera
-                    </span>
-
-                </div>
-
-
-                <div class="architecture-item">
-
-                    <span class="architecture-number">
-                        03
-                    </span>
-
-                    <h3>
-                        Environment Monitoring
-                    </h3>
-
-                    <span>
-                        AQ Sensor • AQ Display
-                    </span>
-
-                </div>
-
-
-                <div class="architecture-item">
-
-                    <span class="architecture-number">
-                        04
-                    </span>
-
-                    <h3>
-                        Connectivity
-                    </h3>
-
-                    <span>
-                        Wi-Fi • Touch Screen • Voice
-                    </span>
-
-                </div>
-
-
-                <div class="architecture-item">
-
-                    <span class="architecture-number">
-                        05
-                    </span>
-
-                    <h3>
-                        Smart Lighting & Detection
-                    </h3>
-
-                    <span>
-                        Street Light • Motion
-                    </span>
-
-                </div>
-
-
-                <div class="architecture-item">
-
-                    <span class="architecture-number">
+                    <span id="totalImageNumber">
                         06
                     </span>
 
-                    <h3>
-                        Digital Communication
-                    </h3>
+                </div>
 
-                    <span>
-                        RGB LED • Android • AI
+
+
+                <!-- CONTENT -->
+
+                <div class="product-visual-content">
+
+
+                    <span
+                        class="display-category"
+                        id="displayCategory">
+
+                        Control Panels
+
                     </span>
+
+
+                    <h2
+                        class="display-title"
+                        id="displayTitle">
+
+                        PCC Panel
+
+                    </h2>
+
+
+                    <p
+                        class="display-description"
+                        id="displayDescription">
+
+                        Power Control Centre designed for reliable
+                        electrical distribution, protection and
+                        centralized control across industrial
+                        electrical systems.
+
+                    </p>
+
 
                 </div>
 
@@ -1908,972 +2064,1926 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
 
 
-        </div>
 
-    </div>
+            <!-- =================================================
+                 GALLERY
+            ================================================== -->
 
-</section>
+            <div class="product-gallery-wrapper">
 
-<!-- END MODULE — SYSTEM ARCHITECTURE -->
 
-<!-- =========================================================
-     MODULE — TECHNOLOGY BAND
-========================================================= -->
-<style>
-/* =========================================================
-           TECHNOLOGY BAND
-        ========================================================== */
+                <div class="gallery-heading">
 
-        .technology-band {
 
-            position: relative;
+                    <div>
 
-            min-height: 650px;
+                        <span class="gallery-heading-label">
 
-            display: flex;
+                            Product Gallery
 
-            align-items: flex-end;
+                        </span>
 
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(0,0,0,.92),
-                    rgba(0,0,0,.35)
-                ),
-                url("assets/img/rnd/smart-pole/smart-pole-city.jpg");
 
-            background-size: cover;
+                        <strong id="galleryProductName">
 
-            background-position: center;
+                            PCC Panel
 
-            color: #ffffff;
-        }
+                        </strong>
 
+                    </div>
 
-        .technology-band-content {
 
-            width: min(calc(100% - 80px),1500px);
 
-            margin: 0 auto;
+                    <div class="gallery-controls">
 
-            padding: 95px 0;
-        }
 
+                        <button
+                            class="gallery-nav"
+                            id="galleryPrevious"
+                            type="button"
+                            aria-label="Previous image">
 
-        .technology-band .smart-eyebrow {
+                            <i class="bi bi-arrow-left"></i>
 
-            color: rgba(255,255,255,.60);
-        }
+                        </button>
 
 
-        .technology-band h2 {
+                        <button
+                            class="gallery-nav"
+                            id="galleryNext"
+                            type="button"
+                            aria-label="Next image">
 
-            max-width: 900px;
+                            <i class="bi bi-arrow-right"></i>
 
-            margin: 22px 0 26px;
+                        </button>
 
-            font-size: clamp(44px,5vw,76px);
 
-            line-height: .98;
+                    </div>
 
-            letter-spacing: -3px;
 
-            font-weight: 500;
-        }
+                </div>
 
 
-        .technology-band h2 span {
 
-            color: rgba(255,255,255,.58);
+                <!-- THUMBNAILS -->
 
-            font-weight: 300;
-        }
+                <div
+                    class="product-thumbnails"
+                    id="productThumbnails">
 
+                </div>
 
-        .technology-band p {
-
-            max-width: 620px;
-
-            margin: 0;
-
-            color: rgba(255,255,255,.68);
-
-            font-size: 13px;
-
-            line-height: 1.9;
-        }
-</style>
-
-<section class="technology-band">
-
-    <div class="technology-band-content">
-
-
-        <span class="smart-eyebrow">
-
-            Future-Ready Infrastructure
-
-        </span>
-
-
-        <h2>
-
-            From street furniture
-            to
-
-            <span>
-                intelligent city infrastructure.
-            </span>
-
-        </h2>
-
-
-        <p>
-
-            Smart Pole transforms a conventional public pole into
-            a multifunctional connected asset that can support
-            mobility, information, safety, environmental monitoring,
-            communication and intelligent digital services.
-
-        </p>
-
-
-    </div>
-
-</section>
-
-<!-- END MODULE — TECHNOLOGY BAND -->
-
-<!-- =========================================================
-     MODULE — CAPABILITY STRIP
-========================================================= -->
-<style>
-/* =========================================================
-           CAPABILITY STRIP
-        ========================================================== */
-
-        .capability-strip {
-
-            background: #111111;
-
-            color: #ffffff;
-        }
-
-
-        .capability-strip-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(4,1fr);
-        }
-
-
-        .capability-strip-item {
-
-            min-height: 145px;
-
-            padding: 30px 28px;
-
-            border-right: 1px solid #2f2f2f;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: space-between;
-        }
-
-
-        .capability-strip-item:first-child {
-
-            border-left: 1px solid #2f2f2f;
-        }
-
-
-        .capability-strip-item span {
-
-            color: #666666;
-
-            font-size: 8px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-        }
-
-
-        .capability-strip-item strong {
-
-            font-size: 14px;
-
-            font-weight: 500;
-        }
-</style>
-
-<section class="capability-strip">
-
-    <div class="smart-container">
-
-
-        <div class="capability-strip-grid">
-
-
-            <div class="capability-strip-item">
-
-                <span>
-                    01 / CONNECT
-                </span>
-
-                <strong>
-                    Wi-Fi & Communication
-                </strong>
 
             </div>
 
 
-            <div class="capability-strip-item">
 
-                <span>
-                    02 / MONITOR
-                </span>
+            <!-- =================================================
+                 PRODUCT INFO
+            ================================================== -->
 
-                <strong>
-                    Sensors & AI Camera
-                </strong>
+            <div class="product-info-strip">
 
-            </div>
 
+                <div class="product-info-item">
 
-            <div class="capability-strip-item">
+                    <span class="product-info-label">
 
-                <span>
-                    03 / SUPPORT
-                </span>
+                        Category
 
-                <strong>
-                    Charging & Public Services
-                </strong>
-
-            </div>
-
-
-            <div class="capability-strip-item">
-
-                <span>
-                    04 / COMMUNICATE
-                </span>
-
-                <strong>
-                    Screens, Voice & PA
-                </strong>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- END MODULE — CAPABILITY STRIP -->
-
-<!-- =========================================================
-     MODULE — APPLICATIONS
-========================================================= -->
-<style>
-/* =========================================================
-           APPLICATIONS
-        ========================================================== */
-
-        .smart-applications {
-
-            padding: 130px 0;
-
-            background: #f7f7f5;
-        }
-
-
-        .applications-head {
-
-            display: grid;
-
-            grid-template-columns:
-                minmax(0,1fr)
-                minmax(300px,430px);
-
-            gap: 90px;
-
-            align-items: end;
-
-            margin-bottom: 60px;
-        }
-
-
-        .application-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3,1fr);
-
-            gap: 14px;
-        }
-
-
-        .application-card {
-
-            min-height: 230px;
-
-            padding: 30px;
-
-            background: #ffffff;
-
-            border: 1px solid #e2e2e2;
-
-            transition: .35s ease;
-        }
-
-
-        .application-card:hover {
-
-            transform: translateY(-5px);
-
-            border-color: #111111;
-        }
-
-
-        .application-card span {
-
-            display: block;
-
-            margin-bottom: 55px;
-
-            color: #aaaaaa;
-
-            font-size: 8px;
-
-            font-weight: 700;
-
-            letter-spacing: 2px;
-        }
-
-
-        .application-card h3 {
-
-            margin-bottom: 12px;
-
-            font-size: 18px;
-
-            font-weight: 600;
-        }
-
-
-        .application-card p {
-
-            margin: 0;
-
-            color: #777777;
-
-            font-size: 11px;
-
-            line-height: 1.75;
-        }
-</style>
-
-<section class="smart-applications">
-
-    <div class="smart-container">
-
-
-        <div class="applications-head">
-
-
-            <div>
-
-                <span class="smart-eyebrow">
-
-                    Applications
-
-                </span>
-
-
-                <h2 class="smart-title">
-
-                    Built for
-                    <span>
-                        connected public spaces.
                     </span>
 
-                </h2>
+                    <div
+                        class="product-info-value"
+                        id="infoCategory">
 
-            </div>
+                        Control Panels
 
+                    </div>
 
-            <p class="smart-copy">
+                </div>
 
-                The Smart Pole concept can support a wide range
-                of smart-city and public infrastructure environments.
 
-            </p>
 
-        </div>
+                <div class="product-info-item">
 
+                    <span class="product-info-label">
 
+                        Application
 
-        <div class="application-grid">
+                    </span>
 
+                    <div
+                        class="product-info-value"
+                        id="infoApplication">
 
-            <article class="application-card">
+                        Industrial Power Distribution
 
-                <span>
-                    01
-                </span>
+                    </div>
 
-                <h3>
-                    Smart Cities
-                </h3>
+                </div>
 
-                <p>
-                    Integrated urban services for connected
-                    and technology-enabled city environments.
-                </p>
 
-            </article>
 
+                <div class="product-info-item">
 
-            <article class="application-card">
+                    <span class="product-info-label">
 
-                <span>
-                    02
-                </span>
+                        Engineering Focus
 
-                <h3>
-                    Public Roads
-                </h3>
+                    </span>
 
-                <p>
-                    Lighting, monitoring, communication and
-                    charging infrastructure for modern road networks.
-                </p>
+                    <div
+                        class="product-info-value"
+                        id="infoFocus">
 
-            </article>
+                        Distribution & Protection
 
+                    </div>
 
-            <article class="application-card">
-
-                <span>
-                    03
-                </span>
-
-                <h3>
-                    Parks & Public Spaces
-                </h3>
-
-                <p>
-                    Connectivity and intelligent public services
-                    within high-footfall community spaces.
-                </p>
-
-            </article>
-
-
-            <article class="application-card">
-
-                <span>
-                    04
-                </span>
-
-                <h3>
-                    Transport Hubs
-                </h3>
-
-                <p>
-                    Digital information, safety, communication and
-                    charging support for transport infrastructure.
-                </p>
-
-            </article>
-
-
-            <article class="application-card">
-
-                <span>
-                    05
-                </span>
-
-                <h3>
-                    Campuses
-                </h3>
-
-                <p>
-                    Connected infrastructure for institutional,
-                    corporate and educational environments.
-                </p>
-
-            </article>
-
-
-            <article class="application-card">
-
-                <span>
-                    06
-                </span>
-
-                <h3>
-                    Commercial Districts
-                </h3>
-
-                <p>
-                    Intelligent outdoor infrastructure supporting
-                    connectivity, information and public engagement.
-                </p>
-
-            </article>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-<!-- END MODULE — APPLICATIONS -->
-
-<!-- =========================================================
-     MODULE — CTA
-========================================================= -->
-<style>
-/* =========================================================
-           CTA
-        ========================================================== */
-
-        .smart-cta {
-
-            padding: 120px 0;
-
-            background: #ffffff;
-        }
-
-
-        .smart-cta-inner {
-
-            display: grid;
-
-            grid-template-columns:
-                minmax(0,1fr)
-                320px;
-
-            gap: 90px;
-
-            align-items: end;
-
-            padding-top: 65px;
-
-            border-top: 1px solid #dddddd;
-        }
-
-
-        .smart-cta h2 {
-
-            max-width: 850px;
-
-            margin: 0;
-
-            font-size: clamp(45px,5.5vw,82px);
-
-            line-height: .98;
-
-            letter-spacing: -4px;
-
-            font-weight: 600;
-        }
-
-
-        .smart-cta h2 span {
-
-            color: #777777;
-
-            font-weight: 300;
-        }
-
-
-        .smart-cta-side p {
-
-            margin: 0 0 26px;
-
-            color: #777777;
-
-            font-size: 13px;
-
-            line-height: 1.8;
-        }
-
-
-        .smart-cta-button {
-
-            width: 100%;
-
-            min-height: 58px;
-
-            padding: 0 22px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            background: #111111;
-
-            color: #ffffff;
-
-            font-size: 10px;
-
-            font-weight: 700;
-
-            letter-spacing: 1.5px;
-
-            text-transform: uppercase;
-
-            transition: .35s ease;
-        }
-
-
-        .smart-cta-button:hover {
-
-            background: #303030;
-
-            color: #ffffff;
-        }
-</style>
-
-<section class="smart-cta">
-
-    <div class="smart-container">
-
-
-        <div class="smart-cta-inner">
-
-
-            <h2>
-
-                Ready to build
-                smarter
-
-                <span>
-                    public infrastructure?
-                </span>
-
-            </h2>
-
-
-            <div class="smart-cta-side">
-
-
-                <p>
-
-                    Talk to Alpha Numeric about Smart Pole
-                    integration, urban applications and
-                    customized smart infrastructure requirements.
-
-                </p>
-
-
-                <a
-                    href="index.html#contact"
-                    class="smart-cta-button">
-
-                    Discuss Smart Pole
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </a>
+                </div>
 
 
             </div>
 
 
-        </div>
+        </section>
 
-    </div>
 
-</section>
+    </section>
 
-<!-- END MODULE — CTA -->
 
-<!-- =========================================================
-     MODULE — GLOBAL RESPONSIVE OVERRIDES
-========================================================= -->
-<style>
-/* =========================================================
-           RESPONSIVE
-        ========================================================== */
+</main>
 
-        @media (max-width: 1200px) {
 
-            .feature-grid {
 
-                grid-template-columns:
-                    repeat(3,1fr);
+<!-- =============================================================
+     BOOTSTRAP JS
+============================================================= -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+
+<script>
+
+/* =============================================================
+   MODULE — PRODUCT DATABASE / CATALOGUE DATA
+============================================================= */
+
+/* =============================================================
+   POWER PRODUCT DATABASE
+
+   Add all new products here.
+
+   images[] = unlimited images supported.
+============================================================= */
+
+
+const powerCategories = [
+
+
+    /* =========================================================
+       01 CONTROL PANELS
+    ========================================================== */
+
+    {
+
+        number: "01",
+
+        name: "Control Panels",
+
+        products: [
+
+
+            /* PCC PANEL */
+
+            {
+
+                name: "PCC Panel",
+
+                application:
+                    "Industrial Power Distribution",
+
+                focus:
+                    "Distribution & Protection",
+
+                description:
+                    "Power Control Centre designed for reliable electrical distribution, protection and centralized control across industrial electrical systems.",
+
+                images: [
+
+                    "assets/img/controlpanels/PCC Panels.png",
+
+                    "assets/img/controlpanels/PCC Panels.png",
+
+                    "assets/img/controlpanels/PCC Panels.png",
+
+                    "assets/img/controlpanels/PCC Panels.png",
+
+                    "assets/img/controlpanels/PCC Panels.png",
+
+                    "assets/img/controlpanels/PCC Panels.png"
+
+                ]
+
+            },
+
+
+
+            /* MCC PANEL */
+
+            {
+
+                name: "MCC Panel",
+
+                application:
+                    "Motor Control Systems",
+
+                focus:
+                    "Motor Protection & Control",
+
+                description:
+                    "Motor Control Centre engineered for centralized control, protection and efficient operation of industrial motors and connected equipment.",
+
+                images: [
+
+                    "assets/img/controlpanels/MCC Panels.png",
+
+                    "assets/img/controlpanels/MCC Panels.png",
+
+                    "assets/img/controlpanels/MCC Panels.png",
+
+                    "assets/img/controlpanels/MCC Panels.png",
+
+                    "assets/img/controlpanels/MCC Panels.png",
+
+                    "assets/img/controlpanels/MCC Panels.png"
+
+                ]
+
+            },
+
+
+
+            /* APFC PANEL */
+
+            {
+
+                name: "APFC Panel",
+
+                application:
+                    "Power Factor Correction",
+
+                focus:
+                    "Energy Efficiency",
+
+                description:
+                    "Automatic Power Factor Correction panel engineered to improve power factor, reduce electrical losses and maintain efficient electrical system performance.",
+
+                images: [
+
+                    "assets/img/controlpanels/APFC Panels.jpg",
+
+                    "assets/img/controlpanels/APFC Panels.jpg",
+
+                    "assets/img/controlpanels/APFC Panels.jpg",
+
+                    "assets/img/controlpanels/APFC Panels.jpg",
+
+                    "assets/img/controlpanels/APFC Panels.jpg",
+
+                    "assets/img/controlpanels/APFC Panels.jpg"
+
+                ]
+
+            },
+
+
+
+            /* AMF PANEL */
+
+            {
+
+                name: "AMF Panel",
+
+                application:
+                    "Mains & Generator Control",
+
+                focus:
+                    "Automatic Power Transfer",
+
+                description:
+                    "Automatic Mains Failure panel designed for dependable automatic switching between mains supply and standby generator power.",
+
+                images: [
+
+                    "assets/img/controlpanels/AMF Panels.png",
+
+                    "assets/img/controlpanels/AMF Panels.png",
+
+                    "assets/img/controlpanels/AMF Panels.png",
+
+                    "assets/img/controlpanels/AMF Panels.png",
+
+                    "assets/img/controlpanels/AMF Panels.png",
+
+                    "assets/img/controlpanels/AMF Panels.png"
+
+                ]
+
+            },
+
+
+
+            /* PLC PANEL */
+
+            {
+
+                name: "PLC Control Panel",
+
+                application:
+                    "Industrial Automation",
+
+                focus:
+                    "Process Control",
+
+                description:
+                    "PLC control panel engineered for intelligent industrial automation, monitoring, process control and reliable machine operation.",
+
+                images: [
+
+                    "assets/img/controlpanels/PLC Control Panels.png",
+
+                    "assets/img/controlpanels/PLC Control Panels.png",
+
+                   "assets/img/controlpanels/PLC Control Panels.png",
+
+                    "assets/img/controlpanels/PLC Control Panels.png",
+
+                   "assets/img/controlpanels/PLC Control Panels.png",
+
+                    "assets/img/controlpanels/PLC Control Panels.png"
+
+                ]
+
+            },
+
+
+
+            /* VFD PANEL */
+
+            {
+
+                name: "VFD Panel",
+
+                application:
+                    "Motor Speed Control",
+
+                focus:
+                    "Efficiency & Automation",
+
+                description:
+                    "Variable Frequency Drive panel designed for precise motor speed control, smooth operation and improved energy efficiency.",
+
+                images: [
+
+                    "assets/img/controlpanels/VFD Panels.png",
+
+                    "assets/img/controlpanels/VFD Panels.png",
+
+                    "assets/img/controlpanels/VFD Panels.png",
+
+                    "assets/img/controlpanels/VFD Panels.png",
+
+                    "assets/img/controlpanels/VFD Panels.png",
+
+                    "assets/img/controlpanels/VFD Panels.png"
+
+                ]
+
+            },
+
+
+             /* Synchronizing PANEL */
+
+            {
+
+                name: "Synchronizing Panel",
+
+                application:
+                    "Industrial Power Distribution",
+
+                focus:
+                    "Distribution & Protection",
+
+                description:
+                    "Power Control Centre designed for reliable electrical distribution, protection and centralized control across industrial electrical systems.",
+
+                images: [
+
+                    "assets/img/controlpanels/Synchronizing Panels.png",
+
+                    "assets/img/controlpanels/Synchronizing Panels.png",
+
+                    "assets/img/controlpanels/Synchronizing Panels.png",
+
+                    "assets/img/controlpanels/Synchronizing Panels.png",
+
+                    "assets/img/controlpanels/Synchronizing Panels.png",
+
+                    "assets/img/controlpanels/Synchronizing Panels.png"
+
+                ]
+
+            },
+
+             /* Control & Relay PANELs */
+
+            {
+
+                name: "Control & Relay Panel",
+
+                application:
+                    "Industrial Power Distribution",
+
+                focus:
+                    "Distribution & Protection",
+
+                description:
+                    "Power Control Centre designed for reliable electrical distribution, protection and centralized control across industrial electrical systems.",
+
+                images: [
+
+                    "assets/img/controlpanels/Control & Relay Panels.png",
+
+                    "assets/img/controlpanels/Control & Relay Panels.png",
+
+                    "assets/img/controlpanels/Control & Relay Panels.png",
+
+                    "assets/img/controlpanels/Control & Relay Panels.png",
+
+                    "assets/img/controlpanels/Control & Relay Panels.png",
+
+                    "assets/img/controlpanels/Control & Relay Panels.png"
+
+                ]
+
+            },
+
+
+
+        ]
+
+    },
+
+
+
+    /* =========================================================
+       02 PANEL BOARDS
+    ========================================================== */
+
+    {
+
+        number: "02",
+
+        name: "Panel Boards",
+
+        products: [
+
+
+            {
+
+                name: "Main Distribution Board",
+
+                application:
+                    "Main Power Distribution",
+
+                focus:
+                    "Distribution & Protection",
+
+                description:
+                    "Main Distribution Board engineered for organized and reliable electrical power distribution across industrial and commercial installations.",
+
+                images: [
+
+                    "assets/img/panel-boards/main-distribution-board.png",
+
+                    "assets/img/panel-boards/main-distribution-board.png",
+
+                    "assets/img/panel-boards/main-distribution-board.png",
+
+                    "assets/img/panel-boards/main-distribution-board.png",
+
+                    "assets/img/panel-boards/main-distribution-board.png",
+
+                    "assets/img/panel-boards/main-distribution-board.png"
+
+                ]
+
+            },
+
+
+
+            {
+
+                name: "Sub Distribution Board",
+
+                application:
+                    "Secondary Distribution",
+
+                focus:
+                    "Safe Load Distribution",
+
+                description:
+                    "Sub Distribution Board developed for safe and organized downstream electrical distribution across buildings and industrial systems.",
+
+                images: [
+
+                    "assets/img/panel-boards/sub-distribution-board.png",
+
+                    "assets/img/panel-boards/sub-distribution-board.png",
+
+                    "assets/img/panel-boards/sub-distribution-board.png",
+
+                    "assets/img/panel-boards/sub-distribution-board.png",
+
+                    "assets/img/panel-boards/sub-distribution-board.png",
+
+                    "assets/img/panel-boards/sub-distribution-board.png"
+
+                    
+
+                ]
+
+            },
+
+
+
+            {
+
+                name: "Feeder Pillar Panel",
+
+                application:
+                    "Outdoor Distribution",
+
+                focus:
+                    "Feeder Distribution",
+
+                description:
+                    "Feeder pillar panel designed for safe outdoor electrical distribution, feeder control and dependable infrastructure operation.",
+
+                images: [
+
+                    "assets/img/panel-boards/feeder-pillar-panel.png",
+
+                    "assets/img/panel-boards/feeder-pillar-panel.png",
+
+                    "assets/img/panel-boards/feeder-pillar-panel.png",
+
+                    "assets/img/panel-boards/feeder-pillar-panel.png",
+
+                    "assets/img/panel-boards/feeder-pillar-panel.png",
+
+                    "assets/img/panel-boards/feeder-pillar-panel.png",
+
+                    
+
+                ]
+
+            },
+
+             {
+
+                name: "APFC Panel Boards",
+
+                application:
+                    "Outdoor Distribution",
+
+                focus:
+                    "Feeder Distribution",
+
+                description:
+                    "Feeder pillar panel designed for safe outdoor electrical distribution, feeder control and dependable infrastructure operation.",
+
+                images: [
+
+                    "assets/img/panel-boards/apfc-panel-board.png",
+
+                    "assets/img/panel-boards/apfc-panel-board.png",
+
+                    "assets/img/panel-boards/apfc-panel-board.png",
+
+                    "assets/img/panel-boards/apfc-panel-board.png",
+
+                    "assets/img/panel-boards/apfc-panel-board.png",
+
+                    "assets/img/panel-boards/apfc-panel-board.png",
+
+                ]
+
+            },
+
+            {
+
+                name: "Motor Distribution Boards",
+
+                application:
+                    "Outdoor Distribution",
+
+                focus:
+                    "Feeder Distribution",
+
+                description:
+                    "Feeder pillar panel designed for safe outdoor electrical distribution, feeder control and dependable infrastructure operation.",
+
+                images: [
+
+                    "assets/img/panel-boards/motor-distribution-board.png",
+
+                    "assets/img/panel-boards/motor-distribution-board.png",
+
+                    "assets/img/panel-boards/motor-distribution-board.png",
+
+                    "assets/img/panel-boards/motor-distribution-board.png",
+
+                    "assets/img/panel-boards/motor-distribution-board.png",
+
+                   "assets/img/panel-boards/motor-distribution-board.png",
+
+                ]
+
+            },
+
+             {
+
+                name: "Outdoor Panel Boards",
+
+                application:
+                    "Outdoor Distribution",
+
+                focus:
+                    "Feeder Distribution",
+
+                description:
+                    "Feeder pillar panel designed for safe outdoor electrical distribution, feeder control and dependable infrastructure operation.",
+
+                images: [
+
+                    "assets/img/panel-boards/outdoor-panel-board.png",
+
+                    "assets/img/panel-boards/outdoor-panel-board.png",
+
+                    "assets/img/panel-boards/outdoor-panel-board.png",
+
+                    "assets/img/panel-boards/outdoor-panel-board.png",
+
+                    "assets/img/panel-boards/outdoor-panel-board.png",
+
+                   "assets/img/panel-boards/outdoor-panel-board.png",
+
+                ]
+
+            },
+
+            {
+
+                name: "Metering Panels",
+
+                application:
+                    "Outdoor Distribution",
+
+                focus:
+                    "Feeder Distribution",
+
+                description:
+                    "Feeder pillar panel designed for safe outdoor electrical distribution, feeder control and dependable infrastructure operation.",
+
+                images: [
+
+                    "assets/img/panel-boards/metering-panel.png",
+
+                    "assets/img/panel-boards/metering-panel.png",
+
+                    "assets/img/panel-boards/metering-panel.png",
+
+                    "assets/img/panel-boards/metering-panel.png",
+
+                    "assets/img/panel-boards/metering-panel.png",
+
+                   "assets/img/panel-boards/metering-panel.png",
+
+                ]
+
+            },
+
+             {
+
+                name: "Changeover Panels",
+
+                application:
+                    "Outdoor Distribution",
+
+                focus:
+                    "Feeder Distribution",
+
+                description:
+                    "Feeder pillar panel designed for safe outdoor electrical distribution, feeder control and dependable infrastructure operation.",
+
+                images: [
+
+                    "assets/img/panel-boards/changeover-panel.png",
+
+                   "assets/img/panel-boards/changeover-panel.png",
+
+                   "assets/img/panel-boards/changeover-panel.png",
+
+                   "assets/img/panel-boards/changeover-panel.png",
+
+                   "assets/img/panel-boards/changeover-panel.png",
+
+                   "assets/img/panel-boards/changeover-panel.png",
+
+
+                ]
+
+            },
+
+
+            {
+
+                name: "Customized Panel Boards",
+
+                application:
+                    "Outdoor Distribution",
+
+                focus:
+                    "Feeder Distribution",
+
+                description:
+                    "Feeder pillar panel designed for safe outdoor electrical distribution, feeder control and dependable infrastructure operation.",
+
+                images: [
+
+                    "assets/img/panel-boards/customized-panel-board.png",
+
+                   "assets/img/panel-boards/customized-panel-board.png",
+
+                   "assets/img/panel-boards/customized-panel-board.png",
+
+                   "assets/img/panel-boards/customized-panel-board.png",
+
+                   "assets/img/panel-boards/customized-panel-board.png",
+
+                   "assets/img/panel-boards/customized-panel-board.png",
+
+                ]
+
             }
 
 
-            .smart-product-visual-grid {
 
-                grid-template-columns:
-                    minmax(0,1.25fr)
-                    minmax(300px,.75fr);
+
+        ]
+
+    },
+
+
+
+    /* =========================================================
+       03 TRANSFORMERS
+    ========================================================== */
+
+    {
+
+        number: "03",
+
+        name: "Transformers",
+
+        products: [
+
+
+            {
+
+                name: "Distribution Transformer",
+
+                application:
+                    "Utility & Distribution",
+
+                focus:
+                    "Voltage Transformation",
+
+                description:
+                    "Distribution transformer engineered for reliable voltage transformation and efficient power delivery across electrical distribution networks.",
+
+                images: [
+
+                    "assets/img/products/transformers/distribution-transformer/distribution-transformer-01.jpg",
+
+                    "assets/img/products/transformers/distribution-transformer/distribution-transformer-02.jpg",
+
+                    "assets/img/products/transformers/distribution-transformer/distribution-transformer-03.jpg",
+
+                    "assets/img/products/transformers/distribution-transformer/distribution-transformer-04.jpg",
+
+                    "assets/img/products/transformers/distribution-transformer/distribution-transformer-05.jpg",
+
+                    "assets/img/products/transformers/distribution-transformer/distribution-transformer-06.jpg"
+
+                ]
+
+            },
+
+
+
+            {
+
+                name: "Dry Type Transformer",
+
+                application:
+                    "Indoor Installations",
+
+                focus:
+                    "Safety & Reliability",
+
+                description:
+                    "Dry type transformer engineered for safe indoor power transformation with dependable operation and reduced maintenance requirements.",
+
+                images: [
+
+                    "assets/img/products/transformers/dry-type-transformer/dry-type-transformer-01.jpg",
+
+                    "assets/img/products/transformers/dry-type-transformer/dry-type-transformer-02.jpg",
+
+                    "assets/img/products/transformers/dry-type-transformer/dry-type-transformer-03.jpg",
+
+                    "assets/img/products/transformers/dry-type-transformer/dry-type-transformer-04.jpg",
+
+                    "assets/img/products/transformers/dry-type-transformer/dry-type-transformer-05.jpg",
+
+                    "assets/img/products/transformers/dry-type-transformer/dry-type-transformer-06.jpg"
+
+                ]
+
             }
+
+        ]
+
+    },
+
+
+
+    /* =========================================================
+       04 SWITCHGEARS
+    ========================================================== */
+
+    {
+
+        number: "04",
+
+        name: "Switchgears",
+
+        products: [
+
+
+            {
+
+                name: "LV Switchgear",
+
+                application:
+                    "Low Voltage Distribution",
+
+                focus:
+                    "Switching & Protection",
+
+                description:
+                    "Low-voltage switchgear engineered for safe switching, protection and isolation of electrical distribution systems.",
+
+                images: [
+
+                    "assets/img/products/switchgears/lv-switchgear/lv-switchgear-01.jpg",
+
+                    "assets/img/products/switchgears/lv-switchgear/lv-switchgear-02.jpg",
+
+                    "assets/img/products/switchgears/lv-switchgear/lv-switchgear-03.jpg",
+
+                    "assets/img/products/switchgears/lv-switchgear/lv-switchgear-04.jpg",
+
+                    "assets/img/products/switchgears/lv-switchgear/lv-switchgear-05.jpg",
+
+                    "assets/img/products/switchgears/lv-switchgear/lv-switchgear-06.jpg"
+
+                ]
+
+            },
+
+
+
+            {
+
+                name: "MV Switchgear",
+
+                application:
+                    "Medium Voltage Networks",
+
+                focus:
+                    "Protection & Isolation",
+
+                description:
+                    "Medium-voltage switchgear developed for reliable protection, switching and safe operation of electrical distribution networks.",
+
+                images: [
+
+                    "assets/img/products/switchgears/mv-switchgear/mv-switchgear-01.jpg",
+
+                    "assets/img/products/switchgears/mv-switchgear/mv-switchgear-02.jpg",
+
+                    "assets/img/products/switchgears/mv-switchgear/mv-switchgear-03.jpg",
+
+                    "assets/img/products/switchgears/mv-switchgear/mv-switchgear-04.jpg",
+
+                    "assets/img/products/switchgears/mv-switchgear/mv-switchgear-05.jpg",
+
+                    "assets/img/products/switchgears/mv-switchgear/mv-switchgear-06.jpg"
+
+                ]
+
+            }
+
+        ]
+
+    },
+
+
+
+    /* =========================================================
+       05 CONTROLLERS
+    ========================================================== */
+
+    {
+
+        number: "05",
+
+        name: "Controllers",
+
+        products: [
+
+
+            {
+
+                name: "Power Controller",
+
+                application:
+                    "Power Management",
+
+                focus:
+                    "Monitoring & Control",
+
+                description:
+                    "Intelligent power controller developed for monitoring, management and optimized control of modern electrical systems.",
+
+                images: [
+
+                    "assets/img/products/controllers/power-controller/power-controller-01.jpg",
+
+                    "assets/img/products/controllers/power-controller/power-controller-02.jpg",
+
+                    "assets/img/products/controllers/power-controller/power-controller-03.jpg",
+
+                    "assets/img/products/controllers/power-controller/power-controller-04.jpg",
+
+                    "assets/img/products/controllers/power-controller/power-controller-05.jpg",
+
+                    "assets/img/products/controllers/power-controller/power-controller-06.jpg"
+
+                ]
+
+            },
+
+
+
+            {
+
+                name: "Motor Controller",
+
+                application:
+                    "Motor Management",
+
+                focus:
+                    "Motor Monitoring & Protection",
+
+                description:
+                    "Motor controller engineered for precise motor management, protection, monitoring and dependable industrial operation.",
+
+                images: [
+
+                    "assets/img/products/controllers/motor-controller/motor-controller-01.jpg",
+
+                    "assets/img/products/controllers/motor-controller/motor-controller-02.jpg",
+
+                    "assets/img/products/controllers/motor-controller/motor-controller-03.jpg",
+
+                    "assets/img/products/controllers/motor-controller/motor-controller-04.jpg",
+
+                    "assets/img/products/controllers/motor-controller/motor-controller-05.jpg",
+
+                    "assets/img/products/controllers/motor-controller/motor-controller-06.jpg"
+
+                ]
+
+            }
+
+        ]
+
+    }
+
+];
+
+
+
+/* =============================================================
+   DOM ELEMENTS
+============================================================= */
+
+const categoryList =
+    document.getElementById("categoryList");
+
+
+const productVisual =
+    document.getElementById("productVisual");
+
+
+const displayImage =
+    document.getElementById("displayImage");
+
+
+const displayCategory =
+    document.getElementById("displayCategory");
+
+
+const displayTitle =
+    document.getElementById("displayTitle");
+
+
+const displayDescription =
+    document.getElementById("displayDescription");
+
+
+const displayBreadcrumb =
+    document.getElementById("displayBreadcrumb");
+
+
+const displayProductIndex =
+    document.getElementById("displayProductIndex");
+
+
+const productThumbnails =
+    document.getElementById("productThumbnails");
+
+
+const galleryProductName =
+    document.getElementById("galleryProductName");
+
+
+const currentImageNumber =
+    document.getElementById("currentImageNumber");
+
+
+const totalImageNumber =
+    document.getElementById("totalImageNumber");
+
+
+const galleryPrevious =
+    document.getElementById("galleryPrevious");
+
+
+const galleryNext =
+    document.getElementById("galleryNext");
+
+
+const infoCategory =
+    document.getElementById("infoCategory");
+
+
+const infoApplication =
+    document.getElementById("infoApplication");
+
+
+const infoFocus =
+    document.getElementById("infoFocus");
+
+
+
+/* =============================================================
+   STATE
+============================================================= */
+
+let currentProduct = null;
+
+let currentCategory = null;
+
+let currentImageIndex = 0;
+
+
+
+/* =============================================================
+   TOTAL PRODUCTS
+============================================================= */
+
+const totalProducts =
+    powerCategories.reduce(
+
+        function(total, category) {
+
+            return total +
+                category.products.length;
+
+        },
+
+        0
+    );
+
+
+
+/* =============================================================
+   GLOBAL PRODUCT NUMBER
+============================================================= */
+
+function getGlobalProductNumber(
+    categoryIndex,
+    productIndex
+) {
+
+    let number = 0;
+
+
+    for (
+        let i = 0;
+        i < categoryIndex;
+        i++
+    ) {
+
+        number +=
+            powerCategories[i].products.length;
+
+    }
+
+
+    number += productIndex + 1;
+
+
+    return number;
+
+}
+
+
+
+/* =============================================================
+   RENDER SIDEBAR
+============================================================= */
+
+function renderCategories() {
+
+
+    categoryList.innerHTML = "";
+
+
+    powerCategories.forEach(
+
+        function(category, categoryIndex) {
+
+
+            const wrapper =
+                document.createElement("div");
+
+
+            wrapper.className =
+                "power-category";
+
+
+            if (categoryIndex === 0) {
+
+                wrapper.classList.add("open");
+
+            }
+
+
+
+            /* CATEGORY BUTTON */
+
+            const categoryButton =
+                document.createElement("button");
+
+
+            categoryButton.type =
+                "button";
+
+
+            categoryButton.className =
+                "category-button";
+
+
+            categoryButton.innerHTML = `
+
+                <span class="category-number">
+
+                    ${category.number}
+
+                </span>
+
+
+                <span class="category-content">
+
+                    <span class="category-title">
+
+                        ${category.name}
+
+                    </span>
+
+
+                    <span class="category-count">
+
+                        ${category.products.length}
+                        Products
+
+                    </span>
+
+                </span>
+
+
+                <span class="category-toggle">
+
+                    <i class="bi ${
+                        categoryIndex === 0
+                        ? "bi-dash"
+                        : "bi-plus"
+                    }"></i>
+
+                </span>
+
+            `;
+
+
+
+            /* PRODUCTS */
+
+            const productsContainer =
+                document.createElement("div");
+
+
+            productsContainer.className =
+                "category-products";
+
+
+
+            category.products.forEach(
+
+                function(product, productIndex) {
+
+
+                    const productButton =
+                        document.createElement("button");
+
+
+                    productButton.type =
+                        "button";
+
+
+                    productButton.className =
+                        "sidebar-product";
+
+
+                    if (
+                        categoryIndex === 0 &&
+                        productIndex === 0
+                    ) {
+
+                        productButton.classList.add(
+                            "active"
+                        );
+
+                    }
+
+
+                    productButton.innerHTML = `
+
+                        <span class="sidebar-product-name">
+
+                            ${product.name}
+
+                        </span>
+
+
+                        <span class="sidebar-product-count">
+
+                            ${product.images.length}
+                            IMG
+
+                        </span>
+
+                    `;
+
+
+
+                    productButton.addEventListener(
+
+                        "click",
+
+                        function(event) {
+
+
+                            event.stopPropagation();
+
+
+                            document
+                                .querySelectorAll(
+                                    ".sidebar-product"
+                                )
+                                .forEach(
+
+                                    function(button) {
+
+                                        button.classList.remove(
+                                            "active"
+                                        );
+
+                                    }
+
+                                );
+
+
+                            productButton.classList.add(
+                                "active"
+                            );
+
+
+                            const globalNumber =
+                                getGlobalProductNumber(
+                                    categoryIndex,
+                                    productIndex
+                                );
+
+
+                            showProduct(
+                                category,
+                                product,
+                                globalNumber
+                            );
+
+                        }
+
+                    );
+
+
+                    productsContainer.appendChild(
+                        productButton
+                    );
+
+                }
+
+            );
+
+
+
+            /* CATEGORY OPEN / CLOSE */
+
+            categoryButton.addEventListener(
+
+                "click",
+
+                function() {
+
+
+                    const isOpen =
+                        wrapper.classList.contains(
+                            "open"
+                        );
+
+
+                    document
+                        .querySelectorAll(
+                            ".power-category"
+                        )
+                        .forEach(
+
+                            function(item) {
+
+
+                                item.classList.remove(
+                                    "open"
+                                );
+
+
+                                const icon =
+                                    item.querySelector(
+                                        ".category-toggle i"
+                                    );
+
+
+                                if (icon) {
+
+                                    icon.className =
+                                        "bi bi-plus";
+
+                                }
+
+                            }
+
+                        );
+
+
+                    if (!isOpen) {
+
+
+                        wrapper.classList.add(
+                            "open"
+                        );
+
+
+                        const icon =
+                            wrapper.querySelector(
+                                ".category-toggle i"
+                            );
+
+
+                        if (icon) {
+
+                            icon.className =
+                                "bi bi-dash";
+
+                        }
+
+                    }
+
+                }
+
+            );
+
+
+
+            wrapper.appendChild(
+                categoryButton
+            );
+
+
+            wrapper.appendChild(
+                productsContainer
+            );
+
+
+            categoryList.appendChild(
+                wrapper
+            );
+
+        }
+
+    );
+
+}
+
+
+
+/* =============================================================
+   SHOW PRODUCT
+============================================================= */
+
+function showProduct(
+    category,
+    product,
+    globalNumber
+) {
+
+
+    currentCategory = category;
+
+    currentProduct = product;
+
+    currentImageIndex = 0;
+
+
+    productVisual.classList.add(
+        "image-changing"
+    );
+
+
+    setTimeout(
+
+        function() {
+
+
+            displayCategory.textContent =
+                category.name;
+
+
+            displayTitle.textContent =
+                product.name;
+
+
+            displayDescription.textContent =
+                product.description;
+
+
+            displayBreadcrumb.textContent =
+                "POWER PRODUCTS / " +
+                category.name.toUpperCase();
+
+
+            displayProductIndex.textContent =
+
+                String(globalNumber)
+                    .padStart(2,"0")
+
+                +
+
+                " / "
+
+                +
+
+                String(totalProducts)
+                    .padStart(2,"0");
+
+
+            galleryProductName.textContent =
+                product.name;
+
+
+            infoCategory.textContent =
+                category.name;
+
+
+            infoApplication.textContent =
+                product.application;
+
+
+            infoFocus.textContent =
+                product.focus;
+
+
+            renderGallery(product);
+
+
+            changeGalleryImage(
+                0,
+                false
+            );
+
+
+            productVisual.classList.remove(
+                "image-changing"
+            );
+
+
+        },
+
+        240
+    );
+
+}
+
+
+
+/* =============================================================
+   RENDER IMAGE THUMBNAILS
+============================================================= */
+
+function renderGallery(product) {
+
+
+    productThumbnails.innerHTML = "";
+
+
+    totalImageNumber.textContent =
+        String(product.images.length)
+            .padStart(2,"0");
+
+
+    product.images.forEach(
+
+        function(image, index) {
+
+
+            const thumbnail =
+                document.createElement("button");
+
+
+            thumbnail.type =
+                "button";
+
+
+            thumbnail.className =
+                "product-thumbnail";
+
+
+            if (index === 0) {
+
+                thumbnail.classList.add(
+                    "active"
+                );
+
+            }
+
+
+            thumbnail.innerHTML = `
+
+                <img
+                    src="${image}"
+                    alt="${product.name} ${index + 1}"
+                    loading="lazy">
+
+
+                <span class="thumbnail-number">
+
+                    ${String(index + 1)
+                        .padStart(2,"0")}
+
+                </span>
+
+            `;
+
+
+            thumbnail.addEventListener(
+
+                "click",
+
+                function() {
+
+
+                    changeGalleryImage(
+                        index,
+                        true
+                    );
+
+                }
+
+            );
+
+
+            productThumbnails.appendChild(
+                thumbnail
+            );
+
+        }
+
+    );
+
+}
+
+
+
+/* =============================================================
+   CHANGE MAIN IMAGE
+============================================================= */
+
+function changeGalleryImage(
+    index,
+    animate = true
+) {
+
+
+    if (
+        !currentProduct ||
+        !currentProduct.images ||
+        !currentProduct.images.length
+    ) {
+
+        return;
+
+    }
+
+
+    currentImageIndex = index;
+
+
+    const image =
+        currentProduct.images[index];
+
+
+
+    function updateImage() {
+
+
+        displayImage.src =
+            image;
+
+
+        displayImage.alt =
+            currentProduct.name +
+            " image " +
+            (index + 1);
+
+
+        currentImageNumber.textContent =
+            String(index + 1)
+                .padStart(2,"0");
+
+
+        document
+            .querySelectorAll(
+                ".product-thumbnail"
+            )
+            .forEach(
+
+                function(thumbnail, thumbIndex) {
+
+
+                    thumbnail.classList.toggle(
+
+                        "active",
+
+                        thumbIndex === index
+
+                    );
+
+                }
+
+            );
+
+    }
+
+
+
+    if (!animate) {
+
+        updateImage();
+
+        return;
+
+    }
+
+
+    productVisual.classList.add(
+        "image-changing"
+    );
+
+
+    setTimeout(
+
+        function() {
+
+
+            updateImage();
+
+
+            productVisual.classList.remove(
+                "image-changing"
+            );
+
+
+        },
+
+        200
+    );
+
+}
+
+
+
+/* =============================================================
+   NEXT IMAGE
+============================================================= */
+
+galleryNext.addEventListener(
+
+    "click",
+
+    function() {
+
+
+        if (!currentProduct) {
+
+            return;
 
         }
 
 
-        @media (max-width: 991px) {
-
-            .about-navbar {
-
-                height: auto;
-
-                min-height: 80px;
-
-                padding: 10px 5%;
-            }
+        let next =
+            currentImageIndex + 1;
 
 
-            .about-logo img {
+        if (
+            next >=
+            currentProduct.images.length
+        ) {
 
-                height: 70px;
-            }
-
-
-            .about-navbar .navbar-collapse {
-
-                margin-top: 15px;
-
-                padding: 15px 0;
-
-                background: #ffffff;
-            }
-
-
-            .about-navbar .navbar-nav {
-
-                align-items: flex-start;
-
-                gap: 0;
-            }
-
-
-            .about-navbar .nav-item {
-
-                width: 100%;
-            }
-
-
-            .about-navbar .nav-link {
-
-                padding: 12px 5px !important;
-            }
-
-
-            .about-navbar .dropdown-menu {
-
-                margin-top: 0;
-
-                border: none;
-
-                box-shadow: none;
-            }
-
-
-            .smart-intro-grid,
-            .features-intro-grid,
-            .feature-architecture-grid,
-            .applications-head,
-            .smart-cta-inner {
-
-                grid-template-columns: 1fr;
-
-                gap: 45px;
-            }
-
-
-            .smart-product-visual-grid {
-
-                grid-template-columns: 1fr;
-            }
-
-
-            .smart-product-side {
-
-                min-height: 400px;
-            }
-
-
-            .architecture-sticky {
-
-                position: static;
-            }
-
-
-            .feature-grid {
-
-                grid-template-columns:
-                    repeat(2,1fr);
-            }
-
-
-            .capability-strip-grid {
-
-                grid-template-columns:
-                    repeat(2,1fr);
-            }
-
-
-            .application-grid {
-
-                grid-template-columns:
-                    repeat(2,1fr);
-            }
+            next = 0;
 
         }
 
 
-        @media (max-width: 767px) {
+        changeGalleryImage(
+            next,
+            true
+        );
 
-            .smart-container,
-            .technology-band-content {
+    }
 
-                width: calc(100% - 40px);
-            }
-
-
-            .smart-pole-intro {
-
-                padding:
-                    130px 0
-                    70px;
-            }
+);
 
 
-            .smart-title {
 
-                font-size: 44px;
+/* =============================================================
+   PREVIOUS IMAGE
+============================================================= */
 
-                letter-spacing: -2px;
-            }
+galleryPrevious.addEventListener(
 
+    "click",
 
-            .smart-product-image {
-
-                min-height: 560px;
-            }
+    function() {
 
 
-            .smart-product-side {
+        if (!currentProduct) {
 
-                padding: 45px 25px;
-            }
-
-
-            .features-intro,
-            .feature-architecture,
-            .smart-applications,
-            .smart-cta {
-
-                padding-top: 85px;
-
-                padding-bottom: 85px;
-            }
-
-
-            .smart-features {
-
-                padding-bottom: 85px;
-            }
-
-
-            .feature-grid {
-
-                grid-template-columns: 1fr;
-            }
-
-
-            .feature-card {
-
-                min-height: 250px;
-            }
-
-
-            .architecture-item {
-
-                grid-template-columns:
-                    45px 1fr;
-
-                gap: 15px;
-
-                padding: 22px 0;
-            }
-
-
-            .architecture-item span:last-child {
-
-                grid-column: 2;
-            }
-
-
-            .technology-band {
-
-                min-height: 590px;
-            }
-
-
-            .technology-band h2 {
-
-                font-size: 46px;
-
-                letter-spacing: -2px;
-            }
-
-
-            .capability-strip-grid {
-
-                grid-template-columns: 1fr;
-            }
-
-
-            .capability-strip-item {
-
-                border-left: 1px solid #2f2f2f;
-                border-bottom: 1px solid #2f2f2f;
-            }
-
-
-            .application-grid {
-
-                grid-template-columns: 1fr;
-            }
-
-
-            .smart-cta h2 {
-
-                font-size: 48px;
-
-                letter-spacing: -2.5px;
-            }
+            return;
 
         }
-</style>
-<!-- END MODULE — GLOBAL RESPONSIVE OVERRIDES -->
 
-<!-- =========================================================
-     MODULE — BOOTSTRAP JAVASCRIPT
-========================================================= -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- END MODULE — BOOTSTRAP JAVASCRIPT -->
+
+        let previous =
+            currentImageIndex - 1;
+
+
+        if (previous < 0) {
+
+            previous =
+                currentProduct.images.length - 1;
+
+        }
+
+
+        changeGalleryImage(
+            previous,
+            true
+        );
+
+    }
+
+);
+
+
+
+/* =============================================================
+   KEYBOARD ARROWS
+============================================================= */
+
+document.addEventListener(
+
+    "keydown",
+
+    function(event) {
+
+
+        if (!currentProduct) return;
+
+
+        if (event.key === "ArrowRight") {
+
+            galleryNext.click();
+
+        }
+
+
+        if (event.key === "ArrowLeft") {
+
+            galleryPrevious.click();
+
+        }
+
+    }
+
+);
+
+
+
+/* =============================================================
+   INITIAL PRODUCT
+============================================================= */
+
+renderCategories();
+
+
+const firstCategory =
+    powerCategories[0];
+
+
+const firstProduct =
+    firstCategory.products[0];
+
+
+showProduct(
+    firstCategory,
+    firstProduct,
+    1
+);
+
+
+
+</script>
+
 
 </body>
+
 </html>

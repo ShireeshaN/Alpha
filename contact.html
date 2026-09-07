@@ -27,6 +27,10 @@
 <style>
 
 /* =========================================================
+   MODULE 01 — GLOBAL + CONTACT PAGE STYLES
+   ========================================================= */
+
+/* =========================================================
    GLOBAL
 ========================================================= */
 
@@ -1571,12 +1575,119 @@ textarea.form-control-custom {
 
 
 <!-- =========================================================
-     NAVBAR
+     MODULE — NAVBAR
 ========================================================= -->
 
+<!-- HTML -->
+    <!-- =========================================================
+         PREMIUM GLOBAL NAVIGATION
+    ========================================================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/w-alpha.png" id="logoWhite" class="navbar-logo" alt="Alpha Numeric Innovations" style="display:none;">
+                <img src="assets/img/b-alpha.png" id="logoDark" class="navbar-logo" alt="Alpha Numeric Innovations">
+            </a>
 
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu <i class="fas fa-bars ms-1"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+
+                    <li class="nav-item dropdown solution-dropdown position-static">
+                        <a class="nav-link dropdown-toggle " href="#" id="solutionsDropdown" role="button"
+                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Solutions</a>
+
+                        <div class="dropdown-menu mega-menu" aria-labelledby="solutionsDropdown">
+                            <div class="mega-menu-inner">
+                                <div class="mega-column">
+                                    <div class="mega-heading "><span>Renewable Energy</span></div>
+                                    <a href="solar-energy.html">Solar </a>
+                                    <!-- <a href="wind-energy.html">Wind Energy</a>
+                                    <a href="hydel-energy.html">Hydel Energy</a>
+                                    <a href="biomass-energy.html">Biomass Energy</a> -->
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>Power</span></div>
+                                    <a href="lt.html">LT</a>
+                                    <a href="ht.html">HT</a>
+                                    <a href="eht.html">EHT</a>
+                                    <a href="control-panels.html">Control Panels</a>
+                                    <a href="panel-boards.html">Panel Boards</a>
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>Automation</span></div>
+                                    <a href="home-automation.html">Home Automation</a>
+                                    <a href="commercial-automation.html">Commercial Automation</a>
+                                    <a href="industrial-automation.html">Industrial Automation</a>
+                                    <a href="hospital-automation.html">Hospital Automation</a>
+                                    <a href="hotel-automation.html">Hotel Automation</a>
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>R&amp;D</span></div>
+                                    <a href="smart-pole-r&d.html">Smart Pole</a>
+                                    <a href="smart-bollard-r&d.html">Smart Bollard</a>
+                                    <a href="smart-conference-table.html">Smart Conference Table</a>
+                                    <a href="smart-bar-counter.html">Smart Bar Counter</a>
+                                    <a href="smart-window-leaf-ac.html">Smart Window Leaf AC</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown bms-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="bmsDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">IoT</a>
+                        <ul class="dropdown-menu bms-menu" aria-labelledby="bmsDropdown">
+                            <li><a class="dropdown-item" href="iot.html">IoT</a></li>
+                            <li><a class="dropdown-item" href="bms.html">BMS</a></li>
+                            <li><a class="dropdown-item" href="iot-bms.html">IoT+BMS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="power-products.html">Products</a></li>
+                    <li class="nav-item active"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- CSS -->
 <style>
-    /* =====================================================
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #ffffff;
+            color: #111111;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+        /* =====================================================
            PREMIUM GLOBAL NAVBAR
         ===================================================== */
 
@@ -1600,10 +1711,79 @@ textarea.form-control-custom {
         .mega-column > a:hover { color: #334a85; padding-left: 21px; }
         .mega-column > a:hover::before { width: 12px; background: #4d73be; }
 
+        /* BMS DROPDOWN */
+        .bms-dropdown .bms-menu {
+            min-width: 190px;
+            margin-top: 0;
+            padding: 10px 0;
+            border: 1px solid #1f1f1f;
+            border-radius: 10px;
+            background: #000000;
+            box-shadow: 0 18px 45px rgba(0,0,0,.24);
+        }
+
+        .bms-dropdown .bms-menu .dropdown-item {
+            padding: 10px 18px;
+            color: #bdbdbd;
+            font-size: 13.5px;
+            font-weight: 600;
+            background: transparent;
+            transition: color .25s ease, padding-left .25s ease;
+        }
+
+        .bms-dropdown .bms-menu .dropdown-item:hover,
+        .bms-dropdown .bms-menu .dropdown-item:focus {
+            color: #ffffff;
+            background: transparent;
+            padding-left: 22px;
+        }
+
         @media (min-width: 992px) {
-            .solution-dropdown:hover > .mega-menu { display: block; }
-            .mega-menu { opacity: 0; visibility: hidden; pointer-events: none; display: block; transition: opacity .22s ease, visibility .22s ease; }
-            .solution-dropdown:hover > .mega-menu, .solution-dropdown > .mega-menu.show { opacity: 1; visibility: visible; pointer-events: auto; }
+            /* BMS dropdown: open on hover and stay open while hovering menu */
+            .bms-dropdown > .bms-menu {
+                display: block;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transform: translateY(6px);
+                transition: opacity .22s ease, visibility .22s ease, transform .22s ease;
+            }
+
+            .bms-dropdown:hover > .bms-menu,
+            .bms-dropdown > .bms-menu:hover,
+            .bms-dropdown > .bms-menu.show {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+                transform: translateY(0);
+            }
+
+            .solution-dropdown > .mega-menu {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                display: block;
+                transition: opacity .22s ease, visibility .22s ease;
+            }
+
+            .solution-dropdown:hover > .mega-menu,
+            .solution-dropdown.mega-open > .mega-menu,
+            .solution-dropdown > .mega-menu.show {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+
+            /* Invisible hover bridge between Solutions and mega menu */
+            .solution-dropdown > .mega-menu::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: -18px;
+                height: 18px;
+                background: transparent;
+            }
         }
 
         @media (max-width: 991px) {
@@ -1624,7 +1804,7 @@ textarea.form-control-custom {
 
 
         /* ABOUT PAGE: keep Index navbar in permanent white/scrolled state */
-        body { padding-top: 74px; }
+       
         .main-navbar {
             background: #fff;
             padding: 8px 0;
@@ -1649,79 +1829,8 @@ textarea.form-control-custom {
             width: calc(100% - 24px);
         }
 
-</style>
 
-    <!-- =========================================================
-         PREMIUM GLOBAL NAVIGATION
-    ========================================================= -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
-        <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="index.html">
-                <img src="assets/img/w-alpha.png" id="logoWhite" class="navbar-logo" alt="Alpha Numeric Innovations" style="display:none;">
-                <img src="assets/img/b-alpha.png" id="logoDark" class="navbar-logo" alt="Alpha Numeric Innovations">
-            </a>
-
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-                Menu <i class="fas fa-bars ms-1"></i>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item "><a class="nav-link " href="about.html">About</a></li>
-
-                    <li class="nav-item dropdown solution-dropdown position-static">
-                        <a class="nav-link dropdown-toggle " href="#" id="solutionsDropdown" role="button"
-                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Solutions</a>
-
-                        <div class="dropdown-menu mega-menu" aria-labelledby="solutionsDropdown">
-                            <div class="mega-menu-inner">
-                                <div class="mega-column">
-                                    <div class="mega-heading "><span>Energy</span></div>
-                                    <a href="solar-energy.html">Solar Energy</a>
-                                    <a href="wind-energy.html">Wind Energy</a>
-                                    <a href="hydel-energy.html">Hydel Energy</a>
-                                    <a href="biomass-energy.html">Biomass Energy</a>
-                                </div>
-                                <div class="mega-column">
-                                    <div class="mega-heading"><span>Power</span></div>
-                                    <a href="transmission.html">Transmission</a>
-                                    <a href="distribution.html">Distribution</a>
-                                    <a href="control-panels.html">Control Panels</a>
-                                    <a href="panel-boards.html">Panel Boards</a>
-                                </div>
-                                <div class="mega-column">
-                                    <div class="mega-heading"><span>Automation</span></div>
-                                    <a href="home-automation.html">Home Automation</a>
-                                    <a href="commercial-automation.html">Commercial Automation</a>
-                                    <a href="industrial-automation.html">Industrial Automation</a>
-                                    <a href="hospital-automation.html">Hospital Automation</a>
-                                    <a href="hotel-automation.html">Hotel Automation</a>
-                                </div>
-                                <div class="mega-column">
-                                    <div class="mega-heading"><span>R&amp;D</span></div>
-                                    <a href="smart-pole-r&d.html">Smart Pole</a>
-                                    <a href="smart-bollard-r&d.html">Smart Bollard</a>
-                                    <a href="smart-conference-table.html">Smart Conference Table</a>
-                                    <a href="smart-bar-counter.html">Smart Bar Counter</a>
-                                    <a href="smart-window-leaf-ac.html">Smart Window Leaf AC</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="nav-item"><a class="nav-link" href="bms_automation.html">BMS</a></li>
-                    <li class="nav-item"><a class="nav-link" href="power-products.html">Products</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
-    <style>
+        
 /* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
 .main-navbar #solutionsDropdown,
 .main-navbar #solutionsDropdown:hover,
@@ -1739,10 +1848,6 @@ textarea.form-control-custom {
 .main-navbar #solutionsDropdown.show {
     color: #4d73be !important;
 }
-</style>
-
-
-<style id="navbar-monochrome-final">
 /* =========================================================
    NAVBAR — MONOCHROME BLACK THEME
    Keep existing layout + mega-menu behavior unchanged
@@ -1875,21 +1980,29 @@ textarea.form-control-custom {
         border-bottom-color: #242424 !important;
     }
 }
-</style>
-
-
-<style id="mega-heading-no-icons">
 .main-navbar .mega-heading {
     gap: 0 !important;
 }
 </style>
 
-   
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const nav = document.getElementById("mainNav");
+    const white = document.getElementById("logoWhite");
+    const dark = document.getElementById("logoDark");
 
+    if (nav) nav.classList.add("scrolled", "navbar-shrink");
+    if (white) white.style.display = "none";
+    if (dark) dark.style.display = "block";
+});
+</script>
+
+<!-- END MODULE — NAVBAR -->
 
 
 <!-- =========================================================
-     HERO
+     MODULE 03 — CONTACT HERO
 ========================================================= -->
 
 <section class="contact-hero">
@@ -1970,7 +2083,7 @@ textarea.form-control-custom {
 
 
 <!-- =========================================================
-     CONTACT OPTIONS
+     MODULE 04 — CONTACT OPTIONS
 ========================================================= -->
 
 <section class="contact-options">
@@ -2090,7 +2203,7 @@ textarea.form-control-custom {
 
 
 <!-- =========================================================
-     MAIN CONTACT
+     MODULE 05 — MAIN CONTACT + ENQUIRY FORM
 ========================================================= -->
 
 <section
@@ -2462,7 +2575,7 @@ textarea.form-control-custom {
 
 
 <!-- =========================================================
-     SOLUTION AREAS
+     MODULE 06 — SOLUTION AREAS
 ========================================================= -->
 
 <section class="project-section">
@@ -2647,7 +2760,7 @@ textarea.form-control-custom {
 
 
 <!-- =========================================================
-     R&D CONTACT
+     MODULE 07 — R&D CONTACT
 ========================================================= -->
 
 <section
@@ -2772,7 +2885,7 @@ textarea.form-control-custom {
 
 
 <!-- =========================================================
-     LOCATION
+     MODULE 08 — LOCATION
 ========================================================= -->
 
 <section class="location-section">
@@ -2844,7 +2957,7 @@ textarea.form-control-custom {
 
 
 <!-- =========================================================
-     CTA
+     MODULE 09 — CONTACT CTA
 ========================================================= -->
 
 <section class="contact-cta">
@@ -2899,7 +3012,10 @@ textarea.form-control-custom {
 
 
 
-  <!-- footer start -->
+  <!-- =========================================================
+     MODULE 10 — CORPORATE FOOTER
+========================================================= -->
+<!-- footer start -->
 
     <footer class="premium-footer">
 
@@ -4646,34 +4762,11 @@ textarea.form-control-custom {
 
 
 <!-- =========================================================
-     BOOTSTRAP
+     MODULE 11 — BOOTSTRAP JAVASCRIPT
 ========================================================= -->
 
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>
-
-
-<script>
-
-window.addEventListener("scroll", function () {
-
-    const navbar =
-        document.querySelector(".main-navbar");
-
-    if (window.scrollY > 30) {
-
-        navbar.style.boxShadow =
-            "0 5px 25px rgba(0,0,0,.07)";
-
-    } else {
-
-        navbar.style.boxShadow = "none";
-
-    }
-
-});
-
 </script>
 
 
