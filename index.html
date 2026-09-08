@@ -4513,7 +4513,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <article class="sector-card sector-hero">
 
-                <img src="assets/img/sectors/power-sector-1.png" alt="Power transmission and electrical infrastructure"
+                <img src="assets/img/banners/power1.png" alt="Power transmission and electrical infrastructure"
                     class="sector-image sector-slideshow">
 
                 <div class="sector-overlay sector-hero-overlay"></div>
@@ -4569,7 +4569,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     <article class="sector-card sector-engineer-card">
 
-                        <img src="assets/img/sectors/energy-sector.png" alt="Renewable energy engineering"
+                        <img src="assets/img/banners/energy1.png" alt="Renewable energy engineering"
                             class="sector-image sector-slideshow">
 
                         <div class="sector-overlay sector-engineer-overlay"></div>
@@ -4640,7 +4640,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                         <article class="sector-card sector-power-card">
 
-                            <img src="assets/img/sectors/automation-sector.png" alt="Industrial automation technology"
+                            <img src="assets/img/banners/bmsiot.png" alt="Industrial automation technology"
                                 class="sector-image sector-slideshow">
 
                             <div class="sector-overlay sector-power-overlay"></div>
@@ -9492,212 +9492,922 @@ document.addEventListener("DOMContentLoaded", function () {
      
 
 <!-- =========================================================
-     ALPHA NUMERIC — PREMIUM CORE VALUES SECTION
-     Architectural corporate layout | No curves
-     Complete HTML + CSS module
-========================================================== -->
+     MODULE — CORE VALUES — CSS
+========================================================= -->
+<style>
 
-<section class="values-section" id="core-values" aria-labelledby="values-title">
+    /* =========================================================
+       CORE VALUES — DESIGN TOKENS
+    ========================================================= */
 
-    <div class="values-container">
+    .core-values{
+        --cv-bg:#f6f7f4;
+        --cv-white:#ffffff;
+        --cv-ink:#102729;
+        --cv-deep:#0c2225;
+        --cv-text:#536466;
+        --cv-muted:#879496;
+        --cv-line:rgba(16,39,41,.14);
+        --cv-line-light:rgba(16,39,41,.08);
+        --cv-orange:#ed5a2a;
+        --cv-aqua:#67c9c0;
+
+        position:relative;
+        overflow:hidden;
+
+        padding:120px 0;
+
+        color:var(--cv-ink);
+        background:var(--cv-bg);
+
+        font-family:
+            "Varela Round",
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            Roboto,
+            Arial,
+            sans-serif;
+    }
+
+    .core-values *,
+    .core-values *::before,
+    .core-values *::after{
+        box-sizing:border-box;
+        border-radius:0 !important;
+    }
+
+    .core-values::before{
+        content:"";
+
+        position:absolute;
+        inset:0;
+
+        pointer-events:none;
+
+        background:
+            linear-gradient(
+                90deg,
+                transparent 0 24%,
+                rgba(16,39,41,.035) 24% 24.08%,
+                transparent 24.08% 49%,
+                rgba(16,39,41,.035) 49% 49.08%,
+                transparent 49.08% 74%,
+                rgba(16,39,41,.035) 74% 74.08%,
+                transparent 74.08%
+            );
+    }
+
+    .cv-container{
+        position:relative;
+        z-index:2;
+
+        width:min(calc(100% - 64px),1500px);
+        margin-inline:auto;
+    }
+
+
+    /* =========================================================
+       SECTION INTRO
+    ========================================================= */
+
+    .cv-header{
+        display:grid;
+        grid-template-columns:minmax(220px,.72fr) minmax(0,1.55fr);
+        gap:80px;
+        align-items:end;
+
+        padding-bottom:42px;
+
+        border-bottom:1px solid var(--cv-line);
+    }
+
+    .cv-label{
+        display:flex;
+        align-items:center;
+        gap:14px;
+
+        color:var(--cv-muted);
+
+        font-size:9px;
+        letter-spacing:.18em;
+
+        text-transform:uppercase;
+    }
+
+    .cv-label span{
+        color:var(--cv-orange);
+    }
+
+    .cv-label i{
+        width:44px;
+        height:1px;
+
+        background:var(--cv-line);
+    }
+
+    .cv-header-copy{
+        justify-self:end;
+
+        max-width:630px;
+
+        margin:0;
+
+        color:var(--cv-text);
+
+        font-family:
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            Roboto,
+            Arial,
+            sans-serif;
+
+        font-size:14px;
+        line-height:1.8;
+    }
+
+
+    /* =========================================================
+       HERO STATEMENT
+    ========================================================= */
+
+    .cv-hero{
+        display:grid;
+        grid-template-columns:minmax(0,1.6fr) minmax(300px,.62fr);
+        gap:90px;
+        align-items:end;
+
+        padding:80px 0 72px;
+    }
+
+    .cv-hero h2{
+        max-width:980px;
+
+        margin:0;
+
+        color:var(--cv-ink);
+
+        font-size:clamp(62px,7vw,112px);
+        font-weight:400;
+        line-height:.9;
+        letter-spacing:-.065em;
+    }
+
+    .cv-hero h2 span{
+        display:block;
+
+        color:rgba(16,39,41,.34);
+    }
+
+    .cv-hero-side{
+        padding-bottom:6px;
+    }
+
+    .cv-hero-side small{
+        display:block;
+
+        color:var(--cv-orange);
+
+        font-size:8px;
+        letter-spacing:.16em;
+
+        text-transform:uppercase;
+    }
+
+    .cv-hero-side p{
+        margin:18px 0 0;
+
+        color:var(--cv-text);
+
+        font-family:
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            Roboto,
+            Arial,
+            sans-serif;
+
+        font-size:13px;
+        line-height:1.8;
+    }
+
+
+    /* =========================================================
+       EDITORIAL GRID
+    ========================================================= */
+
+    .cv-grid{
+        display:grid;
+
+        grid-template-columns:
+            minmax(0,1.12fr)
+            minmax(0,.88fr)
+            minmax(0,.88fr);
+
+        grid-template-rows:
+            minmax(285px,auto)
+            minmax(285px,auto);
+
+        gap:1px;
+
+        background:var(--cv-line);
+
+        border:1px solid var(--cv-line);
+    }
+
+    .cv-card{
+        position:relative;
+
+        min-height:285px;
+
+        padding:34px 34px 30px;
+        overflow:hidden;
+
+        background:var(--cv-white);
+
+        transition:
+            background-color .4s ease,
+            color .4s ease,
+            transform .4s cubic-bezier(.22,1,.36,1);
+    }
+
+    .cv-card::before{
+        content:"";
+
+        position:absolute;
+        left:0;
+        top:0;
+
+        width:4px;
+        height:100%;
+
+        background:var(--cv-orange);
+
+        transform:scaleY(0);
+        transform-origin:bottom;
+
+        transition:transform .42s cubic-bezier(.22,1,.36,1);
+    }
+
+    .cv-card:hover{
+        z-index:2;
+
+        color:#fff;
+        background:var(--cv-deep);
+
+        transform:translateY(-4px);
+    }
+
+    .cv-card:hover::before{
+        transform:scaleY(1);
+    }
+
+
+    /* FEATURED BLOCK */
+
+    .cv-card.featured{
+        grid-row:1 / 3;
+
+        min-height:571px;
+
+        display:flex;
+        flex-direction:column;
+
+        color:#fff;
+
+        background:
+            linear-gradient(
+                145deg,
+                #123338 0%,
+                #0d272b 62%,
+                #091b1e 100%
+            );
+    }
+
+    .cv-card.featured::before{
+        transform:scaleY(1);
+
+        height:150px;
+
+        background:
+            linear-gradient(
+                to bottom,
+                var(--cv-orange),
+                transparent
+            );
+    }
+
+    .cv-card.featured::after{
+        content:"01";
+
+        position:absolute;
+        right:-.05em;
+        bottom:-.22em;
+
+        color:rgba(255,255,255,.035);
+
+        font-size:260px;
+        line-height:1;
+        letter-spacing:-.12em;
+
+        pointer-events:none;
+    }
+
+    .cv-card.featured:hover{
+        transform:none;
+    }
+
+
+    /* =========================================================
+       CARD TOP
+    ========================================================= */
+
+    .cv-card-top{
+        display:flex;
+        justify-content:space-between;
+        align-items:flex-start;
+        gap:20px;
+    }
+
+    .cv-no{
+        color:var(--cv-orange);
+
+        font-size:9px;
+        letter-spacing:.17em;
+    }
+
+    .cv-tag{
+        color:var(--cv-muted);
+
+        font-size:8px;
+        letter-spacing:.15em;
+
+        text-transform:uppercase;
+
+        transition:color .35s ease;
+    }
+
+    .cv-card.featured .cv-tag{
+        color:rgba(255,255,255,.43);
+    }
+
+    .cv-card:hover .cv-tag{
+        color:rgba(255,255,255,.48);
+    }
+
+
+    /* =========================================================
+       CARD CONTENT
+    ========================================================= */
+
+    .cv-card-content{
+        position:relative;
+        z-index:2;
+
+        margin-top:62px;
+    }
+
+    .cv-card h3{
+        margin:0;
+
+        color:var(--cv-ink);
+
+        font-size:clamp(26px,2.3vw,38px);
+        font-weight:400;
+        line-height:1.04;
+        letter-spacing:-.04em;
+
+        transition:color .35s ease;
+    }
+
+    .cv-card.featured h3{
+        max-width:560px;
+
+        color:#fff;
+
+        font-size:clamp(46px,4.8vw,75px);
+        line-height:.95;
+        letter-spacing:-.055em;
+    }
+
+    .cv-card.featured h3 span{
+        display:block;
+
+        color:rgba(255,255,255,.38);
+    }
+
+    .cv-card:hover h3{
+        color:#fff;
+    }
+
+    .cv-card p{
+        max-width:440px;
+
+        margin:20px 0 0;
+
+        color:var(--cv-text);
+
+        font-family:
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            Roboto,
+            Arial,
+            sans-serif;
+
+        font-size:12.5px;
+        line-height:1.75;
+
+        transition:color .35s ease;
+    }
+
+    .cv-card.featured p{
+        max-width:500px;
+
+        margin-top:26px;
+
+        color:rgba(239,248,247,.62);
+    }
+
+    .cv-card:hover p{
+        color:rgba(238,248,247,.65);
+    }
+
+
+    /* =========================================================
+       FEATURED FOOTER
+    ========================================================= */
+
+    .cv-feature-footer{
+        position:relative;
+        z-index:2;
+
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+
+        margin-top:auto;
+
+        border-top:1px solid rgba(255,255,255,.14);
+        border-left:1px solid rgba(255,255,255,.14);
+    }
+
+    .cv-feature-footer div{
+        padding:18px;
+
+        border-right:1px solid rgba(255,255,255,.14);
+        border-bottom:1px solid rgba(255,255,255,.14);
+    }
+
+    .cv-feature-footer small{
+        display:block;
+
+        color:var(--cv-aqua);
+
+        font-size:7px;
+        letter-spacing:.15em;
+    }
+
+    .cv-feature-footer strong{
+        display:block;
+
+        margin-top:8px;
+
+        color:rgba(255,255,255,.68);
+
+        font-size:9px;
+        font-weight:400;
+        letter-spacing:.1em;
+
+        text-transform:uppercase;
+    }
+
+
+    /* =========================================================
+       CARD FOOTER
+    ========================================================= */
+
+    .cv-card-foot{
+        position:absolute;
+
+        left:34px;
+        right:34px;
+        bottom:28px;
+
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:20px;
+
+        padding-top:18px;
+
+        border-top:1px solid var(--cv-line-light);
+    }
+
+    .cv-card-foot small{
+        color:var(--cv-muted);
+
+        font-size:7px;
+        line-height:1.45;
+        letter-spacing:.12em;
+
+        text-transform:uppercase;
+
+        transition:color .35s ease;
+    }
+
+    .cv-card-foot span{
+        color:var(--cv-orange);
+
+        font-size:18px;
+
+        opacity:.6;
+
+        transition:
+            transform .3s ease,
+            opacity .3s ease;
+    }
+
+    .cv-card:hover .cv-card-foot{
+        border-color:rgba(255,255,255,.13);
+    }
+
+    .cv-card:hover .cv-card-foot small{
+        color:rgba(255,255,255,.42);
+    }
+
+    .cv-card:hover .cv-card-foot span{
+        opacity:1;
+        transform:translate(3px,-3px);
+    }
+
+
+    /* =========================================================
+       DISCIPLINE BAND
+    ========================================================= */
+
+    .cv-disciplines{
+        display:grid;
+        grid-template-columns:180px repeat(4,1fr);
+
+        margin-top:58px;
+
+        border-top:1px solid var(--cv-line);
+        border-bottom:1px solid var(--cv-line);
+    }
+
+    .cv-disciplines-label,
+    .cv-discipline{
+        min-height:82px;
+
+        display:flex;
+        align-items:center;
+
+        padding:0 22px;
+    }
+
+    .cv-disciplines-label{
+        color:var(--cv-muted);
+
+        font-size:8px;
+        letter-spacing:.15em;
+
+        text-transform:uppercase;
+    }
+
+    .cv-discipline{
+        justify-content:space-between;
+
+        border-left:1px solid var(--cv-line);
+
+        color:var(--cv-ink);
+    }
+
+    .cv-discipline span{
+        color:var(--cv-orange);
+
+        font-size:8px;
+        letter-spacing:.15em;
+    }
+
+    .cv-discipline strong{
+        font-size:11px;
+        font-weight:400;
+        letter-spacing:.1em;
+
+        text-transform:uppercase;
+    }
+
+
+    /* =========================================================
+       CLOSING
+    ========================================================= */
+
+    .cv-close{
+        display:grid;
+        grid-template-columns:220px 1fr 320px;
+        gap:45px;
+        align-items:center;
+
+        padding-top:42px;
+    }
+
+    .cv-close small{
+        color:var(--cv-orange);
+
+        font-size:8px;
+        letter-spacing:.15em;
+
+        text-transform:uppercase;
+    }
+
+    .cv-close p{
+        margin:0;
+
+        color:var(--cv-text);
+
+        font-family:
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            Roboto,
+            Arial,
+            sans-serif;
+
+        font-size:13px;
+        line-height:1.75;
+    }
+
+    .cv-close-mark{
+        display:flex;
+        align-items:center;
+        justify-content:flex-end;
+        gap:12px;
+
+        color:var(--cv-muted);
+
+        font-size:8px;
+        letter-spacing:.13em;
+
+        text-transform:uppercase;
+    }
+
+    .cv-close-mark i{
+        width:38px;
+        height:1px;
+
+        background:var(--cv-line);
+    }
+
+
+    /* =========================================================
+       LARGE LAPTOP
+    ========================================================= */
+
+    @media(max-width:1200px){
+
+        .cv-grid{
+            grid-template-columns:1fr 1fr;
+            grid-template-rows:auto;
+        }
+
+        .cv-card.featured{
+            grid-column:1 / -1;
+            grid-row:auto;
+
+            min-height:560px;
+        }
+
+        .cv-disciplines{
+            grid-template-columns:150px repeat(4,1fr);
+        }
+
+    }
+
+
+    /* =========================================================
+       TABLET
+    ========================================================= */
+
+    @media(max-width:960px){
+
+        .core-values{
+            padding:90px 0;
+        }
+
+        .cv-container{
+            width:min(calc(100% - 44px),900px);
+        }
+
+        .cv-header{
+            grid-template-columns:1fr;
+            gap:24px;
+        }
+
+        .cv-header-copy{
+            justify-self:start;
+        }
+
+        .cv-hero{
+            grid-template-columns:1fr;
+            gap:35px;
+
+            padding:65px 0 55px;
+        }
+
+        .cv-hero-side{
+            max-width:560px;
+        }
+
+        .cv-grid{
+            grid-template-columns:1fr 1fr;
+        }
+
+        .cv-disciplines{
+            grid-template-columns:1fr 1fr;
+        }
+
+        .cv-disciplines-label{
+            grid-column:1 / -1;
+
+            min-height:60px;
+        }
+
+        .cv-close{
+            grid-template-columns:1fr 1.5fr;
+        }
+
+        .cv-close-mark{
+            grid-column:1 / -1;
+            justify-content:flex-start;
+        }
+
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media(max-width:650px){
+
+        .core-values{
+            padding:70px 0;
+        }
+
+        .cv-container{
+            width:calc(100% - 30px);
+        }
+
+        .cv-hero{
+            padding:52px 0 42px;
+        }
+
+        .cv-hero h2{
+            font-size:clamp(52px,15vw,72px);
+        }
+
+        .cv-grid{
+            grid-template-columns:1fr;
+        }
+
+        .cv-card,
+        .cv-card.featured{
+            min-height:420px;
+
+            padding:28px 24px;
+        }
+
+        .cv-card.featured{
+            min-height:560px;
+        }
+
+        .cv-card-content{
+            margin-top:48px;
+        }
+
+        .cv-card.featured h3{
+            font-size:48px;
+        }
+
+        .cv-card-foot{
+            left:24px;
+            right:24px;
+            bottom:24px;
+        }
+
+        .cv-disciplines{
+            grid-template-columns:1fr;
+        }
+
+        .cv-disciplines-label{
+            grid-column:auto;
+        }
+
+        .cv-discipline{
+            border-left:0;
+            border-top:1px solid var(--cv-line);
+        }
+
+        .cv-close{
+            grid-template-columns:1fr;
+            gap:18px;
+        }
+
+        .cv-close-mark{
+            grid-column:auto;
+        }
+
+    }
+
+
+    /* =========================================================
+       REDUCED MOTION
+    ========================================================= */
+
+    @media(prefers-reduced-motion:reduce){
+
+        .cv-card,
+        .cv-card::before,
+        .cv-card h3,
+        .cv-card p,
+        .cv-card-foot span{
+            transition:none !important;
+        }
+
+    }
+
+</style>
+
+
+<!-- =========================================================
+     MODULE — CORE VALUES — HTML
+========================================================= -->
+
+<section class="core-values" id="core-values">
+
+    <div class="cv-container">
+
 
         <!-- =====================================================
-             SECTION HEADER
+             HEADER
         ====================================================== -->
-        <header class="values-header">
 
-            <div class="values-header-label">
+        <header class="cv-header reveal">
+
+            <div class="cv-label">
+
                 <span>05</span>
+
                 <i></i>
-                Core values
+
+                Core Values
+
             </div>
 
-            <p>
+            <p class="cv-header-copy">
+
                 The principles behind every system we design,
-                every project we deliver and every partnership we build.
+                every project we deliver and every partnership
+                we build.
+
             </p>
 
         </header>
 
 
         <!-- =====================================================
-             CORE VALUES COMPOSITION
+             HERO STATEMENT
         ====================================================== -->
-        <div class="values-composition">
 
-            <!-- LEFT MANIFESTO -->
-            <aside class="values-manifesto">
+        <div class="cv-hero">
 
-                <div class="values-manifesto-top">
-                    <span>Our standard</span>
-                    <span>AN / 05</span>
-                </div>
+            <div class="reveal">
 
-                <h2 id="values-title">
-                    Principles
-                    <span>engineered into</span>
-                    every solution.
+                <h2>
+
+                    What guides
+                    <span>how we engineer.</span>
+
                 </h2>
 
+            </div>
+
+
+            <div class="cv-hero-side reveal">
+
+                <small>
+                    ENGINEERING WITH PURPOSE
+                </small>
+
                 <p>
-                    Our values connect technical precision with
-                    responsible innovation—guiding our work across
-                    Power, Energy, Automation and R&amp;D.
+
+                    Our values connect technical precision,
+                    responsible innovation and dependable
+                    execution across Power, Energy,
+                    Automation and R&amp;D.
+
                 </p>
-
-                <div class="values-disciplines" aria-label="Core disciplines">
-
-                    <div>
-                        <strong>01</strong>
-                        <span>Power</span>
-                    </div>
-
-                    <div>
-                        <strong>02</strong>
-                        <span>Energy</span>
-                    </div>
-
-                    <div>
-                        <strong>03</strong>
-                        <span>Automation</span>
-                    </div>
-
-                    <div>
-                        <strong>04</strong>
-                        <span>R&amp;D</span>
-                    </div>
-
-                </div>
-
-                <div class="values-manifesto-footer">
-                    <span></span>
-                    Engineering with purpose
-                </div>
-
-            </aside>
-
-
-            <!-- RIGHT VALUES LEDGER -->
-            <div class="values-ledger">
-
-                <!-- VALUE 01 -->
-                <article class="value-row">
-
-                    <div class="value-number">01</div>
-
-                    <div class="value-title">
-                        <span>Precision</span>
-                        <h3>Engineering Integrity</h3>
-                    </div>
-
-                    <p>
-                        We make decisions through disciplined engineering,
-                        verified data and uncompromising technical accuracy.
-                    </p>
-
-                    <div class="value-sector">
-                        Power / Project Delivery
-                    </div>
-
-                    <div class="value-indicator" aria-hidden="true">↗</div>
-
-                </article>
-
-
-                <!-- VALUE 02 -->
-                <article class="value-row">
-
-                    <div class="value-number">02</div>
-
-                    <div class="value-title">
-                        <span>Assurance</span>
-                        <h3>Safety &amp; Reliability</h3>
-                    </div>
-
-                    <p>
-                        Safety, resilience and dependable performance are
-                        designed into every system from concept to commissioning.
-                    </p>
-
-                    <div class="value-sector">
-                        Power / Automation
-                    </div>
-
-                    <div class="value-indicator" aria-hidden="true">↗</div>
-
-                </article>
-
-
-                <!-- VALUE 03 -->
-                <article class="value-row">
-
-                    <div class="value-number">03</div>
-
-                    <div class="value-title">
-                        <span>Responsibility</span>
-                        <h3>Sustainable Progress</h3>
-                    </div>
-
-                    <p>
-                        We create energy and infrastructure solutions that
-                        balance performance, resource efficiency and long-term impact.
-                    </p>
-
-                    <div class="value-sector">
-                        Energy / Infrastructure
-                    </div>
-
-                    <div class="value-indicator" aria-hidden="true">↗</div>
-
-                </article>
-
-
-                <!-- VALUE 04 -->
-                <article class="value-row">
-
-                    <div class="value-number">04</div>
-
-                    <div class="value-title">
-                        <span>Intelligence</span>
-                        <h3>Purposeful Innovation</h3>
-                    </div>
-
-                    <p>
-                        We apply automation, IoT and research to solve
-                        real operational challenges—not simply to add technology.
-                    </p>
-
-                    <div class="value-sector">
-                        Automation / R&amp;D
-                    </div>
-
-                    <div class="value-indicator" aria-hidden="true">↗</div>
-
-                </article>
-
-
-                <!-- VALUE 05 -->
-                <article class="value-row">
-
-                    <div class="value-number">05</div>
-
-                    <div class="value-title">
-                        <span>Commitment</span>
-                        <h3>Enduring Partnership</h3>
-                    </div>
-
-                    <p>
-                        We build transparent, accountable relationships and
-                        remain committed throughout the complete project lifecycle.
-                    </p>
-
-                    <div class="value-sector">
-                        Every Sector
-                    </div>
-
-                    <div class="value-indicator" aria-hidden="true">↗</div>
-
-                </article>
 
             </div>
 
@@ -9705,815 +10415,445 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         <!-- =====================================================
-             CLOSING STANDARD
+             VALUES GRID
         ====================================================== -->
-        <div class="values-standard">
 
-            <div class="values-standard-index">
-                05 / One standard
+        <div class="cv-grid">
+
+
+            <!-- VALUE 01 -->
+
+            <article class="cv-card featured reveal">
+
+                <div class="cv-card-top">
+
+                    <span class="cv-no">
+                        01
+                    </span>
+
+                    <span class="cv-tag">
+                        PRECISION
+                    </span>
+
+                </div>
+
+
+                <div class="cv-card-content">
+
+                    <h3>
+
+                        Engineering
+                        <span>Integrity.</span>
+
+                    </h3>
+
+                    <p>
+
+                        We make decisions through disciplined
+                        engineering, verified data and uncompromising
+                        technical accuracy from concept through
+                        commissioning.
+
+                    </p>
+
+                </div>
+
+
+                <div class="cv-feature-footer">
+
+                    <div>
+
+                        <small>01 / DISCIPLINE</small>
+
+                        <strong>Power</strong>
+
+                    </div>
+
+                    <div>
+
+                        <small>02 / DELIVERY</small>
+
+                        <strong>Project Execution</strong>
+
+                    </div>
+
+                    <div>
+
+                        <small>03 / STANDARD</small>
+
+                        <strong>Accuracy</strong>
+
+                    </div>
+
+                    <div>
+
+                        <small>04 / RESULT</small>
+
+                        <strong>Dependability</strong>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- VALUE 02 -->
+
+            <article class="cv-card reveal">
+
+                <div class="cv-card-top">
+
+                    <span class="cv-no">
+                        02
+                    </span>
+
+                    <span class="cv-tag">
+                        ASSURANCE
+                    </span>
+
+                </div>
+
+                <div class="cv-card-content">
+
+                    <h3>
+                        Safety &amp;
+                        Reliability.
+                    </h3>
+
+                    <p>
+
+                        Safety, resilience and dependable
+                        performance are designed into every
+                        system from the first calculation onward.
+
+                    </p>
+
+                </div>
+
+                <div class="cv-card-foot">
+
+                    <small>
+                        Power / Automation
+                    </small>
+
+                    <span>↗</span>
+
+                </div>
+
+            </article>
+
+
+            <!-- VALUE 03 -->
+
+            <article class="cv-card reveal">
+
+                <div class="cv-card-top">
+
+                    <span class="cv-no">
+                        03
+                    </span>
+
+                    <span class="cv-tag">
+                        RESPONSIBILITY
+                    </span>
+
+                </div>
+
+                <div class="cv-card-content">
+
+                    <h3>
+                        Sustainable
+                        Progress.
+                    </h3>
+
+                    <p>
+
+                        We balance performance, resource
+                        efficiency and long-term impact in
+                        every energy and infrastructure solution.
+
+                    </p>
+
+                </div>
+
+                <div class="cv-card-foot">
+
+                    <small>
+                        Energy / Infrastructure
+                    </small>
+
+                    <span>↗</span>
+
+                </div>
+
+            </article>
+
+
+            <!-- VALUE 04 -->
+
+            <article class="cv-card reveal">
+
+                <div class="cv-card-top">
+
+                    <span class="cv-no">
+                        04
+                    </span>
+
+                    <span class="cv-tag">
+                        INTELLIGENCE
+                    </span>
+
+                </div>
+
+                <div class="cv-card-content">
+
+                    <h3>
+                        Purposeful
+                        Innovation.
+                    </h3>
+
+                    <p>
+
+                        We apply automation, IoT and research
+                        to solve real operational challenges,
+                        not simply to add technology.
+
+                    </p>
+
+                </div>
+
+                <div class="cv-card-foot">
+
+                    <small>
+                        Automation / R&amp;D
+                    </small>
+
+                    <span>↗</span>
+
+                </div>
+
+            </article>
+
+
+            <!-- VALUE 05 -->
+
+            <article class="cv-card reveal">
+
+                <div class="cv-card-top">
+
+                    <span class="cv-no">
+                        05
+                    </span>
+
+                    <span class="cv-tag">
+                        COMMITMENT
+                    </span>
+
+                </div>
+
+                <div class="cv-card-content">
+
+                    <h3>
+                        Enduring
+                        Partnership.
+                    </h3>
+
+                    <p>
+
+                        We build transparent, accountable
+                        relationships and remain committed
+                        through the complete project lifecycle.
+
+                    </p>
+
+                </div>
+
+                <div class="cv-card-foot">
+
+                    <small>
+                        Every Sector
+                    </small>
+
+                    <span>↗</span>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <!-- =====================================================
+             DISCIPLINES
+        ====================================================== -->
+
+        <div class="cv-disciplines reveal">
+
+            <div class="cv-disciplines-label">
+
+                Applied across
+
             </div>
 
-            <p>
-                From the first calculation to final commissioning,
-                our values remain constant.
-            </p>
 
-            <div class="values-standard-mark">
-                <span></span>
-                Built to perform. Designed to endure.
+            <div class="cv-discipline">
+
+                <span>01</span>
+
+                <strong>Power</strong>
+
+            </div>
+
+
+            <div class="cv-discipline">
+
+                <span>02</span>
+
+                <strong>Energy</strong>
+
+            </div>
+
+
+            <div class="cv-discipline">
+
+                <span>03</span>
+
+                <strong>Automation</strong>
+
+            </div>
+
+
+            <div class="cv-discipline">
+
+                <span>04</span>
+
+                <strong>R&amp;D</strong>
+
             </div>
 
         </div>
+
+
+        <!-- =====================================================
+             CLOSING
+        ====================================================== -->
+
+        <div class="cv-close reveal">
+
+            <small>
+                ONE STANDARD
+            </small>
+
+            <p>
+
+                From the first calculation to final commissioning,
+                our values remain constant.
+
+            </p>
+
+            <div class="cv-close-mark">
+
+                <i></i>
+
+                Built to perform. Designed to endure.
+
+            </div>
+
+        </div>
+
 
     </div>
 
 </section>
 
 
-<style>
+<!-- =========================================================
+     MODULE — CORE VALUES — SCRIPT
+========================================================= -->
 
-/* =========================================================
-   CORE VALUES — DESIGN SYSTEM
-========================================================== */
+<script>
 
-.values-section {
-    --values-bg: #ffffff;
-    --values-white: #ffffff;
-    --values-ink: #102729;
-    --values-deep: #0d2224;
-    --values-text: #526466;
-    --values-muted: #7c8a8b;
-    --values-line: rgba(16, 39, 41, 0.15);
-    --values-line-light: rgba(16, 39, 41, 0.085);
-    --values-orange: #ed5a2a;
-    --values-aqua: #62c9c0;
+(function(){
 
-    position: relative;
+    const section =
+        document.querySelector('.core-values');
 
-    width: 100%;
+    if(!section) return;
 
-    margin: 0;
-    padding: clamp(76px, 8vw, 126px) 0;
-    overflow: hidden;
 
-    color: var(--values-ink);
-    /* Pure white outer section; inner manifesto colors remain unchanged */
-    background: var(--values-bg);
+    /* existing website reveal helper */
 
-    font-family:
-        "Varela Round",
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-}
+    window.ltInitReveal &&
+    window.ltInitReveal('.core-values');
 
-.values-section::before {
-    content: "";
 
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
+    /* fallback reveal animation */
 
-    height: 1px;
+    const reveals =
+        section.querySelectorAll('.reveal');
 
-    background: var(--values-line);
-}
 
-.values-section *,
-.values-section *::before,
-.values-section *::after {
-    box-sizing: border-box;
+    if(
+        !window.ltInitReveal &&
+        'IntersectionObserver' in window
+    ){
 
-    /* Sharp corporate design — intentionally no curves */
-    border-radius: 0 !important;
-}
+        const observer =
+            new IntersectionObserver(entries=>{
 
-.values-container {
-    width: min(calc(100% - 64px), 1500px);
+                entries.forEach(entry=>{
 
-    margin-inline: auto;
-}
+                    if(entry.isIntersecting){
 
+                        entry.target.animate(
+                            [
+                                {
+                                    opacity:0,
+                                    transform:'translateY(26px)'
+                                },
+                                {
+                                    opacity:1,
+                                    transform:'translateY(0)'
+                                }
+                            ],
+                            {
+                                duration:750,
+                                fill:'both',
+                                easing:'cubic-bezier(.22,1,.36,1)'
+                            }
+                        );
 
-/* =========================================================
-   SECTION HEADER
-========================================================== */
+                        observer.unobserve(
+                            entry.target
+                        );
 
-.values-header {
-    display: grid;
-    grid-template-columns: minmax(230px, 0.72fr) minmax(0, 2.28fr);
-    align-items: end;
+                    }
 
-    padding-bottom: 30px;
+                });
 
-    border-bottom: 1px solid var(--values-line);
-}
+            },{
+                threshold:.12
+            });
 
-.values-header-label {
-    display: flex;
-    align-items: center;
-    gap: 13px;
 
-    color: var(--values-muted);
+        reveals.forEach((item,index)=>{
 
-    font-size: 9px;
-    letter-spacing: 0.18em;
+            item.style.opacity = '0';
 
-    text-transform: uppercase;
-}
+            item.style.animationDelay =
+                (index * 70) + 'ms';
 
-.values-header-label span {
-    color: var(--values-orange);
-}
+            observer.observe(item);
 
-.values-header-label i {
-    width: 42px;
-    height: 1px;
+        });
 
-    background: var(--values-line);
-}
-
-.values-header > p {
-    justify-self: end;
-
-    max-width: 610px;
-
-    margin: 0;
-
-    color: var(--values-text);
-
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-
-    font-size: 13px;
-    line-height: 1.75;
-}
-
-
-/* =========================================================
-   MAIN COMPOSITION
-========================================================== */
-
-.values-composition {
-    display: grid;
-    grid-template-columns: minmax(330px, 0.88fr) minmax(0, 2.12fr);
-
-    border-bottom: 1px solid var(--values-line);
-}
-
-
-/* =========================================================
-   MANIFESTO PANEL
-========================================================== */
-
-.values-manifesto {
-    position: relative;
-    isolation: isolate;
-
-    display: flex;
-    flex-direction: column;
-
-    min-height: 760px;
-
-    padding: clamp(40px, 5vw, 72px);
-    overflow: hidden;
-
-    color: #ffffff;
-    background:
-        linear-gradient(
-            145deg,
-            #102c2f 0%,
-            var(--values-deep) 64%,
-            #091a1c 100%
-        );
-}
-
-.values-manifesto::before {
-    content: "05";
-
-    position: absolute;
-    right: -0.08em;
-    bottom: -0.23em;
-    z-index: -1;
-
-    color: rgba(255, 255, 255, 0.035);
-
-    font-size: clamp(230px, 24vw, 390px);
-    line-height: 1;
-    letter-spacing: -0.10em;
-
-    pointer-events: none;
-}
-
-.values-manifesto::after {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 4px;
-    height: 135px;
-
-    background:
-        linear-gradient(
-            to bottom,
-            var(--values-orange),
-            rgba(237, 90, 42, 0)
-        );
-}
-
-.values-manifesto-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
-
-    padding-bottom: 24px;
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-
-    color: rgba(255, 255, 255, 0.51);
-
-    font-size: 8px;
-    letter-spacing: 0.16em;
-
-    text-transform: uppercase;
-}
-
-.values-manifesto h2 {
-    margin: clamp(60px, 6vw, 94px) 0 0;
-
-    color: #ffffff;
-
-    font-size: clamp(53px, 5.3vw, 82px);
-    font-weight: 400;
-    line-height: 0.94;
-    letter-spacing: -0.06em;
-}
-
-.values-manifesto h2 span {
-    display: block;
-
-    color: rgba(255, 255, 255, 0.40);
-}
-
-.values-manifesto > p {
-    max-width: 430px;
-
-    margin: 32px 0 40px;
-
-    color: rgba(238, 249, 247, 0.63);
-
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-
-    font-size: 13px;
-    line-height: 1.8;
-}
-
-.values-disciplines {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    margin-top: auto;
-
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    border-left: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.values-disciplines > div {
-    padding: 17px;
-
-    border-right: 1px solid rgba(255, 255, 255, 0.15);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.values-disciplines strong,
-.values-disciplines span {
-    display: block;
-}
-
-.values-disciplines strong {
-    margin-bottom: 8px;
-
-    color: var(--values-aqua);
-
-    font-size: 8px;
-    font-weight: 400;
-    letter-spacing: 0.13em;
-}
-
-.values-disciplines span {
-    color: rgba(255, 255, 255, 0.68);
-
-    font-size: 8px;
-    letter-spacing: 0.12em;
-
-    text-transform: uppercase;
-}
-
-.values-manifesto-footer {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-
-    margin-top: 26px;
-
-    color: rgba(255, 255, 255, 0.42);
-
-    font-size: 8px;
-    letter-spacing: 0.14em;
-
-    text-transform: uppercase;
-}
-
-.values-manifesto-footer span {
-    width: 23px;
-    height: 2px;
-
-    background: var(--values-orange);
-}
-
-
-/* =========================================================
-   VALUES LEDGER
-========================================================== */
-
-.values-ledger {
-    min-width: 0;
-}
-
-.value-row {
-    position: relative;
-    isolation: isolate;
-
-    display: grid;
-    grid-template-columns: 55px minmax(200px, 0.86fr) minmax(270px, 1.35fr) minmax(120px, 0.58fr) 28px;
-    align-items: center;
-    gap: clamp(18px, 2.5vw, 42px);
-
-    min-height: 152px;
-
-    padding: 26px clamp(24px, 4vw, 62px);
-    overflow: hidden;
-
-    border-bottom: 1px solid var(--values-line-light);
-
-    background: rgba(255, 255, 255, 0.42);
-
-    transition:
-        color 0.38s ease,
-        background-color 0.38s ease;
-}
-
-.value-row:last-child {
-    border-bottom: 0;
-}
-
-.value-row::before {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-
-    width: 4px;
-
-    background: var(--values-orange);
-
-    transform: scaleY(0);
-    transform-origin: bottom;
-
-    transition: transform 0.38s ease;
-}
-
-.value-row::after {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -2;
-
-    width: 100%;
-
-    background: var(--values-deep);
-
-    transform: translateX(-101%);
-
-    transition:
-        transform 0.48s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.value-row:hover::before,
-.value-row:focus-within::before {
-    transform: scaleY(1);
-}
-
-.value-row:hover::after,
-.value-row:focus-within::after {
-    transform: translateX(0);
-}
-
-.value-number {
-    color: var(--values-orange);
-
-    font-size: 9px;
-    letter-spacing: 0.16em;
-}
-
-.value-title > span {
-    display: block;
-
-    margin-bottom: 7px;
-
-    color: var(--values-muted);
-
-    font-size: 8px;
-    letter-spacing: 0.15em;
-
-    text-transform: uppercase;
-
-    transition: color 0.38s ease;
-}
-
-.value-title h3 {
-    margin: 0;
-
-    color: var(--values-ink);
-
-    font-size: clamp(21px, 2vw, 31px);
-    font-weight: 400;
-    line-height: 1.1;
-    letter-spacing: -0.035em;
-
-    transition: color 0.38s ease;
-}
-
-.value-row > p {
-    margin: 0;
-
-    color: var(--values-text);
-
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-
-    font-size: 12.5px;
-    line-height: 1.7;
-
-    transition: color 0.38s ease;
-}
-
-.value-sector {
-    color: var(--values-muted);
-
-    font-size: 7.5px;
-    line-height: 1.55;
-    letter-spacing: 0.12em;
-
-    text-transform: uppercase;
-
-    transition: color 0.38s ease;
-}
-
-.value-indicator {
-    color: var(--values-orange);
-
-    font-size: 17px;
-
-    opacity: 0.48;
-
-    transition:
-        opacity 0.32s ease,
-        transform 0.32s ease;
-}
-
-.value-row:hover .value-title > span,
-.value-row:focus-within .value-title > span,
-.value-row:hover .value-sector,
-.value-row:focus-within .value-sector {
-    color: rgba(237, 248, 246, 0.48);
-}
-
-.value-row:hover .value-title h3,
-.value-row:focus-within .value-title h3 {
-    color: #ffffff;
-}
-
-.value-row:hover > p,
-.value-row:focus-within > p {
-    color: rgba(237, 248, 246, 0.68);
-}
-
-.value-row:hover .value-indicator,
-.value-row:focus-within .value-indicator {
-    opacity: 1;
-    transform: translate(3px, -3px);
-}
-
-
-/* =========================================================
-   CLOSING STANDARD
-========================================================== */
-
-.values-standard {
-    display: grid;
-    grid-template-columns: minmax(190px, 0.72fr) minmax(0, 1.4fr) minmax(260px, 0.88fr);
-    align-items: center;
-    gap: 40px;
-
-    min-height: 112px;
-}
-
-.values-standard-index {
-    color: var(--values-orange);
-
-    font-size: 8px;
-    letter-spacing: 0.16em;
-
-    text-transform: uppercase;
-}
-
-.values-standard > p {
-    margin: 0;
-
-    color: var(--values-text);
-
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-
-    font-size: 12.5px;
-    line-height: 1.7;
-}
-
-.values-standard-mark {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 12px;
-
-    color: var(--values-muted);
-
-    font-size: 8px;
-    letter-spacing: 0.12em;
-
-    text-transform: uppercase;
-}
-
-.values-standard-mark span {
-    width: 34px;
-    height: 1px;
-
-    background: var(--values-line);
-}
-
-
-/* =========================================================
-   RESPONSIVE — LARGE LAPTOP
-========================================================== */
-
-@media (max-width: 1250px) {
-
-    .values-composition {
-        grid-template-columns: minmax(320px, 0.78fr) minmax(0, 1.72fr);
     }
 
-    .value-row {
-        grid-template-columns: 40px minmax(170px, 0.8fr) minmax(230px, 1.2fr) 25px;
-    }
+})();
 
-    .value-sector {
-        display: none;
-    }
-}
-
-
-/* =========================================================
-   RESPONSIVE — TABLET
-========================================================== */
-
-@media (max-width: 960px) {
-
-    .values-section {
-        padding: 72px 0;
-    }
-
-    .values-container {
-        width: min(calc(100% - 44px), 860px);
-    }
-
-    .values-header {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .values-header > p {
-        justify-self: start;
-    }
-
-    .values-composition {
-        grid-template-columns: 1fr;
-    }
-
-    .values-manifesto {
-        min-height: 670px;
-    }
-
-    .values-manifesto h2 {
-        max-width: 720px;
-    }
-
-    .values-manifesto > p {
-        max-width: 620px;
-    }
-
-    .values-disciplines {
-        max-width: 650px;
-    }
-
-    .value-row {
-        grid-template-columns: 45px minmax(190px, 0.8fr) minmax(260px, 1.2fr) 25px;
-    }
-
-    .values-standard {
-        grid-template-columns: 1fr 1.4fr;
-        padding: 27px 0;
-    }
-
-    .values-standard-mark {
-        grid-column: 1 / -1;
-        justify-content: flex-start;
-    }
-}
-
-
-/* =========================================================
-   RESPONSIVE — MOBILE
-========================================================== */
-
-@media (max-width: 650px) {
-
-    .values-section {
-        padding: 54px 0;
-    }
-
-    .values-container {
-        width: calc(100% - 30px);
-    }
-
-    .values-header {
-        padding-bottom: 24px;
-    }
-
-    .values-header > p {
-        font-size: 12.5px;
-    }
-
-    .values-manifesto {
-        min-height: 620px;
-
-        padding: 32px 24px;
-    }
-
-    .values-manifesto h2 {
-        margin-top: 60px;
-
-        font-size: clamp(48px, 15vw, 65px);
-    }
-
-    .values-manifesto > p {
-        margin: 27px 0 34px;
-
-        font-size: 12.5px;
-    }
-
-    .values-disciplines > div {
-        padding: 14px;
-    }
-
-    .value-row {
-        grid-template-columns: 34px 1fr 23px;
-        gap: 15px;
-
-        min-height: 0;
-
-        padding: 29px 19px;
-    }
-
-    .value-title {
-        grid-column: 2;
-    }
-
-    .value-row > p {
-        grid-column: 2 / -1;
-    }
-
-    .value-indicator {
-        grid-column: 3;
-        grid-row: 1;
-    }
-
-    .value-title h3 {
-        font-size: 25px;
-    }
-
-    .values-standard {
-        grid-template-columns: 1fr;
-        gap: 16px;
-
-        padding: 27px 0 5px;
-    }
-
-    .values-standard-mark {
-        grid-column: auto;
-    }
-}
-
-
-/* =========================================================
-   EXTRA SMALL MOBILE
-========================================================== */
-
-@media (max-width: 380px) {
-
-    .values-container {
-        width: calc(100% - 24px);
-    }
-
-    .values-manifesto {
-        padding: 28px 20px;
-    }
-
-    .values-manifesto h2 {
-        font-size: 45px;
-    }
-
-    .values-disciplines {
-        grid-template-columns: 1fr;
-    }
-
-    .value-row {
-        padding-right: 14px;
-        padding-left: 14px;
-    }
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .value-row,
-    .value-row::before,
-    .value-row::after,
-    .value-title > span,
-    .value-title h3,
-    .value-row > p,
-    .value-sector,
-    .value-indicator {
-        transition: none;
-    }
-}
-
-</style>
-
-
-
-
-
-
-
-
+</script>
 
      
  <!-- =========================================================
