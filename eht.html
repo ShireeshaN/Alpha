@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EHT Transmission | Alpha Numeric Innovations</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root{
+    --navy:#05141d;
+    --navy2:#08212c;
+    --ink:#0e2632;
+    --muted:#68777d;
+    --soft:#f5f7f8;
+    --line:#dfe5e8;
+    --white:#fff;
+    --blue:#6ed7ff;
+    --orange:#ff9a58;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+    font-family:"Inter",sans-serif;
+    background:#fff;
+    color:var(--ink);
+    overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit}
+img{display:block;width:100%}
+.container{
+    width:min(calc(100% - 64px),1450px);
+    margin:auto;
+}
+.section-kicker{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#6b7a80;
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:.17em;
+    text-transform:uppercase;
+}
+.section-kicker i{
+    width:5px;height:5px;border-radius:50%;background:#0a566f
+}
+.section-title{
+    margin-top:14px;
+    font-size:clamp(42px,5vw,74px);
+    line-height:.96;
+    letter-spacing:-.055em;
+    font-weight:700;
+}
+.section-copy{
+    color:#6c787d;
+    font-size:14px;
+    line-height:1.85;
+}
+.reveal{
+    opacity:0;
+    transform:translateY(24px);
+    transition:.8s cubic-bezier(.22,1,.36,1);
+}
+.reveal.in{opacity:1;transform:none}
+
+/* =========================================================
+   MODULE 01 — NAVBAR
+========================================================= */
+.navbar{
+    position:absolute;
+    top:0;left:0;right:0;
+    z-index:20;
+    min-height:78px;
+    color:#fff;
+}
+.nav-wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:35px;
+    padding:18px 0;
+}
+.brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:15px;
+    font-weight:800;
+    letter-spacing:.04em;
+}
+.brand-mark{
+    width:36px;height:36px;
+    border:2px solid rgba(255,255,255,.9);
+    transform:rotate(45deg);
+    display:grid;
+    place-items:center;
+}
+.brand-mark span{
+    transform:rotate(-45deg);
+    font-weight:700;
+}
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:28px;
+    font-size:12px;
+    font-weight:600;
+}
+.nav-links a{opacity:.86;transition:.25s}
+.nav-links a:hover{opacity:1}
+.nav-cta{
+    padding:12px 20px;
+    border:1px solid rgba(255,255,255,.5);
+    border-radius:8px;
+    font-size:11px;
+    font-weight:700;
+}
+.nav-toggle{display:none}
+
+@media(max-width:991px){
+    .nav-links{display:none}
+    .nav-toggle{
+        display:block;
+        color:#fff;
+        background:none;
+        border:0;
+        font-size:22px;
+    }
+}
+
+/* =========================================================
+   MODULE 02 — HERO
+========================================================= */
+.hero{
+    position:relative;
+    min-height:760px;
+    color:#fff;
+    overflow:hidden;
+    background:#03131c;
+}
+.hero-bg{
+    position:absolute;
+    inset:0;
+    background:url("assets/img/eht/eht-hero.jpg") center/cover no-repeat;
+    transform:scale(1.02);
+    animation:heroBreath 18s ease-in-out infinite alternate;
+}
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      linear-gradient(90deg,rgba(2,13,21,.98) 0%,rgba(2,13,21,.92) 32%,rgba(2,13,21,.48) 59%,rgba(2,13,21,.12) 100%),
+      linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.25));
+}
+.hero-inner{
+    position:relative;
+    z-index:2;
+    min-height:760px;
+    padding-top:150px;
+    padding-bottom:75px;
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:60px;
+    align-items:center;
+}
+.hero-copy-wrap{max-width:700px}
+.hero-kicker{
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.25em;
+    text-transform:uppercase;
+    color:#c9d7dc;
+}
+.hero h1{
+    margin-top:20px;
+    font-size:clamp(64px,7vw,108px);
+    line-height:.88;
+    letter-spacing:-.065em;
+    font-weight:700;
+}
+.hero h1 span{
+    display:block;
+    color:#b6d8ef;
+}
+.hero-desc{
+    max-width:540px;
+    margin-top:24px;
+    color:#d5dde0;
+    font-size:15px;
+    line-height:1.8;
+}
+.hero-actions{
+    display:flex;
+    gap:12px;
+    margin-top:28px;
+}
+.btn{
+    min-height:52px;
+    padding:0 22px;
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    border-radius:8px;
+    font-size:11px;
+    font-weight:800;
+}
+.btn-light{
+    background:#fff;color:#0d1d24
+}
+.btn-outline{
+    color:#fff;border:1px solid rgba(255,255,255,.45)
+}
+.hero-right{
+    position:relative;
+    min-height:470px;
+}
+.voltage-pill{
+    position:absolute;
+    top:5%;
+    left:12%;
+    padding:16px 18px;
+    border-radius:8px;
+    background:rgba(36,40,42,.54);
+    backdrop-filter:blur(12px);
+}
+.voltage-pill strong{font-size:22px}
+.voltage-pill span{
+    display:block;
+    margin-top:3px;
+    color:#d5dcde;
+    font-size:9px;
+}
+.hero-stats{
+    position:absolute;
+    right:0;
+    bottom:0;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    min-width:500px;
+}
+.hero-stat{
+    padding-left:22px;
+    border-left:1px solid rgba(255,255,255,.22);
+}
+.hero-stat small{
+    display:block;
+    color:#a9bbc2;
+    font-size:8px;
+    font-weight:700;
+    letter-spacing:.12em;
+}
+.hero-stat strong{
+    display:block;
+    margin-top:6px;
+    font-size:34px;
+}
+@keyframes heroBreath{
+    from{transform:scale(1.02)}
+    to{transform:scale(1.06)}
+}
+@media(max-width:991px){
+    .hero-inner{grid-template-columns:1fr}
+    .hero-right{min-height:170px}
+    .hero-stats{left:0;right:auto;min-width:0;width:100%}
+}
+@media(max-width:767px){
+    .hero{min-height:760px}
+    .hero-inner{padding-top:120px}
+    .hero h1{font-size:56px}
+    .hero-actions{display:grid}
+    .hero-stats{grid-template-columns:1fr 1fr 1fr}
+    .hero-stat{padding-left:12px}
+    .hero-stat strong{font-size:24px}
+    .voltage-pill{display:none}
+}
+
+/* =========================================================
+   MODULE 03 — STRONGER INDIA BAND
+========================================================= */
+.india-band{
+    padding:70px 0;
+    background:linear-gradient(135deg,#061924,#082630);
+    color:#fff;
+}
+.india-grid{
+    display:grid;
+    grid-template-columns:1.05fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+.india-band .section-kicker{color:#9bb0b7}
+.india-band .section-title{
+    font-size:clamp(42px,4.4vw,68px);
+}
+.india-band .section-copy{
+    margin-top:20px;
+    max-width:590px;
+    color:#bbc7cb;
+}
+.value-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+.value{
+    text-align:center;
+    padding:20px 16px;
+    border-left:1px solid rgba(255,255,255,.14);
+}
+.value i{
+    font-size:32px;
+    color:#bfe7f3;
+}
+.value strong{
+    display:block;
+    margin-top:14px;
+    font-size:14px;
+}
+@media(max-width:991px){
+    .india-grid{grid-template-columns:1fr;gap:45px}
+}
+@media(max-width:767px){
+    .value-grid{grid-template-columns:repeat(2,1fr)}
+    .value{border-bottom:1px solid rgba(255,255,255,.12)}
+}
+
+/* =========================================================
+   MODULE 04 — VOLTAGE RANGE
+========================================================= */
+.voltage-section{
+    padding:95px 0;
+    background:#f6f8f9;
+}
+.section-head{
+    display:grid;
+    grid-template-columns:1fr 420px;
+    gap:70px;
+    align-items:end;
+    margin-bottom:42px;
+}
+.voltage-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+.voltage-card{
+    position:relative;
+    min-height:390px;
+    overflow:hidden;
+    border-radius:8px;
+    background:#111;
+}
+.voltage-card img{
+    width:100%;height:100%;object-fit:cover;
+    transition:.7s;
+}
+.voltage-card:hover img{transform:scale(1.045)}
+.voltage-card::after{
+    content:"";
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.82));
+}
+.voltage-card-copy{
+    position:absolute;
+    z-index:2;
+    left:20px;right:20px;bottom:18px;
+    color:#fff;
+}
+.voltage-card-copy strong{
+    font-size:24px
+}
+.voltage-card-copy p{
+    margin-top:8px;
+    font-size:10px;
+    line-height:1.5;
+    color:#d4dddd;
+}
+@media(max-width:1100px){
+    .voltage-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:767px){
+    .section-head{grid-template-columns:1fr;gap:24px}
+    .voltage-grid{grid-template-columns:1fr}
+}
+
+/* =========================================================
+   MODULE 05 — CAPABILITIES
+========================================================= */
+.capabilities{
+    padding:95px 0;
+    background:#051822;
+    color:#fff;
+}
+.capabilities .section-kicker{color:#9eb0b6}
+.capabilities .section-copy{color:#b1c0c5}
+.cap-grid{
+    margin-top:42px;
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:8px;
+}
+.cap-card{
+    min-height:300px;
+    position:relative;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.16);
+    border-radius:8px;
+    background:#0b2732;
+}
+.cap-card img{
+    height:100%;
+    object-fit:cover;
+    opacity:.85;
+}
+.cap-card::after{
+    content:"";
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.8));
+}
+.cap-copy{
+    position:absolute;
+    z-index:2;
+    left:16px;right:16px;bottom:16px;
+}
+.cap-copy span{
+    display:block;
+    font-size:20px;
+    color:#d5e5eb;
+}
+.cap-copy strong{
+    display:block;
+    margin-top:8px;
+    font-size:10px;
+    line-height:1.4;
+}
+@media(max-width:1200px){
+    .cap-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:767px){
+    .cap-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+    .cap-grid{grid-template-columns:1fr}
+}
+
+/* =========================================================
+   MODULE 06 — PROJECTS
+========================================================= */
+.projects{
+    padding:80px 0;
+    background:#fff;
+}
+.project-grid{
+    display:grid;
+    grid-template-columns:.75fr 1.45fr .72fr;
+    gap:0;
+    align-items:stretch;
+}
+.project-copy{
+    padding:34px 36px 34px 0;
+}
+.project-copy h2{
+    font-size:34px;
+    line-height:1;
+}
+.project-copy p{
+    margin-top:18px;
+    color:#67757a;
+    font-size:13px;
+    line-height:1.8;
+}
+.project-copy .btn{
+    margin-top:24px;
+    background:#0b3342;
+    color:#fff;
+}
+.project-image{
+    min-height:320px;
+}
+.project-image img{height:100%;object-fit:cover}
+.project-stats{
+    padding:30px;
+    background:#051820;
+    color:#fff;
+    border-radius:0 8px 8px 0;
+}
+.project-stat{
+    padding:14px 0;
+    border-bottom:1px solid rgba(255,255,255,.12);
+}
+.project-stat:last-child{border-bottom:0}
+.project-stat strong{font-size:28px}
+.project-stat span{
+    display:block;
+    margin-top:2px;
+    font-size:10px;
+    color:#aebdc2;
+}
+@media(max-width:991px){
+    .project-grid{grid-template-columns:1fr}
+    .project-copy{padding-right:0}
+    .project-stats{border-radius:0}
+}
+
+/* =========================================================
+   MODULE 07 — INDUSTRIES
+========================================================= */
+.industries{
+    padding:85px 0;
+    background:#061924;
+    color:#fff;
+}
+.industries .section-kicker{color:#9cb0b7}
+.industries .section-copy{color:#b5c1c5}
+.industry-grid{
+    margin-top:36px;
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:8px;
+}
+.industry-card img{
+    height:180px;
+    object-fit:cover;
+    border-radius:7px;
+}
+.industry-card strong{
+    display:block;
+    margin-top:9px;
+    font-size:10px;
+}
+@media(max-width:1100px){
+    .industry-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:767px){
+    .industry-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:520px){
+    .industry-grid{grid-template-columns:1fr}
+}
+
+/* =========================================================
+   MODULE 08 — SUSTAINABILITY
+========================================================= */
+.sustainability{
+    padding:50px 0;
+    background:#f6f7f7;
+}
+.sustain-grid{
+    display:grid;
+    grid-template-columns:1fr 1.1fr;
+    gap:46px;
+    align-items:center;
+}
+.sustain-image{
+    position:relative;
+    min-height:340px;
+    overflow:hidden;
+    border-radius:8px;
+}
+.sustain-image img{height:100%;object-fit:cover}
+.sustain-image::after{
+    content:"";
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.65));
+}
+.sustain-image h3{
+    position:absolute;
+    z-index:2;
+    left:28px;bottom:26px;
+    max-width:340px;
+    color:#fff;
+    font-size:32px;
+    line-height:1.03;
+}
+.sustain-icons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-top:30px;
+}
+.sustain-icon i{
+    font-size:25px;
+    color:#0b4255;
+}
+.sustain-icon strong{
+    display:block;
+    margin-top:10px;
+    font-size:9px;
+    line-height:1.4;
+}
+@media(max-width:991px){
+    .sustain-grid{grid-template-columns:1fr}
+}
+@media(max-width:767px){
+    .sustain-icons{grid-template-columns:repeat(2,1fr)}
+}
+
+/* =========================================================
+   MODULE 09 — CTA
+========================================================= */
+.cta{
+    position:relative;
+    overflow:hidden;
+    color:#fff;
+    background:#07212d;
+}
+.cta-bg{
+    position:absolute;
+    inset:0;
+    background:url("assets/img/eht/eht-cta.jpg") right center/cover no-repeat;
+}
+.cta::after{
+    content:"";
+    position:absolute;inset:0;
+    background:linear-gradient(90deg,#06202c 0%,rgba(6,32,44,.96) 40%,rgba(6,32,44,.45) 70%,rgba(6,32,44,.08) 100%);
+}
+.cta-inner{
+    position:relative;
+    z-index:2;
+    min-height:220px;
+    display:grid;
+    grid-template-columns:1fr 320px;
+    gap:60px;
+    align-items:center;
+}
+.cta h2{
+    font-size:50px;
+    line-height:.95;
+}
+.cta-side p{
+    color:#c4d2d6;
+    font-size:12px;
+    line-height:1.7;
+}
+.cta-side .btn{
+    margin-top:18px;
+    background:#fff;color:#0b2028;
+}
+@media(max-width:767px){
+    .cta-inner{
+        grid-template-columns:1fr;
+        padding:55px 0;
+        gap:25px;
+    }
+}
+
+/* =========================================================
+   MODULE 10 — FOOTER
+========================================================= */
+.footer{
+    padding:58px 0 28px;
+    background:#04161f;
+    color:#fff;
+}
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.2fr repeat(4,1fr);
+    gap:50px;
+}
+.footer-brand p{
+    margin-top:20px;
+    max-width:270px;
+    color:#9fb0b6;
+    font-size:11px;
+    line-height:1.8;
+}
+.footer-col h4{
+    margin-bottom:16px;
+    font-size:12px;
+}
+.footer-col a{
+    display:block;
+    padding:4px 0;
+    color:#9db0b6;
+    font-size:10px;
+}
+.footer-bottom{
+    margin-top:45px;
+    padding-top:22px;
+    border-top:1px solid rgba(255,255,255,.1);
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    color:#71878f;
+    font-size:9px;
+}
+@media(max-width:991px){
+    .footer-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+    .footer-grid{grid-template-columns:1fr}
+    .footer-bottom{flex-direction:column}
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     MODULE 01 — NAVBAR — HTML
+========================================================= -->
+<nav class="navbar">
+    <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+            <span class="brand-mark"><span>A</span></span>
+            <span>ALPHA NUMERIC</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="#">Power</a>
+            <a href="#">Energy</a>
+            <a href="#">Automation</a>
+            <a href="#">R&amp;D</a>
+            <a href="#">Products</a>
+            <a href="#">Industries</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <a class="nav-cta" href="contact.html">Get In Touch</a>
+        <button class="nav-toggle"><i class="fa-solid fa-bars"></i></button>
+    </div>
+</nav>
+
+<!-- =========================================================
+     MODULE 02 — HERO — HTML
+========================================================= -->
+<header class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-inner">
+        <div class="hero-copy-wrap reveal">
+            <div class="hero-kicker">› EXTRA HIGH TENSION</div>
+
+            <h1>
+                Powering Greater
+                <span>Possibilities.</span>
+            </h1>
+
+            <p class="hero-desc">
+                End-to-end EHT transmission solutions from 132kV to 765kV,
+                enabling a stronger, cleaner and more connected tomorrow.
+            </p>
+
+            <div class="hero-actions">
+                <a class="btn btn-light" href="#capabilities">
+                    Our Capabilities <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a class="btn btn-outline" href="contact.html">Get a Quote</a>
+            </div>
+        </div>
+
+        <div class="hero-right reveal">
+            <div class="voltage-pill">
+                <strong>765kV</strong>
+                <span>Built for a Stronger Tomorrow</span>
+            </div>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <small>EHT LINES</small>
+                    <strong>2,500+</strong>
+                </div>
+                <div class="hero-stat">
+                    <small>SUBSTATIONS</small>
+                    <strong>50+</strong>
+                </div>
+                <div class="hero-stat">
+                    <small>STATES</small>
+                    <strong>10+</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- =========================================================
+     MODULE 03 — TRANSMISSION FOR A STRONGER INDIA
+========================================================= -->
+<section class="india-band">
+    <div class="container india-grid">
+        <div class="reveal">
+            <div class="section-kicker"><i></i> FROM GENERATION TO NATION</div>
+            <h2 class="section-title">Transmission<br>for a Stronger India.</h2>
+            <p class="section-copy">
+                We design, build and deliver high-performance EHT transmission systems
+                that move power reliably across long distances, enabling industrial growth,
+                urban development and a sustainable future.
+            </p>
+        </div>
+
+        <div class="value-grid reveal">
+            <div class="value">
+                <i class="fa-solid fa-gear"></i>
+                <strong>Engineering<br>Excellence</strong>
+            </div>
+            <div class="value">
+                <i class="fa-solid fa-shield-halved"></i>
+                <strong>Safety<br>First</strong>
+            </div>
+            <div class="value">
+                <i class="fa-solid fa-tower-broadcast"></i>
+                <strong>Reliable<br>Infrastructure</strong>
+            </div>
+            <div class="value">
+                <i class="fa-solid fa-leaf"></i>
+                <strong>Sustainable<br>Growth</strong>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================
+     MODULE 04 — VOLTAGE RANGE
+========================================================= -->
+<section class="voltage-section">
+    <div class="container">
+        <div class="section-head reveal">
+            <div>
+                <div class="section-kicker"><i></i> VOLTAGE RANGE</div>
+                <h2 class="section-title">EHT Solutions<br>Across the Grid.</h2>
+            </div>
+            <p class="section-copy">
+                We execute extra high tension transmission projects across multiple voltage
+                levels, tailored for national and regional grid requirements.
+            </p>
+        </div>
+
+        <div class="voltage-grid reveal">
+            <article class="voltage-card">
+                <img src="assets/img/eht/132kv.jpg" alt="132kV transmission">
+                <div class="voltage-card-copy">
+                    <strong>132 kV</strong>
+                    <p>Strengthening Regional Connectivity</p>
+                </div>
+            </article>
+
+            <article class="voltage-card">
+                <img src="assets/img/eht/220kv.jpg" alt="220kV transmission">
+                <div class="voltage-card-copy">
+                    <strong>220 kV</strong>
+                    <p>Powering Growing Industries</p>
+                </div>
+            </article>
+
+            <article class="voltage-card">
+                <img src="assets/img/eht/400kv.jpg" alt="400kV transmission">
+                <div class="voltage-card-copy">
+                    <strong>400 kV</strong>
+                    <p>High-Capacity Transmission</p>
+                </div>
+            </article>
+
+            <article class="voltage-card">
+                <img src="assets/img/eht/765kv.jpg" alt="765kV transmission">
+                <div class="voltage-card-copy">
+                    <strong>765 kV</strong>
+                    <p>For a Stronger, More Resilient Grid</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================
+     MODULE 05 — CAPABILITIES
+========================================================= -->
+<section class="capabilities" id="capabilities">
+    <div class="container">
+        <div class="section-head reveal">
+            <div>
+                <div class="section-kicker"><i></i> OUR CAPABILITIES</div>
+                <h2 class="section-title">Complete EHT<br>Transmission Solutions.</h2>
+            </div>
+            <p class="section-copy">
+                From concept to commissioning, we deliver integrated solutions with
+                engineering precision, safety-focused execution and coordinated delivery.
+            </p>
+        </div>
+
+        <div class="cap-grid reveal">
+            <article class="cap-card">
+                <img src="assets/img/eht/eht-route-survey.jpg" alt="">
+                <div class="cap-copy"><span>01</span><strong>Route Survey &amp; Planning</strong></div>
+            </article>
+            <article class="cap-card">
+                <img src="assets/img/eht/eht-engineering.jpg" alt="">
+                <div class="cap-copy"><span>02</span><strong>Engineering &amp; Design</strong></div>
+            </article>
+            <article class="cap-card">
+                <img src="assets/img/eht/eht-foundation.jpg" alt="">
+                <div class="cap-copy"><span>03</span><strong>Foundation &amp; Civil Works</strong></div>
+            </article>
+            <article class="cap-card">
+                <img src="assets/img/eht/eht-tower.jpg" alt="">
+                <div class="cap-copy"><span>04</span><strong>Tower Manufacturing &amp; Erection</strong></div>
+            </article>
+            <article class="cap-card">
+                <img src="assets/img/eht/eht-stringing.jpg" alt="">
+                <div class="cap-copy"><span>05</span><strong>Stringing &amp; Hardware Installation</strong></div>
+            </article>
+            <article class="cap-card">
+                <img src="assets/img/eht/eht-testing.jpg" alt="">
+                <div class="cap-copy"><span>06</span><strong>Testing &amp; Commissioning</strong></div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================
+     MODULE 06 — PROJECTS
+========================================================= -->
+<section class="projects">
+    <div class="container project-grid reveal">
+        <div class="project-copy">
+            <h2>PROJECTS THAT<br>POWER PROGRESS</h2>
+            <p>
+                Delivering mission-critical transmission infrastructure for
+                utilities, industries and governments.
+            </p>
+            <a class="btn" href="#">View Projects <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="project-image">
+            <img src="assets/img/eht/eht-projects.jpg" alt="EHT substation project">
+        </div>
+
+        <div class="project-stats">
+            <div class="project-stat"><strong>2,500+</strong><span>Circuit Kilometres</span></div>
+            <div class="project-stat"><strong>50+</strong><span>Substations &amp; Bays</span></div>
+            <div class="project-stat"><strong>132–765 kV</strong><span>Voltage Range</span></div>
+            <div class="project-stat"><strong>100%</strong><span>Commitment to Safety</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================
+     MODULE 07 — INDUSTRIES
+========================================================= -->
+<section class="industries">
+    <div class="container">
+        <div class="section-head reveal">
+            <div>
+                <div class="section-kicker"><i></i> INDUSTRIES SERVED</div>
+                <h2 class="section-title">Infrastructure<br>That Empowers.</h2>
+            </div>
+            <p class="section-copy">
+                Our EHT solutions support diverse sectors, strengthening the
+                backbone of modern power ecosystems.
+            </p>
+        </div>
+
+        <div class="industry-grid reveal">
+            <div class="industry-card">
+                <img src="assets/img/eht/app-utilities.jpg" alt="">
+                <strong>Power Utilities</strong>
+            </div>
+            <div class="industry-card">
+                <img src="assets/img/eht/app-renewables.jpg" alt="">
+                <strong>Renewable Energy</strong>
+            </div>
+            <div class="industry-card">
+                <img src="assets/img/eht/app-industry.jpg" alt="">
+                <strong>Industrial &amp; Manufacturing</strong>
+            </div>
+            <div class="industry-card">
+                <img src="assets/img/eht/app-metro.jpg" alt="">
+                <strong>Metro &amp; Rail</strong>
+            </div>
+            <div class="industry-card">
+                <img src="assets/img/eht/app-smartcity.jpg" alt="">
+                <strong>Smart Cities &amp; Infrastructure</strong>
+            </div>
+            <div class="industry-card">
+                <img src="assets/img/eht/app-datacenter.jpg" alt="">
+                <strong>Data Centres</strong>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================
+     MODULE 08 — SUSTAINABILITY
+========================================================= -->
+<section class="sustainability">
+    <div class="container sustain-grid">
+        <div class="sustain-image reveal">
+            <img src="assets/img/eht/eht-sustainable.jpg" alt="Sustainable transmission infrastructure">
+            <h3>Sustainable Transmission for a Brighter Tomorrow.</h3>
+        </div>
+
+        <div class="reveal">
+            <div class="section-kicker"><i></i> SUSTAINABILITY</div>
+            <h2 class="section-title">Reliable Power.<br>Responsible Growth.</h2>
+            <p class="section-copy" style="margin-top:18px">
+                We enable a cleaner, greener tomorrow through efficient transmission
+                networks that integrate renewable energy, reduce losses and support a
+                low-carbon future.
+            </p>
+
+            <div class="sustain-icons">
+                <div class="sustain-icon">
+                    <i class="fa-solid fa-arrow-trend-down"></i>
+                    <strong>Lower Transmission Losses</strong>
+                </div>
+                <div class="sustain-icon">
+                    <i class="fa-solid fa-solar-panel"></i>
+                    <strong>Enable Renewable Integration</strong>
+                </div>
+                <div class="sustain-icon">
+                    <i class="fa-solid fa-seedling"></i>
+                    <strong>Environment Conscious Execution</strong>
+                </div>
+                <div class="sustain-icon">
+                    <i class="fa-solid fa-tree"></i>
+                    <strong>Long-Term Asset Reliability</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================
+     MODULE 09 — CTA
+========================================================= -->
+<section class="cta">
+    <div class="cta-bg"></div>
+    <div class="container cta-inner">
+        <div class="reveal">
+            <div class="section-kicker" style="color:#b7c8ce"><i></i> LET'S BUILD TOGETHER</div>
+            <h2>Powering<br>What’s Next.</h2>
+        </div>
+
+        <div class="cta-side reveal">
+            <p>
+                Partner with us for reliable, future-ready EHT transmission solutions.
+            </p>
+            <a class="btn" href="contact.html">
+                Get in Touch <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================
+     MODULE 10 — FOOTER
+========================================================= -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="brand">
+                    <span class="brand-mark"><span>A</span></span>
+                    <span>ALPHA NUMERIC</span>
+                </div>
+                <p>
+                    Engineering a smarter, stronger and sustainable tomorrow.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="#">Power</a>
+                <a href="#">Energy</a>
+                <a href="#">Automation</a>
+                <a href="#">R&amp;D</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Our Solutions</h4>
+                <a href="#">Transmission</a>
+                <a href="#">Distribution</a>
+                <a href="#">Substations</a>
+                <a href="#">Solar</a>
+                <a href="#">Wind</a>
+                <a href="#">Hydel</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Industries</h4>
+                <a href="#">Residential</a>
+                <a href="#">Commercial</a>
+                <a href="#">Industrial</a>
+                <a href="#">Healthcare</a>
+                <a href="#">Hospitality</a>
+                <a href="#">Infrastructure</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="contact.html">Contact</a>
+                <a href="#">Careers</a>
+                <a href="#">Brochure</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms &amp; Conditions</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 Alpha Numeric Innovations. All rights reserved.</span>
+            <span>Built for a Smarter Tomorrow.</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function(){
+    const items = document.querySelectorAll('.reveal');
+
+    if(!('IntersectionObserver' in window)){
+        items.forEach(el => el.classList.add('in'));
+        return;
+    }
+
+    const observer = new IntersectionObserver(entries=>{
+        entries.forEach(entry=>{
+            if(entry.isIntersecting){
+                entry.target.classList.add('in');
+                observer.unobserve(entry.target);
+            }
+        });
+    },{threshold:.12});
+
+    items.forEach(el=>observer.observe(el));
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,3807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LT & 11kV Power Distribution Solutions | Alpha Numeric Innovations</title>
+    <meta name="description"
+        content="Alpha Numeric Innovations delivers integrated low-voltage and 11kV electrical distribution engineering, switchgear, transformers, panels, cabling, earthing, testing and commissioning.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style id="global-design-system">
+
+        :root {
+            --ink: #101010;
+            --muted: #6e6e6e;
+            --line: #e4e4e4;
+            --soft: #f5f5f2;
+            --power: #ff6b35;
+            --power2: #ffb347;
+            --electric: #78e7ff;
+            --dark: #07090a;
+            --white: #fff
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #fff;
+            color: var(--ink);
+            overflow-x: hidden
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font-family: inherit
+        }
+
+        img {
+            display: block;
+            max-width: 100%
+        }
+
+        .lt-shell {
+            width: min(calc(100% - 72px), 1480px);
+            margin: auto
+        }
+
+        
+/* LT page system */
+        .lt-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 11px;
+            color: #68716f;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: .2em;
+            text-transform: uppercase
+        }
+
+        .lt-kicker b {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--power);
+            box-shadow: 0 0 0 7px rgba(255, 107, 53, .11)
+        }
+
+        .lt-title {
+            margin: 18px 0 0;
+            font-size: clamp(46px, 5.2vw, 82px);
+            font-weight: 650;
+            line-height: .95;
+            letter-spacing: -.055em
+        }
+
+        .lt-title em {
+            font-style: normal;
+            color: #929997;
+            font-weight: 300
+        }
+
+        .lt-copy {
+            color: #6d7472;
+            font-size: 14px;
+            line-height: 1.9
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity .8s cubic-bezier(.22, 1, .36, 1), transform .8s cubic-bezier(.22, 1, .36, 1)
+        }
+
+        .reveal.in {
+            opacity: 1;
+            transform: none
+        }
+
+        .reveal-delay {
+            transition-delay: .12s
+        }
+
+        
+
+/* =========================================================
+   GLOBAL RESPONSIVE — SHARED CONTAINER / ACCESSIBILITY ONLY
+   Section-specific tablet/mobile CSS lives inside each module.
+========================================================= */
+@media(max-width:767px){
+    .lt-shell{width:calc(100% - 40px)}
+}
+
+@media(prefers-reduced-motion:reduce){
+    *{animation:none !important;transition:none !important}
+    .reveal{opacity:1;transform:none}
+}
+
+</style>
+<script>
+window.ltInitReveal = function(rootSelector) {
+    const root = document.querySelector(rootSelector);
+    if (!root) return;
+    const elements = root.querySelectorAll('.reveal');
+    if (!elements.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+        elements.forEach(el => el.classList.add('in'));
+        return;
+    }
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: .12 });
+
+    elements.forEach(el => observer.observe(el));
+};
+</script>
+</head>
+
+<body>
+    
+    <!-- =========================================================
+         MODULE 01 — NAVBAR — CSS
+    ========================================================== -->
+    <style>
+.main-navbar {
+            padding: 8px 0;
+            background: #fff;
+            box-shadow: 0 8px 35px rgba(14, 29, 57, .08);
+            z-index: 9999
+        }
+
+        .navbar-logo {
+            height: 58px;
+            width: auto;
+            object-fit: contain
+        }
+
+        .main-navbar .nav-link {
+            position: relative;
+            color: #1a1a1a !important;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: .4px;
+            margin: 0 5px;
+            padding: 12px 11px !important
+        }
+
+        .main-navbar .nav-link:hover,
+        .main-navbar .nav-link:focus,
+        .main-navbar .nav-link.show {
+            color: #000 !important
+        }
+
+        #logoWhite {
+            display: none !important
+        }
+
+        #logoDark {
+            display: block !important
+        }
+
+        .solution-dropdown {
+            position: static !important
+        }
+
+        .mega-menu {
+            position: absolute !important;
+            width: min(1180px, calc(100vw - 48px));
+            left: 50% !important;
+            top: 100% !important;
+            transform: translateX(-50%) !important;
+            margin-top: 0 !important;
+            padding: 0;
+            border: 1px solid #1f1f1f;
+            border-radius: 14px;
+            background: #000;
+            box-shadow: 0 24px 70px rgba(0, 0, 0, .28);
+            overflow: hidden
+        }
+
+        .mega-menu-inner {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr))
+        }
+
+        .mega-column {
+            min-height: 270px;
+            padding: 30px 30px 32px;
+            border-right: 1px solid #242424;
+            background: #000
+        }
+
+        .mega-column:last-child {
+            border-right: 0
+        }
+
+        .mega-heading {
+            margin-bottom: 18px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid #2a2a2a;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600
+        }
+
+        .mega-column>a {
+            display: block;
+            position: relative;
+            padding: 9px 0 9px 16px;
+            color: #bdbdbd;
+            font-size: 13.5px;
+            font-weight: 600;
+            transition: .25s ease
+        }
+
+        .mega-column>a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 6px;
+            height: 1px;
+            background: #666;
+            transform: translateY(-50%);
+            transition: .25s ease
+        }
+
+        .mega-column>a:hover {
+            color: #fff;
+            padding-left: 21px
+        }
+
+        .mega-column>a:hover::before {
+            width: 12px;
+            background: #fff
+        }
+
+        .bms-dropdown .bms-menu {
+            min-width: 190px;
+            margin-top: 0;
+            padding: 10px 0;
+            border: 1px solid #1f1f1f;
+            border-radius: 10px;
+            background: #000;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, .24)
+        }
+
+        .bms-dropdown .bms-menu .dropdown-item {
+            padding: 10px 18px;
+            color: #bdbdbd;
+            font-size: 13.5px;
+            font-weight: 600;
+            background: transparent;
+            transition: color .25s ease, padding-left .25s ease
+        }
+
+        .bms-dropdown .bms-menu .dropdown-item:hover {
+            color: #fff;
+            padding-left: 22px
+        }
+
+        @media(min-width:992px) {
+
+            .solution-dropdown>.mega-menu,
+            .bms-dropdown>.bms-menu {
+                display: block;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transform: translateY(6px);
+                transition: opacity .22s ease, visibility .22s ease, transform .22s ease
+            }
+
+            .solution-dropdown>.mega-menu {
+                transform: translateX(-50%) translateY(6px) !important
+            }
+
+            .solution-dropdown:hover>.mega-menu,
+            .solution-dropdown>.mega-menu:hover,
+            .solution-dropdown>.mega-menu.show {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+                transform: translateX(-50%) translateY(0) !important
+            }
+
+            .bms-dropdown:hover>.bms-menu,
+            .bms-dropdown>.bms-menu:hover,
+            .bms-dropdown>.bms-menu.show {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+                transform: translateY(0)
+            }
+
+            .solution-dropdown>.mega-menu::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: -18px;
+                height: 18px;
+                background: transparent
+            }
+        }
+
+        
+    
+        /* NAVBAR — TABLET / MOBILE */
+        @media(max-width:991px){
+            .main-navbar{background:#fff;padding:8px 0}
+            .navbar-logo{height:55px}
+            .main-navbar .navbar-toggler{color:#17243b;border-color:rgba(23,36,59,.2)}
+            .main-navbar .nav-link{color:#17243b!important;padding:12px 7px!important;margin:1px 0}
+            .navbar-collapse{max-height:calc(100vh - 76px);overflow-y:auto;margin-top:10px;padding:15px 10px 22px;border-top:1px solid #edf0f5;background:#fff}
+            .mega-menu{position:static!important;transform:none!important;width:100%;margin:0!important;box-shadow:none;border-left:2px solid #000;border-radius:0;overflow:visible}
+            .mega-menu-inner{grid-template-columns:1fr}
+            .mega-column{min-height:0;padding:18px;border-right:0;border-bottom:1px solid #242424}
+            .bms-dropdown .bms-menu{border-radius:0;box-shadow:none}
+        }
+        @media(max-width:767px){
+            .main-navbar{padding:7px 0}
+            .navbar-logo{height:52px}
+            .navbar-collapse{padding:12px 8px 20px}
+        }
+
+    </style>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/w-alpha.png" id="logoWhite" class="navbar-logo" alt="Alpha Numeric Innovations"
+                    style="display:none;">
+                <img src="assets/img/b-alpha.png" id="logoDark" class="navbar-logo" alt="Alpha Numeric Innovations">
+            </a>
+
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu <i class="fas fa-bars ms-1"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+
+                    <li class="nav-item dropdown solution-dropdown position-static">
+                        <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button"
+                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Solutions</a>
+                        <div class="dropdown-menu mega-menu" aria-labelledby="solutionsDropdown">
+                            <div class="mega-menu-inner">
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>Renewable Energy</span></div>
+                                    <a href="solar-energy.html">Solar</a>
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>Power</span></div>
+                                    <a href="lt.html">LT</a>
+                                    <a href="ht.html">HT</a>
+                                    <a href="eht.html">EHT</a>
+                                    <a href="control-panels.html">Control Panels</a>
+                                    <a href="panel-boards.html">Panel Boards</a>
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>Automation</span></div>
+                                    <a href="home-automation.html">Home Automation</a>
+                                    <a href="commercial-automation.html">Commercial Automation</a>
+                                    <a href="industrial-automation.html">Industrial Automation</a>
+                                    <a href="hospital-automation.html">Hospital Automation</a>
+                                    <a href="hotel-automation.html">Hotel Automation</a>
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>R&amp;D</span></div>
+                                    <a href="smart-pole-r&d.html">Smart Pole</a>
+                                    <a href="smart-bollard-r&d.html">Smart Bollard</a>
+                                    <a href="smart-conference-table.html">Smart Conference Table</a>
+                                    <a href="smart-bar-counter.html">Smart Bar Counter</a>
+                                    <a href="smart-window-leaf-ac.html">Smart Window Leaf AC</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown bms-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="bmsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">BMS</a>
+                        <ul class="dropdown-menu bms-menu" aria-labelledby="bmsDropdown">
+                            <li><a class="dropdown-item" href="iot.html">IoT</a></li>
+                            <li><a class="dropdown-item" href="bms.html">BMS</a></li>
+                            <li><a class="dropdown-item" href="iot-bms.html">IoT+BMS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="power-products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MODULE 01 — NAVBAR — SCRIPT -->
+    <script>
+    (function () {
+        window.ltInitReveal && window.ltInitReveal('#mainNav');
+        document.addEventListener('DOMContentLoaded', function () {
+            const nav = document.getElementById('mainNav');
+            const white = document.getElementById('logoWhite');
+            const dark = document.getElementById('logoDark');
+            if (nav) nav.classList.add('scrolled', 'navbar-shrink');
+            if (white) white.style.display = 'none';
+            if (dark) dark.style.display = 'block';
+        });
+    })();
+    </script>
+
+    <main id="page-top">
+        
+    <!-- =========================================================
+         MODULE 02 — HERO — CSS
+    ========================================================== -->
+    <style>
+/* Hero */
+        .lt-hero {
+            position: relative;
+            margin-top: 74px;
+            min-height: 850px;
+            overflow: hidden;
+            color: #fff;
+            background: radial-gradient(circle at 76% 28%, rgba(120, 231, 255, .15), transparent 24%), radial-gradient(circle at 88% 72%, rgba(255, 107, 53, .12), transparent 26%), #050707
+        }
+
+        .lt-hero:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px);
+            background-size: 72px 72px;
+            mask-image: linear-gradient(90deg, #000, rgba(0, 0, 0, .95), transparent 92%)
+        }
+
+        .lt-hero-inner {
+            position: relative;
+            z-index: 2;
+            min-height: 850px;
+            display: grid;
+            grid-template-columns: .93fr 1.07fr;
+            gap: 70px;
+            align-items: center;
+            padding: 80px 0
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 9px 13px;
+            border: 1px solid rgba(255, 255, 255, .13);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .035);
+            backdrop-filter: blur(16px);
+            font-size: 9px;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: #c6cecc
+        }
+
+        .hero-eyebrow i {
+            color: var(--power)
+        }
+
+        .lt-hero h1 {
+            margin: 24px 0 0;
+            max-width: 840px;
+            font-size: clamp(64px, 6.8vw, 112px);
+            font-weight: 650;
+            line-height: .84;
+            letter-spacing: -.075em
+        }
+
+        .lt-hero h1 span {
+            display: block;
+            color: #73807d;
+            font-weight: 300
+        }
+
+        .hero-copy {
+            max-width: 700px;
+            margin-top: 30px;
+            color: #aab3b0;
+            font-size: 14px;
+            line-height: 1.9
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 31px
+        }
+
+        .lt-btn {
+            min-height: 54px;
+            padding: 0 23px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: .13em;
+            text-transform: uppercase;
+            transition: .3s
+        }
+
+        .lt-btn.primary {
+            background: var(--power);
+            color: #160803
+        }
+
+        .lt-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 40px rgba(255, 107, 53, .2)
+        }
+
+        .lt-btn.ghost {
+            border: 1px solid #35403e;
+            color: #d6dfdd
+        }
+
+        .lt-btn.ghost:hover {
+            background: #fff;
+            color: #111
+        }
+
+        .hero-visual {
+            position: relative;
+            min-height: 620px;
+            border: 1px solid rgba(255, 255, 255, .09);
+            border-radius: 32px;
+            background: linear-gradient(145deg, rgba(17, 23, 24, .88), rgba(6, 9, 10, .96));
+            box-shadow: 0 50px 110px rgba(0, 0, 0, .4);
+            overflow: hidden
+        }
+
+        .hero-visual img {
+            width: 100%;
+            height: 100%;
+            min-height: 620px;
+            object-fit: cover;
+            opacity: .88
+        }
+
+        .hero-visual:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 45%, rgba(2, 4, 5, .8));
+            pointer-events: none
+        }
+
+        .hero-tag {
+            position: absolute;
+            z-index: 2;
+            left: 24px;
+            bottom: 24px;
+            right: 24px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: end;
+            gap: 20px
+        }
+
+        .hero-tag small {
+            display: block;
+            color: #8f9a97;
+            font-size: 8px;
+            letter-spacing: .18em;
+            text-transform: uppercase
+        }
+
+        .hero-tag strong {
+            display: block;
+            margin-top: 8px;
+            font-size: 18px;
+            font-weight: 550
+        }
+
+        .voltage-chip {
+            padding: 10px 14px;
+            border: 1px solid rgba(255, 255, 255, .14);
+            background: rgba(6, 9, 10, .66);
+            backdrop-filter: blur(12px);
+            font-size: 10px;
+            letter-spacing: .12em;
+            color: #fff
+        }
+
+        
+/* =========================================================
+   LT HERO — CINEMATIC FULL-BACKGROUND REDESIGN
+========================================================= */
+        .lt-hero-banner {
+            position: relative;
+            min-height: 860px;
+            margin-top: 74px;
+            overflow: hidden;
+            color: #fff;
+            background: #061019;
+        }
+
+        .lt-hero-banner:before {
+            display: none
+        }
+
+        .lt-hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url("assets/img/banners/lt-hero-banner-bg.jpg") center center/cover no-repeat;
+            transform: scale(1.015);
+            animation: heroBreath 16s ease-in-out infinite alternate;
+        }
+
+        .lt-hero-shade {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(90deg, rgba(2, 12, 20, .98) 0%, rgba(3, 15, 24, .92) 28%, rgba(4, 14, 22, .55) 50%, rgba(4, 10, 15, .12) 72%, rgba(2, 6, 9, .24) 100%),
+                linear-gradient(180deg, rgba(0, 0, 0, .12), rgba(0, 0, 0, .04) 60%, rgba(0, 0, 0, .52));
+        }
+
+        .lt-hero-banner-inner {
+            position: relative;
+            z-index: 2;
+            min-height: 860px;
+            display: grid;
+            grid-template-columns: minmax(0, .9fr) minmax(470px, 1.1fr);
+            gap: 46px;
+            align-items: center;
+            padding: 78px 0 72px;
+        }
+
+        .lt-hero-copy {
+            max-width: 790px
+        }
+
+        .hero-topline {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 18px;
+            color: #c4d2d9;
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: .32em;
+            white-space: nowrap;
+        }
+
+        .hero-topline>span {
+            width: 86px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--electric), var(--power))
+        }
+
+        .hero-topline i {
+            font-style: normal;
+            color: #61757d
+        }
+
+        .lt-hero-banner .hero-eyebrow {
+            margin-bottom: 0;
+            border-color: rgba(255, 255, 255, .11);
+            background: rgba(4, 16, 24, .34)
+        }
+
+        .lt-hero-banner h1 {
+            max-width: 760px;
+            margin: 24px 0 0;
+            font-size: clamp(64px, 6.3vw, 108px);
+            font-weight: 720;
+            line-height: .86;
+            letter-spacing: -.07em;
+        }
+
+        .lt-hero-banner h1 span {
+            display: block;
+            margin-top: 10px;
+            color: transparent;
+            background: linear-gradient(90deg, #70e7ff 0%, #7fc5ff 48%, #ff9c5c 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            font-weight: 650;
+        }
+
+        .hero-tagline {
+            margin: 25px 0 0;
+            color: #d4dee2;
+            font-size: 10px;
+            font-weight: 650;
+            letter-spacing: .42em;
+        }
+
+        .lt-hero-banner .hero-copy {
+            max-width: 700px;
+            margin-top: 24px;
+            color: #c0cbd0;
+            font-size: 14px;
+            line-height: 1.82;
+        }
+
+        .hero-benefits {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            max-width: 680px;
+            margin-top: 34px;
+            border-top: 1px solid rgba(255, 255, 255, .16);
+            border-bottom: 1px solid rgba(255, 255, 255, .16);
+        }
+
+        .hero-benefit {
+            min-height: 116px;
+            padding: 20px 18px 18px;
+            border-right: 1px solid rgba(255, 255, 255, .14);
+        }
+
+        .hero-benefit:first-child {
+            padding-left: 0
+        }
+
+        .hero-benefit:last-child {
+            border-right: 0
+        }
+
+        .hero-benefit i {
+            display: block;
+            margin-bottom: 15px;
+            color: #61e9ef;
+            font-size: 22px
+        }
+
+        .hero-benefit:nth-child(3) i {
+            color: var(--power)
+        }
+
+        .hero-benefit strong {
+            color: #fff;
+            font-size: 11px;
+            font-weight: 600;
+            line-height: 1.35
+        }
+
+        .lt-hero-banner .hero-actions {
+            margin-top: 31px
+        }
+
+        .lt-hero-banner .lt-btn {
+            border-radius: 0;
+            min-height: 56px
+        }
+
+        .lt-hero-banner .lt-btn.primary {
+            background: transparent;
+            border: 1px solid #82ebf3;
+            color: #fff;
+            position: relative;
+            overflow: hidden
+        }
+
+        .lt-hero-banner .lt-btn.primary:before {
+            content: "";
+            position: absolute;
+            inset: 0 auto 0 0;
+            width: 4px;
+            background: var(--power);
+            transition: width .35s cubic-bezier(.22, 1, .36, 1);
+            z-index: -1
+        }
+
+        .lt-hero-banner .lt-btn.primary:hover:before {
+            width: 100%
+        }
+
+        .lt-hero-banner .lt-btn.primary:hover {
+            box-shadow: none;
+            color: #fff
+        }
+
+        .lt-hero-banner .lt-btn.ghost {
+            border-color: rgba(255, 255, 255, .28);
+            background: rgba(3, 12, 18, .18);
+            backdrop-filter: blur(12px)
+        }
+
+        .hero-tech-layer {
+            position: relative;
+            min-height: 620px;
+            align-self: stretch
+        }
+
+        .hero-tech-card {
+            position: absolute;
+            width: 205px;
+            padding: 16px 17px;
+            border: 1px solid rgba(255, 255, 255, .17);
+            background: rgba(3, 14, 21, .54);
+            backdrop-filter: blur(14px);
+            box-shadow: 0 16px 45px rgba(0, 0, 0, .18);
+        }
+
+        .hero-tech-card:before {
+            content: "";
+            position: absolute;
+            left: -24px;
+            top: 50%;
+            width: 24px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #76e8f2)
+        }
+
+        .hero-tech-card:after {
+            content: "";
+            position: absolute;
+            left: -28px;
+            top: calc(50% - 4px);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #70e7ff;
+            box-shadow: 0 0 18px #70e7ff
+        }
+
+        .hero-tech-card small {
+            display: block;
+            color: #81949b;
+            font-size: 7px;
+            letter-spacing: .17em
+        }
+
+        .hero-tech-card strong {
+            display: block;
+            margin-top: 8px;
+            font-size: 15px;
+            font-weight: 650
+        }
+
+        .hero-tech-card span {
+            display: block;
+            margin-top: 5px;
+            color: #b3c0c5;
+            font-size: 9px
+        }
+
+        .tech-incoming {
+            left: 24%;
+            top: 18%
+        }
+
+        .tech-transformer {
+            left: 39%;
+            top: 45%
+        }
+
+        .tech-lt {
+            right: 0;
+            top: 61%
+        }
+
+        .hero-tech-status {
+            position: absolute;
+            right: 0;
+            bottom: 34px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 13px;
+            border-top: 1px solid rgba(255, 255, 255, .18);
+            color: #ced7da;
+            font-size: 8px;
+            letter-spacing: .16em;
+        }
+
+        .hero-tech-status i {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #65eef1;
+            box-shadow: 0 0 15px #65eef1;
+            animation: heroPulse 1.8s infinite
+        }
+
+        .hero-flow-line {
+            position: absolute;
+            left: 16%;
+            right: 2%;
+            bottom: 19%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #55eaf1 32%, #7bc9ff 62%, #ff8b4d 100%);
+            box-shadow: 0 0 18px rgba(91, 232, 240, .48);
+            transform: rotate(-4deg);
+            transform-origin: right center
+        }
+
+        .hero-flow-line span {
+            position: absolute;
+            top: 50%;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 0 16px #73e9ef;
+            transform: translate(-50%, -50%);
+            animation: flowDot 3.3s linear infinite
+        }
+
+        .hero-flow-line span:nth-child(2) {
+            animation-delay: 1.1s
+        }
+
+        .hero-flow-line span:nth-child(3) {
+            animation-delay: 2.2s
+        }
+
+        @keyframes flowDot {
+            0% {
+                left: 0;
+                opacity: 0
+            }
+
+            10% {
+                opacity: 1
+            }
+
+            90% {
+                opacity: 1
+            }
+
+            100% {
+                left: 100%;
+                opacity: 0
+            }
+        }
+
+        @keyframes heroPulse {
+            50% {
+                opacity: .35;
+                transform: scale(.75)
+            }
+        }
+
+        @keyframes heroBreath {
+            from {
+                transform: scale(1.015)
+            }
+
+            to {
+                transform: scale(1.045)
+            }
+        }
+
+        @media(max-width:1180px) {
+            .lt-hero-banner-inner {
+                grid-template-columns: minmax(0, 1fr) minmax(360px, .8fr);
+                gap: 24px
+            }
+
+            .hero-tech-card {
+                width: 180px
+            }
+
+            .tech-incoming {
+                left: 8%
+            }
+
+            .tech-transformer {
+                left: 20%
+            }
+
+            .tech-lt {
+                right: 0
+            }
+        }
+
+        @media(max-width:991px) {
+            .lt-hero-banner {
+                min-height: auto
+            }
+
+            .lt-hero-banner-inner {
+                min-height: 820px;
+                grid-template-columns: 1fr;
+                padding: 92px 0 65px
+            }
+
+            .lt-hero-copy {
+                max-width: 760px
+            }
+
+            .hero-tech-layer {
+                display: none
+            }
+
+            .lt-hero-shade {
+                background: linear-gradient(90deg, rgba(2, 12, 20, .97), rgba(2, 12, 20, .78) 68%, rgba(2, 8, 13, .45))
+            }
+        }
+
+        @media(max-width:767px) {
+            .lt-hero-banner {
+                margin-top: 70px
+            }
+
+            .lt-hero-bg {
+                background-position: 61% center
+            }
+
+            .lt-hero-banner-inner {
+                min-height: 760px;
+                padding: 72px 0 55px
+            }
+
+            .hero-topline {
+                gap: 8px;
+                white-space: normal;
+                line-height: 1.7;
+                letter-spacing: .2em
+            }
+
+            .hero-topline>span {
+                width: 38px;
+                flex: 0 0 38px
+            }
+
+            .lt-hero-banner h1 {
+                font-size: clamp(52px, 14vw, 72px);
+                letter-spacing: -.06em
+            }
+
+            .hero-tagline {
+                font-size: 8px;
+                line-height: 1.8;
+                letter-spacing: .25em
+            }
+
+            .hero-benefits {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .hero-benefit {
+                min-height: 104px;
+                border-bottom: 1px solid rgba(255, 255, 255, .14)
+            }
+
+            .hero-benefit:nth-child(2) {
+                border-right: 0
+            }
+
+            .hero-benefit:nth-child(3),
+            .hero-benefit:nth-child(4) {
+                border-bottom: 0
+            }
+
+            .hero-benefit:nth-child(3) {
+                padding-left: 0
+            }
+
+            .lt-hero-banner .hero-actions {
+                display: grid;
+                grid-template-columns: 1fr
+            }
+
+            .lt-hero-banner .lt-btn {
+                width: 100%
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+
+            .lt-hero-bg,
+            .hero-flow-line span,
+            .hero-tech-status i {
+                animation: none !important
+            }
+        }
+    
+    
+        /* HERO — TABLET / MOBILE SUPPORT */
+        @media(max-width:991px){
+            .lt-hero-inner{grid-template-columns:1fr}
+            .hero-visual{min-height:500px}
+            .hero-visual img{min-height:500px}
+        }
+        @media(max-width:767px){
+            .lt-hero{margin-top:70px}
+            .lt-hero h1{font-size:55px}
+        }
+
+    </style>
+
+        <header class="lt-hero lt-hero-banner">
+            <div class="lt-hero-bg" aria-hidden="true"></div>
+            <div class="lt-hero-shade" aria-hidden="true"></div>
+            <div class="lt-shell lt-hero-banner-inner">
+                <div class="lt-hero-copy reveal">
+                    <div class="hero-topline"><span></span> SAFE <i>•</i> RELIABLE <i>•</i> EFFICIENT <i>•</i> FUTURE
+                        READY</div>
+                    <div class="hero-eyebrow"><i class="fa-solid fa-bolt"></i> LT + 11kV • Power Distribution
+                        Engineering</div>
+                    <h1>LT &amp; 11kV<span>Power Distribution</span></h1>
+                    <p class="hero-tagline">ENGINEERED FOR A BRIGHTER TOMORROW</p>
+                    <p class="hero-copy">End-to-end Low Tension and 11kV electrical distribution for industries,
+                        commercial facilities and critical infrastructure — engineered from incoming source through
+                        transformation, switchgear, controls, cabling, protection, testing and final energization.</p>
+
+                    <div class="hero-benefits" aria-label="LT project benefits">
+                        <div class="hero-benefit"><i
+                                class="fa-solid fa-shield-halved"></i><strong>Enhanced<br>Safety</strong></div>
+                        <div class="hero-benefit"><i class="fa-solid fa-gears"></i><strong>Higher<br>Efficiency</strong>
+                        </div>
+                        <div class="hero-benefit"><i
+                                class="fa-solid fa-chart-column"></i><strong>Reliable<br>Operations</strong></div>
+                        <div class="hero-benefit"><i class="fa-solid fa-leaf"></i><strong>Sustainable<br>Growth</strong>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a class="lt-btn primary" href="#scope">Explore Our LT Solutions <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                        <a class="lt-btn ghost" href="contact.html">Discuss a Project</a>
+                    </div>
+                </div>
+
+                <div class="hero-tech-layer reveal reveal-delay" aria-label="Power flow overview">
+                    <div class="hero-tech-card tech-incoming"><small>01 / INCOMING</small><strong>11kV
+                            Supply</strong><span>VCB / RMU / Metering</span></div>
+                    <div class="hero-tech-card tech-transformer"><small>02 / TRANSFORM</small><strong>11 /
+                            0.415kV</strong><span>Transformer Integration</span></div>
+                    <div class="hero-tech-card tech-lt"><small>03 / DISTRIBUTE</small><strong>415V LT
+                            Network</strong><span>PCC / MCC / APFC / VFD</span></div>
+                    <div class="hero-flow-line"><span></span><span></span><span></span></div>
+                    <div class="hero-tech-status"><i></i> ENGINEER • EXECUTE • TEST • COMMISSION</div>
+                </div>
+            </div>
+        </header>
+    <!-- MODULE 02 — HERO — SCRIPT -->
+    <script>
+    (function () {
+        window.ltInitReveal && window.ltInitReveal('.lt-hero-banner');
+        
+    })();
+    </script>
+
+        
+    <!-- =========================================================
+         MODULE 03 — SCOPE RAIL — CSS
+    ========================================================== -->
+    <style>
+/* rail */
+        .scope-rail {
+            background: #0d1111;
+            color: #fff;
+            border-top: 1px solid #1a2020;
+            border-bottom: 1px solid #1a2020
+        }
+
+        .rail-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr)
+        }
+
+        .rail-item {
+            min-height: 118px;
+            padding: 25px;
+            border-right: 1px solid #202727;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between
+        }
+
+        .rail-item:first-child {
+            border-left: 1px solid #202727
+        }
+
+        .rail-item small {
+            font-size: 7px;
+            letter-spacing: .18em;
+            color: #63706d
+        }
+
+        .rail-item strong {
+            font-size: 13px;
+            font-weight: 550
+        }
+
+        
+    
+        /* SCOPE RAIL — TABLET / MOBILE */
+        @media(max-width:1200px){.rail-grid{grid-template-columns:repeat(3,1fr)}}
+        @media(max-width:767px){
+            .rail-grid{grid-template-columns:1fr}
+            .rail-item{min-height:92px;padding:20px}
+            .rail-item{border-left:1px solid #202727;border-bottom:1px solid #202727}
+        }
+
+    </style>
+
+        <section class="scope-rail">
+            <div class="lt-shell rail-grid">
+                <div class="rail-item"><small>01 / SOURCE</small><strong>11kV Incomer & RMU</strong></div>
+                <div class="rail-item"><small>02 / STEP DOWN</small><strong>Transformers</strong></div>
+                <div class="rail-item"><small>03 / DISTRIBUTE</small><strong>LT Switchboards</strong></div>
+                <div class="rail-item"><small>04 / CONTROL</small><strong>MCC / VFD / APFC</strong></div>
+                <div class="rail-item"><small>05 / CONNECT</small><strong>Cables & Busducts</strong></div>
+                <div class="rail-item"><small>06 / PROTECT</small><strong>Earthing & Protection</strong></div>
+            </div>
+        </section>
+    <!-- MODULE 03 — SCOPE RAIL — SCRIPT -->
+    <script>
+    (function () {
+        window.ltInitReveal && window.ltInitReveal('.scope-rail');
+        
+    })();
+    </script>
+
+        
+    <!-- =========================================================
+         MODULE 04 — INTRO — CSS
+    ========================================================== -->
+    <style>
+/* intro */
+        .lt-intro {
+            padding: 125px 0;
+            background: #fff
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(380px, 480px);
+            gap: 100px;
+            align-items: end
+        }
+
+        .intro-points {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 28px
+        }
+
+        .intro-point {
+            padding: 16px 18px;
+            border-left: 3px solid var(--power);
+            background: #f5f6f4;
+            font-size: 10px;
+            font-weight: 650
+        }
+
+        
+    
+        /* INTRO — TABLET / MOBILE */
+        @media(max-width:991px){.intro-grid{grid-template-columns:1fr;gap:46px}}
+        @media(max-width:767px){
+            .lt-intro{padding-top:85px;padding-bottom:85px}
+            .intro-points{grid-template-columns:1fr}
+            .lt-title{font-size:43px}
+        }
+
+    </style>
+
+        <section class="lt-intro">
+            <div class="lt-shell intro-grid reveal">
+                <div><span class="lt-kicker"><b></b> Complete Electrical Distribution</span>
+                    <h2 class="lt-title">One coordinated system.<em> No fragmented execution.</em></h2>
+                </div>
+                <div class="lt-copy">
+                    <p>Our scope is structured around the complete power path — incoming supply, 11kV switching,
+                        transformation, low-voltage distribution, motor/control systems, cable networks, protection,
+                        earthing and final load connectivity. This gives clients one engineering view from utility
+                        interface to the equipment that actually consumes the power.</p>
+                    <div class="intro-points">
+                        <div class="intro-point">New Installations + Upgrades</div>
+                        <div class="intro-point">Industrial + Commercial + Infrastructure</div>
+                        <div class="intro-point">Indoor + Outdoor Distribution</div>
+                        <div class="intro-point">Supply + Erection + Testing + Commissioning</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- MODULE 04 — INTRO — SCRIPT -->
+    <script>
+    (function () {
+        window.ltInitReveal && window.ltInitReveal('.lt-intro');
+        
+    })();
+    </script>
+
+        
+    <!-- =========================================================
+         MODULE 05 — POWER ARCHITECTURE — CSS
+    ========================================================== -->
+    <style>
+/* voltage architecture */
+        .voltage-section {
+            padding: 125px 0;
+            background: #f3f5f3
+        }
+
+        .section-head {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(330px, 440px);
+            gap: 80px;
+            align-items: end;
+            margin-bottom: 58px
+        }
+
+        .voltage-map {
+            position: relative;
+            min-height: 560px;
+            padding: 45px;
+            background: #091011;
+            color: #fff;
+            overflow: hidden
+        }
+
+        .voltage-map:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at center, rgba(255, 255, 255, .06) 0 1px, transparent 1px);
+            background-size: 24px 24px
+        }
+
+        .power-line {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            align-items: center;
+            min-height: 460px
+        }
+
+        .power-node {
+            text-align: center;
+            position: relative
+        }
+
+        .power-node:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -50%;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, #263332, var(--power), #263332)
+        }
+
+        .power-node:first-child:before {
+            display: none
+        }
+
+        .node-ring {
+            width: 116px;
+            height: 116px;
+            margin: auto;
+            border-radius: 50%;
+            border: 1px solid #30413f;
+            display: grid;
+            place-items: center;
+            background: #0d1515;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 0 0 14px rgba(255, 107, 53, .03)
+        }
+
+        .node-ring i {
+            font-size: 22px;
+            color: var(--power)
+        }
+
+        .power-node strong {
+            display: block;
+            margin-top: 18px;
+            font-size: 14px
+        }
+
+        .power-node small {
+            display: block;
+            margin-top: 6px;
+            color: #75817e;
+            font-size: 8px;
+            letter-spacing: .12em;
+            text-transform: uppercase
+        }
+
+        .map-note {
+            position: absolute;
+            z-index: 3;
+            left: 28px;
+            bottom: 24px;
+            font-size: 8px;
+            letter-spacing: .14em;
+            color: #7e8987;
+            text-transform: uppercase
+        }
+
+        
+    
+        /* POWER ARCHITECTURE — TABLET / MOBILE */
+        @media(max-width:991px){
+            .section-head{grid-template-columns:1fr;gap:35px}
+            .power-line{grid-template-columns:1fr;gap:18px}
+            .power-node:before{left:50%;top:-18px;width:1px;height:18px}
+        }
+        @media(max-width:767px){
+            .voltage-section{padding-top:85px;padding-bottom:85px}
+            .voltage-map{padding:28px 20px;min-height:auto}
+            .power-line{min-height:auto;padding:20px 0 48px}
+            .node-ring{width:96px;height:96px}
+            .lt-title{font-size:43px}
+            .map-note{left:20px;right:20px;bottom:18px;line-height:1.6}
+        }
+
+    </style>
+
+        <section class="voltage-section">
+            <div class="lt-shell">
+                <div class="section-head reveal">
+                    <div><span class="lt-kicker"><b></b> Power Architecture</span>
+                        <h2 class="lt-title">Every voltage layer.<em> One engineering logic.</em></h2>
+                    </div>
+                    <p class="lt-copy">The page intentionally separates low-voltage distribution from the 11kV interface
+                        while presenting them as one integrated project. This keeps the engineering technically clear
+                        and the project delivery commercially simple.</p>
+                </div>
+                <div class="voltage-map reveal">
+                    <div class="power-line">
+                        <div class="power-node">
+                            <div class="node-ring"><i class="fa-solid fa-tower-broadcast"></i></div><strong>11kV Utility
+                                / Source</strong><small>Incoming Supply</small>
+                        </div>
+                        <div class="power-node">
+                            <div class="node-ring"><i class="fa-solid fa-shield-halved"></i></div><strong>VCB /
+                                RMU</strong><small>Switch + Protect</small>
+                        </div>
+                        <div class="power-node">
+                            <div class="node-ring"><i class="fa-solid fa-arrows-down-to-line"></i></div>
+                            <strong>Transformer</strong><small>11kV / 415V</small>
+                        </div>
+                        <div class="power-node">
+                            <div class="node-ring"><i class="fa-solid fa-table-columns"></i></div><strong>LT Main
+                                Board</strong><small>Distribute + Meter</small>
+                        </div>
+                        <div class="power-node">
+                            <div class="node-ring"><i class="fa-solid fa-industry"></i></div><strong>Critical
+                                Loads</strong><small>Plant / Building / Process</small>
+                        </div>
+                    </div>
+                    <div class="map-note">Conceptual single-line architecture — final ratings and protection philosophy
+                        are project specific.</div>
+                </div>
+            </div>
+        </section>
+    <!-- MODULE 05 — POWER ARCHITECTURE — SCRIPT -->
+    <script>
+    (function () {
+        window.ltInitReveal && window.ltInitReveal('.voltage-section');
+        
+    })();
+    </script>
+
+        
+    <!-- =========================================================
+         MODULE 06 — CORE SCOPE — CSS
+    ========================================================== -->
+    <style>
+/* capabilities */
+        .cap-section {
+            padding: 125px 0;
+            background: #080b0c;
+            color: #fff
+        }
+
+        .cap-section .lt-title em {
+            color: #596562
+        }
+
+        .cap-section .lt-copy {
+            color: #8c9794
+        }
+
+        .cap-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px
+        }
+
+        .cap-card {
+            min-height: 320px;
+            padding: 30px;
+            border: 1px solid #242c2c;
+            background: #0e1314;
+            position: relative;
+            overflow: hidden;
+            transition: .35s
+        }
+
+        .cap-card:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 2px;
+            background: var(--power);
+            transition: .4s
+        }
+
+        .cap-card:hover {
+            transform: translateY(-5px);
+            background: #111819
+        }
+
+        .cap-card:hover:before {
+            width: 100%
+        }
+
+        .cap-icon {
+            width: 48px;
+            height: 48px;
+            border: 1px solid #303a39;
+            display: grid;
+            place-items: center;
+            color: var(--power);
+            font-size: 18px
+        }
+
+        .cap-card h3 {
+            margin: 65px 0 12px;
+            font-size: 20px
+        }
+
+        .cap-card p {
+            color: #8b9693;
+            font-size: 11px;
+            line-height: 1.8
+        }
+
+        .cap-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 18px
+        }
+
+        .cap-tags span {
+            padding: 6px 8px;
+            border: 1px solid #293231;
+            color: #a4afac;
+            font-size: 7px;
+            letter-spacing: .09em;
+            text-transform: uppercase
+        }
+
+        
+    
+        /* CORE SCOPE — TABLET / MOBILE */
+        @media(max-width:1200px){.cap-grid{grid-template-columns:repeat(2,1fr)}}
+        @media(max-width:991px){.section-head{grid-template-columns:1fr;gap:35px}}
+        @media(max-width:767px){
+            .cap-section{padding-top:85px;padding-bottom:85px}
+            .cap-grid{grid-template-columns:1fr}
+            .cap-card{min-height:280px}
+            .lt-title{font-size:43px}
+        }
+
+    </style>
+
+        <section class="cap-section" id="scope">
+            <div class="lt-shell">
+                <div class="section-head reveal">
+                    <div><span class="lt-kicker"><b></b> Core Scope</span>
+                        <h2 class="lt-title">Everything required.<em> Properly engineered.</em></h2>
+                    </div>
+                    <p class="lt-copy">Rather than showing only panels or only cabling, the complete delivery model
+                        covers equipment, interfaces, protection, installation and commissioning as one coordinated
+                        electrical system.</p>
+                </div>
+                <div class="cap-grid reveal">
+                    <div class="cap-card">
+                        <div class="cap-icon"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+                        <h3>11kV Switching & Interface</h3>
+                        <p>VCB panels, RMUs, metering interface, protection relays, CT/PT integration, interlocks and
+                            utility-side coordination as required by the project.</p>
+                        <div class="cap-tags"><span>VCB</span><span>RMU</span><span>CT/PT</span><span>Relays</span>
+                        </div>
+                    </div>
+                    <div class="cap-card">
+                        <div class="cap-icon"><i class="fa-solid fa-arrows-down-to-line"></i></div>
+                        <h3>Transformers & Substations</h3>
+                        <p>Transformer selection and integration, compact/substation layouts, cable terminations, LV
+                            interface, earthing and coordinated equipment placement.</p>
+                        <div class="cap-tags"><span>Dry Type</span><span>Oil
+                                Filled</span><span>CSS</span><span>11/0.415kV</span></div>
+                    </div>
+                    <div class="cap-card">
+                        <div class="cap-icon"><i class="fa-solid fa-table-columns"></i></div>
+                        <h3>LT Main Distribution</h3>
+                        <p>PCC, main LT panels, MDB/SMDB, bus couplers, incomers, outgoing feeders, metering and
+                            protection arrangements for reliable low-voltage distribution.</p>
+                        <div class="cap-tags"><span>PCC</span><span>MDB</span><span>SMDB</span><span>ACB/MCCB</span>
+                        </div>
+                    </div>
+                    <div class="cap-card">
+                        <div class="cap-icon"><i class="fa-solid fa-gears"></i></div>
+                        <h3>Motor & Process Control</h3>
+                        <p>MCCs, VFD panels, soft starters, starter feeders, PLC interface and control wiring designed
+                            around motors, pumps, fans and process loads.</p>
+                        <div class="cap-tags"><span>MCC</span><span>VFD</span><span>Starter</span><span>PLC I/O</span>
+                        </div>
+                    </div>
+                    <div class="cap-card">
+                        <div class="cap-icon"><i class="fa-solid fa-wave-square"></i></div>
+                        <h3>Power Quality & Backup</h3>
+                        <p>APFC, harmonic-aware solutions, AMF/ATS, DG integration, UPS interface and source changeover
+                            strategies to support continuity and power quality.</p>
+                        <div class="cap-tags"><span>APFC</span><span>AMF</span><span>ATS</span><span>DG / UPS</span>
+                        </div>
+                    </div>
+                    <div class="cap-card">
+                        <div class="cap-icon"><i class="fa-solid fa-route"></i></div>
+                        <h3>Cabling, Busduct & Earthing</h3>
+                        <p>HT/LT cable routes, trays, trenches, glands, terminations, busduct integration, earth grid,
+                            equipment earthing and bonding across the installation.</p>
+                        <div class="cap-tags">
+                            <span>Cables</span><span>Busduct</span><span>Trays</span><span>Earthing</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- MODULE 06 — CORE SCOPE — SCRIPT -->
+    <script>
+    (function () {
+        window.ltInitReveal && window.ltInitReveal('.cap-section');
+        
+    })();
+    </script>
+
+        
+    <!-- =========================================================
+         MODULE 07 — EQUIPMENT — CSS
+    ========================================================== -->
+    <style>
+/* image story */
+        .equipment-section {
+            padding: 125px 0;
+            background: #fff
+        }
+
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: 1.08fr .92fr;
+            gap: 16px
+        }
+
+        .equipment-feature,
+        .equipment-stack article {
+            position: relative;
+            overflow: hidden;
+            background: #0b0d0e
+        }
+
+        .equipment-feature {
+            min-height: 650px
+        }
+
+        .equipment-stack {
+            display: grid;
+            gap: 16px
+        }
+
+        .equipment-stack article {
+            min-height: 317px
+        }
+
+        .equipment-feature img,
+        .equipment-stack img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .8s cubic-bezier(.22, 1, .36, 1)
+        }
+
+        .equipment-feature:hover img,
+        .equipment-stack article:hover img {
+            transform: scale(1.035)
+        }
+
+        .image-caption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 34px;
+            background: linear-gradient(transparent, rgba(4, 6, 7, .92));
+            color: #fff
+        }
+
+        .image-caption small {
+            font-size: 8px;
+            letter-spacing: .16em;
+            color: #aab3b1
+        }
+
+        .image-caption h3 {
+            margin-top: 10px;
+            font-size: 26px;
+            font-weight: 550
+        }
+
+        .image-caption p {
+            max-width: 620px;
+            margin: 10px 0 0;
+            color: #bac2c0;
+            font-size: 11px;
+            line-height: 1.7
+        }
+
+        
+    
+        /* EQUIPMENT — TABLET / MOBILE */
+        @media(max-width:991px){
+            .section-head,.equipment-grid{grid-template-columns:1fr}
+            .section-head{gap:35px}
+        }
+        @media(max-width:767px){
+            .equipment-section{padding-top:85px;padding-bottom:85px}
+            .equipment-feature{min-height:470px}
+            .equipment-stack article{min-height:300px}
+            .image-caption{padding:26px 22px}
+            .image-caption h3{font-size:22px}
+            .lt-title{font-size:43px}
+        }
+
+    </style>
+
+        <section class="equipment-section">
+            <div class="lt-shell">
+                <div class="section-head reveal">
+                    <div><span class="lt-kicker"><b></b> Equipment + Field Integration</span>
+                        <h2 class="lt-title">Built beyond the panel.<em> Connected to the site.</em></h2>
+                    </div>
+                    <p class="lt-copy">Premium electrical delivery is not defined by equipment alone. The quality of
+                        routing, terminations, segregation, access, protection coordination and commissioning determines
+                        how the system performs after handover.</p>
+                </div>
+                <div class="equipment-grid reveal">
+                    <article class="equipment-feature"><img src="assets/img/distribution/SWITCHGEAR & CONTROL.png"
+                            alt="Premium LT switchgear lineup">
+                        <div class="image-caption"><small>01 / SWITCHGEAR & CONTROL</small>
+                            <h3>Organized, serviceable, project-specific assemblies.</h3>
+                            <p>Configured around load schedules, fault levels, operational philosophy, redundancy and
+                                maintainability.</p>
+                        </div>
+                    </article>
+                    <div class="equipment-stack">
+                        <article><img src="assets/img/distribution/CABLE INFRASTRUCTURE.png"
+                                alt="Electrical cable trays and distribution network">
+                            <div class="image-caption"><small>02 / CABLE INFRASTRUCTURE</small>
+                                <h3>Routes designed, not improvised.</h3>
+                            </div>
+                        </article>
+                        <article><img src="assets/img/distribution/11kV + TRANSFORMATION.png"
+                                alt="11kV transformer and compact substation">
+                            <div class="image-caption"><small>03 / 11kV + TRANSFORMATION</small>
+                                <h3>Safe interface from source to LV network.</h3>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- MODULE 07 — EQUIPMENT — SCRIPT -->
+    <script>
+    (function () {
+        window.ltInitReveal && window.ltInitReveal('.equipment-section');
+        
+    })();
+    </script>
+
+        
+    <!-- =========================================================
+         MODULE 08 — DELIVERABLES — CSS
+    ========================================================== -->
+    <style>
+/* project scope matrix */
+        .matrix-section {
+            padding: 125px 0;
+            background: #f4f5f3
+        }
+
+        .scope-matrix {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-top: 1px solid #d7d9d7;
+            border-left: 1px solid #d7d9d7
+        }
+
+        .matrix-card {
+            min-height: 260px;
+            padding: 28px;
+            background: #fff;
+            border-right: 1px solid #d7d9d7;
+            border-bottom: 1px solid #d7d9d7;
+            transition: .35s
+        }
+
+        .matrix-card:hover {
+            background: #101314;
+            color: #fff
+        }
+
+        .matrix-card span {
+            font-size: 8px;
+            letter-spacing: .15em;
+            color: #aaa
+        }
+
+        .matrix-card i {
+            display: block;
+            margin: 36px 0 34px;
+            font-size: 22px
+        }
+
+        .matrix-card:hover i {
+            color: var(--power)
+        }
+
+        .matrix-card h3 {
+            font-size: 15px
+        }
+
+        .matrix-card p {
+            margin-top: 10px;
+            color: #777;
+            font-size: 10px;
+            line-height: 1.7
+        }
+
+        .matrix-card:hover p {
+            color: #aab1af
+        }
+
+        
+    
+        /* DELIVERABLES — TABLET / MOBILE */
+        @media(max-width:1200px){.scope-matrix{grid-template-columns:repeat(2,1fr)}}
+        @media(max-width:991px){.section-head{grid-template-columns:1fr;gap:35px}}
+        @media(max-width:767px){
+            .matrix-section{padding-top:85px;padding-bottom:85px}
+            .scope-matrix{grid-template-columns:1fr}
+            .matrix-card{min-height:230px}
+            .lt-title{font-size:43px}
+        }
+
+    </style>
+
+        <section class="matrix-section">
+            <div class="lt-shell">
+                <div class="section-head reveal">
+                    <div><span class="lt-kicker"><b></b> Detailed Deliverables</span>
+                        <h2 class="lt-title">The small details.<em> Included in the big picture.</em></h2>
+                    </div>
+                    <p class="lt-copy">A serious electrical project page should show the interfaces that typically
+                        decide quality on site — not just the headline equipment.</p>
+                </div>
+                <div class="scope-matrix reveal">
+                    <div class="matrix-card"><span>01 / ENGINEERING</span><i class="fa-solid fa-compass-drafting"></i>
+                        <h3>SLD & Distribution Design</h3>
+                        <p>Load schedules, feeder sizing, distribution philosophy, equipment schedules and coordinated
+                            drawings.</p>
+                    </div>
+                    <div class="matrix-card"><span>02 / PROTECTION</span><i class="fa-solid fa-shield-halved"></i>
+                        <h3>Protection Coordination</h3>
+                        <p>Breaker/relay philosophy, selectivity approach and settings support based on approved design
+                            inputs.</p>
+                    </div>
+                    <div class="matrix-card"><span>03 / PANELS</span><i class="fa-solid fa-server"></i>
+                        <h3>Panel Integration</h3>
+                        <p>PCC, MCC, APFC, AMF, VFD, feeder, distribution and control panel interfaces.</p>
+                    </div>
+                    <div class="matrix-card"><span>04 / CABLING</span><i class="fa-solid fa-grip-lines"></i>
+                        <h3>Cable Systems</h3>
+                        <p>HT/LT power, control cables, trays, trenches, glands, lugs, ferruling and identification.</p>
+                    </div>
+                    <div class="matrix-card"><span>05 / EARTHING</span><i class="fa-solid fa-arrow-down"></i>
+                        <h3>Earthing & Bonding</h3>
+                        <p>Earth pits/grid, equipment earthing, panel earth bars, cable armour bonding and continuity.
+                        </p>
+                    </div>
+                    <div class="matrix-card"><span>06 / METERING</span><i class="fa-solid fa-gauge-high"></i>
+                        <h3>Metering & Monitoring</h3>
+                        <p>Energy meters, multifunction meters, CT integration and communication-ready points where
+                            required.</p>
+                    </div>
+                    <div class="matrix-card"><span>07 / LABELING</span><i class="fa-solid fa-tags"></i>
+                        <h3>Identification & Documentation</h3>
+                        <p>Feeder labels, cable tags, drawings, test records and handover documentation organized for
+                            operations teams.</p>
+                    </div>
+                    <div class="matrix-card"><span>08 / SAFETY</span><i class="fa-solid fa-helmet-safety"></i>
+                        <h3>Safe Execution Planning</h3>
+                        <p>Access, isolation, work sequencing, clearances and site controls aligned to project safety
+                            procedures.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- MODULE 08 — DELIVERABLES — SCRIPT -->
+    <script>
+    (function () {
+        window.ltInitReveal && window.ltInitReveal('.matrix-section');
+        
+    })();
+    </script>
+
+        
+    <!-- =========================================================
+         MODULE 09 — PROJECT DELIVERY — CSS
+    ========================================================== -->
+    <style>
+/* process */
+        .process-section {
+            padding: 125px 0;
+            background: #fff
+        }
+
+        .process-list {
+            margin-top: 54px;
+            border-top: 1px solid #ddd
+        }
+
+        .process-step {
+            min-height: 118px;
+            display: grid;
+            grid-template-columns: 70px 1.25fr 1fr auto;
+            gap: 24px;
+            align-items: center;
+            border-bottom: 1px solid #ddd
+        }
+
+        .process-step>span {
+            font-size: 8px;
+            letter-spacing: .16em;
+            color: #aaa
+        }
+
+        .process-step h3 {
+            font-size: 20px;
+            font-weight: 550
+        }
+
+        .process-step p {
+            color: #747b79;
+            font-size: 11px;
+            line-height: 1.7
+        }
+
+        .process-step small {
+            font-size: 8px;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: #999
+        }
+
+        
+    
+        /* PROJECT DELIVERY — TABLET / MOBILE */
+        @media(max-width:991px){
+            .process-step{grid-template-columns:55px 1fr}
+            .process-step p,.process-step small{grid-column:2}
+        }
+        @media(max-width:767px){
+            .process-section{padding-top:85px;padding-bottom:85px}
+            .process-step{min-height:auto;padding:24px 0;gap:12px 16px}
+            .process-step h3{font-size:18px}
+            .lt-title{font-size:43px}
+        }
+
+    </style>
+
+        <section class="process-section">
+            <div class="lt-shell">
+                <div class="reveal"><span class="lt-kicker"><b></b> Project Delivery</span>
+                    <h2 class="lt-title">From first survey.<em> To energization.</em></h2>
+                </div>
+                <div class="process-list reveal">
+                    <div class="process-step"><span>01</span>
+                        <h3>Site Study & Load Assessment</h3>
+                        <p>Understand source, loads, routes, space, operating constraints and future expansion.</p>
+                        <small>Survey / Inputs</small>
+                    </div>
+                    <div class="process-step"><span>02</span>
+                        <h3>Engineering & Coordination</h3>
+                        <p>SLD, layouts, feeder/cable schedules, protection philosophy and multidisciplinary interfaces.
+                        </p><small>Design / Review</small>
+                    </div>
+                    <div class="process-step"><span>03</span>
+                        <h3>Procurement & Panel Integration</h3>
+                        <p>Equipment, switchgear, cables, accessories and project-specific assemblies coordinated to
+                            approved specifications.</p><small>Supply / Build</small>
+                    </div>
+                    <div class="process-step"><span>04</span>
+                        <h3>Site Installation</h3>
+                        <p>Panel placement, cable laying, busduct, terminations, earthing, control wiring and field
+                            interfaces.</p><small>Execute / Control</small>
+                    </div>
+                    <div class="process-step"><span>05</span>
+                        <h3>Testing & Pre-Commissioning</h3>
+                        <p>Inspection, insulation/continuity checks, breaker/relay functional checks and
+                            equipment-specific testing.</p><small>Verify / Record</small>
+                    </div>
+                    <div class="process-step"><span>06</span>
+                        <h3>Commissioning & Handover</h3>
+                        <p>Controlled energization, functional verification, final documentation and operational
+                            handover.</p><small>Energize / Closeout</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- MODULE 09 — PROJECT DELIVERY — SCRIPT -->
+    <script>
+    (function () {
+        window.ltInitReveal && window.ltInitReveal('.process-section');
+        
+    })();
+    </script>
+
+        
+    <!-- =========================================================
+         MODULE 10 — TESTING — CSS
+    ========================================================== -->
+    <style>
+/* testing */
+        .testing-section {
+            padding: 125px 0;
+            background: #091011;
+            color: #fff
+        }
+
+        .testing-grid {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 85px;
+            align-items: center
+        }
+
+        .test-visual {
+            min-height: 560px;
+            background: #0d1515;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #283331
+        }
+
+        .test-visual img {
+            width: 100%;
+            height: 100%;
+            min-height: 560px;
+            object-fit: cover;
+            opacity: .75
+        }
+
+        .test-overlay {
+            position: absolute;
+            inset: 0;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: linear-gradient(180deg, rgba(4, 7, 8, .1), rgba(4, 7, 8, .78))
+        }
+
+        .test-overlay span {
+            font-size: 8px;
+            letter-spacing: .16em;
+            color: #8f9a97
+        }
+
+        .test-overlay strong {
+            font-size: 27px;
+            font-weight: 500
+        }
+
+        .test-list {
+            margin-top: 30px;
+            border-top: 1px solid #2c3534
+        }
+
+        .test-list div {
+            padding: 18px 0;
+            border-bottom: 1px solid #2c3534;
+            display: grid;
+            grid-template-columns: 34px 1fr;
+            gap: 15px
+        }
+
+        .test-list span {
+            font-size: 8px;
+            color: #65706d
+        }
+
+        .test-list strong {
+            font-size: 12px;
+            font-weight: 550
+        }
+
+        
+    
+        /* TESTING — TABLET / MOBILE */
+        @media(max-width:991px){.testing-grid{grid-template-columns:1fr;gap:48px}}
+        @media(max-width:767px){
+            .testing-section{padding-top:85px;padding-bottom:85px}
+            .test-visual,.test-visual img{min-height:430px}
+            .test-overlay{padding:22px}
+            .test-overlay strong{font-size:23px}
+            .lt-title{font-size:43px}
+        }
+
+    </style>
+
+        <section class="testing-section">
+            <div class="lt-shell testing-grid">
+                <div class="test-visual reveal"><img src="assets/img/distribution/Electrical Testing and Commissioning Lab.png"
+                        alt="Electrical testing and commissioning instruments">
+                    <div class="test-overlay"><span>TESTING / COMMISSIONING / HANDOVER</span><strong>Proof before
+                            power.</strong></div>
+                </div>
+                <div class="reveal"><span class="lt-kicker"><b></b> Testing Discipline</span>
+                    <h2 class="lt-title">Installed is not enough.<em> Verified matters.</em></h2>
+                    <p class="lt-copy" style="margin-top:24px;color:#8e9996">Testing scope is finalized against
+                        equipment type, approved procedures, OEM instructions and project requirements. The objective is
+                        simple: confirm that the installed system is safe, correctly connected and ready for controlled
+                        energization.</p>
+                    <div class="test-list">
+                        <div><span>01</span><strong>Insulation resistance and continuity verification</strong></div>
+                        <div><span>02</span><strong>Earth resistance and earth-continuity checks</strong></div>
+                        <div><span>03</span><strong>Breaker, interlock and control-circuit functional testing</strong>
+                        </div>
+                        <div><span>04</span><strong>Protection relay / metering checks as applicable</strong></div>
+                        <div><span>05</span><strong>Cable and termination inspection before energization</strong></div>
+                        <div><span>06</span><strong>Pre-commissioning records and handover documentation</strong></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- MODULE 10 — TESTING — SCRIPT -->
+    <script>
+    (function () {
+        window.ltInitReveal && window.ltInitReveal('.testing-section');
+        
+    })();
+    </script>
+
+        
+    <!-- =========================================================
+         MODULE 11 — APPLICATIONS — CSS
+    ========================================================== -->
+    <style>
+/* applications */
+        .applications {
+            padding: 125px 0;
+            background: #f4f5f3
+        }
+
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px
+        }
+
+        .app-card {
+            min-height: 360px;
+            position: relative;
+            overflow: hidden;
+            background: #111
+        }
+
+        .app-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: saturate(.8);
+            transition: .7s
+        }
+
+        .app-card:hover img {
+            transform: scale(1.05);
+            filter: saturate(1)
+        }
+
+        .app-card:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .75))
+        }
+
+        .app-copy {
+            position: absolute;
+            z-index: 2;
+            left: 24px;
+            right: 24px;
+            bottom: 24px;
+            color: #fff
+        }
+
+        .app-copy small {
+            font-size: 7px;
+            letter-spacing: .14em;
+            color: #c0c8c6
+        }
+
+        .app-copy h3 {
+            margin-top: 9px;
+            font-size: 18px
+        }
+
+        .app-copy p {
+            margin-top: 8px;
+            font-size: 10px;
+            line-height: 1.6;
+            color: #c4ccca
+        }
+
+        
+    
+        /* APPLICATIONS — TABLET / MOBILE */
+        @media(max-width:1200px){.app-grid{grid-template-columns:repeat(2,1fr)}}
+        @media(max-width:991px){.section-head{grid-template-columns:1fr;gap:35px}}
+        @media(max-width:767px){
+            .applications{padding-top:85px;padding-bottom:85px}
+            .app-grid{grid-template-columns:1fr}
+            .app-card{min-height:330px}
+            .lt-title{font-size:43px}
+        }
+
+    </style>
+
+        <section class="applications">
+            <div class="lt-shell">
+                <div class="section-head reveal">
+                    <div><span class="lt-kicker"><b></b> Applications</span>
+                        <h2 class="lt-title">One power backbone.<em> Many environments.</em></h2>
+                    </div>
+                    <p class="lt-copy">The same engineering discipline can be adapted to different load profiles,
+                        redundancy needs, environmental conditions and operating priorities.</p>
+                </div>
+                <div class="app-grid reveal">
+                    <article class="app-card"><img src="assets/img/distribution/Factories & Process Plants.png"
+                            alt="Industrial facility electrical distribution">
+                        <div class="app-copy"><small>01 / INDUSTRIAL</small>
+                            <h3>Factories & Process Plants</h3>
+                            <p>Motor-intensive loads, MCCs, VFDs, process continuity and scalable distribution.</p>
+                        </div>
+                    </article>
+                    <article class="app-card"><img src="assets/img/distribution/Commercial Buildings.png"
+                            alt="Commercial building electrical system">
+                        <div class="app-copy"><small>02 / COMMERCIAL</small>
+                            <h3>Commercial Buildings</h3>
+                            <p>Main distribution, backup power, critical services and maintainable building
+                                infrastructure.</p>
+                        </div>
+                    </article>
+                    <article class="app-card"><img src="assets/img/distribution/Infrastructure & Campuses.png"
+                            alt="Infrastructure electrical distribution">
+                        <div class="app-copy"><small>03 / INFRASTRUCTURE</small>
+                            <h3>Infrastructure & Campuses</h3>
+                            <p>Distributed loads, long cable routes, outdoor equipment and multiple power zones.</p>
+                        </div>
+                    </article>
+                    <article class="app-card"><img src="assets/img/distribution/Healthcare & Mission-Critical.png"
+                            alt="Critical power electrical distribution">
+                        <div class="app-copy"><small>04 / CRITICAL POWER</small>
+                            <h3>Healthcare & Mission-Critical</h3>
+                            <p>Source redundancy, controlled changeover, essential circuits and operational reliability.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    <!-- MODULE 11 — APPLICATIONS — SCRIPT -->
+    <script>
+    (function () {
+        window.ltInitReveal && window.ltInitReveal('.applications');
+        
+    })();
+    </script>
+
+        
+    <!-- =========================================================
+         MODULE 12 — WHY ALPHA NUMERIC — CSS
+    ========================================================== -->
+    <style>
+/* why */
+        .why-section {
+            padding: 125px 0;
+            background: #fff
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 90px;
+            align-items: center
+        }
+
+        .why-visual {
+            min-height: 540px;
+            background: #0b1112;
+            position: relative;
+            display: grid;
+            place-items: center;
+            overflow: hidden
+        }
+
+        .why-orbit {
+            width: 390px;
+            height: 390px;
+            border: 1px solid #283837;
+            border-radius: 50%;
+            position: relative
+        }
+
+        .why-orbit:before,
+        .why-orbit:after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            border: 1px dashed #314844;
+            inset: 70px
+        }
+
+        .why-orbit:after {
+            inset: 145px;
+            border-style: solid;
+            border-color: rgba(255, 107, 53, .5)
+        }
+
+        .why-core {
+            position: absolute;
+            inset: 50%;
+            width: 120px;
+            height: 120px;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background: var(--power);
+            display: grid;
+            place-items: center;
+            text-align: center;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: #160803
+        }
+
+        .why-sat {
+            position: absolute;
+            padding: 9px 12px;
+            border: 1px solid #31403e;
+            background: #0d1515;
+            color: #aab3b0;
+            font-size: 7px;
+            letter-spacing: .11em
+        }
+
+        .ws1 {
+            left: 7%;
+            top: 16%
+        }
+
+        .ws2 {
+            right: 7%;
+            top: 22%
+        }
+
+        .ws3 {
+            left: 4%;
+            bottom: 20%
+        }
+
+        .ws4 {
+            right: 6%;
+            bottom: 16%
+        }
+
+        .why-list {
+            margin-top: 30px;
+            border-top: 1px solid #ddd
+        }
+
+        .why-list div {
+            padding: 17px 0;
+            border-bottom: 1px solid #ddd;
+            display: grid;
+            grid-template-columns: 36px 1fr;
+            gap: 15px
+        }
+
+        .why-list span {
+            font-size: 8px;
+            color: #aaa
+        }
+
+        .why-list strong {
+            font-size: 12px;
+            font-weight: 550
+        }
+
+        
+    
+        /* WHY ALPHA NUMERIC — TABLET / MOBILE */
+        @media(max-width:991px){.why-grid{grid-template-columns:1fr;gap:50px}}
+        @media(max-width:767px){
+            .why-section{padding-top:85px;padding-bottom:85px}
+            .why-visual{min-height:430px}
+            .why-orbit{transform:scale(.82)}
+            .lt-title{font-size:43px}
+        }
+
+    </style>
+
+        <section class="why-section">
+            <div class="lt-shell why-grid">
+                <div class="why-visual reveal">
+                    <div class="why-orbit">
+                        <div class="why-core">Alpha Numeric<br>Power Delivery</div>
+                    </div>
+                    <div class="why-sat ws1">ENGINEERING</div>
+                    <div class="why-sat ws2">SWITCHGEAR</div>
+                    <div class="why-sat ws3">EXECUTION</div>
+                    <div class="why-sat ws4">COMMISSIONING</div>
+                </div>
+                <div class="reveal"><span class="lt-kicker"><b></b> Why Alpha Numeric</span>
+                    <h2 class="lt-title">Engineering first.<em> Execution aligned.</em></h2>
+                    <p class="lt-copy" style="margin-top:24px">The differentiator is not one product brand. It is the
+                        ability to coordinate the whole electrical path around the actual site, operating philosophy and
+                        future requirements.</p>
+                    <div class="why-list">
+                        <div><span>01</span><strong>End-to-end scope from 11kV interface to final LT
+                                distribution</strong></div>
+                        <div><span>02</span><strong>Project-specific engineering instead of generic panel-only
+                                selling</strong></div>
+                        <div><span>03</span><strong>New installations, extensions, retrofits and replacement
+                                projects</strong></div>
+                        <div><span>04</span><strong>Equipment-neutral integration around approved project
+                                specifications</strong></div>
+                        <div><span>05</span><strong>Field execution, testing and documentation built into the delivery
+                                model</strong></div>
+                        <div><span>06</span><strong>Architecture designed for maintainability and future
+                                expansion</strong></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- MODULE 12 — WHY ALPHA NUMERIC — SCRIPT -->
+    <script>
+    (function () {
+        window.ltInitReveal && window.ltInitReveal('.why-section');
+        
+    })();
+    </script>
+
+        
+    <!-- =========================================================
+         MODULE 13 — FINAL CTA — CSS
+    ========================================================== -->
+    <style>
+/* final CTA */
+        .lt-final {
+            padding: 120px 0;
+            background: #0b0e0f
+        }
+
+        .final-card {
+            padding: 58px;
+            background: linear-gradient(135deg, #151b1b, #0a0d0e);
+            color: #fff;
+            display: grid;
+            grid-template-columns: 1fr 330px;
+            gap: 80px;
+            align-items: end;
+            border: 1px solid #29302f
+        }
+
+        .final-card h2 {
+            font-size: clamp(48px, 5.8vw, 86px);
+            line-height: .94;
+            letter-spacing: -.055em
+        }
+
+        .final-card h2 span {
+            display: block;
+            color: #687370;
+            font-weight: 300
+        }
+
+        .final-side {
+            padding-left: 30px;
+            border-left: 1px solid #343c3b
+        }
+
+        .final-side p {
+            color: #8d9794;
+            font-size: 11px;
+            line-height: 1.8;
+            margin-bottom: 22px
+        }
+
+        
+    
+        /* FINAL CTA — TABLET / MOBILE */
+        @media(max-width:991px){
+            .final-card{grid-template-columns:1fr}
+            .final-side{padding-left:0;padding-top:28px;border-left:0;border-top:1px solid #343c3b}
+        }
+        @media(max-width:767px){
+            .lt-final{padding-top:85px;padding-bottom:85px}
+            .final-card{padding:40px 26px;gap:42px}
+            .final-card h2{font-size:48px}
+        }
+
+    </style>
+
+        <section class="lt-final">
+            <div class="lt-shell">
+                <div class="final-card reveal">
+                    <h2>Build the power backbone.<span>Ready for the next load.</span></h2>
+                    <div class="final-side">
+                        <p>Share your load schedule, SLD, site requirements or tender scope. We can structure the
+                            electrical distribution package from 11kV interface through the complete LT network.</p><a
+                            class="lt-btn primary" href="contact.html" style="width:100%">Discuss LT / 11kV Project <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- MODULE 13 — FINAL CTA — SCRIPT -->
+    <script>
+    (function () {
+        window.ltInitReveal && window.ltInitReveal('.lt-final');
+        
+    })();
+    </script>
+
+    </main>
+
+    <!-- =========================================================
+         MODULE 14 — FOOTER
+         HTML + CSS + JS are kept together below
+    ========================================================== -->
+    <footer class="corp-footer" aria-label="Website footer">
+
+        <div class="corp-footer-container">
+
+            <!-- =====================================================
+             PRIMARY CTA
+        ====================================================== -->
+            <section class="corp-footer-cta" aria-labelledby="corp-footer-title">
+
+                <div class="corp-footer-cta-copy">
+
+                    <p class="corp-footer-kicker">
+                        <span>01</span>
+                        <i></i>
+                        Start a project
+                    </p>
+
+                    <h2 id="corp-footer-title">
+                        Let’s engineer
+                        <span>what comes next.</span>
+                    </h2>
+
+                </div>
+
+                <div class="corp-footer-cta-action">
+
+                    <p>
+                        Intelligent engineering for power, energy,
+                        automation and future-ready systems.
+                    </p>
+
+                    <a href="contact.html" class="corp-footer-button">
+                        <span>Start a conversation</span>
+                        <i aria-hidden="true">↗</i>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+             BRAND + NAVIGATION
+        ====================================================== -->
+            <div class="corp-footer-main">
+
+                <!-- BRAND -->
+                <section class="corp-footer-brand" aria-label="Alpha Numeric">
+
+                    <a href="index.html" class="corp-footer-logo" aria-label="Alpha Numeric home">
+                        <img src="assets/img/b-alpha.png" alt="Alpha Numeric">
+                    </a>
+
+                    <p>
+                        Technology-driven engineering solutions
+                        designed for dependable performance,
+                        meaningful progress and long-term value.
+                    </p>
+
+                    <div class="corp-footer-status">
+                        <span></span>
+                        Engineering tomorrow
+                    </div>
+
+                </section>
+
+
+                <!-- NAVIGATION -->
+                <nav class="corp-footer-nav" aria-label="Footer navigation">
+
+                    <!-- COMPANY -->
+                    <div class="corp-footer-column">
+
+                        <div class="corp-footer-column-heading">
+                            <span>01</span>
+                            <h3>Company</h3>
+                        </div>
+
+                        <ul>
+                            <li><a href="index.html"><span>Home</span><i>↗</i></a></li>
+                            <li><a href="about.html"><span>About</span><i>↗</i></a></li>
+                            <li><a href="contact.html"><span>Contact</span><i>↗</i></a></li>
+                        </ul>
+
+                    </div>
+
+
+                    <!-- ENERGY -->
+                    <div class="corp-footer-column">
+
+                        <div class="corp-footer-column-heading">
+                            <span>02</span>
+                            <h3>Energy</h3>
+                        </div>
+
+                        <ul>
+                            <li><a href="solar-energy.html"><span>Solar Energy</span><i>↗</i></a></li>
+                            <li><a href="wind-energy.html"><span>Wind Energy</span><i>↗</i></a></li>
+                            <li><a href="biomass-energy.html"><span>Biomass Energy</span><i>↗</i></a></li>
+                            <li><a href="hydel-energy.html"><span>Hydel Energy</span><i>↗</i></a></li>
+                        </ul>
+
+                    </div>
+
+
+                    <!-- POWER -->
+                    <div class="corp-footer-column">
+
+                        <div class="corp-footer-column-heading">
+                            <span>03</span>
+                            <h3>Power</h3>
+                        </div>
+
+                        <ul>
+                            <li><a href="transmission.html"><span>Transmission</span><i>↗</i></a></li>
+                            <li><a href="distribution.html"><span>Distribution</span><i>↗</i></a></li>
+                            <li><a href="control-panels.html"><span>Control Panels</span><i>↗</i></a></li>
+                            <li><a href="panel-boards.html"><span>Panel Boards</span><i>↗</i></a></li>
+                        </ul>
+
+                    </div>
+
+
+                    <!-- AUTOMATION -->
+                    <div class="corp-footer-column">
+
+                        <div class="corp-footer-column-heading">
+                            <span>04</span>
+                            <h3>Automation</h3>
+                        </div>
+
+                        <ul>
+                            <li><a href="home-automation.html"><span>Home Automation</span><i>↗</i></a></li>
+                            <li><a href="commercial-automation.html"><span>Commercial</span><i>↗</i></a></li>
+                            <li><a href="industrial-automation.html"><span>Industrial</span><i>↗</i></a></li>
+                            <li><a href="hospital-automation.html"><span>Hospital</span><i>↗</i></a></li>
+                            <li><a href="hotel-automation.html"><span>Hotel</span><i>↗</i></a></li>
+                        </ul>
+
+                    </div>
+
+
+                    <!-- R&D / PRODUCTS -->
+                    <div class="corp-footer-column">
+
+                        <div class="corp-footer-column-heading">
+                            <span>05</span>
+                            <h3>R&amp;D / Products</h3>
+                        </div>
+
+                        <ul>
+                            <li><a href="smart-pole-r&d.html"><span>Smart Pole</span><i>↗</i></a></li>
+                            <li><a href="smart-bollard-r&d.html"><span>Smart Bollard</span><i>↗</i></a></li>
+                            <li><a href="power.html"><span>Power Products</span><i>↗</i></a></li>
+                        </ul>
+
+                    </div>
+
+                </nav>
+
+            </div>
+
+
+            <!-- =====================================================
+             CONTACT BAND
+        ====================================================== -->
+            <section class="corp-footer-contact" aria-label="Contact information">
+
+                <div class="corp-footer-contact-heading">
+                    <span>Contact</span>
+                    <h3>Let’s connect.</h3>
+                </div>
+
+                <a href="tel:+919000000000" class="corp-footer-contact-item">
+                    <span>01 / Phone</span>
+                    <strong>+91 90000 00000</strong>
+                    <i aria-hidden="true">↗</i>
+                </a>
+
+                <a href="mailto:info@alphanumeric.com" class="corp-footer-contact-item">
+                    <span>02 / Email</span>
+                    <strong>info@alphanumeric.com</strong>
+                    <i aria-hidden="true">↗</i>
+                </a>
+
+                <div class="corp-footer-contact-item">
+                    <span>03 / Location</span>
+                    <strong>Madhapur, Hyderabad</strong>
+                    <i aria-hidden="true">—</i>
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+             BOTTOM BAR
+        ====================================================== -->
+            <div class="corp-footer-bottom">
+
+                <p>
+                    © <span id="corpFooterYear"></span> Alpha Numeric.
+                    All rights reserved.
+                </p>
+
+                <div class="corp-footer-disciplines" aria-label="Core disciplines">
+                    <span>Power</span>
+                    <i></i>
+                    <span>Energy</span>
+                    <i></i>
+                    <span>Automation</span>
+                    <i></i>
+                    <span>R&amp;D</span>
+                </div>
+
+                <div class="corp-footer-bottom-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+
+                    <a href="#page-top" class="corp-footer-top-link">
+                        Back to top
+                        <span aria-hidden="true">↑</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- CSS -->
+    <style>
+        /* =========================================================
+   CORPORATE WHITE FOOTER — DESIGN SYSTEM
+   Desktop + laptop + tablet + mobile rules are contained in this footer module.
+
+========================================================== */
+
+        .corp-footer {
+            --footer-bg: #f5f5f1;
+            --footer-white: #ffffff;
+            --footer-ink: #102729;
+            --footer-text: #4f6062;
+            --footer-muted: #7a8889;
+            --footer-line: rgba(16, 39, 41, 0.16);
+            --footer-line-light: rgba(16, 39, 41, 0.09);
+            --footer-accent: #ee5a29;
+
+            position: relative;
+
+            width: 100%;
+
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+
+            color: var(--footer-ink);
+            background: var(--footer-bg);
+
+            font-family:
+                "Varela Round",
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+        }
+
+        .corp-footer::before {
+            content: "";
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+
+            height: 2px;
+
+            background:
+                linear-gradient(90deg,
+                    var(--footer-accent) 0 12%,
+                    var(--footer-ink) 12% 100%);
+        }
+
+        .corp-footer *,
+        .corp-footer *::before,
+        .corp-footer *::after {
+            box-sizing: border-box;
+
+            /* Intentionally sharp: no curved or toy-like UI */
+            border-radius: 0 !important;
+        }
+
+        .corp-footer a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .corp-footer-container {
+            width: min(calc(100% - 64px), 1500px);
+
+            margin-inline: auto;
+        }
+
+
+        /* =========================================================
+   CTA
+========================================================== */
+
+        .corp-footer-cta {
+            display: grid;
+            grid-template-columns: minmax(0, 1.6fr) minmax(300px, 0.55fr);
+            align-items: end;
+            gap: clamp(55px, 8vw, 140px);
+
+            padding: clamp(80px, 9vw, 140px) 0 clamp(64px, 7vw, 105px);
+        }
+
+        .corp-footer-kicker {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+
+            margin: 0 0 26px;
+
+            color: var(--footer-muted);
+
+            font-size: 9px;
+            letter-spacing: 0.18em;
+
+            text-transform: uppercase;
+        }
+
+        .corp-footer-kicker span {
+            color: var(--footer-accent);
+        }
+
+        .corp-footer-kicker i {
+            width: 45px;
+            height: 1px;
+
+            background: var(--footer-line);
+        }
+
+        .corp-footer-cta h2 {
+            max-width: 970px;
+
+            margin: 0;
+
+            color: var(--footer-ink);
+
+            font-size: clamp(57px, 7.2vw, 112px);
+            font-weight: 400;
+            line-height: 0.91;
+            letter-spacing: -0.065em;
+        }
+
+        .corp-footer-cta h2 span {
+            display: block;
+
+            color: rgba(16, 39, 41, 0.35);
+        }
+
+        .corp-footer-cta-action {
+            padding-bottom: 6px;
+        }
+
+        .corp-footer-cta-action>p {
+            margin: 0 0 29px;
+
+            color: var(--footer-text);
+
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+        .corp-footer-button {
+            position: relative;
+            isolation: isolate;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 35px;
+
+            width: 100%;
+            min-height: 60px;
+
+            padding: 0 19px 0 22px;
+            overflow: hidden;
+
+            border: 1px solid var(--footer-ink);
+
+            color: #ffffff !important;
+            background: var(--footer-ink);
+
+            font-size: 9px;
+            letter-spacing: 0.15em;
+
+            text-transform: uppercase;
+
+            transition:
+                color 0.35s ease,
+                background-color 0.35s ease;
+        }
+
+        .corp-footer-button::before {
+            content: "";
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+
+            width: 4px;
+
+            background: var(--footer-accent);
+
+            transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .corp-footer-button i {
+            font-size: 18px;
+            font-style: normal;
+
+            transition: transform 0.3s ease;
+        }
+
+        .corp-footer-button:hover::before {
+            width: 100%;
+        }
+
+        .corp-footer-button:hover i {
+            transform: translate(3px, -3px);
+        }
+
+
+        /* =========================================================
+   BRAND + NAVIGATION STRUCTURE
+========================================================== */
+
+        .corp-footer-main {
+            display: grid;
+            grid-template-columns: minmax(265px, 0.72fr) minmax(0, 2.28fr);
+
+            border-top: 1px solid var(--footer-line);
+            border-bottom: 1px solid var(--footer-line);
+        }
+
+        .corp-footer-brand {
+            display: flex;
+            flex-direction: column;
+
+            min-width: 0;
+
+            padding: clamp(38px, 4vw, 62px) clamp(28px, 4vw, 58px) clamp(38px, 4vw, 62px) 0;
+
+            border-right: 1px solid var(--footer-line);
+        }
+
+        .corp-footer-logo {
+            align-self: flex-start;
+        }
+
+        .corp-footer-logo img {
+            display: block;
+
+            width: auto;
+            max-width: min(100%, 220px);
+            height: 78px;
+
+            object-fit: contain;
+        }
+
+        .corp-footer-brand>p {
+            max-width: 360px;
+
+            margin: 34px 0 50px;
+
+            color: var(--footer-text);
+
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            font-size: 13px;
+            line-height: 1.85;
+        }
+
+        .corp-footer-status {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+
+            margin-top: auto;
+
+            color: var(--footer-muted);
+
+            font-size: 8px;
+            letter-spacing: 0.14em;
+
+            text-transform: uppercase;
+        }
+
+        .corp-footer-status span {
+            width: 19px;
+            height: 2px;
+
+            background: var(--footer-accent);
+        }
+
+        .corp-footer-nav {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+
+            min-width: 0;
+        }
+
+        .corp-footer-column {
+            min-width: 0;
+
+            padding: clamp(38px, 3.5vw, 58px) clamp(20px, 2.6vw, 42px);
+
+            border-right: 1px solid var(--footer-line-light);
+        }
+
+        .corp-footer-column:last-child {
+            border-right: 0;
+        }
+
+        .corp-footer-column-heading {
+            margin-bottom: 29px;
+        }
+
+        .corp-footer-column-heading span {
+            display: block;
+
+            margin-bottom: 10px;
+
+            color: var(--footer-accent);
+
+            font-size: 8px;
+            letter-spacing: 0.14em;
+        }
+
+        .corp-footer-column-heading h3 {
+            margin: 0;
+
+            color: var(--footer-ink);
+
+            font-size: 10px;
+            font-weight: 400;
+            letter-spacing: 0.16em;
+            line-height: 1.4;
+
+            text-transform: uppercase;
+        }
+
+        .corp-footer-column ul {
+            margin: 0;
+            padding: 0;
+
+            list-style: none;
+        }
+
+        .corp-footer-column li+li {
+            margin-top: 14px;
+        }
+
+        .corp-footer-column a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+
+            color: var(--footer-text);
+
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            font-size: 12.5px;
+            line-height: 1.4;
+
+            transition:
+                color 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .corp-footer-column a i {
+            flex: 0 0 auto;
+
+            color: var(--footer-accent);
+
+            font-style: normal;
+
+            opacity: 0;
+            transform: translate(-4px, 4px);
+
+            transition:
+                opacity 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .corp-footer-column a:hover {
+            color: var(--footer-ink);
+            transform: translateX(4px);
+        }
+
+        .corp-footer-column a:hover i {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+
+        /* =========================================================
+   CONTACT BAND
+========================================================== */
+
+        .corp-footer-contact {
+            display: grid;
+            grid-template-columns: minmax(210px, 0.72fr) repeat(3, minmax(0, 1fr));
+
+            border-bottom: 1px solid var(--footer-line);
+        }
+
+        .corp-footer-contact-heading,
+        .corp-footer-contact-item {
+            min-width: 0;
+
+            padding: 32px clamp(20px, 3vw, 42px);
+
+            border-right: 1px solid var(--footer-line-light);
+        }
+
+        .corp-footer-contact-heading {
+            padding-left: 0;
+        }
+
+        .corp-footer-contact-item:last-child {
+            border-right: 0;
+        }
+
+        .corp-footer-contact-heading>span {
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: var(--footer-accent);
+
+            font-size: 8px;
+            letter-spacing: 0.14em;
+
+            text-transform: uppercase;
+        }
+
+        .corp-footer-contact-heading h3 {
+            margin: 0;
+
+            color: var(--footer-ink);
+
+            font-size: 22px;
+            font-weight: 400;
+            letter-spacing: -0.035em;
+        }
+
+        .corp-footer-contact-item {
+            position: relative;
+
+            display: block;
+        }
+
+        .corp-footer-contact-item>span,
+        .corp-footer-contact-item>strong {
+            display: block;
+        }
+
+        .corp-footer-contact-item>span {
+            margin-bottom: 9px;
+
+            color: var(--footer-muted);
+
+            font-size: 8px;
+            letter-spacing: 0.13em;
+
+            text-transform: uppercase;
+        }
+
+        .corp-footer-contact-item>strong {
+            overflow-wrap: anywhere;
+
+            color: var(--footer-ink);
+
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            font-size: 12.5px;
+            font-weight: 500;
+            line-height: 1.45;
+        }
+
+        .corp-footer-contact-item>i {
+            position: absolute;
+            top: 50%;
+            right: 24px;
+
+            color: var(--footer-accent);
+
+            font-size: 14px;
+            font-style: normal;
+
+            opacity: 0.62;
+            transform: translateY(-50%);
+
+            transition:
+                opacity 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        a.corp-footer-contact-item:hover>i {
+            opacity: 1;
+            transform: translate(3px, calc(-50% - 3px));
+        }
+
+
+        /* =========================================================
+   BOTTOM BAR
+========================================================== */
+
+        .corp-footer-bottom {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            gap: 28px;
+
+            min-height: 88px;
+        }
+
+        .corp-footer-bottom>p {
+            margin: 0;
+
+            color: var(--footer-muted);
+
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            font-size: 10px;
+        }
+
+        .corp-footer-disciplines {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            color: rgba(16, 39, 41, 0.50);
+
+            font-size: 8px;
+            letter-spacing: 0.13em;
+
+            text-transform: uppercase;
+        }
+
+        .corp-footer-disciplines i {
+            width: 18px;
+            height: 1px;
+
+            background: var(--footer-line);
+        }
+
+        .corp-footer-bottom-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 21px;
+
+            color: var(--footer-muted);
+
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            font-size: 10px;
+        }
+
+        .corp-footer-bottom-links>a {
+            transition: color 0.25s ease;
+        }
+
+        .corp-footer-bottom-links>a:hover {
+            color: var(--footer-ink);
+        }
+
+        .corp-footer-top-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+
+            padding-left: 21px;
+
+            border-left: 1px solid var(--footer-line);
+
+            color: var(--footer-ink) !important;
+
+            font-family:
+                "Varela Round",
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            font-size: 8px;
+            letter-spacing: 0.12em;
+
+            text-transform: uppercase;
+        }
+
+        .corp-footer-top-link span {
+            display: grid;
+            place-items: center;
+
+            width: 31px;
+            height: 31px;
+
+            border: 1px solid var(--footer-line);
+
+            color: var(--footer-accent);
+
+            transition:
+                color 0.25s ease,
+                background-color 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .corp-footer-top-link:hover span {
+            color: #ffffff;
+            background: var(--footer-ink);
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================================================
+   ACCESSIBILITY
+========================================================== */
+
+        .corp-footer a:focus-visible {
+            outline: 2px solid var(--footer-accent);
+            outline-offset: 4px;
+        }
+
+
+        /* =========================================================
+   RESPONSIVE — LAPTOP
+========================================================== */
+
+        @media (max-width: 1250px) {
+
+            .corp-footer-main {
+                grid-template-columns: 1fr;
+            }
+
+            .corp-footer-brand {
+                display: grid;
+                grid-template-columns: 230px minmax(0, 1fr) auto;
+                align-items: center;
+                gap: 42px;
+
+                padding: 38px 0;
+
+                border-right: 0;
+                border-bottom: 1px solid var(--footer-line);
+            }
+
+            .corp-footer-brand>p {
+                max-width: 650px;
+                margin: 0;
+            }
+
+            .corp-footer-status {
+                margin: 0;
+            }
+
+            .corp-footer-nav {
+                grid-template-columns: repeat(5, minmax(0, 1fr));
+            }
+
+            .corp-footer-column:first-child {
+                padding-left: 0;
+            }
+        }
+
+
+        /* =========================================================
+   RESPONSIVE — TABLET
+========================================================== */
+
+        @media (max-width: 960px) {
+
+            .corp-footer-container {
+                width: min(calc(100% - 44px), 860px);
+            }
+
+            .corp-footer-cta {
+                grid-template-columns: 1fr;
+                gap: 43px;
+
+                padding: 86px 0 70px;
+            }
+
+            .corp-footer-cta-action {
+                max-width: 430px;
+            }
+
+            .corp-footer-brand {
+                grid-template-columns: 220px minmax(0, 1fr);
+            }
+
+            .corp-footer-status {
+                grid-column: 1 / -1;
+            }
+
+            .corp-footer-nav {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .corp-footer-column {
+                border-bottom: 1px solid var(--footer-line-light);
+            }
+
+            .corp-footer-column:nth-child(3) {
+                border-right: 0;
+            }
+
+            .corp-footer-column:nth-child(4) {
+                padding-left: 0;
+            }
+
+            .corp-footer-column:nth-child(n + 4) {
+                border-bottom: 0;
+            }
+
+            .corp-footer-column:last-child {
+                border-right: 1px solid var(--footer-line-light);
+            }
+
+            .corp-footer-contact {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .corp-footer-contact-heading {
+                grid-column: 1 / -1;
+
+                padding-left: 0;
+
+                border-right: 0;
+                border-bottom: 1px solid var(--footer-line);
+            }
+
+            .corp-footer-bottom {
+                grid-template-columns: 1fr auto;
+            }
+
+            .corp-footer-disciplines {
+                display: none;
+            }
+        }
+
+
+        /* =========================================================
+   RESPONSIVE — MOBILE
+========================================================== */
+
+        @media (max-width: 650px) {
+
+            .corp-footer-container {
+                width: calc(100% - 30px);
+            }
+
+            .corp-footer-cta {
+                gap: 35px;
+
+                padding: 72px 0 58px;
+            }
+
+            .corp-footer-kicker {
+                margin-bottom: 20px;
+
+                font-size: 8px;
+            }
+
+            .corp-footer-cta h2 {
+                font-size: clamp(47px, 15vw, 68px);
+            }
+
+            .corp-footer-cta-action>p {
+                font-size: 13px;
+            }
+
+            .corp-footer-brand {
+                display: flex;
+                align-items: flex-start;
+                gap: 0;
+
+                padding: 35px 0;
+            }
+
+            .corp-footer-logo img {
+                height: 70px;
+            }
+
+            .corp-footer-brand>p {
+                margin: 28px 0 34px;
+
+                font-size: 12.5px;
+            }
+
+            .corp-footer-nav {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .corp-footer-column,
+            .corp-footer-column:first-child,
+            .corp-footer-column:nth-child(4) {
+                padding: 31px 18px;
+                border-right: 1px solid var(--footer-line-light);
+                border-bottom: 1px solid var(--footer-line-light);
+            }
+
+            .corp-footer-column:nth-child(odd) {
+                padding-left: 0;
+            }
+
+            .corp-footer-column:nth-child(even) {
+                padding-right: 0;
+                border-right: 0;
+            }
+
+            .corp-footer-column:nth-child(4) {
+                border-bottom: 1px solid var(--footer-line-light);
+            }
+
+            .corp-footer-column:last-child {
+                grid-column: 1 / -1;
+
+                padding-right: 0;
+                padding-left: 0;
+
+                border-right: 0;
+                border-bottom: 0;
+            }
+
+            .corp-footer-column-heading {
+                margin-bottom: 24px;
+            }
+
+            .corp-footer-column a i {
+                opacity: 0.45;
+                transform: none;
+            }
+
+            .corp-footer-contact {
+                grid-template-columns: 1fr;
+            }
+
+            .corp-footer-contact-heading,
+            .corp-footer-contact-item {
+                padding: 25px 0;
+
+                border-right: 0;
+                border-bottom: 1px solid var(--footer-line-light);
+            }
+
+            .corp-footer-contact-item:last-child {
+                border-bottom: 0;
+            }
+
+            .corp-footer-contact-item>i {
+                right: 0;
+            }
+
+            .corp-footer-bottom {
+                grid-template-columns: 1fr;
+                gap: 19px;
+
+                padding: 25px 0;
+            }
+
+            .corp-footer-bottom>p {
+                text-align: center;
+            }
+
+            .corp-footer-bottom-links {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+
+
+        /* =========================================================
+   EXTRA SMALL MOBILE
+========================================================== */
+
+        @media (max-width: 390px) {
+
+            .corp-footer-container {
+                width: calc(100% - 24px);
+            }
+
+            .corp-footer-cta h2 {
+                font-size: 45px;
+            }
+
+            .corp-footer-nav {
+                grid-template-columns: 1fr;
+            }
+
+            .corp-footer-column,
+            .corp-footer-column:first-child,
+            .corp-footer-column:nth-child(4),
+            .corp-footer-column:last-child,
+            .corp-footer-column:nth-child(odd),
+            .corp-footer-column:nth-child(even) {
+                grid-column: auto;
+
+                padding: 28px 0;
+
+                border-right: 0;
+                border-bottom: 1px solid var(--footer-line-light);
+            }
+
+            .corp-footer-column:last-child {
+                border-bottom: 0;
+            }
+        }
+
+
+        /* =========================================================
+   REDUCED MOTION
+========================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .corp-footer-button,
+            .corp-footer-button::before,
+            .corp-footer-button i,
+            .corp-footer-column a,
+            .corp-footer-column a i,
+            .corp-footer-contact-item>i,
+            .corp-footer-bottom-links>a,
+            .corp-footer-top-link span {
+                transition: none;
+            }
+        }
+    </style>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        document.getElementById("corpFooterYear").textContent = new Date().getFullYear();
+    </script>
+
+    <!-- END MODULE — FOOTER -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
