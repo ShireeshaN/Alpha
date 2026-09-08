@@ -2,22 +2,25 @@
 <html lang="en">
 
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>IoT Solutions | Alpha Numeric Innovations</title>
-<meta content="Alpha Numeric Innovations delivers end-to-end IoT solutions for connected assets, edge computing, gateways, cloud platforms, dashboards, alerts, APIs, analytics and intelligent operations." name="description"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>IoT Solutions | Alpha Numeric Innovations</title>
+    <meta
+        content="Alpha Numeric Innovations delivers end-to-end IoT solutions for connected assets, edge computing, gateways, cloud platforms, dashboards, alerts, APIs, analytics and intelligent operations."
+        name="description" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE 00 — GLOBAL DESIGN SYSTEM — CSS
      Only shared reset, variables and shared BMS typography/helpers.
 ========================================================= -->
-<style>
-:root {
+    <style>
+        :root {
             --ink: #101010;
             --muted: #6e6e6e;
             --line: #e4e4e4;
@@ -105,7 +108,7 @@
             line-height: 1.9
         }
 
-:root {
+        :root {
             --bms-ink: #071316;
             --bms-deep: #0b1d21;
             --bms-teal: #13d7c4;
@@ -185,54 +188,58 @@
         }
 
 
-@media(max-width:767px){
-    .bms-wrap{width:88vw}
-    .bms-h2{letter-spacing:-2.5px}
-}
+        @media(max-width:767px) {
+            .bms-wrap {
+                width: 88vw
+            }
 
-</style>
+            .bms-h2 {
+                letter-spacing: -2.5px
+            }
+        }
+    </style>
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE 00 — GLOBAL DESIGN SYSTEM — SCRIPT
 ========================================================= -->
-<script>
-window.bmsInitReveal = function(rootSelector){
-    const root = document.querySelector(rootSelector);
-    if(!root) return;
+    <script>
+        window.bmsInitReveal = function (rootSelector) {
+            const root = document.querySelector(rootSelector);
+            if (!root) return;
 
-    const items = root.matches('.reveal-bms')
-        ? [root]
-        : Array.from(root.querySelectorAll('.reveal-bms'));
+            const items = root.matches('.reveal-bms')
+                ? [root]
+                : Array.from(root.querySelectorAll('.reveal-bms'));
 
-    if(!items.length) return;
+            if (!items.length) return;
 
-    if(!('IntersectionObserver' in window)){
-        items.forEach(el => el.classList.add('in'));
-        return;
-    }
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                entry.target.classList.add('in');
-                observer.unobserve(entry.target);
+            if (!('IntersectionObserver' in window)) {
+                items.forEach(el => el.classList.add('in'));
+                return;
             }
-        });
-    }, {threshold:.10});
 
-    items.forEach(el => observer.observe(el));
-};
-</script>
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: .10 });
+
+            items.forEach(el => observer.observe(el));
+        };
+    </script>
 
 </head>
 
 <body id="page-top">
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE 01 — NAVBAR — CSS
 ========================================================= -->
-<style>
-/* FIXED NAVBAR — SAME AS SOLAR */
+    <style>
+        /* FIXED NAVBAR — SAME AS SOLAR */
         .main-navbar {
             padding: 8px 0;
             background: #fff;
@@ -415,7 +422,7 @@ window.bmsInitReveal = function(rootSelector){
             }
         }
 
-/* =========================================================
+        /* =========================================================
    PRODUCTS DROPDOWN
 ========================================================= */
 
@@ -563,1914 +570,2558 @@ window.bmsInitReveal = function(rootSelector){
         }
 
 
-@media(max-width:991px){
-    .main-navbar{
-        background:#fff;
-        padding:8px 0;
-    }
+        @media(max-width:991px) {
+            .main-navbar {
+                background: #fff;
+                padding: 8px 0;
+            }
 
-    .navbar-logo{
-        height:55px;
-    }
+            .navbar-logo {
+                height: 55px;
+            }
 
-    #logoWhite{
-        display:none !important;
-    }
+            #logoWhite {
+                display: none !important;
+            }
 
-    #logoDark{
-        display:block !important;
-    }
+            #logoDark {
+                display: block !important;
+            }
 
-    .main-navbar .navbar-toggler{
-        color:#17243b;
-        border-color:rgba(23,36,59,.2);
-    }
+            .main-navbar .navbar-toggler {
+                color: #17243b;
+                border-color: rgba(23, 36, 59, .2);
+            }
 
-    .main-navbar .nav-link{
-        color:#17243b !important;
-        padding:12px 7px !important;
-        margin:1px 0;
-    }
+            .main-navbar .nav-link {
+                color: #17243b !important;
+                padding: 12px 7px !important;
+                margin: 1px 0;
+            }
 
-    .navbar-collapse{
-        max-height:calc(100vh - 76px);
-        overflow-y:auto;
-        margin-top:10px;
-        padding:15px 10px 22px;
-        border-top:1px solid #edf0f5;
-        background:#fff;
-    }
+            .navbar-collapse {
+                max-height: calc(100vh - 76px);
+                overflow-y: auto;
+                margin-top: 10px;
+                padding: 15px 10px 22px;
+                border-top: 1px solid #edf0f5;
+                background: #fff;
+            }
 
-    .mega-menu{
-        position:static !important;
-        transform:none !important;
-        width:100%;
-        margin:0 !important;
-        box-shadow:none;
-        border-left:2px solid #000;
-        border-radius:0;
-        overflow:visible;
-    }
+            .mega-menu {
+                position: static !important;
+                transform: none !important;
+                width: 100%;
+                margin: 0 !important;
+                box-shadow: none;
+                border-left: 2px solid #000;
+                border-radius: 0;
+                overflow: visible;
+            }
 
-    .mega-menu-inner{
-        grid-template-columns:1fr;
-    }
+            .mega-menu-inner {
+                grid-template-columns: 1fr;
+            }
 
-    .mega-column{
-        min-height:0;
-        padding:18px;
-        border-right:0;
-        border-bottom:1px solid #242424;
-    }
+            .mega-column {
+                min-height: 0;
+                padding: 18px;
+                border-right: 0;
+                border-bottom: 1px solid #242424;
+            }
 
-    .bms-dropdown .bms-menu{
-        border-radius:0;
-        box-shadow:none;
-    }
-}
+            .bms-dropdown .bms-menu {
+                border-radius: 0;
+                box-shadow: none;
+            }
+        }
+    </style>
 
-</style>
-
-<!-- =========================================================
+    <!-- =========================================================
      MODULE 01 — NAVBAR — HTML
 ========================================================= -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
-<div class="container px-4 px-lg-5">
-<a class="navbar-brand" href="index.html">
-<img alt="Alpha Numeric Innovations" class="navbar-logo" id="logoWhite" src="assets/img/w-alpha.png" style="display:none;"/>
-<img alt="Alpha Numeric Innovations" class="navbar-logo" id="logoDark" src="assets/img/b-alpha.png"/>
-</a>
-<button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" data-bs-toggle="collapse" type="button">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">
+                <img alt="Alpha Numeric Innovations" class="navbar-logo" id="logoWhite" src="assets/img/w-alpha.png"
+                    style="display:none;" />
+                <img alt="Alpha Numeric Innovations" class="navbar-logo" id="logoDark" src="assets/img/b-alpha.png" />
+            </a>
+            <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" data-bs-toggle="collapse"
+                type="button">
                 Menu <i class="fas fa-bars ms-1"></i>
-</button>
-<div class="collapse navbar-collapse" id="navbarResponsive">
-<ul class="navbar-nav ms-auto align-items-lg-center">
-<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-<li class="nav-item dropdown solution-dropdown position-static">
-<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-auto-close="outside" data-bs-toggle="dropdown" href="#" id="solutionsDropdown" role="button">Solutions</a>
-<div aria-labelledby="solutionsDropdown" class="dropdown-menu mega-menu">
-<div class="mega-menu-inner">
-<div class="mega-column">
-<div class="mega-heading"><span>Renewable Energy</span></div>
-<a href="solar-energy.html">Solar</a>
-</div>
-<div class="mega-column">
-<div class="mega-heading"><span>Power</span></div>
-<a href="lt.html">LT</a>
-<a href="ht.html">HT</a>
-<a href="eht.html">EHT</a>
-<a href="control-panels.html">Control Panels</a>
-<a href="panel-boards.html">Panel Boards</a>
-</div>
-<div class="mega-column">
-<div class="mega-heading"><span>Automation</span></div>
-<a href="home-automation.html">Home Automation</a>
-<a href="commercial-automation.html">Commercial Automation</a>
-<a href="industrial-automation.html">Industrial Automation</a>
-<a href="hospital-automation.html">Hospital Automation</a>
-<a href="hotel-automation.html">Hotel Automation</a>
-</div>
-<div class="mega-column">
-<div class="mega-heading"><span>R&amp;D</span></div>
-<a href="smart-pole-r&amp;d.html">Smart Pole</a>
-<a href="smart-bollard-r&amp;d.html">Smart Bollard</a>
-<a href="smart-conference-table.html">Smart Conference Table</a>
-<a href="smart-bar-counter.html">Smart Bar Counter</a>
-<a href="smart-window-leaf-ac.html">Smart Window Leaf AC</a>
-</div>
-</div>
-</div>
-</li>
-<li class="nav-item dropdown bms-dropdown">
-<a aria-expanded="false" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" id="bmsDropdown" role="button">IoT</a>
-<ul aria-labelledby="bmsDropdown" class="dropdown-menu bms-menu">
-<li><a class="dropdown-item" href="iot.html">IoT</a></li>
-<li><a class="dropdown-item" href="bms.html">BMS</a></li>
-<li><a class="dropdown-item" href="iot_bms.html">IoT+BMS</a></li>
-</ul>
-</li>
-<li class="nav-item dropdown product-dropdown">
-<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-auto-close="outside" data-bs-toggle="dropdown" href="#" id="productsDropdown" role="button">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item dropdown solution-dropdown position-static">
+                        <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-auto-close="outside"
+                            data-bs-toggle="dropdown" href="#" id="solutionsDropdown" role="button">Solutions</a>
+                        <div aria-labelledby="solutionsDropdown" class="dropdown-menu mega-menu">
+                            <div class="mega-menu-inner">
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>Renewable Energy</span></div>
+                                    <a href="solar-energy.html">Solar</a>
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>Power</span></div>
+                                    <a href="lt.html">LT</a>
+                                    <a href="ht.html">HT</a>
+                                    <a href="eht.html">EHT</a>
+                                    <a href="control-panels.html">Control Panels</a>
+                                    <a href="panel-boards.html">Panel Boards</a>
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>Automation</span></div>
+                                    <a href="home-automation.html">Home Automation</a>
+                                    <a href="commercial-automation.html">Commercial Automation</a>
+                                    <a href="industrial-automation.html">Industrial Automation</a>
+                                    <a href="hospital-automation.html">Hospital Automation</a>
+                                    <a href="hotel-automation.html">Hotel Automation</a>
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>R&amp;D</span></div>
+                                    <a href="smart-pole-r&amp;d.html">Smart Pole</a>
+                                    <a href="smart-bollard-r&amp;d.html">Smart Bollard</a>
+                                    <a href="smart-conference-table.html">Smart Conference Table</a>
+                                    <a href="smart-bar-counter.html">Smart Bar Counter</a>
+                                    <a href="smart-window-leaf-ac.html">Smart Window Leaf AC</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown bms-dropdown">
+                        <a aria-expanded="false" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"
+                            href="#" id="bmsDropdown" role="button">IoT</a>
+                        <ul aria-labelledby="bmsDropdown" class="dropdown-menu bms-menu">
+                            <li><a class="dropdown-item" href="iot.html">IoT</a></li>
+                            <li><a class="dropdown-item" href="bms.html">BMS</a></li>
+                            <li><a class="dropdown-item" href="iot_bms.html">IoT+BMS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown product-dropdown">
+                        <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-auto-close="outside"
+                            data-bs-toggle="dropdown" href="#" id="productsDropdown" role="button">
                             Products
                         </a>
-<div aria-labelledby="productsDropdown" class="dropdown-menu product-menu">
-<a href="power-products.html">Sensors</a>
-<a href="power-products.html">Controllers</a>
-<a href="power-products.html">Gateways</a>
-<a href="power-products.html">Meters</a>
-<a href="power-products.html">Transformers</a>
-<a href="power-products.html">Control Panels</a>
-<a href="power-products.html">Panel Boards</a>
-<a href="power-products.html">Switchgears</a>
-</div>
-</li>
-<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-</ul>
-</div>
-</div>
-</nav>
+                        <div aria-labelledby="productsDropdown" class="dropdown-menu product-menu">
+                            <a href="power-products.html">Sensors</a>
+                            <a href="power-products.html">Controllers</a>
+                            <a href="power-products.html">Gateways</a>
+                            <a href="power-products.html">Meters</a>
+                            <a href="power-products.html">Transformers</a>
+                            <a href="power-products.html">Control Panels</a>
+                            <a href="power-products.html">Panel Boards</a>
+                            <a href="power-products.html">Switchgears</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE 01 — NAVBAR — SCRIPT
 ========================================================= -->
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-    const nav = document.getElementById("mainNav");
-    const white = document.getElementById("logoWhite");
-    const dark = document.getElementById("logoDark");
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const nav = document.getElementById("mainNav");
+            const white = document.getElementById("logoWhite");
+            const dark = document.getElementById("logoDark");
 
-    if(nav) nav.classList.add("scrolled","navbar-shrink");
-    if(white) white.style.display = "none";
-    if(dark) dark.style.display = "block";
-});
-</script>
+            if (nav) nav.classList.add("scrolled", "navbar-shrink");
+            if (white) white.style.display = "none";
+            if (dark) dark.style.display = "block";
+        });
+    </script>
 
 
-<main class="bms-page">
+    <main class="bms-page">
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 02 — BMS HERO — CSS
 ========================================================= -->
-<style>
-/* HERO */
+        <style>
+            /* HERO */
 
-        .bms-hero {
-            position: relative;
-            min-height: 760px;
-            background: radial-gradient(circle at 78% 33%, rgba(19, 215, 196, .16), transparent 26%), radial-gradient(circle at 62% 78%, rgba(114, 168, 255, .11), transparent 24%), linear-gradient(135deg, #061113 0%, #0a1c20 55%, #071316 100%);
-            color: #fff;
-            display: flex;
-            align-items: center
-        }
-
-        .bms-hero:before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-image: linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px);
-            background-size: 64px 64px;
-            mask-image: linear-gradient(to right, #000 30%, transparent 96%)
-        }
-
-.bms-hero-inner {
-            position: relative;
-            z-index: 2;
-            width: min(1440px, 88vw);
-            margin: auto;
-            display: grid;
-            grid-template-columns: .95fr 1.05fr;
-            gap: 70px;
-            align-items: center;
-            padding: 110px 0 84px
-        }
-
-        .bms-hero h1 {
-            font-size: clamp(62px, 7vw, 112px);
-            line-height: .86;
-            letter-spacing: -7px;
-            margin: 22px 0 28px;
-            font-weight: 700
-        }
-
-        .bms-hero h1 span {
-            display: block;
-            color: #8b9b9e;
-            font-weight: 300
-        }
-
-        .bms-hero p {
-            max-width: 630px;
-            color: #9bb0b2;
-            font-size: 14px;
-            line-height: 1.9
-        }
-
-        .bms-hero-actions {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-top: 32px
-        }
-
-        .bms-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 15px 20px;
-            border-radius: 999px;
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: .7px;
-            transition: .3s
-        }
-
-        .bms-btn.primary {
-            background: #fff;
-            color: #071316
-        }
-
-        .bms-btn.ghost {
-            border: 1px solid rgba(255, 255, 255, .22);
-            color: #fff
-        }
-
-        .bms-btn:hover {
-            transform: translateY(-2px)
-        }
-
-        /* HERO COMMAND UI */
-        .command-shell {
-            position: relative;
-            min-height: 540px
-        }
-
-        .building-frame {
-            position: absolute;
-            inset: 0;
-            border: 1px solid rgba(255, 255, 255, .10);
-            border-radius: 26px;
-            background: linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .02));
-            backdrop-filter: blur(12px);
-            overflow: hidden;
-            box-shadow: 0 50px 120px rgba(0, 0, 0, .35)
-        }
-
-        .building-top {
-            height: 64px;
-            border-bottom: 1px solid var(--bms-line);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 22px;
-            color: #9eb1b4;
-            font-size: 10px;
-            letter-spacing: 1.4px
-        }
-
-        .live-dot {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px
-        }
-
-        .live-dot i {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--bms-teal);
-            box-shadow: 0 0 16px var(--bms-teal);
-            animation: pulse 1.6s infinite
-        }
-
-        @keyframes pulse {
-            50% {
-                opacity: .35;
-                transform: scale(.75)
+            .bms-hero {
+                position: relative;
+                min-height: 760px;
+                background: radial-gradient(circle at 78% 33%, rgba(19, 215, 196, .16), transparent 26%), radial-gradient(circle at 62% 78%, rgba(114, 168, 255, .11), transparent 24%), linear-gradient(135deg, #061113 0%, #0a1c20 55%, #071316 100%);
+                color: #fff;
+                display: flex;
+                align-items: center
             }
-        }
 
-        .building-grid {
-            display: grid;
-            grid-template-columns: 1.18fr .82fr;
-            height: calc(100% - 64px)
-        }
-
-        .digital-building {
-            position: relative;
-            border-right: 1px solid var(--bms-line);
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            padding: 30px
-        }
-
-        .tower {
-            position: relative;
-            width: 62%;
-            height: 82%;
-            border: 1px solid rgba(255, 255, 255, .15);
-            background: linear-gradient(180deg, rgba(114, 168, 255, .06), rgba(19, 215, 196, .05));
-            clip-path: polygon(16% 0, 84% 0, 100% 100%, 0 100%)
-        }
-
-        .tower:before {
-            content: "";
-            position: absolute;
-            inset: 5% 11%;
-            background: repeating-linear-gradient(to bottom, transparent 0 33px, rgba(255, 255, 255, .10) 34px 35px), repeating-linear-gradient(to right, transparent 0 36px, rgba(255, 255, 255, .08) 37px 38px)
-        }
-
-        .tower-core {
-            position: absolute;
-            left: 50%;
-            top: 8%;
-            bottom: 6%;
-            width: 1px;
-            background: linear-gradient(transparent, var(--bms-teal), transparent)
-        }
-
-        .signal {
-            position: absolute;
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-            background: #fff;
-            box-shadow: 0 0 0 7px rgba(19, 215, 196, .08), 0 0 25px var(--bms-teal)
-        }
-
-        .s1 {
-            left: 22%;
-            top: 21%
-        }
-
-        .s2 {
-            right: 19%;
-            top: 38%
-        }
-
-        .s3 {
-            left: 33%;
-            bottom: 26%
-        }
-
-        .s4 {
-            right: 27%;
-            bottom: 14%
-        }
-
-        .signal:after {
-            content: "";
-            position: absolute;
-            inset: -14px;
-            border: 1px solid rgba(19, 215, 196, .25);
-            border-radius: 50%;
-            animation: ring 2.2s infinite
-        }
-
-        @keyframes ring {
-            to {
-                transform: scale(1.8);
-                opacity: 0
+            .bms-hero:before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px);
+                background-size: 64px 64px;
+                mask-image: linear-gradient(to right, #000 30%, transparent 96%)
             }
-        }
 
-        .hero-metrics {
-            display: grid;
-            grid-template-rows: repeat(4, 1fr)
-        }
+            .bms-hero-inner {
+                position: relative;
+                z-index: 2;
+                width: min(1440px, 88vw);
+                margin: auto;
+                display: grid;
+                grid-template-columns: .95fr 1.05fr;
+                gap: 70px;
+                align-items: center;
+                padding: 110px 0 84px
+            }
 
-        .hero-metric {
-            padding: 20px;
-            border-bottom: 1px solid var(--bms-line);
-            display: flex;
-            flex-direction: column;
-            justify-content: center
-        }
+            .bms-hero h1 {
+                font-size: clamp(62px, 7vw, 112px);
+                line-height: .86;
+                letter-spacing: -7px;
+                margin: 22px 0 28px;
+                font-weight: 700
+            }
 
-        .hero-metric:last-child {
-            border: 0
-        }
+            .bms-hero h1 span {
+                display: block;
+                color: #8b9b9e;
+                font-weight: 300
+            }
 
-        .hero-metric span {
-            font-size: 9px;
-            letter-spacing: 1.8px;
-            color: #7f9699;
-            text-transform: uppercase
-        }
+            .bms-hero p {
+                max-width: 630px;
+                color: #9bb0b2;
+                font-size: 14px;
+                line-height: 1.9
+            }
 
-        .hero-metric strong {
-            font-size: 25px;
-            margin-top: 7px;
-            font-weight: 600
-        }
+            .bms-hero-actions {
+                display: flex;
+                gap: 12px;
+                flex-wrap: wrap;
+                margin-top: 32px
+            }
 
-        .hero-metric small {
-            font-size: 10px;
-            color: #91a6a9;
-            margin-top: 4px
-        }
+            .bms-btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                padding: 15px 20px;
+                border-radius: 999px;
+                font-size: 11px;
+                font-weight: 800;
+                letter-spacing: .7px;
+                transition: .3s
+            }
 
-        .hero-metric em {
-            font-style: normal;
-            color: var(--bms-teal)
-        }
+            .bms-btn.primary {
+                background: #fff;
+                color: #071316
+            }
 
-@media(max-width:1100px){
-    .bms-hero-inner{grid-template-columns:1fr}
-    .command-shell{min-height:500px}
-}
-@media(max-width:767px){
-    .bms-hero{min-height:auto}
-    .bms-hero-inner{padding:90px 0 60px}
-    .bms-hero h1{letter-spacing:-4px}
-    .command-shell{min-height:460px}
-    .building-grid{grid-template-columns:1fr}
-    .hero-metrics{display:none}
-    .digital-building{border:0}
-}
-</style>
+            .bms-btn.ghost {
+                border: 1px solid rgba(255, 255, 255, .22);
+                color: #fff
+            }
 
-<!-- =========================================================
+            .bms-btn:hover {
+                transform: translateY(-2px)
+            }
+
+            /* HERO COMMAND UI */
+            .command-shell {
+                position: relative;
+                min-height: 540px
+            }
+
+            .building-frame {
+                position: absolute;
+                inset: 0;
+                border: 1px solid rgba(255, 255, 255, .10);
+                border-radius: 26px;
+                background: linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .02));
+                backdrop-filter: blur(12px);
+                overflow: hidden;
+                box-shadow: 0 50px 120px rgba(0, 0, 0, .35)
+            }
+
+            .building-top {
+                height: 64px;
+                border-bottom: 1px solid var(--bms-line);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 22px;
+                color: #9eb1b4;
+                font-size: 10px;
+                letter-spacing: 1.4px
+            }
+
+            .live-dot {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px
+            }
+
+            .live-dot i {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: var(--bms-teal);
+                box-shadow: 0 0 16px var(--bms-teal);
+                animation: pulse 1.6s infinite
+            }
+
+            @keyframes pulse {
+                50% {
+                    opacity: .35;
+                    transform: scale(.75)
+                }
+            }
+
+            .building-grid {
+                display: grid;
+                grid-template-columns: 1.18fr .82fr;
+                height: calc(100% - 64px)
+            }
+
+            .digital-building {
+                position: relative;
+                border-right: 1px solid var(--bms-line);
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                padding: 30px
+            }
+
+            .tower {
+                position: relative;
+                width: 62%;
+                height: 82%;
+                border: 1px solid rgba(255, 255, 255, .15);
+                background: linear-gradient(180deg, rgba(114, 168, 255, .06), rgba(19, 215, 196, .05));
+                clip-path: polygon(16% 0, 84% 0, 100% 100%, 0 100%)
+            }
+
+            .tower:before {
+                content: "";
+                position: absolute;
+                inset: 5% 11%;
+                background: repeating-linear-gradient(to bottom, transparent 0 33px, rgba(255, 255, 255, .10) 34px 35px), repeating-linear-gradient(to right, transparent 0 36px, rgba(255, 255, 255, .08) 37px 38px)
+            }
+
+            .tower-core {
+                position: absolute;
+                left: 50%;
+                top: 8%;
+                bottom: 6%;
+                width: 1px;
+                background: linear-gradient(transparent, var(--bms-teal), transparent)
+            }
+
+            .signal {
+                position: absolute;
+                width: 9px;
+                height: 9px;
+                border-radius: 50%;
+                background: #fff;
+                box-shadow: 0 0 0 7px rgba(19, 215, 196, .08), 0 0 25px var(--bms-teal)
+            }
+
+            .s1 {
+                left: 22%;
+                top: 21%
+            }
+
+            .s2 {
+                right: 19%;
+                top: 38%
+            }
+
+            .s3 {
+                left: 33%;
+                bottom: 26%
+            }
+
+            .s4 {
+                right: 27%;
+                bottom: 14%
+            }
+
+            .signal:after {
+                content: "";
+                position: absolute;
+                inset: -14px;
+                border: 1px solid rgba(19, 215, 196, .25);
+                border-radius: 50%;
+                animation: ring 2.2s infinite
+            }
+
+            @keyframes ring {
+                to {
+                    transform: scale(1.8);
+                    opacity: 0
+                }
+            }
+
+            .hero-metrics {
+                display: grid;
+                grid-template-rows: repeat(4, 1fr)
+            }
+
+            .hero-metric {
+                padding: 20px;
+                border-bottom: 1px solid var(--bms-line);
+                display: flex;
+                flex-direction: column;
+                justify-content: center
+            }
+
+            .hero-metric:last-child {
+                border: 0
+            }
+
+            .hero-metric span {
+                font-size: 9px;
+                letter-spacing: 1.8px;
+                color: #7f9699;
+                text-transform: uppercase
+            }
+
+            .hero-metric strong {
+                font-size: 25px;
+                margin-top: 7px;
+                font-weight: 600
+            }
+
+            .hero-metric small {
+                font-size: 10px;
+                color: #91a6a9;
+                margin-top: 4px
+            }
+
+            .hero-metric em {
+                font-style: normal;
+                color: var(--bms-teal)
+            }
+
+            @media(max-width:1100px) {
+                .bms-hero-inner {
+                    grid-template-columns: 1fr
+                }
+
+                .command-shell {
+                    min-height: 500px
+                }
+            }
+
+            @media(max-width:767px) {
+                .bms-hero {
+                    min-height: auto
+                }
+
+                .bms-hero-inner {
+                    padding: 90px 0 60px
+                }
+
+                .bms-hero h1 {
+                    letter-spacing: -4px
+                }
+
+                .command-shell {
+                    min-height: 460px
+                }
+
+                .building-grid {
+                    grid-template-columns: 1fr
+                }
+
+                .hero-metrics {
+                    display: none
+                }
+
+                .digital-building {
+                    border: 0
+                }
+            }
+        </style>
+
+        <!-- =========================================================
      MODULE 02 — BMS HERO — HTML
 ========================================================= -->
-<section class="bms-hero">
-<div class="bms-hero-inner">
-<div class="reveal-bms">
-<div class="bms-eyebrow" style="color:#9fb2b4">BUILDING MANAGEMENT SYSTEM</div>
-<h1>One Building.<span>One Intelligence.</span></h1>
-<p>Alpha Numeric BMS brings HVAC, lighting, energy, water, fire, security, elevators and critical
+        <section class="bms-hero">
+            <div class="bms-hero-inner">
+                <div class="reveal-bms">
+                    <div class="bms-eyebrow" style="color:#9fb2b4">BUILDING MANAGEMENT SYSTEM</div>
+                    <h1>One Building.<span>One Intelligence.</span></h1>
+                    <p>Alpha Numeric BMS brings HVAC, lighting, energy, water, fire, security, elevators and critical
                         assets into one intelligent operating layer—so facility teams can see more, respond faster and
                         run buildings with greater efficiency, comfort and control.</p>
-<div class="bms-hero-actions"><a class="bms-btn primary" href="#bms-systems">Explore BMS <i class="fa-solid fa-arrow-right"></i></a><a class="bms-btn ghost" href="contact.html">Discuss Your Building</a></div>
-</div>
-<div class="command-shell reveal-bms">
-<div class="building-frame">
-<div class="building-top"><span>ALPHA / BUILDING COMMAND CENTER</span><span class="live-dot"><i></i> LIVE SYSTEM</span></div>
-<div class="building-grid">
-<div class="digital-building">
-<div class="tower">
-<div class="tower-core"></div><b class="signal s1"></b><b class="signal s2"></b><b class="signal s3"></b><b class="signal s4"></b>
-</div>
-</div>
-<div class="hero-metrics">
-<div class="hero-metric"><span>HVAC</span><strong>22.4°<em>C</em></strong><small>Comfort
+                    <div class="bms-hero-actions"><a class="bms-btn primary" href="#bms-systems">Explore BMS <i
+                                class="fa-solid fa-arrow-right"></i></a><a class="bms-btn ghost"
+                            href="contact.html">Discuss Your Building</a></div>
+                </div>
+                <div class="command-shell reveal-bms">
+                    <div class="building-frame">
+                        <div class="building-top"><span>ALPHA / BUILDING COMMAND CENTER</span><span
+                                class="live-dot"><i></i> LIVE SYSTEM</span></div>
+                        <div class="building-grid">
+                            <div class="digital-building">
+                                <div class="tower">
+                                    <div class="tower-core"></div><b class="signal s1"></b><b class="signal s2"></b><b
+                                        class="signal s3"></b><b class="signal s4"></b>
+                                </div>
+                            </div>
+                            <div class="hero-metrics">
+                                <div class="hero-metric"><span>HVAC</span><strong>22.4°<em>C</em></strong><small>Comfort
                                         band stable</small></div>
-<div class="hero-metric"><span>ENERGY</span><strong>486 <em>kW</em></strong><small>Live
+                                <div class="hero-metric"><span>ENERGY</span><strong>486 <em>kW</em></strong><small>Live
                                         demand monitoring</small></div>
-<div class="hero-metric"><span>IAQ</span><strong>612 <em>ppm</em></strong><small>CO₂
+                                <div class="hero-metric"><span>IAQ</span><strong>612 <em>ppm</em></strong><small>CO₂
                                         within target</small></div>
-<div class="hero-metric"><span>ALARMS</span><strong>02</strong><small>Prioritized for
+                                <div class="hero-metric"><span>ALARMS</span><strong>02</strong><small>Prioritized for
                                         action</small></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 02 — BMS HERO — SCRIPT
 ========================================================= -->
-<script>
-(function(){
-    window.bmsInitReveal && window.bmsInitReveal('.bms-hero');
-    
-})();
-</script>
+        <script>
+            (function () {
+                window.bmsInitReveal && window.bmsInitReveal('.bms-hero');
+
+            })();
+        </script>
 
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 03 — SYSTEM STRIP — CSS
 ========================================================= -->
-<style>
-/* SYSTEM STRIP */
-        .system-strip {
-            background: #071316;
-            color: #fff;
-            border-top: 1px solid #1d2a2c;
-            border-bottom: 1px solid #1d2a2c
-        }
+        <style>
+            /* SYSTEM STRIP */
+            .system-strip {
+                background: #071316;
+                color: #fff;
+                border-top: 1px solid #1d2a2c;
+                border-bottom: 1px solid #1d2a2c
+            }
 
-        .system-strip-grid {
-            width: min(1440px, 92vw);
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(6, 1fr)
-        }
+            .system-strip-grid {
+                width: min(1440px, 92vw);
+                margin: auto;
+                display: grid;
+                grid-template-columns: repeat(6, 1fr)
+            }
 
-        .sys-pill {
-            padding: 24px 18px;
-            border-right: 1px solid #1c2b2d;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 11px;
-            color: #b4c0c2
-        }
+            .sys-pill {
+                padding: 24px 18px;
+                border-right: 1px solid #1c2b2d;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-size: 11px;
+                color: #b4c0c2
+            }
 
-        .sys-pill:last-child {
-            border: 0
-        }
+            .sys-pill:last-child {
+                border: 0
+            }
 
-        .sys-pill i {
-            color: var(--bms-teal);
-            font-size: 16px
-        }
+            .sys-pill i {
+                color: var(--bms-teal);
+                font-size: 16px
+            }
 
-@media(max-width:1100px){
-    .system-strip-grid{grid-template-columns:repeat(3,1fr)}
-}
-@media(max-width:767px){
-    .system-strip-grid{grid-template-columns:repeat(2,1fr)}
-}
-</style>
+            @media(max-width:1100px) {
+                .system-strip-grid {
+                    grid-template-columns: repeat(3, 1fr)
+                }
+            }
 
-<!-- =========================================================
+            @media(max-width:767px) {
+                .system-strip-grid {
+                    grid-template-columns: repeat(2, 1fr)
+                }
+            }
+        </style>
+
+        <!-- =========================================================
      MODULE 03 — SYSTEM STRIP — HTML
 ========================================================= -->
-<section class="system-strip">
-<div class="system-strip-grid">
-<div class="sys-pill"><i class="fa-solid fa-temperature-three-quarters"></i> HVAC</div>
-<div class="sys-pill"><i class="fa-regular fa-lightbulb"></i> LIGHTING</div>
-<div class="sys-pill"><i class="fa-solid fa-bolt"></i> ENERGY</div>
-<div class="sys-pill"><i class="fa-solid fa-droplet"></i> WATER</div>
-<div class="sys-pill"><i class="fa-solid fa-shield-halved"></i> SAFETY &amp; SECURITY</div>
-<div class="sys-pill"><i class="fa-solid fa-elevator"></i> ELEVATORS</div>
-</div>
-</section>
+        <section class="system-strip">
+            <div class="system-strip-grid">
+                <div class="sys-pill"><i class="fa-solid fa-temperature-three-quarters"></i> HVAC</div>
+                <div class="sys-pill"><i class="fa-regular fa-lightbulb"></i> LIGHTING</div>
+                <div class="sys-pill"><i class="fa-solid fa-bolt"></i> ENERGY</div>
+                <div class="sys-pill"><i class="fa-solid fa-droplet"></i> WATER</div>
+                <div class="sys-pill"><i class="fa-solid fa-shield-halved"></i> SAFETY &amp; SECURITY</div>
+                <div class="sys-pill"><i class="fa-solid fa-elevator"></i> ELEVATORS</div>
+            </div>
+        </section>
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 03 — SYSTEM STRIP — SCRIPT
 ========================================================= -->
-<script>
-(function(){
-    window.bmsInitReveal && window.bmsInitReveal('.system-strip');
-    
-})();
-</script>
+        <script>
+            (function () {
+                window.bmsInitReveal && window.bmsInitReveal('.system-strip');
+
+            })();
+        </script>
 
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 04 — CONNECTED BUILDING INTRO — CSS
 ========================================================= -->
-<style>
-/* INTRO */
-        .bms-intro {
-            padding: 120px 0 90px;
-            background: #fff
-        }
+        <style>
+            /* INTRO */
+            .bms-intro {
+                padding: 120px 0 90px;
+                background: #fff
+            }
 
-        .intro-grid {
-            display: grid;
-            grid-template-columns: .9fr 1.1fr;
-            gap: 90px;
-            align-items: start
-        }
+            .intro-grid {
+                display: grid;
+                grid-template-columns: .9fr 1.1fr;
+                gap: 90px;
+                align-items: start
+            }
 
-        .intro-number {
-            font-size: 170px;
-            line-height: .8;
-            letter-spacing: -12px;
-            color: #edf0ef;
-            font-weight: 800
-        }
+            .intro-number {
+                font-size: 170px;
+                line-height: .8;
+                letter-spacing: -12px;
+                color: #edf0ef;
+                font-weight: 800
+            }
 
-        .intro-copy {
-            padding-top: 18px
-        }
+            .intro-copy {
+                padding-top: 18px
+            }
 
-        .intro-facts {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1px;
-            background: #dfe5e3;
-            margin-top: 38px
-        }
+            .intro-facts {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1px;
+                background: #dfe5e3;
+                margin-top: 38px
+            }
 
-        .intro-fact {
-            background: #fff;
-            padding: 22px
-        }
+            .intro-fact {
+                background: #fff;
+                padding: 22px
+            }
 
-        .intro-fact strong {
-            display: block;
-            font-size: 18px
-        }
+            .intro-fact strong {
+                display: block;
+                font-size: 18px
+            }
 
-        .intro-fact span {
-            display: block;
-            color: #829092;
-            font-size: 10px;
-            margin-top: 7px;
-            line-height: 1.6
-        }
+            .intro-fact span {
+                display: block;
+                color: #829092;
+                font-size: 10px;
+                margin-top: 7px;
+                line-height: 1.6
+            }
 
-@media(max-width:1100px){
-    .intro-grid{grid-template-columns:1fr}
-}
-@media(max-width:767px){
-    .intro-facts{grid-template-columns:1fr}
-    .intro-number{font-size:110px}
-}
-</style>
+            @media(max-width:1100px) {
+                .intro-grid {
+                    grid-template-columns: 1fr
+                }
+            }
 
-<!-- =========================================================
+            @media(max-width:767px) {
+                .intro-facts {
+                    grid-template-columns: 1fr
+                }
+
+                .intro-number {
+                    font-size: 110px
+                }
+            }
+        </style>
+
+        <!-- =========================================================
      MODULE 04 — CONNECTED BUILDING INTRO — HTML
 ========================================================= -->
-<section class="bms-intro">
-<div class="bms-wrap intro-grid">
-<div class="reveal-bms">
-<div class="intro-number">01</div>
-<div class="bms-eyebrow">CONNECTED BUILDING INTELLIGENCE</div>
-</div>
-<div class="intro-copy reveal-bms">
-<h2 class="bms-h2">Everything connected.<br/><span>Everything visible.</span></h2>
-<p class="bms-lead">A modern BMS is more than a control screen. It is the operational nervous system
+        <section class="bms-intro">
+            <div class="bms-wrap intro-grid">
+                <div class="reveal-bms">
+                    <div class="intro-number">01</div>
+                    <div class="bms-eyebrow">CONNECTED BUILDING INTELLIGENCE</div>
+                </div>
+                <div class="intro-copy reveal-bms">
+                    <h2 class="bms-h2">Everything connected.<br /><span>Everything visible.</span></h2>
+                    <p class="bms-lead">A modern BMS is more than a control screen. It is the operational nervous system
                         of the building—connecting field devices, controllers, meters, safety systems and enterprise
                         data into a single environment for monitoring, automation, analytics and informed action.</p>
-<div class="intro-facts">
-<div class="intro-fact"><strong>Centralized</strong><span>One operational view across building
+                    <div class="intro-facts">
+                        <div class="intro-fact"><strong>Centralized</strong><span>One operational view across building
                                 systems.</span></div>
-<div class="intro-fact"><strong>Open</strong><span>Built around standard protocols and
+                        <div class="intro-fact"><strong>Open</strong><span>Built around standard protocols and
                                 multi-vendor integration.</span></div>
-<div class="intro-fact"><strong>Scalable</strong><span>From one facility to distributed
+                        <div class="intro-fact"><strong>Scalable</strong><span>From one facility to distributed
                                 portfolios.</span></div>
-</div>
-</div>
-</div>
-</section>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 04 — CONNECTED BUILDING INTRO — SCRIPT
 ========================================================= -->
-<script>
-(function(){
-    window.bmsInitReveal && window.bmsInitReveal('.bms-intro');
-    
-})();
-</script>
+        <script>
+            (function () {
+                window.bmsInitReveal && window.bmsInitReveal('.bms-intro');
+
+            })();
+        </script>
 
 
-<!-- =========================================================
+   <!-- =========================================================
      MODULE 05 — CONNECTED BUILDING SYSTEMS — CSS
 ========================================================= -->
 <style>
-/* BUILDING SYSTEMS */
-        .bms-systems {
-            padding: 110px 0;
-            background: #f2f5f4
-        }
 
-        .systems-head {
-            display: flex;
-            justify-content: space-between;
-            gap: 40px;
-            align-items: end;
-            margin-bottom: 48px
-        }
+    /* =========================================================
+       CONNECTED BUILDING SYSTEMS
+    ========================================================= */
 
-        .systems-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 16px
-        }
-
-        .system-card {
-            position: relative;
-            min-height: 330px;
-            border-radius: 22px;
-            overflow: hidden;
-            background: #0b1719;
-            color: #fff;
-            padding: 28px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            isolation: isolate
-        }
-
-        .system-card:before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(6, 16, 18, .05), rgba(5, 14, 16, .92)), var(--card-img, linear-gradient(135deg, #0d2528, #17363a));
-            background-size: cover;
-            background-position: center;
-            z-index: -2
-        }
-
-        .system-card:after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 80% 15%, rgba(19, 215, 196, .18), transparent 28%);
-            z-index: -1
-        }
-
-        .system-card.big {
-            grid-column: span 6;
-            min-height: 430px
-        }
-
-        .system-card.mid {
-            grid-column: span 3
-        }
-
-        .system-card.wide {
-            grid-column: span 4
-        }
-
-        .system-card .no {
-            font-size: 10px;
-            letter-spacing: 2px;
-            color: #91a5a7
-        }
-
-        .system-card h3 {
-            font-size: 28px;
-            letter-spacing: -1.3px;
-            margin: 0 0 10px
-        }
-
-        .system-card p {
-            font-size: 11px;
-            line-height: 1.75;
-            color: #aab8ba;
-            max-width: 400px
-        }
-
-        .system-card .arrow {
-            position: absolute;
-            right: 22px;
-            top: 22px;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            border: 1px solid rgba(255, 255, 255, .18);
-            display: grid;
-            place-items: center
-        }
-
-        .system-card:hover .arrow {
-            background: #fff;
-            color: #071316
-        }
-
-        .system-card:hover {
-            transform: translateY(-3px);
-            transition: .35s
-        }
-
-@media(max-width:1100px){
-    .system-card.big{grid-column:span 12}
-    .system-card.mid{grid-column:span 6}
-    .system-card.wide{grid-column:span 6}
-}
-@media(max-width:767px){
-    .systems-head{display:block}
-    .system-card.big,
-    .system-card.mid,
-    .system-card.wide{
-        grid-column:span 12;
-        min-height:310px;
+    .bms-systems{
+        padding:110px 0;
+        background:#f2f5f4;
     }
-}
+
+    .systems-head{
+        display:flex;
+        justify-content:space-between;
+        gap:40px;
+        align-items:end;
+        margin-bottom:48px;
+    }
+
+    .systems-head .bms-lead{
+        max-width:560px;
+    }
+
+
+    /* =========================================================
+       GRID
+    ========================================================= */
+
+    .systems-grid{
+        display:grid;
+        grid-template-columns:repeat(12,1fr);
+        gap:16px;
+    }
+
+
+    /* =========================================================
+       CARD
+    ========================================================= */
+
+    .system-card{
+        position:relative;
+
+        min-height:330px;
+
+        overflow:hidden;
+
+        border-radius:22px;
+
+        background:#0b1719;
+        color:#fff;
+
+        padding:28px;
+
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+
+        isolation:isolate;
+
+        transition:
+            transform .4s cubic-bezier(.22,1,.36,1),
+            box-shadow .4s ease;
+    }
+
+
+    /* IMAGE BACKGROUND */
+
+    .system-card::before{
+        content:"";
+
+        position:absolute;
+        inset:0;
+
+        z-index:-2;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(6,16,18,.05) 0%,
+                rgba(5,14,16,.18) 35%,
+                rgba(5,14,16,.92) 100%
+            ),
+            var(
+                --card-img,
+                linear-gradient(
+                    135deg,
+                    #0d2528,
+                    #17363a
+                )
+            );
+
+        background-size:cover;
+        background-position:center;
+
+        transform:scale(1.01);
+
+        transition:
+            transform .8s cubic-bezier(.22,1,.36,1),
+            filter .6s ease;
+    }
+
+
+    /* CYAN ATMOSPHERE */
+
+    .system-card::after{
+        content:"";
+
+        position:absolute;
+        inset:0;
+
+        z-index:-1;
+
+        background:
+            radial-gradient(
+                circle at 82% 14%,
+                rgba(19,215,196,.18),
+                transparent 28%
+            ),
+            linear-gradient(
+                90deg,
+                rgba(4,15,18,.26),
+                transparent 45%
+            );
+
+        pointer-events:none;
+    }
+
+
+    /* =========================================================
+       CARD SIZES
+    ========================================================= */
+
+    .system-card.big{
+        grid-column:span 6;
+        min-height:430px;
+    }
+
+    .system-card.mid{
+        grid-column:span 3;
+        min-height:330px;
+    }
+
+    .system-card.wide{
+        grid-column:span 4;
+        min-height:350px;
+    }
+
+
+    /* =========================================================
+       CARD NUMBER
+    ========================================================= */
+
+    .system-card .no{
+        position:relative;
+        z-index:3;
+
+        font-size:10px;
+        font-weight:700;
+        letter-spacing:2px;
+
+        color:#a4b5b7;
+    }
+
+
+    /* =========================================================
+       ARROW
+    ========================================================= */
+
+    .system-card .arrow{
+        position:absolute;
+
+        right:22px;
+        top:22px;
+
+        z-index:4;
+
+        width:38px;
+        height:38px;
+
+        border-radius:50%;
+
+        border:1px solid rgba(255,255,255,.22);
+
+        display:grid;
+        place-items:center;
+
+        color:#fff;
+
+        font-size:15px;
+
+        background:rgba(5,15,17,.15);
+
+        backdrop-filter:blur(8px);
+
+        transition:
+            background .35s ease,
+            color .35s ease,
+            transform .35s ease,
+            border-color .35s ease;
+    }
+
+
+    /* =========================================================
+       CARD CONTENT
+    ========================================================= */
+
+    .system-card > div{
+        position:relative;
+        z-index:3;
+    }
+
+    .system-card h3{
+        margin:0 0 10px;
+
+        max-width:90%;
+
+        color:#fff;
+
+        font-size:28px;
+        font-weight:600;
+
+        line-height:1.05;
+
+        letter-spacing:-1.3px;
+    }
+
+    .system-card p{
+        max-width:420px;
+
+        margin:0;
+
+        color:#b7c4c6;
+
+        font-size:11px;
+
+        line-height:1.75;
+    }
+
+
+    /* =========================================================
+       HOVER
+    ========================================================= */
+
+    .system-card:hover{
+        transform:translateY(-5px);
+
+        box-shadow:
+            0 24px 60px rgba(6,26,31,.16);
+    }
+
+    .system-card:hover::before{
+        transform:scale(1.045);
+
+        filter:saturate(1.08);
+    }
+
+    .system-card:hover .arrow{
+        background:#fff;
+        color:#071316;
+
+        border-color:#fff;
+
+        transform:rotate(45deg);
+    }
+
+
+    /* =========================================================
+       OPTIONAL CONTENT SHADOW
+    ========================================================= */
+
+    .system-card > div::before{
+        content:"";
+
+        position:absolute;
+
+        left:-20px;
+        right:-20px;
+        bottom:-22px;
+
+        height:150px;
+
+        z-index:-1;
+
+        background:
+            radial-gradient(
+                ellipse at bottom left,
+                rgba(2,8,10,.55),
+                transparent 70%
+            );
+
+        pointer-events:none;
+    }
+
+
+    /* =========================================================
+       TABLET
+    ========================================================= */
+
+    @media(max-width:1100px){
+
+        .systems-head{
+            align-items:start;
+        }
+
+        .system-card.big{
+            grid-column:span 12;
+        }
+
+        .system-card.mid{
+            grid-column:span 6;
+        }
+
+        .system-card.wide{
+            grid-column:span 6;
+        }
+
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media(max-width:767px){
+
+        .bms-systems{
+            padding:85px 0;
+        }
+
+        .systems-head{
+            display:block;
+
+            margin-bottom:38px;
+        }
+
+        .systems-head .bms-lead{
+            margin-top:22px;
+        }
+
+        .systems-grid{
+            gap:14px;
+        }
+
+        .system-card.big,
+        .system-card.mid,
+        .system-card.wide{
+            grid-column:span 12;
+
+            min-height:330px;
+        }
+
+        .system-card{
+            padding:24px;
+        }
+
+        .system-card h3{
+            font-size:24px;
+        }
+
+        .system-card p{
+            font-size:10.5px;
+        }
+
+        .system-card .arrow{
+            width:36px;
+            height:36px;
+
+            right:18px;
+            top:18px;
+        }
+
+    }
+
+
+    /* =========================================================
+       EXTRA SMALL MOBILE
+    ========================================================= */
+
+    @media(max-width:480px){
+
+        .system-card.big,
+        .system-card.mid,
+        .system-card.wide{
+            min-height:305px;
+        }
+
+        .system-card{
+            padding:21px;
+        }
+
+        .system-card h3{
+            font-size:22px;
+        }
+
+        .system-card p{
+            line-height:1.65;
+        }
+
+    }
+
+
+    /* =========================================================
+       REDUCED MOTION
+    ========================================================= */
+
+    @media(prefers-reduced-motion:reduce){
+
+        .system-card,
+        .system-card::before,
+        .system-card .arrow{
+            transition:none !important;
+        }
+
+    }
+
 </style>
+
 
 <!-- =========================================================
      MODULE 05 — CONNECTED BUILDING SYSTEMS — HTML
 ========================================================= -->
+
 <section class="bms-systems" id="bms-systems">
-<div class="bms-wrap">
-<div class="systems-head">
-<div>
-<div class="bms-eyebrow">CONNECTED BUILDING SYSTEMS</div>
-<h2 class="bms-h2">Intelligence across<br/><span>every system.</span></h2>
-</div>
-<p class="bms-lead">Bring traditionally isolated building services into a coordinated platform with
-                        live status, schedules, alarms, trends and control.</p>
-</div>
-<div class="systems-grid">
-<article class="system-card big reveal-bms" style="--card-img:url('assets/img/bms-hvac.jpg')"><span class="no">01 / CLIMATE</span><span class="arrow">↗</span>
-<div>
-<h3>HVAC &amp; Climate Control</h3>
-<p>Monitor chillers, AHUs, FCUs, ventilation, temperatures, pressures and operating
-                                schedules. Use occupancy and environmental data to improve comfort while reducing
-                                unnecessary runtime.</p>
-</div>
-</article>
-<article class="system-card mid reveal-bms" style="--card-img:url('assets/img/bms-lighting.jpg')">
-<span class="no">02 / LIGHT</span><span class="arrow">↗</span>
-<div>
-<h3>Lighting</h3>
-<p>Schedules, daylight response, occupancy logic and zone-level control.</p>
-</div>
-</article>
-<article class="system-card mid reveal-bms" style="--card-img:url('assets/img/bms-energy.jpg')">
-<span class="no">03 / POWER</span><span class="arrow">↗</span>
-<div>
-<h3>Energy</h3>
-<p>Metering, demand, power quality, trends and energy-performance visibility.</p>
-</div>
-</article>
-<article class="system-card wide reveal-bms"><span class="no">04 / SAFETY</span><span class="arrow">↗</span>
-<div>
-<h3>Fire &amp; Life Safety</h3>
-<p>Bring fire panels, pumps, pressure, alarm events and emergency status into a coordinated
-                                operational view.</p>
-</div>
-</article>
-<article class="system-card wide reveal-bms"><span class="no">05 / SECURITY</span><span class="arrow">↗</span>
-<div>
-<h3>Access &amp; Security</h3>
-<p>Integrate access control, intrusion, CCTV events and critical security signals for faster
-                                response.</p>
-</div>
-</article>
-<article class="system-card wide reveal-bms"><span class="no">06 / WATER</span><span class="arrow">↗</span>
-<div>
-<h3>Water &amp; Utilities</h3>
-<p>Tank levels, pumps, flow, pressure, leakage and utility consumption with alarms and
-                                automation.</p>
-</div>
-</article>
-</div>
-</div>
+
+    <div class="bms-wrap">
+
+
+        <!-- =====================================================
+             SECTION HEADER
+        ====================================================== -->
+
+        <div class="systems-head">
+
+            <div>
+
+                <div class="bms-eyebrow">
+                    CONNECTED BUILDING SYSTEMS
+                </div>
+
+                <h2 class="bms-h2">
+                    Intelligence across<br>
+                    <span>every system.</span>
+                </h2>
+
+            </div>
+
+
+            <p class="bms-lead">
+
+                Bring traditionally isolated building services
+                into a coordinated platform with live status,
+                schedules, alarms, trends and control.
+
+            </p>
+
+        </div>
+
+
+        <!-- =====================================================
+             SYSTEM GRID
+        ====================================================== -->
+
+        <div class="systems-grid">
+
+
+            <!-- =================================================
+                 01 — HVAC & CLIMATE CONTROL
+            ================================================== -->
+
+            <article
+                class="system-card big reveal-bms"
+                style="--card-img:url('assets/img/bms/HVAC & Climate Control_.png')"
+            >
+
+                <span class="no">
+                    01 / CLIMATE
+                </span>
+
+                <span class="arrow">
+                    ↗
+                </span>
+
+
+                <div>
+
+                    <h3>
+                        HVAC &amp; Climate Control
+                    </h3>
+
+                    <p>
+
+                        Monitor chillers, AHUs, FCUs,
+                        ventilation, temperatures, pressures
+                        and operating schedules.
+
+                        Use occupancy and environmental data
+                        to improve comfort while reducing
+                        unnecessary runtime.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 02 — LIGHTING
+            ================================================== -->
+
+            <article
+                class="system-card mid reveal-bms"
+                style="--card-img:url('assets/img/bms/bmslighting.png')"
+            >
+
+                <span class="no">
+                    02 / LIGHT
+                </span>
+
+                <span class="arrow">
+                    ↗
+                </span>
+
+
+                <div>
+
+                    <h3>
+                        Lighting
+                    </h3>
+
+                    <p>
+
+                        Schedules, daylight response,
+                        occupancy logic and zone-level control.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 03 — ENERGY
+            ================================================== -->
+
+            <article
+                class="system-card mid reveal-bms"
+                style="--card-img:url('assets/img/bms/bmsenergy.png')"
+            >
+
+                <span class="no">
+                    03 / POWER
+                </span>
+
+                <span class="arrow">
+                    ↗
+                </span>
+
+
+                <div>
+
+                    <h3>
+                        Energy
+                    </h3>
+
+                    <p>
+
+                        Metering, demand, power quality,
+                        trends and energy-performance
+                        visibility.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 04 — FIRE & LIFE SAFETY
+            ================================================== -->
+
+            <article
+                class="system-card wide reveal-bms"
+                style="--card-img:url('assets/img/bms/Fire & Life Safety.png')"
+            >
+
+                <span class="no">
+                    04 / SAFETY
+                </span>
+
+                <span class="arrow">
+                    ↗
+                </span>
+
+
+                <div>
+
+                    <h3>
+                        Fire &amp; Life Safety
+                    </h3>
+
+                    <p>
+
+                        Bring fire panels, pumps,
+                        pressure, alarm events and
+                        emergency status into a
+                        coordinated operational view.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 05 — ACCESS & SECURITY
+            ================================================== -->
+
+            <article
+                class="system-card wide reveal-bms"
+                style="--card-img:url('assets/img/bms/Access & Security.png')"
+            >
+
+                <span class="no">
+                    05 / SECURITY
+                </span>
+
+                <span class="arrow">
+                    ↗
+                </span>
+
+
+                <div>
+
+                    <h3>
+                        Access &amp; Security
+                    </h3>
+
+                    <p>
+
+                        Integrate access control,
+                        intrusion, CCTV events and
+                        critical security signals
+                        for faster response.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 06 — WATER & UTILITIES
+            ================================================== -->
+
+            <article
+                class="system-card wide reveal-bms"
+                style="--card-img:url('assets/img/bms/Water & Utilities.png')"
+            >
+
+                <span class="no">
+                    06 / WATER
+                </span>
+
+                <span class="arrow">
+                    ↗
+                </span>
+
+
+                <div>
+
+                    <h3>
+                        Water &amp; Utilities
+                    </h3>
+
+                    <p>
+
+                        Tank levels, pumps, flow,
+                        pressure, leakage and utility
+                        consumption with alarms and
+                        automation.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
 </section>
+
 
 <!-- =========================================================
      MODULE 05 — CONNECTED BUILDING SYSTEMS — SCRIPT
 ========================================================= -->
+
 <script>
+
 (function(){
-    window.bmsInitReveal && window.bmsInitReveal('.bms-systems');
-    
+
+    /* Existing common BMS reveal function */
+
+    window.bmsInitReveal &&
+    window.bmsInitReveal('.bms-systems');
+
+
+    /* ---------------------------------------------------------
+       Premium mouse hover depth
+    --------------------------------------------------------- */
+
+    const section =
+        document.querySelector('.bms-systems');
+
+    if(!section) return;
+
+
+    const cards =
+        section.querySelectorAll('.system-card');
+
+
+    cards.forEach(card=>{
+
+        card.addEventListener('mouseenter',()=>{
+
+            card.style.zIndex = '5';
+
+        });
+
+
+        card.addEventListener('mouseleave',()=>{
+
+            card.style.zIndex = '';
+
+        });
+
+    });
+
 })();
+
 </script>
 
-
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 06 — CENTRAL COMMAND CENTER — CSS
 ========================================================= -->
-<style>
-/* COMMAND CENTER */
-        .command-section {
-            padding: 120px 0;
-            background: #071316;
-            color: #fff
-        }
+        <style>
+            /* COMMAND CENTER */
+            .command-section {
+                padding: 120px 0;
+                background: #071316;
+                color: #fff
+            }
 
-        .command-head {
-            display: grid;
-            grid-template-columns: .8fr 1.2fr;
-            gap: 80px;
-            margin-bottom: 54px
-        }
+            .command-head {
+                display: grid;
+                grid-template-columns: .8fr 1.2fr;
+                gap: 80px;
+                margin-bottom: 54px
+            }
 
-        .command-console {
-            display: grid;
-            grid-template-columns: 230px 1fr;
-            border: 1px solid #243537;
-            border-radius: 24px;
-            overflow: hidden;
-            background: #0b181a;
-            box-shadow: 0 50px 100px rgba(0, 0, 0, .28)
-        }
+            .command-console {
+                display: grid;
+                grid-template-columns: 230px 1fr;
+                border: 1px solid #243537;
+                border-radius: 24px;
+                overflow: hidden;
+                background: #0b181a;
+                box-shadow: 0 50px 100px rgba(0, 0, 0, .28)
+            }
 
-        .console-side {
-            border-right: 1px solid #243537;
-            padding: 24px
-        }
+            .console-side {
+                border-right: 1px solid #243537;
+                padding: 24px
+            }
 
-        .console-logo {
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 1.4px;
-            margin-bottom: 28px
-        }
+            .console-logo {
+                font-size: 11px;
+                font-weight: 800;
+                letter-spacing: 1.4px;
+                margin-bottom: 28px
+            }
 
-        .console-nav {
-            display: grid;
-            gap: 8px
-        }
+            .console-nav {
+                display: grid;
+                gap: 8px
+            }
 
-        .console-nav div {
-            padding: 12px 13px;
-            border-radius: 10px;
-            color: #829699;
-            font-size: 10px
-        }
+            .console-nav div {
+                padding: 12px 13px;
+                border-radius: 10px;
+                color: #829699;
+                font-size: 10px
+            }
 
-        .console-nav div.active {
-            background: rgba(19, 215, 196, .10);
-            color: #dffffb;
-            border: 1px solid rgba(19, 215, 196, .18)
-        }
+            .console-nav div.active {
+                background: rgba(19, 215, 196, .10);
+                color: #dffffb;
+                border: 1px solid rgba(19, 215, 196, .18)
+            }
 
-        .console-main {
-            padding: 24px
-        }
+            .console-main {
+                padding: 24px
+            }
 
-        .console-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px
-        }
+            .console-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px
+            }
 
-        .console-top h4 {
-            font-size: 18px;
-            margin: 0
-        }
+            .console-top h4 {
+                font-size: 18px;
+                margin: 0
+            }
 
-        .console-top span {
-            font-size: 9px;
-            color: #8fa2a5
-        }
+            .console-top span {
+                font-size: 9px;
+                color: #8fa2a5
+            }
 
-        .console-cards {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px
-        }
+            .console-cards {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px
+            }
 
-        .console-card {
-            border: 1px solid #213235;
-            background: #0f2023;
-            border-radius: 14px;
-            padding: 15px
-        }
+            .console-card {
+                border: 1px solid #213235;
+                background: #0f2023;
+                border-radius: 14px;
+                padding: 15px
+            }
 
-        .console-card span {
-            font-size: 8px;
-            letter-spacing: 1.2px;
-            color: #7f9497
-        }
+            .console-card span {
+                font-size: 8px;
+                letter-spacing: 1.2px;
+                color: #7f9497
+            }
 
-        .console-card strong {
-            display: block;
-            font-size: 22px;
-            margin-top: 8px
-        }
+            .console-card strong {
+                display: block;
+                font-size: 22px;
+                margin-top: 8px
+            }
 
-        .console-grid {
-            display: grid;
-            grid-template-columns: 1.3fr .7fr;
-            gap: 10px;
-            margin-top: 10px
-        }
+            .console-grid {
+                display: grid;
+                grid-template-columns: 1.3fr .7fr;
+                gap: 10px;
+                margin-top: 10px
+            }
 
-        .chart-box,
-        .alerts-box {
-            border: 1px solid #213235;
-            background: #0f2023;
-            border-radius: 14px;
-            padding: 18px;
-            min-height: 230px
-        }
+            .chart-box,
+            .alerts-box {
+                border: 1px solid #213235;
+                background: #0f2023;
+                border-radius: 14px;
+                padding: 18px;
+                min-height: 230px
+            }
 
-        .chart {
-            height: 150px;
-            margin-top: 18px;
-            position: relative;
-            background: linear-gradient(to top, rgba(19, 215, 196, .03), transparent);
-            overflow: hidden
-        }
+            .chart {
+                height: 150px;
+                margin-top: 18px;
+                position: relative;
+                background: linear-gradient(to top, rgba(19, 215, 196, .03), transparent);
+                overflow: hidden
+            }
 
-        .chart svg {
-            width: 100%;
-            height: 100%
-        }
+            .chart svg {
+                width: 100%;
+                height: 100%
+            }
 
-        .alerts-box ul {
-            padding: 0;
-            margin: 14px 0 0;
-            list-style: none
-        }
+            .alerts-box ul {
+                padding: 0;
+                margin: 14px 0 0;
+                list-style: none
+            }
 
-        .alerts-box li {
-            padding: 11px 0;
-            border-bottom: 1px solid #203033;
-            font-size: 9px;
-            color: #9eb0b3;
-            display: flex;
-            justify-content: space-between
-        }
+            .alerts-box li {
+                padding: 11px 0;
+                border-bottom: 1px solid #203033;
+                font-size: 9px;
+                color: #9eb0b3;
+                display: flex;
+                justify-content: space-between
+            }
 
-        .alerts-box b {
-            color: #fff;
-            font-weight: 600
-        }
+            .alerts-box b {
+                color: #fff;
+                font-weight: 600
+            }
 
-@media(max-width:1100px){
-    .command-head{grid-template-columns:1fr}
-    .console-cards{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:767px){
-    .command-console{grid-template-columns:1fr}
-    .console-side{display:none}
-    .console-grid{grid-template-columns:1fr}
-}
-</style>
+            @media(max-width:1100px) {
+                .command-head {
+                    grid-template-columns: 1fr
+                }
 
-<!-- =========================================================
+                .console-cards {
+                    grid-template-columns: repeat(2, 1fr)
+                }
+            }
+
+            @media(max-width:767px) {
+                .command-console {
+                    grid-template-columns: 1fr
+                }
+
+                .console-side {
+                    display: none
+                }
+
+                .console-grid {
+                    grid-template-columns: 1fr
+                }
+            }
+        </style>
+
+        <!-- =========================================================
      MODULE 06 — CENTRAL COMMAND CENTER — HTML
 ========================================================= -->
-<section class="command-section">
-<div class="bms-wrap">
-<div class="command-head">
-<div class="reveal-bms">
-<div class="bms-eyebrow" style="color:#9cafb2">CENTRAL COMMAND CENTER</div>
-<h2 class="bms-h2">One dashboard.<br/><span style="color:#789093">Total visibility.</span></h2>
-</div>
-<p class="bms-lead reveal-bms" style="color:#91a5a8">Operators see live building conditions, system
+        <section class="command-section">
+            <div class="bms-wrap">
+                <div class="command-head">
+                    <div class="reveal-bms">
+                        <div class="bms-eyebrow" style="color:#9cafb2">CENTRAL COMMAND CENTER</div>
+                        <h2 class="bms-h2">One dashboard.<br /><span style="color:#789093">Total visibility.</span></h2>
+                    </div>
+                    <p class="bms-lead reveal-bms" style="color:#91a5a8">Operators see live building conditions, system
                         health, alarms, trends and key energy metrics without jumping between multiple applications.
                         Role-based views keep the interface focused for facility teams, managers and owners.</p>
-</div>
-<div class="command-console reveal-bms">
-<aside class="console-side">
-<div class="console-logo">ALPHA BMS / LIVE</div>
-<div class="console-nav">
-<div class="active">Overview</div>
-<div>HVAC Systems</div>
-<div>Energy</div>
-<div>Safety</div>
-<div>Water</div>
-<div>Trends &amp; Reports</div>
-</div>
-</aside>
-<div class="console-main">
-<div class="console-top">
-<h4>Building Operations</h4><span>08 SEP 2026 · 10:24</span>
-</div>
-<div class="console-cards">
-<div class="console-card"><span>SYSTEMS ONLINE</span><strong>97%</strong></div>
-<div class="console-card"><span>ENERGY DEMAND</span><strong>486 kW</strong></div>
-<div class="console-card"><span>ACTIVE ALARMS</span><strong>02</strong></div>
-<div class="console-card"><span>COMFORT SCORE</span><strong>94</strong></div>
-</div>
-<div class="console-grid">
-<div class="chart-box"><span style="font-size:9px;color:#879b9e">ENERGY LOAD / TODAY</span>
-<div class="chart"><svg preserveaspectratio="none" viewbox="0 0 600 160">
-<polyline fill="none" points="0,125 50,118 100,110 150,92 200,101 250,74 300,80 350,58 400,72 450,45 500,52 550,34 600,42" stroke="#13d7c4" stroke-width="3"></polyline>
-<line stroke="#25383a" x1="0" x2="600" y1="140" y2="140"></line>
-<line stroke="#25383a" x1="0" x2="600" y1="95" y2="95"></line>
-<line stroke="#25383a" x1="0" x2="600" y1="50" y2="50"></line>
-</svg></div>
-</div>
-<div class="alerts-box"><span style="font-size:9px;color:#879b9e">PRIORITY EVENTS</span>
-<ul>
-<li><b>AHU-04</b><span>Filter ΔP high</span></li>
-<li><b>PUMP-02</b><span>Runtime threshold</span></li>
-<li><b>FIRE LOOP</b><span>Healthy</span></li>
-<li><b>WATER</b><span>Tank 74%</span></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+                </div>
+                <div class="command-console reveal-bms">
+                    <aside class="console-side">
+                        <div class="console-logo">ALPHA BMS / LIVE</div>
+                        <div class="console-nav">
+                            <div class="active">Overview</div>
+                            <div>HVAC Systems</div>
+                            <div>Energy</div>
+                            <div>Safety</div>
+                            <div>Water</div>
+                            <div>Trends &amp; Reports</div>
+                        </div>
+                    </aside>
+                    <div class="console-main">
+                        <div class="console-top">
+                            <h4>Building Operations</h4><span>08 SEP 2026 · 10:24</span>
+                        </div>
+                        <div class="console-cards">
+                            <div class="console-card"><span>SYSTEMS ONLINE</span><strong>97%</strong></div>
+                            <div class="console-card"><span>ENERGY DEMAND</span><strong>486 kW</strong></div>
+                            <div class="console-card"><span>ACTIVE ALARMS</span><strong>02</strong></div>
+                            <div class="console-card"><span>COMFORT SCORE</span><strong>94</strong></div>
+                        </div>
+                        <div class="console-grid">
+                            <div class="chart-box"><span style="font-size:9px;color:#879b9e">ENERGY LOAD / TODAY</span>
+                                <div class="chart"><svg preserveaspectratio="none" viewbox="0 0 600 160">
+                                        <polyline fill="none"
+                                            points="0,125 50,118 100,110 150,92 200,101 250,74 300,80 350,58 400,72 450,45 500,52 550,34 600,42"
+                                            stroke="#13d7c4" stroke-width="3"></polyline>
+                                        <line stroke="#25383a" x1="0" x2="600" y1="140" y2="140"></line>
+                                        <line stroke="#25383a" x1="0" x2="600" y1="95" y2="95"></line>
+                                        <line stroke="#25383a" x1="0" x2="600" y1="50" y2="50"></line>
+                                    </svg></div>
+                            </div>
+                            <div class="alerts-box"><span style="font-size:9px;color:#879b9e">PRIORITY EVENTS</span>
+                                <ul>
+                                    <li><b>AHU-04</b><span>Filter ΔP high</span></li>
+                                    <li><b>PUMP-02</b><span>Runtime threshold</span></li>
+                                    <li><b>FIRE LOOP</b><span>Healthy</span></li>
+                                    <li><b>WATER</b><span>Tank 74%</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 06 — CENTRAL COMMAND CENTER — SCRIPT
 ========================================================= -->
-<script>
-(function(){
-    window.bmsInitReveal && window.bmsInitReveal('.command-section');
-    
-})();
-</script>
+        <script>
+            (function () {
+                window.bmsInitReveal && window.bmsInitReveal('.command-section');
+
+            })();
+        </script>
 
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 07 — BMS WORKFLOW — CSS
 ========================================================= -->
-<style>
-/* FLOW */
-        .bms-flow {
-            padding: 120px 0;
-            background: #fff
-        }
+        <style>
+            /* FLOW */
+            .bms-flow {
+                padding: 120px 0;
+                background: #fff
+            }
 
-        .flow-track {
-            margin-top: 60px;
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            position: relative
-        }
+            .flow-track {
+                margin-top: 60px;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                position: relative
+            }
 
-        .flow-track:before {
-            content: "";
-            position: absolute;
-            top: 39px;
-            left: 8%;
-            right: 8%;
-            height: 1px;
-            background: #cdd6d4
-        }
+            .flow-track:before {
+                content: "";
+                position: absolute;
+                top: 39px;
+                left: 8%;
+                right: 8%;
+                height: 1px;
+                background: #cdd6d4
+            }
 
-        .flow-step {
-            text-align: center;
-            position: relative;
-            padding: 0 16px
-        }
+            .flow-step {
+                text-align: center;
+                position: relative;
+                padding: 0 16px
+            }
 
-        .flow-dot {
-            width: 78px;
-            height: 78px;
-            border-radius: 50%;
-            margin: auto;
-            background: #071316;
-            color: #fff;
-            display: grid;
-            place-items: center;
-            font-size: 20px;
-            position: relative;
-            z-index: 2;
-            box-shadow: 0 0 0 8px #fff
-        }
+            .flow-dot {
+                width: 78px;
+                height: 78px;
+                border-radius: 50%;
+                margin: auto;
+                background: #071316;
+                color: #fff;
+                display: grid;
+                place-items: center;
+                font-size: 20px;
+                position: relative;
+                z-index: 2;
+                box-shadow: 0 0 0 8px #fff
+            }
 
-        .flow-step:nth-child(3) .flow-dot {
-            background: var(--bms-teal);
-            color: #071316
-        }
+            .flow-step:nth-child(3) .flow-dot {
+                background: var(--bms-teal);
+                color: #071316
+            }
 
-        .flow-step strong {
-            display: block;
-            margin-top: 20px;
-            font-size: 12px
-        }
+            .flow-step strong {
+                display: block;
+                margin-top: 20px;
+                font-size: 12px
+            }
 
-        .flow-step p {
-            font-size: 10px;
-            color: #7b898b;
-            line-height: 1.7;
-            margin-top: 8px
-        }
+            .flow-step p {
+                font-size: 10px;
+                color: #7b898b;
+                line-height: 1.7;
+                margin-top: 8px
+            }
 
-@media(max-width:767px){
-    .flow-track{
-        grid-template-columns:1fr;
-        gap:30px;
-    }
-    .flow-track:before{display:none}
-}
-</style>
+            @media(max-width:767px) {
+                .flow-track {
+                    grid-template-columns: 1fr;
+                    gap: 30px;
+                }
 
-<!-- =========================================================
+                .flow-track:before {
+                    display: none
+                }
+            }
+        </style>
+
+        <!-- =========================================================
      MODULE 07 — BMS WORKFLOW — HTML
 ========================================================= -->
-<section class="bms-flow">
-<div class="bms-wrap">
-<div class="bms-eyebrow">HOW THE BMS WORKS</div>
-<h2 class="bms-h2">From field signal<br/><span>to intelligent action.</span></h2>
-<div class="flow-track">
-<div class="flow-step reveal-bms">
-<div class="flow-dot"><i class="fa-solid fa-satellite-dish"></i></div><strong>SENSE</strong>
-<p>Sensors, meters and equipment expose live conditions.</p>
-</div>
-<div class="flow-step reveal-bms">
-<div class="flow-dot"><i class="fa-solid fa-microchip"></i></div><strong>CONTROL</strong>
-<p>DDC/PLC/controllers execute local logic and schedules.</p>
-</div>
-<div class="flow-step reveal-bms">
-<div class="flow-dot"><i class="fa-solid fa-diagram-project"></i></div>
-<strong>INTEGRATE</strong>
-<p>Gateways and open protocols unify multiple systems.</p>
-</div>
-<div class="flow-step reveal-bms">
-<div class="flow-dot"><i class="fa-solid fa-chart-line"></i></div><strong>UNDERSTAND</strong>
-<p>Dashboards, alarms, histories and analytics reveal patterns.</p>
-</div>
-<div class="flow-step reveal-bms">
-<div class="flow-dot"><i class="fa-solid fa-bolt"></i></div><strong>ACT</strong>
-<p>Operators or automated rules respond at the right time.</p>
-</div>
-</div>
-</div>
-</section>
+        <section class="bms-flow">
+            <div class="bms-wrap">
+                <div class="bms-eyebrow">HOW THE BMS WORKS</div>
+                <h2 class="bms-h2">From field signal<br /><span>to intelligent action.</span></h2>
+                <div class="flow-track">
+                    <div class="flow-step reveal-bms">
+                        <div class="flow-dot"><i class="fa-solid fa-satellite-dish"></i></div><strong>SENSE</strong>
+                        <p>Sensors, meters and equipment expose live conditions.</p>
+                    </div>
+                    <div class="flow-step reveal-bms">
+                        <div class="flow-dot"><i class="fa-solid fa-microchip"></i></div><strong>CONTROL</strong>
+                        <p>DDC/PLC/controllers execute local logic and schedules.</p>
+                    </div>
+                    <div class="flow-step reveal-bms">
+                        <div class="flow-dot"><i class="fa-solid fa-diagram-project"></i></div>
+                        <strong>INTEGRATE</strong>
+                        <p>Gateways and open protocols unify multiple systems.</p>
+                    </div>
+                    <div class="flow-step reveal-bms">
+                        <div class="flow-dot"><i class="fa-solid fa-chart-line"></i></div><strong>UNDERSTAND</strong>
+                        <p>Dashboards, alarms, histories and analytics reveal patterns.</p>
+                    </div>
+                    <div class="flow-step reveal-bms">
+                        <div class="flow-dot"><i class="fa-solid fa-bolt"></i></div><strong>ACT</strong>
+                        <p>Operators or automated rules respond at the right time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 07 — BMS WORKFLOW — SCRIPT
 ========================================================= -->
-<script>
-(function(){
-    window.bmsInitReveal && window.bmsInitReveal('.bms-flow');
-    
-})();
-</script>
+        <script>
+            (function () {
+                window.bmsInitReveal && window.bmsInitReveal('.bms-flow');
+
+            })();
+        </script>
 
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 08 — BMS MODERNIZATION — CSS
 ========================================================= -->
-<style>
-/* RETROFIT */
-        .retrofit {
-            padding: 120px 0;
-            background: linear-gradient(135deg, #eef2f1, #fff)
-        }
+        <style>
+            /* RETROFIT */
+            .retrofit {
+                padding: 120px 0;
+                background: linear-gradient(135deg, #eef2f1, #fff)
+            }
 
-        .retrofit-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 70px;
-            align-items: center
-        }
+            .retrofit-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 70px;
+                align-items: center
+            }
 
-        .retro-visual {
-            position: relative;
-            min-height: 520px;
-            border-radius: 26px;
-            background: #091719;
-            overflow: hidden;
-            padding: 32px
-        }
+            .retro-visual {
+                position: relative;
+                min-height: 520px;
+                border-radius: 26px;
+                background: #091719;
+                overflow: hidden;
+                padding: 32px
+            }
 
-        .retro-visual:before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-image: linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
-            background-size: 48px 48px
-        }
+            .retro-visual:before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
+                background-size: 48px 48px
+            }
 
-        .legacy-box,
-        .smart-box {
-            position: absolute;
-            width: 40%;
-            padding: 22px;
-            border: 1px solid rgba(255, 255, 255, .12);
-            border-radius: 18px;
-            background: rgba(255, 255, 255, .05);
-            backdrop-filter: blur(10px);
-            color: #fff
-        }
+            .legacy-box,
+            .smart-box {
+                position: absolute;
+                width: 40%;
+                padding: 22px;
+                border: 1px solid rgba(255, 255, 255, .12);
+                border-radius: 18px;
+                background: rgba(255, 255, 255, .05);
+                backdrop-filter: blur(10px);
+                color: #fff
+            }
 
-        .legacy-box {
-            left: 7%;
-            top: 18%
-        }
+            .legacy-box {
+                left: 7%;
+                top: 18%
+            }
 
-        .smart-box {
-            right: 7%;
-            bottom: 18%
-        }
+            .smart-box {
+                right: 7%;
+                bottom: 18%
+            }
 
-        .legacy-box span,
-        .smart-box span {
-            font-size: 9px;
-            color: #8ca0a3;
-            letter-spacing: 1.5px
-        }
+            .legacy-box span,
+            .smart-box span {
+                font-size: 9px;
+                color: #8ca0a3;
+                letter-spacing: 1.5px
+            }
 
-        .legacy-box h4,
-        .smart-box h4 {
-            font-size: 19px;
-            margin: 9px 0
-        }
+            .legacy-box h4,
+            .smart-box h4 {
+                font-size: 19px;
+                margin: 9px 0
+            }
 
-        .retro-link {
-            position: absolute;
-            left: 39%;
-            top: 49%;
-            width: 23%;
-            height: 2px;
-            background: linear-gradient(90deg, #647477, var(--bms-teal));
-            box-shadow: 0 0 18px rgba(19, 215, 196, .4)
-        }
+            .retro-link {
+                position: absolute;
+                left: 39%;
+                top: 49%;
+                width: 23%;
+                height: 2px;
+                background: linear-gradient(90deg, #647477, var(--bms-teal));
+                box-shadow: 0 0 18px rgba(19, 215, 196, .4)
+            }
 
-        .retro-link:after {
-            content: "";
-            position: absolute;
-            right: -5px;
-            top: -4px;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: var(--bms-teal)
-        }
+            .retro-link:after {
+                content: "";
+                position: absolute;
+                right: -5px;
+                top: -4px;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: var(--bms-teal)
+            }
 
-        .retro-features {
-            display: grid;
-            gap: 0;
-            margin-top: 32px;
-            border-top: 1px solid #d8dfdd
-        }
+            .retro-features {
+                display: grid;
+                gap: 0;
+                margin-top: 32px;
+                border-top: 1px solid #d8dfdd
+            }
 
-        .retro-feature {
-            padding: 17px 0;
-            border-bottom: 1px solid #d8dfdd;
-            display: flex;
-            gap: 14px;
-            align-items: center;
-            font-size: 11px
-        }
+            .retro-feature {
+                padding: 17px 0;
+                border-bottom: 1px solid #d8dfdd;
+                display: flex;
+                gap: 14px;
+                align-items: center;
+                font-size: 11px
+            }
 
-        .retro-feature i {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background: #071316;
-            color: #fff;
-            display: grid;
-            place-items: center;
-            font-size: 10px
-        }
+            .retro-feature i {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background: #071316;
+                color: #fff;
+                display: grid;
+                place-items: center;
+                font-size: 10px
+            }
 
-@media(max-width:1100px){
-    .retrofit-grid{grid-template-columns:1fr}
-}
-</style>
+            @media(max-width:1100px) {
+                .retrofit-grid {
+                    grid-template-columns: 1fr
+                }
+            }
+        </style>
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 08 — BMS MODERNIZATION — HTML
 ========================================================= -->
-<section class="retrofit">
-<div class="bms-wrap retrofit-grid">
-<div class="retro-visual reveal-bms">
-<div class="legacy-box"><span>EXISTING BUILDING</span>
-<h4>Legacy BMS / Panels</h4><small style="color:#809396">BACnet · Modbus · Hardwired I/O</small>
-</div>
-<div class="retro-link"></div>
-<div class="smart-box"><span>INTELLIGENCE LAYER</span>
-<h4>Connected BMS</h4><small style="color:#8ccbc5">Edge · IoT · Dashboard · Analytics</small>
-</div>
-</div>
-<div class="reveal-bms">
-<div class="bms-eyebrow">BMS MODERNIZATION</div>
-<h2 class="bms-h2">Keep what works.<br/><span>Make it smarter.</span></h2>
-<p class="bms-lead">An existing building does not always need a full controls replacement. Alpha
+        <section class="retrofit">
+            <div class="bms-wrap retrofit-grid">
+                <div class="retro-visual reveal-bms">
+                    <div class="legacy-box"><span>EXISTING BUILDING</span>
+                        <h4>Legacy BMS / Panels</h4><small style="color:#809396">BACnet · Modbus · Hardwired I/O</small>
+                    </div>
+                    <div class="retro-link"></div>
+                    <div class="smart-box"><span>INTELLIGENCE LAYER</span>
+                        <h4>Connected BMS</h4><small style="color:#8ccbc5">Edge · IoT · Dashboard · Analytics</small>
+                    </div>
+                </div>
+                <div class="reveal-bms">
+                    <div class="bms-eyebrow">BMS MODERNIZATION</div>
+                    <h2 class="bms-h2">Keep what works.<br /><span>Make it smarter.</span></h2>
+                    <p class="bms-lead">An existing building does not always need a full controls replacement. Alpha
                         Numeric can create an integration and IoT layer around compatible legacy systems, adding
                         centralized visibility, remote monitoring, analytics and new sensors while protecting useful
                         installed infrastructure.</p>
-<div class="retro-features">
-<div class="retro-feature"><i class="fa-solid fa-link"></i>Multi-brand and legacy integration
+                    <div class="retro-features">
+                        <div class="retro-feature"><i class="fa-solid fa-link"></i>Multi-brand and legacy integration
                             planning</div>
-<div class="retro-feature"><i class="fa-solid fa-cloud-arrow-up"></i>Local, edge and
+                        <div class="retro-feature"><i class="fa-solid fa-cloud-arrow-up"></i>Local, edge and
                             cloud-connected architectures</div>
-<div class="retro-feature"><i class="fa-solid fa-chart-simple"></i>New dashboards, alarms,
+                        <div class="retro-feature"><i class="fa-solid fa-chart-simple"></i>New dashboards, alarms,
                             trends and reports</div>
-<div class="retro-feature"><i class="fa-solid fa-building"></i>Single-building or multi-site
+                        <div class="retro-feature"><i class="fa-solid fa-building"></i>Single-building or multi-site
                             portfolio rollout</div>
-</div>
-</div>
-</div>
-</section>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 08 — BMS MODERNIZATION — SCRIPT
 ========================================================= -->
-<script>
-(function(){
-    window.bmsInitReveal && window.bmsInitReveal('.retrofit');
-    
-})();
-</script>
+        <script>
+            (function () {
+                window.bmsInitReveal && window.bmsInitReveal('.retrofit');
+
+            })();
+        </script>
 
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 09 — SMARTER BUILDING OUTCOMES — CSS
 ========================================================= -->
-<style>
-/* PERFORMANCE */
-        .performance {
-            padding: 120px 0;
-            background: #071316;
-            color: #fff
-        }
+        <style>
+            /* PERFORMANCE */
+            .performance {
+                padding: 120px 0;
+                background: #071316;
+                color: #fff
+            }
 
-        .performance-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1px;
-            background: #213033;
-            margin-top: 50px
-        }
+            .performance-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1px;
+                background: #213033;
+                margin-top: 50px
+            }
 
-        .perf {
-            background: #071316;
-            padding: 34px
-        }
+            .perf {
+                background: #071316;
+                padding: 34px
+            }
 
-        .perf i {
-            color: var(--bms-teal);
-            font-size: 20px
-        }
+            .perf i {
+                color: var(--bms-teal);
+                font-size: 20px
+            }
 
-        .perf h3 {
-            font-size: 17px;
-            margin: 22px 0 10px
-        }
+            .perf h3 {
+                font-size: 17px;
+                margin: 22px 0 10px
+            }
 
-        .perf p {
-            font-size: 10px;
-            line-height: 1.8;
-            color: #8fa2a5
-        }
+            .perf p {
+                font-size: 10px;
+                line-height: 1.8;
+                color: #8fa2a5
+            }
 
-@media(max-width:767px){
-    .performance-grid{grid-template-columns:1fr}
-}
-</style>
+            @media(max-width:767px) {
+                .performance-grid {
+                    grid-template-columns: 1fr
+                }
+            }
+        </style>
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 09 — SMARTER BUILDING OUTCOMES — HTML
 ========================================================= -->
-<section class="performance">
-<div class="bms-wrap">
-<div class="bms-eyebrow" style="color:#9aadaf">SMARTER BUILDING OUTCOMES</div>
-<h2 class="bms-h2">Built around performance,<br/><span style="color:#74888b">comfort and
+        <section class="performance">
+            <div class="bms-wrap">
+                <div class="bms-eyebrow" style="color:#9aadaf">SMARTER BUILDING OUTCOMES</div>
+                <h2 class="bms-h2">Built around performance,<br /><span style="color:#74888b">comfort and
                         resilience.</span></h2>
-<div class="performance-grid">
-<article class="perf reveal-bms"><i class="fa-solid fa-leaf"></i>
-<h3>Energy Intelligence</h3>
-<p>Track consumption by source, zone and equipment; identify abnormal loads and optimize
+                <div class="performance-grid">
+                    <article class="perf reveal-bms"><i class="fa-solid fa-leaf"></i>
+                        <h3>Energy Intelligence</h3>
+                        <p>Track consumption by source, zone and equipment; identify abnormal loads and optimize
                             schedules.</p>
-</article>
-<article class="perf reveal-bms"><i class="fa-solid fa-temperature-half"></i>
-<h3>Occupant Comfort</h3>
-<p>Use temperature, humidity, CO₂, occupancy and ventilation data to maintain healthier indoor
+                    </article>
+                    <article class="perf reveal-bms"><i class="fa-solid fa-temperature-half"></i>
+                        <h3>Occupant Comfort</h3>
+                        <p>Use temperature, humidity, CO₂, occupancy and ventilation data to maintain healthier indoor
                             conditions.</p>
-</article>
-<article class="perf reveal-bms"><i class="fa-solid fa-screwdriver-wrench"></i>
-<h3>Predictive Maintenance</h3>
-<p>Trend runtime and equipment behavior to identify early warning signs before failures become
+                    </article>
+                    <article class="perf reveal-bms"><i class="fa-solid fa-screwdriver-wrench"></i>
+                        <h3>Predictive Maintenance</h3>
+                        <p>Trend runtime and equipment behavior to identify early warning signs before failures become
                             downtime.</p>
-</article>
-<article class="perf reveal-bms"><i class="fa-solid fa-shield"></i>
-<h3>Operational Resilience</h3>
-<p>Prioritized alarms, event history, role-based access and recovery-ready architecture support
+                    </article>
+                    <article class="perf reveal-bms"><i class="fa-solid fa-shield"></i>
+                        <h3>Operational Resilience</h3>
+                        <p>Prioritized alarms, event history, role-based access and recovery-ready architecture support
                             reliable operations.</p>
-</article>
-</div>
-</div>
-</section>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 09 — SMARTER BUILDING OUTCOMES — SCRIPT
 ========================================================= -->
-<script>
-(function(){
-    window.bmsInitReveal && window.bmsInitReveal('.performance');
-    
-})();
-</script>
+        <script>
+            (function () {
+                window.bmsInitReveal && window.bmsInitReveal('.performance');
+
+            })();
+        </script>
 
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 10 — OPEN BMS ARCHITECTURE — CSS
 ========================================================= -->
-<style>
-/* ARCHITECTURE */
-        .arch-section {
-            padding: 120px 0;
-            background: #fff
-        }
+        <style>
+            /* ARCHITECTURE */
+            .arch-section {
+                padding: 120px 0;
+                background: #fff
+            }
 
-        .arch-stack {
-            margin-top: 50px;
-            display: grid;
-            gap: 10px
-        }
+            .arch-stack {
+                margin-top: 50px;
+                display: grid;
+                gap: 10px
+            }
 
-        .arch-layer {
-            display: grid;
-            grid-template-columns: 190px 1fr auto;
-            align-items: center;
-            gap: 24px;
-            padding: 24px 28px;
-            border: 1px solid #dfe5e3;
-            border-radius: 18px;
-            transition: .3s
-        }
+            .arch-layer {
+                display: grid;
+                grid-template-columns: 190px 1fr auto;
+                align-items: center;
+                gap: 24px;
+                padding: 24px 28px;
+                border: 1px solid #dfe5e3;
+                border-radius: 18px;
+                transition: .3s
+            }
 
-        .arch-layer:hover {
-            border-color: #071316;
-            transform: translateX(5px)
-        }
+            .arch-layer:hover {
+                border-color: #071316;
+                transform: translateX(5px)
+            }
 
-        .arch-layer .tag {
-            font-size: 9px;
-            letter-spacing: 1.8px;
-            color: #788789
-        }
+            .arch-layer .tag {
+                font-size: 9px;
+                letter-spacing: 1.8px;
+                color: #788789
+            }
 
-        .arch-layer h4 {
-            font-size: 18px;
-            margin: 0
-        }
+            .arch-layer h4 {
+                font-size: 18px;
+                margin: 0
+            }
 
-        .arch-layer p {
-            font-size: 10px;
-            color: #7d8b8d;
-            margin: 5px 0 0
-        }
+            .arch-layer p {
+                font-size: 10px;
+                color: #7d8b8d;
+                margin: 5px 0 0
+            }
 
-        .protocols {
-            display: flex;
-            gap: 6px;
-            flex-wrap: wrap;
-            justify-content: flex-end
-        }
+            .protocols {
+                display: flex;
+                gap: 6px;
+                flex-wrap: wrap;
+                justify-content: flex-end
+            }
 
-        .protocols span {
-            padding: 7px 10px;
-            border-radius: 999px;
-            background: #f0f3f2;
-            font-size: 8px;
-            font-weight: 800;
-            color: #526163
-        }
+            .protocols span {
+                padding: 7px 10px;
+                border-radius: 999px;
+                background: #f0f3f2;
+                font-size: 8px;
+                font-weight: 800;
+                color: #526163
+            }
 
-@media(max-width:767px){
-    .arch-layer{grid-template-columns:1fr}
-    .protocols{justify-content:flex-start}
-}
-</style>
+            @media(max-width:767px) {
+                .arch-layer {
+                    grid-template-columns: 1fr
+                }
 
-<!-- =========================================================
+                .protocols {
+                    justify-content: flex-start
+                }
+            }
+        </style>
+
+        <!-- =========================================================
      MODULE 10 — OPEN BMS ARCHITECTURE — HTML
 ========================================================= -->
-<section class="arch-section">
-<div class="bms-wrap">
-<div class="bms-eyebrow">OPEN BMS ARCHITECTURE</div>
-<h2 class="bms-h2">From field layer<br/><span>to enterprise layer.</span></h2>
-<p class="bms-lead">We engineer the stack around the building—not around one locked ecosystem.</p>
-<div class="arch-stack">
-<div class="arch-layer reveal-bms"><span class="tag">LEVEL 04</span>
-<div>
-<h4>Enterprise &amp; Portfolio</h4>
-<p>Multi-site views, reporting, APIs and business integrations.</p>
-</div>
-<div class="protocols"><span>REST API</span><span>CLOUD</span><span>SSO</span></div>
-</div>
-<div class="arch-layer reveal-bms"><span class="tag">LEVEL 03</span>
-<div>
-<h4>BMS Command &amp; Analytics</h4>
-<p>Dashboards, historian, alarms, scheduling, trends and reports.</p>
-</div>
-<div class="protocols"><span>WEB</span><span>HISTORIAN</span><span>RULES</span></div>
-</div>
-<div class="arch-layer reveal-bms"><span class="tag">LEVEL 02</span>
-<div>
-<h4>Controllers &amp; Gateways</h4>
-<p>DDC, PLC, edge gateways and system integration.</p>
-</div>
-<div class="protocols"><span>BACnet</span><span>Modbus</span><span>OPC
+        <section class="arch-section">
+            <div class="bms-wrap">
+                <div class="bms-eyebrow">OPEN BMS ARCHITECTURE</div>
+                <h2 class="bms-h2">From field layer<br /><span>to enterprise layer.</span></h2>
+                <p class="bms-lead">We engineer the stack around the building—not around one locked ecosystem.</p>
+                <div class="arch-stack">
+                    <div class="arch-layer reveal-bms"><span class="tag">LEVEL 04</span>
+                        <div>
+                            <h4>Enterprise &amp; Portfolio</h4>
+                            <p>Multi-site views, reporting, APIs and business integrations.</p>
+                        </div>
+                        <div class="protocols"><span>REST API</span><span>CLOUD</span><span>SSO</span></div>
+                    </div>
+                    <div class="arch-layer reveal-bms"><span class="tag">LEVEL 03</span>
+                        <div>
+                            <h4>BMS Command &amp; Analytics</h4>
+                            <p>Dashboards, historian, alarms, scheduling, trends and reports.</p>
+                        </div>
+                        <div class="protocols"><span>WEB</span><span>HISTORIAN</span><span>RULES</span></div>
+                    </div>
+                    <div class="arch-layer reveal-bms"><span class="tag">LEVEL 02</span>
+                        <div>
+                            <h4>Controllers &amp; Gateways</h4>
+                            <p>DDC, PLC, edge gateways and system integration.</p>
+                        </div>
+                        <div class="protocols"><span>BACnet</span><span>Modbus</span><span>OPC
                                 UA</span><span>MQTT</span></div>
-</div>
-<div class="arch-layer reveal-bms"><span class="tag">LEVEL 01</span>
-<div>
-<h4>Field Devices</h4>
-<p>Sensors, meters, actuators, VFDs, valves, dampers and panels.</p>
-</div>
-<div class="protocols"><span>KNX</span><span>DALI</span><span>M-Bus</span><span>I/O</span></div>
-</div>
-</div>
-</div>
-</section>
+                    </div>
+                    <div class="arch-layer reveal-bms"><span class="tag">LEVEL 01</span>
+                        <div>
+                            <h4>Field Devices</h4>
+                            <p>Sensors, meters, actuators, VFDs, valves, dampers and panels.</p>
+                        </div>
+                        <div class="protocols"><span>KNX</span><span>DALI</span><span>M-Bus</span><span>I/O</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 10 — OPEN BMS ARCHITECTURE — SCRIPT
 ========================================================= -->
-<script>
-(function(){
-    window.bmsInitReveal && window.bmsInitReveal('.arch-section');
-    
-})();
-</script>
+        <script>
+            (function () {
+                window.bmsInitReveal && window.bmsInitReveal('.arch-section');
+
+            })();
+        </script>
 
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 11 — APPLICATIONS — CSS
 ========================================================= -->
-<style>
-/* APPLICATIONS */
-        .apps {
-            padding: 120px 0;
-            background: #f2f5f4
-        }
+        <style>
+            /* APPLICATIONS */
+            .apps {
+                padding: 120px 0;
+                background: #f2f5f4
+            }
 
-        .apps-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 14px;
-            margin-top: 45px
-        }
+            .apps-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 14px;
+                margin-top: 45px
+            }
 
-        .app-card {
-            background: #fff;
-            border: 1px solid #dde4e2;
-            border-radius: 20px;
-            padding: 28px;
-            min-height: 210px;
-            position: relative;
-            overflow: hidden
-        }
+            .app-card {
+                background: #fff;
+                border: 1px solid #dde4e2;
+                border-radius: 20px;
+                padding: 28px;
+                min-height: 210px;
+                position: relative;
+                overflow: hidden
+            }
 
-        .app-card:before {
-            content: "";
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            right: -65px;
-            top: -70px;
-            border: 1px solid #dbe3e1
-        }
+            .app-card:before {
+                content: "";
+                position: absolute;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                right: -65px;
+                top: -70px;
+                border: 1px solid #dbe3e1
+            }
 
-        .app-card i {
-            font-size: 20px
-        }
+            .app-card i {
+                font-size: 20px
+            }
 
-        .app-card h3 {
-            font-size: 18px;
-            margin: 28px 0 10px
-        }
+            .app-card h3 {
+                font-size: 18px;
+                margin: 28px 0 10px
+            }
 
-        .app-card p {
-            font-size: 10px;
-            line-height: 1.8;
-            color: #7b888a
-        }
+            .app-card p {
+                font-size: 10px;
+                line-height: 1.8;
+                color: #7b888a
+            }
 
-@media(max-width:1100px){
-    .apps-grid{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:767px){
-    .apps-grid{grid-template-columns:1fr}
-}
-</style>
+            @media(max-width:1100px) {
+                .apps-grid {
+                    grid-template-columns: repeat(2, 1fr)
+                }
+            }
 
-<!-- =========================================================
+            @media(max-width:767px) {
+                .apps-grid {
+                    grid-template-columns: 1fr
+                }
+            }
+        </style>
+
+        <!-- =========================================================
      MODULE 11 — APPLICATIONS — HTML
 ========================================================= -->
-<section class="apps">
-<div class="bms-wrap">
-<div class="bms-eyebrow">WHERE BMS CREATES VALUE</div>
-<h2 class="bms-h2">One platform.<br/><span>Many environments.</span></h2>
-<div class="apps-grid">
-<article class="app-card reveal-bms"><i class="fa-solid fa-building"></i>
-<h3>Commercial Buildings</h3>
-<p>Centralized HVAC, lighting, metering, comfort and tenant-area control.</p>
-</article>
-<article class="app-card reveal-bms"><i class="fa-solid fa-hospital"></i>
-<h3>Hospitals</h3>
-<p>Critical environmental monitoring, alarms, utilities and operational continuity.</p>
-</article>
-<article class="app-card reveal-bms"><i class="fa-solid fa-hotel"></i>
-<h3>Hotels</h3>
-<p>Guest comfort, room energy, common-area systems and facility operations.</p>
-</article>
-<article class="app-card reveal-bms"><i class="fa-solid fa-industry"></i>
-<h3>Industrial Facilities</h3>
-<p>Utilities, HVAC, energy, equipment and environmental conditions in one view.</p>
-</article>
-<article class="app-card reveal-bms"><i class="fa-solid fa-graduation-cap"></i>
-<h3>Campuses</h3>
-<p>Distributed buildings, energy benchmarking and centralized facility teams.</p>
-</article>
-<article class="app-card reveal-bms"><i class="fa-solid fa-server"></i>
-<h3>Data &amp; Critical Spaces</h3>
-<p>Temperature, power, alarms, equipment health and controlled environments.</p>
-</article>
-</div>
-</div>
-</section>
+        <section class="apps">
+            <div class="bms-wrap">
+                <div class="bms-eyebrow">WHERE BMS CREATES VALUE</div>
+                <h2 class="bms-h2">One platform.<br /><span>Many environments.</span></h2>
+                <div class="apps-grid">
+                    <article class="app-card reveal-bms"><i class="fa-solid fa-building"></i>
+                        <h3>Commercial Buildings</h3>
+                        <p>Centralized HVAC, lighting, metering, comfort and tenant-area control.</p>
+                    </article>
+                    <article class="app-card reveal-bms"><i class="fa-solid fa-hospital"></i>
+                        <h3>Hospitals</h3>
+                        <p>Critical environmental monitoring, alarms, utilities and operational continuity.</p>
+                    </article>
+                    <article class="app-card reveal-bms"><i class="fa-solid fa-hotel"></i>
+                        <h3>Hotels</h3>
+                        <p>Guest comfort, room energy, common-area systems and facility operations.</p>
+                    </article>
+                    <article class="app-card reveal-bms"><i class="fa-solid fa-industry"></i>
+                        <h3>Industrial Facilities</h3>
+                        <p>Utilities, HVAC, energy, equipment and environmental conditions in one view.</p>
+                    </article>
+                    <article class="app-card reveal-bms"><i class="fa-solid fa-graduation-cap"></i>
+                        <h3>Campuses</h3>
+                        <p>Distributed buildings, energy benchmarking and centralized facility teams.</p>
+                    </article>
+                    <article class="app-card reveal-bms"><i class="fa-solid fa-server"></i>
+                        <h3>Data &amp; Critical Spaces</h3>
+                        <p>Temperature, power, alarms, equipment health and controlled environments.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 11 — APPLICATIONS — SCRIPT
 ========================================================= -->
-<script>
-(function(){
-    window.bmsInitReveal && window.bmsInitReveal('.apps');
-    
-})();
-</script>
+        <script>
+            (function () {
+                window.bmsInitReveal && window.bmsInitReveal('.apps');
+
+            })();
+        </script>
 
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 12 — END-TO-END DELIVERY — CSS
 ========================================================= -->
-<style>
-/* DELIVERY + CTA */
-        .delivery {
-            padding: 120px 0;
-            background: #fff
-        }
+        <style>
+            /* DELIVERY + CTA */
+            .delivery {
+                padding: 120px 0;
+                background: #fff
+            }
 
-        .delivery-grid {
-            display: grid;
-            grid-template-columns: .8fr 1.2fr;
-            gap: 80px
-        }
+            .delivery-grid {
+                display: grid;
+                grid-template-columns: .8fr 1.2fr;
+                gap: 80px
+            }
 
-        .delivery-list {
-            border-top: 1px solid #d9dfdd
-        }
+            .delivery-list {
+                border-top: 1px solid #d9dfdd
+            }
 
-        .delivery-row {
-            display: grid;
-            grid-template-columns: 70px 1fr;
-            gap: 22px;
-            padding: 22px 0;
-            border-bottom: 1px solid #d9dfdd
-        }
+            .delivery-row {
+                display: grid;
+                grid-template-columns: 70px 1fr;
+                gap: 22px;
+                padding: 22px 0;
+                border-bottom: 1px solid #d9dfdd
+            }
 
-        .delivery-row span {
-            font-size: 10px;
-            color: #879496
-        }
+            .delivery-row span {
+                font-size: 10px;
+                color: #879496
+            }
 
-        .delivery-row h4 {
-            font-size: 15px;
-            margin: 0 0 5px
-        }
+            .delivery-row h4 {
+                font-size: 15px;
+                margin: 0 0 5px
+            }
 
-        .delivery-row p {
-            font-size: 10px;
-            color: #788689;
-            margin: 0;
-            line-height: 1.7
-        }
+            .delivery-row p {
+                font-size: 10px;
+                color: #788689;
+                margin: 0;
+                line-height: 1.7
+            }
 
-@media(max-width:1100px){
-    .delivery-grid{grid-template-columns:1fr}
-}
-</style>
+            @media(max-width:1100px) {
+                .delivery-grid {
+                    grid-template-columns: 1fr
+                }
+            }
+        </style>
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 12 — END-TO-END DELIVERY — HTML
 ========================================================= -->
-<section class="delivery">
-<div class="bms-wrap delivery-grid">
-<div class="reveal-bms">
-<div class="bms-eyebrow">END-TO-END DELIVERY</div>
-<h2 class="bms-h2">Engineering beyond<br/><span>the dashboard.</span></h2>
-<p class="bms-lead">A high-performing BMS starts with field engineering, not software alone. We
+        <section class="delivery">
+            <div class="bms-wrap delivery-grid">
+                <div class="reveal-bms">
+                    <div class="bms-eyebrow">END-TO-END DELIVERY</div>
+                    <h2 class="bms-h2">Engineering beyond<br /><span>the dashboard.</span></h2>
+                    <p class="bms-lead">A high-performing BMS starts with field engineering, not software alone. We
                         align controls, networking, integration, graphics and commissioning around actual building
                         operations.</p>
-</div>
-<div class="delivery-list reveal-bms">
-<div class="delivery-row"><span>01</span>
-<div>
-<h4>Survey &amp; Requirement Mapping</h4>
-<p>Existing systems, sequences, points, assets and operational goals.</p>
-</div>
-</div>
-<div class="delivery-row"><span>02</span>
-<div>
-<h4>Architecture &amp; Integration Design</h4>
-<p>Controllers, network, protocol gateways, servers, cloud and cybersecurity boundaries.</p>
-</div>
-</div>
-<div class="delivery-row"><span>03</span>
-<div>
-<h4>Controls, Graphics &amp; Logic</h4>
-<p>Points, sequences, schedules, alarms, dashboards, reports and operator workflows.</p>
-</div>
-</div>
-<div class="delivery-row"><span>04</span>
-<div>
-<h4>Testing &amp; Commissioning</h4>
-<p>Functional verification, trend validation, alarm testing and system handover.</p>
-</div>
-</div>
-<div class="delivery-row"><span>05</span>
-<div>
-<h4>Optimization &amp; Support</h4>
-<p>Post-occupancy tuning, analytics, maintenance support and future expansion.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
+                </div>
+                <div class="delivery-list reveal-bms">
+                    <div class="delivery-row"><span>01</span>
+                        <div>
+                            <h4>Survey &amp; Requirement Mapping</h4>
+                            <p>Existing systems, sequences, points, assets and operational goals.</p>
+                        </div>
+                    </div>
+                    <div class="delivery-row"><span>02</span>
+                        <div>
+                            <h4>Architecture &amp; Integration Design</h4>
+                            <p>Controllers, network, protocol gateways, servers, cloud and cybersecurity boundaries.</p>
+                        </div>
+                    </div>
+                    <div class="delivery-row"><span>03</span>
+                        <div>
+                            <h4>Controls, Graphics &amp; Logic</h4>
+                            <p>Points, sequences, schedules, alarms, dashboards, reports and operator workflows.</p>
+                        </div>
+                    </div>
+                    <div class="delivery-row"><span>04</span>
+                        <div>
+                            <h4>Testing &amp; Commissioning</h4>
+                            <p>Functional verification, trend validation, alarm testing and system handover.</p>
+                        </div>
+                    </div>
+                    <div class="delivery-row"><span>05</span>
+                        <div>
+                            <h4>Optimization &amp; Support</h4>
+                            <p>Post-occupancy tuning, analytics, maintenance support and future expansion.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 12 — END-TO-END DELIVERY — SCRIPT
 ========================================================= -->
-<script>
-(function(){
-    window.bmsInitReveal && window.bmsInitReveal('.delivery');
-    
-})();
-</script>
+        <script>
+            (function () {
+                window.bmsInitReveal && window.bmsInitReveal('.delivery');
+
+            })();
+        </script>
 
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 13 — BMS CTA — CSS
 ========================================================= -->
-<style>
-.bms-cta {
-            padding: 0 0 120px;
-            background: #fff
-        }
+        <style>
+            .bms-cta {
+                padding: 0 0 120px;
+                background: #fff
+            }
 
-        .bms-cta-box {
-            width: min(1340px, 86vw);
-            margin: auto;
-            border-radius: 28px;
-            background: radial-gradient(circle at 85% 10%, rgba(19, 215, 196, .16), transparent 25%), #071316;
-            color: #fff;
-            padding: 70px;
-            display: grid;
-            grid-template-columns: 1.2fr .8fr;
-            gap: 60px;
-            align-items: end;
-            position: relative;
-            overflow: hidden
-        }
+            .bms-cta-box {
+                width: min(1340px, 86vw);
+                margin: auto;
+                border-radius: 28px;
+                background: radial-gradient(circle at 85% 10%, rgba(19, 215, 196, .16), transparent 25%), #071316;
+                color: #fff;
+                padding: 70px;
+                display: grid;
+                grid-template-columns: 1.2fr .8fr;
+                gap: 60px;
+                align-items: end;
+                position: relative;
+                overflow: hidden
+            }
 
-        .bms-cta-box:after {
-            content: "";
-            position: absolute;
-            width: 430px;
-            height: 430px;
-            border: 1px solid rgba(255, 255, 255, .08);
-            border-radius: 50%;
-            right: -160px;
-            top: -170px
-        }
+            .bms-cta-box:after {
+                content: "";
+                position: absolute;
+                width: 430px;
+                height: 430px;
+                border: 1px solid rgba(255, 255, 255, .08);
+                border-radius: 50%;
+                right: -160px;
+                top: -170px
+            }
 
-        .bms-cta-box h2 {
-            font-size: clamp(44px, 5vw, 72px);
-            line-height: .95;
-            letter-spacing: -4px;
-            margin: 0
-        }
+            .bms-cta-box h2 {
+                font-size: clamp(44px, 5vw, 72px);
+                line-height: .95;
+                letter-spacing: -4px;
+                margin: 0
+            }
 
-        .bms-cta-box p {
-            color: #93a6a9;
-            font-size: 12px;
-            line-height: 1.8;
-            margin-bottom: 24px
-        }
+            .bms-cta-box p {
+                color: #93a6a9;
+                font-size: 12px;
+                line-height: 1.8;
+                margin-bottom: 24px
+            }
 
-@media(max-width:1100px){
-    .bms-cta-box{grid-template-columns:1fr}
-}
-@media(max-width:767px){
-    .bms-cta-box{padding:42px 28px}
-}
-</style>
+            @media(max-width:1100px) {
+                .bms-cta-box {
+                    grid-template-columns: 1fr
+                }
+            }
 
-<!-- =========================================================
+            @media(max-width:767px) {
+                .bms-cta-box {
+                    padding: 42px 28px
+                }
+            }
+        </style>
+
+        <!-- =========================================================
      MODULE 13 — BMS CTA — HTML
 ========================================================= -->
-<section class="bms-cta">
-<div class="bms-cta-box reveal-bms">
-<div>
-<div class="bms-eyebrow" style="color:#9db0b2">ALPHA NUMERIC / BMS</div>
-<h2>Make your building<br/>work intelligently.</h2>
-</div>
-<div>
-<p>Whether it is a new building, a controls upgrade or an existing BMS that needs a modern IoT
-                        layer, we can engineer a system around your infrastructure and operational goals.</p><a class="bms-btn primary" href="contact.html">Start a BMS Discussion <i class="fa-solid fa-arrow-right"></i></a>
-</div>
-</div>
-</section>
+        <section class="bms-cta">
+            <div class="bms-cta-box reveal-bms">
+                <div>
+                    <div class="bms-eyebrow" style="color:#9db0b2">ALPHA NUMERIC / BMS</div>
+                    <h2>Make your building<br />work intelligently.</h2>
+                </div>
+                <div>
+                    <p>Whether it is a new building, a controls upgrade or an existing BMS that needs a modern IoT
+                        layer, we can engineer a system around your infrastructure and operational goals.</p><a
+                        class="bms-btn primary" href="contact.html">Start a BMS Discussion <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
 
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 13 — BMS CTA — SCRIPT
 ========================================================= -->
-<script>
-(function(){
-    window.bmsInitReveal && window.bmsInitReveal('.bms-cta');
-    
-})();
-</script>
+        <script>
+            (function () {
+                window.bmsInitReveal && window.bmsInitReveal('.bms-cta');
+
+            })();
+        </script>
 
 
-</main>
+    </main>
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE 14 — FOOTER — CSS
 ========================================================= -->
-<style>
-/* =========================================================
+    <style>
+        /* =========================================================
    CORPORATE WHITE FOOTER — DESIGN SYSTEM
 ========================================================== */
 
@@ -3420,190 +4071,193 @@ document.addEventListener("DOMContentLoaded", function(){
                 transition: none;
             }
         }
-</style>
+    </style>
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE 14 — FOOTER — HTML
 ========================================================= -->
-<footer aria-label="Website footer" class="corp-footer">
-<div class="corp-footer-container">
-<!-- =====================================================
+    <footer aria-label="Website footer" class="corp-footer">
+        <div class="corp-footer-container">
+            <!-- =====================================================
              PRIMARY CTA
         ====================================================== -->
-<section aria-labelledby="corp-footer-title" class="corp-footer-cta">
-<div class="corp-footer-cta-copy">
-<p class="corp-footer-kicker">
-<span>01</span>
-<i></i>
+            <section aria-labelledby="corp-footer-title" class="corp-footer-cta">
+                <div class="corp-footer-cta-copy">
+                    <p class="corp-footer-kicker">
+                        <span>01</span>
+                        <i></i>
                         Start a project
                     </p>
-<h2 id="corp-footer-title">
+                    <h2 id="corp-footer-title">
                         Let’s engineer
                         <span>what comes next.</span>
-</h2>
-</div>
-<div class="corp-footer-cta-action">
-<p>
+                    </h2>
+                </div>
+                <div class="corp-footer-cta-action">
+                    <p>
                         Intelligent engineering for power, energy,
                         automation and future-ready systems.
                     </p>
-<a class="corp-footer-button" href="contact.html">
-<span>Start a conversation</span>
-<i aria-hidden="true">↗</i>
-</a>
-</div>
-</section>
-<!-- =====================================================
+                    <a class="corp-footer-button" href="contact.html">
+                        <span>Start a conversation</span>
+                        <i aria-hidden="true">↗</i>
+                    </a>
+                </div>
+            </section>
+            <!-- =====================================================
              BRAND + NAVIGATION
         ====================================================== -->
-<div class="corp-footer-main">
-<!-- BRAND -->
-<section aria-label="Alpha Numeric" class="corp-footer-brand">
-<a aria-label="Alpha Numeric home" class="corp-footer-logo" href="index.html">
-<img alt="Alpha Numeric" src="assets/img/b-alpha.png"/>
-</a>
-<p>
+            <div class="corp-footer-main">
+                <!-- BRAND -->
+                <section aria-label="Alpha Numeric" class="corp-footer-brand">
+                    <a aria-label="Alpha Numeric home" class="corp-footer-logo" href="index.html">
+                        <img alt="Alpha Numeric" src="assets/img/b-alpha.png" />
+                    </a>
+                    <p>
                         Technology-driven engineering solutions
                         designed for dependable performance,
                         meaningful progress and long-term value.
                     </p>
-<div class="corp-footer-status">
-<span></span>
+                    <div class="corp-footer-status">
+                        <span></span>
                         Engineering tomorrow
                     </div>
-</section>
-<!-- NAVIGATION -->
-<nav aria-label="Footer navigation" class="corp-footer-nav">
-<!-- COMPANY -->
-<div class="corp-footer-column">
-<div class="corp-footer-column-heading">
-<span>01</span>
-<h3>Company</h3>
-</div>
-<ul>
-<li><a href="index.html"><span>Home</span><i>↗</i></a></li>
-<li><a href="about.html"><span>About</span><i>↗</i></a></li>
-<li><a href="contact.html"><span>Contact</span><i>↗</i></a></li>
-</ul>
-</div>
-<!-- ENERGY -->
-<div class="corp-footer-column">
-<div class="corp-footer-column-heading">
-<span>02</span>
-<h3>Energy</h3>
-</div>
-<ul>
-<li><a href="solar-energy.html"><span>Solar Energy</span><i>↗</i></a></li>
-<li><a href="wind-energy.html"><span>Wind Energy</span><i>↗</i></a></li>
-<li><a href="biomass-energy.html"><span>Biomass Energy</span><i>↗</i></a></li>
-<li><a href="hydel-energy.html"><span>Hydel Energy</span><i>↗</i></a></li>
-</ul>
-</div>
-<!-- POWER -->
-<div class="corp-footer-column">
-<div class="corp-footer-column-heading">
-<span>03</span>
-<h3>Power</h3>
-</div>
-<ul>
-<li><a href="transmission.html"><span>Transmission</span><i>↗</i></a></li>
-<li><a href="distribution.html"><span>Distribution</span><i>↗</i></a></li>
-<li><a href="control-panels.html"><span>Control Panels</span><i>↗</i></a></li>
-<li><a href="panel-boards.html"><span>Panel Boards</span><i>↗</i></a></li>
-</ul>
-</div>
-<!-- AUTOMATION -->
-<div class="corp-footer-column">
-<div class="corp-footer-column-heading">
-<span>04</span>
-<h3>Automation</h3>
-</div>
-<ul>
-<li><a href="home-automation.html"><span>Home Automation</span><i>↗</i></a></li>
-<li><a href="commercial-automation.html"><span>Commercial</span><i>↗</i></a></li>
-<li><a href="industrial-automation.html"><span>Industrial</span><i>↗</i></a></li>
-<li><a href="hospital-automation.html"><span>Hospital</span><i>↗</i></a></li>
-<li><a href="hotel-automation.html"><span>Hotel</span><i>↗</i></a></li>
-</ul>
-</div>
-<!-- R&D / PRODUCTS -->
-<div class="corp-footer-column">
-<div class="corp-footer-column-heading">
-<span>05</span>
-<h3>R&amp;D / Products</h3>
-</div>
-<ul>
-<li><a href="smart-pole-r&amp;d.html"><span>Smart Pole</span><i>↗</i></a></li>
-<li><a href="smart-bollard-r&amp;d.html"><span>Smart Bollard</span><i>↗</i></a></li>
-<li><a href="power.html"><span>Power Products</span><i>↗</i></a></li>
-</ul>
-</div>
-<av>
-</av></nav></div>
-<!-- =====================================================
+                </section>
+                <!-- NAVIGATION -->
+                <nav aria-label="Footer navigation" class="corp-footer-nav">
+                    <!-- COMPANY -->
+                    <div class="corp-footer-column">
+                        <div class="corp-footer-column-heading">
+                            <span>01</span>
+                            <h3>Company</h3>
+                        </div>
+                        <ul>
+                            <li><a href="index.html"><span>Home</span><i>↗</i></a></li>
+                            <li><a href="about.html"><span>About</span><i>↗</i></a></li>
+                            <li><a href="contact.html"><span>Contact</span><i>↗</i></a></li>
+                        </ul>
+                    </div>
+                    <!-- ENERGY -->
+                    <div class="corp-footer-column">
+                        <div class="corp-footer-column-heading">
+                            <span>02</span>
+                            <h3>Energy</h3>
+                        </div>
+                        <ul>
+                            <li><a href="solar-energy.html"><span>Solar Energy</span><i>↗</i></a></li>
+                            <li><a href="wind-energy.html"><span>Wind Energy</span><i>↗</i></a></li>
+                            <li><a href="biomass-energy.html"><span>Biomass Energy</span><i>↗</i></a></li>
+                            <li><a href="hydel-energy.html"><span>Hydel Energy</span><i>↗</i></a></li>
+                        </ul>
+                    </div>
+                    <!-- POWER -->
+                    <div class="corp-footer-column">
+                        <div class="corp-footer-column-heading">
+                            <span>03</span>
+                            <h3>Power</h3>
+                        </div>
+                        <ul>
+                            <li><a href="transmission.html"><span>Transmission</span><i>↗</i></a></li>
+                            <li><a href="distribution.html"><span>Distribution</span><i>↗</i></a></li>
+                            <li><a href="control-panels.html"><span>Control Panels</span><i>↗</i></a></li>
+                            <li><a href="panel-boards.html"><span>Panel Boards</span><i>↗</i></a></li>
+                        </ul>
+                    </div>
+                    <!-- AUTOMATION -->
+                    <div class="corp-footer-column">
+                        <div class="corp-footer-column-heading">
+                            <span>04</span>
+                            <h3>Automation</h3>
+                        </div>
+                        <ul>
+                            <li><a href="home-automation.html"><span>Home Automation</span><i>↗</i></a></li>
+                            <li><a href="commercial-automation.html"><span>Commercial</span><i>↗</i></a></li>
+                            <li><a href="industrial-automation.html"><span>Industrial</span><i>↗</i></a></li>
+                            <li><a href="hospital-automation.html"><span>Hospital</span><i>↗</i></a></li>
+                            <li><a href="hotel-automation.html"><span>Hotel</span><i>↗</i></a></li>
+                        </ul>
+                    </div>
+                    <!-- R&D / PRODUCTS -->
+                    <div class="corp-footer-column">
+                        <div class="corp-footer-column-heading">
+                            <span>05</span>
+                            <h3>R&amp;D / Products</h3>
+                        </div>
+                        <ul>
+                            <li><a href="smart-pole-r&amp;d.html"><span>Smart Pole</span><i>↗</i></a></li>
+                            <li><a href="smart-bollard-r&amp;d.html"><span>Smart Bollard</span><i>↗</i></a></li>
+                            <li><a href="power.html"><span>Power Products</span><i>↗</i></a></li>
+                        </ul>
+                    </div>
+                    <av>
+                    </av>
+                </nav>
+            </div>
+            <!-- =====================================================
              CONTACT BAND
         ====================================================== -->
-<section aria-label="Contact information" class="corp-footer-contact">
-<div class="corp-footer-contact-heading">
-<span>Contact</span>
-<h3>Let’s connect.</h3>
-</div>
-<a class="corp-footer-contact-item" href="tel:+919000000000">
-<span>01 / Phone</span>
-<strong>+91 90000 00000</strong>
-<i aria-hidden="true">↗</i>
-</a>
-<a class="corp-footer-contact-item" href="mailto:info@alphanumeric.com">
-<span>02 / Email</span>
-<strong>info@alphanumeric.com</strong>
-<i aria-hidden="true">↗</i>
-</a>
-<div class="corp-footer-contact-item">
-<span>03 / Location</span>
-<strong>Madhapur, Hyderabad</strong>
-<i aria-hidden="true">—</i>
-</div>
-</section>
-<!-- =====================================================
+            <section aria-label="Contact information" class="corp-footer-contact">
+                <div class="corp-footer-contact-heading">
+                    <span>Contact</span>
+                    <h3>Let’s connect.</h3>
+                </div>
+                <a class="corp-footer-contact-item" href="tel:+919000000000">
+                    <span>01 / Phone</span>
+                    <strong>+91 90000 00000</strong>
+                    <i aria-hidden="true">↗</i>
+                </a>
+                <a class="corp-footer-contact-item" href="mailto:info@alphanumeric.com">
+                    <span>02 / Email</span>
+                    <strong>info@alphanumeric.com</strong>
+                    <i aria-hidden="true">↗</i>
+                </a>
+                <div class="corp-footer-contact-item">
+                    <span>03 / Location</span>
+                    <strong>Madhapur, Hyderabad</strong>
+                    <i aria-hidden="true">—</i>
+                </div>
+            </section>
+            <!-- =====================================================
              BOTTOM BAR
         ====================================================== -->
-<div class="corp-footer-bottom">
-<p>
+            <div class="corp-footer-bottom">
+                <p>
                     © <span id="corpFooterYear"></span> Alpha Numeric.
                     All rights reserved.
                 </p>
-<div aria-label="Core disciplines" class="corp-footer-disciplines">
-<span>Power</span>
-<i></i>
-<span>Energy</span>
-<i></i>
-<span>Automation</span>
-<i></i>
-<span>R&amp;D</span>
-</div>
-<div class="corp-footer-bottom-links">
-<a href="#">Privacy</a>
-<a href="#">Terms</a>
-<a class="corp-footer-top-link" href="#page-top">
+                <div aria-label="Core disciplines" class="corp-footer-disciplines">
+                    <span>Power</span>
+                    <i></i>
+                    <span>Energy</span>
+                    <i></i>
+                    <span>Automation</span>
+                    <i></i>
+                    <span>R&amp;D</span>
+                </div>
+                <div class="corp-footer-bottom-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a class="corp-footer-top-link" href="#page-top">
                         Back to top
                         <span aria-hidden="true">↑</span>
-</a>
-</div>
-</div>
-</div>
-</footer>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE 14 — FOOTER — SCRIPT
 ========================================================= -->
-<script>
-const year = document.getElementById("corpFooterYear");
-if(year) year.textContent = new Date().getFullYear();
-</script>
+    <script>
+        const year = document.getElementById("corpFooterYear");
+        if (year) year.textContent = new Date().getFullYear();
+    </script>
 
 
-<!-- GLOBAL DEPENDENCY -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GLOBAL DEPENDENCY -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
