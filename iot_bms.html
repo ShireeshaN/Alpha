@@ -15,6 +15,154 @@
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:"Inter",sans-serif;background:#fff;color:var(--ink);overflow-x:hidden}a{color:inherit;text-decoration:none}button,input,select,textarea{font-family:inherit}img{display:block;max-width:100%}
 .iot-container{width:min(calc(100% - 80px),1450px);margin:0 auto}.section-kicker{display:inline-flex;align-items:center;gap:12px;color:#777;font-size:10px;font-weight:700;letter-spacing:2.8px;text-transform:uppercase}.section-kicker::before{content:"";width:38px;height:2px;background:var(--iot)}.section-title{margin:19px 0 0;max-width:930px;font-size:clamp(42px,5.2vw,78px);line-height:.98;letter-spacing:-3.5px;font-weight:650}.section-title span{color:#777;font-weight:300}.section-copy{color:#717171;font-size:14px;line-height:1.9}
 /* FIXED NAVBAR — SAME AS SOLAR */
+
+
+        /* =========================================================
+   PRODUCTS DROPDOWN
+========================================================= */
+
+.product-dropdown{
+    position:relative;
+}
+
+.product-menu{
+    min-width:240px;
+
+    padding:10px 0;
+
+    margin-top:0!important;
+
+    border:0;
+
+    border-radius:10px;
+
+    background:#000;
+
+    box-shadow:
+        0 20px 55px rgba(0,0,0,.25);
+
+    overflow:hidden;
+}
+
+.product-menu > a{
+    display:block;
+
+    position:relative;
+
+    padding:11px 24px;
+
+    color:#bdbdbd;
+
+    font-size:13.5px;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:
+        color .25s ease,
+        padding-left .25s ease,
+        background .25s ease;
+}
+
+.product-menu > a::before{
+    content:"";
+
+    position:absolute;
+
+    left:12px;
+
+    top:50%;
+
+    width:5px;
+
+    height:1px;
+
+    background:#666;
+
+    transform:translateY(-50%);
+
+    transition:
+        width .25s ease,
+        background .25s ease;
+}
+
+.product-menu > a:hover{
+    color:#fff;
+
+    background:#111;
+
+    padding-left:29px;
+}
+
+.product-menu > a:hover::before{
+    width:10px;
+
+    background:#fff;
+}
+
+
+/* =========================================================
+   DESKTOP HOVER
+========================================================= */
+
+@media (min-width:992px){
+
+    .product-dropdown:hover > .product-menu{
+        display:block;
+    }
+
+    .product-menu{
+        display:block;
+
+        opacity:0;
+
+        visibility:hidden;
+
+        pointer-events:none;
+
+        transition:
+            opacity .2s ease,
+            visibility .2s ease;
+    }
+
+    .product-dropdown:hover > .product-menu,
+    .product-dropdown > .product-menu.show{
+        opacity:1;
+
+        visibility:visible;
+
+        pointer-events:auto;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width:991px){
+
+    .product-menu{
+        position:static!important;
+
+        width:100%;
+
+        margin:0!important;
+
+        border-radius:0;
+
+        box-shadow:none;
+
+        background:#000;
+    }
+
+    .product-menu > a{
+        padding:10px 22px;
+
+        color:#bdbdbd;
+    }
+}
 .main-navbar{padding:8px 0;background:#fff;box-shadow:0 8px 35px rgba(14,29,57,.08);z-index:9999}.navbar-logo{height:58px;width:auto;object-fit:contain}.main-navbar .nav-link{position:relative;color:#1a1a1a!important;font-size:14px;font-weight:600;letter-spacing:.4px;margin:0 5px;padding:12px 11px!important}.main-navbar .nav-link:hover,.main-navbar .nav-link:focus,.main-navbar .nav-link.show{color:#000!important}#logoWhite{display:none!important}#logoDark{display:block!important}.solution-dropdown{position:static!important}.mega-menu{position:absolute!important;width:min(1180px,calc(100vw - 48px));left:50%!important;top:100%!important;transform:translateX(-50%)!important;margin-top:0!important;padding:0;border:1px solid #1f1f1f;border-radius:14px;background:#000;box-shadow:0 24px 70px rgba(0,0,0,.28);overflow:hidden}.mega-menu-inner{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}.mega-column{min-height:270px;padding:30px 30px 32px;border-right:1px solid #242424;background:#000}.mega-column:last-child{border-right:0}.mega-heading{margin-bottom:18px;padding-bottom:14px;border-bottom:2px solid #2a2a2a;color:#fff;font-size:16px;font-weight:600}.mega-column>a{display:block;position:relative;padding:9px 0 9px 16px;color:#bdbdbd;font-size:13.5px;font-weight:600;transition:.25s ease}.mega-column>a::before{content:"";position:absolute;left:0;top:50%;width:6px;height:1px;background:#666;transform:translateY(-50%);transition:.25s ease}.mega-column>a:hover{color:#fff;padding-left:21px}.mega-column>a:hover::before{width:12px;background:#fff}.bms-dropdown .bms-menu{min-width:190px;margin-top:0;padding:10px 0;border:1px solid #1f1f1f;border-radius:10px;background:#000;box-shadow:0 18px 45px rgba(0,0,0,.24)}.bms-dropdown .bms-menu .dropdown-item{padding:10px 18px;color:#bdbdbd;font-size:13.5px;font-weight:600;background:transparent;transition:color .25s ease,padding-left .25s ease}.bms-dropdown .bms-menu .dropdown-item:hover{color:#fff;padding-left:22px}@media(min-width:992px){.solution-dropdown>.mega-menu,.bms-dropdown>.bms-menu{display:block;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(6px);transition:opacity .22s ease,visibility .22s ease,transform .22s ease}.solution-dropdown>.mega-menu{transform:translateX(-50%) translateY(6px)!important}.solution-dropdown:hover>.mega-menu,.solution-dropdown>.mega-menu:hover,.solution-dropdown>.mega-menu.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0)!important}.bms-dropdown:hover>.bms-menu,.bms-dropdown>.bms-menu:hover,.bms-dropdown>.bms-menu.show{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}.solution-dropdown>.mega-menu::before{content:"";position:absolute;left:0;right:0;top:-18px;height:18px;background:transparent}}
 /* HERO */
 .iot-hero{position:relative;min-height:780px;margin-top:74px;overflow:hidden;background:#070909;color:#fff}.iot-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 76% 45%,rgba(125,240,212,.13),transparent 25%),radial-gradient(circle at 88% 28%,rgba(108,168,255,.13),transparent 22%),linear-gradient(115deg,#070909 0%,#0c1112 58%,#0a0e10 100%)}.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(90deg,black,rgba(0,0,0,.9),transparent)}.iot-hero-inner{position:relative;z-index:2;min-height:780px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(420px,.85fr);gap:80px;align-items:center}.hero-badge{display:inline-flex;align-items:center;gap:10px;margin-bottom:25px;color:#c6d1d0;font-size:10px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase}.hero-badge i{color:var(--iot)}.iot-hero h1{max-width:940px;margin:0;font-size:clamp(62px,7.2vw,110px);line-height:.88;letter-spacing:-6px;font-weight:760;text-transform:uppercase}.iot-hero h1 span{display:block;color:rgba(255,255,255,.42);font-weight:300}.hero-copy{max-width:710px;margin-top:30px;color:#aeb6b5;font-size:14px;line-height:1.9}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}.btn-iot,.btn-ghost{min-height:54px;display:inline-flex;align-items:center;justify-content:center;gap:11px;padding:0 23px;font-size:10px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;transition:.3s ease}.btn-iot{background:var(--iot);border:1px solid var(--iot);color:#06100e}.btn-iot:hover{background:#fff;border-color:#fff;color:#111;transform:translateY(-2px)}.btn-ghost{border:1px solid rgba(255,255,255,.28);color:#fff}.btn-ghost:hover{background:#fff;color:#111;border-color:#fff}
@@ -145,7 +293,40 @@ body{background:#fff;color:#10191b}
                             <li><a class="dropdown-item active" href="iot_bms.html">IoT+BMS</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="power-products.html">Products</a></li>
+                      <li class="nav-item dropdown product-dropdown">              
+
+    <a class="nav-link dropdown-toggle"
+       href="#"
+       id="productsDropdown"
+       role="button"
+       data-bs-toggle="dropdown"
+       data-bs-auto-close="outside"
+       aria-expanded="false">
+        Products
+    </a>
+
+    <div class="dropdown-menu product-menu"
+         aria-labelledby="productsDropdown">
+
+        <a href="power-products.html">Sensors</a>
+
+        <a href="power-products.html">Controllers</a>
+
+        <a href="power-products.html">Gateways</a>
+
+        <a href="power-products.html">Meters</a>
+
+        <a href="power-products.html">Transformers</a>
+
+        <a href="power-products.html">Control Panels</a>
+
+        <a href="power-products.html">Panel Boards</a>
+
+        <a href="power-products.html">Switchgears</a>
+
+    </div>
+
+</li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
