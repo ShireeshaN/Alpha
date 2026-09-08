@@ -338,6 +338,156 @@ window.ehtReveal = function(rootSelector){
             .navbar-collapse{padding:12px 8px 20px}
         }
 
+         /* =========================================================
+   PRODUCTS DROPDOWN
+========================================================= */
+
+.product-dropdown{
+    position:relative;
+}
+
+.product-menu{
+    min-width:240px;
+
+    padding:10px 0;
+
+    margin-top:0!important;
+
+    border:0;
+
+    border-radius:10px;
+
+    background:#000;
+
+    box-shadow:
+        0 20px 55px rgba(0,0,0,.25);
+
+    overflow:hidden;
+}
+
+.product-menu > a{
+    display:block;
+
+    position:relative;
+
+    padding:11px 24px;
+
+    color:#bdbdbd;
+
+    font-size:13.5px;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:
+        color .25s ease,
+        padding-left .25s ease,
+        background .25s ease;
+}
+
+.product-menu > a::before{
+    content:"";
+
+    position:absolute;
+
+    left:12px;
+
+    top:50%;
+
+    width:5px;
+
+    height:1px;
+
+    background:#666;
+
+    transform:translateY(-50%);
+
+    transition:
+        width .25s ease,
+        background .25s ease;
+}
+
+.product-menu > a:hover{
+    color:#fff;
+
+    background:#111;
+
+    padding-left:29px;
+}
+
+.product-menu > a:hover::before{
+    width:10px;
+
+    background:#fff;
+}
+
+
+/* =========================================================
+   DESKTOP HOVER
+========================================================= */
+
+@media (min-width:992px){
+
+    .product-dropdown:hover > .product-menu{
+        display:block;
+    }
+
+    .product-menu{
+        display:block;
+
+        opacity:0;
+
+        visibility:hidden;
+
+        pointer-events:none;
+
+        transition:
+            opacity .2s ease,
+            visibility .2s ease;
+    }
+
+    .product-dropdown:hover > .product-menu,
+    .product-dropdown > .product-menu.show{
+        opacity:1;
+
+        visibility:visible;
+
+        pointer-events:auto;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width:991px){
+
+    .product-menu{
+        position:static!important;
+
+        width:100%;
+
+        margin:0!important;
+
+        border-radius:0;
+
+        box-shadow:none;
+
+        background:#000;
+    }
+
+    .product-menu > a{
+        padding:10px 22px;
+
+        color:#bdbdbd;
+    }
+}
+
+
+
+
     </style>
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
@@ -398,14 +548,47 @@ window.ehtReveal = function(rootSelector){
 
                     <li class="nav-item dropdown bms-dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="bmsDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">BMS</a>
+                            data-bs-toggle="dropdown" aria-expanded="false">IoT</a>
                         <ul class="dropdown-menu bms-menu" aria-labelledby="bmsDropdown">
                             <li><a class="dropdown-item" href="iot.html">IoT</a></li>
                             <li><a class="dropdown-item" href="bms.html">BMS</a></li>
-                            <li><a class="dropdown-item" href="iot-bms.html">IoT+BMS</a></li>
+                            <li><a class="dropdown-item" href="iot_bms.html">IoT+BMS</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="power-products.html">Products</a></li>
+                     <li class="nav-item dropdown product-dropdown">              
+
+    <a class="nav-link dropdown-toggle"
+       href="#"
+       id="productsDropdown"
+       role="button"
+       data-bs-toggle="dropdown"
+       data-bs-auto-close="outside"
+       aria-expanded="false">
+        Products
+    </a>
+
+    <div class="dropdown-menu product-menu"
+         aria-labelledby="productsDropdown">
+
+        <a href="power-products.html">Sensors</a>
+
+        <a href="power-products.html">Controllers</a>
+
+        <a href="power-products.html">Gateways</a>
+
+        <a href="power-products.html">Meters</a>
+
+        <a href="power-products.html">Transformers</a>
+
+        <a href="power-products.html">Control Panels</a>
+
+        <a href="power-products.html">Panel Boards</a>
+
+        <a href="power-products.html">Switchgears</a>
+
+    </div>
+
+</li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -3560,7 +3743,7 @@ window.ehtReveal = function(rootSelector){
 
                     <div class="corp-footer-status">
                         <span></span>
-                        Engineering tomorrow
+                        Building the Pride of a Nation
                     </div>
 
                 </section>
@@ -3591,14 +3774,14 @@ window.ehtReveal = function(rootSelector){
 
                         <div class="corp-footer-column-heading">
                             <span>02</span>
-                            <h3>Energy</h3>
+                            <h3>Renewable Energy</h3>
                         </div>
 
                         <ul>
-                            <li><a href="solar-energy.html"><span>Solar Energy</span><i>↗</i></a></li>
-                            <li><a href="wind-energy.html"><span>Wind Energy</span><i>↗</i></a></li>
+                            <li><a href="solar-energy.html"><span>Solar</span><i>↗</i></a></li>
+                            <!-- <li><a href="wind-energy.html"><span>Wind Energy</span><i>↗</i></a></li>
                             <li><a href="biomass-energy.html"><span>Biomass Energy</span><i>↗</i></a></li>
-                            <li><a href="hydel-energy.html"><span>Hydel Energy</span><i>↗</i></a></li>
+                            <li><a href="hydel-energy.html"><span>Hydel Energy</span><i>↗</i></a></li> -->
                         </ul>
 
                     </div>
@@ -3613,8 +3796,9 @@ window.ehtReveal = function(rootSelector){
                         </div>
 
                         <ul>
-                            <li><a href="transmission.html"><span>Transmission</span><i>↗</i></a></li>
-                            <li><a href="distribution.html"><span>Distribution</span><i>↗</i></a></li>
+                            <li><a href="lt.html"><span>LT</span><i>↗</i></a></li>
+                            <li><a href="ht.html"><span>HT</span><i>↗</i></a></li>
+                            <li><a href="eht.html"><span>EHT</span><i>↗</i></a></li>
                             <li><a href="control-panels.html"><span>Control Panels</span><i>↗</i></a></li>
                             <li><a href="panel-boards.html"><span>Panel Boards</span><i>↗</i></a></li>
                         </ul>
@@ -3652,7 +3836,9 @@ window.ehtReveal = function(rootSelector){
                         <ul>
                             <li><a href="smart-pole-r&d.html"><span>Smart Pole</span><i>↗</i></a></li>
                             <li><a href="smart-bollard-r&d.html"><span>Smart Bollard</span><i>↗</i></a></li>
-                            <li><a href="power.html"><span>Power Products</span><i>↗</i></a></li>
+                            <li><a href="smart_conference_table.html"><span>Smart Conference Table</span><i>↗</i></a></li>
+                            <li><a href="smart_bar_counter.html"><span>Smart Bar Counter</span><i>↗</i></a></li>
+                            <li><a href="smart_window_leafac.html"><span>Smart Window Leaf AC</span><i>↗</i></a></li>
                         </ul>
 
                     </div>
@@ -3674,7 +3860,7 @@ window.ehtReveal = function(rootSelector){
 
                 <a href="tel:+919000000000" class="corp-footer-contact-item">
                     <span>01 / Phone</span>
-                    <strong>+91 90000 00000</strong>
+                    <strong>+91 00000 00000</strong>
                     <i aria-hidden="true">↗</i>
                 </a>
 
@@ -3704,9 +3890,9 @@ window.ehtReveal = function(rootSelector){
                 </p>
 
                 <div class="corp-footer-disciplines" aria-label="Core disciplines">
-                    <span>Power</span>
+                    <span>Renewable Energy</span>
                     <i></i>
-                    <span>Energy</span>
+                    <span>Power</span>
                     <i></i>
                     <span>Automation</span>
                     <i></i>
