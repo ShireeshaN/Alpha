@@ -2467,6 +2467,12 @@ LT & 11 kV is a combined service grouping, not a voltage classification.
                     <small>Innovation</small>
                 </div>
 
+                <div class="ani-nation__node ani-nation__node--lighting">
+                    <span>05</span>
+                    <strong>LIGHTING</strong>
+                    <small>Illumination</small>
+                </div>
+
             </div>
 
         </div>
@@ -2492,7 +2498,7 @@ LT & 11 kV is a combined service grouping, not a voltage classification.
 
                 <p>
                     Alpha Numeric connects engineering, technology and execution
-                    across four core verticals to deliver complete,
+                    across five core verticals to deliver complete,
                     future-focused solutions.
                 </p>
 
@@ -2593,6 +2599,28 @@ LT & 11 kV is a combined service grouping, not a voltage classification.
 
                 </article>
 
+
+                <!-- LIGHTING -->
+                <article class="ani-nation__vertical ani-nation__vertical--lighting">
+
+                    <div class="ani-nation__vertical-top">
+                        <span class="ani-nation__vertical-no">05</span>
+                        <span class="ani-nation__vertical-dot"></span>
+                    </div>
+
+                    <h4>Lighting</h4>
+
+                    <p>
+                        Residential, commercial, industrial and facade lighting
+                        engineered for performance, ambience and architectural impact.
+                    </p>
+
+                    <span class="ani-nation__vertical-tag">
+                        ILLUMINATION
+                    </span>
+
+                </article>
+
             </div>
 
         </div>
@@ -2610,7 +2638,7 @@ LT & 11 kV is a combined service grouping, not a voltage classification.
                 </span>
 
                 <div class="ani-nation__statement-number">
-                    04
+                    05
                     <small>CORE VERTICALS</small>
                 </div>
 
@@ -3347,6 +3375,13 @@ LT & 11 kV is a combined service grouping, not a voltage classification.
 }
 
 
+.ani-nation__node--lighting {
+    left: 39%;
+    bottom: -1%;
+    animation-delay: -4.1s;
+}
+
+
 /* =========================================================
    NETWORK SECTION
 ========================================================= */
@@ -3448,7 +3483,7 @@ LT & 11 kV is a combined service grouping, not a voltage classification.
     display: grid;
 
     grid-template-columns:
-        repeat(4, minmax(0,1fr));
+        repeat(5, minmax(0,1fr));
 
     border-top:
         1px solid var(--ani-line);
@@ -4099,6 +4134,13 @@ LT & 11 kV is a combined service grouping, not a voltage classification.
     }
 
 
+    .ani-nation__vertical:nth-child(5) {
+        grid-column: 1 / -1;
+        border-top: 1px solid var(--ani-line);
+        border-right: 0;
+    }
+
+
     .ani-nation__statement {
         grid-template-columns:
             1fr;
@@ -4285,6 +4327,11 @@ LT & 11 kV is a combined service grouping, not a voltage classification.
     }
 
 
+
+
+    .ani-nation__vertical:nth-child(5) {
+        grid-column: auto;
+    }
     .ani-nation__vertical:last-child {
         border-bottom:
             0;
@@ -4526,7 +4573,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 </script>
-
  
     <!-- =========================================================
      PREMIUM SECTORS SECTION START
