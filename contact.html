@@ -6,1572 +6,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contact | Alpha Numeric</title>
+    <title>Contact | Alpha Numeric Innovations</title>
 
+    <meta name="description"
+        content="Contact Alpha Numeric Innovations for power, energy, automation, IoT, BMS, R&D and engineering project enquiries.">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;500;600;700;800;900&display=swap"
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet">
 
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-
-<style>
-
-/* =========================================================
-   MODULE 01 — GLOBAL + CONTACT PAGE STYLES
-   ========================================================= */
-
-/* =========================================================
-   GLOBAL
-========================================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: "Inter", sans-serif;
-    background: #fff;
-    color: #111;
-    overflow-x: hidden;
-}
-
-a {
-    text-decoration: none;
-}
-
-button,
-input,
-textarea,
-select {
-    font-family: inherit;
-}
-
-
-/* =========================================================
-   NAVBAR
-========================================================= */
-
-
-
-/* =========================================================
-   CONTACT HERO
-========================================================= */
-
-.contact-hero {
-    margin-top: 0px;
-    min-height: 650px;
-    background: #080808;
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-}
-
-.contact-grid {
-    position: absolute;
-    inset: 0;
-
-    background-image:
-        linear-gradient(
-            rgba(255,255,255,.045) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,.045) 1px,
-            transparent 1px
-        );
-
-    background-size: 90px 90px;
-
-    opacity: .55;
-}
-
-.contact-ring {
-    position: absolute;
-
-    width: 700px;
-    height: 700px;
-
-    right: -250px;
-    top: -130px;
-
-    border: 1px solid #292929;
-    border-radius: 50%;
-}
-
-.contact-ring::before {
-    content: "";
-
-    position: absolute;
-
-    inset: 90px;
-
-    border: 1px dashed #333;
-
-    border-radius: 50%;
-}
-
-.contact-ring::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 190px;
-
-    border: 1px solid #333;
-
-    border-radius: 50%;
-}
-
-.contact-hero-inner {
-    max-width: 1450px;
-
-    min-height: 650px;
-
-    margin: auto;
-
-    padding: 110px 7% 90px;
-
-    position: relative;
-
-    z-index: 2;
-
-    display: grid;
-
-    grid-template-columns: 1.1fr .9fr;
-
-    align-items: center;
-
-    gap: 90px;
-}
-
-
-/* HERO TEXT */
-
-.contact-label {
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    border: 1px solid #333;
-
-    padding: 10px 15px;
-
-    color: #999;
-
-    font-size: 9px;
-
-    letter-spacing: 3px;
-
-    font-weight: 600;
-
-    margin-bottom: 30px;
-}
-
-.contact-label i {
-    color: #fff;
-}
-
-.contact-hero h1 {
-    font-size: clamp(58px, 8vw, 110px);
-
-    line-height: .88;
-
-    letter-spacing: -7px;
-
-    font-weight: 800;
-
-    text-transform: uppercase;
-}
-
-.contact-hero h1 span {
-    display: block;
-
-    color: #777;
-
-    font-weight: 300;
-}
-
-.contact-hero-text {
-    max-width: 590px;
-
-    color: #999;
-
-    font-size: 13px;
-
-    line-height: 1.9;
-
-    margin-top: 32px;
-}
-
-
-/* HERO RIGHT */
-
-.contact-command {
-    border-left: 1px solid #333;
-
-    padding-left: 45px;
-}
-
-.command-number {
-    color: #444;
-
-    font-size: 90px;
-
-    line-height: .8;
-
-    font-weight: 800;
-
-    letter-spacing: -8px;
-
-    margin-bottom: 35px;
-}
-
-.contact-command h2 {
-    font-size: 26px;
-
-    line-height: 1.2;
-
-    letter-spacing: -1px;
-
-    margin-bottom: 18px;
-}
-
-.contact-command p {
-    color: #777;
-
-    font-size: 11px;
-
-    line-height: 1.9;
-
-    max-width: 430px;
-}
-
-.command-line {
-    margin-top: 35px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    color: #aaa;
-
-    font-size: 9px;
-
-    letter-spacing: 2px;
-}
-
-.command-line::before {
-    content: "";
-
-    width: 35px;
-
-    height: 1px;
-
-    background: #fff;
-}
-
-
-/* =========================================================
-   CONTACT OPTIONS
-========================================================= */
-
-.contact-options {
-    padding: 95px 8%;
-
-    background: #fff;
-}
-
-.contact-options-inner {
-    max-width: 1250px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: repeat(3,1fr);
-
-    gap: 2px;
-
-    background: #111;
-}
-
-.contact-option {
-    background: #fff;
-
-    min-height: 260px;
-
-    padding: 32px;
-
-    transition: .35s;
-
-    position: relative;
-}
-
-.contact-option:hover {
-    background: #111;
-
-    color: #fff;
-}
-
-.option-number {
-    position: absolute;
-
-    top: 20px;
-    right: 25px;
-
-    color: #e5e5e5;
-
-    font-size: 42px;
-
-    font-weight: 800;
-}
-
-.contact-option:hover .option-number {
-    color: #333;
-}
-
-.option-icon {
-    width: 50px;
-    height: 50px;
-
-    background: #111;
-
-    color: #fff;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    margin-bottom: 40px;
-}
-
-.contact-option:hover .option-icon {
-    background: #fff;
-
-    color: #111;
-}
-
-.contact-option h3 {
-    font-size: 14px;
-
-    margin-bottom: 12px;
-}
-
-.contact-option p {
-    color: #777;
-
-    font-size: 10px;
-
-    line-height: 1.8;
-
-    margin-bottom: 18px;
-}
-
-.contact-option:hover p {
-    color: #999;
-}
-
-.option-link {
-    color: #111;
-
-    font-size: 9px;
-
-    font-weight: 700;
-
-    letter-spacing: 1.5px;
-}
-
-.contact-option:hover .option-link {
-    color: #fff;
-}
-
-
-/* =========================================================
-   MAIN CONTACT SECTION
-========================================================= */
-
-.contact-main {
-    background: #ededed;
-
-    padding: 120px 8%;
-}
-
-.contact-main-inner {
-    max-width: 1250px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: .75fr 1.25fr;
-
-    gap: 90px;
-
-    align-items: start;
-}
-
-
-/* LEFT */
-
-.contact-info-label {
-    color: #777;
-
-    font-size: 10px;
-
-    letter-spacing: 3px;
-
-    font-weight: 700;
-}
-
-.contact-info h2 {
-    font-size: clamp(40px,5vw,68px);
-
-    line-height: .95;
-
-    letter-spacing: -4px;
-
-    margin-top: 15px;
-}
-
-.contact-info > p {
-    color: #777;
-
-    font-size: 11px;
-
-    line-height: 1.9;
-
-    margin-top: 25px;
-
-    max-width: 420px;
-}
-
-.info-list {
-    margin-top: 45px;
-
-    border-top: 1px solid #ccc;
-}
-
-.info-item {
-    padding: 20px 0;
-
-    border-bottom: 1px solid #ccc;
-
-    display: flex;
-
-    gap: 17px;
-}
-
-.info-item-icon {
-    width: 38px;
-    height: 38px;
-
-    flex: 0 0 38px;
-
-    background: #111;
-
-    color: #fff;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    font-size: 12px;
-}
-
-.info-item-content span {
-    display: block;
-
-    color: #888;
-
-    font-size: 8px;
-
-    letter-spacing: 2px;
-
-    font-weight: 700;
-
-    margin-bottom: 5px;
-}
-
-.info-item-content strong,
-.info-item-content a {
-    color: #222;
-
-    font-size: 11px;
-
-    font-weight: 500;
-
-    line-height: 1.6;
-}
-
-
-/* =========================================================
-   FORM
-========================================================= */
-
-.contact-form-wrap {
-    background: #fff;
-
-    padding: 50px;
-
-    box-shadow: 0 25px 60px rgba(0,0,0,.07);
-}
-
-.form-top {
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: flex-start;
-
-    gap: 30px;
-
-    margin-bottom: 40px;
-}
-
-.form-top h3 {
-    font-size: 24px;
-
-    letter-spacing: -1px;
-}
-
-.form-top p {
-    max-width: 270px;
-
-    color: #888;
-
-    font-size: 9px;
-
-    line-height: 1.7;
-
-    text-align: right;
-}
-
-.form-group {
-    margin-bottom: 25px;
-}
-
-.form-group label {
-    display: block;
-
-    color: #555;
-
-    font-size: 9px;
-
-    letter-spacing: 1.5px;
-
-    font-weight: 700;
-
-    margin-bottom: 9px;
-
-    text-transform: uppercase;
-}
-
-.form-control-custom,
-.form-select-custom {
-    width: 100%;
-
-    border: none;
-
-    border-bottom: 1px solid #ccc;
-
-    background: transparent;
-
-    border-radius: 0;
-
-    outline: none;
-
-    padding: 12px 2px;
-
-    font-size: 12px;
-
-    color: #111;
-
-    transition: .3s;
-}
-
-.form-control-custom:focus,
-.form-select-custom:focus {
-    border-bottom-color: #111;
-}
-
-textarea.form-control-custom {
-    min-height: 100px;
-
-    resize: vertical;
-}
-
-.form-row {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 25px;
-}
-
-.form-submit {
-    margin-top: 10px;
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    background: #111;
-
-    color: #fff;
-
-    border: 1px solid #111;
-
-    padding: 16px 23px;
-
-    font-size: 9px;
-
-    font-weight: 700;
-
-    letter-spacing: 1.5px;
-
-    cursor: pointer;
-
-    transition: .3s;
-}
-
-.form-submit:hover {
-    background: #fff;
-
-    color: #111;
-}
-
-
-/* =========================================================
-   PROJECT CATEGORIES
-========================================================= */
-
-.project-section {
-    padding: 120px 8%;
-
-    background: #050505;
-
-    color: #fff;
-}
-
-.project-inner {
-    max-width: 1250px;
-
-    margin: auto;
-}
-
-.project-heading {
-    max-width: 750px;
-
-    margin-bottom: 60px;
-}
-
-.project-heading span {
-    color: #777;
-
-    font-size: 10px;
-
-    letter-spacing: 3px;
-
-    font-weight: 700;
-}
-
-.project-heading h2 {
-    font-size: clamp(40px,5vw,68px);
-
-    line-height: .95;
-
-    letter-spacing: -4px;
-
-    margin-top: 16px;
-}
-
-.project-heading p {
-    color: #888;
-
-    font-size: 11px;
-
-    line-height: 1.9;
-
-    margin-top: 22px;
-}
-
-.project-grid {
-    display: grid;
-
-    grid-template-columns: repeat(4,1fr);
-
-    border-top: 1px solid #292929;
-
-    border-left: 1px solid #292929;
-}
-
-.project-card {
-    min-height: 210px;
-
-    padding: 28px;
-
-    border-right: 1px solid #292929;
-
-    border-bottom: 1px solid #292929;
-
-    transition: .35s;
-
-    cursor: pointer;
-}
-
-.project-card:hover {
-    background: #fff;
-
-    color: #111;
-}
-
-.project-card-number {
-    color: #444;
-
-    font-size: 35px;
-
-    font-weight: 800;
-
-    margin-bottom: 40px;
-}
-
-.project-card:hover .project-card-number {
-    color: #ccc;
-}
-
-.project-card h3 {
-    font-size: 12px;
-
-    letter-spacing: .5px;
-
-    margin-bottom: 10px;
-}
-
-.project-card p {
-    color: #777;
-
-    font-size: 9px;
-
-    line-height: 1.8;
-}
-
-.project-card:hover p {
-    color: #555;
-}
-
-
-/* =========================================================
-   R&D CONTACT
-========================================================= */
-
-.rd-contact {
-    padding: 120px 8%;
-
-    background: #fff;
-}
-
-.rd-contact-inner {
-    max-width: 1250px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 80px;
-
-    align-items: center;
-}
-
-.rd-visual {
-    min-height: 500px;
-
-    background: #080808;
-
-    position: relative;
-
-    overflow: hidden;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-}
-
-.rd-visual-ring {
-    width: 360px;
-    height: 360px;
-
-    border: 1px solid #333;
-
-    border-radius: 50%;
-
-    position: relative;
-}
-
-.rd-visual-ring::before {
-    content: "";
-
-    position: absolute;
-
-    inset: 60px;
-
-    border: 1px dashed #444;
-
-    border-radius: 50%;
-}
-
-.rd-visual-ring::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 125px;
-
-    border: 1px solid #444;
-
-    border-radius: 50%;
-}
-
-.rd-center {
-    position: absolute;
-
-    width: 65px;
-    height: 65px;
-
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%,-50%);
-
-    background: #fff;
-
-    color: #111;
-
-    border-radius: 50%;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    font-size: 18px;
-}
-
-.rd-node {
-    position: absolute;
-
-    width: 9px;
-    height: 9px;
-
-    border-radius: 50%;
-
-    background: #fff;
-
-    box-shadow: 0 0 20px #fff;
-}
-
-.rd-node.n1 {
-    top: 40px;
-    left: 175px;
-}
-
-.rd-node.n2 {
-    right: 35px;
-    top: 175px;
-}
-
-.rd-node.n3 {
-    bottom: 40px;
-    left: 175px;
-}
-
-.rd-node.n4 {
-    left: 35px;
-    top: 175px;
-}
-
-.rd-copy-label {
-    color: #777;
-
-    font-size: 10px;
-
-    letter-spacing: 3px;
-
-    font-weight: 700;
-}
-
-.rd-copy h2 {
-    font-size: clamp(40px,5vw,68px);
-
-    line-height: .95;
-
-    letter-spacing: -4px;
-
-    margin-top: 15px;
-}
-
-.rd-copy p {
-    color: #777;
-
-    font-size: 12px;
-
-    line-height: 1.9;
-
-    max-width: 540px;
-
-    margin-top: 25px;
-}
-
-.rd-list {
-    margin-top: 35px;
-
-    border-top: 1px solid #ddd;
-}
-
-.rd-list-item {
-    padding: 17px 0;
-
-    border-bottom: 1px solid #ddd;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-}
-
-.rd-list-item span:first-child {
-    width: 28px;
-    height: 28px;
-
-    background: #111;
-
-    color: #fff;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    font-size: 8px;
-}
-
-.rd-list-item span:last-child {
-    font-size: 10px;
-
-    font-weight: 600;
-
-    letter-spacing: 1px;
-}
-
-
-/* =========================================================
-   LOCATION
-========================================================= */
-
-.location-section {
-    padding: 0 8% 120px;
-
-    background: #fff;
-}
-
-.location-inner {
-    max-width: 1250px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    min-height: 430px;
-}
-
-.location-map {
-    background: #111;
-
-    position: relative;
-
-    overflow: hidden;
-
-    background-image:
-        linear-gradient(
-            30deg,
-            transparent 48%,
-            #333 49%,
-            transparent 51%
-        ),
-        linear-gradient(
-            120deg,
-            transparent 48%,
-            #292929 49%,
-            transparent 51%
-        );
-
-    background-size: 100px 100px;
-}
-
-.map-center {
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%,-50%);
-
-    text-align: center;
-}
-
-.map-pin {
-    width: 55px;
-    height: 55px;
-
-    border-radius: 50%;
-
-    background: #fff;
-
-    color: #111;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    margin: auto auto 15px;
-
-    box-shadow: 0 0 0 15px rgba(255,255,255,.05);
-}
-
-.map-center span {
-    color: #aaa;
-
-    font-size: 9px;
-
-    letter-spacing: 2px;
-}
-
-.location-content {
-    background: #ededed;
-
-    padding: 55px;
-}
-
-.location-content span {
-    color: #777;
-
-    font-size: 9px;
-
-    letter-spacing: 3px;
-
-    font-weight: 700;
-}
-
-.location-content h2 {
-    font-size: 40px;
-
-    line-height: 1;
-
-    letter-spacing: -2px;
-
-    margin: 15px 0 20px;
-}
-
-.location-content p {
-    color: #777;
-
-    font-size: 11px;
-
-    line-height: 1.9;
-}
-
-.location-address {
-    margin-top: 30px;
-
-    padding-top: 25px;
-
-    border-top: 1px solid #ccc;
-}
-
-.location-address strong {
-    display: block;
-
-    font-size: 11px;
-
-    margin-bottom: 8px;
-}
-
-.location-address p {
-    margin: 0;
-}
-
-
-/* =========================================================
-   CTA
-========================================================= */
-
-.contact-cta {
-    padding: 0 8% 120px;
-
-    background: #fff;
-}
-
-.contact-cta-inner {
-    max-width: 1250px;
-
-    margin: auto;
-
-    min-height: 330px;
-
-    background: #080808;
-
-    position: relative;
-
-    overflow: hidden;
-
-    padding: 60px;
-}
-
-.cta-circle {
-    position: absolute;
-
-    width: 500px;
-    height: 500px;
-
-    right: -160px;
-    top: -80px;
-
-    border: 1px solid #333;
-
-    border-radius: 50%;
-}
-
-.cta-circle::before {
-    content: "";
-
-    position: absolute;
-
-    inset: 65px;
-
-    border: 1px dashed #333;
-
-    border-radius: 50%;
-}
-
-.cta-content {
-    position: relative;
-
-    z-index: 2;
-
-    max-width: 750px;
-}
-
-.cta-content span {
-    color: #777;
-
-    font-size: 10px;
-
-    letter-spacing: 3px;
-
-    font-weight: 700;
-}
-
-.cta-content h2 {
-    color: #fff;
-
-    font-size: clamp(38px,5vw,64px);
-
-    line-height: .95;
-
-    letter-spacing: -4px;
-
-    margin: 17px 0 20px;
-}
-
-.cta-content p {
-    color: #888;
-
-    font-size: 11px;
-
-    line-height: 1.8;
-
-    max-width: 600px;
-
-    margin-bottom: 25px;
-}
-
-.cta-button {
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    padding: 15px 22px;
-
-    background: #fff;
-
-    color: #111;
-
-    font-size: 9px;
-
-    font-weight: 700;
-
-    letter-spacing: 1.5px;
-
-    transition: .3s;
-}
-
-.cta-button:hover {
-    background: transparent;
-
-    color: #fff;
-
-    border: 1px solid #fff;
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-.main-footer {
-    background: #050505;
-
-    color: #fff;
-
-    padding: 75px 7% 25px;
-}
-
-.footer-logo img {
-    height: 55px;
-
-    margin-bottom: 22px;
-}
-
-.footer-description {
-    max-width: 370px;
-
-    color: #888;
-
-    font-size: 12px;
-
-    line-height: 1.9;
-}
-
-.footer-heading {
-    color: #fff;
-
-    font-size: 12px;
-
-    font-weight: 600;
-
-    letter-spacing: 1.5px;
-
-    margin-bottom: 22px;
-}
-
-.footer-links {
-    list-style: none;
-
-    padding: 0;
-}
-
-.footer-links li {
-    margin-bottom: 11px;
-}
-
-.footer-links a {
-    color: #888;
-
-    font-size: 12px;
-
-    transition: .3s;
-}
-
-.footer-links a:hover {
-    color: #fff;
-
-    padding-left: 4px;
-}
-
-.footer-contact {
-    list-style: none;
-
-    padding: 0;
-}
-
-.footer-contact li {
-    display: flex;
-
-    gap: 12px;
-
-    color: #888;
-
-    font-size: 12px;
-
-    line-height: 1.8;
-
-    margin-bottom: 15px;
-}
-
-.footer-contact i {
-    width: 18px;
-
-    color: #fff;
-
-    margin-top: 4px;
-}
-
-.footer-social {
-    display: flex;
-
-    gap: 9px;
-
-    margin-top: 24px;
-}
-
-.footer-social a {
-    width: 35px;
-    height: 35px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid #2b2b2b;
-
-    color: #999;
-
-    transition: .3s;
-}
-
-.footer-social a:hover {
-    background: #fff;
-
-    color: #000;
-
-    border-color: #fff;
-}
-
-.footer-bottom {
-    margin-top: 55px;
-
-    padding-top: 20px;
-
-    border-top: 1px solid #222;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    color: #666;
-
-    font-size: 10px;
-}
-
-.footer-bottom strong {
-    color: #fff;
-}
-
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
-@media (max-width: 1100px) {
-
-    .project-grid {
-        grid-template-columns: repeat(2,1fr);
-    }
-
-}
-
-@media (max-width: 991px) {
-
-    .main-navbar {
-        height: auto;
-
-        min-height: 80px;
-
-        padding: 10px 5%;
-    }
-
-    .main-navbar .navbar-brand img {
-        height: 48px;
-    }
-
-    .main-navbar .navbar-collapse {
-        margin-top: 15px;
-
-        padding: 15px 0;
-
-        background: #fff;
-    }
-
-    .main-navbar .navbar-nav {
-        align-items: flex-start;
-
-        gap: 0;
-    }
-
-    .main-navbar .nav-item {
-        width: 100%;
-    }
-
-    .main-navbar .nav-link {
-        padding: 12px 5px !important;
-    }
-
-    .main-navbar .dropdown-menu {
-        margin-top: 0;
-
-        border: none;
-
-        box-shadow: none;
-    }
-
-    .contact-hero {
-        margin-top: 80px;
-    }
-
-    .contact-hero-inner {
-        grid-template-columns: 1fr;
-
-        padding-top: 90px;
-
-        padding-bottom: 80px;
-    }
-
-    .contact-command {
-        border-left: none;
-
-        border-top: 1px solid #333;
-
-        padding-left: 0;
-
-        padding-top: 35px;
-    }
-
-    .contact-options-inner {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-main-inner {
-        grid-template-columns: 1fr;
-
-        gap: 60px;
-    }
-
-    .rd-contact-inner {
-        grid-template-columns: 1fr;
-    }
-
-    .location-inner {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-@media (max-width: 767px) {
-
-    .contact-hero h1 {
-        font-size: 60px;
-
-        letter-spacing: -4px;
-    }
-
-    .contact-main,
-    .project-section,
-    .rd-contact {
-        padding-left: 7%;
-        padding-right: 7%;
-    }
-
-    .contact-options {
-        padding-left: 7%;
-        padding-right: 7%;
-    }
-
-    .contact-form-wrap {
-        padding: 30px 22px;
-    }
-
-    .form-top {
-        display: block;
-    }
-
-    .form-top p {
-        text-align: left;
-
-        margin-top: 12px;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .location-section,
-    .contact-cta {
-        padding-left: 7%;
-        padding-right: 7%;
-    }
-
-    .location-content {
-        padding: 40px 30px;
-    }
-
-    .contact-cta-inner {
-        padding: 40px 30px;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-
-        gap: 12px;
-    }
-
-}
-
-</style>
 
 </head>
-
-
 <body>
+
+<!-- =========================================================
+     MODULE — GLOBAL BASE STYLES
+========================================================= -->
+
+<!-- CSS -->
+<style>
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #ffffff;
+            color: #111111;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+</style>
+
+<!-- END MODULE — GLOBAL BASE STYLES -->
 
 
 <!-- =========================================================
@@ -1650,7 +144,7 @@ textarea.form-control-custom {
                             <li><a class="dropdown-item" href="iot_bms.html">IoT+BMS</a></li>
                         </ul>
                     </li>
-                        <li class="nav-item dropdown product-dropdown">              
+    <li class="nav-item dropdown product-dropdown">              
 
     <a class="nav-link dropdown-toggle"
        href="#"
@@ -1862,6 +356,153 @@ textarea.form-control-custom {
             width: calc(100% - 24px);
         }
 
+        /* =========================================================
+   PRODUCTS DROPDOWN
+========================================================= */
+
+.product-dropdown{
+    position:relative;
+}
+
+.product-menu{
+    min-width:240px;
+
+    padding:10px 0;
+
+    margin-top:0!important;
+
+    border:0;
+
+    border-radius:10px;
+
+    background:#000;
+
+    box-shadow:
+        0 20px 55px rgba(0,0,0,.25);
+
+    overflow:hidden;
+}
+
+.product-menu > a{
+    display:block;
+
+    position:relative;
+
+    padding:11px 24px;
+
+    color:#bdbdbd;
+
+    font-size:13.5px;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:
+        color .25s ease,
+        padding-left .25s ease,
+        background .25s ease;
+}
+
+.product-menu > a::before{
+    content:"";
+
+    position:absolute;
+
+    left:12px;
+
+    top:50%;
+
+    width:5px;
+
+    height:1px;
+
+    background:#666;
+
+    transform:translateY(-50%);
+
+    transition:
+        width .25s ease,
+        background .25s ease;
+}
+
+.product-menu > a:hover{
+    color:#fff;
+
+    background:#111;
+
+    padding-left:29px;
+}
+
+.product-menu > a:hover::before{
+    width:10px;
+
+    background:#fff;
+}
+
+
+/* =========================================================
+   DESKTOP HOVER
+========================================================= */
+
+@media (min-width:992px){
+
+    .product-dropdown:hover > .product-menu{
+        display:block;
+    }
+
+    .product-menu{
+        display:block;
+
+        opacity:0;
+
+        visibility:hidden;
+
+        pointer-events:none;
+
+        transition:
+            opacity .2s ease,
+            visibility .2s ease;
+    }
+
+    .product-dropdown:hover > .product-menu,
+    .product-dropdown > .product-menu.show{
+        opacity:1;
+
+        visibility:visible;
+
+        pointer-events:auto;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width:991px){
+
+    .product-menu{
+        position:static!important;
+
+        width:100%;
+
+        margin:0!important;
+
+        border-radius:0;
+
+        box-shadow:none;
+
+        background:#000;
+    }
+
+    .product-menu > a{
+        padding:10px 22px;
+
+        color:#bdbdbd;
+    }
+}
+
 
         
 /* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
@@ -2033,1314 +674,463 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!-- END MODULE — NAVBAR -->
 
-
 <!-- =========================================================
-     MODULE 03 — CONTACT HERO
+     MODULE — CONTACT PAGE
 ========================================================= -->
+<main class="an-contact-page">
 
-<section class="contact-hero">
-
-    <div class="contact-grid"></div>
-
-    <div class="contact-ring"></div>
-
-
-    <div class="contact-hero-inner">
-
-
-        <div>
-
-            <div class="contact-label">
-
-                <i class="fas fa-arrow-right"></i>
-
-                CONNECT / COLLABORATE / CREATE
-
+    <!-- HERO -->
+    <section class="an-contact-hero">
+        <div class="an-contact-grid"></div>
+        <div class="an-contact-shell an-contact-hero-layout">
+            <div class="an-contact-hero-copy contact-reveal">
+                <div class="an-contact-kicker"><span>01</span><i></i> CONTACT</div>
+                <h1>Start with a<br><span>conversation.</span></h1>
+                <p>Power infrastructure. Renewable energy. Automation. IoT. BMS. R&amp;D. Tell us what you are planning — our engineering team will help shape the right path forward.</p>
+                <div class="an-contact-hero-actions">
+                    <a href="#enquiry" class="an-contact-btn an-contact-btn-light"><span>Start a project</span><b>↘</b></a>
+                    <a href="mailto:alphanumericinnovations@gmail.com" class="an-contact-minilink">alphanumericinnovations@gmail.com ↗</a>
+                </div>
             </div>
 
-
-            <h1>
-
-                Let's
-
-                <span>Connect.</span>
-
-            </h1>
-
-
-            <p class="contact-hero-text">
-
-                Whether you are exploring an infrastructure
-                project, intelligent automation, renewable
-                energy, advanced lighting or an R&D concept,
-                our team is ready to understand the requirement
-                and build the right technical path.
-
-            </p>
-
+            <aside class="an-contact-hero-panel contact-reveal" aria-label="Project contact overview">
+                <div class="an-panel-head">
+                    <span>PROJECT DESK</span>
+                    <small><i></i> OPEN FOR ENQUIRIES</small>
+                </div>
+                <div class="an-panel-big">ANI /<br>CONTACT</div>
+                <div class="an-panel-lines">
+                    <div><span>01</span><p>Power &amp; Electrical Infrastructure</p></div>
+                    <div><span>02</span><p>Energy &amp; Renewable Systems</p></div>
+                    <div><span>03</span><p>Automation · IoT · BMS</p></div>
+                    <div><span>04</span><p>R&amp;D &amp; Smart Products</p></div>
+                </div>
+            </aside>
         </div>
-
-
-        <div class="contact-command">
-
-            <div class="command-number">
-                01
-            </div>
-
-            <h2>
-                Start With A
-                Conversation.
-            </h2>
-
-            <p>
-
-                Tell us what you are building, what you need
-                to improve, or what you want to explore.
-
-                We can take the conversation from requirement
-                to engineering.
-
-            </p>
-
-            <div class="command-line">
-                ALPHA NUMERIC / CONTACT CENTER
-            </div>
-
+        <div class="an-contact-hero-foot an-contact-shell">
+            <span>HYDERABAD · INDIA</span><span>ENGINEERING / TECHNOLOGY / EXECUTION</span><span>SCROLL ↓</span>
         </div>
+    </section>
 
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     MODULE 04 — CONTACT OPTIONS
-========================================================= -->
-
-<section class="contact-options">
-
-
-    <div class="contact-options-inner">
-
-
-        <div class="contact-option">
-
-            <div class="option-number">
-                01
+    <!-- INTRO -->
+    <section class="an-contact-intro">
+        <div class="an-contact-shell an-contact-intro-grid">
+            <div class="an-contact-side-label contact-reveal"><span>02</span><i></i> LET'S TALK</div>
+            <div class="an-contact-intro-copy contact-reveal">
+                <h2>Complex project?<br><span>Keep the first step simple.</span></h2>
+                <p>Share your requirement, site context or business objective. We will route your enquiry to the relevant team and continue the conversation with the technical perspective your project needs.</p>
             </div>
-
-            <div class="option-icon">
-
-                <i class="fas fa-building"></i>
-
+            <div class="an-contact-intro-note contact-reveal">
+                <strong>ONE TEAM.</strong>
+                <p>From concept and engineering to execution, commissioning and support.</p>
             </div>
-
-            <h3>
-                Project Enquiry
-            </h3>
-
-            <p>
-
-                Discuss requirements for energy, power,
-                automation, lighting or infrastructure
-                projects.
-
-            </p>
-
-            <a
-                href="#enquiry"
-                class="option-link">
-
-                START PROJECT →
-
-            </a>
-
         </div>
+    </section>
 
-
-        <div class="contact-option">
-
-            <div class="option-number">
-                02
-            </div>
-
-            <div class="option-icon">
-
-                <i class="fas fa-microchip"></i>
-
-            </div>
-
-            <h3>
-                R&D Collaboration
-            </h3>
-
-            <p>
-
-                Explore product development, technology
-                integration and innovative engineering
-                concepts.
-
-            </p>
-
-            <a
-                href="#rd-contact"
-                class="option-link">
-
-                TALK TO R&D →
-
-            </a>
-
-        </div>
-
-
-        <div class="contact-option">
-
-            <div class="option-number">
-                03
-            </div>
-
-            <div class="option-icon">
-
-                <i class="fas fa-headset"></i>
-
-            </div>
-
-            <h3>
-                General Enquiry
-            </h3>
-
-            <p>
-
-                Have a question about Alpha Numeric, our
-                solutions or our capabilities?
-
-            </p>
-
-            <a
-                href="#enquiry"
-                class="option-link">
-
-                CONTACT TEAM →
-
-            </a>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     MODULE 05 — MAIN CONTACT + ENQUIRY FORM
-========================================================= -->
-
-<section
-    class="contact-main"
-    id="enquiry">
-
-
-    <div class="contact-main-inner">
-
-
-        <!-- INFORMATION -->
-
-        <div class="contact-info">
-
-
-            <div class="contact-info-label">
-                CONTACT INFORMATION
-            </div>
-
-
-            <h2>
-                Talk To
-                Our Team.
-            </h2>
-
-
-            <p>
-
-                Share your requirement and our team can connect
-                with you to understand the scope, technical
-                requirements and next steps.
-
-            </p>
-
-
-            <div class="info-list">
-
-
-                <div class="info-item">
-
-                    <div class="info-item-icon">
-
-                        <i class="fas fa-location-dot"></i>
-
-                    </div>
-
-                    <div class="info-item-content">
-
-                        <span>
-                            LOCATION
-                        </span>
-
-                        <strong>
-                            Hyderabad, Telangana, India
-                        </strong>
-
-                    </div>
-
+    <!-- CONTACT + FORM -->
+    <section class="an-contact-core" id="enquiry">
+        <div class="an-contact-shell an-contact-core-grid">
+            <div class="an-contact-directory contact-reveal">
+                <div class="an-contact-section-head">
+                    <span>03 / DIRECT</span>
+                    <h3>Reach us.</h3>
                 </div>
 
-
-                <div class="info-item">
-
-                    <div class="info-item-icon">
-
-                        <i class="fas fa-phone"></i>
-
-                    </div>
-
-                    <div class="info-item-content">
-
-                        <span>
-                            PHONE
-                        </span>
-
-                        <a href="tel:+91XXXXXXXXXX">
-                            +91 XXXXX XXXXX
-                        </a>
-
-                    </div>
-
+                <a class="an-contact-row" href="tel:+918008378889">
+                    <span>PHONE</span>
+                    <strong>+91 80083 78889</strong>
+                    <b>↗</b>
+                </a>
+                <a class="an-contact-row" href="mailto:alphanumericinnovations@gmail.com">
+                    <span>EMAIL</span>
+                    <strong>alphanumericinnovations@gmail.com</strong>
+                    <b>↗</b>
+                </a>
+                <div class="an-contact-row an-contact-row-static">
+                    <span>BASE</span>
+                    <strong>Hyderabad, Telangana, India</strong>
+                    <b>—</b>
                 </div>
 
-
-                <div class="info-item">
-
-                    <div class="info-item-icon">
-
-                        <i class="fas fa-envelope"></i>
-
-                    </div>
-
-                    <div class="info-item-content">
-
-                        <span>
-                            EMAIL
-                        </span>
-
-                        <a href="mailto:info@alphanumeric.com">
-                            info@alphanumeric.com
-                        </a>
-
-                    </div>
-
+                <div class="an-contact-availability">
+                    <span class="an-pulse"></span>
+                    <div><small>PROJECT ENQUIRIES</small><strong>Open</strong></div>
                 </div>
 
-
-                <div class="info-item">
-
-                    <div class="info-item-icon">
-
-                        <i class="fas fa-clock"></i>
-
-                    </div>
-
-                    <div class="info-item-content">
-
-                        <span>
-                            WORKING HOURS
-                        </span>
-
-                        <strong>
-                            Monday – Saturday
-                        </strong>
-
-                    </div>
-
+                <div class="an-contact-services">
+                    <p>POWER</p><p>ENERGY</p><p>AUTOMATION</p><p>IoT / BMS</p><p>R&amp;D</p>
                 </div>
-
-
             </div>
 
+            <div class="an-contact-form-wrap contact-reveal">
+                <div class="an-form-heading">
+                    <div><span>04 / PROJECT BRIEF</span><h3>Tell us what<br><em>you need.</em></h3></div>
+                    <div class="an-form-index">04</div>
+                </div>
 
-        </div>
-
-
-        <!-- FORM -->
-
-        <div class="contact-form-wrap">
-
-
-            <div class="form-top">
-
-                <h3>
-                    Project Enquiry
-                </h3>
-
-                <p>
-
-                    Fill in the details below.
-                    Our team will review your enquiry.
-
-                </p>
-
-            </div>
-
-
-            <form
-                action="#"
-                method="POST">
-
-
-                <div class="form-row">
-
-
-                    <div class="form-group">
-
-                        <label>
-                            Name
+                <form class="an-contact-form" action="#" method="post">
+                    <div class="an-form-grid">
+                        <label><span>YOUR NAME</span><input type="text" name="name" placeholder="Full name" required></label>
+                        <label><span>COMPANY</span><input type="text" name="company" placeholder="Company / organization"></label>
+                        <label><span>EMAIL</span><input type="email" name="email" placeholder="name@company.com" required></label>
+                        <label><span>PHONE</span><input type="tel" name="phone" placeholder="+91" required></label>
+                        <label class="an-form-full"><span>AREA OF INTEREST</span>
+                            <select name="interest" required>
+                                <option value="" selected disabled>Select a solution</option>
+                                <option>Power — LT / HT / EHT</option>
+                                <option>Renewable Energy</option>
+                                <option>Control Panels / Panel Boards</option>
+                                <option>Home Automation</option>
+                                <option>Commercial Automation</option>
+                                <option>Industrial Automation</option>
+                                <option>Hospital Automation</option>
+                                <option>Hotel Automation</option>
+                                <option>IoT</option>
+                                <option>BMS</option>
+                                <option>IoT + BMS</option>
+                                <option>R&amp;D / Smart Products</option>
+                                <option>Other</option>
+                            </select>
                         </label>
-
-                        <input
-                            type="text"
-                            class="form-control-custom"
-                            name="name"
-                            placeholder="Your name"
-                            required>
-
+                        <label class="an-form-full"><span>PROJECT / REQUIREMENT</span><textarea name="message" rows="5" placeholder="Briefly describe your project, site, scope or requirement..." required></textarea></label>
                     </div>
-
-
-                    <div class="form-group">
-
-                        <label>
-                            Company
-                        </label>
-
-                        <input
-                            type="text"
-                            class="form-control-custom"
-                            name="company"
-                            placeholder="Company name">
-
+                    <div class="an-form-submit">
+                        <button type="submit"><span>Send enquiry</span><b>↗</b></button>
+                        <p>Share only the information needed for an initial project discussion.</p>
                     </div>
-
-
-                </div>
-
-
-                <div class="form-row">
-
-
-                    <div class="form-group">
-
-                        <label>
-                            Email
-                        </label>
-
-                        <input
-                            type="email"
-                            class="form-control-custom"
-                            name="email"
-                            placeholder="Your email"
-                            required>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label>
-                            Phone
-                        </label>
-
-                        <input
-                            type="tel"
-                            class="form-control-custom"
-                            name="phone"
-                            placeholder="Phone number">
-
-                    </div>
-
-
-                </div>
-
-
-                <div class="form-row">
-
-
-                    <div class="form-group">
-
-                        <label>
-                            Requirement
-                        </label>
-
-                        <select
-                            class="form-select-custom"
-                            name="requirement">
-
-                            <option value="">
-                                Select solution
-                            </option>
-
-                            <option>
-                                Energy
-                            </option>
-
-                            <option>
-                                Power Infrastructure
-                            </option>
-
-                            <option>
-                                Automation
-                            </option>
-
-                            <option>
-                                Lighting
-                            </option>
-
-                            <option>
-                                IoT
-                            </option>
-
-                            <option>
-                                R&D
-                            </option>
-
-                            <option>
-                                Industrial Solutions
-                            </option>
-
-                            <option>
-                                Other
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label>
-                            Project Stage
-                        </label>
-
-                        <select
-                            class="form-select-custom"
-                            name="stage">
-
-                            <option value="">
-                                Select stage
-                            </option>
-
-                            <option>
-                                Concept
-                            </option>
-
-                            <option>
-                                Planning
-                            </option>
-
-                            <option>
-                                Design
-                            </option>
-
-                            <option>
-                                Execution
-                            </option>
-
-                            <option>
-                                Consultation
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label>
-                        Message
-                    </label>
-
-                    <textarea
-                        class="form-control-custom"
-                        name="message"
-                        placeholder="Tell us about your requirement..."
-                        required></textarea>
-
-                </div>
-
-
-                <button
-                    type="submit"
-                    class="form-submit">
-
-                    SEND ENQUIRY
-
-                    <i class="fas fa-arrow-right"></i>
-
-                </button>
-
-
-            </form>
-
-
+                </form>
+            </div>
         </div>
+    </section>
 
+    <!-- PROCESS -->
+    <section class="an-contact-process">
+        <div class="an-contact-shell">
+            <div class="an-process-title contact-reveal">
+                <span>05 / WHAT HAPPENS NEXT</span>
+                <h2>Clear from the<br><em>first conversation.</em></h2>
+            </div>
+            <div class="an-process-grid">
+                <article class="contact-reveal"><span>01</span><small>UNDERSTAND</small><h3>Your requirement.</h3><p>We understand the project objective, site context and expected outcome.</p></article>
+                <article class="contact-reveal"><span>02</span><small>ALIGN</small><h3>The right team.</h3><p>Your enquiry is aligned with the relevant engineering or technology discipline.</p></article>
+                <article class="contact-reveal"><span>03</span><small>DEFINE</small><h3>The next step.</h3><p>We establish the technical discussion, assessment or proposal path required next.</p></article>
+            </div>
+        </div>
+    </section>
 
-    </div>
+    <!-- DISCIPLINES -->
+    <section class="an-contact-disciplines">
+        <div class="an-contact-shell">
+            <div class="an-discipline-top contact-reveal"><span>06 / CAPABILITIES</span><h2>One point of contact.<br><em>Multiple disciplines.</em></h2></div>
+            <div class="an-discipline-list">
+                <a href="lt.html"><span>01</span><strong>Power Infrastructure</strong><small>LT · HT · EHT</small><b>↗</b></a>
+                <a href="solar-energy.html"><span>02</span><strong>Renewable Energy</strong><small>Solar &amp; Energy Systems</small><b>↗</b></a>
+                <a href="industrial-automation.html"><span>03</span><strong>Automation</strong><small>Residential · Commercial · Industrial</small><b>↗</b></a>
+                <a href="iot.html"><span>04</span><strong>Digital Intelligence</strong><small>IoT · BMS · IoT+BMS</small><b>↗</b></a>
+                <a href="smart-pole-r&d.html"><span>05</span><strong>R&amp;D</strong><small>Smart Products &amp; Future Systems</small><b>↗</b></a>
+            </div>
+        </div>
+    </section>
 
-</section>
+    <!-- END BAND -->
+    <section class="an-contact-endband">
+        <div class="an-contact-shell contact-reveal">
+            <span>READY TO BEGIN?</span>
+            <h2>Bring us the challenge.<br><em>We’ll bring the engineering.</em></h2>
+            <a href="mailto:alphanumericinnovations@gmail.com">Start a conversation <b>↗</b></a>
+        </div>
+    </section>
 
+</main>
 
+<style>
+/* =========================================================
+   CONTACT — MONOCHROME PREMIUM SYSTEM
+   BLACK / WHITE / GREY ONLY
+========================================================= */
+.an-contact-page{--k:#050505;--k2:#0b0b0b;--k3:#141414;--w:#fff;--g1:#f4f4f2;--g2:#e7e7e4;--g3:#b8b8b3;--g4:#777;--g5:#3a3a3a;background:#fff;color:#111;font-family:"Inter",sans-serif;overflow:hidden}.an-contact-page *{box-sizing:border-box}.an-contact-shell{width:min(1440px,calc(100% - 80px));margin-inline:auto}
+
+/* HERO */
+.an-contact-hero{position:relative;min-height:820px;background:var(--k);color:#fff;display:flex;align-items:center;overflow:hidden;padding-top:86px}.an-contact-grid{position:absolute;inset:0;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(90deg,transparent 0,#000 20%,#000 82%,transparent 100%)}.an-contact-hero::before{content:"CONTACT";position:absolute;right:-1.5vw;top:10%;font-size:clamp(130px,20vw,340px);font-weight:800;line-height:.8;letter-spacing:-.08em;color:rgba(255,255,255,.018);white-space:nowrap}.an-contact-hero-layout{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(390px,.62fr);gap:clamp(55px,8vw,130px);align-items:center;padding:105px 0 120px}.an-contact-kicker{display:flex;align-items:center;gap:13px;margin-bottom:28px;color:#aaa;font-size:9px;font-weight:700;letter-spacing:.22em}.an-contact-kicker span{color:#fff}.an-contact-kicker i{display:block;width:42px;height:1px;background:#666}.an-contact-hero-copy h1{margin:0;font-size:clamp(64px,7.7vw,122px);font-weight:600;line-height:.84;letter-spacing:-.07em}.an-contact-hero-copy h1 span{display:inline-block;color:#777;font-weight:300}.an-contact-hero-copy>p{max-width:670px;margin:34px 0 0;color:#aaa;font-size:clamp(14px,1.15vw,17px);line-height:1.85}.an-contact-hero-actions{display:flex;align-items:center;gap:34px;flex-wrap:wrap;margin-top:42px}.an-contact-btn{display:inline-flex;align-items:center;justify-content:space-between;gap:38px;min-width:230px;padding:17px 19px;text-decoration:none;font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;transition:.35s ease}.an-contact-btn-light{background:#fff;color:#111}.an-contact-btn-light:hover{background:#d9d9d6;color:#000;transform:translateY(-3px)}.an-contact-btn b{font-size:17px;font-weight:400}.an-contact-minilink{color:#aaa;text-decoration:none;font-size:10px;letter-spacing:.06em;border-bottom:1px solid #555;padding-bottom:5px}.an-contact-minilink:hover{color:#fff;border-color:#fff}
+
+/* HERO PANEL */
+.an-contact-hero-panel{position:relative;border:1px solid #2b2b2b;background:rgba(12,12,12,.84);backdrop-filter:blur(18px);padding:30px;box-shadow:0 35px 90px rgba(0,0,0,.34)}.an-contact-hero-panel::before,.an-contact-hero-panel::after{content:"";position:absolute;background:#fff}.an-contact-hero-panel::before{width:26px;height:1px;left:-1px;top:-1px}.an-contact-hero-panel::after{width:1px;height:26px;left:-1px;top:-1px}.an-panel-head{display:flex;justify-content:space-between;gap:15px;align-items:center;padding-bottom:22px;border-bottom:1px solid #2c2c2c}.an-panel-head>span{font-size:8px;letter-spacing:.18em;color:#aaa}.an-panel-head small{display:flex;align-items:center;gap:7px;font-size:7px;letter-spacing:.12em;color:#777}.an-panel-head small i{width:6px;height:6px;border-radius:50%;background:#eee;box-shadow:0 0 0 4px rgba(255,255,255,.08);animation:monoPulse 1.8s infinite}.an-panel-big{padding:28px 0 32px;font-size:clamp(48px,4vw,70px);font-weight:300;line-height:.83;letter-spacing:-.055em;color:#fff}.an-panel-lines>div{display:grid;grid-template-columns:38px 1fr;gap:12px;padding:16px 0;border-top:1px solid #242424}.an-panel-lines span{color:#666;font-size:8px;letter-spacing:.12em}.an-panel-lines p{margin:0;color:#bbb;font-size:11px}.an-contact-hero-foot{position:absolute;left:50%;bottom:27px;z-index:3;transform:translateX(-50%);display:flex;justify-content:space-between;color:#555;font-size:7px;letter-spacing:.16em}
+
+/* INTRO */
+.an-contact-intro{padding:118px 0 110px;background:#fff}.an-contact-intro-grid{display:grid;grid-template-columns:180px minmax(0,1fr) 290px;gap:clamp(35px,6vw,90px);align-items:start}.an-contact-side-label{display:flex;align-items:center;gap:11px;padding-top:12px;color:#888;font-size:8px;font-weight:700;letter-spacing:.16em}.an-contact-side-label span{color:#111}.an-contact-side-label i{width:26px;height:1px;background:#bbb}.an-contact-intro-copy h2{margin:0;font-size:clamp(46px,5vw,78px);font-weight:500;line-height:.96;letter-spacing:-.055em}.an-contact-intro-copy h2 span{color:#999;font-weight:300}.an-contact-intro-copy p{max-width:720px;margin:28px 0 0;color:#666;font-size:14px;line-height:1.9}.an-contact-intro-note{border-left:1px solid #ddd;padding-left:25px;margin-top:12px}.an-contact-intro-note strong{font-size:9px;letter-spacing:.16em}.an-contact-intro-note p{margin:12px 0 0;color:#888;font-size:11px;line-height:1.7}
+
+/* CORE */
+.an-contact-core{padding:0 0 120px;background:#fff}.an-contact-core-grid{display:grid;grid-template-columns:minmax(330px,.72fr) minmax(560px,1.28fr);gap:14px}.an-contact-directory{background:#080808;color:#fff;padding:50px 42px;min-height:720px;display:flex;flex-direction:column}.an-contact-section-head>span,.an-form-heading span,.an-process-title>span,.an-discipline-top>span{color:#777;font-size:8px;font-weight:700;letter-spacing:.18em}.an-contact-section-head h3{margin:14px 0 44px;font-size:clamp(42px,4vw,62px);font-weight:400;letter-spacing:-.055em}.an-contact-row{display:grid;grid-template-columns:72px 1fr auto;gap:15px;align-items:center;padding:22px 0;border-top:1px solid #292929;color:#fff;text-decoration:none}.an-contact-row:last-of-type{border-bottom:1px solid #292929}.an-contact-row>span{font-size:7px;color:#666;letter-spacing:.14em}.an-contact-row strong{font-size:12px;font-weight:400;color:#d8d8d8;word-break:break-word}.an-contact-row b{font-size:16px;font-weight:300;color:#555;transition:.3s}.an-contact-row:not(.an-contact-row-static):hover b{color:#fff;transform:translate(4px,-4px)}.an-contact-row:not(.an-contact-row-static):hover strong{color:#fff}.an-contact-availability{display:flex;gap:13px;align-items:center;margin-top:auto;padding-top:42px}.an-pulse{width:8px;height:8px;border-radius:50%;background:#eee;box-shadow:0 0 0 6px rgba(255,255,255,.06);animation:monoPulse 1.8s infinite}.an-contact-availability small{display:block;color:#666;font-size:7px;letter-spacing:.14em}.an-contact-availability strong{display:block;margin-top:3px;font-size:11px;font-weight:500}.an-contact-services{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:30px;padding-top:20px;border-top:1px solid #1f1f1f}.an-contact-services p{margin:0;color:#555;font-size:7px;letter-spacing:.13em}
+
+/* FORM */
+.an-contact-form-wrap{background:#f1f1ef;padding:50px 54px}.an-form-heading{display:flex;justify-content:space-between;gap:20px;margin-bottom:48px}.an-form-heading h3{margin:15px 0 0;font-size:clamp(40px,4vw,61px);font-weight:500;line-height:.94;letter-spacing:-.055em}.an-form-heading h3 em{display:block;color:#999;font-style:normal;font-weight:300}.an-form-index{font-size:72px;color:#d7d7d3;font-weight:300;line-height:.9}.an-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 28px}.an-contact-form label{display:block;margin:0}.an-contact-form label>span{display:block;margin-bottom:8px;color:#777;font-size:7px;font-weight:700;letter-spacing:.14em}.an-contact-form input,.an-contact-form select,.an-contact-form textarea{width:100%;padding:10px 0 13px;border:0;border-bottom:1px solid #c9c9c5;border-radius:0;outline:0;background:transparent;color:#111;font:400 13px "Inter",sans-serif;transition:border-color .25s}.an-contact-form textarea{resize:vertical;min-height:120px}.an-contact-form input::placeholder,.an-contact-form textarea::placeholder{color:#aaa}.an-contact-form input:focus,.an-contact-form select:focus,.an-contact-form textarea:focus{border-color:#111}.an-contact-form select{appearance:none;cursor:pointer;background-image:linear-gradient(45deg,transparent 50%,#555 50%),linear-gradient(135deg,#555 50%,transparent 50%);background-position:calc(100% - 8px) 50%,calc(100% - 3px) 50%;background-size:5px 5px,5px 5px;background-repeat:no-repeat}.an-form-full{grid-column:1/-1}.an-form-submit{display:flex;align-items:center;gap:25px;margin-top:42px}.an-form-submit button{min-width:205px;border:0;background:#080808;color:#fff;padding:17px 19px;display:flex;justify-content:space-between;gap:25px;cursor:pointer;font:700 9px "Inter",sans-serif;letter-spacing:.14em;text-transform:uppercase;transition:.3s}.an-form-submit button:hover{background:#222;transform:translateY(-2px)}.an-form-submit button b{font-size:17px;font-weight:300}.an-form-submit p{max-width:250px;margin:0;color:#888;font-size:9px;line-height:1.6}
+
+/* PROCESS */
+.an-contact-process{padding:118px 0;background:#0a0a0a;color:#fff}.an-process-title{display:grid;grid-template-columns:220px 1fr;gap:45px;align-items:start;margin-bottom:60px}.an-process-title h2{margin:0;font-size:clamp(46px,5vw,78px);font-weight:400;line-height:.95;letter-spacing:-.055em}.an-process-title h2 em{display:block;color:#686868;font-style:normal;font-weight:300}.an-process-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #292929;border-bottom:1px solid #292929}.an-process-grid article{position:relative;min-height:290px;padding:28px;border-right:1px solid #292929;transition:background .35s}.an-process-grid article:last-child{border-right:0}.an-process-grid article:hover{background:#111}.an-process-grid article>span{display:block;color:#555;font-size:8px}.an-process-grid small{display:block;margin-top:72px;color:#777;font-size:7px;letter-spacing:.16em}.an-process-grid h3{margin:9px 0 12px;font-size:25px;font-weight:400;letter-spacing:-.03em}.an-process-grid p{max-width:310px;margin:0;color:#777;font-size:11px;line-height:1.75}
+
+/* DISCIPLINES */
+.an-contact-disciplines{padding:115px 0 125px;background:#fff}.an-discipline-top{display:grid;grid-template-columns:220px 1fr;gap:45px;margin-bottom:60px}.an-discipline-top h2{margin:0;font-size:clamp(46px,5vw,77px);font-weight:500;line-height:.96;letter-spacing:-.055em}.an-discipline-top h2 em{display:block;color:#aaa;font-style:normal;font-weight:300}.an-discipline-list{border-top:1px solid #d9d9d6}.an-discipline-list a{display:grid;grid-template-columns:70px 1fr 320px 35px;gap:20px;align-items:center;min-height:100px;padding:0 10px;border-bottom:1px solid #d9d9d6;color:#111;text-decoration:none;transition:background .3s,color .3s,padding .3s}.an-discipline-list a:hover{background:#0a0a0a;color:#fff;padding-left:20px}.an-discipline-list a>span{font-size:8px;color:#999}.an-discipline-list strong{font-size:clamp(20px,2.1vw,31px);font-weight:400;letter-spacing:-.03em}.an-discipline-list small{font-size:9px;color:#888;letter-spacing:.08em}.an-discipline-list b{font-size:18px;font-weight:300;color:#999;transition:.3s}.an-discipline-list a:hover b{color:#fff;transform:translate(4px,-4px)}
+
+/* ENDBAND */
+.an-contact-endband{position:relative;padding:115px 0;background:#ededeb;color:#111;overflow:hidden}.an-contact-endband::after{content:"ANI";position:absolute;right:-2vw;bottom:-.18em;font-size:clamp(180px,31vw,520px);font-weight:800;line-height:.75;letter-spacing:-.09em;color:rgba(0,0,0,.03);pointer-events:none}.an-contact-endband .an-contact-shell{position:relative;z-index:2}.an-contact-endband span{display:block;margin-bottom:18px;color:#777;font-size:8px;font-weight:700;letter-spacing:.18em}.an-contact-endband h2{margin:0;font-size:clamp(52px,6vw,92px);font-weight:500;line-height:.9;letter-spacing:-.06em}.an-contact-endband h2 em{display:block;color:#999;font-style:normal;font-weight:300}.an-contact-endband a{display:inline-flex;align-items:center;gap:30px;margin-top:38px;padding-bottom:8px;border-bottom:1px solid #111;color:#111;text-decoration:none;font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}.an-contact-endband a b{font-size:17px;font-weight:300;transition:.3s}.an-contact-endband a:hover b{transform:translate(4px,-4px)}
+
+/* REVEAL */
+.contact-reveal{opacity:0;transform:translateY(28px);transition:opacity .85s ease,transform .95s cubic-bezier(.22,1,.36,1)}.contact-reveal.is-in{opacity:1;transform:none}.an-process-grid article:nth-child(2){transition-delay:.08s}.an-process-grid article:nth-child(3){transition-delay:.16s}@keyframes monoPulse{0%,100%{opacity:.35;transform:scale(.8)}50%{opacity:1;transform:scale(1.2)}}
+
+/* RESPONSIVE */
+@media(max-width:1100px){.an-contact-shell{width:calc(100% - 56px)}.an-contact-hero-layout{grid-template-columns:1fr .72fr;gap:45px}.an-contact-intro-grid{grid-template-columns:150px 1fr}.an-contact-intro-note{grid-column:2}.an-contact-core-grid{grid-template-columns:.82fr 1.18fr}.an-contact-form-wrap{padding:44px 40px}.an-discipline-list a{grid-template-columns:55px 1fr 250px 30px}}
+@media(max-width:991px){.an-contact-hero{min-height:auto}.an-contact-hero-layout{grid-template-columns:1fr;padding:105px 0 100px}.an-contact-hero-panel{max-width:650px}.an-contact-hero-foot{display:none}.an-contact-core-grid{grid-template-columns:1fr}.an-contact-directory{min-height:590px}.an-process-title,.an-discipline-top{grid-template-columns:150px 1fr}.an-process-grid{grid-template-columns:1fr}.an-process-grid article{min-height:220px;border-right:0;border-bottom:1px solid #292929}.an-process-grid article:last-child{border-bottom:0}.an-process-grid small{margin-top:42px}.an-discipline-list a{grid-template-columns:50px 1fr 210px 25px}}
+@media(max-width:767px){.an-contact-shell{width:calc(100% - 40px)}.an-contact-hero{padding-top:72px}.an-contact-hero-layout{padding:80px 0 72px}.an-contact-hero-copy h1{font-size:clamp(55px,17vw,78px)}.an-contact-hero-copy>p{font-size:13px}.an-contact-hero-actions{align-items:flex-start;flex-direction:column;gap:22px}.an-contact-hero-panel{padding:24px 20px}.an-contact-intro{padding:78px 0}.an-contact-intro-grid{grid-template-columns:1fr;gap:26px}.an-contact-intro-note{grid-column:auto}.an-contact-core{padding-bottom:80px}.an-contact-directory,.an-contact-form-wrap{padding:36px 24px}.an-contact-directory{min-height:560px}.an-contact-row{grid-template-columns:58px 1fr 20px}.an-form-grid{grid-template-columns:1fr}.an-form-full{grid-column:auto}.an-form-index{font-size:48px}.an-form-submit{align-items:flex-start;flex-direction:column}.an-form-submit button{width:100%}.an-contact-process,.an-contact-disciplines{padding:78px 0}.an-process-title,.an-discipline-top{grid-template-columns:1fr;gap:24px;margin-bottom:42px}.an-process-title h2,.an-discipline-top h2{font-size:clamp(41px,12vw,58px)}.an-discipline-list a{grid-template-columns:38px 1fr 22px;gap:12px;min-height:92px}.an-discipline-list a small{display:none}.an-discipline-list strong{font-size:20px}.an-contact-endband{padding:80px 0}.an-contact-endband h2{font-size:clamp(47px,14vw,67px)}}
+@media(max-width:420px){.an-contact-hero-copy h1{font-size:54px}.an-panel-head{align-items:flex-start;flex-direction:column}.an-contact-row strong{font-size:10.5px}.an-contact-form-wrap{padding-left:20px;padding-right:20px}.an-form-heading h3{font-size:39px}.an-discipline-list strong{font-size:18px}}
+@media(prefers-reduced-motion:reduce){.contact-reveal{opacity:1!important;transform:none!important;transition:none!important}.an-panel-head small i,.an-pulse{animation:none!important}}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  const els=document.querySelectorAll('.contact-reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(el=>el.classList.add('is-in'));return;}
+  const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-in');io.unobserve(entry.target);}}),{threshold:.12});
+  els.forEach(el=>io.observe(el));
+});
+</script>
+<!-- END MODULE — CONTACT PAGE -->
 
 <!-- =========================================================
-     MODULE 06 — SOLUTION AREAS
+     MODULE — FOOTER
 ========================================================= -->
 
-<section class="project-section">
-
-
-    <div class="project-inner">
-
-
-        <div class="project-heading">
-
-            <span>
-                WHAT CAN WE WORK ON?
-            </span>
-
-            <h2>
-                Bring Us A Requirement.
-            </h2>
-
-            <p>
-
-                From individual technology requirements to
-                integrated infrastructure projects, our
-                capabilities span multiple engineering domains.
-
-            </p>
-
-        </div>
-
-
-        <div class="project-grid">
-
-
-            <div class="project-card">
-
-                <div class="project-card-number">
-                    01
-                </div>
-
-                <h3>
-                    Renewable Energy
-                </h3>
-
-                <p>
-                    Solar, wind and renewable energy solutions.
-                </p>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <div class="project-card-number">
-                    02
-                </div>
-
-                <h3>
-                    Power Infrastructure
-                </h3>
-
-                <p>
-                    Transmission, distribution and electrical
-                    infrastructure.
-                </p>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <div class="project-card-number">
-                    03
-                </div>
-
-                <h3>
-                    Automation
-                </h3>
-
-                <p>
-                    Smart automation for residential,
-                    commercial and industrial environments.
-                </p>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <div class="project-card-number">
-                    04
-                </div>
-
-                <h3>
-                    IoT & EMS
-                </h3>
-
-                <p>
-                    Connected monitoring, control and energy
-                    management systems.
-                </p>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <div class="project-card-number">
-                    05
-                </div>
-
-                <h3>
-                    Intelligent Lighting
-                </h3>
-
-                <p>
-                    Architectural, facade, landscape and
-                    intelligent lighting solutions.
-                </p>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <div class="project-card-number">
-                    06
-                </div>
-
-                <h3>
-                    R&D
-                </h3>
-
-                <p>
-                    Product concepts, prototyping and technology
-                    development.
-                </p>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <div class="project-card-number">
-                    07
-                </div>
-
-                <h3>
-                    Industrial Solutions
-                </h3>
-
-                <p>
-                    Technology-driven solutions for industrial
-                    environments.
-                </p>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <div class="project-card-number">
-                    08
-                </div>
-
-                <h3>
-                    Integrated Engineering
-                </h3>
-
-                <p>
-                    Multi-domain engineering and infrastructure
-                    integration.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     MODULE 07 — R&D CONTACT
-========================================================= -->
-
-<section
-    class="rd-contact"
-    id="rd-contact">
-
-
-    <div class="rd-contact-inner">
-
-
-        <div class="rd-visual">
-
-
-            <div class="rd-visual-ring">
-
-                <div class="rd-center">
-
-                    <i class="fas fa-microchip"></i>
-
-                </div>
-
-
-                <div class="rd-node n1"></div>
-
-                <div class="rd-node n2"></div>
-
-                <div class="rd-node n3"></div>
-
-                <div class="rd-node n4"></div>
-
-            </div>
-
-
-        </div>
-
-
-        <div class="rd-copy">
-
-
-            <div class="rd-copy-label">
-                R&D / INNOVATION
-            </div>
-
-
-            <h2>
-                Have An Idea?
-                Let's Engineer It.
-            </h2>
-
-
-            <p>
-
-                Innovation often starts with a problem, a
-                concept or a different way of doing something.
-
-                <br><br>
-
-                Connect with our team to explore technology
-                concepts, product development, IoT integration
-                and intelligent infrastructure possibilities.
-
-            </p>
-
-
-            <div class="rd-list">
-
-
-                <div class="rd-list-item">
-
-                    <span>01</span>
-
-                    <span>
-                        PRODUCT DEVELOPMENT
-                    </span>
-
-                </div>
-
-
-                <div class="rd-list-item">
-
-                    <span>02</span>
-
-                    <span>
-                        PROTOTYPING & ENGINEERING
-                    </span>
-
-                </div>
-
-
-                <div class="rd-list-item">
-
-                    <span>03</span>
-
-                    <span>
-                        IoT & SMART SYSTEMS
-                    </span>
-
-                </div>
-
-
-                <div class="rd-list-item">
-
-                    <span>04</span>
-
-                    <span>
-                        TECHNOLOGY INTEGRATION
-                    </span>
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     MODULE 08 — LOCATION
-========================================================= -->
-
-<section class="location-section">
-
-
-    <div class="location-inner">
-
-
-        <div class="location-map">
-
-
-            <div class="map-center">
-
-                <div class="map-pin">
-
-                    <i class="fas fa-location-dot"></i>
-
-                </div>
-
-                <span>
-                    HYDERABAD / INDIA
-                </span>
-
-            </div>
-
-
-        </div>
-
-
-        <div class="location-content">
-
-            <span>
-                OUR LOCATION
-            </span>
-
-            <h2>
-                Hyderabad.
-            </h2>
-
-            <p>
-
-                Our operations are based in Hyderabad,
-                Telangana, connecting engineering, technology
-                and project capabilities across diverse
-                infrastructure requirements.
-
-            </p>
-
-
-            <div class="location-address">
-
-                <strong>
-                    ALPHA NUMERIC
-                </strong>
-
-                <p>
-                    Hyderabad, Telangana, India
-                </p>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     MODULE 09 — CONTACT CTA
-========================================================= -->
-
-<section class="contact-cta">
-
-
-    <div class="contact-cta-inner">
-
-
-        <div class="cta-circle"></div>
-
-
-        <div class="cta-content">
-
-
-            <span>
-                READY WHEN YOU ARE
-            </span>
-
-
-            <h2>
-                Let's Build
-                Something Intelligent.
-            </h2>
-
-
-            <p>
-
-                Start the conversation today and explore how
-                technology, engineering and innovation can
-                transform your next project.
-
-            </p>
-
-
-            <a
-                href="#enquiry"
-                class="cta-button">
-
-                SEND AN ENQUIRY
-
-                <i class="fas fa-arrow-up"></i>
-
-            </a>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-  <!-- =========================================================
-     MODULE 10 — CORPORATE FOOTER
-========================================================= -->
-<!-- footer start -->
-
-    <footer class="premium-footer">
-
-        <!-- Ambient Background -->
-        <div class="footer-grid"></div>
-        <div class="footer-glow footer-glow-1"></div>
-        <div class="footer-glow footer-glow-2"></div>
-
-        <div class="container">
+<!-- HTML -->
+ <!-- =========================================================
+     ALPHA NUMERIC — PREMIUM CORPORATE WHITE FOOTER
+     Sharp architectural layout | No curves | No toy styling
+     Complete HTML + CSS + automatic year
+========================================================== -->
+
+  <footer class="corp-footer" aria-label="Website footer">
+
+        <div class="corp-footer-container">
 
             <!-- =====================================================
-             TOP CTA
-             ===================================================== -->
+             PRIMARY CTA
+        ====================================================== -->
+            <section class="corp-footer-cta" aria-labelledby="corp-footer-title">
 
-            <div class="footer-cta">
+                <div class="corp-footer-cta-copy">
 
-                <div class="footer-cta-line">
-                    <span></span>
-                    <small>LET'S BUILD WHAT'S NEXT</small>
-                </div>
-
-                <div class="footer-cta-main">
-
-                    <div class="footer-cta-title">
-                        <h2>
-                            Engineering
-                            <span>the future.</span>
-                        </h2>
-                    </div>
-
-                    <a href="#contact" class="footer-cta-button">
-                        <span>Start a Conversation</span>
-                        <i>↗</i>
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- =====================================================
-             MAIN FOOTER
-             ===================================================== -->
-
-            <div class="footer-main">
-
-                <!-- BRAND -->
-                <div class="footer-brand-column">
-
-                    <a href="index.html" class="footer-logo-wrap">
-
-                        <span class="footer-logo-ring"></span>
-
-                        <img src="assets/img/w-alpha.png" alt="Company Logo" class="premium-footer-logo">
-
-                    </a>
-
-                    <p class="footer-brand-text">
-                        Technology-driven solutions across
-                        <strong>Power, Energy, Automation and R&D</strong>
-                        — engineered for a smarter, connected and
-                        future-ready world.
+                    <p class="corp-footer-kicker">
+                        <span>01</span>
+                        <i></i>
+                        Start a project
                     </p>
 
-                    <div class="footer-status">
-
-                        <span class="status-dot"></span>
-
-                        <span>Building the Pride of a Nation</span>
-
-                    </div>
+                    <h2 id="corp-footer-title">
+                        Let’s engineer
+                        <span>what comes next.</span>
+                    </h2>
 
                 </div>
 
+                <div class="corp-footer-cta-action">
 
-                <!-- COMPANY -->
-                <div class="footer-column">
+                    <p>
+                        Intelligent engineering for power, energy,
+                        automation and future-ready systems.
+                    </p>
 
-                    <div class="footer-column-label">
-                        <span>01</span>
-                        COMPANY
-                    </div>
-
-                    <ul class="premium-footer-links">
-
-                        <li>
-                            <a href="index.html">
-                                <span>Home</span>
-                                <b>↗</b>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="about.html">
-                                <span>About Us</span>
-                                <b>↗</b>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#contact">
-                                <span>Contact</span>
-                                <b>↗</b>
-                            </a>
-                        </li>
-
-                    </ul>
+                    <a href="contact.html" class="corp-footer-button">
+                        <span>Start a conversation</span>
+                        <i aria-hidden="true">↗</i>
+                    </a>
 
                 </div>
 
+            </section>
 
-                <!-- SOLUTIONS -->
-                <div class="footer-column">
 
-                    <div class="footer-column-label">
-                        <span>02</span>
-                        SOLUTIONS
+            <!-- =====================================================
+             BRAND + NAVIGATION
+        ====================================================== -->
+            <div class="corp-footer-main">
+
+                <!-- BRAND -->
+                <section class="corp-footer-brand" aria-label="Alpha Numeric">
+
+                    <a href="index.html" class="corp-footer-logo" aria-label="Alpha Numeric home">
+                        <img src="assets/img/b-alpha.png" alt="Alpha Numeric">
+                    </a>
+
+                    <p>
+                        Technology-driven engineering solutions
+                        designed for dependable performance,
+                        meaningful progress and long-term value.
+                    </p>
+
+                    <div class="corp-footer-status">
+                        <span></span>
+                        Building the Pride of a Nation
                     </div>
 
-                    <ul class="premium-footer-links">
-                          <li>
-                            <a href="solar-energy.html">
-                                <span>Renewable Energy</span>
-                                <b>↗</b>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="lt.html">
-                                <span>Power </span>
-                                <b>↗</b>
-                            </a>
-                        </li>
-
-                      
-
-                        <li>
-                            <a href="home-automation.html">
-                                <span>Automation</span>
-                                <b>↗</b>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="smart-pole.html">
-                                <span>R&amp;D</span>
-                                <b>↗</b>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="power-products.html">
-                                <span>Products</span>
-                                <b>↗</b>
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </div>
+                </section>
 
 
-                <!-- CONTACT -->
-                <div class="footer-column footer-contact-column">
+                <!-- NAVIGATION -->
+                <nav class="corp-footer-nav" aria-label="Footer navigation">
 
-                    <div class="footer-column-label">
-                        <span>03</span>
-                        CONTACT
-                    </div>
+                    <!-- COMPANY -->
+                    <div class="corp-footer-column">
 
-                    <div class="premium-contact-list">
-
-                        <!-- PHONE -->
-                        <a href="tel:+919000000000" class="premium-contact-item">
-
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-
-                            <div class="contact-info">
-
-                                <span>Phone</span>
-
-                                <strong>
-                                    +91 00000 00000
-                                </strong>
-
-                            </div>
-
-                        </a>
-
-
-                        <!-- EMAIL -->
-                        <a href="mailto:info@alphanumeric.com" class="premium-contact-item">
-
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-
-                            <div class="contact-info">
-
-                                <span>Email</span>
-
-                                <strong>
-                                    info@alphanumeric.com
-                                </strong>
-
-                            </div>
-
-                        </a>
-
-
-                        <!-- LOCATION -->
-                        <div class="premium-contact-item">
-
-                            <div class="contact-icon">
-                                <i class="fas fa-location-dot"></i>
-                            </div>
-
-                            <div class="contact-info">
-
-                                <span>Location</span>
-
-                                <strong>
-                                    Madhapur, Hyderabad
-                                </strong>
-
-                            </div>
-
+                        <div class="corp-footer-column-heading">
+                            <span>01</span>
+                            <h3>Company</h3>
                         </div>
 
+                        <ul>
+                            <li><a href="index.html"><span>Home</span><i>↗</i></a></li>
+                            <li><a href="about.html"><span>About</span><i>↗</i></a></li>
+                            <li><a href="contact.html"><span>Contact</span><i>↗</i></a></li>
+                        </ul>
+
                     </div>
 
-                </div>
+
+                    <!-- ENERGY -->
+                    <div class="corp-footer-column">
+
+                        <div class="corp-footer-column-heading">
+                            <span>02</span>
+                            <h3>Renewable Energy</h3>
+                        </div>
+
+                        <ul>
+                            <li><a href="solar-energy.html"><span>Solar</span><i>↗</i></a></li>
+                            <!-- <li><a href="wind-energy.html"><span>Wind Energy</span><i>↗</i></a></li>
+                            <li><a href="biomass-energy.html"><span>Biomass Energy</span><i>↗</i></a></li>
+                            <li><a href="hydel-energy.html"><span>Hydel Energy</span><i>↗</i></a></li> -->
+                        </ul>
+
+                    </div>
+
+
+                    <!-- POWER -->
+                    <div class="corp-footer-column">
+
+                        <div class="corp-footer-column-heading">
+                            <span>03</span>
+                            <h3>Power</h3>
+                        </div>
+
+                        <ul>
+                            <li><a href="lt.html"><span>LT</span><i>↗</i></a></li>
+                            <li><a href="ht.html"><span>HT</span><i>↗</i></a></li>
+                            <li><a href="eht.html"><span>EHT</span><i>↗</i></a></li>
+                            <li><a href="control-panels.html"><span>Control Panels</span><i>↗</i></a></li>
+                            <li><a href="panel-boards.html"><span>Panel Boards</span><i>↗</i></a></li>
+                        </ul>
+
+                    </div>
+
+
+                    <!-- AUTOMATION -->
+                    <div class="corp-footer-column">
+
+                        <div class="corp-footer-column-heading">
+                            <span>04</span>
+                            <h3>Automation</h3>
+                        </div>
+
+                        <ul>
+                            <li><a href="home-automation.html"><span>Home Automation</span><i>↗</i></a></li>
+                            <li><a href="commercial-automation.html"><span>Commercial</span><i>↗</i></a></li>
+                            <li><a href="industrial-automation.html"><span>Industrial</span><i>↗</i></a></li>
+                            <li><a href="hospital-automation.html"><span>Hospital</span><i>↗</i></a></li>
+                            <li><a href="hotel-automation.html"><span>Hotel</span><i>↗</i></a></li>
+                        </ul>
+
+                    </div>
+
+
+                    <!-- R&D / PRODUCTS -->
+                    <div class="corp-footer-column">
+
+                        <div class="corp-footer-column-heading">
+                            <span>05</span>
+                            <h3>R&amp;D / Products</h3>
+                        </div>
+
+                        <ul>
+                            <li><a href="smart-pole-r&d.html"><span>Smart Pole</span><i>↗</i></a></li>
+                            <li><a href="smart-bollard-r&d.html"><span>Smart Bollard</span><i>↗</i></a></li>
+                            <li><a href="smart_conference_table.html"><span>Smart Conference Table</span><i>↗</i></a></li>
+                            <li><a href="smart_bar_counter.html"><span>Smart Bar Counter</span><i>↗</i></a></li>
+                            <li><a href="smart_window_leafac.html"><span>Smart Window Leaf AC</span><i>↗</i></a></li>
+                        </ul>
+
+                    </div>
+
+                </nav>
 
             </div>
 
 
             <!-- =====================================================
-             TECHNOLOGY STRIP
-             ===================================================== -->
+             CONTACT BAND
+        ====================================================== -->
+            <section class="corp-footer-contact" aria-label="Contact information">
 
-            <div class="footer-tech-strip">
+                <div class="corp-footer-contact-heading">
+                    <span>Contact</span>
+                    <h3>Let’s connect.</h3>
+                </div>
 
-                <span>RENEWABLE ENERGY</span>
-                <i></i>
+                <a href="tel:+919000000000" class="corp-footer-contact-item">
+                    <span>01 / Phone</span>
+                    <strong>+91 00000 00000</strong>
+                    <i aria-hidden="true">↗</i>
+                </a>
 
-                <span>POWER</span>
-                <i></i>
+                <a href="mailto:info@alphanumeric.com" class="corp-footer-contact-item">
+                    <span>02 / Email</span>
+                    <strong>info@alphanumeric.com</strong>
+                    <i aria-hidden="true">↗</i>
+                </a>
 
-                <span>AUTOMATION</span>
-                <i></i>
+                <div class="corp-footer-contact-item">
+                    <span>03 / Location</span>
+                    <strong>Madhapur, Hyderabad</strong>
+                    <i aria-hidden="true">—</i>
+                </div>
 
-                <span>R&amp;D</span>
-                <i></i>
-
-                <span>INNOVATION</span>
-
-            </div>
+            </section>
 
 
             <!-- =====================================================
-             BOTTOM
-             ===================================================== -->
+             BOTTOM BAR
+        ====================================================== -->
+            <div class="corp-footer-bottom">
 
-            <div class="footer-bottom">
+                <p>
+                    © <span id="corpFooterYear"></span> Alpha Numeric.
+                    All rights reserved.
+                </p>
 
-                <div class="footer-copyright">
-
-                    © <span id="footerYear"></span>
-                    All Rights Reserved.
-
+                <div class="corp-footer-disciplines" aria-label="Core disciplines">
+                    <span>Renewable Energy</span>
+                    <i></i>
+                    <span>Power</span>
+                    <i></i>
+                    <span>Automation</span>
+                    <i></i>
+                    <span>R&amp;D</span>
                 </div>
 
-                <div class="footer-bottom-center">
+                <div class="corp-footer-bottom-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
 
-                    <span>
-                        Building the Pride of a Nation
-                    </span>
-
-                </div>
-
-                <div class="footer-bottom-links">
-
-                    <a href="#">
-                        Privacy
+                    <a href="#page-top" class="corp-footer-top-link">
+                        Back to top
+                        <span aria-hidden="true">↑</span>
                     </a>
-
-                    <a href="#">
-                        Terms
-                    </a>
-
                 </div>
 
             </div>
@@ -3349,1461 +1139,1126 @@ document.addEventListener("DOMContentLoaded", function () {
 
     </footer>
 
-    <style>
-        /* =========================================================
-   PREMIUM FOOTER
-   ========================================================= */
 
-        .premium-footer {
 
-            --footer-bg: #030506;
-            --footer-bg-2: #070b0d;
-            --footer-white: #ffffff;
-            --footer-muted: rgba(255, 255, 255, .54);
-            --footer-soft: rgba(255, 255, 255, .30);
-            --footer-line: rgba(255, 255, 255, .10);
-            --footer-orange: #ff4b0b;
-
-            position: relative;
-
-            width: 100%;
-
-            background:
-                radial-gradient(circle at 75% 10%,
-                    rgba(255, 75, 11, .07),
-                    transparent 28%),
-                linear-gradient(135deg,
-                    var(--footer-bg),
-                    var(--footer-bg-2));
-
-            color: #fff;
-
-            overflow: hidden;
-
-            font-family:
-                "Varela Round",
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                sans-serif;
-
-            isolation: isolate;
-
-        }
-
-
-        /* =========================================================
-   GRID
-   ========================================================= */
-
-        .footer-grid {
-
-            position: absolute;
-
-            inset: 0;
-
-            z-index: -2;
-
-            opacity: .25;
-
-            background-image:
-
-                linear-gradient(rgba(255, 255, 255, .035) 1px,
-                    transparent 1px),
-
-                linear-gradient(90deg,
-                    rgba(255, 255, 255, .035) 1px,
-                    transparent 1px);
-
-            background-size: 55px 55px;
-
-            mask-image:
-                linear-gradient(180deg,
-                    black,
-                    transparent 85%);
-
-        }
-
-
-        /* =========================================================
-   AMBIENT GLOW
-   ========================================================= */
-
-        .footer-glow {
-
-            position: absolute;
-
-            border-radius: 50%;
-
-            pointer-events: none;
-
-            filter: blur(90px);
-
-            z-index: -1;
-
-            animation:
-                footerGlowMove 9s ease-in-out infinite alternate;
-
-        }
-
-        .footer-glow-1 {
-
-            width: 350px;
-            height: 350px;
-
-            top: -200px;
-            right: 12%;
-
-            background:
-                rgba(255, 75, 11, .10);
-
-        }
-
-        .footer-glow-2 {
-
-            width: 260px;
-            height: 260px;
-
-            bottom: 80px;
-            left: 10%;
-
-            background:
-                rgba(255, 255, 255, .035);
-
-            animation-delay: 2s;
-
-        }
-
-
-        @keyframes footerGlowMove {
-
-            from {
-
-                transform:
-                    translate3d(-20px, 0, 0) scale(1);
-
-            }
-
-            to {
-
-                transform:
-                    translate3d(35px, 20px, 0) scale(1.15);
-
-            }
-
-        }
-
-
-        /* =========================================================
-   CONTAINER
-   ========================================================= */
-
-        .premium-footer .container {
-
-            position: relative;
-
-            z-index: 2;
-
-        }
-
-
-        /* =========================================================
-   CTA
-   ========================================================= */
-
-        .footer-cta {
-
-            padding:
-                90px 0 72px;
-
-            border-bottom:
-                1px solid var(--footer-line);
-
-        }
-
-
-        .footer-cta-line {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 12px;
-
-            margin-bottom: 25px;
-
-        }
-
-
-        .footer-cta-line span {
-
-            width: 35px;
-
-            height: 1px;
-
-            background:
-                var(--footer-orange);
-
-        }
-
-
-        .footer-cta-line small {
-
-            color:
-                rgba(255, 255, 255, .42);
-
-            font-size: 8px;
-
-            letter-spacing:
-                .20rem;
-
-        }
-
-
-        .footer-cta-main {
-
-            display: flex;
-
-            align-items: flex-end;
-
-            justify-content: space-between;
-
-            gap: 40px;
-
-        }
-
-
-        .footer-cta-title h2 {
-
-            margin: 0;
-
-            font-size:
-                clamp(52px, 7vw, 100px);
-
-            font-weight: 400;
-
-            line-height: .90;
-
-            letter-spacing:
-                -.055em;
-
-        }
-
-
-        .footer-cta-title h2 span {
-
-            display: block;
-
-            color:
-                rgba(255, 255, 255, .28);
-
-        }
-
-
-        /* =========================================================
-   CTA BUTTON
-   ========================================================= */
-
-        .footer-cta-button {
-
-            position: relative;
-
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            gap: 30px;
-
-            min-width: 215px;
-
-            padding: 17px 20px;
-
-            color: #fff;
-
-            border:
-                1px solid rgba(255, 255, 255, .22);
-
-            text-decoration: none;
-
-            overflow: hidden;
-
-            transition:
-                color .4s ease,
-                border-color .4s ease,
-                transform .4s ease;
-
-        }
-
-
-        .footer-cta-button::before {
-
-            content: "";
-
-            position: absolute;
-
-            inset: 0;
-
-            background:
-                var(--footer-orange);
-
-            transform:
-                translateX(-101%);
-
-            transition:
-                transform .45s cubic-bezier(.2, .7, .2, 1);
-
-            z-index: -1;
-
-        }
-
-
-        .footer-cta-button span {
-
-            position: relative;
-
-            z-index: 2;
-
-            font-size: 9px;
-
-            letter-spacing: .13rem;
-
-            text-transform: uppercase;
-
-        }
-
-
-        .footer-cta-button i {
-
-            position: relative;
-
-            z-index: 2;
-
-            font-size: 18px;
-
-            font-style: normal;
-
-            transition:
-                transform .35s ease;
-
-        }
-
-
-        .footer-cta-button:hover {
-
-            color: #fff;
-
-            border-color:
-                var(--footer-orange);
-
-            transform:
-                translateY(-4px);
-
-        }
-
-
-        .footer-cta-button:hover::before {
-
-            transform:
-                translateX(0);
-
-        }
-
-
-        .footer-cta-button:hover i {
-
-            transform:
-                translate(5px, -5px);
-
-        }
-
-
-        /* =========================================================
-   MAIN FOOTER
-   ========================================================= */
-
-        .footer-main {
-
-            display: grid;
-
-            grid-template-columns:
-                1.45fr .7fr 1fr 1.15fr;
-
-            gap: 55px;
-
-            padding:
-                75px 0 70px;
-
-        }
-
-
-        /* =========================================================
-   LOGO
-   ========================================================= */
-
-        .footer-logo-wrap {
-
-            position: relative;
-
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            width: 190px;
-
-            height: 85px;
-
-            margin-bottom: 28px;
-
-            text-decoration: none;
-
-        }
-
-
-        .premium-footer-logo {
-
-            position: relative;
-
-            z-index: 2;
-
-            width: 175px;
-
-            height: auto;
-
-            object-fit: contain;
-
-            transform-origin: center;
-
-            filter:
-                drop-shadow(0 0 0 rgba(255, 75, 11, 0));
-
-            transition:
-                transform .6s cubic-bezier(.2, .7, .2, 1),
-                filter .6s ease;
-
-            animation:
-                footerLogoFloat 5s ease-in-out infinite;
-
-        }
-
-
-        .footer-logo-ring {
-
-            position: absolute;
-
-            width: 72px;
-
-            height: 72px;
-
-            border:
-                1px solid rgba(255, 75, 11, .15);
-
-            border-radius: 50%;
-
-            opacity: .8;
-
-            animation:
-                footerRing 7s linear infinite;
-
-        }
-
-
-        .footer-logo-ring::before {
-
-            content: "";
-
-            position: absolute;
-
-            inset: -8px;
-
-            border:
-                1px solid rgba(255, 255, 255, .04);
-
-            border-radius: 50%;
-
-        }
-
-
-        .footer-logo-wrap:hover .premium-footer-logo {
-
-            transform:
-                scale(1.055);
-
-            filter:
-                drop-shadow(0 0 20px rgba(255, 75, 11, .20));
-
-        }
-
-
-        @keyframes footerLogoFloat {
-
-            0%,
-            100% {
-
-                transform:
-                    translateY(0);
-
-            }
-
-            50% {
-
-                transform:
-                    translateY(-4px);
-
-            }
-
-        }
-
-
-        @keyframes footerRing {
-
-            from {
-
-                transform:
-                    rotate(0deg);
-
-            }
-
-            to {
-
-                transform:
-                    rotate(360deg);
-
-            }
-
-        }
-
-
-        /* =========================================================
-   BRAND TEXT
-   ========================================================= */
-
-        .footer-brand-text {
-
-            max-width: 390px;
-
-            margin: 0;
-
-            color:
-                var(--footer-muted);
-
-            font-size: 13px;
-
-            line-height: 1.8;
-
-        }
-
-
-        .footer-brand-text strong {
-
-            color:
-                rgba(255, 255, 255, .75);
-
-            font-weight: 400;
-
-        }
-
-
-        /* =========================================================
-   STATUS
-   ========================================================= */
-
-        .footer-status {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 9px;
-
-            margin-top: 27px;
-
-            color:
-                rgba(255, 255, 255, .38);
-
-            font-size: 8px;
-
-            letter-spacing:
-                .15rem;
-
-            text-transform:
-                uppercase;
-
-        }
-
-
-        .status-dot {
-
-            width: 6px;
-
-            height: 6px;
-
-            border-radius: 50%;
-
-            background:
-                var(--footer-orange);
-
-            box-shadow:
-                0 0 0 0 rgba(255, 75, 11, .45);
-
-            animation:
-                statusPulse 2s infinite;
-
-        }
-
-
-        @keyframes statusPulse {
-
-            0% {
-
-                box-shadow:
-                    0 0 0 0 rgba(255, 75, 11, .45);
-
-            }
-
-            70% {
-
-                box-shadow:
-                    0 0 0 7px rgba(255, 75, 11, 0);
-
-            }
-
-            100% {
-
-                box-shadow:
-                    0 0 0 0 rgba(255, 75, 11, 0);
-
-            }
-
-        }
-
-
-        /* =========================================================
-   COLUMN
-   ========================================================= */
-
-        .footer-column-label {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 12px;
-
-            margin-bottom: 27px;
-
-            color:
-                rgba(255, 255, 255, .43);
-
-            font-size: 8px;
-
-            letter-spacing:
-                .18rem;
-
-        }
-
-
-        .footer-column-label span {
-
-            color:
-                var(--footer-orange);
-
-            font-size: 8px;
-
-        }
-
-
-        /* =========================================================
-   LINKS
-   ========================================================= */
-
-        .premium-footer-links {
-
-            list-style: none;
-
-            padding: 0;
-
-            margin: 0;
-
-        }
-
-
-        .premium-footer-links li {
-
-            margin-bottom: 14px;
-
-        }
-
-
-        .premium-footer-links a {
-
-            position: relative;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            gap: 12px;
-
-            width: 100%;
-
-            color:
-                rgba(255, 255, 255, .58);
-
-            text-decoration: none;
-
-            font-size: 13px;
-
-            transition:
-                color .3s ease,
-                padding-left .3s ease;
-
-        }
-
-
-        .premium-footer-links a b {
-
-            color:
-                rgba(255, 255, 255, .18);
-
-            font-size: 14px;
-
-            font-weight: 400;
-
-            opacity: 0;
-
-            transform:
-                translate(-5px, 5px);
-
-            transition:
-                opacity .3s ease,
-                transform .3s ease;
-
-        }
-
-
-        .premium-footer-links a:hover {
-
-            color: #fff;
-
-            padding-left: 6px;
-
-        }
-
-
-        .premium-footer-links a:hover b {
-
-            opacity: 1;
-
-            color:
-                var(--footer-orange);
-
-            transform:
-                translate(0, 0);
-
-        }
-
-
-        /* =========================================================
-   CONTACT
-   ========================================================= */
-
-        .premium-contact-list {
-
-            display: flex;
-
-            flex-direction: column;
-
-            gap: 21px;
-
-        }
-
-
-        .premium-contact-item {
-
-            display: flex;
-
-            align-items: flex-start;
-
-            gap: 14px;
-
-            color: #fff;
-
-            text-decoration: none;
-
-        }
-
-
-        .contact-icon {
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            width: 34px;
-
-            height: 34px;
-
-            flex: 0 0 34px;
-
-            border:
-                1px solid rgba(255, 255, 255, .10);
-
-            color:
-                rgba(255, 255, 255, .55);
-
-            transition:
-                background .35s ease,
-                border-color .35s ease,
-                color .35s ease,
-                transform .35s ease;
-
-        }
-
-
-        .contact-icon i {
-
-            font-size: 12px;
-
-        }
-
-
-        .premium-contact-item:hover .contact-icon {
-
-            background:
-                var(--footer-orange);
-
-            border-color:
-                var(--footer-orange);
-
-            color: #fff;
-
-            transform:
-                translateY(-2px);
-
-        }
-
-
-        .contact-info {
-
-            display: flex;
-
-            flex-direction: column;
-
-            gap: 4px;
-
-        }
-
-
-        .contact-info span {
-
-            color:
-                rgba(255, 255, 255, .30);
-
-            font-size: 7px;
-
-            letter-spacing:
-                .15rem;
-
-            text-transform:
-                uppercase;
-
-        }
-
-
-        .contact-info strong {
-
-            color:
-                rgba(255, 255, 255, .72);
-
-            font-size: 12px;
-
-            font-weight: 400;
-
-            line-height: 1.5;
-
-            word-break: break-word;
-
-            transition:
-                color .3s ease;
-
-        }
-
-
-        .premium-contact-item:hover .contact-info strong {
-
-            color: #fff;
-
-        }
-
-
-        /* =========================================================
-   TECHNOLOGY STRIP
-   ========================================================= */
-
-        .footer-tech-strip {
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            flex-wrap: wrap;
-
-            gap: 18px;
-
-            padding:
-                23px 0;
-
-            border-top:
-                1px solid var(--footer-line);
-
-            border-bottom:
-                1px solid var(--footer-line);
-
-        }
-
-
-        .footer-tech-strip span {
-
-            color:
-                rgba(255, 255, 255, .28);
-
-            font-size: 7px;
-
-            letter-spacing:
-                .18rem;
-
-            transition:
-                color .3s ease;
-
-        }
-
-
-        .footer-tech-strip span:hover {
-
-            color:
-                var(--footer-orange);
-
-        }
-
-
-        .footer-tech-strip i {
-
-            width: 3px;
-
-            height: 3px;
-
-            border-radius: 50%;
-
-            background:
-                rgba(255, 75, 11, .65);
-
-        }
-
-
-        /* =========================================================
-   BOTTOM
-   ========================================================= */
-
-        .footer-bottom {
-
-            display: grid;
-
-            grid-template-columns:
-                1fr auto 1fr;
-
-            align-items: center;
-
-            gap: 25px;
-
-            min-height: 80px;
-
-        }
-
-
-        .footer-copyright {
-
-            color:
-                rgba(255, 255, 255, .28);
-
-            font-size: 10px;
-
-        }
-
-
-        .footer-bottom-center {
-
-            color:
-                rgba(255, 255, 255, .20);
-
-            font-size: 7px;
-
-            letter-spacing:
-                .18rem;
-
-            text-align: center;
-
-        }
-
-
-        .footer-bottom-links {
-
-            display: flex;
-
-            justify-content: flex-end;
-
-            gap: 22px;
-
-        }
-
-
-        .footer-bottom-links a {
-
-            color:
-                rgba(255, 255, 255, .28);
-
-            text-decoration: none;
-
-            font-size: 10px;
-
-            transition:
-                color .3s ease;
-
-        }
-
-
-        .footer-bottom-links a:hover {
-
-            color: #fff;
-
-        }
-
-
-        /* =========================================================
-   TABLET
-   ========================================================= */
-
-        @media (max-width: 991px) {
-
-            .footer-cta {
-
-                padding:
-                    65px 0 55px;
-
-            }
-
-
-            .footer-cta-main {
-
-                align-items: flex-start;
-
-                flex-direction: column;
-
-            }
-
-
-            .footer-cta-button {
-
-                min-width: 210px;
-
-            }
-
-
-            .footer-main {
-
-                grid-template-columns:
-                    1.3fr 1fr;
-
-                gap: 55px 40px;
-
-                padding:
-                    60px 0;
-
-            }
-
-
-            .footer-brand-column {
-
-                grid-column:
-                    1 / -1;
-
-            }
-
-
-            .footer-brand-text {
-
-                max-width: 520px;
-
-            }
-
-
-            .footer-bottom {
-
-                grid-template-columns:
-                    1fr 1fr;
-
-                padding:
-                    22px 0;
-
-            }
-
-
-            .footer-bottom-center {
-
-                display: none;
-
-            }
-
-
-            .footer-bottom-links {
-
-                justify-content: flex-end;
-
-            }
-
-        }
-
-
-        /* =========================================================
-   MOBILE
-   ========================================================= */
-
-        @media (max-width: 767px) {
-
-            .premium-footer {
-
-                text-align: left;
-
-            }
-
-
-            .footer-cta {
-
-                padding:
-                    55px 0 45px;
-
-            }
-
-
-            .footer-cta-line {
-
-                margin-bottom: 20px;
-
-            }
-
-
-            .footer-cta-title h2 {
-
-                font-size:
-                    clamp(48px, 15vw, 65px);
-
-            }
-
-
-            .footer-cta-button {
-
-                width: 100%;
-
-                min-width: 0;
-
-                margin-top: 5px;
-
-            }
-
-
-            .footer-main {
-
-                display: flex;
-
-                flex-direction: column;
-
-                gap: 42px;
-
-                padding:
-                    48px 0;
-
-            }
-
-
-            .footer-brand-column {
-
-                width: 100%;
-
-            }
-
-
-            .footer-logo-wrap {
-
-                width: 175px;
-
-                height: 75px;
-
-            }
-
-
-            .premium-footer-logo {
-
-                width: 160px;
-
-            }
-
-
-            .footer-brand-text {
-
-                max-width: 100%;
-
-                font-size: 12px;
-
-                line-height: 1.75;
-
-            }
-
-
-            .footer-column {
-
-                width: 100%;
-
-            }
-
-
-            .footer-column-label {
-
-                margin-bottom: 20px;
-
-            }
-
-
-            .premium-footer-links li {
-
-                margin-bottom: 13px;
-
-            }
-
-
-            .premium-footer-links a {
-
-                font-size: 12px;
-
-            }
-
-
-            .premium-contact-list {
-
-                gap: 18px;
-
-            }
-
-
-            .contact-info strong {
-
-                font-size: 11px;
-
-            }
-
-
-            .footer-tech-strip {
-
-                justify-content: flex-start;
-
-                gap: 12px;
-
-                line-height: 2;
-
-            }
-
-
-            .footer-tech-strip span {
-
-                font-size: 6px;
-
-            }
-
-
-            .footer-tech-strip i {
-
-                width: 2px;
-
-                height: 2px;
-
-            }
-
-
-            .footer-bottom {
-
-                display: flex;
-
-                flex-direction: column;
-
-                align-items: flex-start;
-
-                gap: 14px;
-
-                padding:
-                    24px 0 28px;
-
-            }
-
-
-            .footer-bottom-links {
-
-                justify-content: flex-start;
-
-                gap: 20px;
-
-            }
-
-        }
-
-
-        /* =========================================================
-   SMALL MOBILE
-   ========================================================= */
-
-        @media (max-width: 375px) {
-
-            .footer-cta-title h2 {
-
-                font-size: 45px;
-
-            }
-
-
-            .footer-cta {
-
-                padding-top: 45px;
-
-            }
-
-
-            .footer-main {
-
-                gap: 36px;
-
-            }
-
-
-            .footer-tech-strip {
-
-                gap: 9px;
-
-            }
-
-
-            .footer-tech-strip span {
-
-                letter-spacing:
-                    .10rem;
-
-            }
-
-        }
-
-
-        /* =========================================================
-   REDUCED MOTION
-   ========================================================= */
-
-        @media (prefers-reduced-motion: reduce) {
-
-            .footer-glow,
-            .premium-footer-logo,
-            .footer-logo-ring,
-            .status-dot {
-
-                animation: none !important;
-
-            }
-
-            .footer-cta-button,
-            .premium-footer-links a,
-            .contact-icon,
-            .premium-footer-logo {
-
-                transition: none !important;
-
-            }
-
-        }
-    </style>
-    <script>
-
-        document.addEventListener(
-            "DOMContentLoaded",
-            function () {
-
-                /* Dynamic year */
-
-                const year =
-                    document.getElementById(
-                        "footerYear"
-                    );
-
-                if (year) {
-
-                    year.textContent =
-                        new Date().getFullYear();
-
-                }
-
-
-                /* Subtle logo interaction */
-
-                const logo =
-                    document.querySelector(
-                        ".premium-footer-logo"
-                    );
-
-                if (logo) {
-
-                    logo.addEventListener(
-                        "mouseenter",
-                        function () {
-
-                            logo.style.animationPlayState =
-                                "paused";
-
-                        }
-                    );
-
-                    logo.addEventListener(
-                        "mouseleave",
-                        function () {
-
-                            logo.style.animationPlayState =
-                                "running";
-
-                        }
-                    );
-
-                }
-
-            }
+<!-- CSS -->
+<style>
+
+/* =========================================================
+   CORPORATE WHITE FOOTER — DESIGN SYSTEM
+========================================================== */
+
+.corp-footer {
+    --footer-bg: #f5f5f1;
+    --footer-white: #ffffff;
+    --footer-ink: #102729;
+    --footer-text: #4f6062;
+    --footer-muted: #7a8889;
+    --footer-line: rgba(16, 39, 41, 0.16);
+    --footer-line-light: rgba(16, 39, 41, 0.09);
+    --footer-accent: #ee5a29;
+
+    position: relative;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    color: var(--footer-ink);
+    background: var(--footer-bg);
+
+    font-family:
+        "Varela Round",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+}
+
+.corp-footer::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--footer-accent) 0 12%,
+            var(--footer-ink) 12% 100%
         );
+}
 
-    </script>
-    <!-- footer end -->
-    
+.corp-footer *,
+.corp-footer *::before,
+.corp-footer *::after {
+    box-sizing: border-box;
 
+    /* Intentionally sharp: no curved or toy-like UI */
+    border-radius: 0 !important;
+}
+
+.corp-footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.corp-footer-container {
+    width: min(calc(100% - 64px), 1500px);
+
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   CTA
+========================================================== */
+
+.corp-footer-cta {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(300px, 0.55fr);
+    align-items: end;
+    gap: clamp(55px, 8vw, 140px);
+
+    padding: clamp(80px, 9vw, 140px) 0 clamp(64px, 7vw, 105px);
+}
+
+.corp-footer-kicker {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    margin: 0 0 26px;
+
+    color: var(--footer-muted);
+
+    font-size: 9px;
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+.corp-footer-kicker span {
+    color: var(--footer-accent);
+}
+
+.corp-footer-kicker i {
+    width: 45px;
+    height: 1px;
+
+    background: var(--footer-line);
+}
+
+.corp-footer-cta h2 {
+    max-width: 970px;
+
+    margin: 0;
+
+    color: var(--footer-ink);
+
+    font-size: clamp(57px, 7.2vw, 112px);
+    font-weight: 400;
+    line-height: 0.91;
+    letter-spacing: -0.065em;
+}
+
+.corp-footer-cta h2 span {
+    display: block;
+
+    color: rgba(16, 39, 41, 0.35);
+}
+
+.corp-footer-cta-action {
+    padding-bottom: 6px;
+}
+
+.corp-footer-cta-action > p {
+    margin: 0 0 29px;
+
+    color: var(--footer-text);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.corp-footer-button {
+    position: relative;
+    isolation: isolate;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+
+    width: 100%;
+    min-height: 60px;
+
+    padding: 0 19px 0 22px;
+    overflow: hidden;
+
+    border: 1px solid var(--footer-ink);
+
+    color: #ffffff !important;
+    background: var(--footer-ink);
+
+    font-size: 9px;
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+
+    transition:
+        color 0.35s ease,
+        background-color 0.35s ease;
+}
+
+.corp-footer-button::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 4px;
+
+    background: var(--footer-accent);
+
+    transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.corp-footer-button i {
+    font-size: 18px;
+    font-style: normal;
+
+    transition: transform 0.3s ease;
+}
+
+.corp-footer-button:hover::before {
+    width: 100%;
+}
+
+.corp-footer-button:hover i {
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   BRAND + NAVIGATION STRUCTURE
+========================================================== */
+
+.corp-footer-main {
+    display: grid;
+    grid-template-columns: minmax(265px, 0.72fr) minmax(0, 2.28fr);
+
+    border-top: 1px solid var(--footer-line);
+    border-bottom: 1px solid var(--footer-line);
+}
+
+.corp-footer-brand {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    padding: clamp(38px, 4vw, 62px) clamp(28px, 4vw, 58px) clamp(38px, 4vw, 62px) 0;
+
+    border-right: 1px solid var(--footer-line);
+}
+
+.corp-footer-logo {
+    align-self: flex-start;
+}
+
+.corp-footer-logo img {
+    display: block;
+
+    width: auto;
+    max-width: min(100%, 220px);
+    height: 78px;
+
+    object-fit: contain;
+}
+
+.corp-footer-brand > p {
+    max-width: 360px;
+
+    margin: 34px 0 50px;
+
+    color: var(--footer-text);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+.corp-footer-status {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    margin-top: auto;
+
+    color: var(--footer-muted);
+
+    font-size: 8px;
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+}
+
+.corp-footer-status span {
+    width: 19px;
+    height: 2px;
+
+    background: var(--footer-accent);
+}
+
+.corp-footer-nav {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    min-width: 0;
+}
+
+.corp-footer-column {
+    min-width: 0;
+
+    padding: clamp(38px, 3.5vw, 58px) clamp(20px, 2.6vw, 42px);
+
+    border-right: 1px solid var(--footer-line-light);
+}
+
+.corp-footer-column:last-child {
+    border-right: 0;
+}
+
+.corp-footer-column-heading {
+    margin-bottom: 29px;
+}
+
+.corp-footer-column-heading span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--footer-accent);
+
+    font-size: 8px;
+    letter-spacing: 0.14em;
+}
+
+.corp-footer-column-heading h3 {
+    margin: 0;
+
+    color: var(--footer-ink);
+
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    line-height: 1.4;
+
+    text-transform: uppercase;
+}
+
+.corp-footer-column ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.corp-footer-column li + li {
+    margin-top: 14px;
+}
+
+.corp-footer-column a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    color: var(--footer-text);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    font-size: 12.5px;
+    line-height: 1.4;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.corp-footer-column a i {
+    flex: 0 0 auto;
+
+    color: var(--footer-accent);
+
+    font-style: normal;
+
+    opacity: 0;
+    transform: translate(-4px, 4px);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.corp-footer-column a:hover {
+    color: var(--footer-ink);
+    transform: translateX(4px);
+}
+
+.corp-footer-column a:hover i {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+/* =========================================================
+   CONTACT BAND
+========================================================== */
+
+.corp-footer-contact {
+    display: grid;
+    grid-template-columns: minmax(210px, 0.72fr) repeat(3, minmax(0, 1fr));
+
+    border-bottom: 1px solid var(--footer-line);
+}
+
+.corp-footer-contact-heading,
+.corp-footer-contact-item {
+    min-width: 0;
+
+    padding: 32px clamp(20px, 3vw, 42px);
+
+    border-right: 1px solid var(--footer-line-light);
+}
+
+.corp-footer-contact-heading {
+    padding-left: 0;
+}
+
+.corp-footer-contact-item:last-child {
+    border-right: 0;
+}
+
+.corp-footer-contact-heading > span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--footer-accent);
+
+    font-size: 8px;
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+}
+
+.corp-footer-contact-heading h3 {
+    margin: 0;
+
+    color: var(--footer-ink);
+
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: -0.035em;
+}
+
+.corp-footer-contact-item {
+    position: relative;
+
+    display: block;
+}
+
+.corp-footer-contact-item > span,
+.corp-footer-contact-item > strong {
+    display: block;
+}
+
+.corp-footer-contact-item > span {
+    margin-bottom: 9px;
+
+    color: var(--footer-muted);
+
+    font-size: 8px;
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+}
+
+.corp-footer-contact-item > strong {
+    overflow-wrap: anywhere;
+
+    color: var(--footer-ink);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    font-size: 12.5px;
+    font-weight: 500;
+    line-height: 1.45;
+}
+
+.corp-footer-contact-item > i {
+    position: absolute;
+    top: 50%;
+    right: 24px;
+
+    color: var(--footer-accent);
+
+    font-size: 14px;
+    font-style: normal;
+
+    opacity: 0.62;
+    transform: translateY(-50%);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+a.corp-footer-contact-item:hover > i {
+    opacity: 1;
+    transform: translate(3px, calc(-50% - 3px));
+}
+
+
+/* =========================================================
+   BOTTOM BAR
+========================================================== */
+
+.corp-footer-bottom {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 28px;
+
+    min-height: 88px;
+}
+
+.corp-footer-bottom > p {
+    margin: 0;
+
+    color: var(--footer-muted);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    font-size: 10px;
+}
+
+.corp-footer-disciplines {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: rgba(16, 39, 41, 0.50);
+
+    font-size: 8px;
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+}
+
+.corp-footer-disciplines i {
+    width: 18px;
+    height: 1px;
+
+    background: var(--footer-line);
+}
+
+.corp-footer-bottom-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 21px;
+
+    color: var(--footer-muted);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    font-size: 10px;
+}
+
+.corp-footer-bottom-links > a {
+    transition: color 0.25s ease;
+}
+
+.corp-footer-bottom-links > a:hover {
+    color: var(--footer-ink);
+}
+
+.corp-footer-top-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding-left: 21px;
+
+    border-left: 1px solid var(--footer-line);
+
+    color: var(--footer-ink) !important;
+
+    font-family:
+        "Varela Round",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 8px;
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+.corp-footer-top-link span {
+    display: grid;
+    place-items: center;
+
+    width: 31px;
+    height: 31px;
+
+    border: 1px solid var(--footer-line);
+
+    color: var(--footer-accent);
+
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.corp-footer-top-link:hover span {
+    color: #ffffff;
+    background: var(--footer-ink);
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================== */
+
+.corp-footer a:focus-visible {
+    outline: 2px solid var(--footer-accent);
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — LAPTOP
+========================================================== */
+
+@media (max-width: 1250px) {
+
+    .corp-footer-main {
+        grid-template-columns: 1fr;
+    }
+
+    .corp-footer-brand {
+        display: grid;
+        grid-template-columns: 230px minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 42px;
+
+        padding: 38px 0;
+
+        border-right: 0;
+        border-bottom: 1px solid var(--footer-line);
+    }
+
+    .corp-footer-brand > p {
+        max-width: 650px;
+        margin: 0;
+    }
+
+    .corp-footer-status {
+        margin: 0;
+    }
+
+    .corp-footer-nav {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .corp-footer-column:first-child {
+        padding-left: 0;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================== */
+
+@media (max-width: 960px) {
+
+    .corp-footer-container {
+        width: min(calc(100% - 44px), 860px);
+    }
+
+    .corp-footer-cta {
+        grid-template-columns: 1fr;
+        gap: 43px;
+
+        padding: 86px 0 70px;
+    }
+
+    .corp-footer-cta-action {
+        max-width: 430px;
+    }
+
+    .corp-footer-brand {
+        grid-template-columns: 220px minmax(0, 1fr);
+    }
+
+    .corp-footer-status {
+        grid-column: 1 / -1;
+    }
+
+    .corp-footer-nav {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .corp-footer-column {
+        border-bottom: 1px solid var(--footer-line-light);
+    }
+
+    .corp-footer-column:nth-child(3) {
+        border-right: 0;
+    }
+
+    .corp-footer-column:nth-child(4) {
+        padding-left: 0;
+    }
+
+    .corp-footer-column:nth-child(n + 4) {
+        border-bottom: 0;
+    }
+
+    .corp-footer-column:last-child {
+        border-right: 1px solid var(--footer-line-light);
+    }
+
+    .corp-footer-contact {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .corp-footer-contact-heading {
+        grid-column: 1 / -1;
+
+        padding-left: 0;
+
+        border-right: 0;
+        border-bottom: 1px solid var(--footer-line);
+    }
+
+    .corp-footer-bottom {
+        grid-template-columns: 1fr auto;
+    }
+
+    .corp-footer-disciplines {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================== */
+
+@media (max-width: 650px) {
+
+    .corp-footer-container {
+        width: calc(100% - 30px);
+    }
+
+    .corp-footer-cta {
+        gap: 35px;
+
+        padding: 72px 0 58px;
+    }
+
+    .corp-footer-kicker {
+        margin-bottom: 20px;
+
+        font-size: 8px;
+    }
+
+    .corp-footer-cta h2 {
+        font-size: clamp(47px, 15vw, 68px);
+    }
+
+    .corp-footer-cta-action > p {
+        font-size: 13px;
+    }
+
+    .corp-footer-brand {
+        display: flex;
+        align-items: flex-start;
+        gap: 0;
+
+        padding: 35px 0;
+    }
+
+    .corp-footer-logo img {
+        height: 70px;
+    }
+
+    .corp-footer-brand > p {
+        margin: 28px 0 34px;
+
+        font-size: 12.5px;
+    }
+
+    .corp-footer-nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .corp-footer-column,
+    .corp-footer-column:first-child,
+    .corp-footer-column:nth-child(4) {
+        padding: 31px 18px;
+        border-right: 1px solid var(--footer-line-light);
+        border-bottom: 1px solid var(--footer-line-light);
+    }
+
+    .corp-footer-column:nth-child(odd) {
+        padding-left: 0;
+    }
+
+    .corp-footer-column:nth-child(even) {
+        padding-right: 0;
+        border-right: 0;
+    }
+
+    .corp-footer-column:nth-child(4) {
+        border-bottom: 1px solid var(--footer-line-light);
+    }
+
+    .corp-footer-column:last-child {
+        grid-column: 1 / -1;
+
+        padding-right: 0;
+        padding-left: 0;
+
+        border-right: 0;
+        border-bottom: 0;
+    }
+
+    .corp-footer-column-heading {
+        margin-bottom: 24px;
+    }
+
+    .corp-footer-column a i {
+        opacity: 0.45;
+        transform: none;
+    }
+
+    .corp-footer-contact {
+        grid-template-columns: 1fr;
+    }
+
+    .corp-footer-contact-heading,
+    .corp-footer-contact-item {
+        padding: 25px 0;
+
+        border-right: 0;
+        border-bottom: 1px solid var(--footer-line-light);
+    }
+
+    .corp-footer-contact-item:last-child {
+        border-bottom: 0;
+    }
+
+    .corp-footer-contact-item > i {
+        right: 0;
+    }
+
+    .corp-footer-bottom {
+        grid-template-columns: 1fr;
+        gap: 19px;
+
+        padding: 25px 0;
+    }
+
+    .corp-footer-bottom > p {
+        text-align: center;
+    }
+
+    .corp-footer-bottom-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================== */
+
+@media (max-width: 390px) {
+
+    .corp-footer-container {
+        width: calc(100% - 24px);
+    }
+
+    .corp-footer-cta h2 {
+        font-size: 45px;
+    }
+
+    .corp-footer-nav {
+        grid-template-columns: 1fr;
+    }
+
+    .corp-footer-column,
+    .corp-footer-column:first-child,
+    .corp-footer-column:nth-child(4),
+    .corp-footer-column:last-child,
+    .corp-footer-column:nth-child(odd),
+    .corp-footer-column:nth-child(even) {
+        grid-column: auto;
+
+        padding: 28px 0;
+
+        border-right: 0;
+        border-bottom: 1px solid var(--footer-line-light);
+    }
+
+    .corp-footer-column:last-child {
+        border-bottom: 0;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .corp-footer-button,
+    .corp-footer-button::before,
+    .corp-footer-button i,
+    .corp-footer-column a,
+    .corp-footer-column a i,
+    .corp-footer-contact-item > i,
+    .corp-footer-bottom-links > a,
+    .corp-footer-top-link span {
+        transition: none;
+    }
+}
+
+</style>
+
+<!-- JAVASCRIPT -->
+<script>
+document.getElementById("corpFooterYear").textContent = new Date().getFullYear();
+</script>
+
+<!-- END MODULE — FOOTER -->
 
 
 <!-- =========================================================
-     MODULE 11 — BOOTSTRAP JAVASCRIPT
+     MODULE — GLOBAL RESPONSIVE OVERRIDES
 ========================================================= -->
 
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>
+<!-- CSS -->
+<style>
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 991px) {
+
+            .about-navbar {
+
+                height: auto;
+
+                min-height: 80px;
+
+                padding: 10px 5%;
+            }
+
+            .about-logo img {
+                height: 80px;
+            }
+
+            .about-navbar .navbar-collapse {
+
+                margin-top: 15px;
+
+                padding: 15px 0;
+
+                background: #ffffff;
+            }
+
+            .about-navbar .navbar-nav {
+
+                align-items: flex-start;
+
+                gap: 0;
+            }
+
+            .about-navbar .nav-item {
+                width: 100%;
+            }
+
+            .about-navbar .nav-link {
+                padding: 12px 5px !important;
+            }
+
+            .about-navbar .dropdown-menu {
+
+                margin-top: 0;
+
+                border: none;
+
+                box-shadow: none;
+            }
+
+            .about-hero {
+                min-height: 560px;
+            }
+
+            .intro-left {
+
+                padding-right: 0;
+
+                margin-bottom: 40px;
+            }
+
+            .capability-image {
+
+                min-height: 400px;
+
+                margin-bottom: 40px;
+            }
+
+            .capability-content {
+                padding: 0;
+            }
+
+            .stat-box {
+
+                border-right: none;
+
+                border-bottom: 1px solid rgba(255, 255, 255, .15);
+            }
+
+            .stat-box:last-child {
+                border-bottom: none;
+            }
+        }
 
 
+        @media (max-width: 767px) {
+
+            .about-hero-content {
+                padding: 100px 7%;
+            }
+
+            .about-hero h1 {
+                font-size: 52px;
+            }
+
+            .intro-section,
+            .services-section,
+            .capability-section,
+            .technology-section,
+            .why-section,
+            .sectors-section {
+                padding: 75px 7%;
+            }
+
+            .epc-section,
+            .rd-section {
+                padding: 75px 7%;
+            }
+
+            .cta-section {
+                padding: 75px 7%;
+            }
+
+            .technology-box {
+
+                padding: 35px;
+
+                margin-bottom: 25px;
+            }
+
+            .service-card {
+                min-height: auto;
+            }
+
+            .footer {
+                padding: 55px 7% 20px;
+            }
+
+            .footer-column {
+                margin-bottom: 35px;
+            }
+
+            .footer-bottom {
+
+                flex-direction: column;
+
+                gap: 10px;
+            }
+        }
+</style>
+
+<!-- END MODULE — GLOBAL RESPONSIVE OVERRIDES -->
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
