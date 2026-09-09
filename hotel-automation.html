@@ -135,7 +135,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item active"><a class="nav-link " href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
 
                     <li class="nav-item dropdown solution-dropdown position-static">
                         <a class="nav-link dropdown-toggle " href="#" id="solutionsDropdown" role="button"
@@ -157,6 +157,13 @@
                                     <a href="eht.html">EHT</a>
                                     <a href="control-panels.html">Control Panels</a>
                                     <a href="panel-boards.html">Panel Boards</a>
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>Lighting</span></div>
+                                    <a href="residential-lighting.html">Residential Lighting</a>
+                                    <a href="commercial-lighting.html">Commercial Lighting</a>
+                                    <a href="industrial-lighting.html">Outdoor Lighting</a>
+                                    <a href="outdoor-lighting.html">Outdoor Lighting</a>
                                 </div>
                                 <div class="mega-column">
                                     <div class="mega-heading"><span>Automation</span></div>
@@ -187,7 +194,7 @@
                             <li><a class="dropdown-item" href="iot_bms.html">IoT+BMS</a></li>
                         </ul>
                     </li>
-                        <li class="nav-item dropdown product-dropdown">              
+    <li class="nav-item dropdown product-dropdown">              
 
     <a class="nav-link dropdown-toggle"
        href="#"
@@ -270,8 +277,8 @@
         .main-navbar .nav-link:hover, .main-navbar .nav-link:focus { color: #4d73be; }
 
         .solution-dropdown { position: static !important; }
-        .mega-menu { position: absolute !important; width: min(1180px, calc(100vw - 48px)); left: 50% !important; top: 100% !important; transform: translateX(-50%) !important; margin-top: 0 !important; padding: 0; border: 0; border-radius: 14px; background: #fff; box-shadow: 0 24px 70px rgba(14,29,57,.18); overflow: hidden; }
-        .mega-menu-inner { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); }
+        .mega-menu { position: absolute !important; width: min(1380px, calc(100vw - 48px)); left: 50% !important; top: 100% !important; transform: translateX(-50%) !important; margin-top: 0 !important; padding: 0; border: 0; border-radius: 14px; background: #fff; box-shadow: 0 24px 70px rgba(14,29,57,.18); overflow: hidden; }
+        .mega-menu-inner { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); }
         .mega-column { min-height: 270px; padding: 30px 30px 32px; border-right: 1px solid #e8edf5; background: #fff; }
         .mega-column:last-child { border-right: 0; }
         .mega-heading { display: flex; align-items: center; gap: 11px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid #edf1f7; color: #17243b; font-family: "Varela Round", sans-serif; font-size: 16px; font-weight: 600; }
@@ -398,6 +405,153 @@
         .main-navbar .nav-link.active:not(.nav-contact)::after {
             width: calc(100% - 24px);
         }
+
+        /* =========================================================
+   PRODUCTS DROPDOWN
+========================================================= */
+
+.product-dropdown{
+    position:relative;
+}
+
+.product-menu{
+    min-width:240px;
+
+    padding:10px 0;
+
+    margin-top:0!important;
+
+    border:0;
+
+    border-radius:10px;
+
+    background:#000;
+
+    box-shadow:
+        0 20px 55px rgba(0,0,0,.25);
+
+    overflow:hidden;
+}
+
+.product-menu > a{
+    display:block;
+
+    position:relative;
+
+    padding:11px 24px;
+
+    color:#bdbdbd;
+
+    font-size:13.5px;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:
+        color .25s ease,
+        padding-left .25s ease,
+        background .25s ease;
+}
+
+.product-menu > a::before{
+    content:"";
+
+    position:absolute;
+
+    left:12px;
+
+    top:50%;
+
+    width:5px;
+
+    height:1px;
+
+    background:#666;
+
+    transform:translateY(-50%);
+
+    transition:
+        width .25s ease,
+        background .25s ease;
+}
+
+.product-menu > a:hover{
+    color:#fff;
+
+    background:#111;
+
+    padding-left:29px;
+}
+
+.product-menu > a:hover::before{
+    width:10px;
+
+    background:#fff;
+}
+
+
+/* =========================================================
+   DESKTOP HOVER
+========================================================= */
+
+@media (min-width:992px){
+
+    .product-dropdown:hover > .product-menu{
+        display:block;
+    }
+
+    .product-menu{
+        display:block;
+
+        opacity:0;
+
+        visibility:hidden;
+
+        pointer-events:none;
+
+        transition:
+            opacity .2s ease,
+            visibility .2s ease;
+    }
+
+    .product-dropdown:hover > .product-menu,
+    .product-dropdown > .product-menu.show{
+        opacity:1;
+
+        visibility:visible;
+
+        pointer-events:auto;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width:991px){
+
+    .product-menu{
+        position:static!important;
+
+        width:100%;
+
+        margin:0!important;
+
+        border-radius:0;
+
+        box-shadow:none;
+
+        background:#000;
+    }
+
+    .product-menu > a{
+        padding:10px 22px;
+
+        color:#bdbdbd;
+    }
+}
 
 
         
@@ -553,155 +707,6 @@
 .main-navbar .mega-heading {
     gap: 0 !important;
 }
-
-
-        /* =========================================================
-   PRODUCTS DROPDOWN
-========================================================= */
-
-.product-dropdown{
-    position:relative;
-}
-
-.product-menu{
-    min-width:240px;
-
-    padding:10px 0;
-
-    margin-top:0!important;
-
-    border:0;
-
-    border-radius:10px;
-
-    background:#000;
-
-    box-shadow:
-        0 20px 55px rgba(0,0,0,.25);
-
-    overflow:hidden;
-}
-
-.product-menu > a{
-    display:block;
-
-    position:relative;
-
-    padding:11px 24px;
-
-    color:#bdbdbd;
-
-    font-size:13.5px;
-
-    font-weight:600;
-
-    text-decoration:none;
-
-    transition:
-        color .25s ease,
-        padding-left .25s ease,
-        background .25s ease;
-}
-
-.product-menu > a::before{
-    content:"";
-
-    position:absolute;
-
-    left:12px;
-
-    top:50%;
-
-    width:5px;
-
-    height:1px;
-
-    background:#666;
-
-    transform:translateY(-50%);
-
-    transition:
-        width .25s ease,
-        background .25s ease;
-}
-
-.product-menu > a:hover{
-    color:#fff;
-
-    background:#111;
-
-    padding-left:29px;
-}
-
-.product-menu > a:hover::before{
-    width:10px;
-
-    background:#fff;
-}
-
-
-/* =========================================================
-   DESKTOP HOVER
-========================================================= */
-
-@media (min-width:992px){
-
-    .product-dropdown:hover > .product-menu{
-        display:block;
-    }
-
-    .product-menu{
-        display:block;
-
-        opacity:0;
-
-        visibility:hidden;
-
-        pointer-events:none;
-
-        transition:
-            opacity .2s ease,
-            visibility .2s ease;
-    }
-
-    .product-dropdown:hover > .product-menu,
-    .product-dropdown > .product-menu.show{
-        opacity:1;
-
-        visibility:visible;
-
-        pointer-events:auto;
-    }
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width:991px){
-
-    .product-menu{
-        position:static!important;
-
-        width:100%;
-
-        margin:0!important;
-
-        border-radius:0;
-
-        box-shadow:none;
-
-        background:#000;
-    }
-
-    .product-menu > a{
-        padding:10px 22px;
-
-        color:#bdbdbd;
-    }
-}
-
 </style>
 
 <!-- JAVASCRIPT -->

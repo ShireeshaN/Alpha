@@ -54,10 +54,8 @@
 </head>
 <body>
 
-<!-- =========================================================
-     MODULE — NAVBAR
-========================================================= -->
-<!-- =========================================================
+<!-- HTML -->
+    <!-- =========================================================
          PREMIUM GLOBAL NAVIGATION
     ========================================================= -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
@@ -73,10 +71,10 @@
                 Menu <i class="fas fa-bars ms-1"></i>
             </button>
 
-           <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
 
                     <li class="nav-item dropdown solution-dropdown position-static">
                         <a class="nav-link dropdown-toggle " href="#" id="solutionsDropdown" role="button"
@@ -98,6 +96,13 @@
                                     <a href="eht.html">EHT</a>
                                     <a href="control-panels.html">Control Panels</a>
                                     <a href="panel-boards.html">Panel Boards</a>
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>Lighting</span></div>
+                                    <a href="residential-lighting.html">Residential Lighting</a>
+                                    <a href="commercial-lighting.html">Commercial Lighting</a>
+                                    <a href="industrial-lighting.html">Outdoor Lighting</a>
+                                    <a href="outdoor-lighting.html">Outdoor Lighting</a>
                                 </div>
                                 <div class="mega-column">
                                     <div class="mega-heading"><span>Automation</span></div>
@@ -128,7 +133,7 @@
                             <li><a class="dropdown-item" href="iot_bms.html">IoT+BMS</a></li>
                         </ul>
                     </li>
-                        <li class="nav-item dropdown product-dropdown">              
+    <li class="nav-item dropdown product-dropdown">              
 
     <a class="nav-link dropdown-toggle"
        href="#"
@@ -168,9 +173,37 @@
         </div>
     </nav>
 
+<!-- CSS -->
 <style>
-/* MODULE CSS — NAVBAR */
-/* =====================================================
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #ffffff;
+            color: #111111;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+        /* =====================================================
            PREMIUM GLOBAL NAVBAR
         ===================================================== */
 
@@ -183,8 +216,8 @@
         .main-navbar .nav-link:hover, .main-navbar .nav-link:focus { color: #4d73be; }
 
         .solution-dropdown { position: static !important; }
-        .mega-menu { position: absolute !important; width: min(1180px, calc(100vw - 48px)); left: 50% !important; top: 100% !important; transform: translateX(-50%) !important; margin-top: 0 !important; padding: 0; border: 0; border-radius: 14px; background: #fff; box-shadow: 0 24px 70px rgba(14,29,57,.18); overflow: hidden; }
-        .mega-menu-inner { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); }
+        .mega-menu { position: absolute !important; width: min(1380px, calc(100vw - 48px)); left: 50% !important; top: 100% !important; transform: translateX(-50%) !important; margin-top: 0 !important; padding: 0; border: 0; border-radius: 14px; background: #fff; box-shadow: 0 24px 70px rgba(14,29,57,.18); overflow: hidden; }
+        .mega-menu-inner { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); }
         .mega-column { min-height: 270px; padding: 30px 30px 32px; border-right: 1px solid #e8edf5; background: #fff; }
         .mega-column:last-child { border-right: 0; }
         .mega-heading { display: flex; align-items: center; gap: 11px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid #edf1f7; color: #17243b; font-family: "Varela Round", sans-serif; font-size: 16px; font-weight: 600; }
@@ -194,7 +227,53 @@
         .mega-column > a:hover { color: #334a85; padding-left: 21px; }
         .mega-column > a:hover::before { width: 12px; background: #4d73be; }
 
+        /* BMS DROPDOWN */
+        .bms-dropdown .bms-menu {
+            min-width: 190px;
+            margin-top: 0;
+            padding: 10px 0;
+            border: 1px solid #1f1f1f;
+            border-radius: 10px;
+            background: #000000;
+            box-shadow: 0 18px 45px rgba(0,0,0,.24);
+        }
+
+        .bms-dropdown .bms-menu .dropdown-item {
+            padding: 10px 18px;
+            color: #bdbdbd;
+            font-size: 13.5px;
+            font-weight: 600;
+            background: transparent;
+            transition: color .25s ease, padding-left .25s ease;
+        }
+
+        .bms-dropdown .bms-menu .dropdown-item:hover,
+        .bms-dropdown .bms-menu .dropdown-item:focus {
+            color: #ffffff;
+            background: transparent;
+            padding-left: 22px;
+        }
+
         @media (min-width: 992px) {
+            /* BMS dropdown: open on hover and stay open while hovering menu */
+            .bms-dropdown > .bms-menu {
+                display: block;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transform: translateY(6px);
+                transition: opacity .22s ease, visibility .22s ease, transform .22s ease;
+            }
+
+            .bms-dropdown:hover > .bms-menu,
+            .bms-dropdown > .bms-menu:hover,
+            .bms-dropdown > .bms-menu.show {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+                transform: translateY(0);
+            }
+
             .solution-dropdown > .mega-menu {
                 opacity: 0;
                 visibility: hidden;
@@ -265,217 +344,6 @@
         .main-navbar .nav-link.active:not(.nav-contact)::after {
             width: calc(100% - 24px);
         }
-
-
-        
-    
-
-/* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
-.main-navbar #solutionsDropdown,
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown:active,
-.main-navbar #solutionsDropdown.show {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown.show {
-    color: #4d73be !important;
-}
-
-
-/* =========================================================
-   NAVBAR — MONOCHROME BLACK THEME
-   Keep existing layout + mega-menu behavior unchanged
-========================================================= */
-
-/* Main nav links */
-.main-navbar .nav-link,
-.main-navbar.scrolled .nav-link,
-.main-navbar.navbar-shrink .nav-link {
-    color: #1a1a1a !important;
-}
-
-/* Normal */
-.main-navbar .nav-link {
-    font-weight: 600;
-}
-
-/* Hover / focus — black only */
-.main-navbar .nav-link:hover,
-.main-navbar .nav-link:focus {
-    color: #000000 !important;
-}
-
-/* Active — black + stronger weight */
-.main-navbar .nav-link.active,
-.main-navbar .nav-link.show,
-.main-navbar #solutionsDropdown.show {
-    color: #000000 !important;
-    font-weight: 800 !important;
-}
-
-/* No colored underline */
-.main-navbar .nav-link:not(.nav-contact):not(.dropdown-toggle)::after {
-    background: #000000 !important;
-}
-
-/* Solutions: text only, no box */
-.main-navbar #solutionsDropdown,
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown:active,
-.main-navbar #solutionsDropdown.show {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-    color: #000000 !important;
-}
-
-/* Contact: monochrome */
-.main-navbar .nav-contact,
-.main-navbar.scrolled .nav-contact {
-    background: #000000 !important;
-    border-color: #000000 !important;
-    color: #ffffff !important;
-}
-
-.main-navbar .nav-contact:hover,
-.main-navbar .nav-contact:focus,
-.main-navbar.scrolled .nav-contact:hover {
-    background: #222222 !important;
-    border-color: #222222 !important;
-    color: #ffffff !important;
-}
-
-/* =========================================================
-   MEGA MENU — BLACK
-========================================================= */
-
-.main-navbar .mega-menu {
-    background: #000000 !important;
-    border: 1px solid #1f1f1f !important;
-    box-shadow: 0 24px 70px rgba(0,0,0,.28) !important;
-}
-
-/* Columns */
-.main-navbar .mega-column {
-    background: #000000 !important;
-    border-right-color: #242424 !important;
-}
-
-.main-navbar .mega-column:last-child {
-    border-right-color: transparent !important;
-}
-
-/* Headings */
-.main-navbar .mega-heading {
-    color: #ffffff !important;
-    border-bottom-color: #2a2a2a !important;
-}
-
-/* Icons — monochrome */
-.main-navbar .mega-heading i {
-    color: #ffffff !important;
-}
-
-/* Menu links */
-.main-navbar .mega-column > a {
-    color: #bdbdbd !important;
-}
-
-/* Small line before links */
-.main-navbar .mega-column > a::before {
-    background: #666666 !important;
-}
-
-/* Hover inside mega menu */
-.main-navbar .mega-column > a:hover,
-.main-navbar .mega-column > a:focus {
-    color: #ffffff !important;
-}
-
-.main-navbar .mega-column > a:hover::before {
-    background: #ffffff !important;
-}
-
-/* Mobile */
-@media (max-width: 991px) {
-    .main-navbar .nav-link {
-        color: #1a1a1a !important;
-    }
-
-    .main-navbar .mega-menu {
-        background: #000000 !important;
-        border-left-color: #000000 !important;
-    }
-
-    .main-navbar .mega-column {
-        background: #000000 !important;
-        border-bottom-color: #242424 !important;
-    }
-}
-
-
-.main-navbar .mega-heading {
-    gap: 0 !important;
-}
-
-
-/* =========================================================
-   BMS DROPDOWN — ABOUT PAGE PATTERN
-========================================================= */
-.bms-dropdown .bms-menu {
-    min-width: 190px;
-    margin-top: 0;
-    padding: 10px 0;
-    border: 1px solid #1f1f1f;
-    border-radius: 10px;
-    background: #000000;
-    box-shadow: 0 18px 45px rgba(0,0,0,.24);
-}
-
-.bms-dropdown .bms-menu .dropdown-item {
-    padding: 10px 18px;
-    color: #bdbdbd;
-    font-size: 13.5px;
-    font-weight: 600;
-    background: transparent;
-    transition: color .25s ease, padding-left .25s ease;
-}
-
-.bms-dropdown .bms-menu .dropdown-item:hover,
-.bms-dropdown .bms-menu .dropdown-item:focus {
-    color: #ffffff;
-    background: transparent;
-    padding-left: 22px;
-}
-
-@media (min-width: 992px) {
-    .bms-dropdown > .bms-menu {
-        display: block;
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-        transform: translateY(6px);
-        transition: opacity .22s ease, visibility .22s ease, transform .22s ease;
-    }
-
-    .bms-dropdown:hover > .bms-menu,
-    .bms-dropdown > .bms-menu:hover,
-    .bms-dropdown > .bms-menu.show {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-        transform: translateY(0);
-    }
-}
 
         /* =========================================================
    PRODUCTS DROPDOWN
@@ -624,10 +492,164 @@
     }
 }
 
+
+        
+/* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
+.main-navbar #solutionsDropdown,
+.main-navbar #solutionsDropdown:hover,
+.main-navbar #solutionsDropdown:focus,
+.main-navbar #solutionsDropdown:active,
+.main-navbar #solutionsDropdown.show {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.main-navbar #solutionsDropdown:hover,
+.main-navbar #solutionsDropdown:focus,
+.main-navbar #solutionsDropdown.show {
+    color: #4d73be !important;
+}
+/* =========================================================
+   NAVBAR — MONOCHROME BLACK THEME
+   Keep existing layout + mega-menu behavior unchanged
+========================================================= */
+
+/* Main nav links */
+.main-navbar .nav-link,
+.main-navbar.scrolled .nav-link,
+.main-navbar.navbar-shrink .nav-link {
+    color: #1a1a1a !important;
+}
+
+/* Normal */
+.main-navbar .nav-link {
+    font-weight: 600;
+}
+
+/* Hover / focus — black only */
+.main-navbar .nav-link:hover,
+.main-navbar .nav-link:focus {
+    color: #000000 !important;
+}
+
+/* Active — black + stronger weight */
+.main-navbar .nav-link.active,
+.main-navbar .nav-link.show,
+.main-navbar #solutionsDropdown.show {
+    color: #000000 !important;
+    font-weight: 800 !important;
+}
+
+/* No colored underline */
+.main-navbar .nav-link:not(.nav-contact):not(.dropdown-toggle)::after {
+    background: #000000 !important;
+}
+
+/* Solutions: text only, no box */
+.main-navbar #solutionsDropdown,
+.main-navbar #solutionsDropdown:hover,
+.main-navbar #solutionsDropdown:focus,
+.main-navbar #solutionsDropdown:active,
+.main-navbar #solutionsDropdown.show {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    color: #000000 !important;
+}
+
+/* Contact: monochrome */
+.main-navbar .nav-contact,
+.main-navbar.scrolled .nav-contact {
+    background: #000000 !important;
+    border-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+.main-navbar .nav-contact:hover,
+.main-navbar .nav-contact:focus,
+.main-navbar.scrolled .nav-contact:hover {
+    background: #222222 !important;
+    border-color: #222222 !important;
+    color: #ffffff !important;
+}
+
+/* =========================================================
+   MEGA MENU — BLACK
+========================================================= */
+
+.main-navbar .mega-menu {
+    background: #000000 !important;
+    border: 1px solid #1f1f1f !important;
+    box-shadow: 0 24px 70px rgba(0,0,0,.28) !important;
+}
+
+/* Columns */
+.main-navbar .mega-column {
+    background: #000000 !important;
+    border-right-color: #242424 !important;
+}
+
+.main-navbar .mega-column:last-child {
+    border-right-color: transparent !important;
+}
+
+/* Headings */
+.main-navbar .mega-heading {
+    color: #ffffff !important;
+    border-bottom-color: #2a2a2a !important;
+}
+
+/* Icons — monochrome */
+.main-navbar .mega-heading i {
+    color: #ffffff !important;
+}
+
+/* Menu links */
+.main-navbar .mega-column > a {
+    color: #bdbdbd !important;
+}
+
+/* Small line before links */
+.main-navbar .mega-column > a::before {
+    background: #666666 !important;
+}
+
+/* Hover inside mega menu */
+.main-navbar .mega-column > a:hover,
+.main-navbar .mega-column > a:focus {
+    color: #ffffff !important;
+}
+
+.main-navbar .mega-column > a:hover::before {
+    background: #ffffff !important;
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+    .main-navbar .nav-link {
+        color: #1a1a1a !important;
+    }
+
+    .main-navbar .mega-menu {
+        background: #000000 !important;
+        border-left-color: #000000 !important;
+    }
+
+    .main-navbar .mega-column {
+        background: #000000 !important;
+        border-bottom-color: #242424 !important;
+    }
+}
+.main-navbar .mega-heading {
+    gap: 0 !important;
+}
 </style>
 
+<!-- JAVASCRIPT -->
 <script>
-/* MODULE JS — NAVBAR */
 document.addEventListener("DOMContentLoaded", function () {
     const nav = document.getElementById("mainNav");
     const white = document.getElementById("logoWhite");
@@ -638,6 +660,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (dark) dark.style.display = "block";
 });
 </script>
+
+<!-- END MODULE — NAVBAR -->
 
 <style>
 /* MODULE CSS — COMMON SECTION STYLES */

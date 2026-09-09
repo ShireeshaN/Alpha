@@ -82,7 +82,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item active"><a class="nav-link " href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
 
                     <li class="nav-item dropdown solution-dropdown position-static">
                         <a class="nav-link dropdown-toggle " href="#" id="solutionsDropdown" role="button"
@@ -104,6 +104,13 @@
                                     <a href="eht.html">EHT</a>
                                     <a href="control-panels.html">Control Panels</a>
                                     <a href="panel-boards.html">Panel Boards</a>
+                                </div>
+                                <div class="mega-column">
+                                    <div class="mega-heading"><span>Lighting</span></div>
+                                    <a href="residential-lighting.html">Residential Lighting</a>
+                                    <a href="commercial-lighting.html">Commercial Lighting</a>
+                                    <a href="industrial-lighting.html">Outdoor Lighting</a>
+                                    <a href="outdoor-lighting.html">Outdoor Lighting</a>
                                 </div>
                                 <div class="mega-column">
                                     <div class="mega-heading"><span>Automation</span></div>
@@ -131,10 +138,10 @@
                         <ul class="dropdown-menu bms-menu" aria-labelledby="bmsDropdown">
                             <li><a class="dropdown-item" href="iot.html">IoT</a></li>
                             <li><a class="dropdown-item" href="bms.html">BMS</a></li>
-                            <li><a class="dropdown-item" href="iot-bms.html">IoT+BMS</a></li>
+                            <li><a class="dropdown-item" href="iot_bms.html">IoT+BMS</a></li>
                         </ul>
                     </li>
-                        <li class="nav-item dropdown product-dropdown">              
+    <li class="nav-item dropdown product-dropdown">              
 
     <a class="nav-link dropdown-toggle"
        href="#"
@@ -217,8 +224,8 @@
         .main-navbar .nav-link:hover, .main-navbar .nav-link:focus { color: #4d73be; }
 
         .solution-dropdown { position: static !important; }
-        .mega-menu { position: absolute !important; width: min(1180px, calc(100vw - 48px)); left: 50% !important; top: 100% !important; transform: translateX(-50%) !important; margin-top: 0 !important; padding: 0; border: 0; border-radius: 14px; background: #fff; box-shadow: 0 24px 70px rgba(14,29,57,.18); overflow: hidden; }
-        .mega-menu-inner { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); }
+        .mega-menu { position: absolute !important; width: min(1380px, calc(100vw - 48px)); left: 50% !important; top: 100% !important; transform: translateX(-50%) !important; margin-top: 0 !important; padding: 0; border: 0; border-radius: 14px; background: #fff; box-shadow: 0 24px 70px rgba(14,29,57,.18); overflow: hidden; }
+        .mega-menu-inner { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); }
         .mega-column { min-height: 270px; padding: 30px 30px 32px; border-right: 1px solid #e8edf5; background: #fff; }
         .mega-column:last-child { border-right: 0; }
         .mega-heading { display: flex; align-items: center; gap: 11px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid #edf1f7; color: #17243b; font-family: "Varela Round", sans-serif; font-size: 16px; font-weight: 600; }
@@ -303,7 +310,49 @@
             }
         }
 
-        
+        @media (max-width: 991px) {
+            .main-navbar { background: #fff; padding: 8px 0; }
+            .navbar-logo { height: 55px; }
+            #logoWhite { display: none !important; }
+            #logoDark { display: block !important; }
+            .main-navbar .navbar-toggler { color: #17243b; border-color: rgba(23,36,59,.2); }
+            .main-navbar .nav-link { color: #17243b; padding: 12px 7px !important; margin: 1px 0; }
+            .navbar-collapse { max-height: calc(100vh - 76px); overflow-y: auto; margin-top: 10px; padding: 15px 10px 22px; border-top: 1px solid #edf0f5; background: #fff; }
+            .mega-menu { position: static !important; transform: none !important; width: 100%; margin: 0 !important; box-shadow: none; border-left: 2px solid #334a85; border-radius: 0; overflow: visible; }
+            .mega-menu-inner { grid-template-columns: 1fr; }
+            .mega-column { min-height: 0; padding: 18px 18px 14px; border-right: 0; border-bottom: 1px solid #edf0f5; }
+            .mega-column:last-child { border-bottom: 0; }
+            .mega-heading { margin-bottom: 8px; padding-bottom: 10px; }
+            .mega-column > a { padding-top: 7px; padding-bottom: 7px; }
+        }
+
+
+        /* ABOUT PAGE: keep Index navbar in permanent white/scrolled state */
+       
+        .main-navbar {
+            background: #fff;
+            padding: 8px 0;
+            box-shadow: 0 8px 35px rgba(14,29,57,.08);
+        }
+        .main-navbar .navbar-logo { height: 58px; }
+        .main-navbar .nav-link { color: #16243b; }
+        #logoWhite { display: none !important; }
+        #logoDark { display: block !important; }
+        .main-navbar .nav-contact {
+            background: #334a85;
+            border-color: #334a85;
+            color: #fff !important;
+        }
+        .main-navbar .nav-contact:hover {
+            background: #17243b;
+            border-color: #17243b;
+            color: #fff !important;
+        }
+        .main-navbar .nav-link.active { color: #4d73be; }
+        .main-navbar .nav-link.active:not(.nav-contact)::after {
+            width: calc(100% - 24px);
+        }
+
         /* =========================================================
    PRODUCTS DROPDOWN
 ========================================================= */
@@ -450,50 +499,6 @@
         color:#bdbdbd;
     }
 }
-
-
-        @media (max-width: 991px) {
-            .main-navbar { background: #fff; padding: 8px 0; }
-            .navbar-logo { height: 55px; }
-            #logoWhite { display: none !important; }
-            #logoDark { display: block !important; }
-            .main-navbar .navbar-toggler { color: #17243b; border-color: rgba(23,36,59,.2); }
-            .main-navbar .nav-link { color: #17243b; padding: 12px 7px !important; margin: 1px 0; }
-            .navbar-collapse { max-height: calc(100vh - 76px); overflow-y: auto; margin-top: 10px; padding: 15px 10px 22px; border-top: 1px solid #edf0f5; background: #fff; }
-            .mega-menu { position: static !important; transform: none !important; width: 100%; margin: 0 !important; box-shadow: none; border-left: 2px solid #334a85; border-radius: 0; overflow: visible; }
-            .mega-menu-inner { grid-template-columns: 1fr; }
-            .mega-column { min-height: 0; padding: 18px 18px 14px; border-right: 0; border-bottom: 1px solid #edf0f5; }
-            .mega-column:last-child { border-bottom: 0; }
-            .mega-heading { margin-bottom: 8px; padding-bottom: 10px; }
-            .mega-column > a { padding-top: 7px; padding-bottom: 7px; }
-        }
-
-
-        /* ABOUT PAGE: keep Index navbar in permanent white/scrolled state */
-       
-        .main-navbar {
-            background: #fff;
-            padding: 8px 0;
-            box-shadow: 0 8px 35px rgba(14,29,57,.08);
-        }
-        .main-navbar .navbar-logo { height: 58px; }
-        .main-navbar .nav-link { color: #16243b; }
-        #logoWhite { display: none !important; }
-        #logoDark { display: block !important; }
-        .main-navbar .nav-contact {
-            background: #334a85;
-            border-color: #334a85;
-            color: #fff !important;
-        }
-        .main-navbar .nav-contact:hover {
-            background: #17243b;
-            border-color: #17243b;
-            color: #fff !important;
-        }
-        .main-navbar .nav-link.active { color: #4d73be; }
-        .main-navbar .nav-link.active:not(.nav-contact)::after {
-            width: calc(100% - 24px);
-        }
 
 
         
