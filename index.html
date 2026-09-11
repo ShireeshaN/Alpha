@@ -11008,6 +11008,48 @@ document.addEventListener("DOMContentLoaded", function () {
                     Building the Pride of a Nation
                 </div>
 
+                <!-- SOCIAL MEDIA -->
+                <div class="corp-footer-social" aria-label="Alpha Numeric social media">
+                    <span class="corp-footer-social-label">Follow us</span>
+
+                    <div class="corp-footer-social-links">
+                        <!-- Replace # with your official social profile URLs -->
+                        <a href="#" class="corp-social-link" aria-label="Instagram" title="Instagram">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5"></rect>
+                                <circle cx="12" cy="12" r="4.15"></circle>
+                                <circle cx="17.55" cy="6.45" r="1.05" class="corp-social-fill"></circle>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="corp-social-link" aria-label="Facebook" title="Facebook">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M14.2 8.15V6.9c0-1.08.72-1.35 1.23-1.35h3.12V1.1L14.25 1C9.98 1 9 4.2 9 6.25v1.9H6.25v4.95H9V23h5.2v-9.9h3.86l.52-4.95H14.2Z" class="corp-social-fill"></path>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="corp-social-link" aria-label="LinkedIn" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="9" width="4.15" height="12" class="corp-social-fill"></rect>
+                                <circle cx="5.08" cy="5.1" r="2.1" class="corp-social-fill"></circle>
+                                <path d="M10 9h3.98v1.64h.06c.55-1.05 1.91-2.16 3.93-2.16 4.2 0 4.98 2.76 4.98 6.35V21h-4.15v-5.48c0-1.31-.02-2.99-1.82-2.99-1.83 0-2.11 1.43-2.11 2.9V21H10V9Z" class="corp-social-fill"></path>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="corp-social-link" aria-label="X / Twitter" title="X / Twitter">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M18.78 2H22l-7.03 8.03L23.24 22h-6.48l-5.07-6.63L5.88 22H2.65l7.52-8.59L2.24 2h6.64l4.58 6.05L18.78 2Zm-1.13 17.9h1.79L7.9 3.99H5.98L17.65 19.9Z" class="corp-social-fill"></path>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="corp-social-link" aria-label="Pinterest" title="Pinterest">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2C6.48 2 3.5 5.95 3.5 9.24c0 2.42.91 4.57 2.88 5.37.32.13.61 0 .7-.35l.27-1.09c.09-.35.06-.48-.2-.79-.57-.68-.93-1.56-.93-2.81 0-3.62 2.71-6.87 7.05-6.87 3.84 0 5.95 2.35 5.95 5.49 0 4.13-1.83 7.61-4.54 7.61-1.5 0-2.62-1.24-2.26-2.76.43-1.82 1.27-3.78 1.27-5.09 0-1.17-.63-2.15-1.93-2.15-1.53 0-2.75 1.58-2.75 3.69 0 1.35.46 2.26.46 2.26l-1.84 7.8c-.55 2.32-.08 5.17-.04 5.46.02.17.25.21.35.08.15-.2 2.05-2.54 2.69-4.88.18-.66 1.04-4.08 1.04-4.08.51.98 2.01 1.84 3.6 1.84 4.74 0 7.95-4.32 7.95-10.1C23.22 5.67 18.85 2 12 2Z" class="corp-social-fill"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
             </section>
 
 
@@ -11464,6 +11506,103 @@ document.addEventListener("DOMContentLoaded", function () {
     letter-spacing: 0.14em;
 
     text-transform: uppercase;
+}
+
+/* =========================================================
+   SOCIAL MEDIA
+========================================================== */
+
+.corp-footer-social {
+    margin-top: 24px;
+}
+
+.corp-footer-social-label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--footer-muted);
+
+    font-size: 8px;
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+}
+
+.corp-footer-social-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.corp-social-link {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid var(--footer-line);
+
+    color: var(--footer-ink);
+    background: rgba(255, 255, 255, 0.34);
+
+    transition:
+        color 0.28s ease,
+        background-color 0.28s ease,
+        border-color 0.28s ease,
+        transform 0.28s ease;
+}
+
+.corp-social-link::after {
+    content: "";
+
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+
+    width: 7px;
+    height: 7px;
+
+    border-right: 1px solid var(--footer-accent);
+    border-bottom: 1px solid var(--footer-accent);
+
+    transition:
+        width 0.28s ease,
+        height 0.28s ease;
+}
+
+.corp-social-link svg {
+    width: 16px;
+    height: 16px;
+
+    overflow: visible;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.corp-social-link svg .corp-social-fill {
+    fill: currentColor;
+    stroke: none;
+}
+
+.corp-social-link:hover {
+    color: #ffffff;
+    background: var(--footer-ink);
+    border-color: var(--footer-ink);
+    transform: translateY(-3px);
+}
+
+.corp-social-link:hover::after {
+    width: 14px;
+    height: 14px;
 }
 
 .corp-footer-status span {
@@ -11995,6 +12134,19 @@ a.corp-footer-contact-item:hover > i {
         font-size: 12.5px;
     }
 
+    .corp-footer-social {
+        margin-top: 22px;
+    }
+
+    .corp-footer-social-links {
+        gap: 7px;
+    }
+
+    .corp-social-link {
+        width: 40px;
+        height: 40px;
+    }
+
     .corp-footer-nav {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -12126,6 +12278,8 @@ a.corp-footer-contact-item:hover > i {
     .corp-footer-button i,
     .corp-footer-column a,
     .corp-footer-column a i,
+    .corp-social-link,
+    .corp-social-link::after,
     .corp-footer-contact-item > i,
     .corp-footer-bottom-links > a,
     .corp-footer-top-link span {
