@@ -1998,7 +1998,7 @@
             <!-- =====================================================
              01 — ECONOMICAL / ADVANCED TECHNOLOGY
         ====================================================== -->
-            <article class="ani-why-grid__card ani-why-grid__card--tech ani-why-grid-reveal" data-why-tilt>
+            <article class="ani-why-grid__card ani-why-grid__card--tech ani-why-grid-reveal">
 
                 <span class="ani-why-grid__card-glow" aria-hidden="true"></span>
                 <span class="ani-why-grid__card-ring" aria-hidden="true"></span>
@@ -2055,7 +2055,7 @@
             <!-- =====================================================
              MAIN TITLE
         ====================================================== -->
-            <div class="ani-why-grid__headline ani-why-grid-reveal" data-why-tilt>
+            <div class="ani-why-grid__headline ani-why-grid-reveal">
 
                 <span class="ani-why-grid__headline-ring" aria-hidden="true"></span>
 
@@ -2086,7 +2086,7 @@
             <!-- =====================================================
              02 — RELIABLE SERVICES
         ====================================================== -->
-            <article class="ani-why-grid__card ani-why-grid__card--service ani-why-grid-reveal" data-why-tilt>
+            <article class="ani-why-grid__card ani-why-grid__card--service ani-why-grid-reveal">
 
                 <span class="ani-why-grid__card-glow" aria-hidden="true"></span>
                 <span class="ani-why-grid__card-ring" aria-hidden="true"></span>
@@ -2121,7 +2121,7 @@
             <!-- =====================================================
              03 — IN-HOUSE INNOVATION
         ====================================================== -->
-            <article class="ani-why-grid__card ani-why-grid__card--innovation ani-why-grid-reveal" data-why-tilt>
+            <article class="ani-why-grid__card ani-why-grid__card--innovation ani-why-grid-reveal">
 
                 <span class="ani-why-grid__card-glow" aria-hidden="true"></span>
                 <span class="ani-why-grid__card-ring" aria-hidden="true"></span>
@@ -2155,7 +2155,7 @@
             <!-- =====================================================
              04 — SCIENTIFIC APPROACH
         ====================================================== -->
-            <article class="ani-why-grid__card ani-why-grid__card--science ani-why-grid-reveal" data-why-tilt>
+            <article class="ani-why-grid__card ani-why-grid__card--science ani-why-grid-reveal">
 
                 <span class="ani-why-grid__card-glow" aria-hidden="true"></span>
                 <span class="ani-why-grid__card-ring" aria-hidden="true"></span>
@@ -3174,6 +3174,331 @@
                 transition: none;
             }
         }
+    
+
+        /* =========================================================
+           PROFESSIONAL OVERRIDE — SAME ORIGINAL STRUCTURE / GRID
+           Layout positions are intentionally unchanged.
+        ========================================================= */
+        .ani-why-grid {
+            --ani-alpha-orange: #d86c2d;
+            --ani-numeric-navy: #173b5d;
+            --ani-ink: #1c2830;
+            --ani-muted: #657078;
+            padding: clamp(54px, 5vw, 78px) 0;
+            background: linear-gradient(180deg, #f4f3f0 0%, #ecebe7 100%);
+        }
+
+        /* Remove decorative / toy-like ambient effects while keeping DOM intact */
+        .ani-why-grid__texture,
+        .ani-why-grid__grain,
+        .ani-why-grid__ambient,
+        .ani-why-grid::before,
+        .ani-why-grid__card-glow,
+        .ani-why-grid__card-ring,
+        .ani-why-grid__headline-ring,
+        .ani-why-grid__visual-scan {
+            display: none !important;
+        }
+
+        /* Keep EXACT grid structure, only strengthen visual hierarchy */
+        .ani-why-grid__shell {
+            gap: 1px;
+            background: #c9c9c4;
+            border: 1px solid #c9c9c4;
+            perspective: none;
+        }
+
+        .ani-why-grid__card,
+        .ani-why-grid__headline,
+        .ani-why-grid__visual {
+            border: 0;
+            border-radius: 0 !important;
+            box-shadow: none;
+            transform: none;
+            transform-style: flat;
+            will-change: auto;
+        }
+
+        /* Strong editorial headline panel */
+        .ani-why-grid__headline {
+            align-items: flex-end;
+            text-align: right;
+            padding: clamp(34px, 3.2vw, 50px);
+            background: #f8f7f4;
+            border-top: 5px solid var(--ani-numeric-navy);
+            transition: background-color .3s ease;
+        }
+
+        .ani-why-grid__headline::after {
+            display: none;
+        }
+
+        .ani-why-grid__headline:hover {
+            z-index: auto;
+            box-shadow: none;
+            border-color: var(--ani-numeric-navy);
+            background: #f4f3ef;
+        }
+
+        .ani-why-grid__kicker {
+            margin-bottom: 18px;
+            color: #667078;
+            font-size: 8px;
+            font-weight: 700;
+            letter-spacing: .20em;
+        }
+
+        .ani-why-grid__kicker::before {
+            width: 42px;
+            height: 2px;
+            background: var(--ani-alpha-orange);
+        }
+
+        .ani-why-grid__headline h2 {
+            font-size: clamp(46px, 4.7vw, 76px);
+            line-height: .88;
+            letter-spacing: -.045em;
+        }
+
+        .ani-why-grid__why {
+            color: #202b32;
+            font-weight: 500;
+        }
+
+        .ani-why-grid__alpha,
+        .ani-why-grid__numeric {
+            text-shadow: none;
+            font-weight: 700;
+        }
+
+        .ani-why-grid__alpha { color: var(--ani-alpha-orange); }
+        .ani-why-grid__numeric { color: var(--ani-numeric-navy); }
+
+        .ani-why-grid__headline p {
+            max-width: 500px;
+            margin-top: 22px;
+            color: #626b70;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            font-size: 12px;
+            line-height: 1.75;
+        }
+
+        .ani-why-grid__headline-meta {
+            margin-top: 22px;
+        }
+
+        .ani-why-grid__headline-meta span {
+            color: var(--ani-alpha-orange);
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .ani-why-grid__headline-meta i {
+            width: 38px;
+            background: #aab0b3;
+        }
+
+        .ani-why-grid__headline-meta small {
+            color: #667078;
+            font-size: 7px;
+            font-weight: 700;
+            letter-spacing: .18em;
+        }
+
+        /* Professional cards — same places and dimensions */
+        .ani-why-grid__card {
+            justify-content: flex-end;
+            padding: clamp(26px, 2.25vw, 36px);
+            background: #ffffff !important;
+            border-top: 4px solid transparent;
+            transition: background-color .3s ease, border-color .3s ease;
+        }
+
+        .ani-why-grid__card--tech,
+        .ani-why-grid__card--service {
+            background: #f9f8f5 !important;
+        }
+
+        .ani-why-grid__card--innovation,
+        .ani-why-grid__card--science {
+            background: #f5f4f1 !important;
+        }
+
+        .ani-why-grid__card::before,
+        .ani-why-grid__card::after {
+            display: none;
+        }
+
+        .ani-why-grid__card:hover {
+            z-index: auto;
+            filter: none;
+            box-shadow: none;
+            border-color: var(--ani-alpha-orange);
+            background: #ffffff !important;
+        }
+
+        /* Square engineering icon, no playful movement */
+        .ani-why-grid__icon {
+            top: clamp(22px, 2vw, 30px);
+            left: clamp(26px, 2.25vw, 36px);
+            width: 42px;
+            height: 42px;
+            border: 1px solid #c5c9cc;
+            border-radius: 0 !important;
+            color: var(--ani-numeric-navy);
+            background: transparent;
+            transition: color .25s ease, border-color .25s ease, background-color .25s ease;
+        }
+
+        .ani-why-grid__icon svg {
+            width: 22px;
+            height: 22px;
+            stroke-width: 1.55;
+        }
+
+        .ani-why-grid__card:hover .ani-why-grid__icon {
+            color: #ffffff;
+            border-color: var(--ani-numeric-navy);
+            background: var(--ani-numeric-navy);
+            box-shadow: none;
+            transform: none;
+        }
+
+        .ani-why-grid__number {
+            top: 26px;
+            right: 28px;
+            color: #7a8388;
+            font-size: 8px;
+            font-weight: 700;
+            letter-spacing: .16em;
+        }
+
+        .ani-why-grid__card:hover .ani-why-grid__number {
+            color: var(--ani-alpha-orange);
+            transform: none;
+        }
+
+        .ani-why-grid__card-copy small {
+            margin-bottom: 10px;
+            color: #7a8286;
+            font-size: 7px;
+            font-weight: 700;
+            letter-spacing: .17em;
+        }
+
+        .ani-why-grid__card h3 {
+            max-width: 300px;
+            margin-bottom: 14px;
+            color: #1f2d35;
+            font-size: clamp(19px, 1.38vw, 24px);
+            font-weight: 500;
+            line-height: 1.08;
+            letter-spacing: -.02em;
+        }
+
+        .ani-why-grid__card h3 strong {
+            margin-top: 6px;
+            color: var(--ani-numeric-navy);
+            font-weight: 700;
+            transition: color .25s ease;
+        }
+
+        .ani-why-grid__card:hover h3 strong {
+            color: var(--ani-numeric-navy);
+            transform: none;
+        }
+
+        .ani-why-grid__card p {
+            max-width: 315px;
+            color: #626c72;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            font-size: 11px;
+            line-height: 1.65;
+        }
+
+        .ani-why-grid__accent-line {
+            left: clamp(26px, 2.25vw, 36px);
+            width: 46px;
+            height: 3px;
+            background: var(--ani-alpha-orange);
+            transition: width .35s ease;
+        }
+
+        .ani-why-grid__card:hover .ani-why-grid__accent-line {
+            width: 88px;
+        }
+
+        /* Center image — clean, architectural, no decorative scan */
+        .ani-why-grid__visual {
+            background: #d2d0ca;
+        }
+
+        .ani-why-grid__visual img {
+            filter: saturate(.90) contrast(1.05);
+            transform: none;
+            animation: none;
+            transition: transform .55s ease, filter .35s ease;
+        }
+
+        .ani-why-grid__visual:hover img {
+            transform: scale(1.018);
+            filter: saturate(.96) contrast(1.06);
+        }
+
+        .ani-why-grid__visual-shade {
+            background:
+                linear-gradient(180deg, rgba(15, 31, 42, .00) 0%, rgba(15, 31, 42, .08) 58%, rgba(15, 31, 42, .72) 100%);
+        }
+
+        .ani-why-grid__visual-frame {
+            inset: 18px;
+            border: 1px solid rgba(255, 255, 255, .35);
+            transition: border-color .3s ease;
+        }
+
+        .ani-why-grid__visual:hover .ani-why-grid__visual-frame {
+            inset: 18px;
+            border-color: rgba(255, 255, 255, .62);
+        }
+
+        .ani-why-grid__visual-tag {
+            left: clamp(30px, 3vw, 50px);
+            right: clamp(30px, 3vw, 50px);
+            bottom: clamp(32px, 3vw, 48px);
+        }
+
+        .ani-why-grid__visual-tag span {
+            margin-bottom: 9px;
+            font-size: clamp(17px, 1.45vw, 23px);
+            font-weight: 600;
+            letter-spacing: .07em;
+        }
+
+        .ani-why-grid__visual-tag small {
+            color: rgba(255,255,255,.72);
+            font-size: 7px;
+            font-weight: 700;
+            letter-spacing: .18em;
+        }
+
+        /* Reveal stays restrained; no card lift / 3D motion */
+        .ani-why-grid-reveal {
+            transform: translateY(14px);
+            transition: opacity .65s ease, transform .65s ease;
+        }
+
+        .ani-why-grid-reveal.is-visible {
+            transform: none;
+        }
+
+        /* Keep existing responsive structure but remove playful treatments */
+        @media(max-width:760px) {
+            .ani-why-grid__shell { gap: 1px; }
+            .ani-why-grid__headline { border-top-width: 4px; }
+            .ani-why-grid__card { min-height: 255px; }
+        }
+
     </style>
 
 
