@@ -2852,14 +2852,349 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </main>
 
-<!-- =========================================================
-     MODULE 10 — FOOTER — CSS
-========================================================= -->
-<style>
-/* =========================================================
-   CORPORATE WHITE FOOTER — DESIGN SYSTEM
-   Desktop + laptop + tablet + mobile rules are contained in this footer module.
+    <!-- =========================================================
+     ALPHA NUMERIC — PREMIUM CORPORATE WHITE FOOTER
+     Sharp architectural layout | No curves | No toy styling
+     Complete HTML + CSS + automatic year
+========================================================== -->
 
+    <footer class="corp-footer" aria-label="Website footer">
+
+        <div class="corp-footer-container">
+
+            <!-- =====================================================
+             PRIMARY CTA
+        ====================================================== -->
+            <section class="corp-footer-cta" aria-labelledby="corp-footer-title">
+
+                <div class="corp-footer-cta-copy">
+
+                    <p class="corp-footer-kicker">
+                        <span>01</span>
+                        <i></i>
+                        Start a project
+                    </p>
+
+                    <h2 id="corp-footer-title">
+                        Let’s build
+                        <span>what comes next.</span>
+                    </h2>
+
+                </div>
+
+                <div class="corp-footer-cta-action">
+
+                    <p>
+                        Intelligent solutions for power, energy, lighting,
+                        automation and future-ready systems.
+                    </p>
+
+                    <a href="contact.html" class="corp-footer-button">
+                        <span>Start a conversation</span>
+                        <i aria-hidden="true">↗</i>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+             BRAND + NAVIGATION
+        ====================================================== -->
+            <div class="corp-footer-main">
+
+                <!-- BRAND -->
+                <section class="corp-footer-brand" aria-label="Alpha Numeric">
+
+                    <a href="index.html" class="corp-footer-logo" aria-label="Alpha Numeric home">
+                        <img src="assets/img/al-b.png" alt="Alpha Numeric">
+                    </a>
+
+                    <p>
+                        Technology-driven solutions
+                        built for dependable performance,
+                        meaningful progress and long-term value.
+                    </p>
+
+                    <div class="corp-footer-status">
+                        <span></span>
+                        Building the Pride of a Nation
+                    </div>
+
+                    <!-- SOCIAL MEDIA -->
+                    <div class="corp-footer-social" aria-label="Alpha Numeric social media">
+                        <span class="corp-footer-social-label">Follow us</span>
+
+                        <div class="corp-footer-social-links">
+                            <!-- Replace # with your official social profile URLs -->
+                            <a href="#" class="corp-social-link" aria-label="Instagram" title="Instagram">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5"></rect>
+                                    <circle cx="12" cy="12" r="4.15"></circle>
+                                    <circle cx="17.55" cy="6.45" r="1.05" class="corp-social-fill"></circle>
+                                </svg>
+                            </a>
+
+                            <a href="#" class="corp-social-link" aria-label="Facebook" title="Facebook">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M14.2 8.15V6.9c0-1.08.72-1.35 1.23-1.35h3.12V1.1L14.25 1C9.98 1 9 4.2 9 6.25v1.9H6.25v4.95H9V23h5.2v-9.9h3.86l.52-4.95H14.2Z"
+                                        class="corp-social-fill"></path>
+                                </svg>
+                            </a>
+
+                            <a href="#" class="corp-social-link" aria-label="LinkedIn" title="LinkedIn">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <rect x="3" y="9" width="4.15" height="12" class="corp-social-fill"></rect>
+                                    <circle cx="5.08" cy="5.1" r="2.1" class="corp-social-fill"></circle>
+                                    <path
+                                        d="M10 9h3.98v1.64h.06c.55-1.05 1.91-2.16 3.93-2.16 4.2 0 4.98 2.76 4.98 6.35V21h-4.15v-5.48c0-1.31-.02-2.99-1.82-2.99-1.83 0-2.11 1.43-2.11 2.9V21H10V9Z"
+                                        class="corp-social-fill"></path>
+                                </svg>
+                            </a>
+
+                            <a href="#" class="corp-social-link" aria-label="X / Twitter" title="X / Twitter">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M18.78 2H22l-7.03 8.03L23.24 22h-6.48l-5.07-6.63L5.88 22H2.65l7.52-8.59L2.24 2h6.64l4.58 6.05L18.78 2Zm-1.13 17.9h1.79L7.9 3.99H5.98L17.65 19.9Z"
+                                        class="corp-social-fill"></path>
+                                </svg>
+                            </a>
+
+                            <a href="#" class="corp-social-link" aria-label="Pinterest" title="Pinterest">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M12 2C6.48 2 3.5 5.95 3.5 9.24c0 2.42.91 4.57 2.88 5.37.32.13.61 0 .7-.35l.27-1.09c.09-.35.06-.48-.2-.79-.57-.68-.93-1.56-.93-2.81 0-3.62 2.71-6.87 7.05-6.87 3.84 0 5.95 2.35 5.95 5.49 0 4.13-1.83 7.61-4.54 7.61-1.5 0-2.62-1.24-2.26-2.76.43-1.82 1.27-3.78 1.27-5.09 0-1.17-.63-2.15-1.93-2.15-1.53 0-2.75 1.58-2.75 3.69 0 1.35.46 2.26.46 2.26l-1.84 7.8c-.55 2.32-.08 5.17-.04 5.46.02.17.25.21.35.08.15-.2 2.05-2.54 2.69-4.88.18-.66 1.04-4.08 1.04-4.08.51.98 2.01 1.84 3.6 1.84 4.74 0 7.95-4.32 7.95-10.1C23.22 5.67 18.85 2 12 2Z"
+                                        class="corp-social-fill"></path>
+                                </svg>
+                            </a>
+
+
+                            <a href="#" class="corp-social-link" aria-label="Google" title="Google">
+                                <svg viewBox="0 0 488 512" aria-hidden="true">
+                                    <path
+                                        d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4Z"
+                                        class="corp-social-fill"></path>
+                                </svg>
+                            </a>
+
+                            <a href="#" class="corp-social-link" aria-label="Threads" title="Threads">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12 3.25c-4.98 0-8.25 3.46-8.25 8.63 0 5.35 3.3 8.87 8.42 8.87 4.48 0 7.62-2.67 7.62-6.55 0-3.26-2.02-5.28-5.47-5.52-3.44-.24-5.84 1.42-5.84 4.08 0 2.1 1.63 3.55 3.92 3.55 2.74 0 4.64-1.91 4.64-4.74 0-4.05-2.13-6.56-5.86-6.56-2.26 0-4.14.86-5.47 2.42" fill="none"></path>
+                                    <path d="M15.62 10.13c1.4.78 2.23 2.08 2.23 3.73 0 2.38-1.86 4.22-4.61 4.22" fill="none"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </section>
+
+
+                <!-- NAVIGATION -->
+                <nav class="corp-footer-nav" aria-label="Footer navigation">
+
+                    <!-- 01 / COMPANY -->
+                    <div class="corp-footer-column">
+                        <div class="corp-footer-column-heading">
+                            <span>01</span>
+                            <h3>Company</h3>
+                        </div>
+
+                        <ul>
+                            <li><a href="index.html"><span>Home</span><i>↗</i></a></li>
+                            <li><a href="about.html"><span>About</span><i>↗</i></a></li>
+                            <li><a href="why.html"><span>Why</span><i>↗</i></a></li>
+                            <li><a href="blogs.html"><span>Blogs</span><i>↗</i></a></li>
+                            <li><a href="contact.html"><span>Contact</span><i>↗</i></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 02 / RENEWABLE ENERGY -->
+                    <div class="corp-footer-column">
+                        <div class="corp-footer-column-heading">
+                            <span>02</span>
+                            <h3>Renewable Energy</h3>
+                        </div>
+
+                        <ul>
+                            <li><a href="solar-energy.html"><span>Solar</span><i>↗</i></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 03 / POWER -->
+                    <div class="corp-footer-column">
+                        <div class="corp-footer-column-heading">
+                            <span>03</span>
+                            <h3>Power</h3>
+                        </div>
+
+                        <ul>
+                            <li><a href="lt.html"><span>LT</span><i>↗</i></a></li>
+                            <li><a href="ht.html"><span>HT</span><i>↗</i></a></li>
+                            <li><a href="eht.html"><span>EHT</span><i>↗</i></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 04 / LIGHTING -->
+                    <div class="corp-footer-column">
+                        <div class="corp-footer-column-heading">
+                            <span>04</span>
+                            <h3>Lighting</h3>
+                        </div>
+
+                        <ul>
+                            <li><a href="residential-lighting.html"><span>Residential Lighting</span><i>↗</i></a></li>
+                            <li><a href="commercial-lighting.html"><span>Commercial Lighting</span><i>↗</i></a></li>
+                            <li><a href="industrial-lighting.html"><span>Industrial Lighting</span><i>↗</i></a></li>
+                            <li><a href="outdoor-lighting.html"><span>Outdoor Lighting</span><i>↗</i></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 05 / AUTOMATION -->
+                    <div class="corp-footer-column">
+                        <div class="corp-footer-column-heading">
+                            <span>05</span>
+                            <h3>Automation</h3>
+                        </div>
+
+                        <ul>
+                            <li><a href="home-automation.html"><span>Home Automation</span><i>↗</i></a></li>
+                            <li><a href="commercial-automation.html"><span>Commercial Automation</span><i>↗</i></a></li>
+                            <li><a href="industrial-automation.html"><span>Industrial Automation</span><i>↗</i></a></li>
+                            <li><a href="hospital-automation.html"><span>Hospital Automation</span><i>↗</i></a></li>
+                            <li><a href="hotel-automation.html"><span>Hotel Automation</span><i>↗</i></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 06 / IoT -->
+                    <div class="corp-footer-column">
+                        <div class="corp-footer-column-heading">
+                            <span>06</span>
+                            <h3>IoT</h3>
+                        </div>
+
+                        <ul>
+                            <li><a href="iot.html"><span>IoT</span><i>↗</i></a></li>
+                            <li><a href="bms.html"><span>BMS</span><i>↗</i></a></li>
+                            <li><a href="iot_bms.html"><span>IoT + BMS</span><i>↗</i></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 07 / R&D -->
+                    <div class="corp-footer-column">
+                        <div class="corp-footer-column-heading">
+                            <span>07</span>
+                            <h3>R&amp;D</h3>
+                        </div>
+
+                        <ul>
+                            <li><a href="smart-pole-r&d.html"><span>Smart Pole</span><i>↗</i></a></li>
+                            <li><a href="smart-bollard-r&d.html"><span>Smart Bollard</span><i>↗</i></a></li>
+                            <li><a href="smart_conference_table.html"><span>Smart Conference Table</span><i>↗</i></a></li>
+                            <li><a href="smart_bar_counter.html"><span>Smart Bar Counter</span><i>↗</i></a></li>
+                            <li><a href="smart_window_leafac.html"><span>Smart Window Leaf AC</span><i>↗</i></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 08 / PRODUCTS -->
+                    <div class="corp-footer-column">
+                        <div class="corp-footer-column-heading">
+                            <span>08</span>
+                            <h3>Products</h3>
+                        </div>
+
+                        <ul>
+                            <li><a href="sensors.html"><span>Sensors</span><i>↗</i></a></li>
+                            <li><a href="controllers.html"><span>Controllers</span><i>↗</i></a></li>
+                            <li><a href="gateways.html"><span>Gateways</span><i>↗</i></a></li>
+                            <li><a href="transformers.html"><span>Transformers</span><i>↗</i></a></li>
+                            <li><a href="control-panels.html"><span>Control Panels</span><i>↗</i></a></li>
+                            <li><a href="panel-boards.html"><span>Panel Boards</span><i>↗</i></a></li>
+                            <li><a href="switchgears.html"><span>Switchgears</span><i>↗</i></a></li>
+                        </ul>
+                    </div>
+
+                </nav>
+
+            </div>
+
+
+            <!-- =====================================================
+             CONTACT BAND
+        ====================================================== -->
+            <section class="corp-footer-contact" aria-label="Contact information">
+
+                <div class="corp-footer-contact-heading">
+                    <span>Contact</span>
+                    <h3>Let’s connect.</h3>
+                </div>
+
+                <a href="mailto:info@aniplgroup.com" class="corp-footer-contact-item">
+                    <span>01 / Email</span>
+                    <strong>info@aniplgroup.com</strong>
+                    <i aria-hidden="true">↗</i>
+                </a>
+
+                <div class="corp-footer-contact-item corp-footer-contact-location">
+                    <span>02 / Office</span>
+                    <strong>320 Fifth Floor, East Avenue, Ayyappa Society Main Rd, near YSR Statue, SBH Officers Colony, Mega Hills, Madhapur, Hyderabad, Telangana 500081</strong>
+                    <i aria-hidden="true">—</i>
+                </div>
+
+                <a href="contact.html" class="corp-footer-contact-item">
+                    <span>03 / Enquiries</span>
+                    <strong>Start a Conversation</strong>
+                    <i aria-hidden="true">↗</i>
+                </a>
+
+            </section>
+
+
+            <!-- =====================================================
+             BOTTOM BAR
+        ====================================================== -->
+            <div class="corp-footer-bottom">
+
+                <p>
+                    © <span id="corpFooterYear"></span> Alpha Numeric Innovations Private Limited.
+                    All rights reserved.
+                </p>
+
+                <div class="corp-footer-disciplines" aria-label="Core disciplines">
+                    <span>Renewable Energy</span>
+                    <i></i>
+                    <span>Power</span>
+                    <i></i>
+                    <span>Lighting</span>
+                    <i></i>
+                    <span>Automation</span>
+                    <i></i>
+                    <span>IoT</span>
+                    <i></i>
+                    <span>R&amp;D</span>
+                </div>
+
+                <div class="corp-footer-bottom-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+
+                    <a href="#page-top" class="corp-footer-top-link">
+                        Back to top
+                        <span aria-hidden="true">↑</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <style>
+        /* =========================================================
+   CORPORATE WHITE FOOTER — DESIGN SYSTEM
 ========================================================== */
 
         .corp-footer {
@@ -3142,6 +3477,103 @@ document.addEventListener("DOMContentLoaded", function () {
             text-transform: uppercase;
         }
 
+        /* =========================================================
+   SOCIAL MEDIA
+========================================================== */
+
+        .corp-footer-social {
+            margin-top: 24px;
+        }
+
+        .corp-footer-social-label {
+            display: block;
+
+            margin-bottom: 12px;
+
+            color: var(--footer-muted);
+
+            font-size: 8px;
+            letter-spacing: 0.15em;
+
+            text-transform: uppercase;
+        }
+
+        .corp-footer-social-links {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .corp-social-link {
+            position: relative;
+
+            display: grid;
+            place-items: center;
+
+            width: 38px;
+            height: 38px;
+
+            border: 1px solid var(--footer-line);
+
+            color: var(--footer-ink);
+            background: rgba(255, 255, 255, 0.34);
+
+            transition:
+                color 0.28s ease,
+                background-color 0.28s ease,
+                border-color 0.28s ease,
+                transform 0.28s ease;
+        }
+
+        .corp-social-link::after {
+            content: "";
+
+            position: absolute;
+            right: -1px;
+            bottom: -1px;
+
+            width: 7px;
+            height: 7px;
+
+            border-right: 1px solid var(--footer-accent);
+            border-bottom: 1px solid var(--footer-accent);
+
+            transition:
+                width 0.28s ease,
+                height 0.28s ease;
+        }
+
+        .corp-social-link svg {
+            width: 16px;
+            height: 16px;
+
+            overflow: visible;
+
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.7;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .corp-social-link svg .corp-social-fill {
+            fill: currentColor;
+            stroke: none;
+        }
+
+        .corp-social-link:hover {
+            color: #ffffff;
+            background: var(--footer-ink);
+            border-color: var(--footer-ink);
+            transform: translateY(-3px);
+        }
+
+        .corp-social-link:hover::after {
+            width: 14px;
+            height: 14px;
+        }
+
         .corp-footer-status span {
             width: 19px;
             height: 2px;
@@ -3151,7 +3583,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         .corp-footer-nav {
             display: grid;
-            grid-template-columns: repeat(5, minmax(0, 1fr));
+            grid-template-columns: repeat(4, minmax(0, 1fr));
 
             min-width: 0;
         }
@@ -3162,10 +3594,15 @@ document.addEventListener("DOMContentLoaded", function () {
             padding: clamp(38px, 3.5vw, 58px) clamp(20px, 2.6vw, 42px);
 
             border-right: 1px solid var(--footer-line-light);
+            border-bottom: 1px solid var(--footer-line-light);
         }
 
-        .corp-footer-column:last-child {
+        .corp-footer-column:nth-child(4n) {
             border-right: 0;
+        }
+
+        .corp-footer-column:nth-child(n + 5) {
+            border-bottom: 0;
         }
 
         .corp-footer-column-heading {
@@ -3263,7 +3700,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         .corp-footer-contact {
             display: grid;
-            grid-template-columns: minmax(210px, 0.72fr) repeat(3, minmax(0, 1fr));
+            grid-template-columns:
+                minmax(190px, 0.68fr)
+                minmax(230px, 0.92fr)
+                minmax(420px, 1.72fr)
+                minmax(190px, 0.68fr);
 
             border-bottom: 1px solid var(--footer-line);
         }
@@ -3346,6 +3787,12 @@ document.addEventListener("DOMContentLoaded", function () {
             font-size: 12.5px;
             font-weight: 500;
             line-height: 1.45;
+        }
+
+        .corp-footer-contact-location>strong {
+            max-width: 620px;
+            padding-right: 20px;
+            line-height: 1.65;
         }
 
         .corp-footer-contact-item>i {
@@ -3538,10 +3985,11 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             .corp-footer-nav {
-                grid-template-columns: repeat(5, minmax(0, 1fr));
+                grid-template-columns: repeat(4, minmax(0, 1fr));
             }
 
-            .corp-footer-column:first-child {
+            .corp-footer-column:first-child,
+            .corp-footer-column:nth-child(5) {
                 padding-left: 0;
             }
         }
@@ -3580,28 +4028,35 @@ document.addEventListener("DOMContentLoaded", function () {
                 grid-template-columns: repeat(3, minmax(0, 1fr));
             }
 
-            .corp-footer-column {
+            .corp-footer-column,
+            .corp-footer-column:nth-child(4n),
+            .corp-footer-column:nth-child(n + 5) {
+                border-right: 1px solid var(--footer-line-light);
                 border-bottom: 1px solid var(--footer-line-light);
             }
 
-            .corp-footer-column:nth-child(3) {
+            .corp-footer-column:nth-child(3n) {
                 border-right: 0;
             }
 
-            .corp-footer-column:nth-child(4) {
+            .corp-footer-column:nth-child(1),
+            .corp-footer-column:nth-child(4),
+            .corp-footer-column:nth-child(7) {
                 padding-left: 0;
             }
 
-            .corp-footer-column:nth-child(n + 4) {
+            .corp-footer-column:nth-child(n + 7) {
                 border-bottom: 0;
             }
 
-            .corp-footer-column:last-child {
-                border-right: 1px solid var(--footer-line-light);
+            .corp-footer-contact {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
-            .corp-footer-contact {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
+            .corp-footer-contact-location {
+                grid-column: 1 / -1;
+                border-right: 0;
+                border-bottom: 1px solid var(--footer-line-light);
             }
 
             .corp-footer-contact-heading {
@@ -3671,13 +4126,28 @@ document.addEventListener("DOMContentLoaded", function () {
                 font-size: 12.5px;
             }
 
+            .corp-footer-social {
+                margin-top: 22px;
+            }
+
+            .corp-footer-social-links {
+                gap: 7px;
+            }
+
+            .corp-social-link {
+                width: 40px;
+                height: 40px;
+            }
+
             .corp-footer-nav {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
             .corp-footer-column,
             .corp-footer-column:first-child,
-            .corp-footer-column:nth-child(4) {
+            .corp-footer-column:nth-child(4),
+            .corp-footer-column:nth-child(5),
+            .corp-footer-column:nth-child(7) {
                 padding: 31px 18px;
                 border-right: 1px solid var(--footer-line-light);
                 border-bottom: 1px solid var(--footer-line-light);
@@ -3692,17 +4162,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 border-right: 0;
             }
 
-            .corp-footer-column:nth-child(4) {
-                border-bottom: 1px solid var(--footer-line-light);
-            }
-
-            .corp-footer-column:last-child {
-                grid-column: 1 / -1;
-
-                padding-right: 0;
-                padding-left: 0;
-
-                border-right: 0;
+            .corp-footer-column:nth-child(n + 7) {
                 border-bottom: 0;
             }
 
@@ -3774,6 +4234,8 @@ document.addEventListener("DOMContentLoaded", function () {
             .corp-footer-column,
             .corp-footer-column:first-child,
             .corp-footer-column:nth-child(4),
+            .corp-footer-column:nth-child(5),
+            .corp-footer-column:nth-child(7),
             .corp-footer-column:last-child,
             .corp-footer-column:nth-child(odd),
             .corp-footer-column:nth-child(even) {
@@ -3802,253 +4264,18 @@ document.addEventListener("DOMContentLoaded", function () {
             .corp-footer-button i,
             .corp-footer-column a,
             .corp-footer-column a i,
+            .corp-social-link,
+            .corp-social-link::after,
             .corp-footer-contact-item>i,
             .corp-footer-bottom-links>a,
             .corp-footer-top-link span {
                 transition: none;
             }
         }
-</style>
+    </style>
 
-<!-- =========================================================
-         MODULE 10 — FOOTER
-         HTML + CSS + JS are kept together below
-    ========================================================== -->
-    <footer class="corp-footer" aria-label="Website footer">
 
-        <div class="corp-footer-container">
-
-            <!-- =====================================================
-             PRIMARY CTA
-        ====================================================== -->
-            <section class="corp-footer-cta" aria-labelledby="corp-footer-title">
-
-                <div class="corp-footer-cta-copy">
-
-                    <p class="corp-footer-kicker">
-                        <span>01</span>
-                        <i></i>
-                        Start a project
-                    </p>
-
-                    <h2 id="corp-footer-title">
-                        Let’s engineer
-                        <span>what comes next.</span>
-                    </h2>
-
-                </div>
-
-                <div class="corp-footer-cta-action">
-
-                    <p>
-                        Intelligent engineering for power, energy,
-                        automation and future-ready systems.
-                    </p>
-
-                    <a href="contact.html" class="corp-footer-button">
-                        <span>Start a conversation</span>
-                        <i aria-hidden="true">↗</i>
-                    </a>
-
-                </div>
-
-            </section>
-
-
-            <!-- =====================================================
-             BRAND + NAVIGATION
-        ====================================================== -->
-            <div class="corp-footer-main">
-
-                <!-- BRAND -->
-                <section class="corp-footer-brand" aria-label="Alpha Numeric">
-
-                    <a href="index.html" class="corp-footer-logo" aria-label="Alpha Numeric home">
-                        <img src="assets/img/b-alpha.png" alt="Alpha Numeric">
-                    </a>
-
-                    <p>
-                        Technology-driven engineering solutions
-                        designed for dependable performance,
-                        meaningful progress and long-term value.
-                    </p>
-
-                    <div class="corp-footer-status">
-                        <span></span>
-                        Building the Pride of a Nation
-                    </div>
-
-                </section>
-
-
-                <!-- NAVIGATION -->
-                <nav class="corp-footer-nav" aria-label="Footer navigation">
-
-                    <!-- COMPANY -->
-                    <div class="corp-footer-column">
-
-                        <div class="corp-footer-column-heading">
-                            <span>01</span>
-                            <h3>Company</h3>
-                        </div>
-
-                        <ul>
-                            <li><a href="index.html"><span>Home</span><i>↗</i></a></li>
-                            <li><a href="about.html"><span>About</span><i>↗</i></a></li>
-                            <li><a href="contact.html"><span>Contact</span><i>↗</i></a></li>
-                        </ul>
-
-                    </div>
-
-
-                    <!-- ENERGY -->
-                    <div class="corp-footer-column">
-
-                        <div class="corp-footer-column-heading">
-                            <span>02</span>
-                            <h3>Renewable Energy</h3>
-                        </div>
-
-                        <ul>
-                            <li><a href="solar-energy.html"><span>Solar</span><i>↗</i></a></li>
-                            <!-- <li><a href="wind-energy.html"><span>Wind Energy</span><i>↗</i></a></li>
-                            <li><a href="biomass-energy.html"><span>Biomass Energy</span><i>↗</i></a></li>
-                            <li><a href="hydel-energy.html"><span>Hydel Energy</span><i>↗</i></a></li> -->
-                        </ul>
-
-                    </div>
-
-
-                    <!-- POWER -->
-                    <div class="corp-footer-column">
-
-                        <div class="corp-footer-column-heading">
-                            <span>03</span>
-                            <h3>Power</h3>
-                        </div>
-
-                        <ul>
-                            <li><a href="lt.html"><span>LT</span><i>↗</i></a></li>
-                            <li><a href="ht.html"><span>HT</span><i>↗</i></a></li>
-                            <li><a href="eht.html"><span>EHT</span><i>↗</i></a></li>
-                            <!-- <li><a href="control-panels.html"><span>Control Panels</span><i>↗</i></a></li>
-                            <li><a href="panel-boards.html"><span>Panel Boards</span><i>↗</i></a></li> -->
-                        </ul>
-
-                    </div>
-
-
-                    <!-- AUTOMATION -->
-                    <div class="corp-footer-column">
-
-                        <div class="corp-footer-column-heading">
-                            <span>04</span>
-                            <h3>Automation</h3>
-                        </div>
-
-                        <ul>
-                            <li><a href="home-automation.html"><span>Home Automation</span><i>↗</i></a></li>
-                            <li><a href="commercial-automation.html"><span>Commercial</span><i>↗</i></a></li>
-                            <li><a href="industrial-automation.html"><span>Industrial</span><i>↗</i></a></li>
-                            <li><a href="hospital-automation.html"><span>Hospital</span><i>↗</i></a></li>
-                            <li><a href="hotel-automation.html"><span>Hotel</span><i>↗</i></a></li>
-                        </ul>
-
-                    </div>
-
-
-                    <!-- R&D / PRODUCTS -->
-                    <div class="corp-footer-column">
-
-                        <div class="corp-footer-column-heading">
-                            <span>05</span>
-                            <h3>R&amp;D / Products</h3>
-                        </div>
-
-                        <ul>
-                            <li><a href="smart-pole-r&d.html"><span>Smart Pole</span><i>↗</i></a></li>
-                            <li><a href="smart-bollard-r&d.html"><span>Smart Bollard</span><i>↗</i></a></li>
-                            <li><a href="smart_conference_table.html"><span>Smart Conference Table</span><i>↗</i></a></li>
-                            <li><a href="smart_bar_counter.html"><span>Smart Bar Counter</span><i>↗</i></a></li>
-                            <li><a href="smart_window_leafac.html"><span>Smart Window Leaf AC</span><i>↗</i></a></li>
-                        </ul>
-
-                    </div>
-
-                </nav>
-
-            </div>
-
-
-            <!-- =====================================================
-             CONTACT BAND
-        ====================================================== -->
-            <section class="corp-footer-contact" aria-label="Contact information">
-
-                <div class="corp-footer-contact-heading">
-                    <span>Contact</span>
-                    <h3>Let’s connect.</h3>
-                </div>
-
-                <a href="tel:+919000000000" class="corp-footer-contact-item">
-                    <span>01 / Phone</span>
-                    <strong>+91 00000 00000</strong>
-                    <i aria-hidden="true">↗</i>
-                </a>
-
-                <a href="mailto:info@alphanumeric.com" class="corp-footer-contact-item">
-                    <span>02 / Email</span>
-                    <strong>info@alphanumeric.com</strong>
-                    <i aria-hidden="true">↗</i>
-                </a>
-
-                <div class="corp-footer-contact-item">
-                    <span>03 / Location</span>
-                    <strong>Madhapur, Hyderabad</strong>
-                    <i aria-hidden="true">—</i>
-                </div>
-
-            </section>
-
-
-            <!-- =====================================================
-             BOTTOM BAR
-        ====================================================== -->
-            <div class="corp-footer-bottom">
-
-                <p>
-                    © <span id="corpFooterYear"></span> Alpha Numeric.
-                    All rights reserved.
-                </p>
-
-                <div class="corp-footer-disciplines" aria-label="Core disciplines">
-                    <span>Renewable Energy</span>
-                    <i></i>
-                    <span>Power</span>
-                    <i></i>
-                    <span>Automation</span>
-                    <i></i>
-                    <span>R&amp;D</span>
-                </div>
-
-                <div class="corp-footer-bottom-links">
-                    <a href="#">Privacy</a>
-                    <a href="#">Terms</a>
-
-                    <a href="#page-top" class="corp-footer-top-link">
-                        Back to top
-                        <span aria-hidden="true">↑</span>
-                    </a>
-                </div>
-
-            </div>
-
-        </div>
-
-    </footer>
-
-<!-- MODULE 10 — FOOTER — SCRIPT -->
-<script>
+    <script>
         document.getElementById("corpFooterYear").textContent = new Date().getFullYear();
     </script>
 
