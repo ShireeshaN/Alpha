@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Home Automation | Alpha Numeric</title>
@@ -11,20 +12,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet">
+        rel="stylesheet">
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-          rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<style>
-/* =========================================================
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* =========================================================
    GLOBAL BASE STYLES
 ========================================================= */
-/* =========================================================
+        /* =========================================================
            GLOBAL
         ========================================================= */
 
@@ -33,7 +32,9 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+p {
+    font-size: 17px !important;
+}
         html {
             scroll-behavior: smooth;
         }
@@ -53,18 +54,20 @@
             max-width: 100%;
             display: block;
         }
-</style>
+    </style>
 </head>
+
 <body>
 
-<!-- HTML -->
+    <!-- HTML -->
     <!-- =========================================================
          PREMIUM GLOBAL NAVIGATION
     ========================================================= -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/img/lll1.png" id="logoWhite" class="navbar-logo" alt="Alpha Numeric Innovations" style="display:none;">
+                <img src="assets/img/lll1.png" id="logoWhite" class="navbar-logo" alt="Alpha Numeric Innovations"
+                    style="display:none;">
                 <img src="assets/img/lll1.png" id="logoDark" class="navbar-logo" alt="Alpha Numeric Innovations">
             </a>
 
@@ -129,57 +132,51 @@
 
                     <li class="nav-item dropdown bms-dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="bmsDropdown" role="button"
-                           data-bs-toggle="dropdown" aria-expanded="false">IoT</a>
+                            data-bs-toggle="dropdown" aria-expanded="false">IoT</a>
                         <ul class="dropdown-menu bms-menu" aria-labelledby="bmsDropdown">
                             <li><a class="dropdown-item" href="iot.html">IoT</a></li>
                             <li><a class="dropdown-item" href="bms.html">BMS</a></li>
                             <li><a class="dropdown-item" href="iot_bms.html">IoT+BMS</a></li>
                         </ul>
                     </li>
-    <li class="nav-item dropdown product-dropdown">              
+                    <li class="nav-item dropdown product-dropdown">
 
-    <a class="nav-link dropdown-toggle"
-       href="#"
-       id="productsDropdown"
-       role="button"
-       data-bs-toggle="dropdown"
-       data-bs-auto-close="outside"
-       aria-expanded="false">
-        Products
-    </a>
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
+                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            Products
+                        </a>
 
-    <div class="dropdown-menu product-menu"
-         aria-labelledby="productsDropdown">
+                        <div class="dropdown-menu product-menu" aria-labelledby="productsDropdown">
 
-        <a href="power-products.html">Sensors</a>
+                            <a href="power-products.html">Sensors</a>
 
-        <a href="power-products.html">Controllers</a>
+                            <a href="power-products.html">Controllers</a>
 
-        <a href="power-products.html">Gateways</a>
+                            <a href="power-products.html">Gateways</a>
 
-        <a href="power-products.html">Meters</a>
+                            <a href="power-products.html">Meters</a>
 
-        <a href="power-products.html">Transformers</a>
+                            <a href="power-products.html">Transformers</a>
 
-        <a href="power-products.html">Control Panels</a>
+                            <a href="power-products.html">Control Panels</a>
 
-        <a href="power-products.html">Panel Boards</a>
+                            <a href="power-products.html">Panel Boards</a>
 
-        <a href="power-products.html">Switchgears</a>
+                            <a href="power-products.html">Switchgears</a>
 
-    </div>
+                        </div>
 
-</li>
-<li class="nav-item"><a class="nav-link" href="why.html">Why</a></li>
-<li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="why.html">Why</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-<!-- CSS -->
-<style>
+    <!-- CSS -->
+    <style>
         /* =====================================================
            GLOBAL
         ===================================================== */
@@ -208,29 +205,144 @@
         img {
             max-width: 100%;
         }
+
         /* =====================================================
            PREMIUM GLOBAL NAVBAR
         ===================================================== */
 
-        .main-navbar { padding: 13px 0; background: transparent; transition: background .35s ease, padding .35s ease, box-shadow .35s ease; z-index: 9999; }
-        .main-navbar.navbar-shrink, .main-navbar.scrolled { background: #fff; padding: 8px 0; box-shadow: 0 8px 35px rgba(14,29,57,.08); }
-        .navbar-logo { height: 68px; width: auto; object-fit: contain; transition: height .3s ease; }
-        .main-navbar.navbar-shrink .navbar-logo, .main-navbar.scrolled .navbar-logo { height: 58px; }
-        .main-navbar .nav-link { position: relative; color: #fff; font-size: 14px; font-weight: 600; letter-spacing: .4px; margin: 0 5px; padding: 12px 11px !important; transition: color .3s ease; }
-        .main-navbar.navbar-shrink .nav-link, .main-navbar.scrolled .nav-link { color: #16243b; }
-        .main-navbar .nav-link:hover, .main-navbar .nav-link:focus { color: #4d73be; }
+        .main-navbar {
+            padding: 13px 0;
+            background: transparent;
+            transition: background .35s ease, padding .35s ease, box-shadow .35s ease;
+            z-index: 9999;
+        }
 
-        .solution-dropdown { position: static !important; }
-        .mega-menu { position: absolute !important; width: min(1380px, calc(100vw - 48px)); left: 50% !important; top: 100% !important; transform: translateX(-50%) !important; margin-top: 0 !important; padding: 0; border: 0; border-radius: 14px; background: #fff; box-shadow: 0 24px 70px rgba(14,29,57,.18); overflow: hidden; }
-        .mega-menu-inner { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); }
-        .mega-column { min-height: 270px; padding: 30px 30px 32px; border-right: 1px solid #e8edf5; background: #fff; }
-        .mega-column:last-child { border-right: 0; }
-        .mega-heading { display: flex; align-items: center; gap: 11px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid #edf1f7; color: #17243b; font-family: "Varela Round", sans-serif; font-size: 16px; font-weight: 600; }
-        .mega-heading i { width: 22px; color: #4d73be; font-size: 17px; }
-        .mega-column > a { display: block; position: relative; padding: 9px 0 9px 16px; color: #5d687b; font-size: 13.5px; font-weight: 600; text-decoration: none; transition: color .25s ease, padding .25s ease; }
-        .mega-column > a::before { content: ""; position: absolute; left: 0; top: 50%; width: 6px; height: 1px; background: #9eabc0; transform: translateY(-50%); transition: width .25s ease, background .25s ease; }
-        .mega-column > a:hover { color: #334a85; padding-left: 21px; }
-        .mega-column > a:hover::before { width: 12px; background: #4d73be; }
+        .main-navbar.navbar-shrink,
+        .main-navbar.scrolled {
+            background: #fff;
+            padding: 8px 0;
+            box-shadow: 0 8px 35px rgba(14, 29, 57, .08);
+        }
+
+        .navbar-logo {
+            height: 68px;
+            width: auto;
+            object-fit: contain;
+            transition: height .3s ease;
+        }
+
+        .main-navbar.navbar-shrink .navbar-logo,
+        .main-navbar.scrolled .navbar-logo {
+            height: 58px;
+        }
+
+        .main-navbar .nav-link {
+            position: relative;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: .4px;
+            margin: 0 5px;
+            padding: 12px 11px !important;
+            transition: color .3s ease;
+        }
+
+        .main-navbar.navbar-shrink .nav-link,
+        .main-navbar.scrolled .nav-link {
+            color: #16243b;
+        }
+
+        .main-navbar .nav-link:hover,
+        .main-navbar .nav-link:focus {
+            color: #4d73be;
+        }
+
+        .solution-dropdown {
+            position: static !important;
+        }
+
+        .mega-menu {
+            position: absolute !important;
+            width: min(1380px, calc(100vw - 48px));
+            left: 50% !important;
+            top: 100% !important;
+            transform: translateX(-50%) !important;
+            margin-top: 0 !important;
+            padding: 0;
+            border: 0;
+            border-radius: 14px;
+            background: #fff;
+            box-shadow: 0 24px 70px rgba(14, 29, 57, .18);
+            overflow: hidden;
+        }
+
+        .mega-menu-inner {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+        }
+
+        .mega-column {
+            min-height: 270px;
+            padding: 30px 30px 32px;
+            border-right: 1px solid #e8edf5;
+            background: #fff;
+        }
+
+        .mega-column:last-child {
+            border-right: 0;
+        }
+
+        .mega-heading {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            margin-bottom: 18px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid #edf1f7;
+            color: #17243b;
+            font-family: "Varela Round", sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .mega-heading i {
+            width: 22px;
+            color: #4d73be;
+            font-size: 17px;
+        }
+
+        .mega-column>a {
+            display: block;
+            position: relative;
+            padding: 9px 0 9px 16px;
+            color: #5d687b;
+            font-size: 13.5px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color .25s ease, padding .25s ease;
+        }
+
+        .mega-column>a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 6px;
+            height: 1px;
+            background: #9eabc0;
+            transform: translateY(-50%);
+            transition: width .25s ease, background .25s ease;
+        }
+
+        .mega-column>a:hover {
+            color: #334a85;
+            padding-left: 21px;
+        }
+
+        .mega-column>a:hover::before {
+            width: 12px;
+            background: #4d73be;
+        }
 
         /* BMS DROPDOWN */
         .bms-dropdown .bms-menu {
@@ -240,7 +352,7 @@
             border: 1px solid #1f1f1f;
             border-radius: 10px;
             background: #000000;
-            box-shadow: 0 18px 45px rgba(0,0,0,.24);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, .24);
         }
 
         .bms-dropdown .bms-menu .dropdown-item {
@@ -260,8 +372,9 @@
         }
 
         @media (min-width: 992px) {
+
             /* BMS dropdown: open on hover and stay open while hovering menu */
-            .bms-dropdown > .bms-menu {
+            .bms-dropdown>.bms-menu {
                 display: block;
                 opacity: 0;
                 visibility: hidden;
@@ -270,16 +383,16 @@
                 transition: opacity .22s ease, visibility .22s ease, transform .22s ease;
             }
 
-            .bms-dropdown:hover > .bms-menu,
-            .bms-dropdown > .bms-menu:hover,
-            .bms-dropdown > .bms-menu.show {
+            .bms-dropdown:hover>.bms-menu,
+            .bms-dropdown>.bms-menu:hover,
+            .bms-dropdown>.bms-menu.show {
                 opacity: 1;
                 visibility: visible;
                 pointer-events: auto;
                 transform: translateY(0);
             }
 
-            .solution-dropdown > .mega-menu {
+            .solution-dropdown>.mega-menu {
                 opacity: 0;
                 visibility: hidden;
                 pointer-events: none;
@@ -287,16 +400,16 @@
                 transition: opacity .22s ease, visibility .22s ease;
             }
 
-            .solution-dropdown:hover > .mega-menu,
-            .solution-dropdown.mega-open > .mega-menu,
-            .solution-dropdown > .mega-menu.show {
+            .solution-dropdown:hover>.mega-menu,
+            .solution-dropdown.mega-open>.mega-menu,
+            .solution-dropdown>.mega-menu.show {
                 opacity: 1;
                 visibility: visible;
                 pointer-events: auto;
             }
 
             /* Invisible hover bridge between Solutions and mega menu */
-            .solution-dropdown > .mega-menu::before {
+            .solution-dropdown>.mega-menu::before {
                 content: "";
                 position: absolute;
                 left: 0;
@@ -308,44 +421,121 @@
         }
 
         @media (max-width: 991px) {
-            .main-navbar { background: #fff; padding: 8px 0; }
-            .navbar-logo { height: 55px; }
-            #logoWhite { display: none !important; }
-            #logoDark { display: block !important; }
-            .main-navbar .navbar-toggler { color: #17243b; border-color: rgba(23,36,59,.2); }
-            .main-navbar .nav-link { color: #17243b; padding: 12px 7px !important; margin: 1px 0; }
-            .navbar-collapse { max-height: calc(100vh - 76px); overflow-y: auto; margin-top: 10px; padding: 15px 10px 22px; border-top: 1px solid #edf0f5; background: #fff; }
-            .mega-menu { position: static !important; transform: none !important; width: 100%; margin: 0 !important; box-shadow: none; border-left: 2px solid #334a85; border-radius: 0; overflow: visible; }
-            .mega-menu-inner { grid-template-columns: 1fr; }
-            .mega-column { min-height: 0; padding: 18px 18px 14px; border-right: 0; border-bottom: 1px solid #edf0f5; }
-            .mega-column:last-child { border-bottom: 0; }
-            .mega-heading { margin-bottom: 8px; padding-bottom: 10px; }
-            .mega-column > a { padding-top: 7px; padding-bottom: 7px; }
+            .main-navbar {
+                background: #fff;
+                padding: 8px 0;
+            }
+
+            .navbar-logo {
+                height: 55px;
+            }
+
+            #logoWhite {
+                display: none !important;
+            }
+
+            #logoDark {
+                display: block !important;
+            }
+
+            .main-navbar .navbar-toggler {
+                color: #17243b;
+                border-color: rgba(23, 36, 59, .2);
+            }
+
+            .main-navbar .nav-link {
+                color: #17243b;
+                padding: 12px 7px !important;
+                margin: 1px 0;
+            }
+
+            .navbar-collapse {
+                max-height: calc(100vh - 76px);
+                overflow-y: auto;
+                margin-top: 10px;
+                padding: 15px 10px 22px;
+                border-top: 1px solid #edf0f5;
+                background: #fff;
+            }
+
+            .mega-menu {
+                position: static !important;
+                transform: none !important;
+                width: 100%;
+                margin: 0 !important;
+                box-shadow: none;
+                border-left: 2px solid #334a85;
+                border-radius: 0;
+                overflow: visible;
+            }
+
+            .mega-menu-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .mega-column {
+                min-height: 0;
+                padding: 18px 18px 14px;
+                border-right: 0;
+                border-bottom: 1px solid #edf0f5;
+            }
+
+            .mega-column:last-child {
+                border-bottom: 0;
+            }
+
+            .mega-heading {
+                margin-bottom: 8px;
+                padding-bottom: 10px;
+            }
+
+            .mega-column>a {
+                padding-top: 7px;
+                padding-bottom: 7px;
+            }
         }
 
 
         /* ABOUT PAGE: keep Index navbar in permanent white/scrolled state */
-       
+
         .main-navbar {
             background: #fff;
             padding: 8px 0;
-            box-shadow: 0 8px 35px rgba(14,29,57,.08);
+            box-shadow: 0 8px 35px rgba(14, 29, 57, .08);
         }
-        .main-navbar .navbar-logo { height: 58px; }
-        .main-navbar .nav-link { color: #16243b; }
-        #logoWhite { display: none !important; }
-        #logoDark { display: block !important; }
+
+        .main-navbar .navbar-logo {
+            height: 58px;
+        }
+
+        .main-navbar .nav-link {
+            color: #16243b;
+        }
+
+        #logoWhite {
+            display: none !important;
+        }
+
+        #logoDark {
+            display: block !important;
+        }
+
         .main-navbar .nav-contact {
             background: #334a85;
             border-color: #334a85;
             color: #fff !important;
         }
+
         .main-navbar .nav-contact:hover {
             background: #17243b;
             border-color: #17243b;
             color: #fff !important;
         }
-        .main-navbar .nav-link.active { color: #4d73be; }
+
+        .main-navbar .nav-link.active {
+            color: #4d73be;
+        }
+
         .main-navbar .nav-link.active:not(.nav-contact)::after {
             width: calc(100% - 24px);
         }
@@ -354,325 +544,327 @@
    PRODUCTS DROPDOWN
 ========================================================= */
 
-.product-dropdown{
-    position:relative;
-}
+        .product-dropdown {
+            position: relative;
+        }
 
-.product-menu{
-    min-width:240px;
+        .product-menu {
+            min-width: 240px;
 
-    padding:10px 0;
+            padding: 10px 0;
 
-    margin-top:0!important;
+            margin-top: 0 !important;
 
-    border:0;
+            border: 0;
 
-    border-radius:10px;
+            border-radius: 10px;
 
-    background:#000;
+            background: #000;
 
-    box-shadow:
-        0 20px 55px rgba(0,0,0,.25);
+            box-shadow:
+                0 20px 55px rgba(0, 0, 0, .25);
 
-    overflow:hidden;
-}
+            overflow: hidden;
+        }
 
-.product-menu > a{
-    display:block;
+        .product-menu>a {
+            display: block;
 
-    position:relative;
+            position: relative;
 
-    padding:11px 24px;
+            padding: 11px 24px;
 
-    color:#bdbdbd;
+            color: #bdbdbd;
 
-    font-size:13.5px;
+            font-size: 13.5px;
 
-    font-weight:600;
+            font-weight: 600;
 
-    text-decoration:none;
+            text-decoration: none;
 
-    transition:
-        color .25s ease,
-        padding-left .25s ease,
-        background .25s ease;
-}
+            transition:
+                color .25s ease,
+                padding-left .25s ease,
+                background .25s ease;
+        }
 
-.product-menu > a::before{
-    content:"";
+        .product-menu>a::before {
+            content: "";
 
-    position:absolute;
+            position: absolute;
 
-    left:12px;
+            left: 12px;
 
-    top:50%;
+            top: 50%;
 
-    width:5px;
+            width: 5px;
 
-    height:1px;
+            height: 1px;
 
-    background:#666;
+            background: #666;
 
-    transform:translateY(-50%);
+            transform: translateY(-50%);
 
-    transition:
-        width .25s ease,
-        background .25s ease;
-}
+            transition:
+                width .25s ease,
+                background .25s ease;
+        }
 
-.product-menu > a:hover{
-    color:#fff;
+        .product-menu>a:hover {
+            color: #fff;
 
-    background:#111;
+            background: #111;
 
-    padding-left:29px;
-}
+            padding-left: 29px;
+        }
 
-.product-menu > a:hover::before{
-    width:10px;
+        .product-menu>a:hover::before {
+            width: 10px;
 
-    background:#fff;
-}
+            background: #fff;
+        }
 
 
-/* =========================================================
+        /* =========================================================
    DESKTOP HOVER
 ========================================================= */
 
-@media (min-width:992px){
+        @media (min-width:992px) {
 
-    .product-dropdown:hover > .product-menu{
-        display:block;
-    }
+            .product-dropdown:hover>.product-menu {
+                display: block;
+            }
 
-    .product-menu{
-        display:block;
+            .product-menu {
+                display: block;
 
-        opacity:0;
+                opacity: 0;
 
-        visibility:hidden;
+                visibility: hidden;
 
-        pointer-events:none;
+                pointer-events: none;
 
-        transition:
-            opacity .2s ease,
-            visibility .2s ease;
-    }
+                transition:
+                    opacity .2s ease,
+                    visibility .2s ease;
+            }
 
-    .product-dropdown:hover > .product-menu,
-    .product-dropdown > .product-menu.show{
-        opacity:1;
+            .product-dropdown:hover>.product-menu,
+            .product-dropdown>.product-menu.show {
+                opacity: 1;
 
-        visibility:visible;
+                visibility: visible;
 
-        pointer-events:auto;
-    }
-}
+                pointer-events: auto;
+            }
+        }
 
 
-/* =========================================================
+        /* =========================================================
    MOBILE
 ========================================================= */
 
-@media (max-width:991px){
+        @media (max-width:991px) {
 
-    .product-menu{
-        position:static!important;
+            .product-menu {
+                position: static !important;
 
-        width:100%;
+                width: 100%;
 
-        margin:0!important;
+                margin: 0 !important;
 
-        border-radius:0;
+                border-radius: 0;
 
-        box-shadow:none;
+                box-shadow: none;
 
-        background:#000;
-    }
+                background: #000;
+            }
 
-    .product-menu > a{
-        padding:10px 22px;
+            .product-menu>a {
+                padding: 10px 22px;
 
-        color:#bdbdbd;
-    }
-}
+                color: #bdbdbd;
+            }
+        }
 
 
-        
-/* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
-.main-navbar #solutionsDropdown,
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown:active,
-.main-navbar #solutionsDropdown.show {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
 
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown.show {
-    color: #4d73be !important;
-}
-/* =========================================================
+        /* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
+        .main-navbar #solutionsDropdown,
+        .main-navbar #solutionsDropdown:hover,
+        .main-navbar #solutionsDropdown:focus,
+        .main-navbar #solutionsDropdown:active,
+        .main-navbar #solutionsDropdown.show {
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+            outline: none !important;
+        }
+
+        .main-navbar #solutionsDropdown:hover,
+        .main-navbar #solutionsDropdown:focus,
+        .main-navbar #solutionsDropdown.show {
+            color: #4d73be !important;
+        }
+
+        /* =========================================================
    NAVBAR — MONOCHROME BLACK THEME
    Keep existing layout + mega-menu behavior unchanged
 ========================================================= */
 
-/* Main nav links */
-.main-navbar .nav-link,
-.main-navbar.scrolled .nav-link,
-.main-navbar.navbar-shrink .nav-link {
-    color: #1a1a1a !important;
-}
+        /* Main nav links */
+        .main-navbar .nav-link,
+        .main-navbar.scrolled .nav-link,
+        .main-navbar.navbar-shrink .nav-link {
+            color: #1a1a1a !important;
+        }
 
-/* Normal */
-.main-navbar .nav-link {
-    font-weight: 600;
-}
+        /* Normal */
+        .main-navbar .nav-link {
+            font-weight: 600;
+        }
 
-/* Hover / focus — black only */
-.main-navbar .nav-link:hover,
-.main-navbar .nav-link:focus {
-    color: #000000 !important;
-}
+        /* Hover / focus — black only */
+        .main-navbar .nav-link:hover,
+        .main-navbar .nav-link:focus {
+            color: #000000 !important;
+        }
 
-/* Active — black + stronger weight */
-.main-navbar .nav-link.active,
-.main-navbar .nav-link.show,
-.main-navbar #solutionsDropdown.show {
-    color: #000000 !important;
-    font-weight: 800 !important;
-}
+        /* Active — black + stronger weight */
+        .main-navbar .nav-link.active,
+        .main-navbar .nav-link.show,
+        .main-navbar #solutionsDropdown.show {
+            color: #000000 !important;
+            font-weight: 800 !important;
+        }
 
-/* No colored underline */
-.main-navbar .nav-link:not(.nav-contact):not(.dropdown-toggle)::after {
-    background: #000000 !important;
-}
+        /* No colored underline */
+        .main-navbar .nav-link:not(.nav-contact):not(.dropdown-toggle)::after {
+            background: #000000 !important;
+        }
 
-/* Solutions: text only, no box */
-.main-navbar #solutionsDropdown,
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown:active,
-.main-navbar #solutionsDropdown.show {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-    color: #000000 !important;
-}
+        /* Solutions: text only, no box */
+        .main-navbar #solutionsDropdown,
+        .main-navbar #solutionsDropdown:hover,
+        .main-navbar #solutionsDropdown:focus,
+        .main-navbar #solutionsDropdown:active,
+        .main-navbar #solutionsDropdown.show {
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+            outline: none !important;
+            color: #000000 !important;
+        }
 
-/* Contact: monochrome */
-.main-navbar .nav-contact,
-.main-navbar.scrolled .nav-contact {
-    background: #000000 !important;
-    border-color: #000000 !important;
-    color: #ffffff !important;
-}
+        /* Contact: monochrome */
+        .main-navbar .nav-contact,
+        .main-navbar.scrolled .nav-contact {
+            background: #000000 !important;
+            border-color: #000000 !important;
+            color: #ffffff !important;
+        }
 
-.main-navbar .nav-contact:hover,
-.main-navbar .nav-contact:focus,
-.main-navbar.scrolled .nav-contact:hover {
-    background: #222222 !important;
-    border-color: #222222 !important;
-    color: #ffffff !important;
-}
+        .main-navbar .nav-contact:hover,
+        .main-navbar .nav-contact:focus,
+        .main-navbar.scrolled .nav-contact:hover {
+            background: #222222 !important;
+            border-color: #222222 !important;
+            color: #ffffff !important;
+        }
 
-/* =========================================================
+        /* =========================================================
    MEGA MENU — BLACK
 ========================================================= */
 
-.main-navbar .mega-menu {
-    background: #000000 !important;
-    border: 1px solid #1f1f1f !important;
-    box-shadow: 0 24px 70px rgba(0,0,0,.28) !important;
-}
+        .main-navbar .mega-menu {
+            background: #000000 !important;
+            border: 1px solid #1f1f1f !important;
+            box-shadow: 0 24px 70px rgba(0, 0, 0, .28) !important;
+        }
 
-/* Columns */
-.main-navbar .mega-column {
-    background: #000000 !important;
-    border-right-color: #242424 !important;
-}
+        /* Columns */
+        .main-navbar .mega-column {
+            background: #000000 !important;
+            border-right-color: #242424 !important;
+        }
 
-.main-navbar .mega-column:last-child {
-    border-right-color: transparent !important;
-}
+        .main-navbar .mega-column:last-child {
+            border-right-color: transparent !important;
+        }
 
-/* Headings */
-.main-navbar .mega-heading {
-    color: #ffffff !important;
-    border-bottom-color: #2a2a2a !important;
-}
+        /* Headings */
+        .main-navbar .mega-heading {
+            color: #ffffff !important;
+            border-bottom-color: #2a2a2a !important;
+        }
 
-/* Icons — monochrome */
-.main-navbar .mega-heading i {
-    color: #ffffff !important;
-}
+        /* Icons — monochrome */
+        .main-navbar .mega-heading i {
+            color: #ffffff !important;
+        }
 
-/* Menu links */
-.main-navbar .mega-column > a {
-    color: #bdbdbd !important;
-}
+        /* Menu links */
+        .main-navbar .mega-column>a {
+            color: #bdbdbd !important;
+        }
 
-/* Small line before links */
-.main-navbar .mega-column > a::before {
-    background: #666666 !important;
-}
+        /* Small line before links */
+        .main-navbar .mega-column>a::before {
+            background: #666666 !important;
+        }
 
-/* Hover inside mega menu */
-.main-navbar .mega-column > a:hover,
-.main-navbar .mega-column > a:focus {
-    color: #ffffff !important;
-}
+        /* Hover inside mega menu */
+        .main-navbar .mega-column>a:hover,
+        .main-navbar .mega-column>a:focus {
+            color: #ffffff !important;
+        }
 
-.main-navbar .mega-column > a:hover::before {
-    background: #ffffff !important;
-}
+        .main-navbar .mega-column>a:hover::before {
+            background: #ffffff !important;
+        }
 
-/* Mobile */
-@media (max-width: 991px) {
-    .main-navbar .nav-link {
-        color: #1a1a1a !important;
-    }
+        /* Mobile */
+        @media (max-width: 991px) {
+            .main-navbar .nav-link {
+                color: #1a1a1a !important;
+            }
 
-    .main-navbar .mega-menu {
-        background: #000000 !important;
-        border-left-color: #000000 !important;
-    }
+            .main-navbar .mega-menu {
+                background: #000000 !important;
+                border-left-color: #000000 !important;
+            }
 
-    .main-navbar .mega-column {
-        background: #000000 !important;
-        border-bottom-color: #242424 !important;
-    }
-}
-.main-navbar .mega-heading {
-    gap: 0 !important;
-}
-</style>
+            .main-navbar .mega-column {
+                background: #000000 !important;
+                border-bottom-color: #242424 !important;
+            }
+        }
 
-<!-- JAVASCRIPT -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const nav = document.getElementById("mainNav");
-    const white = document.getElementById("logoWhite");
-    const dark = document.getElementById("logoDark");
+        .main-navbar .mega-heading {
+            gap: 0 !important;
+        }
+    </style>
 
-    if (nav) nav.classList.add("scrolled", "navbar-shrink");
-    if (white) white.style.display = "none";
-    if (dark) dark.style.display = "block";
-});
-</script>
+    <!-- JAVASCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const nav = document.getElementById("mainNav");
+            const white = document.getElementById("logoWhite");
+            const dark = document.getElementById("logoDark");
 
-<!-- END MODULE — NAVBAR -->
+            if (nav) nav.classList.add("scrolled", "navbar-shrink");
+            if (white) white.style.display = "none";
+            if (dark) dark.style.display = "block";
+        });
+    </script>
 
-<style>
-/* =========================================================
+    <!-- END MODULE — NAVBAR -->
+
+    <style>
+        /* =========================================================
    COMMON SECTION STYLES
 ========================================================= */
-/* =========================================================
+        /* =========================================================
            COMMON
         ========================================================= */
 
@@ -687,7 +879,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         .section-title {
             color: #111;
-            font-size: clamp(34px,4vw,58px);
+            font-size: clamp(34px, 4vw, 58px);
             line-height: 1.08;
             font-weight: 600;
             letter-spacing: -2px;
@@ -700,72 +892,70 @@ document.addEventListener("DOMContentLoaded", function () {
             background: #111;
             margin: 20px 0 25px;
         }
-</style>
+    </style>
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE — HERO
 ========================================================= -->
-<!-- =========================================================
+    <!-- =========================================================
      HERO
 ========================================================= -->
 
-<section class="hero">
+    <section class="hero">
 
-    <div class="hero-content">
+        <div class="hero-content">
 
 
-        <div class="hero-label">
+            <div class="hero-label">
 
-            Smart Living • Intelligent Control
+                Smart Living • Intelligent Control
+
+            </div>
+
+
+            <h1>
+
+                Home
+
+                <br>
+
+                <span>Automation</span>
+
+            </h1>
+
+
+            <p>
+
+                Transform your home into an intelligent, connected
+                environment with smart lighting, climate control,
+                security, entertainment and energy management —
+                designed around the way you live.
+
+            </p>
+
+
+            <a href="#solutions" class="hero-button">
+
+                EXPLORE SMART HOME
+
+                <i class="fas fa-arrow-right"></i>
+
+            </a>
+
 
         </div>
 
+    </section>
 
-        <h1>
-
-            Home
-
-            <br>
-
-            <span>Automation</span>
-
-        </h1>
-
-
-        <p>
-
-            Transform your home into an intelligent, connected
-            environment with smart lighting, climate control,
-            security, entertainment and energy management —
-            designed around the way you live.
-
-        </p>
-
-
-        <a
-            href="#solutions"
-            class="hero-button">
-
-            EXPLORE SMART HOME
-
-            <i class="fas fa-arrow-right"></i>
-
-        </a>
-
-
-    </div>
-
-</section>
-
-<style>
-/* MODULE CSS — HERO */
-/* =========================================================
+    <style>
+        /* MODULE CSS — HERO */
+        /* =========================================================
            HERO
         ========================================================= */
 
         .hero {
             min-height: 680px;
-          
+
 
             display: flex;
             align-items: center;
@@ -774,13 +964,11 @@ document.addEventListener("DOMContentLoaded", function () {
             overflow: hidden;
 
             background:
-                linear-gradient(
-                    90deg,
-                    rgba(0,0,0,.94) 0%,
-                    rgba(0,0,0,.80) 43%,
-                    rgba(0,0,0,.35) 78%,
-                    rgba(0,0,0,.10) 100%
-                ),
+                linear-gradient(90deg,
+                    rgba(0, 0, 0, .94) 0%,
+                    rgba(0, 0, 0, .80) 43%,
+                    rgba(0, 0, 0, .35) 78%,
+                    rgba(0, 0, 0, .10) 100%),
                 url("assets/img/automation/banner.png");
 
             background-size: cover;
@@ -873,115 +1061,115 @@ document.addEventListener("DOMContentLoaded", function () {
             color: #fff;
             transform: translateY(-3px);
         }
-</style>
+    </style>
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE — HIGHLIGHTS
 ========================================================= -->
-<!-- =========================================================
+    <!-- =========================================================
      HIGHLIGHTS
 ========================================================= -->
 
-<section class="highlights">
+    <section class="highlights">
 
 
-    <div class="highlight">
+        <div class="highlight">
 
-        <div class="highlight-icon">
+            <div class="highlight-icon">
 
-            <i class="fas fa-lightbulb"></i>
+                <i class="fas fa-lightbulb"></i>
 
-        </div>
+            </div>
 
-        <div>
+            <div>
 
-            <h4>
-                Smart Lighting
-            </h4>
+                <h4>
+                    Smart Lighting
+                </h4>
 
-            <p>
-                Intelligent lighting control for every space.
-            </p>
+                <p>
+                    Intelligent lighting control for every space.
+                </p>
 
-        </div>
-
-    </div>
-
-
-    <div class="highlight">
-
-        <div class="highlight-icon">
-
-            <i class="fas fa-temperature-half"></i>
+            </div>
 
         </div>
 
-        <div>
 
-            <h4>
-                Climate Control
-            </h4>
+        <div class="highlight">
 
-            <p>
-                Comfortable temperatures with intelligent control.
-            </p>
+            <div class="highlight-icon">
 
-        </div>
+                <i class="fas fa-temperature-half"></i>
 
-    </div>
+            </div>
 
+            <div>
 
-    <div class="highlight">
+                <h4>
+                    Climate Control
+                </h4>
 
-        <div class="highlight-icon">
+                <p>
+                    Comfortable temperatures with intelligent control.
+                </p>
 
-            <i class="fas fa-shield-halved"></i>
-
-        </div>
-
-        <div>
-
-            <h4>
-                Smart Security
-            </h4>
-
-            <p>
-                Connected security and access management.
-            </p>
+            </div>
 
         </div>
 
-    </div>
 
+        <div class="highlight">
 
-    <div class="highlight">
+            <div class="highlight-icon">
 
-        <div class="highlight-icon">
+                <i class="fas fa-shield-halved"></i>
 
-            <i class="fas fa-mobile-screen-button"></i>
+            </div>
+
+            <div>
+
+                <h4>
+                    Smart Security
+                </h4>
+
+                <p>
+                    Connected security and access management.
+                </p>
+
+            </div>
 
         </div>
 
-        <div>
 
-            <h4>
-                Remote Control
-            </h4>
+        <div class="highlight">
 
-            <p>
-                Manage your home from anywhere.
-            </p>
+            <div class="highlight-icon">
+
+                <i class="fas fa-mobile-screen-button"></i>
+
+            </div>
+
+            <div>
+
+                <h4>
+                    Remote Control
+                </h4>
+
+                <p>
+                    Manage your home from anywhere.
+                </p>
+
+            </div>
 
         </div>
 
-    </div>
 
+    </section>
 
-</section>
-
-<style>
-/* MODULE CSS — HIGHLIGHTS */
-/* =========================================================
+    <style>
+        /* MODULE CSS — HIGHLIGHTS */
+        /* =========================================================
            HERO FEATURES
         ========================================================= */
 
@@ -993,11 +1181,11 @@ document.addEventListener("DOMContentLoaded", function () {
             z-index: 10;
 
             display: grid;
-            grid-template-columns: repeat(4,1fr);
+            grid-template-columns: repeat(4, 1fr);
 
             background: #fff;
 
-            box-shadow: 0 20px 55px rgba(0,0,0,.12);
+            box-shadow: 0 20px 55px rgba(0, 0, 0, .12);
         }
 
         .highlight {
@@ -1045,1797 +1233,1737 @@ document.addEventListener("DOMContentLoaded", function () {
             line-height: 1.6;
             margin: 0;
         }
-</style>
+    </style>
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE — HOME AUTOMATION INTRO
 ========================================================= -->
-<!-- =========================================================
+    <!-- =========================================================
      HOME AUTOMATION INTRO
 ========================================================= -->
 
-<section class="ha-intro-section">
+    <section class="ha-intro-section">
 
-    <div class="ha-intro-frame">
+        <div class="ha-intro-frame">
 
 
-        <!-- LEFT CONTENT -->
+            <!-- LEFT CONTENT -->
 
-        <div class="ha-intro-lead">
+            <div class="ha-intro-lead">
 
-            <div class="ha-intro-index">
-                <span>01</span>
-                <small>Smart Living</small>
-            </div>
+                <div class="ha-intro-index">
+                    <span>01</span>
+                    <small>Smart Living</small>
+                </div>
 
-            <div class="ha-intro-label">
-                Intelligent Living
-            </div>
+                <div class="ha-intro-label">
+                    Intelligent Living
+                </div>
 
-            <h2 class="ha-intro-title">
+                <h2 class="ha-intro-title">
 
-                Your Home.
+                    Your Home.
 
-                <br>
+                    <br>
 
-                <span>Your Control.</span>
+                    <span>Your Control.</span>
 
-            </h2>
+                </h2>
 
-            <div class="ha-intro-line"></div>
+                <div class="ha-intro-line"></div>
 
-            <p class="ha-intro-description">
+                <p class="ha-intro-description">
 
-                Home automation connects lighting, climate,
-                security, entertainment and electrical systems
-                into one intelligent environment.
+                    Home automation connects lighting, climate,
+                    security, entertainment and electrical systems
+                    into one intelligent environment.
 
-            </p>
+                </p>
 
-            <div class="ha-intro-assurance">
+                <div class="ha-intro-assurance">
 
-                <span class="ha-intro-assurance-dot"></span>
+                    <span class="ha-intro-assurance-dot"></span>
 
-                <div>
+                    <div>
 
-                    <strong>
-                        One Connected Ecosystem
-                    </strong>
+                        <strong>
+                            One Connected Ecosystem
+                        </strong>
 
-                    <small>
-                        Designed around the way you live
-                    </small>
+                        <small>
+                            Designed around the way you live
+                        </small>
+
+                    </div>
 
                 </div>
+
+            </div>
+
+
+            <!-- RIGHT CONTENT -->
+
+            <div class="ha-intro-story">
+
+                <div class="ha-intro-label">
+                    Connected Technology
+                </div>
+
+                <h3>
+
+                    Technology That
+
+                    <br>
+
+                    <span>Works Around You</span>
+
+                </h3>
+
+                <p>
+
+                    Smart devices, sensors and control systems work
+                    together to create personalized experiences while
+                    improving comfort, convenience, security and
+                    energy efficiency.
+
+                </p>
+
+                <p>
+
+                    Manage your complete living environment using wall
+                    panels, mobile applications, voice assistants,
+                    automated scenes and intelligent schedules.
+
+                </p>
+
+                <div class="ha-intro-statement">
+
+                    <span>Connected</span>
+                    <span>Responsive</span>
+                    <span>Efficient</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTROL OPTIONS -->
+
+            <div class="ha-intro-controls">
+
+
+                <div class="ha-control-item">
+
+                    <span class="ha-control-number">01</span>
+
+                    <div>
+
+                        <strong>Wall Panels</strong>
+
+                        <p>
+                            Centralized room and system control.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="ha-control-item">
+
+                    <span class="ha-control-number">02</span>
+
+                    <div>
+
+                        <strong>Mobile Control</strong>
+
+                        <p>
+                            Access your home from anywhere.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="ha-control-item">
+
+                    <span class="ha-control-number">03</span>
+
+                    <div>
+
+                        <strong>Voice Assistants</strong>
+
+                        <p>
+                            Natural hands-free home operation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="ha-control-item">
+
+                    <span class="ha-control-number">04</span>
+
+                    <div>
+
+                        <strong>Smart Scenes</strong>
+
+                        <p>
+                            Personalized schedules and experiences.
+                        </p>
+
+                    </div>
+
+                </div>
+
 
             </div>
 
         </div>
 
+    </section>
 
-        <!-- RIGHT CONTENT -->
-
-        <div class="ha-intro-story">
-
-            <div class="ha-intro-label">
-                Connected Technology
-            </div>
-
-            <h3>
-
-                Technology That
-
-                <br>
-
-                <span>Works Around You</span>
-
-            </h3>
-
-            <p>
-
-                Smart devices, sensors and control systems work
-                together to create personalized experiences while
-                improving comfort, convenience, security and
-                energy efficiency.
-
-            </p>
-
-            <p>
-
-                Manage your complete living environment using wall
-                panels, mobile applications, voice assistants,
-                automated scenes and intelligent schedules.
-
-            </p>
-
-            <div class="ha-intro-statement">
-
-                <span>Connected</span>
-                <span>Responsive</span>
-                <span>Efficient</span>
-
-            </div>
-
-        </div>
-
-
-        <!-- CONTROL OPTIONS -->
-
-        <div class="ha-intro-controls">
-
-
-            <div class="ha-control-item">
-
-                <span class="ha-control-number">01</span>
-
-                <div>
-
-                    <strong>Wall Panels</strong>
-
-                    <p>
-                        Centralized room and system control.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="ha-control-item">
-
-                <span class="ha-control-number">02</span>
-
-                <div>
-
-                    <strong>Mobile Control</strong>
-
-                    <p>
-                        Access your home from anywhere.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="ha-control-item">
-
-                <span class="ha-control-number">03</span>
-
-                <div>
-
-                    <strong>Voice Assistants</strong>
-
-                    <p>
-                        Natural hands-free home operation.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="ha-control-item">
-
-                <span class="ha-control-number">04</span>
-
-                <div>
-
-                    <strong>Smart Scenes</strong>
-
-                    <p>
-                        Personalized schedules and experiences.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-<style>
-/* MODULE CSS — HOME AUTOMATION INTRO */
-/* =========================================================
+    <style>
+        /* MODULE CSS — HOME AUTOMATION INTRO */
+        /* =========================================================
    HOME AUTOMATION INTRO
 ========================================================= */
 
-.ha-intro-section,
-.ha-intro-section * {
-    box-sizing: border-box;
-}
+        .ha-intro-section,
+        .ha-intro-section * {
+            box-sizing: border-box;
+        }
 
-.ha-intro-section {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
+        .ha-intro-section {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
 
-    padding: 120px 80px;
+            padding: 120px 80px;
 
-    background: #ffffff;
-    color: #111111;
-}
+            background: #ffffff;
+            color: #111111;
+        }
 
-/* Decorative background typography */
+        /* Decorative background typography */
 
-.ha-intro-section::before {
-    content: "CONNECTED";
+        .ha-intro-section::before {
+            content: "CONNECTED";
 
-    position: absolute;
-    top: 30px;
-    right: -35px;
-    z-index: -1;
+            position: absolute;
+            top: 30px;
+            right: -35px;
+            z-index: -1;
 
-    color: rgba(17, 17, 17, 0.025);
+            color: rgba(17, 17, 17, 0.025);
 
-    font-size: 140px;
-    font-weight: 800;
-    line-height: 1;
-    letter-spacing: -6px;
+            font-size: 140px;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -6px;
 
-    pointer-events: none;
-}
-
-
-/* Main frame */
-
-.ha-intro-frame {
-    width: 100%;
-    max-width: 1250px;
-
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-columns: 575px 675px;
-
-    border-top: 1px solid #dcdcdc;
-    border-bottom: 1px solid #dcdcdc;
-}
+            pointer-events: none;
+        }
 
 
-/* =========================================================
+        /* Main frame */
+
+        .ha-intro-frame {
+            width: 100%;
+            max-width: 1250px;
+
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: 575px 675px;
+
+            border-top: 1px solid #dcdcdc;
+            border-bottom: 1px solid #dcdcdc;
+        }
+
+
+        /* =========================================================
    LEFT SIDE
 ========================================================= */
 
-.ha-intro-lead {
-    position: relative;
+        .ha-intro-lead {
+            position: relative;
 
-    min-height: 470px;
+            min-height: 470px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
 
-    padding: 65px 75px 65px 0;
+            padding: 65px 75px 65px 0;
 
-    border-right: 1px solid #dcdcdc;
-}
+            border-right: 1px solid #dcdcdc;
+        }
 
-.ha-intro-index {
-    position: absolute;
-    top: 28px;
-    right: 28px;
+        .ha-intro-index {
+            position: absolute;
+            top: 28px;
+            right: 28px;
 
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-.ha-intro-index span {
-    color: #111111;
+        .ha-intro-index span {
+            color: #111111;
 
-    font-size: 11px;
-    font-weight: 700;
-}
+            font-size: 11px;
+            font-weight: 700;
+        }
 
-.ha-intro-index small {
-    padding-left: 10px;
+        .ha-intro-index small {
+            padding-left: 10px;
 
-    border-left: 1px solid #cccccc;
+            border-left: 1px solid #cccccc;
 
-    color: #888888;
+            color: #888888;
 
-    font-size: 8px;
-    font-weight: 600;
-    letter-spacing: 1.3px;
-    text-transform: uppercase;
-}
+            font-size: 8px;
+            font-weight: 600;
+            letter-spacing: 1.3px;
+            text-transform: uppercase;
+        }
 
-.ha-intro-label {
-    margin-bottom: 20px;
+        .ha-intro-label {
+            margin-bottom: 20px;
 
-    color: #777777;
+            color: #777777;
 
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 2.4px;
-    text-transform: uppercase;
-}
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 2.4px;
+            text-transform: uppercase;
+        }
 
-.ha-intro-title {
-    margin: 0;
+        .ha-intro-title {
+            margin: 0;
 
-    color: #111111;
+            color: #111111;
 
-    font-size: 60px;
-    font-weight: 700;
-    line-height: 1.02;
-    letter-spacing: -3px;
-}
+            font-size: 60px;
+            font-weight: 700;
+            line-height: 1.02;
+            letter-spacing: -3px;
+        }
 
-.ha-intro-title span {
-    font-weight: 300;
-}
+        .ha-intro-title span {
+            font-weight: 300;
+        }
 
-.ha-intro-line {
-    width: 58px;
-    height: 3px;
+        .ha-intro-line {
+            width: 58px;
+            height: 3px;
 
-    margin: 30px 0 26px;
+            margin: 30px 0 26px;
 
-    background: #111111;
-}
+            background: #111111;
+        }
 
-.ha-intro-description {
-    max-width: 430px;
+        .ha-intro-description {
+            max-width: 430px;
 
-    margin: 0;
+            margin: 0;
 
-    color: #666666;
+            color: #666666;
 
-    font-size: 13px;
-    line-height: 1.9;
-}
+            font-size: 13px;
+            line-height: 1.9;
+        }
 
-.ha-intro-assurance {
-    display: flex;
-    align-items: center;
-    gap: 13px;
+        .ha-intro-assurance {
+            display: flex;
+            align-items: center;
+            gap: 13px;
 
-    margin-top: 34px;
-}
+            margin-top: 34px;
+        }
 
-.ha-intro-assurance-dot {
-    width: 9px;
-    height: 9px;
+        .ha-intro-assurance-dot {
+            width: 9px;
+            height: 9px;
 
-    flex: 0 0 auto;
+            flex: 0 0 auto;
 
-    border: 2px solid #111111;
-    border-radius: 50%;
+            border: 2px solid #111111;
+            border-radius: 50%;
 
-    box-shadow: 0 0 0 5px #eeeeee;
-}
+            box-shadow: 0 0 0 5px #eeeeee;
+        }
 
-.ha-intro-assurance strong {
-    display: block;
+        .ha-intro-assurance strong {
+            display: block;
 
-    margin-bottom: 4px;
+            margin-bottom: 4px;
 
-    color: #111111;
+            color: #111111;
 
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.3px;
-}
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+        }
 
-.ha-intro-assurance small {
-    display: block;
+        .ha-intro-assurance small {
+            display: block;
 
-    color: #888888;
+            color: #888888;
 
-    font-size: 9px;
-}
+            font-size: 9px;
+        }
 
 
-/* =========================================================
+        /* =========================================================
    RIGHT SIDE
 ========================================================= */
 
-.ha-intro-story {
-    min-height: 470px;
+        .ha-intro-story {
+            min-height: 470px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
 
-    padding: 65px 0 65px 75px;
-}
+            padding: 65px 0 65px 75px;
+        }
 
-.ha-intro-story h3 {
-    max-width: 560px;
+        .ha-intro-story h3 {
+            max-width: 560px;
 
-    margin: 0 0 27px;
+            margin: 0 0 27px;
 
-    color: #111111;
+            color: #111111;
 
-    font-size: 37px;
-    font-weight: 600;
-    line-height: 1.2;
-    letter-spacing: -1.5px;
-}
+            font-size: 37px;
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -1.5px;
+        }
 
-.ha-intro-story h3 span {
-    font-weight: 300;
-}
+        .ha-intro-story h3 span {
+            font-weight: 300;
+        }
 
-.ha-intro-story p {
-    max-width: 590px;
+        .ha-intro-story p {
+            max-width: 590px;
 
-    margin: 0 0 17px;
+            margin: 0 0 17px;
 
-    color: #666666;
+            color: #666666;
 
-    font-size: 13px;
-    line-height: 1.9;
-}
+            font-size: 13px;
+            line-height: 1.9;
+        }
 
-.ha-intro-statement {
-    display: flex;
-    align-items: center;
-    gap: 0;
+        .ha-intro-statement {
+            display: flex;
+            align-items: center;
+            gap: 0;
 
-    margin-top: 18px;
-}
+            margin-top: 18px;
+        }
 
-.ha-intro-statement span {
-    position: relative;
+        .ha-intro-statement span {
+            position: relative;
 
-    padding: 0 18px;
+            padding: 0 18px;
 
-    color: #111111;
+            color: #111111;
 
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 1.3px;
-    text-transform: uppercase;
-}
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1.3px;
+            text-transform: uppercase;
+        }
 
-.ha-intro-statement span:first-child {
-    padding-left: 0;
-}
+        .ha-intro-statement span:first-child {
+            padding-left: 0;
+        }
 
-.ha-intro-statement span:not(:last-child)::after {
-    content: "";
+        .ha-intro-statement span:not(:last-child)::after {
+            content: "";
 
-    position: absolute;
-    top: 50%;
-    right: 0;
+            position: absolute;
+            top: 50%;
+            right: 0;
 
-    width: 3px;
-    height: 3px;
+            width: 3px;
+            height: 3px;
 
-    background: #aaaaaa;
-    border-radius: 50%;
+            background: #aaaaaa;
+            border-radius: 50%;
 
-    transform: translateY(-50%);
-}
+            transform: translateY(-50%);
+        }
 
 
-/* =========================================================
+        /* =========================================================
    CONTROL OPTIONS
 ========================================================= */
 
-.ha-intro-controls {
-    grid-column: 1 / -1;
+        .ha-intro-controls {
+            grid-column: 1 / -1;
 
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
 
-    border-top: 1px solid #dcdcdc;
-}
+            border-top: 1px solid #dcdcdc;
+        }
 
-.ha-control-item {
-    min-height: 135px;
+        .ha-control-item {
+            min-height: 135px;
 
-    display: flex;
-    align-items: flex-start;
-    gap: 17px;
+            display: flex;
+            align-items: flex-start;
+            gap: 17px;
 
-    padding: 30px 27px;
+            padding: 30px 27px;
 
-    background: #ffffff;
+            background: #ffffff;
 
-    transition:
-        background 0.35s ease,
-        transform 0.35s ease;
-}
+            transition:
+                background 0.35s ease,
+                transform 0.35s ease;
+        }
 
-.ha-control-item:not(:last-child) {
-    border-right: 1px solid #dcdcdc;
-}
+        .ha-control-item:not(:last-child) {
+            border-right: 1px solid #dcdcdc;
+        }
 
-.ha-control-number {
-    flex: 0 0 auto;
+        .ha-control-number {
+            flex: 0 0 auto;
 
-    color: #aaaaaa;
+            color: #aaaaaa;
 
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 1px;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1px;
 
-    transition: color 0.35s ease;
-}
+            transition: color 0.35s ease;
+        }
 
-.ha-control-item strong {
-    display: block;
+        .ha-control-item strong {
+            display: block;
 
-    margin-bottom: 8px;
+            margin-bottom: 8px;
 
-    color: #111111;
+            color: #111111;
 
-    font-size: 11px;
-    font-weight: 700;
+            font-size: 11px;
+            font-weight: 700;
 
-    transition: color 0.35s ease;
-}
+            transition: color 0.35s ease;
+        }
 
-.ha-control-item p {
-    max-width: 190px;
+        .ha-control-item p {
+            max-width: 190px;
 
-    margin: 0;
+            margin: 0;
 
-    color: #777777;
+            color: #777777;
 
-    font-size: 9px;
-    line-height: 1.7;
+            font-size: 9px;
+            line-height: 1.7;
 
-    transition: color 0.35s ease;
-}
-
-
-/* Hover interaction */
-
-.ha-control-item:hover {
-    z-index: 2;
-
-    background: #111111;
-
-    transform: translateY(-5px);
-}
-
-.ha-control-item:hover .ha-control-number {
-    color: #777777;
-}
-
-.ha-control-item:hover strong {
-    color: #ffffff;
-}
-
-.ha-control-item:hover p {
-    color: #aaaaaa;
-}
+            transition: color 0.35s ease;
+        }
 
 
-/* =========================================================
+        /* Hover interaction */
+
+        .ha-control-item:hover {
+            z-index: 2;
+
+            background: #111111;
+
+            transform: translateY(-5px);
+        }
+
+        .ha-control-item:hover .ha-control-number {
+            color: #777777;
+        }
+
+        .ha-control-item:hover strong {
+            color: #ffffff;
+        }
+
+        .ha-control-item:hover p {
+            color: #aaaaaa;
+        }
+
+
+        /* =========================================================
    RESPONSIVE
 ========================================================= */
 
-@media (max-width: 1350px) {
+        @media (max-width: 1350px) {
 
-    .ha-intro-frame {
-        grid-template-columns: 46% 54%;
-    }
+            .ha-intro-frame {
+                grid-template-columns: 46% 54%;
+            }
 
-}
+        }
 
-@media (max-width: 980px) {
+        @media (max-width: 980px) {
 
-    .ha-intro-section {
-        padding: 90px 40px;
-    }
+            .ha-intro-section {
+                padding: 90px 40px;
+            }
 
-    .ha-intro-frame {
-        grid-template-columns: 1fr;
-    }
+            .ha-intro-frame {
+                grid-template-columns: 1fr;
+            }
 
-    .ha-intro-lead {
-        min-height: auto;
+            .ha-intro-lead {
+                min-height: auto;
 
-        padding: 60px 0;
+                padding: 60px 0;
 
-        border-right: 0;
-        border-bottom: 1px solid #dcdcdc;
-    }
+                border-right: 0;
+                border-bottom: 1px solid #dcdcdc;
+            }
 
-    .ha-intro-story {
-        min-height: auto;
+            .ha-intro-story {
+                min-height: auto;
 
-        padding: 60px 0;
-    }
+                padding: 60px 0;
+            }
 
-    .ha-intro-controls {
-        grid-template-columns: repeat(2, 1fr);
-    }
+            .ha-intro-controls {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
-    .ha-control-item:nth-child(2) {
-        border-right: 0;
-    }
+            .ha-control-item:nth-child(2) {
+                border-right: 0;
+            }
 
-    .ha-control-item:nth-child(-n + 2) {
-        border-bottom: 1px solid #dcdcdc;
-    }
+            .ha-control-item:nth-child(-n + 2) {
+                border-bottom: 1px solid #dcdcdc;
+            }
 
-}
+        }
 
-@media (max-width: 620px) {
+        @media (max-width: 620px) {
 
-    .ha-intro-section {
-        padding: 75px 22px;
-    }
+            .ha-intro-section {
+                padding: 75px 22px;
+            }
 
-    .ha-intro-section::before {
-        display: none;
-    }
+            .ha-intro-section::before {
+                display: none;
+            }
 
-    .ha-intro-title {
-        font-size: 45px;
-        letter-spacing: -2px;
-    }
+            .ha-intro-title {
+                font-size: 45px;
+                letter-spacing: -2px;
+            }
 
-    .ha-intro-story h3 {
-        font-size: 31px;
-    }
+            .ha-intro-story h3 {
+                font-size: 31px;
+            }
 
-    .ha-intro-index {
-        position: static;
+            .ha-intro-index {
+                position: static;
 
-        justify-content: flex-start;
+                justify-content: flex-start;
 
-        margin-bottom: 35px;
-    }
+                margin-bottom: 35px;
+            }
 
-    .ha-intro-controls {
-        grid-template-columns: 1fr;
-    }
+            .ha-intro-controls {
+                grid-template-columns: 1fr;
+            }
 
-    .ha-control-item {
-        min-height: 115px;
+            .ha-control-item {
+                min-height: 115px;
 
-        border-right: 0 !important;
-        border-bottom: 1px solid #dcdcdc;
-    }
+                border-right: 0 !important;
+                border-bottom: 1px solid #dcdcdc;
+            }
 
-    .ha-control-item:last-child {
-        border-bottom: 0;
-    }
+            .ha-control-item:last-child {
+                border-bottom: 0;
+            }
 
-    .ha-intro-statement {
-        flex-wrap: wrap;
-        row-gap: 12px;
-    }
+            .ha-intro-statement {
+                flex-wrap: wrap;
+                row-gap: 12px;
+            }
 
-}
-</style>
+        }
+    </style>
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE — SMART HOME SOLUTIONS
 ========================================================= -->
-<!-- =========================================================
+    <!-- =========================================================
      PREMIUM SMART HOME SOLUTIONS
 ========================================================= -->
 
-<section class="ha-solutions-section" id="solutions">
+    <section class="ha-solutions-section" id="solutions">
 
-    <div class="ha-solutions-container">
+        <div class="ha-solutions-container">
 
 
-        <!-- SECTION HEADING -->
+            <!-- SECTION HEADING -->
 
-        <header class="ha-solutions-header">
+            <header class="ha-solutions-header">
 
-            <div class="ha-solutions-heading">
+                <div class="ha-solutions-heading">
 
-                <div class="ha-solutions-label">
-                    Smart Home Solutions
+                    <div class="ha-solutions-label">
+                        Smart Home Solutions
+                    </div>
+
+                    <h2>
+                        One Home.
+                        <br>
+                        <span>One Intelligent Ecosystem.</span>
+                    </h2>
+
                 </div>
 
-                <h2>
-                    One Home.
-                    <br>
-                    <span>One Intelligent Ecosystem.</span>
-                </h2>
+
+                <div class="ha-solutions-intro">
+
+                    <span class="ha-solutions-count">
+                        09 Connected Capabilities
+                    </span>
+
+                    <p>
+                        Integrated automation solutions designed to
+                        make everyday living simpler, safer and smarter.
+                    </p>
+
+                </div>
+
+            </header>
+
+
+            <!-- BENTO IMAGE GRID -->
+
+            <div class="ha-solutions-grid">
+
+
+                <!-- 01 — SMART LIGHTING -->
+
+                <article class="ha-solution-card ha-solution-card--hero">
+
+                    <!-- Recommended image: 1600 × 1050 px -->
+
+                    <img src="assets/img/automation/Smart Lighting.png" width="1600" height="1050" loading="lazy"
+                        decoding="async" alt="Premium smart lighting automation">
+
+                    <div class="ha-solution-card__shade"></div>
+
+                    <div class="ha-solution-card__top">
+
+                        <div class="ha-solution-card__icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+
+                        <span class="ha-solution-card__number">
+                            01
+                        </span>
+
+                    </div>
+
+                    <div class="ha-solution-card__content">
+
+                        <span class="ha-solution-card__category">
+                            Lighting Automation
+                        </span>
+
+                        <h3>Smart Lighting</h3>
+
+                        <p>
+                            Control individual lights or create complete
+                            lighting scenes for different moods, activities
+                            and times of day.
+                        </p>
+
+                        <span class="ha-solution-card__arrow">
+                            ↗
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 02 — CLIMATE CONTROL -->
+
+                <article class="ha-solution-card ha-solution-card--side">
+
+                    <!-- Recommended image: 1200 × 1050 px -->
+
+                    <img src="assets/img/automation/smart-climate-control.jpg" width="1200" height="1050" loading="lazy"
+                        decoding="async" alt="Smart residential climate control">
+
+                    <div class="ha-solution-card__shade"></div>
+
+                    <div class="ha-solution-card__top">
+
+                        <div class="ha-solution-card__icon">
+                            <i class="fas fa-temperature-half"></i>
+                        </div>
+
+                        <span class="ha-solution-card__number">
+                            02
+                        </span>
+
+                    </div>
+
+                    <div class="ha-solution-card__content">
+
+                        <span class="ha-solution-card__category">
+                            Intelligent Comfort
+                        </span>
+
+                        <h3>Smart Climate Control</h3>
+
+                        <p>
+                            Manage air conditioning and temperature
+                            intelligently for greater comfort and
+                            efficient energy use.
+                        </p>
+
+                        <span class="ha-solution-card__arrow">
+                            ↗
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 03 — MOTORIZED CURTAINS -->
+
+                <article class="ha-solution-card ha-solution-card--third">
+
+                    <!-- Recommended image: 1200 × 900 px -->
+
+                    <img src="assets/img/automation/motorized-curtains.png" width="1200" height="900" loading="lazy"
+                        decoding="async" alt="Automated curtains in a luxury home">
+
+                    <div class="ha-solution-card__shade"></div>
+
+                    <div class="ha-solution-card__top">
+
+                        <div class="ha-solution-card__icon">
+                            <i class="fas fa-bars"></i>
+                        </div>
+
+                        <span class="ha-solution-card__number">
+                            03
+                        </span>
+
+                    </div>
+
+                    <div class="ha-solution-card__content">
+
+                        <span class="ha-solution-card__category">
+                            Daylight Control
+                        </span>
+
+                        <h3>Motorized Curtains</h3>
+
+                        <p>
+                            Automate curtains and blinds through schedules,
+                            sensors, scenes, mobile control or voice commands.
+                        </p>
+
+                        <span class="ha-solution-card__arrow">
+                            ↗
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 04 — SMART SECURITY -->
+
+                <article class="ha-solution-card ha-solution-card--third">
+
+                    <!-- Recommended image: 1200 × 900 px -->
+
+                    <img src="assets/img/automation/Smart Security.png" width="1200" height="900" loading="lazy"
+                        decoding="async" alt="Smart residential security system">
+
+                    <div class="ha-solution-card__shade"></div>
+
+                    <div class="ha-solution-card__top">
+
+                        <div class="ha-solution-card__icon">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+
+                        <span class="ha-solution-card__number">
+                            04
+                        </span>
+
+                    </div>
+
+                    <div class="ha-solution-card__content">
+
+                        <span class="ha-solution-card__category">
+                            Integrated Protection
+                        </span>
+
+                        <h3>Smart Security</h3>
+
+                        <p>
+                            Integrate sensors, cameras and alarms for
+                            intelligent monitoring and dependable protection.
+                        </p>
+
+                        <span class="ha-solution-card__arrow">
+                            ↗
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 05 — SMART ACCESS -->
+
+                <article class="ha-solution-card ha-solution-card--third">
+
+                    <!-- Recommended image: 1200 × 900 px -->
+
+                    <img src="assets/img/automation/smart-access.png" width="1200" height="900" loading="lazy"
+                        decoding="async" alt="Smart door-access control">
+
+                    <div class="ha-solution-card__shade"></div>
+
+                    <div class="ha-solution-card__top">
+
+                        <div class="ha-solution-card__icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+
+                        <span class="ha-solution-card__number">
+                            05
+                        </span>
+
+                    </div>
+
+                    <div class="ha-solution-card__content">
+
+                        <span class="ha-solution-card__category">
+                            Secure Entry
+                        </span>
+
+                        <h3>Smart Access</h3>
+
+                        <p>
+                            Smart locks and controlled-entry systems provide
+                            secure and convenient access to your home.
+                        </p>
+
+                        <span class="ha-solution-card__arrow">
+                            ↗
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 06 — HOME ENTERTAINMENT -->
+
+                <article class="ha-solution-card ha-solution-card--wide">
+
+                    <!-- Recommended image: 1600 × 1000 px -->
+
+                    <img src="assets/img/automation/home-entertainment.jpg" width="1600" height="1000" loading="lazy"
+                        decoding="async" alt="Integrated luxury home entertainment">
+
+                    <div class="ha-solution-card__shade"></div>
+
+                    <div class="ha-solution-card__top">
+
+                        <div class="ha-solution-card__icon">
+                            <i class="fas fa-tv"></i>
+                        </div>
+
+                        <span class="ha-solution-card__number">
+                            06
+                        </span>
+
+                    </div>
+
+                    <div class="ha-solution-card__content">
+
+                        <span class="ha-solution-card__category">
+                            Connected Entertainment
+                        </span>
+
+                        <h3>Home Entertainment</h3>
+
+                        <p>
+                            Bring lighting, audio, video and room scenes
+                            together to create personalized entertainment
+                            experiences.
+                        </p>
+
+                        <span class="ha-solution-card__arrow">
+                            ↗
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 07 — SMART SENSORS -->
+
+                <article class="ha-solution-card ha-solution-card--narrow">
+
+                    <!-- Recommended image: 1200 × 1000 px -->
+
+                    <img src="assets/img/automation/smart-sensors.png" width="1200" height="1000" loading="lazy"
+                        decoding="async" alt="Integrated smart-home sensors">
+
+                    <div class="ha-solution-card__shade"></div>
+
+                    <div class="ha-solution-card__top">
+
+                        <div class="ha-solution-card__icon">
+                            <i class="fas fa-wave-square"></i>
+                        </div>
+
+                        <span class="ha-solution-card__number">
+                            07
+                        </span>
+
+                    </div>
+
+                    <div class="ha-solution-card__content">
+
+                        <span class="ha-solution-card__category">
+                            Intelligent Response
+                        </span>
+
+                        <h3>Smart Sensors</h3>
+
+                        <p>
+                            Occupancy, temperature, light and environmental
+                            sensors enable automatic real-time responses.
+                        </p>
+
+                        <span class="ha-solution-card__arrow">
+                            ↗
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 08 — ENERGY MANAGEMENT -->
+
+                <article class="ha-solution-card ha-solution-card--narrow">
+
+                    <!-- Recommended image: 1200 × 1000 px -->
+
+                    <img src="assets/img/automation/Energy Management.png" width="1200" height="1000" loading="lazy"
+                        decoding="async" alt="Smart-home energy management">
+
+                    <div class="ha-solution-card__shade"></div>
+
+                    <div class="ha-solution-card__top">
+
+                        <div class="ha-solution-card__icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+
+                        <span class="ha-solution-card__number">
+                            08
+                        </span>
+
+                    </div>
+
+                    <div class="ha-solution-card__content">
+
+                        <span class="ha-solution-card__category">
+                            Energy Intelligence
+                        </span>
+
+                        <h3>Energy Management</h3>
+
+                        <p>
+                            Monitor and control connected systems to improve
+                            visibility and encourage efficient power use.
+                        </p>
+
+                        <span class="ha-solution-card__arrow">
+                            ↗
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 09 — CUSTOM AUTOMATION -->
+
+                <article class="ha-solution-card ha-solution-card--wide">
+
+                    <!-- Recommended image: 1600 × 1000 px -->
+
+                    <img src="assets/img/automation/Customized Automation.png" width="1600" height="1000" loading="lazy"
+                        decoding="async" alt="Customized home automation controls">
+
+                    <div class="ha-solution-card__shade"></div>
+
+                    <div class="ha-solution-card__top">
+
+                        <div class="ha-solution-card__icon">
+                            <i class="fas fa-sliders"></i>
+                        </div>
+
+                        <span class="ha-solution-card__number">
+                            09
+                        </span>
+
+                    </div>
+
+                    <div class="ha-solution-card__content">
+
+                        <span class="ha-solution-card__category">
+                            Designed Around You
+                        </span>
+
+                        <h3>Customized Automation</h3>
+
+                        <p>
+                            Personalized automation scenarios engineered
+                            around your lifestyle, home layout and
+                            technology requirements.
+                        </p>
+
+                        <span class="ha-solution-card__arrow">
+                            ↗
+                        </span>
+
+                    </div>
+
+                </article>
+
 
             </div>
-
-
-            <div class="ha-solutions-intro">
-
-                <span class="ha-solutions-count">
-                    09 Connected Capabilities
-                </span>
-
-                <p>
-                    Integrated automation solutions designed to
-                    make everyday living simpler, safer and smarter.
-                </p>
-
-            </div>
-
-        </header>
-
-
-        <!-- BENTO IMAGE GRID -->
-
-        <div class="ha-solutions-grid">
-
-
-            <!-- 01 — SMART LIGHTING -->
-
-            <article class="ha-solution-card ha-solution-card--hero">
-
-                <!-- Recommended image: 1600 × 1050 px -->
-
-                <img
-                    src="assets/img/automation/Smart Lighting.png"
-                    width="1600"
-                    height="1050"
-                    loading="lazy"
-                    decoding="async"
-                    alt="Premium smart lighting automation"
-                >
-
-                <div class="ha-solution-card__shade"></div>
-
-                <div class="ha-solution-card__top">
-
-                    <div class="ha-solution-card__icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-
-                    <span class="ha-solution-card__number">
-                        01
-                    </span>
-
-                </div>
-
-                <div class="ha-solution-card__content">
-
-                    <span class="ha-solution-card__category">
-                        Lighting Automation
-                    </span>
-
-                    <h3>Smart Lighting</h3>
-
-                    <p>
-                        Control individual lights or create complete
-                        lighting scenes for different moods, activities
-                        and times of day.
-                    </p>
-
-                    <span class="ha-solution-card__arrow">
-                        ↗
-                    </span>
-
-                </div>
-
-            </article>
-
-
-            <!-- 02 — CLIMATE CONTROL -->
-
-            <article class="ha-solution-card ha-solution-card--side">
-
-                <!-- Recommended image: 1200 × 1050 px -->
-
-                <img
-                    src="assets/img/automation/smart-climate-control.jpg"
-                    width="1200"
-                    height="1050"
-                    loading="lazy"
-                    decoding="async"
-                    alt="Smart residential climate control"
-                >
-
-                <div class="ha-solution-card__shade"></div>
-
-                <div class="ha-solution-card__top">
-
-                    <div class="ha-solution-card__icon">
-                        <i class="fas fa-temperature-half"></i>
-                    </div>
-
-                    <span class="ha-solution-card__number">
-                        02
-                    </span>
-
-                </div>
-
-                <div class="ha-solution-card__content">
-
-                    <span class="ha-solution-card__category">
-                        Intelligent Comfort
-                    </span>
-
-                    <h3>Smart Climate Control</h3>
-
-                    <p>
-                        Manage air conditioning and temperature
-                        intelligently for greater comfort and
-                        efficient energy use.
-                    </p>
-
-                    <span class="ha-solution-card__arrow">
-                        ↗
-                    </span>
-
-                </div>
-
-            </article>
-
-
-            <!-- 03 — MOTORIZED CURTAINS -->
-
-            <article class="ha-solution-card ha-solution-card--third">
-
-                <!-- Recommended image: 1200 × 900 px -->
-
-                <img
-                    src="assets/img/automation/motorized-curtains.png"
-                    width="1200"
-                    height="900"
-                    loading="lazy"
-                    decoding="async"
-                    alt="Automated curtains in a luxury home"
-                >
-
-                <div class="ha-solution-card__shade"></div>
-
-                <div class="ha-solution-card__top">
-
-                    <div class="ha-solution-card__icon">
-                        <i class="fas fa-bars"></i>
-                    </div>
-
-                    <span class="ha-solution-card__number">
-                        03
-                    </span>
-
-                </div>
-
-                <div class="ha-solution-card__content">
-
-                    <span class="ha-solution-card__category">
-                        Daylight Control
-                    </span>
-
-                    <h3>Motorized Curtains</h3>
-
-                    <p>
-                        Automate curtains and blinds through schedules,
-                        sensors, scenes, mobile control or voice commands.
-                    </p>
-
-                    <span class="ha-solution-card__arrow">
-                        ↗
-                    </span>
-
-                </div>
-
-            </article>
-
-
-            <!-- 04 — SMART SECURITY -->
-
-            <article class="ha-solution-card ha-solution-card--third">
-
-                <!-- Recommended image: 1200 × 900 px -->
-
-                <img
-                    src="assets/img/automation/Smart Security.png"
-                    width="1200"
-                    height="900"
-                    loading="lazy"
-                    decoding="async"
-                    alt="Smart residential security system"
-                >
-
-                <div class="ha-solution-card__shade"></div>
-
-                <div class="ha-solution-card__top">
-
-                    <div class="ha-solution-card__icon">
-                        <i class="fas fa-shield-halved"></i>
-                    </div>
-
-                    <span class="ha-solution-card__number">
-                        04
-                    </span>
-
-                </div>
-
-                <div class="ha-solution-card__content">
-
-                    <span class="ha-solution-card__category">
-                        Integrated Protection
-                    </span>
-
-                    <h3>Smart Security</h3>
-
-                    <p>
-                        Integrate sensors, cameras and alarms for
-                        intelligent monitoring and dependable protection.
-                    </p>
-
-                    <span class="ha-solution-card__arrow">
-                        ↗
-                    </span>
-
-                </div>
-
-            </article>
-
-
-            <!-- 05 — SMART ACCESS -->
-
-            <article class="ha-solution-card ha-solution-card--third">
-
-                <!-- Recommended image: 1200 × 900 px -->
-
-                <img
-                    src="assets/img/automation/smart-access.png"
-                    width="1200"
-                    height="900"
-                    loading="lazy"
-                    decoding="async"
-                    alt="Smart door-access control"
-                >
-
-                <div class="ha-solution-card__shade"></div>
-
-                <div class="ha-solution-card__top">
-
-                    <div class="ha-solution-card__icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
-
-                    <span class="ha-solution-card__number">
-                        05
-                    </span>
-
-                </div>
-
-                <div class="ha-solution-card__content">
-
-                    <span class="ha-solution-card__category">
-                        Secure Entry
-                    </span>
-
-                    <h3>Smart Access</h3>
-
-                    <p>
-                        Smart locks and controlled-entry systems provide
-                        secure and convenient access to your home.
-                    </p>
-
-                    <span class="ha-solution-card__arrow">
-                        ↗
-                    </span>
-
-                </div>
-
-            </article>
-
-
-            <!-- 06 — HOME ENTERTAINMENT -->
-
-            <article class="ha-solution-card ha-solution-card--wide">
-
-                <!-- Recommended image: 1600 × 1000 px -->
-
-                <img
-                    src="assets/img/automation/home-entertainment.jpg"
-                    width="1600"
-                    height="1000"
-                    loading="lazy"
-                    decoding="async"
-                    alt="Integrated luxury home entertainment"
-                >
-
-                <div class="ha-solution-card__shade"></div>
-
-                <div class="ha-solution-card__top">
-
-                    <div class="ha-solution-card__icon">
-                        <i class="fas fa-tv"></i>
-                    </div>
-
-                    <span class="ha-solution-card__number">
-                        06
-                    </span>
-
-                </div>
-
-                <div class="ha-solution-card__content">
-
-                    <span class="ha-solution-card__category">
-                        Connected Entertainment
-                    </span>
-
-                    <h3>Home Entertainment</h3>
-
-                    <p>
-                        Bring lighting, audio, video and room scenes
-                        together to create personalized entertainment
-                        experiences.
-                    </p>
-
-                    <span class="ha-solution-card__arrow">
-                        ↗
-                    </span>
-
-                </div>
-
-            </article>
-
-
-            <!-- 07 — SMART SENSORS -->
-
-            <article class="ha-solution-card ha-solution-card--narrow">
-
-                <!-- Recommended image: 1200 × 1000 px -->
-
-                <img
-                    src="assets/img/automation/smart-sensors.png"
-                    width="1200"
-                    height="1000"
-                    loading="lazy"
-                    decoding="async"
-                    alt="Integrated smart-home sensors"
-                >
-
-                <div class="ha-solution-card__shade"></div>
-
-                <div class="ha-solution-card__top">
-
-                    <div class="ha-solution-card__icon">
-                        <i class="fas fa-wave-square"></i>
-                    </div>
-
-                    <span class="ha-solution-card__number">
-                        07
-                    </span>
-
-                </div>
-
-                <div class="ha-solution-card__content">
-
-                    <span class="ha-solution-card__category">
-                        Intelligent Response
-                    </span>
-
-                    <h3>Smart Sensors</h3>
-
-                    <p>
-                        Occupancy, temperature, light and environmental
-                        sensors enable automatic real-time responses.
-                    </p>
-
-                    <span class="ha-solution-card__arrow">
-                        ↗
-                    </span>
-
-                </div>
-
-            </article>
-
-
-            <!-- 08 — ENERGY MANAGEMENT -->
-
-            <article class="ha-solution-card ha-solution-card--narrow">
-
-                <!-- Recommended image: 1200 × 1000 px -->
-
-                <img
-                    src="assets/img/automation/Energy Management.png"
-                    width="1200"
-                    height="1000"
-                    loading="lazy"
-                    decoding="async"
-                    alt="Smart-home energy management"
-                >
-
-                <div class="ha-solution-card__shade"></div>
-
-                <div class="ha-solution-card__top">
-
-                    <div class="ha-solution-card__icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-
-                    <span class="ha-solution-card__number">
-                        08
-                    </span>
-
-                </div>
-
-                <div class="ha-solution-card__content">
-
-                    <span class="ha-solution-card__category">
-                        Energy Intelligence
-                    </span>
-
-                    <h3>Energy Management</h3>
-
-                    <p>
-                        Monitor and control connected systems to improve
-                        visibility and encourage efficient power use.
-                    </p>
-
-                    <span class="ha-solution-card__arrow">
-                        ↗
-                    </span>
-
-                </div>
-
-            </article>
-
-
-            <!-- 09 — CUSTOM AUTOMATION -->
-
-            <article class="ha-solution-card ha-solution-card--wide">
-
-                <!-- Recommended image: 1600 × 1000 px -->
-
-                <img
-                    src="assets/img/automation/Customized Automation.png"
-                    width="1600"
-                    height="1000"
-                    loading="lazy"
-                    decoding="async"
-                    alt="Customized home automation controls"
-                >
-
-                <div class="ha-solution-card__shade"></div>
-
-                <div class="ha-solution-card__top">
-
-                    <div class="ha-solution-card__icon">
-                        <i class="fas fa-sliders"></i>
-                    </div>
-
-                    <span class="ha-solution-card__number">
-                        09
-                    </span>
-
-                </div>
-
-                <div class="ha-solution-card__content">
-
-                    <span class="ha-solution-card__category">
-                        Designed Around You
-                    </span>
-
-                    <h3>Customized Automation</h3>
-
-                    <p>
-                        Personalized automation scenarios engineered
-                        around your lifestyle, home layout and
-                        technology requirements.
-                    </p>
-
-                    <span class="ha-solution-card__arrow">
-                        ↗
-                    </span>
-
-                </div>
-
-            </article>
-
 
         </div>
 
-    </div>
+    </section>
 
-</section>
-
-<style>
-/* MODULE CSS — SMART HOME SOLUTIONS */
-/* =========================================================
+    <style>
+        /* MODULE CSS — SMART HOME SOLUTIONS */
+        /* =========================================================
    PREMIUM SMART HOME SOLUTIONS
 ========================================================= */
 
-.ha-solutions-section,
-.ha-solutions-section * {
-    box-sizing: border-box;
-}
+        .ha-solutions-section,
+        .ha-solutions-section * {
+            box-sizing: border-box;
+        }
 
-.ha-solutions-section {
-    position: relative;
+        .ha-solutions-section {
+            position: relative;
 
-    padding: 120px 80px;
+            padding: 120px 80px;
 
-    background: #f3f3f1;
-    color: #111111;
+            background: #f3f3f1;
+            color: #111111;
 
-    overflow: hidden;
-}
+            overflow: hidden;
+        }
 
-.ha-solutions-container {
-    width: 100%;
-    max-width: 1250px;
+        .ha-solutions-container {
+            width: 100%;
+            max-width: 1250px;
 
-    margin: 0 auto;
-}
+            margin: 0 auto;
+        }
 
 
-/* =========================================================
+        /* =========================================================
    SECTION HEADING
 ========================================================= */
 
-.ha-solutions-header {
-    display: grid;
-    grid-template-columns: 700px 1fr;
-    gap: 100px;
-    align-items: end;
+        .ha-solutions-header {
+            display: grid;
+            grid-template-columns: 700px 1fr;
+            gap: 100px;
+            align-items: end;
 
-    margin-bottom: 55px;
-    padding-bottom: 42px;
+            margin-bottom: 55px;
+            padding-bottom: 42px;
 
-    border-bottom: 1px solid #d4d4d1;
-}
+            border-bottom: 1px solid #d4d4d1;
+        }
 
-.ha-solutions-label {
-    position: relative;
+        .ha-solutions-label {
+            position: relative;
 
-    margin-bottom: 20px;
-    padding-left: 38px;
+            margin-bottom: 20px;
+            padding-left: 38px;
 
-    color: #777777;
+            color: #777777;
 
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 2.3px;
-    text-transform: uppercase;
-}
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 2.3px;
+            text-transform: uppercase;
+        }
 
-.ha-solutions-label::before {
-    content: "";
+        .ha-solutions-label::before {
+            content: "";
 
-    position: absolute;
-    top: 50%;
-    left: 0;
+            position: absolute;
+            top: 50%;
+            left: 0;
 
-    width: 24px;
-    height: 1px;
+            width: 24px;
+            height: 1px;
 
-    background: #111111;
+            background: #111111;
 
-    transform: translateY(-50%);
-}
+            transform: translateY(-50%);
+        }
 
-.ha-solutions-heading h2 {
-    margin: 0;
+        .ha-solutions-heading h2 {
+            margin: 0;
 
-    color: #111111;
+            color: #111111;
 
-    font-size: 52px;
-    font-weight: 700;
-    line-height: 1.05;
-    letter-spacing: -2.7px;
-}
+            font-size: 52px;
+            font-weight: 700;
+            line-height: 1.05;
+            letter-spacing: -2.7px;
+        }
 
-.ha-solutions-heading h2 span {
-    font-weight: 300;
-}
+        .ha-solutions-heading h2 span {
+            font-weight: 300;
+        }
 
-.ha-solutions-intro {
-    max-width: 370px;
-    padding-bottom: 4px;
-}
+        .ha-solutions-intro {
+            max-width: 370px;
+            padding-bottom: 4px;
+        }
 
-.ha-solutions-count {
-    display: block;
+        .ha-solutions-count {
+            display: block;
 
-    margin-bottom: 15px;
+            margin-bottom: 15px;
 
-    color: #111111;
+            color: #111111;
 
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
 
-.ha-solutions-intro p {
-    margin: 0;
+        .ha-solutions-intro p {
+            margin: 0;
 
-    color: #666666;
+            color: #666666;
 
-    font-size: 12px;
-    line-height: 1.9;
-}
+            font-size: 12px;
+            line-height: 1.9;
+        }
 
 
-/* =========================================================
+        /* =========================================================
    BENTO GRID
 ========================================================= */
 
-.ha-solutions-grid {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
+        .ha-solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
 
-    gap: 16px;
-}
+            gap: 16px;
+        }
 
-.ha-solution-card {
-    position: relative;
-    isolation: isolate;
+        .ha-solution-card {
+            position: relative;
+            isolation: isolate;
 
-    min-height: 360px;
+            min-height: 360px;
 
-    background: #171717;
+            background: #171717;
 
-    overflow: hidden;
-}
+            overflow: hidden;
+        }
 
-/* Individual grid dimensions */
+        /* Individual grid dimensions */
 
-.ha-solution-card--hero {
-    grid-column: span 7;
-    min-height: 470px;
-}
+        .ha-solution-card--hero {
+            grid-column: span 7;
+            min-height: 470px;
+        }
 
-.ha-solution-card--side {
-    grid-column: span 5;
-    min-height: 470px;
-}
+        .ha-solution-card--side {
+            grid-column: span 5;
+            min-height: 470px;
+        }
 
-.ha-solution-card--third {
-    grid-column: span 4;
-    min-height: 335px;
-}
+        .ha-solution-card--third {
+            grid-column: span 4;
+            min-height: 335px;
+        }
 
-.ha-solution-card--wide {
-    grid-column: span 7;
-    min-height: 390px;
-}
+        .ha-solution-card--wide {
+            grid-column: span 7;
+            min-height: 390px;
+        }
 
-.ha-solution-card--narrow {
-    grid-column: span 5;
-    min-height: 390px;
-}
+        .ha-solution-card--narrow {
+            grid-column: span 5;
+            min-height: 390px;
+        }
 
 
-/* =========================================================
+        /* =========================================================
    CARD IMAGE
 ========================================================= */
 
-.ha-solution-card > img {
-    position: absolute;
-    inset: 0;
-    z-index: -3;
+        .ha-solution-card>img {
+            position: absolute;
+            inset: 0;
+            z-index: -3;
 
-    width: 100%;
-    height: 100%;
+            width: 100%;
+            height: 100%;
 
-    object-fit: cover;
-    object-position: center;
+            object-fit: cover;
+            object-position: center;
 
-    filter:
-        saturate(0.82)
-        contrast(1.05)
-        brightness(0.9);
+            filter:
+                saturate(0.82) contrast(1.05) brightness(0.9);
 
-    transform: scale(1.015);
+            transform: scale(1.015);
 
-    transition:
-        transform 0.75s cubic-bezier(0.2, 0.7, 0.2, 1),
-        filter 0.6s ease;
-}
+            transition:
+                transform 0.75s cubic-bezier(0.2, 0.7, 0.2, 1),
+                filter 0.6s ease;
+        }
 
-.ha-solution-card__shade {
-    position: absolute;
-    inset: 0;
-    z-index: -2;
+        .ha-solution-card__shade {
+            position: absolute;
+            inset: 0;
+            z-index: -2;
 
-    background:
-        linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.08) 0%,
-            rgba(0, 0, 0, 0.12) 35%,
-            rgba(0, 0, 0, 0.88) 100%
-        );
-}
+            background:
+                linear-gradient(180deg,
+                    rgba(0, 0, 0, 0.08) 0%,
+                    rgba(0, 0, 0, 0.12) 35%,
+                    rgba(0, 0, 0, 0.88) 100%);
+        }
 
-.ha-solution-card::after {
-    content: "";
+        .ha-solution-card::after {
+            content: "";
 
-    position: absolute;
-    inset: 12px;
-    z-index: -1;
+            position: absolute;
+            inset: 12px;
+            z-index: -1;
 
-    border: 1px solid rgba(255, 255, 255, 0);
+            border: 1px solid rgba(255, 255, 255, 0);
 
-    pointer-events: none;
+            pointer-events: none;
 
-    transition: border-color 0.4s ease;
-}
+            transition: border-color 0.4s ease;
+        }
 
 
-/* =========================================================
+        /* =========================================================
    CARD TOP
 ========================================================= */
 
-.ha-solution-card__top {
-    position: absolute;
-    top: 24px;
-    left: 24px;
-    right: 24px;
+        .ha-solution-card__top {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            right: 24px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-.ha-solution-card__icon {
-    width: 46px;
-    height: 46px;
+        .ha-solution-card__icon {
+            width: 46px;
+            height: 46px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-    color: #ffffff;
-    background: rgba(17, 17, 17, 0.52);
+            color: #ffffff;
+            background: rgba(17, 17, 17, 0.52);
 
-    border: 1px solid rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.18);
 
-    font-size: 15px;
+            font-size: 15px;
 
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
 
-    transition:
-        background 0.35s ease,
-        color 0.35s ease,
-        transform 0.35s ease;
-}
+            transition:
+                background 0.35s ease,
+                color 0.35s ease,
+                transform 0.35s ease;
+        }
 
-.ha-solution-card__number {
-    color: rgba(255, 255, 255, 0.75);
+        .ha-solution-card__number {
+            color: rgba(255, 255, 255, 0.75);
 
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 1.4px;
-}
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+        }
 
 
-/* =========================================================
+        /* =========================================================
    CARD CONTENT
 ========================================================= */
 
-.ha-solution-card__content {
-    position: absolute;
-    left: 30px;
-    right: 30px;
-    bottom: 29px;
+        .ha-solution-card__content {
+            position: absolute;
+            left: 30px;
+            right: 30px;
+            bottom: 29px;
 
-    padding-right: 52px;
+            padding-right: 52px;
 
-    color: #ffffff;
+            color: #ffffff;
 
-    transition: transform 0.4s ease;
-}
+            transition: transform 0.4s ease;
+        }
 
-.ha-solution-card__category {
-    display: block;
+        .ha-solution-card__category {
+            display: block;
 
-    margin-bottom: 10px;
+            margin-bottom: 10px;
 
-    color: rgba(255, 255, 255, 0.65);
+            color: rgba(255, 255, 255, 0.65);
 
-    font-size: 8px;
-    font-weight: 700;
-    letter-spacing: 1.6px;
-    text-transform: uppercase;
-}
+            font-size: 8px;
+            font-weight: 700;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+        }
 
-.ha-solution-card h3 {
-    margin: 0 0 10px;
+        .ha-solution-card h3 {
+            margin: 0 0 10px;
 
-    color: #ffffff;
+            color: #ffffff;
 
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 1.2;
-    letter-spacing: -0.6px;
-}
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.6px;
+        }
 
-.ha-solution-card p {
-    max-width: 500px;
+        .ha-solution-card p {
+            max-width: 500px;
 
-    margin: 0;
+            margin: 0;
 
-    color: rgba(255, 255, 255, 0.73);
+            color: rgba(255, 255, 255, 0.73);
 
-    font-size: 10px;
-    line-height: 1.75;
-}
+            font-size: 10px;
+            line-height: 1.75;
+        }
 
-.ha-solution-card__arrow {
-    position: absolute;
-    right: 0;
-    bottom: 1px;
+        .ha-solution-card__arrow {
+            position: absolute;
+            right: 0;
+            bottom: 1px;
 
-    width: 38px;
-    height: 38px;
+            width: 38px;
+            height: 38px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-    color: #111111;
-    background: #ffffff;
+            color: #111111;
+            background: #ffffff;
 
-    border-radius: 50%;
+            border-radius: 50%;
 
-    font-size: 16px;
+            font-size: 16px;
 
-    transition:
-        color 0.35s ease,
-        background 0.35s ease,
-        transform 0.35s ease;
-}
+            transition:
+                color 0.35s ease,
+                background 0.35s ease,
+                transform 0.35s ease;
+        }
 
 
-/* =========================================================
+        /* =========================================================
    CARD HOVER
 ========================================================= */
 
-.ha-solution-card:hover > img {
-    filter:
-        saturate(1)
-        contrast(1.05)
-        brightness(0.82);
+        .ha-solution-card:hover>img {
+            filter:
+                saturate(1) contrast(1.05) brightness(0.82);
 
-    transform: scale(1.075);
-}
+            transform: scale(1.075);
+        }
 
-.ha-solution-card:hover::after {
-    border-color: rgba(255, 255, 255, 0.28);
-}
+        .ha-solution-card:hover::after {
+            border-color: rgba(255, 255, 255, 0.28);
+        }
 
-.ha-solution-card:hover .ha-solution-card__icon {
-    color: #111111;
-    background: #ffffff;
+        .ha-solution-card:hover .ha-solution-card__icon {
+            color: #111111;
+            background: #ffffff;
 
-    transform: translateY(-3px);
-}
+            transform: translateY(-3px);
+        }
 
-.ha-solution-card:hover .ha-solution-card__content {
-    transform: translateY(-5px);
-}
+        .ha-solution-card:hover .ha-solution-card__content {
+            transform: translateY(-5px);
+        }
 
-.ha-solution-card:hover .ha-solution-card__arrow {
-    color: #ffffff;
-    background: #111111;
+        .ha-solution-card:hover .ha-solution-card__arrow {
+            color: #ffffff;
+            background: #111111;
 
-    transform: rotate(45deg);
-}
+            transform: rotate(45deg);
+        }
 
 
-/* =========================================================
+        /* =========================================================
    TABLET
 ========================================================= */
 
-@media (max-width: 1100px) {
+        @media (max-width: 1100px) {
 
-    .ha-solutions-section {
-        padding: 100px 40px;
-    }
+            .ha-solutions-section {
+                padding: 100px 40px;
+            }
 
-    .ha-solutions-header {
-        grid-template-columns: 1fr 330px;
-        gap: 50px;
-    }
+            .ha-solutions-header {
+                grid-template-columns: 1fr 330px;
+                gap: 50px;
+            }
 
-    .ha-solution-card,
-    .ha-solution-card--side,
-    .ha-solution-card--third,
-    .ha-solution-card--wide,
-    .ha-solution-card--narrow {
-        grid-column: span 6;
-        min-height: 390px;
-    }
+            .ha-solution-card,
+            .ha-solution-card--side,
+            .ha-solution-card--third,
+            .ha-solution-card--wide,
+            .ha-solution-card--narrow {
+                grid-column: span 6;
+                min-height: 390px;
+            }
 
-    .ha-solution-card--hero {
-        grid-column: span 12;
-        min-height: 480px;
-    }
+            .ha-solution-card--hero {
+                grid-column: span 12;
+                min-height: 480px;
+            }
 
-}
+        }
 
 
-/* =========================================================
+        /* =========================================================
    MOBILE
 ========================================================= */
 
-@media (max-width: 720px) {
+        @media (max-width: 720px) {
 
-    .ha-solutions-section {
-        padding: 80px 22px;
-    }
+            .ha-solutions-section {
+                padding: 80px 22px;
+            }
 
-    .ha-solutions-header {
-        grid-template-columns: 1fr;
-        gap: 28px;
+            .ha-solutions-header {
+                grid-template-columns: 1fr;
+                gap: 28px;
 
-        margin-bottom: 35px;
-        padding-bottom: 32px;
-    }
+                margin-bottom: 35px;
+                padding-bottom: 32px;
+            }
 
-    .ha-solutions-heading h2 {
-        font-size: 42px;
-        letter-spacing: -2px;
-    }
+            .ha-solutions-heading h2 {
+                font-size: 42px;
+                letter-spacing: -2px;
+            }
 
-    .ha-solutions-intro {
-        max-width: 100%;
-    }
+            .ha-solutions-intro {
+                max-width: 100%;
+            }
 
-    .ha-solution-card,
-    .ha-solution-card--hero,
-    .ha-solution-card--side,
-    .ha-solution-card--third,
-    .ha-solution-card--wide,
-    .ha-solution-card--narrow {
-        grid-column: span 12;
-        min-height: 400px;
-    }
+            .ha-solution-card,
+            .ha-solution-card--hero,
+            .ha-solution-card--side,
+            .ha-solution-card--third,
+            .ha-solution-card--wide,
+            .ha-solution-card--narrow {
+                grid-column: span 12;
+                min-height: 400px;
+            }
 
-}
+        }
 
 
-/* =========================================================
+        /* =========================================================
    SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 460px) {
+        @media (max-width: 460px) {
 
-    .ha-solutions-section {
-        padding: 70px 16px;
-    }
+            .ha-solutions-section {
+                padding: 70px 16px;
+            }
 
-    .ha-solutions-heading h2 {
-        font-size: 36px;
-    }
+            .ha-solutions-heading h2 {
+                font-size: 36px;
+            }
 
-    .ha-solution-card,
-    .ha-solution-card--hero,
-    .ha-solution-card--side,
-    .ha-solution-card--third,
-    .ha-solution-card--wide,
-    .ha-solution-card--narrow {
-        min-height: 380px;
-    }
+            .ha-solution-card,
+            .ha-solution-card--hero,
+            .ha-solution-card--side,
+            .ha-solution-card--third,
+            .ha-solution-card--wide,
+            .ha-solution-card--narrow {
+                min-height: 380px;
+            }
 
-    .ha-solution-card__top {
-        top: 20px;
-        left: 20px;
-        right: 20px;
-    }
+            .ha-solution-card__top {
+                top: 20px;
+                left: 20px;
+                right: 20px;
+            }
 
-    .ha-solution-card__content {
-        left: 22px;
-        right: 22px;
-        bottom: 23px;
+            .ha-solution-card__content {
+                left: 22px;
+                right: 22px;
+                bottom: 23px;
 
-        padding-right: 46px;
-    }
+                padding-right: 46px;
+            }
 
-    .ha-solution-card h3 {
-        font-size: 20px;
-    }
+            .ha-solution-card h3 {
+                font-size: 20px;
+            }
 
-}
-</style>
+        }
+    </style>
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE — SMART HOME EXPERIENCE
 ========================================================= -->
-<!-- =========================================================
+    <!-- =========================================================
      EXPERIENCE
 ========================================================= -->
 
-<section class="experience-section">
+    <section class="experience-section">
 
 
-    <div class="experience-layout">
+        <div class="experience-layout">
 
 
-        <div class="experience-image">
+            <div class="experience-image">
 
-            <div class="image-tag">
+                <div class="image-tag">
 
-                <strong>
-                    INTELLIGENT HOME CONTROL
-                </strong>
+                    <strong>
+                        INTELLIGENT HOME CONTROL
+                    </strong>
 
-                <span>
-                    COMFORT • SECURITY • EFFICIENCY
-                </span>
+                    <span>
+                        COMFORT • SECURITY • EFFICIENCY
+                    </span>
+
+                </div>
 
             </div>
+
+
+            <div class="experience-content">
+
+                <div class="section-label">
+                    A Smarter Way To Live
+                </div>
+
+                <h2 class="section-title">
+
+                    Automation That
+                    Feels Natural
+
+                </h2>
+
+                <div class="section-line"></div>
+
+                <p>
+
+                    The best automation is simple to use. Our
+                    solutions are designed so that technology
+                    quietly works in the background while giving
+                    you complete control whenever you need it.
+
+                </p>
+
+
+                <div class="experience-list">
+
+                    <div class="experience-item">
+                        One-Touch Scenes
+                    </div>
+
+                    <div class="experience-item">
+                        Mobile App Control
+                    </div>
+
+                    <div class="experience-item">
+                        Voice Control
+                    </div>
+
+                    <div class="experience-item">
+                        Scheduled Automation
+                    </div>
+
+                    <div class="experience-item">
+                        Sensor-Based Actions
+                    </div>
+
+                    <div class="experience-item">
+                        Remote Monitoring
+                    </div>
+
+                    <div class="experience-item">
+                        Centralized Control
+                    </div>
+
+                    <div class="experience-item">
+                        Energy Awareness
+                    </div>
+
+                </div>
+
+            </div>
+
 
         </div>
 
+    </section>
 
-        <div class="experience-content">
-
-            <div class="section-label">
-                A Smarter Way To Live
-            </div>
-
-            <h2 class="section-title">
-
-                Automation That
-                Feels Natural
-
-            </h2>
-
-            <div class="section-line"></div>
-
-            <p>
-
-                The best automation is simple to use. Our
-                solutions are designed so that technology
-                quietly works in the background while giving
-                you complete control whenever you need it.
-
-            </p>
-
-
-            <div class="experience-list">
-
-                <div class="experience-item">
-                    One-Touch Scenes
-                </div>
-
-                <div class="experience-item">
-                    Mobile App Control
-                </div>
-
-                <div class="experience-item">
-                    Voice Control
-                </div>
-
-                <div class="experience-item">
-                    Scheduled Automation
-                </div>
-
-                <div class="experience-item">
-                    Sensor-Based Actions
-                </div>
-
-                <div class="experience-item">
-                    Remote Monitoring
-                </div>
-
-                <div class="experience-item">
-                    Centralized Control
-                </div>
-
-                <div class="experience-item">
-                    Energy Awareness
-                </div>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-<style>
-/* MODULE CSS — SMART HOME EXPERIENCE */
-/* =========================================================
+    <style>
+        /* MODULE CSS — SMART HOME EXPERIENCE */
+        /* =========================================================
            SMART HOME EXPERIENCE
         ========================================================= */
 
@@ -2862,10 +2990,8 @@ document.addEventListener("DOMContentLoaded", function () {
             position: relative;
 
             background:
-                linear-gradient(
-                    rgba(0,0,0,.15),
-                    rgba(0,0,0,.15)
-                ),
+                linear-gradient(rgba(0, 0, 0, .15),
+                    rgba(0, 0, 0, .15)),
                 url("assets/img/automation/home-automation-experience.png");
 
             background-size: cover;
@@ -2924,141 +3050,141 @@ document.addEventListener("DOMContentLoaded", function () {
             font-size: 10px;
             font-weight: 600;
         }
-</style>
+    </style>
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE — AUTOMATION FLOW
 ========================================================= -->
-<!-- =========================================================
+    <!-- =========================================================
      AUTOMATION FLOW
 ========================================================= -->
 
-<section class="flow-section">
+    <section class="flow-section">
 
 
-    <div class="flow-header">
+        <div class="flow-header">
 
-        <div class="section-label">
-            How It Works
-        </div>
-
-        <h2 class="section-title">
-            From Sensor to Action
-        </h2>
-
-        <div class="section-line"></div>
-
-        <p>
-
-            Intelligent home automation combines sensors,
-            controllers and connected devices to respond
-            automatically to changing conditions.
-
-        </p>
-
-    </div>
-
-
-    <div class="flow-grid">
-
-
-        <div class="flow-card">
-
-            <div class="flow-number">
-                01
+            <div class="section-label">
+                How It Works
             </div>
 
-            <h4>
-                Sense
-            </h4>
+            <h2 class="section-title">
+                From Sensor to Action
+            </h2>
+
+            <div class="section-line"></div>
 
             <p>
-                Sensors detect motion, temperature,
-                occupancy and environmental changes.
+
+                Intelligent home automation combines sensors,
+                controllers and connected devices to respond
+                automatically to changing conditions.
+
             </p>
 
         </div>
 
 
-        <div class="flow-card">
+        <div class="flow-grid">
 
-            <div class="flow-number">
-                02
+
+            <div class="flow-card">
+
+                <div class="flow-number">
+                    01
+                </div>
+
+                <h4>
+                    Sense
+                </h4>
+
+                <p>
+                    Sensors detect motion, temperature,
+                    occupancy and environmental changes.
+                </p>
+
             </div>
 
-            <h4>
-                Connect
-            </h4>
 
-            <p>
-                Devices communicate through the
-                automation network.
-            </p>
+            <div class="flow-card">
+
+                <div class="flow-number">
+                    02
+                </div>
+
+                <h4>
+                    Connect
+                </h4>
+
+                <p>
+                    Devices communicate through the
+                    automation network.
+                </p>
+
+            </div>
+
+
+            <div class="flow-card">
+
+                <div class="flow-number">
+                    03
+                </div>
+
+                <h4>
+                    Process
+                </h4>
+
+                <p>
+                    The automation controller evaluates
+                    configured rules and scenes.
+                </p>
+
+            </div>
+
+
+            <div class="flow-card">
+
+                <div class="flow-number">
+                    04
+                </div>
+
+                <h4>
+                    Act
+                </h4>
+
+                <p>
+                    Connected devices automatically respond
+                    to the required action.
+                </p>
+
+            </div>
+
+
+            <div class="flow-card">
+
+                <div class="flow-number">
+                    05
+                </div>
+
+                <h4>
+                    Control
+                </h4>
+
+                <p>
+                    Users can monitor and control systems
+                    through apps, panels or voice.
+                </p>
+
+            </div>
+
 
         </div>
 
+    </section>
 
-        <div class="flow-card">
-
-            <div class="flow-number">
-                03
-            </div>
-
-            <h4>
-                Process
-            </h4>
-
-            <p>
-                The automation controller evaluates
-                configured rules and scenes.
-            </p>
-
-        </div>
-
-
-        <div class="flow-card">
-
-            <div class="flow-number">
-                04
-            </div>
-
-            <h4>
-                Act
-            </h4>
-
-            <p>
-                Connected devices automatically respond
-                to the required action.
-            </p>
-
-        </div>
-
-
-        <div class="flow-card">
-
-            <div class="flow-number">
-                05
-            </div>
-
-            <h4>
-                Control
-            </h4>
-
-            <p>
-                Users can monitor and control systems
-                through apps, panels or voice.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-<style>
-/* MODULE CSS — AUTOMATION FLOW */
-/* =========================================================
+    <style>
+        /* MODULE CSS — AUTOMATION FLOW */
+        /* =========================================================
            AUTOMATION FLOW
         ========================================================= */
 
@@ -3099,7 +3225,7 @@ document.addEventListener("DOMContentLoaded", function () {
             margin: auto;
 
             display: grid;
-            grid-template-columns: repeat(5,1fr);
+            grid-template-columns: repeat(5, 1fr);
 
             gap: 10px;
         }
@@ -3113,7 +3239,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             border: 1px solid #333;
 
-            background: rgba(255,255,255,.03);
+            background: rgba(255, 255, 255, .03);
 
             transition: .3s ease;
         }
@@ -3163,171 +3289,171 @@ document.addEventListener("DOMContentLoaded", function () {
         .flow-card:hover p {
             color: #555;
         }
-</style>
+    </style>
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE — SMART FEATURES
 ========================================================= -->
-<!-- =========================================================
+    <!-- =========================================================
      SMART FEATURES
 ========================================================= -->
 
-<section class="features-section">
+    <section class="features-section">
 
 
-    <div class="features-header">
+        <div class="features-header">
 
-        <div class="section-label">
-            Intelligent Features
-        </div>
+            <div class="section-label">
+                Intelligent Features
+            </div>
 
-        <h2 class="section-title">
-            Built Around Your Lifestyle
-        </h2>
+            <h2 class="section-title">
+                Built Around Your Lifestyle
+            </h2>
 
-        <div class="section-line"></div>
-
-    </div>
-
-
-    <div class="features-grid">
-
-
-        <div class="feature-card">
-
-            <i class="fas fa-clock"></i>
-
-            <h4>
-                Automated Schedules
-            </h4>
-
-            <p>
-                Set systems to operate automatically
-                according to time and routine.
-            </p>
+            <div class="section-line"></div>
 
         </div>
 
 
-        <div class="feature-card">
+        <div class="features-grid">
 
-            <i class="fas fa-moon"></i>
 
-            <h4>
-                Night Scenes
-            </h4>
+            <div class="feature-card">
 
-            <p>
-                Create personalized night-time lighting,
-                security and comfort settings.
-            </p>
+                <i class="fas fa-clock"></i>
+
+                <h4>
+                    Automated Schedules
+                </h4>
+
+                <p>
+                    Set systems to operate automatically
+                    according to time and routine.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <i class="fas fa-moon"></i>
+
+                <h4>
+                    Night Scenes
+                </h4>
+
+                <p>
+                    Create personalized night-time lighting,
+                    security and comfort settings.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <i class="fas fa-house"></i>
+
+                <h4>
+                    Away Mode
+                </h4>
+
+                <p>
+                    Secure and manage your home when nobody
+                    is present.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <i class="fas fa-sun"></i>
+
+                <h4>
+                    Daylight Response
+                </h4>
+
+                <p>
+                    Automate lighting and shading based on
+                    natural light conditions.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <i class="fas fa-mobile-screen"></i>
+
+                <h4>
+                    Mobile Control
+                </h4>
+
+                <p>
+                    Access connected home systems from
+                    supported mobile devices.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <i class="fas fa-microphone"></i>
+
+                <h4>
+                    Voice Commands
+                </h4>
+
+                <p>
+                    Control supported devices using simple
+                    voice commands.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <i class="fas fa-bell"></i>
+
+                <h4>
+                    Smart Alerts
+                </h4>
+
+                <p>
+                    Receive notifications based on selected
+                    events and conditions.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <i class="fas fa-chart-line"></i>
+
+                <h4>
+                    Energy Visibility
+                </h4>
+
+                <p>
+                    Understand energy usage and improve
+                    efficiency through intelligent control.
+                </p>
+
+            </div>
+
 
         </div>
 
+    </section>
 
-        <div class="feature-card">
-
-            <i class="fas fa-house"></i>
-
-            <h4>
-                Away Mode
-            </h4>
-
-            <p>
-                Secure and manage your home when nobody
-                is present.
-            </p>
-
-        </div>
-
-
-        <div class="feature-card">
-
-            <i class="fas fa-sun"></i>
-
-            <h4>
-                Daylight Response
-            </h4>
-
-            <p>
-                Automate lighting and shading based on
-                natural light conditions.
-            </p>
-
-        </div>
-
-
-        <div class="feature-card">
-
-            <i class="fas fa-mobile-screen"></i>
-
-            <h4>
-                Mobile Control
-            </h4>
-
-            <p>
-                Access connected home systems from
-                supported mobile devices.
-            </p>
-
-        </div>
-
-
-        <div class="feature-card">
-
-            <i class="fas fa-microphone"></i>
-
-            <h4>
-                Voice Commands
-            </h4>
-
-            <p>
-                Control supported devices using simple
-                voice commands.
-            </p>
-
-        </div>
-
-
-        <div class="feature-card">
-
-            <i class="fas fa-bell"></i>
-
-            <h4>
-                Smart Alerts
-            </h4>
-
-            <p>
-                Receive notifications based on selected
-                events and conditions.
-            </p>
-
-        </div>
-
-
-        <div class="feature-card">
-
-            <i class="fas fa-chart-line"></i>
-
-            <h4>
-                Energy Visibility
-            </h4>
-
-            <p>
-                Understand energy usage and improve
-                efficiency through intelligent control.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-<style>
-/* MODULE CSS — SMART FEATURES */
-/* =========================================================
+    <style>
+        /* MODULE CSS — SMART FEATURES */
+        /* =========================================================
            SMART FEATURES
         ========================================================= */
 
@@ -3346,7 +3472,7 @@ document.addEventListener("DOMContentLoaded", function () {
             margin: 45px auto 0;
 
             display: grid;
-            grid-template-columns: repeat(4,1fr);
+            grid-template-columns: repeat(4, 1fr);
 
             gap: 16px;
         }
@@ -3383,165 +3509,165 @@ document.addEventListener("DOMContentLoaded", function () {
             font-size: 10px;
             line-height: 1.7;
         }
-</style>
+    </style>
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE — BENEFITS
 ========================================================= -->
-<!-- =========================================================
+    <!-- =========================================================
      BENEFITS
 ========================================================= -->
 
-<section class="benefits-section">
+    <section class="benefits-section">
 
 
-    <div class="benefits-layout">
+        <div class="benefits-layout">
 
 
-        <div>
+            <div>
 
-            <div class="section-label">
-                Why Home Automation
+                <div class="section-label">
+                    Why Home Automation
+                </div>
+
+                <h2 class="section-title">
+
+                    More Comfort.
+
+                    <br>
+
+                    More Control.
+
+                </h2>
+
+                <div class="section-line"></div>
+
+                <p class="benefit-description">
+
+                    Home automation brings multiple systems
+                    together so everyday tasks become simpler
+                    and more intuitive.
+
+                    <br><br>
+
+                    A properly designed system can enhance
+                    convenience, security, comfort and energy
+                    awareness without making the home complicated.
+
+                </p>
+
             </div>
 
-            <h2 class="section-title">
 
-                More Comfort.
+            <div class="benefit-list">
 
-                <br>
 
-                More Control.
+                <div class="benefit-item">
 
-            </h2>
+                    <i class="fas fa-couch"></i>
 
-            <div class="section-line"></div>
+                    <strong>
+                        Comfort
+                    </strong>
 
-            <p class="benefit-description">
+                    <span>
+                        Personalized environments for different
+                        activities and routines.
+                    </span>
 
-                Home automation brings multiple systems
-                together so everyday tasks become simpler
-                and more intuitive.
+                </div>
 
-                <br><br>
 
-                A properly designed system can enhance
-                convenience, security, comfort and energy
-                awareness without making the home complicated.
+                <div class="benefit-item">
 
-            </p>
+                    <i class="fas fa-shield-halved"></i>
+
+                    <strong>
+                        Security
+                    </strong>
+
+                    <span>
+                        Connected security and access management
+                        for greater visibility.
+                    </span>
+
+                </div>
+
+
+                <div class="benefit-item">
+
+                    <i class="fas fa-bolt"></i>
+
+                    <strong>
+                        Efficiency
+                    </strong>
+
+                    <span>
+                        Smarter control of lighting, HVAC and
+                        electrical systems.
+                    </span>
+
+                </div>
+
+
+                <div class="benefit-item">
+
+                    <i class="fas fa-mobile-screen-button"></i>
+
+                    <strong>
+                        Convenience
+                    </strong>
+
+                    <span>
+                        Control multiple systems from centralized
+                        interfaces.
+                    </span>
+
+                </div>
+
+
+                <div class="benefit-item">
+
+                    <i class="fas fa-clock"></i>
+
+                    <strong>
+                        Automation
+                    </strong>
+
+                    <span>
+                        Let schedules and sensors handle repetitive
+                        everyday actions.
+                    </span>
+
+                </div>
+
+
+                <div class="benefit-item">
+
+                    <i class="fas fa-sliders"></i>
+
+                    <strong>
+                        Personalization
+                    </strong>
+
+                    <span>
+                        Configure scenes and automation around
+                        individual preferences.
+                    </span>
+
+                </div>
+
+
+            </div>
+
 
         </div>
 
+    </section>
 
-        <div class="benefit-list">
-
-
-            <div class="benefit-item">
-
-                <i class="fas fa-couch"></i>
-
-                <strong>
-                    Comfort
-                </strong>
-
-                <span>
-                    Personalized environments for different
-                    activities and routines.
-                </span>
-
-            </div>
-
-
-            <div class="benefit-item">
-
-                <i class="fas fa-shield-halved"></i>
-
-                <strong>
-                    Security
-                </strong>
-
-                <span>
-                    Connected security and access management
-                    for greater visibility.
-                </span>
-
-            </div>
-
-
-            <div class="benefit-item">
-
-                <i class="fas fa-bolt"></i>
-
-                <strong>
-                    Efficiency
-                </strong>
-
-                <span>
-                    Smarter control of lighting, HVAC and
-                    electrical systems.
-                </span>
-
-            </div>
-
-
-            <div class="benefit-item">
-
-                <i class="fas fa-mobile-screen-button"></i>
-
-                <strong>
-                    Convenience
-                </strong>
-
-                <span>
-                    Control multiple systems from centralized
-                    interfaces.
-                </span>
-
-            </div>
-
-
-            <div class="benefit-item">
-
-                <i class="fas fa-clock"></i>
-
-                <strong>
-                    Automation
-                </strong>
-
-                <span>
-                    Let schedules and sensors handle repetitive
-                    everyday actions.
-                </span>
-
-            </div>
-
-
-            <div class="benefit-item">
-
-                <i class="fas fa-sliders"></i>
-
-                <strong>
-                    Personalization
-                </strong>
-
-                <span>
-                    Configure scenes and automation around
-                    individual preferences.
-                </span>
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-<style>
-/* MODULE CSS — BENEFITS */
-/* =========================================================
+    <style>
+        /* MODULE CSS — BENEFITS */
+        /* =========================================================
            BENEFITS
         ========================================================= */
 
@@ -3569,7 +3695,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         .benefit-list {
             display: grid;
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 12px;
         }
 
@@ -3618,144 +3744,144 @@ document.addEventListener("DOMContentLoaded", function () {
         .benefit-item:hover span {
             color: #aaa;
         }
-</style>
+    </style>
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE — APPLICATIONS
 ========================================================= -->
-<!-- =========================================================
+    <!-- =========================================================
      APPLICATIONS
 ========================================================= -->
 
-<section class="applications-section">
+    <section class="applications-section">
 
 
-    <div class="applications-content">
+        <div class="applications-content">
 
 
-        <div>
+            <div>
 
-            <div class="section-label">
-                Home Automation Applications
+                <div class="section-label">
+                    Home Automation Applications
+                </div>
+
+                <h2 class="section-title">
+
+                    Intelligent Control
+                    For Every Space
+
+                </h2>
+
+                <div class="section-line"></div>
+
+                <p class="application-description">
+
+                    Automation can be introduced across individual
+                    rooms or integrated throughout an entire home,
+                    depending on the required level of control.
+
+                </p>
+
             </div>
 
-            <h2 class="section-title">
 
-                Intelligent Control
-                For Every Space
+            <div class="application-list">
 
-            </h2>
 
-            <div class="section-line"></div>
+                <div class="application-item">
 
-            <p class="application-description">
+                    <strong>
+                        Living Rooms
+                    </strong>
 
-                Automation can be introduced across individual
-                rooms or integrated throughout an entire home,
-                depending on the required level of control.
+                    <span>
+                        Lighting, curtains, entertainment and
+                        personalized scenes.
+                    </span>
 
-            </p>
+                </div>
+
+
+                <div class="application-item">
+
+                    <strong>
+                        Bedrooms
+                    </strong>
+
+                    <span>
+                        Night scenes, climate control and
+                        automated lighting.
+                    </span>
+
+                </div>
+
+
+                <div class="application-item">
+
+                    <strong>
+                        Kitchens
+                    </strong>
+
+                    <span>
+                        Lighting, sensors and convenient
+                        device control.
+                    </span>
+
+                </div>
+
+
+                <div class="application-item">
+
+                    <strong>
+                        Home Offices
+                    </strong>
+
+                    <span>
+                        Lighting, climate and workspace
+                        automation.
+                    </span>
+
+                </div>
+
+
+                <div class="application-item">
+
+                    <strong>
+                        Entrance Areas
+                    </strong>
+
+                    <span>
+                        Smart access, lighting and security
+                        automation.
+                    </span>
+
+                </div>
+
+
+                <div class="application-item">
+
+                    <strong>
+                        Entire Home
+                    </strong>
+
+                    <span>
+                        Centralized control across multiple
+                        connected systems.
+                    </span>
+
+                </div>
+
+
+            </div>
+
 
         </div>
 
+    </section>
 
-        <div class="application-list">
-
-
-            <div class="application-item">
-
-                <strong>
-                    Living Rooms
-                </strong>
-
-                <span>
-                    Lighting, curtains, entertainment and
-                    personalized scenes.
-                </span>
-
-            </div>
-
-
-            <div class="application-item">
-
-                <strong>
-                    Bedrooms
-                </strong>
-
-                <span>
-                    Night scenes, climate control and
-                    automated lighting.
-                </span>
-
-            </div>
-
-
-            <div class="application-item">
-
-                <strong>
-                    Kitchens
-                </strong>
-
-                <span>
-                    Lighting, sensors and convenient
-                    device control.
-                </span>
-
-            </div>
-
-
-            <div class="application-item">
-
-                <strong>
-                    Home Offices
-                </strong>
-
-                <span>
-                    Lighting, climate and workspace
-                    automation.
-                </span>
-
-            </div>
-
-
-            <div class="application-item">
-
-                <strong>
-                    Entrance Areas
-                </strong>
-
-                <span>
-                    Smart access, lighting and security
-                    automation.
-                </span>
-
-            </div>
-
-
-            <div class="application-item">
-
-                <strong>
-                    Entire Home
-                </strong>
-
-                <span>
-                    Centralized control across multiple
-                    connected systems.
-                </span>
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-<style>
-/* MODULE CSS — APPLICATIONS */
-/* =========================================================
+    <style>
+        /* MODULE CSS — APPLICATIONS */
+        /* =========================================================
            APPLICATIONS
         ========================================================= */
 
@@ -3783,7 +3909,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         .application-list {
             display: grid;
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 12px;
         }
 
@@ -3805,77 +3931,75 @@ document.addEventListener("DOMContentLoaded", function () {
         .application-item strong {
             display: block;
             color: #111;
-            font-size: 11px;
+            font-size: 17px;
             margin-bottom: 6px;
         }
 
         .application-item span {
             color: #777;
-            font-size: 9px;
+            font-size: 16px;
             line-height: 1.5;
         }
-</style>
+    </style>
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE — CTA
 ========================================================= -->
-<!-- =========================================================
+    <!-- =========================================================
      CTA
 ========================================================= -->
 
-<section class="cta">
+    <section class="cta">
 
 
-    <div class="cta-content">
+        <div class="cta-content">
 
-        <h2>
-            Make Your Home Smarter.
-        </h2>
+            <h2>
+                Make Your Home Smarter.
+            </h2>
 
-        <p>
+            <p>
 
-            Create a connected home environment designed
-            around your lifestyle. From smart lighting and
-            climate control to security and energy management,
-            build an automation experience that works for you.
+                Create a connected home environment designed
+                around your lifestyle. From smart lighting and
+                climate control to security and energy management,
+                build an automation experience that works for you.
 
-        </p>
+            </p>
 
-        <a
-            href="index.html#contact"
-            class="cta-button">
+            <a href="index.html#contact" class="cta-button">
 
-            DISCUSS YOUR SMART HOME
+                DISCUSS YOUR SMART HOME
 
-            <i class="fas fa-arrow-right"></i>
+                <i class="fas fa-arrow-right"></i>
 
-        </a>
-
-    </div>
-
-
-    <div class="cta-side">
-
-        <div>
-
-            <strong>
-                CONNECT • CONTROL • AUTOMATE
-            </strong>
-
-            <span>
-                INTELLIGENT HOME SOLUTIONS
-            </span>
+            </a>
 
         </div>
 
-    </div>
+
+        <div class="cta-side">
+
+            <div>
+
+                <strong>
+                    CONNECT • CONTROL • AUTOMATE
+                </strong>
+
+                <span>
+                    INTELLIGENT HOME SOLUTIONS
+                </span>
+
+            </div>
+
+        </div>
 
 
-</section>
+    </section>
 
-<style>
-/* MODULE CSS — CTA */
-/* =========================================================
+    <style>
+        /* MODULE CSS — CTA */
+        /* =========================================================
            CTA
         ========================================================= */
 
@@ -3889,11 +4013,9 @@ document.addEventListener("DOMContentLoaded", function () {
             grid-template-columns: 1.3fr .7fr;
 
             background:
-                linear-gradient(
-                    90deg,
-                    rgba(0,0,0,1),
-                    rgba(0,0,0,.68)
-                ),
+                linear-gradient(90deg,
+                    rgba(0, 0, 0, 1),
+                    rgba(0, 0, 0, .68)),
                 url("images/home-automation-cta.jpg");
 
             background-size: cover;
@@ -3963,9 +4085,9 @@ document.addEventListener("DOMContentLoaded", function () {
             font-size: 9px;
             letter-spacing: 1.5px;
         }
-</style>
+    </style>
 
-   <!-- =========================================================
+    <!-- =========================================================
      ALPHA NUMERIC — PREMIUM CORPORATE WHITE FOOTER
      Sharp architectural layout | No curves | No toy styling
      Complete HTML + CSS + automatic year
@@ -4234,7 +4356,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <li><a href="sensors.html"><span>Sensors</span><i>↗</i></a></li>
                             <li><a href="controllers.html"><span>Controllers</span><i>↗</i></a></li>
                             <li><a href="gateways.html"><span>Gateways</span><i>↗</i></a></li>
-                          
+
                             <li><a href="control-panels.html"><span>Control Panels</span><i>↗</i></a></li>
                             <li><a href="panel-boards.html"><span>Panel Boards</span><i>↗</i></a></li>
                             <li><a href="switchgears.html"><span>Switchgears</span><i>↗</i></a></li>
@@ -4288,7 +4410,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     All rights reserved.
                 </p>
 
-              
+
 
                 <div class="corp-footer-bottom-links">
                     <!-- <a href="#">Privacy</a>
@@ -5397,11 +5519,11 @@ document.addEventListener("DOMContentLoaded", function () {
      ========================================================= -->
 
 
-<style>
-/* =========================================================
+    <style>
+        /* =========================================================
    GLOBAL RESPONSIVE OVERRIDES
 ========================================================= */
-/* =========================================================
+        /* =========================================================
            RESPONSIVE
         ========================================================= */
 
@@ -5412,15 +5534,15 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             .solution-grid {
-                grid-template-columns: repeat(2,1fr);
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .flow-grid {
-                grid-template-columns: repeat(3,1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
 
             .features-grid {
-                grid-template-columns: repeat(2,1fr);
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -5526,7 +5648,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             .flow-grid {
-                grid-template-columns: repeat(2,1fr);
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .features-grid {
@@ -5570,12 +5692,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 grid-template-columns: 1fr;
             }
         }
-</style>
+    </style>
 
-<!-- =========================================================
+    <!-- =========================================================
      BOOTSTRAP JS
 ========================================================= -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>

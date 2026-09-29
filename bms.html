@@ -30,7 +30,9 @@
             --dark: #080a0b;
             --white: #fff;
         }
-
+p {
+    font-size: 17px !important;
+}
         * {
             margin: 0;
             padding: 0;
@@ -235,14 +237,15 @@
 
 <body id="page-top">
 
-<!-- HTML -->
+    <!-- HTML -->
     <!-- =========================================================
          PREMIUM GLOBAL NAVIGATION
     ========================================================= -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/img/lll1.png" id="logoWhite" class="navbar-logo" alt="Alpha Numeric Innovations" style="display:none;">
+                <img src="assets/img/lll1.png" id="logoWhite" class="navbar-logo" alt="Alpha Numeric Innovations"
+                    style="display:none;">
                 <img src="assets/img/lll1.png" id="logoDark" class="navbar-logo" alt="Alpha Numeric Innovations">
             </a>
 
@@ -307,56 +310,50 @@
 
                     <li class="nav-item dropdown bms-dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="bmsDropdown" role="button"
-                           data-bs-toggle="dropdown" aria-expanded="false">IoT</a>
+                            data-bs-toggle="dropdown" aria-expanded="false">IoT</a>
                         <ul class="dropdown-menu bms-menu" aria-labelledby="bmsDropdown">
                             <li><a class="dropdown-item" href="bms.html">BMS</a></li>
                             <li><a class="dropdown-item" href="iot.html">IoT</a></li>
-                            
+
                             <li><a class="dropdown-item" href="iot_bms.html">BMS+IOT</a></li>
                         </ul>
                     </li>
-    <li class="nav-item dropdown product-dropdown">              
+                    <li class="nav-item dropdown product-dropdown">
 
-    <a class="nav-link dropdown-toggle"
-       href="#"
-       id="productsDropdown"
-       role="button"
-       data-bs-toggle="dropdown"
-       data-bs-auto-close="outside"
-       aria-expanded="false">
-        Products
-    </a>
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
+                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            Products
+                        </a>
 
-    <div class="dropdown-menu product-menu"
-         aria-labelledby="productsDropdown">
+                        <div class="dropdown-menu product-menu" aria-labelledby="productsDropdown">
 
-        <a href="power-products.html">Sensors</a>
+                            <a href="power-products.html">Sensors</a>
 
-        <a href="power-products.html">Controllers</a>
+                            <a href="power-products.html">Controllers</a>
 
-        <a href="power-products.html">Gateways</a>
+                            <a href="power-products.html">Gateways</a>
 
-       
 
-        <a href="power-products.html">Control Panels</a>
 
-        <a href="power-products.html">Panel Boards</a>
+                            <a href="power-products.html">Control Panels</a>
 
-        <a href="power-products.html">Switchgears</a>
+                            <a href="power-products.html">Panel Boards</a>
 
-    </div>
+                            <a href="power-products.html">Switchgears</a>
 
-</li>
-<li class="nav-item"><a class="nav-link" href="why.html">Why</a></li>
-<li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+                        </div>
+
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="why.html">Why</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-<!-- CSS -->
-<style>
+    <!-- CSS -->
+    <style>
         /* =====================================================
            GLOBAL
         ===================================================== */
@@ -385,29 +382,144 @@
         img {
             max-width: 100%;
         }
+
         /* =====================================================
            PREMIUM GLOBAL NAVBAR
         ===================================================== */
 
-        .main-navbar { padding: 13px 0; background: transparent; transition: background .35s ease, padding .35s ease, box-shadow .35s ease; z-index: 9999; }
-        .main-navbar.navbar-shrink, .main-navbar.scrolled { background: #fff; padding: 8px 0; box-shadow: 0 8px 35px rgba(14,29,57,.08); }
-        .navbar-logo { height: 68px; width: auto; object-fit: contain; transition: height .3s ease; }
-        .main-navbar.navbar-shrink .navbar-logo, .main-navbar.scrolled .navbar-logo { height: 58px; }
-        .main-navbar .nav-link { position: relative; color: #fff; font-size: 14px; font-weight: 600; letter-spacing: .4px; margin: 0 5px; padding: 12px 11px !important; transition: color .3s ease; }
-        .main-navbar.navbar-shrink .nav-link, .main-navbar.scrolled .nav-link { color: #16243b; }
-        .main-navbar .nav-link:hover, .main-navbar .nav-link:focus { color: #4d73be; }
+        .main-navbar {
+            padding: 13px 0;
+            background: transparent;
+            transition: background .35s ease, padding .35s ease, box-shadow .35s ease;
+            z-index: 9999;
+        }
 
-        .solution-dropdown { position: static !important; }
-        .mega-menu { position: absolute !important; width: min(1380px, calc(100vw - 48px)); left: 50% !important; top: 100% !important; transform: translateX(-50%) !important; margin-top: 0 !important; padding: 0; border: 0; border-radius: 14px; background: #fff; box-shadow: 0 24px 70px rgba(14,29,57,.18); overflow: hidden; }
-        .mega-menu-inner { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); }
-        .mega-column { min-height: 270px; padding: 30px 30px 32px; border-right: 1px solid #e8edf5; background: #fff; }
-        .mega-column:last-child { border-right: 0; }
-        .mega-heading { display: flex; align-items: center; gap: 11px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid #edf1f7; color: #17243b; font-family: "Varela Round", sans-serif; font-size: 16px; font-weight: 600; }
-        .mega-heading i { width: 22px; color: #4d73be; font-size: 17px; }
-        .mega-column > a { display: block; position: relative; padding: 9px 0 9px 16px; color: #5d687b; font-size: 13.5px; font-weight: 600; text-decoration: none; transition: color .25s ease, padding .25s ease; }
-        .mega-column > a::before { content: ""; position: absolute; left: 0; top: 50%; width: 6px; height: 1px; background: #9eabc0; transform: translateY(-50%); transition: width .25s ease, background .25s ease; }
-        .mega-column > a:hover { color: #334a85; padding-left: 21px; }
-        .mega-column > a:hover::before { width: 12px; background: #4d73be; }
+        .main-navbar.navbar-shrink,
+        .main-navbar.scrolled {
+            background: #fff;
+            padding: 8px 0;
+            box-shadow: 0 8px 35px rgba(14, 29, 57, .08);
+        }
+
+        .navbar-logo {
+            height: 68px;
+            width: auto;
+            object-fit: contain;
+            transition: height .3s ease;
+        }
+
+        .main-navbar.navbar-shrink .navbar-logo,
+        .main-navbar.scrolled .navbar-logo {
+            height: 58px;
+        }
+
+        .main-navbar .nav-link {
+            position: relative;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: .4px;
+            margin: 0 5px;
+            padding: 12px 11px !important;
+            transition: color .3s ease;
+        }
+
+        .main-navbar.navbar-shrink .nav-link,
+        .main-navbar.scrolled .nav-link {
+            color: #16243b;
+        }
+
+        .main-navbar .nav-link:hover,
+        .main-navbar .nav-link:focus {
+            color: #4d73be;
+        }
+
+        .solution-dropdown {
+            position: static !important;
+        }
+
+        .mega-menu {
+            position: absolute !important;
+            width: min(1380px, calc(100vw - 48px));
+            left: 50% !important;
+            top: 100% !important;
+            transform: translateX(-50%) !important;
+            margin-top: 0 !important;
+            padding: 0;
+            border: 0;
+            border-radius: 14px;
+            background: #fff;
+            box-shadow: 0 24px 70px rgba(14, 29, 57, .18);
+            overflow: hidden;
+        }
+
+        .mega-menu-inner {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+        }
+
+        .mega-column {
+            min-height: 270px;
+            padding: 30px 30px 32px;
+            border-right: 1px solid #e8edf5;
+            background: #fff;
+        }
+
+        .mega-column:last-child {
+            border-right: 0;
+        }
+
+        .mega-heading {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            margin-bottom: 18px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid #edf1f7;
+            color: #17243b;
+            font-family: "Varela Round", sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .mega-heading i {
+            width: 22px;
+            color: #4d73be;
+            font-size: 17px;
+        }
+
+        .mega-column>a {
+            display: block;
+            position: relative;
+            padding: 9px 0 9px 16px;
+            color: #5d687b;
+            font-size: 13.5px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color .25s ease, padding .25s ease;
+        }
+
+        .mega-column>a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 6px;
+            height: 1px;
+            background: #9eabc0;
+            transform: translateY(-50%);
+            transition: width .25s ease, background .25s ease;
+        }
+
+        .mega-column>a:hover {
+            color: #334a85;
+            padding-left: 21px;
+        }
+
+        .mega-column>a:hover::before {
+            width: 12px;
+            background: #4d73be;
+        }
 
         /* BMS DROPDOWN */
         .bms-dropdown .bms-menu {
@@ -417,7 +529,7 @@
             border: 1px solid #1f1f1f;
             border-radius: 10px;
             background: #000000;
-            box-shadow: 0 18px 45px rgba(0,0,0,.24);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, .24);
         }
 
         .bms-dropdown .bms-menu .dropdown-item {
@@ -437,8 +549,9 @@
         }
 
         @media (min-width: 992px) {
+
             /* BMS dropdown: open on hover and stay open while hovering menu */
-            .bms-dropdown > .bms-menu {
+            .bms-dropdown>.bms-menu {
                 display: block;
                 opacity: 0;
                 visibility: hidden;
@@ -447,16 +560,16 @@
                 transition: opacity .22s ease, visibility .22s ease, transform .22s ease;
             }
 
-            .bms-dropdown:hover > .bms-menu,
-            .bms-dropdown > .bms-menu:hover,
-            .bms-dropdown > .bms-menu.show {
+            .bms-dropdown:hover>.bms-menu,
+            .bms-dropdown>.bms-menu:hover,
+            .bms-dropdown>.bms-menu.show {
                 opacity: 1;
                 visibility: visible;
                 pointer-events: auto;
                 transform: translateY(0);
             }
 
-            .solution-dropdown > .mega-menu {
+            .solution-dropdown>.mega-menu {
                 opacity: 0;
                 visibility: hidden;
                 pointer-events: none;
@@ -464,16 +577,16 @@
                 transition: opacity .22s ease, visibility .22s ease;
             }
 
-            .solution-dropdown:hover > .mega-menu,
-            .solution-dropdown.mega-open > .mega-menu,
-            .solution-dropdown > .mega-menu.show {
+            .solution-dropdown:hover>.mega-menu,
+            .solution-dropdown.mega-open>.mega-menu,
+            .solution-dropdown>.mega-menu.show {
                 opacity: 1;
                 visibility: visible;
                 pointer-events: auto;
             }
 
             /* Invisible hover bridge between Solutions and mega menu */
-            .solution-dropdown > .mega-menu::before {
+            .solution-dropdown>.mega-menu::before {
                 content: "";
                 position: absolute;
                 left: 0;
@@ -485,44 +598,121 @@
         }
 
         @media (max-width: 991px) {
-            .main-navbar { background: #fff; padding: 8px 0; }
-            .navbar-logo { height: 55px; }
-            #logoWhite { display: none !important; }
-            #logoDark { display: block !important; }
-            .main-navbar .navbar-toggler { color: #17243b; border-color: rgba(23,36,59,.2); }
-            .main-navbar .nav-link { color: #17243b; padding: 12px 7px !important; margin: 1px 0; }
-            .navbar-collapse { max-height: calc(100vh - 76px); overflow-y: auto; margin-top: 10px; padding: 15px 10px 22px; border-top: 1px solid #edf0f5; background: #fff; }
-            .mega-menu { position: static !important; transform: none !important; width: 100%; margin: 0 !important; box-shadow: none; border-left: 2px solid #334a85; border-radius: 0; overflow: visible; }
-            .mega-menu-inner { grid-template-columns: 1fr; }
-            .mega-column { min-height: 0; padding: 18px 18px 14px; border-right: 0; border-bottom: 1px solid #edf0f5; }
-            .mega-column:last-child { border-bottom: 0; }
-            .mega-heading { margin-bottom: 8px; padding-bottom: 10px; }
-            .mega-column > a { padding-top: 7px; padding-bottom: 7px; }
+            .main-navbar {
+                background: #fff;
+                padding: 8px 0;
+            }
+
+            .navbar-logo {
+                height: 55px;
+            }
+
+            #logoWhite {
+                display: none !important;
+            }
+
+            #logoDark {
+                display: block !important;
+            }
+
+            .main-navbar .navbar-toggler {
+                color: #17243b;
+                border-color: rgba(23, 36, 59, .2);
+            }
+
+            .main-navbar .nav-link {
+                color: #17243b;
+                padding: 12px 7px !important;
+                margin: 1px 0;
+            }
+
+            .navbar-collapse {
+                max-height: calc(100vh - 76px);
+                overflow-y: auto;
+                margin-top: 10px;
+                padding: 15px 10px 22px;
+                border-top: 1px solid #edf0f5;
+                background: #fff;
+            }
+
+            .mega-menu {
+                position: static !important;
+                transform: none !important;
+                width: 100%;
+                margin: 0 !important;
+                box-shadow: none;
+                border-left: 2px solid #334a85;
+                border-radius: 0;
+                overflow: visible;
+            }
+
+            .mega-menu-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .mega-column {
+                min-height: 0;
+                padding: 18px 18px 14px;
+                border-right: 0;
+                border-bottom: 1px solid #edf0f5;
+            }
+
+            .mega-column:last-child {
+                border-bottom: 0;
+            }
+
+            .mega-heading {
+                margin-bottom: 8px;
+                padding-bottom: 10px;
+            }
+
+            .mega-column>a {
+                padding-top: 7px;
+                padding-bottom: 7px;
+            }
         }
 
 
         /* ABOUT PAGE: keep Index navbar in permanent white/scrolled state */
-       
+
         .main-navbar {
             background: #fff;
             padding: 8px 0;
-            box-shadow: 0 8px 35px rgba(14,29,57,.08);
+            box-shadow: 0 8px 35px rgba(14, 29, 57, .08);
         }
-        .main-navbar .navbar-logo { height: 58px; }
-        .main-navbar .nav-link { color: #16243b; }
-        #logoWhite { display: none !important; }
-        #logoDark { display: block !important; }
+
+        .main-navbar .navbar-logo {
+            height: 58px;
+        }
+
+        .main-navbar .nav-link {
+            color: #16243b;
+        }
+
+        #logoWhite {
+            display: none !important;
+        }
+
+        #logoDark {
+            display: block !important;
+        }
+
         .main-navbar .nav-contact {
             background: #334a85;
             border-color: #334a85;
             color: #fff !important;
         }
+
         .main-navbar .nav-contact:hover {
             background: #17243b;
             border-color: #17243b;
             color: #fff !important;
         }
-        .main-navbar .nav-link.active { color: #4d73be; }
+
+        .main-navbar .nav-link.active {
+            color: #4d73be;
+        }
+
         .main-navbar .nav-link.active:not(.nav-contact)::after {
             width: calc(100% - 24px);
         }
@@ -531,319 +721,321 @@
    PRODUCTS DROPDOWN
 ========================================================= */
 
-.product-dropdown{
-    position:relative;
-}
+        .product-dropdown {
+            position: relative;
+        }
 
-.product-menu{
-    min-width:240px;
+        .product-menu {
+            min-width: 240px;
 
-    padding:10px 0;
+            padding: 10px 0;
 
-    margin-top:0!important;
+            margin-top: 0 !important;
 
-    border:0;
+            border: 0;
 
-    border-radius:10px;
+            border-radius: 10px;
 
-    background:#000;
+            background: #000;
 
-    box-shadow:
-        0 20px 55px rgba(0,0,0,.25);
+            box-shadow:
+                0 20px 55px rgba(0, 0, 0, .25);
 
-    overflow:hidden;
-}
+            overflow: hidden;
+        }
 
-.product-menu > a{
-    display:block;
+        .product-menu>a {
+            display: block;
 
-    position:relative;
+            position: relative;
 
-    padding:11px 24px;
+            padding: 11px 24px;
 
-    color:#bdbdbd;
+            color: #bdbdbd;
 
-    font-size:13.5px;
+            font-size: 13.5px;
 
-    font-weight:600;
+            font-weight: 600;
 
-    text-decoration:none;
+            text-decoration: none;
 
-    transition:
-        color .25s ease,
-        padding-left .25s ease,
-        background .25s ease;
-}
+            transition:
+                color .25s ease,
+                padding-left .25s ease,
+                background .25s ease;
+        }
 
-.product-menu > a::before{
-    content:"";
+        .product-menu>a::before {
+            content: "";
 
-    position:absolute;
+            position: absolute;
 
-    left:12px;
+            left: 12px;
 
-    top:50%;
+            top: 50%;
 
-    width:5px;
+            width: 5px;
 
-    height:1px;
+            height: 1px;
 
-    background:#666;
+            background: #666;
 
-    transform:translateY(-50%);
+            transform: translateY(-50%);
 
-    transition:
-        width .25s ease,
-        background .25s ease;
-}
+            transition:
+                width .25s ease,
+                background .25s ease;
+        }
 
-.product-menu > a:hover{
-    color:#fff;
+        .product-menu>a:hover {
+            color: #fff;
 
-    background:#111;
+            background: #111;
 
-    padding-left:29px;
-}
+            padding-left: 29px;
+        }
 
-.product-menu > a:hover::before{
-    width:10px;
+        .product-menu>a:hover::before {
+            width: 10px;
 
-    background:#fff;
-}
+            background: #fff;
+        }
 
 
-/* =========================================================
+        /* =========================================================
    DESKTOP HOVER
 ========================================================= */
 
-@media (min-width:992px){
+        @media (min-width:992px) {
 
-    .product-dropdown:hover > .product-menu{
-        display:block;
-    }
+            .product-dropdown:hover>.product-menu {
+                display: block;
+            }
 
-    .product-menu{
-        display:block;
+            .product-menu {
+                display: block;
 
-        opacity:0;
+                opacity: 0;
 
-        visibility:hidden;
+                visibility: hidden;
 
-        pointer-events:none;
+                pointer-events: none;
 
-        transition:
-            opacity .2s ease,
-            visibility .2s ease;
-    }
+                transition:
+                    opacity .2s ease,
+                    visibility .2s ease;
+            }
 
-    .product-dropdown:hover > .product-menu,
-    .product-dropdown > .product-menu.show{
-        opacity:1;
+            .product-dropdown:hover>.product-menu,
+            .product-dropdown>.product-menu.show {
+                opacity: 1;
 
-        visibility:visible;
+                visibility: visible;
 
-        pointer-events:auto;
-    }
-}
+                pointer-events: auto;
+            }
+        }
 
 
-/* =========================================================
+        /* =========================================================
    MOBILE
 ========================================================= */
 
-@media (max-width:991px){
+        @media (max-width:991px) {
 
-    .product-menu{
-        position:static!important;
+            .product-menu {
+                position: static !important;
 
-        width:100%;
+                width: 100%;
 
-        margin:0!important;
+                margin: 0 !important;
 
-        border-radius:0;
+                border-radius: 0;
 
-        box-shadow:none;
+                box-shadow: none;
 
-        background:#000;
-    }
+                background: #000;
+            }
 
-    .product-menu > a{
-        padding:10px 22px;
+            .product-menu>a {
+                padding: 10px 22px;
 
-        color:#bdbdbd;
-    }
-}
+                color: #bdbdbd;
+            }
+        }
 
 
-        
-/* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
-.main-navbar #solutionsDropdown,
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown:active,
-.main-navbar #solutionsDropdown.show {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
 
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown.show {
-    color: #4d73be !important;
-}
-/* =========================================================
+        /* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
+        .main-navbar #solutionsDropdown,
+        .main-navbar #solutionsDropdown:hover,
+        .main-navbar #solutionsDropdown:focus,
+        .main-navbar #solutionsDropdown:active,
+        .main-navbar #solutionsDropdown.show {
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+            outline: none !important;
+        }
+
+        .main-navbar #solutionsDropdown:hover,
+        .main-navbar #solutionsDropdown:focus,
+        .main-navbar #solutionsDropdown.show {
+            color: #4d73be !important;
+        }
+
+        /* =========================================================
    NAVBAR — MONOCHROME BLACK THEME
    Keep existing layout + mega-menu behavior unchanged
 ========================================================= */
 
-/* Main nav links */
-.main-navbar .nav-link,
-.main-navbar.scrolled .nav-link,
-.main-navbar.navbar-shrink .nav-link {
-    color: #1a1a1a !important;
-}
+        /* Main nav links */
+        .main-navbar .nav-link,
+        .main-navbar.scrolled .nav-link,
+        .main-navbar.navbar-shrink .nav-link {
+            color: #1a1a1a !important;
+        }
 
-/* Normal */
-.main-navbar .nav-link {
-    font-weight: 600;
-}
+        /* Normal */
+        .main-navbar .nav-link {
+            font-weight: 600;
+        }
 
-/* Hover / focus — black only */
-.main-navbar .nav-link:hover,
-.main-navbar .nav-link:focus {
-    color: #000000 !important;
-}
+        /* Hover / focus — black only */
+        .main-navbar .nav-link:hover,
+        .main-navbar .nav-link:focus {
+            color: #000000 !important;
+        }
 
-/* Active — black + stronger weight */
-.main-navbar .nav-link.active,
-.main-navbar .nav-link.show,
-.main-navbar #solutionsDropdown.show {
-    color: #000000 !important;
-    font-weight: 800 !important;
-}
+        /* Active — black + stronger weight */
+        .main-navbar .nav-link.active,
+        .main-navbar .nav-link.show,
+        .main-navbar #solutionsDropdown.show {
+            color: #000000 !important;
+            font-weight: 800 !important;
+        }
 
-/* No colored underline */
-.main-navbar .nav-link:not(.nav-contact):not(.dropdown-toggle)::after {
-    background: #000000 !important;
-}
+        /* No colored underline */
+        .main-navbar .nav-link:not(.nav-contact):not(.dropdown-toggle)::after {
+            background: #000000 !important;
+        }
 
-/* Solutions: text only, no box */
-.main-navbar #solutionsDropdown,
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown:active,
-.main-navbar #solutionsDropdown.show {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-    color: #000000 !important;
-}
+        /* Solutions: text only, no box */
+        .main-navbar #solutionsDropdown,
+        .main-navbar #solutionsDropdown:hover,
+        .main-navbar #solutionsDropdown:focus,
+        .main-navbar #solutionsDropdown:active,
+        .main-navbar #solutionsDropdown.show {
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+            outline: none !important;
+            color: #000000 !important;
+        }
 
-/* Contact: monochrome */
-.main-navbar .nav-contact,
-.main-navbar.scrolled .nav-contact {
-    background: #000000 !important;
-    border-color: #000000 !important;
-    color: #ffffff !important;
-}
+        /* Contact: monochrome */
+        .main-navbar .nav-contact,
+        .main-navbar.scrolled .nav-contact {
+            background: #000000 !important;
+            border-color: #000000 !important;
+            color: #ffffff !important;
+        }
 
-.main-navbar .nav-contact:hover,
-.main-navbar .nav-contact:focus,
-.main-navbar.scrolled .nav-contact:hover {
-    background: #222222 !important;
-    border-color: #222222 !important;
-    color: #ffffff !important;
-}
+        .main-navbar .nav-contact:hover,
+        .main-navbar .nav-contact:focus,
+        .main-navbar.scrolled .nav-contact:hover {
+            background: #222222 !important;
+            border-color: #222222 !important;
+            color: #ffffff !important;
+        }
 
-/* =========================================================
+        /* =========================================================
    MEGA MENU — BLACK
 ========================================================= */
 
-.main-navbar .mega-menu {
-    background: #000000 !important;
-    border: 1px solid #1f1f1f !important;
-    box-shadow: 0 24px 70px rgba(0,0,0,.28) !important;
-}
+        .main-navbar .mega-menu {
+            background: #000000 !important;
+            border: 1px solid #1f1f1f !important;
+            box-shadow: 0 24px 70px rgba(0, 0, 0, .28) !important;
+        }
 
-/* Columns */
-.main-navbar .mega-column {
-    background: #000000 !important;
-    border-right-color: #242424 !important;
-}
+        /* Columns */
+        .main-navbar .mega-column {
+            background: #000000 !important;
+            border-right-color: #242424 !important;
+        }
 
-.main-navbar .mega-column:last-child {
-    border-right-color: transparent !important;
-}
+        .main-navbar .mega-column:last-child {
+            border-right-color: transparent !important;
+        }
 
-/* Headings */
-.main-navbar .mega-heading {
-    color: #ffffff !important;
-    border-bottom-color: #2a2a2a !important;
-}
+        /* Headings */
+        .main-navbar .mega-heading {
+            color: #ffffff !important;
+            border-bottom-color: #2a2a2a !important;
+        }
 
-/* Icons — monochrome */
-.main-navbar .mega-heading i {
-    color: #ffffff !important;
-}
+        /* Icons — monochrome */
+        .main-navbar .mega-heading i {
+            color: #ffffff !important;
+        }
 
-/* Menu links */
-.main-navbar .mega-column > a {
-    color: #bdbdbd !important;
-}
+        /* Menu links */
+        .main-navbar .mega-column>a {
+            color: #bdbdbd !important;
+        }
 
-/* Small line before links */
-.main-navbar .mega-column > a::before {
-    background: #666666 !important;
-}
+        /* Small line before links */
+        .main-navbar .mega-column>a::before {
+            background: #666666 !important;
+        }
 
-/* Hover inside mega menu */
-.main-navbar .mega-column > a:hover,
-.main-navbar .mega-column > a:focus {
-    color: #ffffff !important;
-}
+        /* Hover inside mega menu */
+        .main-navbar .mega-column>a:hover,
+        .main-navbar .mega-column>a:focus {
+            color: #ffffff !important;
+        }
 
-.main-navbar .mega-column > a:hover::before {
-    background: #ffffff !important;
-}
+        .main-navbar .mega-column>a:hover::before {
+            background: #ffffff !important;
+        }
 
-/* Mobile */
-@media (max-width: 991px) {
-    .main-navbar .nav-link {
-        color: #1a1a1a !important;
-    }
+        /* Mobile */
+        @media (max-width: 991px) {
+            .main-navbar .nav-link {
+                color: #1a1a1a !important;
+            }
 
-    .main-navbar .mega-menu {
-        background: #000000 !important;
-        border-left-color: #000000 !important;
-    }
+            .main-navbar .mega-menu {
+                background: #000000 !important;
+                border-left-color: #000000 !important;
+            }
 
-    .main-navbar .mega-column {
-        background: #000000 !important;
-        border-bottom-color: #242424 !important;
-    }
-}
-.main-navbar .mega-heading {
-    gap: 0 !important;
-}
-</style>
+            .main-navbar .mega-column {
+                background: #000000 !important;
+                border-bottom-color: #242424 !important;
+            }
+        }
 
-<!-- JAVASCRIPT -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const nav = document.getElementById("mainNav");
-    const white = document.getElementById("logoWhite");
-    const dark = document.getElementById("logoDark");
+        .main-navbar .mega-heading {
+            gap: 0 !important;
+        }
+    </style>
 
-    if (nav) nav.classList.add("scrolled", "navbar-shrink");
-    if (white) white.style.display = "none";
-    if (dark) dark.style.display = "block";
-});
-</script>
+    <!-- JAVASCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const nav = document.getElementById("mainNav");
+            const white = document.getElementById("logoWhite");
+            const dark = document.getElementById("logoDark");
 
-<!-- END MODULE — NAVBAR -->
+            if (nav) nav.classList.add("scrolled", "navbar-shrink");
+            if (white) white.style.display = "none";
+            if (dark) dark.style.display = "block";
+        });
+    </script>
+
+    <!-- END MODULE — NAVBAR -->
 
 
     <main class="bms-page">
@@ -1335,7 +1527,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .intro-fact span {
                 display: block;
                 color: #829092;
-                font-size: 10px;
+                font-size: 16px;
                 margin-top: 7px;
                 line-height: 1.6
             }
@@ -1394,757 +1586,730 @@ document.addEventListener("DOMContentLoaded", function () {
         </script>
 
 
-   <!-- =========================================================
+        <!-- =========================================================
      MODULE 05 — CONNECTED BUILDING SYSTEMS — CSS
 ========================================================= -->
-<style>
-
-    /* =========================================================
+        <style>
+            /* =========================================================
        CONNECTED BUILDING SYSTEMS
     ========================================================= */
 
-    .bms-systems{
-        padding:110px 0;
-        background:#f2f5f4;
-    }
+            .bms-systems {
+                padding: 110px 0;
+                background: #f2f5f4;
+            }
 
-    .systems-head{
-        display:flex;
-        justify-content:space-between;
-        gap:40px;
-        align-items:end;
-        margin-bottom:48px;
-    }
+            .systems-head {
+                display: flex;
+                justify-content: space-between;
+                gap: 40px;
+                align-items: end;
+                margin-bottom: 48px;
+            }
 
-    .systems-head .bms-lead{
-        max-width:560px;
-    }
+            .systems-head .bms-lead {
+                max-width: 560px;
+            }
 
 
-    /* =========================================================
+            /* =========================================================
        GRID
     ========================================================= */
 
-    .systems-grid{
-        display:grid;
-        grid-template-columns:repeat(12,1fr);
-        gap:16px;
-    }
+            .systems-grid {
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                gap: 16px;
+            }
 
 
-    /* =========================================================
+            /* =========================================================
        CARD
     ========================================================= */
 
-    .system-card{
-        position:relative;
+            .system-card {
+                position: relative;
 
-        min-height:330px;
+                min-height: 330px;
 
-        overflow:hidden;
+                overflow: hidden;
 
-        border-radius:22px;
+                border-radius: 22px;
 
-        background:#0b1719;
-        color:#fff;
+                background: #0b1719;
+                color: #fff;
 
-        padding:28px;
+                padding: 28px;
 
-        display:flex;
-        flex-direction:column;
-        justify-content:space-between;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
 
-        isolation:isolate;
+                isolation: isolate;
 
-        transition:
-            transform .4s cubic-bezier(.22,1,.36,1),
-            box-shadow .4s ease;
-    }
-
-
-    /* IMAGE BACKGROUND */
-
-    .system-card::before{
-        content:"";
-
-        position:absolute;
-        inset:0;
-
-        z-index:-2;
-
-        background:
-            linear-gradient(
-                180deg,
-                rgba(6,16,18,.05) 0%,
-                rgba(5,14,16,.18) 35%,
-                rgba(5,14,16,.92) 100%
-            ),
-            var(
-                --card-img,
-                linear-gradient(
-                    135deg,
-                    #0d2528,
-                    #17363a
-                )
-            );
-
-        background-size:cover;
-        background-position:center;
-
-        transform:scale(1.01);
-
-        transition:
-            transform .8s cubic-bezier(.22,1,.36,1),
-            filter .6s ease;
-    }
+                transition:
+                    transform .4s cubic-bezier(.22, 1, .36, 1),
+                    box-shadow .4s ease;
+            }
 
 
-    /* CYAN ATMOSPHERE */
+            /* IMAGE BACKGROUND */
 
-    .system-card::after{
-        content:"";
+            .system-card::before {
+                content: "";
 
-        position:absolute;
-        inset:0;
+                position: absolute;
+                inset: 0;
 
-        z-index:-1;
+                z-index: -2;
 
-        background:
-            radial-gradient(
-                circle at 82% 14%,
-                rgba(19,215,196,.18),
-                transparent 28%
-            ),
-            linear-gradient(
-                90deg,
-                rgba(4,15,18,.26),
-                transparent 45%
-            );
+                background:
+                    linear-gradient(180deg,
+                        rgba(6, 16, 18, .05) 0%,
+                        rgba(5, 14, 16, .18) 35%,
+                        rgba(5, 14, 16, .92) 100%),
+                    var(--card-img,
+                        linear-gradient(135deg,
+                            #0d2528,
+                            #17363a));
 
-        pointer-events:none;
-    }
+                background-size: cover;
+                background-position: center;
+
+                transform: scale(1.01);
+
+                transition:
+                    transform .8s cubic-bezier(.22, 1, .36, 1),
+                    filter .6s ease;
+            }
 
 
-    /* =========================================================
+            /* CYAN ATMOSPHERE */
+
+            .system-card::after {
+                content: "";
+
+                position: absolute;
+                inset: 0;
+
+                z-index: -1;
+
+                background:
+                    radial-gradient(circle at 82% 14%,
+                        rgba(19, 215, 196, .18),
+                        transparent 28%),
+                    linear-gradient(90deg,
+                        rgba(4, 15, 18, .26),
+                        transparent 45%);
+
+                pointer-events: none;
+            }
+
+
+            /* =========================================================
        CARD SIZES
     ========================================================= */
 
-    .system-card.big{
-        grid-column:span 6;
-        min-height:430px;
-    }
+            .system-card.big {
+                grid-column: span 6;
+                min-height: 430px;
+            }
 
-    .system-card.mid{
-        grid-column:span 3;
-        min-height:330px;
-    }
+            .system-card.mid {
+                grid-column: span 3;
+                min-height: 330px;
+            }
 
-    .system-card.wide{
-        grid-column:span 4;
-        min-height:350px;
-    }
+            .system-card.wide {
+                grid-column: span 4;
+                min-height: 350px;
+            }
 
 
-    /* =========================================================
+            /* =========================================================
        CARD NUMBER
     ========================================================= */
 
-    .system-card .no{
-        position:relative;
-        z-index:3;
+            .system-card .no {
+                position: relative;
+                z-index: 3;
 
-        font-size:10px;
-        font-weight:700;
-        letter-spacing:2px;
+                font-size: 10px;
+                font-weight: 700;
+                letter-spacing: 2px;
 
-        color:#a4b5b7;
-    }
+                color: #a4b5b7;
+            }
 
 
-    /* =========================================================
+            /* =========================================================
        ARROW
     ========================================================= */
 
-    .system-card .arrow{
-        position:absolute;
+            .system-card .arrow {
+                position: absolute;
 
-        right:22px;
-        top:22px;
+                right: 22px;
+                top: 22px;
 
-        z-index:4;
+                z-index: 4;
 
-        width:38px;
-        height:38px;
+                width: 38px;
+                height: 38px;
 
-        border-radius:50%;
+                border-radius: 50%;
 
-        border:1px solid rgba(255,255,255,.22);
+                border: 1px solid rgba(255, 255, 255, .22);
 
-        display:grid;
-        place-items:center;
+                display: grid;
+                place-items: center;
 
-        color:#fff;
+                color: #fff;
 
-        font-size:15px;
+                font-size: 15px;
 
-        background:rgba(5,15,17,.15);
+                background: rgba(5, 15, 17, .15);
 
-        backdrop-filter:blur(8px);
+                backdrop-filter: blur(8px);
 
-        transition:
-            background .35s ease,
-            color .35s ease,
-            transform .35s ease,
-            border-color .35s ease;
-    }
+                transition:
+                    background .35s ease,
+                    color .35s ease,
+                    transform .35s ease,
+                    border-color .35s ease;
+            }
 
 
-    /* =========================================================
+            /* =========================================================
        CARD CONTENT
     ========================================================= */
 
-    .system-card > div{
-        position:relative;
-        z-index:3;
-    }
+            .system-card>div {
+                position: relative;
+                z-index: 3;
+            }
 
-    .system-card h3{
-        margin:0 0 10px;
+            .system-card h3 {
+                margin: 0 0 10px;
 
-        max-width:90%;
+                max-width: 90%;
 
-        color:#fff;
+                color: #fff;
 
-        font-size:28px;
-        font-weight:600;
+                font-size: 28px;
+                font-weight: 600;
 
-        line-height:1.05;
+                line-height: 1.05;
 
-        letter-spacing:-1.3px;
-    }
+                letter-spacing: -1.3px;
+            }
 
-    .system-card p{
-        max-width:420px;
+            .system-card p {
+                max-width: 420px;
 
-        margin:0;
+                margin: 0;
 
-        color:#b7c4c6;
+                color: #b7c4c6;
 
-        font-size:11px;
+                font-size: 11px;
 
-        line-height:1.75;
-    }
+                line-height: 1.75;
+            }
 
 
-    /* =========================================================
+            /* =========================================================
        HOVER
     ========================================================= */
 
-    .system-card:hover{
-        transform:translateY(-5px);
+            .system-card:hover {
+                transform: translateY(-5px);
 
-        box-shadow:
-            0 24px 60px rgba(6,26,31,.16);
-    }
+                box-shadow:
+                    0 24px 60px rgba(6, 26, 31, .16);
+            }
 
-    .system-card:hover::before{
-        transform:scale(1.045);
+            .system-card:hover::before {
+                transform: scale(1.045);
 
-        filter:saturate(1.08);
-    }
+                filter: saturate(1.08);
+            }
 
-    .system-card:hover .arrow{
-        background:#fff;
-        color:#071316;
+            .system-card:hover .arrow {
+                background: #fff;
+                color: #071316;
 
-        border-color:#fff;
+                border-color: #fff;
 
-        transform:rotate(45deg);
-    }
+                transform: rotate(45deg);
+            }
 
 
-    /* =========================================================
+            /* =========================================================
        OPTIONAL CONTENT SHADOW
     ========================================================= */
 
-    .system-card > div::before{
-        content:"";
+            .system-card>div::before {
+                content: "";
 
-        position:absolute;
+                position: absolute;
 
-        left:-20px;
-        right:-20px;
-        bottom:-22px;
+                left: -20px;
+                right: -20px;
+                bottom: -22px;
 
-        height:150px;
+                height: 150px;
 
-        z-index:-1;
+                z-index: -1;
 
-        background:
-            radial-gradient(
-                ellipse at bottom left,
-                rgba(2,8,10,.55),
-                transparent 70%
-            );
+                background:
+                    radial-gradient(ellipse at bottom left,
+                        rgba(2, 8, 10, .55),
+                        transparent 70%);
 
-        pointer-events:none;
-    }
+                pointer-events: none;
+            }
 
 
-    /* =========================================================
+            /* =========================================================
        TABLET
     ========================================================= */
 
-    @media(max-width:1100px){
+            @media(max-width:1100px) {
 
-        .systems-head{
-            align-items:start;
-        }
+                .systems-head {
+                    align-items: start;
+                }
 
-        .system-card.big{
-            grid-column:span 12;
-        }
+                .system-card.big {
+                    grid-column: span 12;
+                }
 
-        .system-card.mid{
-            grid-column:span 6;
-        }
+                .system-card.mid {
+                    grid-column: span 6;
+                }
 
-        .system-card.wide{
-            grid-column:span 6;
-        }
+                .system-card.wide {
+                    grid-column: span 6;
+                }
 
-    }
+            }
 
 
-    /* =========================================================
+            /* =========================================================
        MOBILE
     ========================================================= */
 
-    @media(max-width:767px){
+            @media(max-width:767px) {
 
-        .bms-systems{
-            padding:85px 0;
-        }
+                .bms-systems {
+                    padding: 85px 0;
+                }
 
-        .systems-head{
-            display:block;
+                .systems-head {
+                    display: block;
 
-            margin-bottom:38px;
-        }
+                    margin-bottom: 38px;
+                }
 
-        .systems-head .bms-lead{
-            margin-top:22px;
-        }
+                .systems-head .bms-lead {
+                    margin-top: 22px;
+                }
 
-        .systems-grid{
-            gap:14px;
-        }
+                .systems-grid {
+                    gap: 14px;
+                }
 
-        .system-card.big,
-        .system-card.mid,
-        .system-card.wide{
-            grid-column:span 12;
+                .system-card.big,
+                .system-card.mid,
+                .system-card.wide {
+                    grid-column: span 12;
 
-            min-height:330px;
-        }
+                    min-height: 330px;
+                }
 
-        .system-card{
-            padding:24px;
-        }
+                .system-card {
+                    padding: 24px;
+                }
 
-        .system-card h3{
-            font-size:24px;
-        }
+                .system-card h3 {
+                    font-size: 24px;
+                }
 
-        .system-card p{
-            font-size:10.5px;
-        }
+                .system-card p {
+                    font-size: 10.5px;
+                }
 
-        .system-card .arrow{
-            width:36px;
-            height:36px;
+                .system-card .arrow {
+                    width: 36px;
+                    height: 36px;
 
-            right:18px;
-            top:18px;
-        }
+                    right: 18px;
+                    top: 18px;
+                }
 
-    }
+            }
 
 
-    /* =========================================================
+            /* =========================================================
        EXTRA SMALL MOBILE
     ========================================================= */
 
-    @media(max-width:480px){
+            @media(max-width:480px) {
 
-        .system-card.big,
-        .system-card.mid,
-        .system-card.wide{
-            min-height:305px;
-        }
+                .system-card.big,
+                .system-card.mid,
+                .system-card.wide {
+                    min-height: 305px;
+                }
 
-        .system-card{
-            padding:21px;
-        }
+                .system-card {
+                    padding: 21px;
+                }
 
-        .system-card h3{
-            font-size:22px;
-        }
+                .system-card h3 {
+                    font-size: 22px;
+                }
 
-        .system-card p{
-            line-height:1.65;
-        }
+                .system-card p {
+                    line-height: 1.65;
+                }
 
-    }
+            }
 
 
-    /* =========================================================
+            /* =========================================================
        REDUCED MOTION
     ========================================================= */
 
-    @media(prefers-reduced-motion:reduce){
+            @media(prefers-reduced-motion:reduce) {
 
-        .system-card,
-        .system-card::before,
-        .system-card .arrow{
-            transition:none !important;
-        }
+                .system-card,
+                .system-card::before,
+                .system-card .arrow {
+                    transition: none !important;
+                }
 
-    }
+            }
+        </style>
 
-</style>
 
-
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 05 — CONNECTED BUILDING SYSTEMS — HTML
 ========================================================= -->
 
-<section class="bms-systems" id="bms-systems">
+        <section class="bms-systems" id="bms-systems">
 
-    <div class="bms-wrap">
+            <div class="bms-wrap">
 
 
-        <!-- =====================================================
+                <!-- =====================================================
              SECTION HEADER
         ====================================================== -->
 
-        <div class="systems-head">
+                <div class="systems-head">
 
-            <div>
+                    <div>
 
-                <div class="bms-eyebrow">
-                    CONNECTED BUILDING SYSTEMS
+                        <div class="bms-eyebrow">
+                            CONNECTED BUILDING SYSTEMS
+                        </div>
+
+                        <h2 class="bms-h2">
+                            Intelligence across<br>
+                            <span>every system.</span>
+                        </h2>
+
+                    </div>
+
+
+                    <p class="bms-lead">
+
+                        Bring traditionally isolated building services
+                        into a coordinated platform with live status,
+                        schedules, alarms, trends and control.
+
+                    </p>
+
                 </div>
 
-                <h2 class="bms-h2">
-                    Intelligence across<br>
-                    <span>every system.</span>
-                </h2>
 
-            </div>
-
-
-            <p class="bms-lead">
-
-                Bring traditionally isolated building services
-                into a coordinated platform with live status,
-                schedules, alarms, trends and control.
-
-            </p>
-
-        </div>
-
-
-        <!-- =====================================================
+                <!-- =====================================================
              SYSTEM GRID
         ====================================================== -->
 
-        <div class="systems-grid">
+                <div class="systems-grid">
 
 
-            <!-- =================================================
+                    <!-- =================================================
                  01 — HVAC & CLIMATE CONTROL
             ================================================== -->
 
-            <article
-                class="system-card big reveal-bms"
-                style="--card-img:url('assets/img/bms/HVAC & Climate Control_.png')"
-            >
+                    <article class="system-card big reveal-bms"
+                        style="--card-img:url('assets/img/bms/HVAC & Climate Control_.png')">
 
-                <span class="no">
-                    01 / CLIMATE
-                </span>
+                        <span class="no">
+                            01 / CLIMATE
+                        </span>
 
-                <span class="arrow">
-                    ↗
-                </span>
+                        <span class="arrow">
+                            ↗
+                        </span>
 
 
-                <div>
+                        <div>
 
-                    <h3>
-                        HVAC &amp; Climate Control
-                    </h3>
+                            <h3>
+                                HVAC &amp; Climate Control
+                            </h3>
 
-                    <p>
+                            <p>
 
-                        Monitor chillers, AHUs, FCUs,
-                        ventilation, temperatures, pressures
-                        and operating schedules.
+                                Monitor chillers, AHUs, FCUs,
+                                ventilation, temperatures, pressures
+                                and operating schedules.
 
-                        Use occupancy and environmental data
-                        to improve comfort while reducing
-                        unnecessary runtime.
+                                Use occupancy and environmental data
+                                to improve comfort while reducing
+                                unnecessary runtime.
 
-                    </p>
+                            </p>
 
-                </div>
+                        </div>
 
-            </article>
+                    </article>
 
 
-            <!-- =================================================
+                    <!-- =================================================
                  02 — LIGHTING
             ================================================== -->
 
-            <article
-                class="system-card mid reveal-bms"
-                style="--card-img:url('assets/img/bms/bmslighting.png')"
-            >
+                    <article class="system-card mid reveal-bms"
+                        style="--card-img:url('assets/img/bms/bmslighting.png')">
 
-                <span class="no">
-                    02 / LIGHT
-                </span>
+                        <span class="no">
+                            02 / LIGHT
+                        </span>
 
-                <span class="arrow">
-                    ↗
-                </span>
+                        <span class="arrow">
+                            ↗
+                        </span>
 
 
-                <div>
+                        <div>
 
-                    <h3>
-                        Lighting
-                    </h3>
+                            <h3>
+                                Lighting
+                            </h3>
 
-                    <p>
+                            <p>
 
-                        Schedules, daylight response,
-                        occupancy logic and zone-level control.
+                                Schedules, daylight response,
+                                occupancy logic and zone-level control.
 
-                    </p>
+                            </p>
 
-                </div>
+                        </div>
 
-            </article>
+                    </article>
 
 
-            <!-- =================================================
+                    <!-- =================================================
                  03 — ENERGY
             ================================================== -->
 
-            <article
-                class="system-card mid reveal-bms"
-                style="--card-img:url('assets/img/bms/bmsenergy.png')"
-            >
+                    <article class="system-card mid reveal-bms" style="--card-img:url('assets/img/bms/bmsenergy.png')">
 
-                <span class="no">
-                    03 / POWER
-                </span>
+                        <span class="no">
+                            03 / POWER
+                        </span>
 
-                <span class="arrow">
-                    ↗
-                </span>
+                        <span class="arrow">
+                            ↗
+                        </span>
 
 
-                <div>
+                        <div>
 
-                    <h3>
-                        Energy
-                    </h3>
+                            <h3>
+                                Energy
+                            </h3>
 
-                    <p>
+                            <p>
 
-                        Metering, demand, power quality,
-                        trends and energy-performance
-                        visibility.
+                                Metering, demand, power quality,
+                                trends and energy-performance
+                                visibility.
 
-                    </p>
+                            </p>
 
-                </div>
+                        </div>
 
-            </article>
+                    </article>
 
 
-            <!-- =================================================
+                    <!-- =================================================
                  04 — FIRE & LIFE SAFETY
             ================================================== -->
 
-            <article
-                class="system-card wide reveal-bms"
-                style="--card-img:url('assets/img/bms/Fire & Life Safety.png')"
-            >
+                    <article class="system-card wide reveal-bms"
+                        style="--card-img:url('assets/img/bms/Fire & Life Safety.png')">
 
-                <span class="no">
-                    04 / SAFETY
-                </span>
+                        <span class="no">
+                            04 / SAFETY
+                        </span>
 
-                <span class="arrow">
-                    ↗
-                </span>
+                        <span class="arrow">
+                            ↗
+                        </span>
 
 
-                <div>
+                        <div>
 
-                    <h3>
-                        Fire &amp; Life Safety
-                    </h3>
+                            <h3>
+                                Fire &amp; Life Safety
+                            </h3>
 
-                    <p>
+                            <p>
 
-                        Bring fire panels, pumps,
-                        pressure, alarm events and
-                        emergency status into a
-                        coordinated operational view.
+                                Bring fire panels, pumps,
+                                pressure, alarm events and
+                                emergency status into a
+                                coordinated operational view.
 
-                    </p>
+                            </p>
 
-                </div>
+                        </div>
 
-            </article>
+                    </article>
 
 
-            <!-- =================================================
+                    <!-- =================================================
                  05 — ACCESS & SECURITY
             ================================================== -->
 
-            <article
-                class="system-card wide reveal-bms"
-                style="--card-img:url('assets/img/bms/Access & Security.png')"
-            >
+                    <article class="system-card wide reveal-bms"
+                        style="--card-img:url('assets/img/bms/Access & Security.png')">
 
-                <span class="no">
-                    05 / SECURITY
-                </span>
+                        <span class="no">
+                            05 / SECURITY
+                        </span>
 
-                <span class="arrow">
-                    ↗
-                </span>
+                        <span class="arrow">
+                            ↗
+                        </span>
 
 
-                <div>
+                        <div>
 
-                    <h3>
-                        Access &amp; Security
-                    </h3>
+                            <h3>
+                                Access &amp; Security
+                            </h3>
 
-                    <p>
+                            <p>
 
-                        Integrate access control,
-                        intrusion, CCTV events and
-                        critical security signals
-                        for faster response.
+                                Integrate access control,
+                                intrusion, CCTV events and
+                                critical security signals
+                                for faster response.
 
-                    </p>
+                            </p>
 
-                </div>
+                        </div>
 
-            </article>
+                    </article>
 
 
-            <!-- =================================================
+                    <!-- =================================================
                  06 — WATER & UTILITIES
             ================================================== -->
 
-            <article
-                class="system-card wide reveal-bms"
-                style="--card-img:url('assets/img/bms/Water & Utilities.png')"
-            >
+                    <article class="system-card wide reveal-bms"
+                        style="--card-img:url('assets/img/bms/Water & Utilities.png')">
 
-                <span class="no">
-                    06 / WATER
-                </span>
+                        <span class="no">
+                            06 / WATER
+                        </span>
 
-                <span class="arrow">
-                    ↗
-                </span>
+                        <span class="arrow">
+                            ↗
+                        </span>
 
 
-                <div>
+                        <div>
 
-                    <h3>
-                        Water &amp; Utilities
-                    </h3>
+                            <h3>
+                                Water &amp; Utilities
+                            </h3>
 
-                    <p>
+                            <p>
 
-                        Tank levels, pumps, flow,
-                        pressure, leakage and utility
-                        consumption with alarms and
-                        automation.
+                                Tank levels, pumps, flow,
+                                pressure, leakage and utility
+                                consumption with alarms and
+                                automation.
 
-                    </p>
+                            </p>
+
+                        </div>
+
+                    </article>
+
 
                 </div>
 
-            </article>
+            </div>
+
+        </section>
 
 
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
+        <!-- =========================================================
      MODULE 05 — CONNECTED BUILDING SYSTEMS — SCRIPT
 ========================================================= -->
 
-<script>
+        <script>
 
-(function(){
+            (function () {
 
-    /* Existing common BMS reveal function */
+                /* Existing common BMS reveal function */
 
-    window.bmsInitReveal &&
-    window.bmsInitReveal('.bms-systems');
-
-
-    /* ---------------------------------------------------------
-       Premium mouse hover depth
-    --------------------------------------------------------- */
-
-    const section =
-        document.querySelector('.bms-systems');
-
-    if(!section) return;
+                window.bmsInitReveal &&
+                    window.bmsInitReveal('.bms-systems');
 
 
-    const cards =
-        section.querySelectorAll('.system-card');
+                /* ---------------------------------------------------------
+                   Premium mouse hover depth
+                --------------------------------------------------------- */
+
+                const section =
+                    document.querySelector('.bms-systems');
+
+                if (!section) return;
 
 
-    cards.forEach(card=>{
-
-        card.addEventListener('mouseenter',()=>{
-
-            card.style.zIndex = '5';
-
-        });
+                const cards =
+                    section.querySelectorAll('.system-card');
 
 
-        card.addEventListener('mouseleave',()=>{
+                cards.forEach(card => {
 
-            card.style.zIndex = '';
+                    card.addEventListener('mouseenter', () => {
 
-        });
+                        card.style.zIndex = '5';
 
-    });
+                    });
 
-})();
 
-</script>
+                    card.addEventListener('mouseleave', () => {
+
+                        card.style.zIndex = '';
+
+                    });
+
+                });
+
+            })();
+
+        </script>
 
         <!-- =========================================================
      MODULE 06 — CENTRAL COMMAND CENTER — CSS
@@ -2621,7 +2786,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 display: flex;
                 gap: 14px;
                 align-items: center;
-                font-size: 11px
+                font-size: 16px
             }
 
             .retro-feature i {
@@ -3224,8 +3389,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     </main>
 
-      
-  <!-- =========================================================
+
+    <!-- =========================================================
      ALPHA NUMERIC — PREMIUM CORPORATE WHITE FOOTER
      Sharp architectural layout | No curves | No toy styling
      Complete HTML + CSS + automatic year
@@ -3494,7 +3659,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <li><a href="sensors.html"><span>Sensors</span><i>↗</i></a></li>
                             <li><a href="controllers.html"><span>Controllers</span><i>↗</i></a></li>
                             <li><a href="gateways.html"><span>Gateways</span><i>↗</i></a></li>
-                          
+
                             <li><a href="control-panels.html"><span>Control Panels</span><i>↗</i></a></li>
                             <li><a href="panel-boards.html"><span>Panel Boards</span><i>↗</i></a></li>
                             <li><a href="switchgears.html"><span>Switchgears</span><i>↗</i></a></li>
@@ -3548,7 +3713,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     All rights reserved.
                 </p>
 
-              
+
 
                 <div class="corp-footer-bottom-links">
                     <!-- <a href="#">Privacy</a>

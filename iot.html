@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,15 +13,15 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    </head>
+</head>
 
 <body>
-<!-- =========================================================
+    <!-- =========================================================
      MODULE 00 — GLOBAL FOUNDATION — CSS
      Shared variables, reset, typography and responsive/reveal rules.
 ========================================================= -->
-<style>
-:root {
+    <style>
+        :root {
             --ink: #101010;
             --muted: #6e6e6e;
             --line: #e4e4e4;
@@ -30,7 +31,9 @@
             --dark: #080a0b;
             --white: #fff;
         }
-
+p {
+    font-size: 17px !important;
+}
         * {
             margin: 0;
             padding: 0;
@@ -108,7 +111,7 @@
             line-height: 1.9
         }
 
-:root {
+        :root {
             --lime: #8dffcf;
             --cyan: #70dfff;
             --blue: #7f9bff;
@@ -169,7 +172,7 @@
             line-height: 1.9
         }
 
-/* reveal */
+        /* reveal */
         .reveal {
             opacity: 0;
             transform: translateY(20px);
@@ -373,16 +376,17 @@
                 transform: none
             }
         }
-</style>
+    </style>
 
-<!-- HTML -->
+    <!-- HTML -->
     <!-- =========================================================
          PREMIUM GLOBAL NAVIGATION
     ========================================================= -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/img/lll1.png" id="logoWhite" class="navbar-logo" alt="Alpha Numeric Innovations" style="display:none;">
+                <img src="assets/img/lll1.png" id="logoWhite" class="navbar-logo" alt="Alpha Numeric Innovations"
+                    style="display:none;">
                 <img src="assets/img/lll1.png" id="logoDark" class="navbar-logo" alt="Alpha Numeric Innovations">
             </a>
 
@@ -447,56 +451,50 @@
 
                     <li class="nav-item dropdown bms-dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="bmsDropdown" role="button"
-                           data-bs-toggle="dropdown" aria-expanded="false">IoT</a>
+                            data-bs-toggle="dropdown" aria-expanded="false">IoT</a>
                         <ul class="dropdown-menu bms-menu" aria-labelledby="bmsDropdown">
                             <li><a class="dropdown-item" href="bms.html">BMS</a></li>
                             <li><a class="dropdown-item" href="iot.html">IoT</a></li>
-                            
+
                             <li><a class="dropdown-item" href="iot_bms.html">BMS+IOT</a></li>
                         </ul>
                     </li>
-    <li class="nav-item dropdown product-dropdown">              
+                    <li class="nav-item dropdown product-dropdown">
 
-    <a class="nav-link dropdown-toggle"
-       href="#"
-       id="productsDropdown"
-       role="button"
-       data-bs-toggle="dropdown"
-       data-bs-auto-close="outside"
-       aria-expanded="false">
-        Products
-    </a>
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
+                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            Products
+                        </a>
 
-    <div class="dropdown-menu product-menu"
-         aria-labelledby="productsDropdown">
+                        <div class="dropdown-menu product-menu" aria-labelledby="productsDropdown">
 
-        <a href="power-products.html">Sensors</a>
+                            <a href="power-products.html">Sensors</a>
 
-        <a href="power-products.html">Controllers</a>
+                            <a href="power-products.html">Controllers</a>
 
-        <a href="power-products.html">Gateways</a>
+                            <a href="power-products.html">Gateways</a>
 
-       
 
-        <a href="power-products.html">Control Panels</a>
 
-        <a href="power-products.html">Panel Boards</a>
+                            <a href="power-products.html">Control Panels</a>
 
-        <a href="power-products.html">Switchgears</a>
+                            <a href="power-products.html">Panel Boards</a>
 
-    </div>
+                            <a href="power-products.html">Switchgears</a>
 
-</li>
-<li class="nav-item"><a class="nav-link" href="why.html">Why</a></li>
-<li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+                        </div>
+
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="why.html">Why</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-<!-- CSS -->
-<style>
+    <!-- CSS -->
+    <style>
         /* =====================================================
            GLOBAL
         ===================================================== */
@@ -525,29 +523,144 @@
         img {
             max-width: 100%;
         }
+
         /* =====================================================
            PREMIUM GLOBAL NAVBAR
         ===================================================== */
 
-        .main-navbar { padding: 13px 0; background: transparent; transition: background .35s ease, padding .35s ease, box-shadow .35s ease; z-index: 9999; }
-        .main-navbar.navbar-shrink, .main-navbar.scrolled { background: #fff; padding: 8px 0; box-shadow: 0 8px 35px rgba(14,29,57,.08); }
-        .navbar-logo { height: 68px; width: auto; object-fit: contain; transition: height .3s ease; }
-        .main-navbar.navbar-shrink .navbar-logo, .main-navbar.scrolled .navbar-logo { height: 58px; }
-        .main-navbar .nav-link { position: relative; color: #fff; font-size: 14px; font-weight: 600; letter-spacing: .4px; margin: 0 5px; padding: 12px 11px !important; transition: color .3s ease; }
-        .main-navbar.navbar-shrink .nav-link, .main-navbar.scrolled .nav-link { color: #16243b; }
-        .main-navbar .nav-link:hover, .main-navbar .nav-link:focus { color: #4d73be; }
+        .main-navbar {
+            padding: 13px 0;
+            background: transparent;
+            transition: background .35s ease, padding .35s ease, box-shadow .35s ease;
+            z-index: 9999;
+        }
 
-        .solution-dropdown { position: static !important; }
-        .mega-menu { position: absolute !important; width: min(1380px, calc(100vw - 48px)); left: 50% !important; top: 100% !important; transform: translateX(-50%) !important; margin-top: 0 !important; padding: 0; border: 0; border-radius: 14px; background: #fff; box-shadow: 0 24px 70px rgba(14,29,57,.18); overflow: hidden; }
-        .mega-menu-inner { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); }
-        .mega-column { min-height: 270px; padding: 30px 30px 32px; border-right: 1px solid #e8edf5; background: #fff; }
-        .mega-column:last-child { border-right: 0; }
-        .mega-heading { display: flex; align-items: center; gap: 11px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid #edf1f7; color: #17243b; font-family: "Varela Round", sans-serif; font-size: 16px; font-weight: 600; }
-        .mega-heading i { width: 22px; color: #4d73be; font-size: 17px; }
-        .mega-column > a { display: block; position: relative; padding: 9px 0 9px 16px; color: #5d687b; font-size: 13.5px; font-weight: 600; text-decoration: none; transition: color .25s ease, padding .25s ease; }
-        .mega-column > a::before { content: ""; position: absolute; left: 0; top: 50%; width: 6px; height: 1px; background: #9eabc0; transform: translateY(-50%); transition: width .25s ease, background .25s ease; }
-        .mega-column > a:hover { color: #334a85; padding-left: 21px; }
-        .mega-column > a:hover::before { width: 12px; background: #4d73be; }
+        .main-navbar.navbar-shrink,
+        .main-navbar.scrolled {
+            background: #fff;
+            padding: 8px 0;
+            box-shadow: 0 8px 35px rgba(14, 29, 57, .08);
+        }
+
+        .navbar-logo {
+            height: 68px;
+            width: auto;
+            object-fit: contain;
+            transition: height .3s ease;
+        }
+
+        .main-navbar.navbar-shrink .navbar-logo,
+        .main-navbar.scrolled .navbar-logo {
+            height: 58px;
+        }
+
+        .main-navbar .nav-link {
+            position: relative;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: .4px;
+            margin: 0 5px;
+            padding: 12px 11px !important;
+            transition: color .3s ease;
+        }
+
+        .main-navbar.navbar-shrink .nav-link,
+        .main-navbar.scrolled .nav-link {
+            color: #16243b;
+        }
+
+        .main-navbar .nav-link:hover,
+        .main-navbar .nav-link:focus {
+            color: #4d73be;
+        }
+
+        .solution-dropdown {
+            position: static !important;
+        }
+
+        .mega-menu {
+            position: absolute !important;
+            width: min(1380px, calc(100vw - 48px));
+            left: 50% !important;
+            top: 100% !important;
+            transform: translateX(-50%) !important;
+            margin-top: 0 !important;
+            padding: 0;
+            border: 0;
+            border-radius: 14px;
+            background: #fff;
+            box-shadow: 0 24px 70px rgba(14, 29, 57, .18);
+            overflow: hidden;
+        }
+
+        .mega-menu-inner {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+        }
+
+        .mega-column {
+            min-height: 270px;
+            padding: 30px 30px 32px;
+            border-right: 1px solid #e8edf5;
+            background: #fff;
+        }
+
+        .mega-column:last-child {
+            border-right: 0;
+        }
+
+        .mega-heading {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            margin-bottom: 18px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid #edf1f7;
+            color: #17243b;
+            font-family: "Varela Round", sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .mega-heading i {
+            width: 22px;
+            color: #4d73be;
+            font-size: 17px;
+        }
+
+        .mega-column>a {
+            display: block;
+            position: relative;
+            padding: 9px 0 9px 16px;
+            color: #5d687b;
+            font-size: 13.5px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color .25s ease, padding .25s ease;
+        }
+
+        .mega-column>a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 6px;
+            height: 1px;
+            background: #9eabc0;
+            transform: translateY(-50%);
+            transition: width .25s ease, background .25s ease;
+        }
+
+        .mega-column>a:hover {
+            color: #334a85;
+            padding-left: 21px;
+        }
+
+        .mega-column>a:hover::before {
+            width: 12px;
+            background: #4d73be;
+        }
 
         /* BMS DROPDOWN */
         .bms-dropdown .bms-menu {
@@ -557,7 +670,7 @@
             border: 1px solid #1f1f1f;
             border-radius: 10px;
             background: #000000;
-            box-shadow: 0 18px 45px rgba(0,0,0,.24);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, .24);
         }
 
         .bms-dropdown .bms-menu .dropdown-item {
@@ -577,8 +690,9 @@
         }
 
         @media (min-width: 992px) {
+
             /* BMS dropdown: open on hover and stay open while hovering menu */
-            .bms-dropdown > .bms-menu {
+            .bms-dropdown>.bms-menu {
                 display: block;
                 opacity: 0;
                 visibility: hidden;
@@ -587,16 +701,16 @@
                 transition: opacity .22s ease, visibility .22s ease, transform .22s ease;
             }
 
-            .bms-dropdown:hover > .bms-menu,
-            .bms-dropdown > .bms-menu:hover,
-            .bms-dropdown > .bms-menu.show {
+            .bms-dropdown:hover>.bms-menu,
+            .bms-dropdown>.bms-menu:hover,
+            .bms-dropdown>.bms-menu.show {
                 opacity: 1;
                 visibility: visible;
                 pointer-events: auto;
                 transform: translateY(0);
             }
 
-            .solution-dropdown > .mega-menu {
+            .solution-dropdown>.mega-menu {
                 opacity: 0;
                 visibility: hidden;
                 pointer-events: none;
@@ -604,16 +718,16 @@
                 transition: opacity .22s ease, visibility .22s ease;
             }
 
-            .solution-dropdown:hover > .mega-menu,
-            .solution-dropdown.mega-open > .mega-menu,
-            .solution-dropdown > .mega-menu.show {
+            .solution-dropdown:hover>.mega-menu,
+            .solution-dropdown.mega-open>.mega-menu,
+            .solution-dropdown>.mega-menu.show {
                 opacity: 1;
                 visibility: visible;
                 pointer-events: auto;
             }
 
             /* Invisible hover bridge between Solutions and mega menu */
-            .solution-dropdown > .mega-menu::before {
+            .solution-dropdown>.mega-menu::before {
                 content: "";
                 position: absolute;
                 left: 0;
@@ -625,44 +739,121 @@
         }
 
         @media (max-width: 991px) {
-            .main-navbar { background: #fff; padding: 8px 0; }
-            .navbar-logo { height: 55px; }
-            #logoWhite { display: none !important; }
-            #logoDark { display: block !important; }
-            .main-navbar .navbar-toggler { color: #17243b; border-color: rgba(23,36,59,.2); }
-            .main-navbar .nav-link { color: #17243b; padding: 12px 7px !important; margin: 1px 0; }
-            .navbar-collapse { max-height: calc(100vh - 76px); overflow-y: auto; margin-top: 10px; padding: 15px 10px 22px; border-top: 1px solid #edf0f5; background: #fff; }
-            .mega-menu { position: static !important; transform: none !important; width: 100%; margin: 0 !important; box-shadow: none; border-left: 2px solid #334a85; border-radius: 0; overflow: visible; }
-            .mega-menu-inner { grid-template-columns: 1fr; }
-            .mega-column { min-height: 0; padding: 18px 18px 14px; border-right: 0; border-bottom: 1px solid #edf0f5; }
-            .mega-column:last-child { border-bottom: 0; }
-            .mega-heading { margin-bottom: 8px; padding-bottom: 10px; }
-            .mega-column > a { padding-top: 7px; padding-bottom: 7px; }
+            .main-navbar {
+                background: #fff;
+                padding: 8px 0;
+            }
+
+            .navbar-logo {
+                height: 55px;
+            }
+
+            #logoWhite {
+                display: none !important;
+            }
+
+            #logoDark {
+                display: block !important;
+            }
+
+            .main-navbar .navbar-toggler {
+                color: #17243b;
+                border-color: rgba(23, 36, 59, .2);
+            }
+
+            .main-navbar .nav-link {
+                color: #17243b;
+                padding: 12px 7px !important;
+                margin: 1px 0;
+            }
+
+            .navbar-collapse {
+                max-height: calc(100vh - 76px);
+                overflow-y: auto;
+                margin-top: 10px;
+                padding: 15px 10px 22px;
+                border-top: 1px solid #edf0f5;
+                background: #fff;
+            }
+
+            .mega-menu {
+                position: static !important;
+                transform: none !important;
+                width: 100%;
+                margin: 0 !important;
+                box-shadow: none;
+                border-left: 2px solid #334a85;
+                border-radius: 0;
+                overflow: visible;
+            }
+
+            .mega-menu-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .mega-column {
+                min-height: 0;
+                padding: 18px 18px 14px;
+                border-right: 0;
+                border-bottom: 1px solid #edf0f5;
+            }
+
+            .mega-column:last-child {
+                border-bottom: 0;
+            }
+
+            .mega-heading {
+                margin-bottom: 8px;
+                padding-bottom: 10px;
+            }
+
+            .mega-column>a {
+                padding-top: 7px;
+                padding-bottom: 7px;
+            }
         }
 
 
         /* ABOUT PAGE: keep Index navbar in permanent white/scrolled state */
-       
+
         .main-navbar {
             background: #fff;
             padding: 8px 0;
-            box-shadow: 0 8px 35px rgba(14,29,57,.08);
+            box-shadow: 0 8px 35px rgba(14, 29, 57, .08);
         }
-        .main-navbar .navbar-logo { height: 58px; }
-        .main-navbar .nav-link { color: #16243b; }
-        #logoWhite { display: none !important; }
-        #logoDark { display: block !important; }
+
+        .main-navbar .navbar-logo {
+            height: 58px;
+        }
+
+        .main-navbar .nav-link {
+            color: #16243b;
+        }
+
+        #logoWhite {
+            display: none !important;
+        }
+
+        #logoDark {
+            display: block !important;
+        }
+
         .main-navbar .nav-contact {
             background: #334a85;
             border-color: #334a85;
             color: #fff !important;
         }
+
         .main-navbar .nav-contact:hover {
             background: #17243b;
             border-color: #17243b;
             color: #fff !important;
         }
-        .main-navbar .nav-link.active { color: #4d73be; }
+
+        .main-navbar .nav-link.active {
+            color: #4d73be;
+        }
+
         .main-navbar .nav-link.active:not(.nav-contact)::after {
             width: calc(100% - 24px);
         }
@@ -671,326 +862,328 @@
    PRODUCTS DROPDOWN
 ========================================================= */
 
-.product-dropdown{
-    position:relative;
-}
+        .product-dropdown {
+            position: relative;
+        }
 
-.product-menu{
-    min-width:240px;
+        .product-menu {
+            min-width: 240px;
 
-    padding:10px 0;
+            padding: 10px 0;
 
-    margin-top:0!important;
+            margin-top: 0 !important;
 
-    border:0;
+            border: 0;
 
-    border-radius:10px;
+            border-radius: 10px;
 
-    background:#000;
+            background: #000;
 
-    box-shadow:
-        0 20px 55px rgba(0,0,0,.25);
+            box-shadow:
+                0 20px 55px rgba(0, 0, 0, .25);
 
-    overflow:hidden;
-}
+            overflow: hidden;
+        }
 
-.product-menu > a{
-    display:block;
+        .product-menu>a {
+            display: block;
 
-    position:relative;
+            position: relative;
 
-    padding:11px 24px;
+            padding: 11px 24px;
 
-    color:#bdbdbd;
+            color: #bdbdbd;
 
-    font-size:13.5px;
+            font-size: 13.5px;
 
-    font-weight:600;
+            font-weight: 600;
 
-    text-decoration:none;
+            text-decoration: none;
 
-    transition:
-        color .25s ease,
-        padding-left .25s ease,
-        background .25s ease;
-}
+            transition:
+                color .25s ease,
+                padding-left .25s ease,
+                background .25s ease;
+        }
 
-.product-menu > a::before{
-    content:"";
+        .product-menu>a::before {
+            content: "";
 
-    position:absolute;
+            position: absolute;
 
-    left:12px;
+            left: 12px;
 
-    top:50%;
+            top: 50%;
 
-    width:5px;
+            width: 5px;
 
-    height:1px;
+            height: 1px;
 
-    background:#666;
+            background: #666;
 
-    transform:translateY(-50%);
+            transform: translateY(-50%);
 
-    transition:
-        width .25s ease,
-        background .25s ease;
-}
+            transition:
+                width .25s ease,
+                background .25s ease;
+        }
 
-.product-menu > a:hover{
-    color:#fff;
+        .product-menu>a:hover {
+            color: #fff;
 
-    background:#111;
+            background: #111;
 
-    padding-left:29px;
-}
+            padding-left: 29px;
+        }
 
-.product-menu > a:hover::before{
-    width:10px;
+        .product-menu>a:hover::before {
+            width: 10px;
 
-    background:#fff;
-}
+            background: #fff;
+        }
 
 
-/* =========================================================
+        /* =========================================================
    DESKTOP HOVER
 ========================================================= */
 
-@media (min-width:992px){
+        @media (min-width:992px) {
 
-    .product-dropdown:hover > .product-menu{
-        display:block;
-    }
+            .product-dropdown:hover>.product-menu {
+                display: block;
+            }
 
-    .product-menu{
-        display:block;
+            .product-menu {
+                display: block;
 
-        opacity:0;
+                opacity: 0;
 
-        visibility:hidden;
+                visibility: hidden;
 
-        pointer-events:none;
+                pointer-events: none;
 
-        transition:
-            opacity .2s ease,
-            visibility .2s ease;
-    }
+                transition:
+                    opacity .2s ease,
+                    visibility .2s ease;
+            }
 
-    .product-dropdown:hover > .product-menu,
-    .product-dropdown > .product-menu.show{
-        opacity:1;
+            .product-dropdown:hover>.product-menu,
+            .product-dropdown>.product-menu.show {
+                opacity: 1;
 
-        visibility:visible;
+                visibility: visible;
 
-        pointer-events:auto;
-    }
-}
+                pointer-events: auto;
+            }
+        }
 
 
-/* =========================================================
+        /* =========================================================
    MOBILE
 ========================================================= */
 
-@media (max-width:991px){
+        @media (max-width:991px) {
 
-    .product-menu{
-        position:static!important;
+            .product-menu {
+                position: static !important;
 
-        width:100%;
+                width: 100%;
 
-        margin:0!important;
+                margin: 0 !important;
 
-        border-radius:0;
+                border-radius: 0;
 
-        box-shadow:none;
+                box-shadow: none;
 
-        background:#000;
-    }
+                background: #000;
+            }
 
-    .product-menu > a{
-        padding:10px 22px;
+            .product-menu>a {
+                padding: 10px 22px;
 
-        color:#bdbdbd;
-    }
-}
+                color: #bdbdbd;
+            }
+        }
 
 
-        
-/* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
-.main-navbar #solutionsDropdown,
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown:active,
-.main-navbar #solutionsDropdown.show {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
 
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown.show {
-    color: #4d73be !important;
-}
-/* =========================================================
+        /* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
+        .main-navbar #solutionsDropdown,
+        .main-navbar #solutionsDropdown:hover,
+        .main-navbar #solutionsDropdown:focus,
+        .main-navbar #solutionsDropdown:active,
+        .main-navbar #solutionsDropdown.show {
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+            outline: none !important;
+        }
+
+        .main-navbar #solutionsDropdown:hover,
+        .main-navbar #solutionsDropdown:focus,
+        .main-navbar #solutionsDropdown.show {
+            color: #4d73be !important;
+        }
+
+        /* =========================================================
    NAVBAR — MONOCHROME BLACK THEME
    Keep existing layout + mega-menu behavior unchanged
 ========================================================= */
 
-/* Main nav links */
-.main-navbar .nav-link,
-.main-navbar.scrolled .nav-link,
-.main-navbar.navbar-shrink .nav-link {
-    color: #1a1a1a !important;
-}
+        /* Main nav links */
+        .main-navbar .nav-link,
+        .main-navbar.scrolled .nav-link,
+        .main-navbar.navbar-shrink .nav-link {
+            color: #1a1a1a !important;
+        }
 
-/* Normal */
-.main-navbar .nav-link {
-    font-weight: 600;
-}
+        /* Normal */
+        .main-navbar .nav-link {
+            font-weight: 600;
+        }
 
-/* Hover / focus — black only */
-.main-navbar .nav-link:hover,
-.main-navbar .nav-link:focus {
-    color: #000000 !important;
-}
+        /* Hover / focus — black only */
+        .main-navbar .nav-link:hover,
+        .main-navbar .nav-link:focus {
+            color: #000000 !important;
+        }
 
-/* Active — black + stronger weight */
-.main-navbar .nav-link.active,
-.main-navbar .nav-link.show,
-.main-navbar #solutionsDropdown.show {
-    color: #000000 !important;
-    font-weight: 800 !important;
-}
+        /* Active — black + stronger weight */
+        .main-navbar .nav-link.active,
+        .main-navbar .nav-link.show,
+        .main-navbar #solutionsDropdown.show {
+            color: #000000 !important;
+            font-weight: 800 !important;
+        }
 
-/* No colored underline */
-.main-navbar .nav-link:not(.nav-contact):not(.dropdown-toggle)::after {
-    background: #000000 !important;
-}
+        /* No colored underline */
+        .main-navbar .nav-link:not(.nav-contact):not(.dropdown-toggle)::after {
+            background: #000000 !important;
+        }
 
-/* Solutions: text only, no box */
-.main-navbar #solutionsDropdown,
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown:active,
-.main-navbar #solutionsDropdown.show {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-    color: #000000 !important;
-}
+        /* Solutions: text only, no box */
+        .main-navbar #solutionsDropdown,
+        .main-navbar #solutionsDropdown:hover,
+        .main-navbar #solutionsDropdown:focus,
+        .main-navbar #solutionsDropdown:active,
+        .main-navbar #solutionsDropdown.show {
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+            outline: none !important;
+            color: #000000 !important;
+        }
 
-/* Contact: monochrome */
-.main-navbar .nav-contact,
-.main-navbar.scrolled .nav-contact {
-    background: #000000 !important;
-    border-color: #000000 !important;
-    color: #ffffff !important;
-}
+        /* Contact: monochrome */
+        .main-navbar .nav-contact,
+        .main-navbar.scrolled .nav-contact {
+            background: #000000 !important;
+            border-color: #000000 !important;
+            color: #ffffff !important;
+        }
 
-.main-navbar .nav-contact:hover,
-.main-navbar .nav-contact:focus,
-.main-navbar.scrolled .nav-contact:hover {
-    background: #222222 !important;
-    border-color: #222222 !important;
-    color: #ffffff !important;
-}
+        .main-navbar .nav-contact:hover,
+        .main-navbar .nav-contact:focus,
+        .main-navbar.scrolled .nav-contact:hover {
+            background: #222222 !important;
+            border-color: #222222 !important;
+            color: #ffffff !important;
+        }
 
-/* =========================================================
+        /* =========================================================
    MEGA MENU — BLACK
 ========================================================= */
 
-.main-navbar .mega-menu {
-    background: #000000 !important;
-    border: 1px solid #1f1f1f !important;
-    box-shadow: 0 24px 70px rgba(0,0,0,.28) !important;
-}
+        .main-navbar .mega-menu {
+            background: #000000 !important;
+            border: 1px solid #1f1f1f !important;
+            box-shadow: 0 24px 70px rgba(0, 0, 0, .28) !important;
+        }
 
-/* Columns */
-.main-navbar .mega-column {
-    background: #000000 !important;
-    border-right-color: #242424 !important;
-}
+        /* Columns */
+        .main-navbar .mega-column {
+            background: #000000 !important;
+            border-right-color: #242424 !important;
+        }
 
-.main-navbar .mega-column:last-child {
-    border-right-color: transparent !important;
-}
+        .main-navbar .mega-column:last-child {
+            border-right-color: transparent !important;
+        }
 
-/* Headings */
-.main-navbar .mega-heading {
-    color: #ffffff !important;
-    border-bottom-color: #2a2a2a !important;
-}
+        /* Headings */
+        .main-navbar .mega-heading {
+            color: #ffffff !important;
+            border-bottom-color: #2a2a2a !important;
+        }
 
-/* Icons — monochrome */
-.main-navbar .mega-heading i {
-    color: #ffffff !important;
-}
+        /* Icons — monochrome */
+        .main-navbar .mega-heading i {
+            color: #ffffff !important;
+        }
 
-/* Menu links */
-.main-navbar .mega-column > a {
-    color: #bdbdbd !important;
-}
+        /* Menu links */
+        .main-navbar .mega-column>a {
+            color: #bdbdbd !important;
+        }
 
-/* Small line before links */
-.main-navbar .mega-column > a::before {
-    background: #666666 !important;
-}
+        /* Small line before links */
+        .main-navbar .mega-column>a::before {
+            background: #666666 !important;
+        }
 
-/* Hover inside mega menu */
-.main-navbar .mega-column > a:hover,
-.main-navbar .mega-column > a:focus {
-    color: #ffffff !important;
-}
+        /* Hover inside mega menu */
+        .main-navbar .mega-column>a:hover,
+        .main-navbar .mega-column>a:focus {
+            color: #ffffff !important;
+        }
 
-.main-navbar .mega-column > a:hover::before {
-    background: #ffffff !important;
-}
+        .main-navbar .mega-column>a:hover::before {
+            background: #ffffff !important;
+        }
 
-/* Mobile */
-@media (max-width: 991px) {
-    .main-navbar .nav-link {
-        color: #1a1a1a !important;
-    }
+        /* Mobile */
+        @media (max-width: 991px) {
+            .main-navbar .nav-link {
+                color: #1a1a1a !important;
+            }
 
-    .main-navbar .mega-menu {
-        background: #000000 !important;
-        border-left-color: #000000 !important;
-    }
+            .main-navbar .mega-menu {
+                background: #000000 !important;
+                border-left-color: #000000 !important;
+            }
 
-    .main-navbar .mega-column {
-        background: #000000 !important;
-        border-bottom-color: #242424 !important;
-    }
-}
-.main-navbar .mega-heading {
-    gap: 0 !important;
-}
-</style>
+            .main-navbar .mega-column {
+                background: #000000 !important;
+                border-bottom-color: #242424 !important;
+            }
+        }
 
-<!-- JAVASCRIPT -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const nav = document.getElementById("mainNav");
-    const white = document.getElementById("logoWhite");
-    const dark = document.getElementById("logoDark");
+        .main-navbar .mega-heading {
+            gap: 0 !important;
+        }
+    </style>
 
-    if (nav) nav.classList.add("scrolled", "navbar-shrink");
-    if (white) white.style.display = "none";
-    if (dark) dark.style.display = "block";
-});
-</script>
+    <!-- JAVASCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const nav = document.getElementById("mainNav");
+            const white = document.getElementById("logoWhite");
+            const dark = document.getElementById("logoDark");
 
-<!-- END MODULE — NAVBAR -->
+            if (nav) nav.classList.add("scrolled", "navbar-shrink");
+            if (white) white.style.display = "none";
+            if (dark) dark.style.display = "block";
+        });
+    </script>
 
-<main id="page-top">
+    <!-- END MODULE — NAVBAR -->
 
-    <!-- =========================================================
+    <main id="page-top">
+
+        <!-- =========================================================
          MODULE 02 — IOT HERO — HTML
     ========================================================= -->
-    <header class="iot-smart-hero">
+        <header class="iot-smart-hero">
             <div class="hero-matrix"></div>
             <div class="hero-orb"></div>
             <div class="iot-shell hero-inner">
@@ -1031,423 +1224,423 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </header>
 
-    <!-- MODULE 02 — IOT HERO — CSS -->
-    <style>
-/* HERO */
-        .iot-smart-hero {
-            position: relative;
-            margin-top: 74px;
-            min-height: 820px;
-            overflow: hidden;
-            color: white;
-            background: radial-gradient(circle at 72% 30%, rgba(112, 223, 255, .13), transparent 25%), radial-gradient(circle at 84% 68%, rgba(141, 255, 207, .12), transparent 28%), #050808
-        }
-
-        .hero-matrix {
-            position: absolute;
-            inset: 0;
-            opacity: .34;
-            background-image: linear-gradient(rgba(255, 255, 255, .045) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .045) 1px, transparent 1px);
-            background-size: 72px 72px;
-            mask-image: linear-gradient(to right, rgba(0, 0, 0, .3), #000 60%)
-        }
-
-        .hero-orb {
-            position: absolute;
-            width: 620px;
-            height: 620px;
-            right: -80px;
-            top: 80px;
-            border: 1px solid rgba(141, 255, 207, .13);
-            border-radius: 50%
-        }
-
-        .hero-orb:before,
-        .hero-orb:after {
-            content: "";
-            position: absolute;
-            border-radius: 50%;
-            inset: 86px;
-            border: 1px dashed rgba(112, 223, 255, .18)
-        }
-
-        .hero-orb:after {
-            inset: 185px;
-            border-style: solid;
-            border-color: rgba(183, 153, 255, .14)
-        }
-
-        .hero-inner {
-            position: relative;
-            z-index: 2;
-            min-height: 820px;
-            display: grid;
-            grid-template-columns: .92fr 1.08fr;
-            gap: 65px;
-            align-items: center;
-            padding: 84px 0
-        }
-
-        .hero-eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 9px 13px;
-            border: 1px solid rgba(255, 255, 255, .13);
-            background: rgba(255, 255, 255, .035);
-            backdrop-filter: blur(16px);
-            border-radius: 999px;
-            font-size: 9px;
-            letter-spacing: .16em;
-            text-transform: uppercase;
-            color: #c3cfcd
-        }
-
-        .hero-eyebrow i {
-            color: var(--lime)
-        }
-
-        .iot-smart-hero h1 {
-            margin: 24px 0 0;
-            max-width: 820px;
-            font-size: clamp(66px, 7vw, 112px);
-            font-weight: 650;
-            line-height: .83;
-            letter-spacing: -.075em
-        }
-
-        .iot-smart-hero h1 span {
-            display: block;
-            color: #6e7d7a;
-            font-weight: 300
-        }
-
-        .hero-copy {
-            max-width: 680px;
-            margin: 30px 0 0;
-            color: #aab7b4;
-            font-size: 14px;
-            line-height: 1.9
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-top: 30px
-        }
-
-        .smart-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            min-height: 54px;
-            padding: 0 24px;
-            border-radius: 999px;
-            font-size: 10px;
-            font-weight: 800;
-            letter-spacing: .12em;
-            text-transform: uppercase;
-            transition: .3s
-        }
-
-        .smart-btn.primary {
-            background: var(--lime);
-            color: #06100e
-        }
-
-        .smart-btn.primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 14px 40px rgba(141, 255, 207, .18)
-        }
-
-        .smart-btn.ghost {
-            border: 1px solid #34413f;
-            color: #d6dfdd
-        }
-
-        .smart-btn.ghost:hover {
-            background: white;
-            color: #06100e
-        }
-
-        /* Live fabric */
-        .live-fabric {
-            position: relative;
-            min-height: 590px;
-            border: 1px solid rgba(255, 255, 255, .09);
-            border-radius: 32px;
-            background: linear-gradient(145deg, rgba(15, 23, 24, .88), rgba(6, 10, 11, .94));
-            box-shadow: 0 50px 110px rgba(0, 0, 0, .38);
-            overflow: hidden
-        }
-
-        .live-fabric:before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-image: radial-gradient(circle at center, rgba(141, 255, 207, .07) 0 1px, transparent 1px);
-            background-size: 26px 26px;
-            opacity: .7
-        }
-
-        .fabric-top {
-            position: absolute;
-            left: 22px;
-            right: 22px;
-            top: 18px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #687572;
-            font-size: 8px;
-            letter-spacing: .18em;
-            text-transform: uppercase
-        }
-
-        .live-dot {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #9fb4af
-        }
-
-        .live-dot:before {
-            content: "";
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: var(--lime);
-            box-shadow: 0 0 18px var(--lime);
-            animation: pulse 1.7s infinite
-        }
-
-        .fabric-core {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 158px;
-            height: 158px;
-            border-radius: 34px;
-            display: grid;
-            place-items: center;
-            text-align: center;
-            background: linear-gradient(145deg, #172522, #0b1212);
-            border: 1px solid rgba(141, 255, 207, .45);
-            box-shadow: 0 0 0 25px rgba(141, 255, 207, .025), 0 0 85px rgba(141, 255, 207, .16);
-            z-index: 4
-        }
-
-        .fabric-core i {
-            display: block;
-            font-size: 28px;
-            color: var(--lime);
-            margin-bottom: 9px
-        }
-
-        .fabric-core strong {
-            font-size: 16px
-        }
-
-        .fabric-core small {
-            display: block;
-            margin-top: 5px;
-            color: #74837f;
-            font-size: 8px;
-            letter-spacing: .12em
-        }
-
-        .fabric-node {
-            position: absolute;
-            z-index: 5;
-            min-width: 126px;
-            padding: 14px 16px;
-            border-radius: 16px;
-            background: rgba(8, 14, 15, .9);
-            border: 1px solid #2a3735;
-            box-shadow: 0 16px 32px rgba(0, 0, 0, .26);
-            backdrop-filter: blur(10px)
-        }
-
-        .fabric-node span {
-            display: block;
-            color: #71807c;
-            font-size: 7px;
-            letter-spacing: .16em;
-            text-transform: uppercase
-        }
-
-        .fabric-node strong {
-            display: block;
-            margin-top: 4px;
-            color: #e9efed;
-            font-size: 11px
-        }
-
-        .fabric-node i {
-            position: absolute;
-            right: 12px;
-            top: 14px;
-            color: var(--cyan)
-        }
-
-        .fn1 {
-            left: 8%;
-            top: 24%
-        }
-
-        .fn2 {
-            left: 10%;
-            bottom: 20%
-        }
-
-        .fn3 {
-            right: 8%;
-            top: 22%
-        }
-
-        .fn4 {
-            right: 8%;
-            bottom: 20%
-        }
-
-        .fn5 {
-            left: 50%;
-            bottom: 8%;
-            transform: translateX(-50%)
-        }
-
-        .fabric-line {
-            position: absolute;
-            z-index: 2;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(141, 255, 207, .56), transparent);
-            transform-origin: left center
-        }
-
-        .fl1 {
-            width: 33%;
-            left: 20%;
-            top: 34%;
-            transform: rotate(18deg)
-        }
-
-        .fl2 {
-            width: 33%;
-            left: 20%;
-            bottom: 31%;
-            transform: rotate(-19deg)
-        }
-
-        .fl3 {
-            width: 31%;
-            left: 50%;
-            top: 48%;
-            transform: rotate(-21deg)
-        }
-
-        .fl4 {
-            width: 31%;
-            left: 50%;
-            top: 54%;
-            transform: rotate(22deg)
-        }
-
-        .packet {
-            position: absolute;
-            z-index: 3;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--lime);
-            box-shadow: 0 0 18px var(--lime);
-            animation: packet 4.2s linear infinite
-        }
-
-        .pk1 {
-            left: 23%;
-            top: 35%
-        }
-
-        .pk2 {
-            right: 27%;
-            top: 42%;
-            animation-delay: 1.2s
-        }
-
-        .pk3 {
-            left: 42%;
-            bottom: 28%;
-            animation-delay: 2.1s
-        }
-
-        .signal-ring {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            width: 250px;
-            height: 250px;
-            border: 1px solid rgba(112, 223, 255, .12);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            animation: ring 3s ease-out infinite
-        }
-
-        .signal-ring.r2 {
-            animation-delay: 1.4s
-        }
-
-        @keyframes pulse {
-            50% {
-                opacity: .35;
-                transform: scale(.75)
-            }
-        }
-
-        @keyframes packet {
-            0% {
-                transform: translate(0, 0);
-                opacity: 0
+        <!-- MODULE 02 — IOT HERO — CSS -->
+        <style>
+            /* HERO */
+            .iot-smart-hero {
+                position: relative;
+                margin-top: 74px;
+                min-height: 820px;
+                overflow: hidden;
+                color: white;
+                background: radial-gradient(circle at 72% 30%, rgba(112, 223, 255, .13), transparent 25%), radial-gradient(circle at 84% 68%, rgba(141, 255, 207, .12), transparent 28%), #050808
             }
 
-            15% {
-                opacity: 1
+            .hero-matrix {
+                position: absolute;
+                inset: 0;
+                opacity: .34;
+                background-image: linear-gradient(rgba(255, 255, 255, .045) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .045) 1px, transparent 1px);
+                background-size: 72px 72px;
+                mask-image: linear-gradient(to right, rgba(0, 0, 0, .3), #000 60%)
             }
 
-            85% {
-                opacity: 1
+            .hero-orb {
+                position: absolute;
+                width: 620px;
+                height: 620px;
+                right: -80px;
+                top: 80px;
+                border: 1px solid rgba(141, 255, 207, .13);
+                border-radius: 50%
             }
 
-            100% {
-                transform: translate(220px, 110px);
-                opacity: 0
-            }
-        }
-
-        @keyframes ring {
-            0% {
-                transform: translate(-50%, -50%) scale(.65);
-                opacity: .75
+            .hero-orb:before,
+            .hero-orb:after {
+                content: "";
+                position: absolute;
+                border-radius: 50%;
+                inset: 86px;
+                border: 1px dashed rgba(112, 223, 255, .18)
             }
 
-            100% {
-                transform: translate(-50%, -50%) scale(1.55);
-                opacity: 0
+            .hero-orb:after {
+                inset: 185px;
+                border-style: solid;
+                border-color: rgba(183, 153, 255, .14)
             }
-        }
-    </style>
 
-    <!-- MODULE 02 — IOT HERO — JAVASCRIPT -->
-    <script>
-        // No module-specific JavaScript required.
-    </script>
+            .hero-inner {
+                position: relative;
+                z-index: 2;
+                min-height: 820px;
+                display: grid;
+                grid-template-columns: .92fr 1.08fr;
+                gap: 65px;
+                align-items: center;
+                padding: 84px 0
+            }
 
-    <!-- =========================================================
+            .hero-eyebrow {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                padding: 9px 13px;
+                border: 1px solid rgba(255, 255, 255, .13);
+                background: rgba(255, 255, 255, .035);
+                backdrop-filter: blur(16px);
+                border-radius: 999px;
+                font-size: 9px;
+                letter-spacing: .16em;
+                text-transform: uppercase;
+                color: #c3cfcd
+            }
+
+            .hero-eyebrow i {
+                color: var(--lime)
+            }
+
+            .iot-smart-hero h1 {
+                margin: 24px 0 0;
+                max-width: 820px;
+                font-size: clamp(66px, 7vw, 112px);
+                font-weight: 650;
+                line-height: .83;
+                letter-spacing: -.075em
+            }
+
+            .iot-smart-hero h1 span {
+                display: block;
+                color: #6e7d7a;
+                font-weight: 300
+            }
+
+            .hero-copy {
+                max-width: 680px;
+                margin: 30px 0 0;
+                color: #aab7b4;
+                font-size: 14px;
+                line-height: 1.9
+            }
+
+            .hero-actions {
+                display: flex;
+                gap: 12px;
+                flex-wrap: wrap;
+                margin-top: 30px
+            }
+
+            .smart-btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+                min-height: 54px;
+                padding: 0 24px;
+                border-radius: 999px;
+                font-size: 10px;
+                font-weight: 800;
+                letter-spacing: .12em;
+                text-transform: uppercase;
+                transition: .3s
+            }
+
+            .smart-btn.primary {
+                background: var(--lime);
+                color: #06100e
+            }
+
+            .smart-btn.primary:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 14px 40px rgba(141, 255, 207, .18)
+            }
+
+            .smart-btn.ghost {
+                border: 1px solid #34413f;
+                color: #d6dfdd
+            }
+
+            .smart-btn.ghost:hover {
+                background: white;
+                color: #06100e
+            }
+
+            /* Live fabric */
+            .live-fabric {
+                position: relative;
+                min-height: 590px;
+                border: 1px solid rgba(255, 255, 255, .09);
+                border-radius: 32px;
+                background: linear-gradient(145deg, rgba(15, 23, 24, .88), rgba(6, 10, 11, .94));
+                box-shadow: 0 50px 110px rgba(0, 0, 0, .38);
+                overflow: hidden
+            }
+
+            .live-fabric:before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: radial-gradient(circle at center, rgba(141, 255, 207, .07) 0 1px, transparent 1px);
+                background-size: 26px 26px;
+                opacity: .7
+            }
+
+            .fabric-top {
+                position: absolute;
+                left: 22px;
+                right: 22px;
+                top: 18px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: #687572;
+                font-size: 8px;
+                letter-spacing: .18em;
+                text-transform: uppercase
+            }
+
+            .live-dot {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                color: #9fb4af
+            }
+
+            .live-dot:before {
+                content: "";
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background: var(--lime);
+                box-shadow: 0 0 18px var(--lime);
+                animation: pulse 1.7s infinite
+            }
+
+            .fabric-core {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 158px;
+                height: 158px;
+                border-radius: 34px;
+                display: grid;
+                place-items: center;
+                text-align: center;
+                background: linear-gradient(145deg, #172522, #0b1212);
+                border: 1px solid rgba(141, 255, 207, .45);
+                box-shadow: 0 0 0 25px rgba(141, 255, 207, .025), 0 0 85px rgba(141, 255, 207, .16);
+                z-index: 4
+            }
+
+            .fabric-core i {
+                display: block;
+                font-size: 28px;
+                color: var(--lime);
+                margin-bottom: 9px
+            }
+
+            .fabric-core strong {
+                font-size: 16px
+            }
+
+            .fabric-core small {
+                display: block;
+                margin-top: 5px;
+                color: #74837f;
+                font-size: 8px;
+                letter-spacing: .12em
+            }
+
+            .fabric-node {
+                position: absolute;
+                z-index: 5;
+                min-width: 126px;
+                padding: 14px 16px;
+                border-radius: 16px;
+                background: rgba(8, 14, 15, .9);
+                border: 1px solid #2a3735;
+                box-shadow: 0 16px 32px rgba(0, 0, 0, .26);
+                backdrop-filter: blur(10px)
+            }
+
+            .fabric-node span {
+                display: block;
+                color: #71807c;
+                font-size: 7px;
+                letter-spacing: .16em;
+                text-transform: uppercase
+            }
+
+            .fabric-node strong {
+                display: block;
+                margin-top: 4px;
+                color: #e9efed;
+                font-size: 11px
+            }
+
+            .fabric-node i {
+                position: absolute;
+                right: 12px;
+                top: 14px;
+                color: var(--cyan)
+            }
+
+            .fn1 {
+                left: 8%;
+                top: 24%
+            }
+
+            .fn2 {
+                left: 10%;
+                bottom: 20%
+            }
+
+            .fn3 {
+                right: 8%;
+                top: 22%
+            }
+
+            .fn4 {
+                right: 8%;
+                bottom: 20%
+            }
+
+            .fn5 {
+                left: 50%;
+                bottom: 8%;
+                transform: translateX(-50%)
+            }
+
+            .fabric-line {
+                position: absolute;
+                z-index: 2;
+                height: 1px;
+                background: linear-gradient(90deg, transparent, rgba(141, 255, 207, .56), transparent);
+                transform-origin: left center
+            }
+
+            .fl1 {
+                width: 33%;
+                left: 20%;
+                top: 34%;
+                transform: rotate(18deg)
+            }
+
+            .fl2 {
+                width: 33%;
+                left: 20%;
+                bottom: 31%;
+                transform: rotate(-19deg)
+            }
+
+            .fl3 {
+                width: 31%;
+                left: 50%;
+                top: 48%;
+                transform: rotate(-21deg)
+            }
+
+            .fl4 {
+                width: 31%;
+                left: 50%;
+                top: 54%;
+                transform: rotate(22deg)
+            }
+
+            .packet {
+                position: absolute;
+                z-index: 3;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: var(--lime);
+                box-shadow: 0 0 18px var(--lime);
+                animation: packet 4.2s linear infinite
+            }
+
+            .pk1 {
+                left: 23%;
+                top: 35%
+            }
+
+            .pk2 {
+                right: 27%;
+                top: 42%;
+                animation-delay: 1.2s
+            }
+
+            .pk3 {
+                left: 42%;
+                bottom: 28%;
+                animation-delay: 2.1s
+            }
+
+            .signal-ring {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 250px;
+                height: 250px;
+                border: 1px solid rgba(112, 223, 255, .12);
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                animation: ring 3s ease-out infinite
+            }
+
+            .signal-ring.r2 {
+                animation-delay: 1.4s
+            }
+
+            @keyframes pulse {
+                50% {
+                    opacity: .35;
+                    transform: scale(.75)
+                }
+            }
+
+            @keyframes packet {
+                0% {
+                    transform: translate(0, 0);
+                    opacity: 0
+                }
+
+                15% {
+                    opacity: 1
+                }
+
+                85% {
+                    opacity: 1
+                }
+
+                100% {
+                    transform: translate(220px, 110px);
+                    opacity: 0
+                }
+            }
+
+            @keyframes ring {
+                0% {
+                    transform: translate(-50%, -50%) scale(.65);
+                    opacity: .75
+                }
+
+                100% {
+                    transform: translate(-50%, -50%) scale(1.55);
+                    opacity: 0
+                }
+            }
+        </style>
+
+        <!-- MODULE 02 — IOT HERO — JAVASCRIPT -->
+        <script>
+            // No module-specific JavaScript required.
+        </script>
+
+        <!-- =========================================================
          MODULE 03 — SYSTEM RAIL — HTML
     ========================================================= -->
-    <section class="system-rail">
+        <section class="system-rail">
             <div class="iot-shell rail-grid">
                 <div class="rail-item"><small>01 / CONNECT</small><strong>Devices & Assets</strong></div>
                 <div class="rail-item"><small>02 / COLLECT</small><strong>Real-Time Data</strong></div>
@@ -1457,71 +1650,71 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </section>
 
-    <!-- MODULE 03 — SYSTEM RAIL — CSS -->
-    <style>
-/* SYSTEM RAIL */
-        .system-rail {
-            background: #080c0d;
-            color: white;
-            border-top: 1px solid #17201f;
-            border-bottom: 1px solid #17201f
-        }
+        <!-- MODULE 03 — SYSTEM RAIL — CSS -->
+        <style>
+            /* SYSTEM RAIL */
+            .system-rail {
+                background: #080c0d;
+                color: white;
+                border-top: 1px solid #17201f;
+                border-bottom: 1px solid #17201f
+            }
 
-        .rail-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr)
-        }
+            .rail-grid {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr)
+            }
 
-        .rail-item {
-            position: relative;
-            padding: 28px 22px;
-            border-right: 1px solid #17201f
-        }
+            .rail-item {
+                position: relative;
+                padding: 28px 22px;
+                border-right: 1px solid #17201f
+            }
 
-        .rail-item:last-child {
-            border-right: 0
-        }
+            .rail-item:last-child {
+                border-right: 0
+            }
 
-        .rail-item small {
-            display: block;
-            color: #55625f;
-            font-size: 8px;
-            letter-spacing: .16em
-        }
+            .rail-item small {
+                display: block;
+                color: #55625f;
+                font-size: 8px;
+                letter-spacing: .16em
+            }
 
-        .rail-item strong {
-            display: block;
-            margin-top: 7px;
-            font-size: 13px
-        }
+            .rail-item strong {
+                display: block;
+                margin-top: 7px;
+                font-size: 13px
+            }
 
-        .rail-item:after {
-            content: "";
-            position: absolute;
-            left: 22px;
-            right: 22px;
-            bottom: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--lime), transparent);
-            transform: scaleX(.15);
-            transform-origin: left;
-            transition: .3s
-        }
+            .rail-item:after {
+                content: "";
+                position: absolute;
+                left: 22px;
+                right: 22px;
+                bottom: 0;
+                height: 2px;
+                background: linear-gradient(90deg, var(--lime), transparent);
+                transform: scaleX(.15);
+                transform-origin: left;
+                transition: .3s
+            }
 
-        .rail-item:hover:after {
-            transform: scaleX(1)
-        }
-    </style>
+            .rail-item:hover:after {
+                transform: scaleX(1)
+            }
+        </style>
 
-    <!-- MODULE 03 — SYSTEM RAIL — JAVASCRIPT -->
-    <script>
-        // No module-specific JavaScript required.
-    </script>
+        <!-- MODULE 03 — SYSTEM RAIL — JAVASCRIPT -->
+        <script>
+            // No module-specific JavaScript required.
+        </script>
 
-    <!-- =========================================================
+        <!-- =========================================================
          MODULE 04 — IOT INTRO — HTML
     ========================================================= -->
-    <section class="smart-intro">
+        <section class="smart-intro">
             <div class="iot-shell intro-grid reveal">
                 <div><span class="smart-kicker"><b></b> IoT, not BMS</span>
                     <h2 class="smart-title">A digital nervous system for <em>connected operations.</em></h2>
@@ -1543,58 +1736,58 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </section>
 
-    <!-- MODULE 04 — IOT INTRO — CSS -->
-    <style>
-/* INTRO */
-        .smart-intro {
-            padding: 125px 0;
-            background: white
-        }
+        <!-- MODULE 04 — IOT INTRO — CSS -->
+        <style>
+            /* INTRO */
+            .smart-intro {
+                padding: 125px 0;
+                background: white
+            }
 
-        .intro-grid {
-            display: grid;
-            grid-template-columns: 1.05fr .95fr;
-            gap: 100px;
-            align-items: start
-        }
+            .intro-grid {
+                display: grid;
+                grid-template-columns: 1.05fr .95fr;
+                gap: 100px;
+                align-items: start
+            }
 
-        .smart-intro .smart-copy p+p {
-            margin-top: 18px
-        }
+            .smart-intro .smart-copy p+p {
+                margin-top: 18px
+            }
 
-        .smart-pills {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 30px
-        }
+            .smart-pills {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                margin-top: 30px
+            }
 
-        .smart-pill {
-            padding: 17px 18px;
-            border: 1px solid #e1e7e5;
-            background: #fbfcfc;
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: .04em;
-            transition: .25s
-        }
+            .smart-pill {
+                padding: 17px 18px;
+                border: 1px solid #e1e7e5;
+                background: #fbfcfc;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: .04em;
+                transition: .25s
+            }
 
-        .smart-pill:hover {
-            transform: translateY(-3px);
-            border-color: #a7d9cb;
-            background: #f4fffb
-        }
-    </style>
+            .smart-pill:hover {
+                transform: translateY(-3px);
+                border-color: #a7d9cb;
+                background: #f4fffb
+            }
+        </style>
 
-    <!-- MODULE 04 — IOT INTRO — JAVASCRIPT -->
-    <script>
-        // No module-specific JavaScript required.
-    </script>
+        <!-- MODULE 04 — IOT INTRO — JAVASCRIPT -->
+        <script>
+            // No module-specific JavaScript required.
+        </script>
 
-    <!-- =========================================================
+        <!-- =========================================================
          MODULE 05 — END-TO-END ARCHITECTURE — HTML
     ========================================================= -->
-    <section class="arch-stack" id="architecture">
+        <section class="arch-stack" id="architecture">
             <div class="iot-shell">
                 <div class="arch-head reveal">
                     <div><span class="smart-kicker"><b></b> End-to-End Architecture</span>
@@ -1681,108 +1874,108 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </section>
 
-    <!-- MODULE 05 — END-TO-END ARCHITECTURE — CSS -->
-    <style>
-/* ARCH STACK */
-        .arch-stack {
-            padding: 120px 0;
-            background: #eef3f1
-        }
+        <!-- MODULE 05 — END-TO-END ARCHITECTURE — CSS -->
+        <style>
+            /* ARCH STACK */
+            .arch-stack {
+                padding: 120px 0;
+                background: #eef3f1
+            }
 
-        .arch-head {
-            display: grid;
-            grid-template-columns: 1.15fr .85fr;
-            gap: 90px;
-            align-items: end
-        }
+            .arch-head {
+                display: grid;
+                grid-template-columns: 1.15fr .85fr;
+                gap: 90px;
+                align-items: end
+            }
 
-        .stack-wrap {
-            position: relative;
-            margin-top: 58px;
-            display: grid;
-            gap: 10px
-        }
+            .stack-wrap {
+                position: relative;
+                margin-top: 58px;
+                display: grid;
+                gap: 10px
+            }
 
-        .stack-layer {
-            display: grid;
-            grid-template-columns: 90px 1fr 270px;
-            align-items: center;
-            min-height: 115px;
-            padding: 20px 26px;
-            border: 1px solid #dce5e2;
-            background: rgba(255, 255, 255, .82);
-            box-shadow: 0 12px 32px rgba(18, 44, 37, .04);
-            transition: .28s
-        }
+            .stack-layer {
+                display: grid;
+                grid-template-columns: 90px 1fr 270px;
+                align-items: center;
+                min-height: 115px;
+                padding: 20px 26px;
+                border: 1px solid #dce5e2;
+                background: rgba(255, 255, 255, .82);
+                box-shadow: 0 12px 32px rgba(18, 44, 37, .04);
+                transition: .28s
+            }
 
-        .stack-layer:hover {
-            transform: translateX(10px);
-            background: #fff;
-            box-shadow: 0 22px 45px rgba(18, 44, 37, .08)
-        }
+            .stack-layer:hover {
+                transform: translateX(10px);
+                background: #fff;
+                box-shadow: 0 22px 45px rgba(18, 44, 37, .08)
+            }
 
-        .layer-no {
-            font-size: 10px;
-            font-weight: 800;
-            color: #7c8986
-        }
+            .layer-no {
+                font-size: 10px;
+                font-weight: 800;
+                color: #7c8986
+            }
 
-        .layer-main {
-            display: flex;
-            align-items: center;
-            gap: 20px
-        }
+            .layer-main {
+                display: flex;
+                align-items: center;
+                gap: 20px
+            }
 
-        .layer-icon {
-            width: 52px;
-            height: 52px;
-            display: grid;
-            place-items: center;
-            border-radius: 16px;
-            background: #091110;
-            color: var(--lime);
-            font-size: 18px
-        }
+            .layer-icon {
+                width: 52px;
+                height: 52px;
+                display: grid;
+                place-items: center;
+                border-radius: 16px;
+                background: #091110;
+                color: var(--lime);
+                font-size: 18px
+            }
 
-        .layer-main h3 {
-            margin: 0;
-            font-size: 20px;
-            letter-spacing: -.03em
-        }
+            .layer-main h3 {
+                margin: 0;
+                font-size: 20px;
+                letter-spacing: -.03em
+            }
 
-        .layer-main p {
-            margin: 5px 0 0;
-            color: #7a8784;
-            font-size: 11px
-        }
+            .layer-main p {
+                margin: 5px 0 0;
+                color: #7a8784;
+                font-size: 11px
+            }
 
-        .layer-tags {
-            display: flex;
-            justify-content: flex-end;
-            gap: 7px;
-            flex-wrap: wrap
-        }
+            .layer-tags {
+                display: flex;
+                justify-content: flex-end;
+                gap: 7px;
+                flex-wrap: wrap
+            }
 
-        .layer-tags span {
-            padding: 7px 10px;
-            border: 1px solid #d9e1df;
-            border-radius: 999px;
-            background: #f6f8f7;
-            color: #687572;
-            font-size: 8px;
-            font-weight: 700
-        }
-    </style>
+            .layer-tags span {
+                padding: 7px 10px;
+                border: 1px solid #d9e1df;
+                border-radius: 999px;
+                background: #f6f8f7;
+                color: #687572;
+                font-size: 16px;
+                font-weight: 700
+            }
+        </style>
 
-    <!-- MODULE 05 — END-TO-END ARCHITECTURE — JAVASCRIPT -->
-    <script>
-        // No module-specific JavaScript required.
-    </script>
+        <!-- MODULE 05 — END-TO-END ARCHITECTURE — JAVASCRIPT -->
+        <script>
+            // No module-specific JavaScript required.
+        </script>
 
-    <!-- =========================================================
+        <!-- =========================================================
          MODULE 06 — PLATFORM CAPABILITIES — HTML
     ========================================================= -->
-    <section class="platform-stage">
+        <section class="platform-stage">
             <div class="iot-shell">
                 <div class="platform-head reveal">
                     <div><span class="smart-kicker"><b></b> Platform Capabilities</span>
@@ -1838,251 +2031,252 @@ document.addEventListener("DOMContentLoaded", function () {
                                 access, encryption and auditability.</p>
                             <div class="cap-tags">
                                 <span>REST</span><span>Webhooks</span><span>RBAC</span><span>TLS</span><span>ERP /
-                                    MES</span></div>
+                                    MES</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-    <!-- MODULE 06 — PLATFORM CAPABILITIES — CSS -->
-    <style>
-/* DIGITAL TWIN / PLATFORM */
-        .platform-stage {
-            padding: 125px 0;
-            background: #070a0b;
-            color: white;
-            overflow: hidden
-        }
+        <!-- MODULE 06 — PLATFORM CAPABILITIES — CSS -->
+        <style>
+            /* DIGITAL TWIN / PLATFORM */
+            .platform-stage {
+                padding: 125px 0;
+                background: #070a0b;
+                color: white;
+                overflow: hidden
+            }
 
-        .platform-head {
-            display: grid;
-            grid-template-columns: .9fr 1.1fr;
-            gap: 90px;
-            align-items: end
-        }
+            .platform-head {
+                display: grid;
+                grid-template-columns: .9fr 1.1fr;
+                gap: 90px;
+                align-items: end
+            }
 
-        .platform-head .smart-kicker {
-            color: #889591
-        }
+            .platform-head .smart-kicker {
+                color: #889591
+            }
 
-        .platform-head .smart-title em {
-            color: #53615e
-        }
+            .platform-head .smart-title em {
+                color: #53615e
+            }
 
-        .platform-head .smart-copy {
-            color: #82908c
-        }
+            .platform-head .smart-copy {
+                color: #82908c
+            }
 
-        .platform-grid {
-            display: grid;
-            grid-template-columns: 1.12fr .88fr;
-            gap: 18px;
-            margin-top: 58px
-        }
+            .platform-grid {
+                display: grid;
+                grid-template-columns: 1.12fr .88fr;
+                gap: 18px;
+                margin-top: 58px
+            }
 
-        .twin-panel {
-            position: relative;
-            min-height: 530px;
-            border: 1px solid #202a29;
-            background: linear-gradient(145deg, #0d1415, #090d0e);
-            overflow: hidden;
-            padding: 26px
-        }
+            .twin-panel {
+                position: relative;
+                min-height: 530px;
+                border: 1px solid #202a29;
+                background: linear-gradient(145deg, #0d1415, #090d0e);
+                overflow: hidden;
+                padding: 26px
+            }
 
-        .panel-head {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #63706d;
-            font-size: 8px;
-            letter-spacing: .16em;
-            text-transform: uppercase
-        }
+            .panel-head {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: #63706d;
+                font-size: 8px;
+                letter-spacing: .16em;
+                text-transform: uppercase
+            }
 
-        .device-scene {
-            position: absolute;
-            inset: 75px 26px 26px;
-            display: grid;
-            place-items: center;
-            background-image: linear-gradient(rgba(255, 255, 255, .025) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .025) 1px, transparent 1px);
-            background-size: 42px 42px
-        }
+            .device-scene {
+                position: absolute;
+                inset: 75px 26px 26px;
+                display: grid;
+                place-items: center;
+                background-image: linear-gradient(rgba(255, 255, 255, .025) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .025) 1px, transparent 1px);
+                background-size: 42px 42px
+            }
 
-        .machine {
-            position: relative;
-            width: 255px;
-            height: 215px;
-            border: 1px solid #32413e;
-            background: #0b1112;
-            box-shadow: 0 30px 75px rgba(0, 0, 0, .36)
-        }
+            .machine {
+                position: relative;
+                width: 255px;
+                height: 215px;
+                border: 1px solid #32413e;
+                background: #0b1112;
+                box-shadow: 0 30px 75px rgba(0, 0, 0, .36)
+            }
 
-        .machine:before {
-            content: "ASSET 04";
-            position: absolute;
-            left: 20px;
-            top: 18px;
-            color: #4f5d59;
-            font-size: 8px;
-            letter-spacing: .15em
-        }
+            .machine:before {
+                content: "ASSET 04";
+                position: absolute;
+                left: 20px;
+                top: 18px;
+                color: #4f5d59;
+                font-size: 8px;
+                letter-spacing: .15em
+            }
 
-        .machine-part {
-            position: absolute;
-            background: #121b1b;
-            border: 1px solid #31403d
-        }
+            .machine-part {
+                position: absolute;
+                background: #121b1b;
+                border: 1px solid #31403d
+            }
 
-        .mp1 {
-            width: 115px;
-            height: 75px;
-            left: 35px;
-            top: 65px
-        }
+            .mp1 {
+                width: 115px;
+                height: 75px;
+                left: 35px;
+                top: 65px
+            }
 
-        .mp2 {
-            width: 62px;
-            height: 115px;
-            right: 35px;
-            top: 52px
-        }
+            .mp2 {
+                width: 62px;
+                height: 115px;
+                right: 35px;
+                top: 52px
+            }
 
-        .mp3 {
-            height: 20px;
-            left: 35px;
-            right: 35px;
-            bottom: 25px
-        }
+            .mp3 {
+                height: 20px;
+                left: 35px;
+                right: 35px;
+                bottom: 25px
+            }
 
-        .sensor-pin {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: var(--lime);
-            box-shadow: 0 0 16px var(--lime)
-        }
+            .sensor-pin {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: var(--lime);
+                box-shadow: 0 0 16px var(--lime)
+            }
 
-        .sp1 {
-            left: 29px;
-            top: 92px
-        }
+            .sp1 {
+                left: 29px;
+                top: 92px
+            }
 
-        .sp2 {
-            right: 28px;
-            top: 76px
-        }
+            .sp2 {
+                right: 28px;
+                top: 76px
+            }
 
-        .sp3 {
-            left: 123px;
-            bottom: 18px
-        }
+            .sp3 {
+                left: 123px;
+                bottom: 18px
+            }
 
-        .telemetry-card {
-            position: absolute;
-            padding: 12px 14px;
-            border: 1px solid #263330;
-            background: rgba(10, 16, 17, .94);
-            min-width: 130px;
-            box-shadow: 0 16px 32px rgba(0, 0, 0, .25)
-        }
+            .telemetry-card {
+                position: absolute;
+                padding: 12px 14px;
+                border: 1px solid #263330;
+                background: rgba(10, 16, 17, .94);
+                min-width: 130px;
+                box-shadow: 0 16px 32px rgba(0, 0, 0, .25)
+            }
 
-        .telemetry-card span {
-            display: block;
-            color: #62716d;
-            font-size: 7px;
-            letter-spacing: .12em
-        }
+            .telemetry-card span {
+                display: block;
+                color: #62716d;
+                font-size: 7px;
+                letter-spacing: .12em
+            }
 
-        .telemetry-card strong {
-            display: block;
-            margin-top: 4px;
-            color: #eaf2ef;
-            font-size: 13px
-        }
+            .telemetry-card strong {
+                display: block;
+                margin-top: 4px;
+                color: #eaf2ef;
+                font-size: 13px
+            }
 
-        .tc1 {
-            left: 28px;
-            top: 45px
-        }
+            .tc1 {
+                left: 28px;
+                top: 45px
+            }
 
-        .tc2 {
-            right: 28px;
-            top: 80px
-        }
+            .tc2 {
+                right: 28px;
+                top: 80px
+            }
 
-        .tc3 {
-            right: 40px;
-            bottom: 42px
-        }
+            .tc3 {
+                right: 40px;
+                bottom: 42px
+            }
 
-        .cap-mosaic {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px
-        }
+            .cap-mosaic {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 12px
+            }
 
-        .cap-tile {
-            min-height: 165px;
-            padding: 22px;
-            border: 1px solid #202a29;
-            background: #0d1314;
-            transition: .3s
-        }
+            .cap-tile {
+                min-height: 165px;
+                padding: 22px;
+                border: 1px solid #202a29;
+                background: #0d1314;
+                transition: .3s
+            }
 
-        .cap-tile:hover {
-            border-color: #3d6259;
-            transform: translateY(-4px)
-        }
+            .cap-tile:hover {
+                border-color: #3d6259;
+                transform: translateY(-4px)
+            }
 
-        .cap-tile i {
-            color: var(--cyan);
-            font-size: 18px
-        }
+            .cap-tile i {
+                color: var(--cyan);
+                font-size: 18px
+            }
 
-        .cap-tile h3 {
-            margin: 35px 0 8px;
-            font-size: 15px
-        }
+            .cap-tile h3 {
+                margin: 35px 0 8px;
+                font-size: 15px
+            }
 
-        .cap-tile p {
-            margin: 0;
-            color: #71807c;
-            font-size: 10px;
-            line-height: 1.7
-        }
+            .cap-tile p {
+                margin: 0;
+                color: #71807c;
+                font-size: 10px;
+                line-height: 1.7
+            }
 
-        .cap-tile.wide {
-            grid-column: span 2;
-            min-height: 172px
-        }
+            .cap-tile.wide {
+                grid-column: span 2;
+                min-height: 172px
+            }
 
-        .cap-tags {
-            display: flex;
-            gap: 7px;
-            flex-wrap: wrap;
-            margin-top: 14px
-        }
+            .cap-tags {
+                display: flex;
+                gap: 7px;
+                flex-wrap: wrap;
+                margin-top: 14px
+            }
 
-        .cap-tags span {
-            padding: 6px 9px;
-            border: 1px solid #25312f;
-            border-radius: 999px;
-            color: #71807c;
-            font-size: 7px
-        }
-    </style>
+            .cap-tags span {
+                padding: 6px 9px;
+                border: 1px solid #25312f;
+                border-radius: 999px;
+                color: #71807c;
+                font-size: 7px
+            }
+        </style>
 
-    <!-- MODULE 06 — PLATFORM CAPABILITIES — JAVASCRIPT -->
-    <script>
-        // No module-specific JavaScript required.
-    </script>
+        <!-- MODULE 06 — PLATFORM CAPABILITIES — JAVASCRIPT -->
+        <script>
+            // No module-specific JavaScript required.
+        </script>
 
-    <!-- =========================================================
+        <!-- =========================================================
          MODULE 07 — PROTOCOLS & CONNECTIVITY — HTML
     ========================================================= -->
-    <section class="protocol-zone">
+        <section class="protocol-zone">
             <div class="iot-shell protocol-layout">
                 <div class="reveal"><span class="smart-kicker"><b></b> Connectivity Layer</span>
                     <h2 class="smart-title">Open to modern IoT. <em>Ready for legacy assets.</em></h2>
@@ -2091,7 +2285,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         industrial protocols into modern IoT messaging and APIs.</p>
                     <div class="protocol-list">
                         <span>SNMP</span><span>BLE</span><span>NB-IoT</span><span>Zigbee</span><span>RS-485</span><span>Custom
-                            TCP / UDP</span></div>
+                            TCP / UDP</span>
+                    </div>
                 </div>
                 <div class="protocol-orbit reveal">
                     <div class="orbit-ring or1"></div>
@@ -2107,167 +2302,167 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </section>
 
-    <!-- MODULE 07 — PROTOCOLS & CONNECTIVITY — CSS -->
-    <style>
-/* PROTOCOL ORBIT */
-        .protocol-zone {
-            padding: 125px 0;
-            background: white
-        }
+        <!-- MODULE 07 — PROTOCOLS & CONNECTIVITY — CSS -->
+        <style>
+            /* PROTOCOL ORBIT */
+            .protocol-zone {
+                padding: 125px 0;
+                background: white
+            }
 
-        .protocol-layout {
-            display: grid;
-            grid-template-columns: .8fr 1.2fr;
-            gap: 90px;
-            align-items: center
-        }
+            .protocol-layout {
+                display: grid;
+                grid-template-columns: .8fr 1.2fr;
+                gap: 90px;
+                align-items: center
+            }
 
-        .protocol-orbit {
-            position: relative;
-            min-height: 560px
-        }
+            .protocol-orbit {
+                position: relative;
+                min-height: 560px
+            }
 
-        .orbit-core {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 158px;
-            height: 158px;
-            border-radius: 50%;
-            display: grid;
-            place-items: center;
-            text-align: center;
-            background: #07100f;
-            color: white;
-            box-shadow: 0 0 0 25px #f1f7f5, 0 0 0 26px #dce8e4
-        }
+            .orbit-core {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 158px;
+                height: 158px;
+                border-radius: 50%;
+                display: grid;
+                place-items: center;
+                text-align: center;
+                background: #07100f;
+                color: white;
+                box-shadow: 0 0 0 25px #f1f7f5, 0 0 0 26px #dce8e4
+            }
 
-        .orbit-core i {
-            font-size: 25px;
-            color: var(--lime)
-        }
+            .orbit-core i {
+                font-size: 25px;
+                color: var(--lime)
+            }
 
-        .orbit-core strong {
-            display: block;
-            margin-top: 8px;
-            font-size: 13px
-        }
+            .orbit-core strong {
+                display: block;
+                margin-top: 8px;
+                font-size: 13px
+            }
 
-        .orbit-ring {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            border: 1px solid #dce5e2;
-            border-radius: 50%;
-            transform: translate(-50%, -50%)
-        }
+            .orbit-ring {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                border: 1px solid #dce5e2;
+                border-radius: 50%;
+                transform: translate(-50%, -50%)
+            }
 
-        .or1 {
-            width: 350px;
-            height: 350px
-        }
+            .or1 {
+                width: 350px;
+                height: 350px
+            }
 
-        .or2 {
-            width: 520px;
-            height: 520px;
-            border-style: dashed
-        }
+            .or2 {
+                width: 520px;
+                height: 520px;
+                border-style: dashed
+            }
 
-        .proto {
-            position: absolute;
-            padding: 10px 13px;
-            border: 1px solid #dfe6e4;
-            background: white;
-            border-radius: 999px;
-            box-shadow: 0 10px 24px rgba(17, 45, 37, .06);
-            font-size: 9px;
-            font-weight: 800
-        }
+            .proto {
+                position: absolute;
+                padding: 10px 13px;
+                border: 1px solid #dfe6e4;
+                background: white;
+                border-radius: 999px;
+                box-shadow: 0 10px 24px rgba(17, 45, 37, .06);
+                font-size: 9px;
+                font-weight: 800
+            }
 
-        .pr1 {
-            left: 45%;
-            top: 2%
-        }
+            .pr1 {
+                left: 45%;
+                top: 2%
+            }
 
-        .pr2 {
-            right: 3%;
-            top: 25%
-        }
+            .pr2 {
+                right: 3%;
+                top: 25%
+            }
 
-        .pr3 {
-            right: 8%;
-            bottom: 20%
-        }
+            .pr3 {
+                right: 8%;
+                bottom: 20%
+            }
 
-        .pr4 {
-            left: 44%;
-            bottom: 2%
-        }
+            .pr4 {
+                left: 44%;
+                bottom: 2%
+            }
 
-        .pr5 {
-            left: 2%;
-            bottom: 22%
-        }
+            .pr5 {
+                left: 2%;
+                bottom: 22%
+            }
 
-        .pr6 {
-            left: 1%;
-            top: 24%
-        }
+            .pr6 {
+                left: 1%;
+                top: 24%
+            }
 
-        .pr7 {
-            left: 26%;
-            top: 20%
-        }
+            .pr7 {
+                left: 26%;
+                top: 20%
+            }
 
-        .pr8 {
-            right: 25%;
-            top: 20%
-        }
+            .pr8 {
+                right: 25%;
+                top: 20%
+            }
 
-        .pr9 {
-            right: 23%;
-            bottom: 19%
-        }
+            .pr9 {
+                right: 23%;
+                bottom: 19%
+            }
 
-        .pr10 {
-            left: 24%;
-            bottom: 18%
-        }
+            .pr10 {
+                left: 24%;
+                bottom: 18%
+            }
 
-        .proto:hover {
-            background: #07100f;
-            color: white;
-            border-color: #07100f
-        }
+            .proto:hover {
+                background: #07100f;
+                color: white;
+                border-color: #07100f
+            }
 
-        .protocol-list {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-top: 28px
-        }
+            .protocol-list {
+                display: flex;
+                gap: 8px;
+                flex-wrap: wrap;
+                margin-top: 28px
+            }
 
-        .protocol-list span {
-            padding: 10px 13px;
-            border: 1px solid #dfe6e4;
-            border-radius: 999px;
-            background: #fafcfa;
-            font-size: 8px;
-            font-weight: 700;
-            color: #66736f
-        }
-    </style>
+            .protocol-list span {
+                padding: 10px 13px;
+                border: 1px solid #dfe6e4;
+                border-radius: 999px;
+                background: #fafcfa;
+                font-size: 8px;
+                font-weight: 700;
+                color: #66736f
+            }
+        </style>
 
-    <!-- MODULE 07 — PROTOCOLS & CONNECTIVITY — JAVASCRIPT -->
-    <script>
-        // No module-specific JavaScript required.
-    </script>
+        <!-- MODULE 07 — PROTOCOLS & CONNECTIVITY — JAVASCRIPT -->
+        <script>
+            // No module-specific JavaScript required.
+        </script>
 
-    <!-- =========================================================
+        <!-- =========================================================
          MODULE 08 — EDGE + CLOUD — HTML
     ========================================================= -->
-    <section class="edge-cloud">
+        <section class="edge-cloud">
             <div class="iot-shell edge-layout">
                 <div class="flow-console reveal">
                     <div class="flow-row">
@@ -2307,112 +2502,112 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </section>
 
-    <!-- MODULE 08 — EDGE + CLOUD — CSS -->
-    <style>
-/* EDGE CLOUD */
-        .edge-cloud {
-            padding: 125px 0;
-            background: #eef3f1
-        }
+        <!-- MODULE 08 — EDGE + CLOUD — CSS -->
+        <style>
+            /* EDGE CLOUD */
+            .edge-cloud {
+                padding: 125px 0;
+                background: #eef3f1
+            }
 
-        .edge-layout {
-            display: grid;
-            grid-template-columns: .92fr 1.08fr;
-            gap: 80px;
-            align-items: center
-        }
+            .edge-layout {
+                display: grid;
+                grid-template-columns: .92fr 1.08fr;
+                gap: 80px;
+                align-items: center
+            }
 
-        .flow-console {
-            padding: 26px;
-            border: 1px solid #dce5e2;
-            background: white;
-            box-shadow: 0 28px 65px rgba(16, 44, 36, .07)
-        }
+            .flow-console {
+                padding: 26px;
+                border: 1px solid #dce5e2;
+                background: white;
+                box-shadow: 0 28px 65px rgba(16, 44, 36, .07)
+            }
 
-        .flow-row {
-            display: grid;
-            grid-template-columns: 1fr 58px 1fr;
-            align-items: center;
-            gap: 12px
-        }
+            .flow-row {
+                display: grid;
+                grid-template-columns: 1fr 58px 1fr;
+                align-items: center;
+                gap: 12px
+            }
 
-        .flow-box {
-            min-height: 125px;
-            padding: 20px;
-            border: 1px solid #dfe6e4;
-            background: #fafcfa
-        }
+            .flow-box {
+                min-height: 125px;
+                padding: 20px;
+                border: 1px solid #dfe6e4;
+                background: #fafcfa
+            }
 
-        .flow-box.dark {
-            background: #07100f;
-            color: white;
-            border-color: #07100f
-        }
+            .flow-box.dark {
+                background: #07100f;
+                color: white;
+                border-color: #07100f
+            }
 
-        .flow-box span {
-            display: block;
-            color: #7b8885;
-            font-size: 8px;
-            letter-spacing: .14em
-        }
+            .flow-box span {
+                display: block;
+                color: #7b8885;
+                font-size: 8px;
+                letter-spacing: .14em
+            }
 
-        .flow-box strong {
-            display: block;
-            margin-top: 9px;
-            font-size: 15px
-        }
+            .flow-box strong {
+                display: block;
+                margin-top: 9px;
+                font-size: 15px
+            }
 
-        .flow-box p {
-            margin: 7px 0 0;
-            color: #7a8784;
-            font-size: 9px;
-            line-height: 1.6
-        }
+            .flow-box p {
+                margin: 7px 0 0;
+                color: #7a8784;
+                font-size: 9px;
+                line-height: 1.6
+            }
 
-        .flow-arrow {
-            text-align: center;
-            color: #7c8a87
-        }
+            .flow-arrow {
+                text-align: center;
+                color: #7c8a87
+            }
 
-        .flow-rail {
-            height: 54px;
-            margin: 12px 0;
-            border-left: 1px dashed #adbbb7;
-            margin-left: 50%
-        }
+            .flow-rail {
+                height: 54px;
+                margin: 12px 0;
+                border-left: 1px dashed #adbbb7;
+                margin-left: 50%
+            }
 
-        .edge-features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 28px
-        }
+            .edge-features {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                margin-top: 28px
+            }
 
-        .edge-feature {
-            padding: 16px;
-            border: 1px solid #dce5e2;
-            background: #f8faf9;
-            font-size: 10px;
-            font-weight: 700
-        }
+            .edge-feature {
+                padding: 16px;
+                border: 1px solid #dce5e2;
+                background: #f8faf9;
+                font-size: 16px;
+                font-weight: 700
+            }
 
-        .edge-feature span {
-            display: block;
-            margin-bottom: 5px;
-            color: #8c9895;
-            font-size: 8px
-        }
-    </style>
+            .edge-feature span {
+                display: block;
+                margin-bottom: 5px;
+                color: #8c9895;
+                font-size: 16px
+            }
+        </style>
 
-    <!-- MODULE 08 — EDGE + CLOUD — JAVASCRIPT -->
-    <script>
-        // No module-specific JavaScript required.
-    </script>
+        <!-- MODULE 08 — EDGE + CLOUD — JAVASCRIPT -->
+        <script>
+            // No module-specific JavaScript required.
+        </script>
 
-    <!-- =========================================================
+        <!-- =========================================================
          MODULE 09 — DATA JOURNEY — HTML
     ========================================================= -->
-    <section class="data-journey">
+        <section class="data-journey">
             <div class="iot-shell">
                 <div class="journey-head reveal">
                     <div><span class="smart-kicker"><b></b> Operational Intelligence</span>
@@ -2455,104 +2650,104 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </section>
 
-    <!-- MODULE 09 — DATA JOURNEY — CSS -->
-    <style>
-/* DATA JOURNEY */
-        .data-journey {
-            padding: 120px 0;
-            background: #070a0b;
-            color: white
-        }
+        <!-- MODULE 09 — DATA JOURNEY — CSS -->
+        <style>
+            /* DATA JOURNEY */
+            .data-journey {
+                padding: 120px 0;
+                background: #070a0b;
+                color: white
+            }
 
-        .journey-head {
-            display: grid;
-            grid-template-columns: 1fr .8fr;
-            gap: 90px;
-            align-items: end
-        }
+            .journey-head {
+                display: grid;
+                grid-template-columns: 1fr .8fr;
+                gap: 90px;
+                align-items: end
+            }
 
-        .journey-head .smart-kicker {
-            color: #8c9995
-        }
+            .journey-head .smart-kicker {
+                color: #8c9995
+            }
 
-        .journey-head .smart-title em {
-            color: #56635f
-        }
+            .journey-head .smart-title em {
+                color: #56635f
+            }
 
-        .journey-head .smart-copy {
-            color: #81908c
-        }
+            .journey-head .smart-copy {
+                color: #81908c
+            }
 
-        .journey-track {
-            position: relative;
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 10px;
-            margin-top: 55px
-        }
+            .journey-track {
+                position: relative;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 10px;
+                margin-top: 55px
+            }
 
-        .journey-track:before {
-            content: "";
-            position: absolute;
-            left: 7%;
-            right: 7%;
-            top: 42px;
-            height: 1px;
-            background: linear-gradient(90deg, var(--lime), var(--cyan), var(--violet));
-            opacity: .55
-        }
+            .journey-track:before {
+                content: "";
+                position: absolute;
+                left: 7%;
+                right: 7%;
+                top: 42px;
+                height: 1px;
+                background: linear-gradient(90deg, var(--lime), var(--cyan), var(--violet));
+                opacity: .55
+            }
 
-        .journey-step {
-            position: relative;
-            z-index: 2;
-            min-height: 250px;
-            padding: 24px 20px;
-            border: 1px solid #202a29;
-            background: #0c1112
-        }
+            .journey-step {
+                position: relative;
+                z-index: 2;
+                min-height: 250px;
+                padding: 24px 20px;
+                border: 1px solid #202a29;
+                background: #0c1112
+            }
 
-        .journey-step .step-dot {
-            width: 35px;
-            height: 35px;
-            display: grid;
-            place-items: center;
-            border-radius: 50%;
-            background: #0b1514;
-            border: 1px solid #34504a;
-            color: var(--lime);
-            font-size: 9px;
-            box-shadow: 0 0 0 8px #070a0b
-        }
+            .journey-step .step-dot {
+                width: 35px;
+                height: 35px;
+                display: grid;
+                place-items: center;
+                border-radius: 50%;
+                background: #0b1514;
+                border: 1px solid #34504a;
+                color: var(--lime);
+                font-size: 9px;
+                box-shadow: 0 0 0 8px #070a0b
+            }
 
-        .journey-step h3 {
-            margin: 55px 0 10px;
-            font-size: 19px
-        }
+            .journey-step h3 {
+                margin: 55px 0 10px;
+                font-size: 19px
+            }
 
-        .journey-step p {
-            color: #71807c;
-            font-size: 10px;
-            line-height: 1.75
-        }
+            .journey-step p {
+                color: #71807c;
+                font-size: 10px;
+                line-height: 1.75
+            }
 
-        .journey-step small {
-            position: absolute;
-            bottom: 18px;
-            color: #4f5c59;
-            font-size: 7px;
-            letter-spacing: .14em
-        }
-    </style>
+            .journey-step small {
+                position: absolute;
+                bottom: 18px;
+                color: #4f5c59;
+                font-size: 7px;
+                letter-spacing: .14em
+            }
+        </style>
 
-    <!-- MODULE 09 — DATA JOURNEY — JAVASCRIPT -->
-    <script>
-        // No module-specific JavaScript required.
-    </script>
+        <!-- MODULE 09 — DATA JOURNEY — JAVASCRIPT -->
+        <script>
+            // No module-specific JavaScript required.
+        </script>
 
-    <!-- =========================================================
+        <!-- =========================================================
          MODULE 10 — OPERATIONS DASHBOARD — HTML
     ========================================================= -->
-    <section class="ops-zone">
+        <section class="ops-zone">
             <div class="iot-shell ops-layout">
                 <div class="reveal"><span class="smart-kicker"><b></b> Real-Time Visibility</span>
                     <h2 class="smart-title">One view for <em>every connected asset.</em></h2>
@@ -2586,176 +2781,176 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </section>
 
-    <!-- MODULE 10 — OPERATIONS DASHBOARD — CSS -->
-    <style>
-/* DASHBOARD */
-        .ops-zone {
-            padding: 125px 0;
-            background: white
-        }
-
-        .ops-layout {
-            display: grid;
-            grid-template-columns: .78fr 1.22fr;
-            gap: 75px;
-            align-items: center
-        }
-
-        .ops-window {
-            border: 1px solid #d8e1de;
-            background: #07100f;
-            box-shadow: 0 35px 85px rgba(13, 43, 34, .14)
-        }
-
-        .ops-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 18px;
-            border-bottom: 1px solid #1c2926;
-            color: #61706c;
-            font-size: 8px;
-            letter-spacing: .14em
-        }
-
-        .ops-live {
-            color: var(--lime)
-        }
-
-        .ops-body {
-            padding: 18px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px
-        }
-
-        .op-card {
-            min-height: 120px;
-            padding: 16px;
-            border: 1px solid #1d2926;
-            background: #0c1413
-        }
-
-        .op-card span {
-            color: #63716d;
-            font-size: 8px
-        }
-
-        .op-card strong {
-            display: block;
-            margin-top: 8px;
-            font-size: 28px;
-            color: #eef4f2
-        }
-
-        .op-card small {
-            display: block;
-            margin-top: 5px;
-            color: #53615d;
-            font-size: 7px
-        }
-
-        .op-chart {
-            grid-column: span 2;
-            min-height: 205px
-        }
-
-        .chart-bars {
-            height: 105px;
-            margin-top: 20px;
-            display: flex;
-            align-items: end;
-            gap: 8px
-        }
-
-        .chart-bars i {
-            flex: 1;
-            background: linear-gradient(var(--lime), rgba(141, 255, 207, .1));
-            animation: bars 3s ease-in-out infinite alternate
-        }
-
-        .chart-bars i:nth-child(2) {
-            height: 64%
-        }
-
-        .chart-bars i:nth-child(3) {
-            height: 92%
-        }
-
-        .chart-bars i:nth-child(4) {
-            height: 48%
-        }
-
-        .chart-bars i:nth-child(5) {
-            height: 77%
-        }
-
-        .chart-bars i:nth-child(6) {
-            height: 58%
-        }
-
-        .chart-bars i:nth-child(7) {
-            height: 88%
-        }
-
-        .chart-bars i:nth-child(8) {
-            height: 70%
-        }
-
-        .map-card {
-            min-height: 205px;
-            position: relative;
-            overflow: hidden
-        }
-
-        .map-card:before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-image: radial-gradient(circle, #294038 1px, transparent 1px);
-            background-size: 18px 18px
-        }
-
-        .map-pin-mini {
-            position: absolute;
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-            background: var(--cyan);
-            box-shadow: 0 0 15px var(--cyan)
-        }
-
-        .m1 {
-            left: 28%;
-            top: 40%
-        }
-
-        .m2 {
-            right: 24%;
-            top: 30%
-        }
-
-        .m3 {
-            right: 37%;
-            bottom: 25%
-        }
-
-        @keyframes bars {
-            to {
-                filter: brightness(1.35)
+        <!-- MODULE 10 — OPERATIONS DASHBOARD — CSS -->
+        <style>
+            /* DASHBOARD */
+            .ops-zone {
+                padding: 125px 0;
+                background: white
             }
-        }
-    </style>
 
-    <!-- MODULE 10 — OPERATIONS DASHBOARD — JAVASCRIPT -->
-    <script>
-        // No module-specific JavaScript required.
-    </script>
+            .ops-layout {
+                display: grid;
+                grid-template-columns: .78fr 1.22fr;
+                gap: 75px;
+                align-items: center
+            }
 
-    <!-- =========================================================
+            .ops-window {
+                border: 1px solid #d8e1de;
+                background: #07100f;
+                box-shadow: 0 35px 85px rgba(13, 43, 34, .14)
+            }
+
+            .ops-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 18px;
+                border-bottom: 1px solid #1c2926;
+                color: #61706c;
+                font-size: 8px;
+                letter-spacing: .14em
+            }
+
+            .ops-live {
+                color: var(--lime)
+            }
+
+            .ops-body {
+                padding: 18px;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px
+            }
+
+            .op-card {
+                min-height: 120px;
+                padding: 16px;
+                border: 1px solid #1d2926;
+                background: #0c1413
+            }
+
+            .op-card span {
+                color: #63716d;
+                font-size: 8px
+            }
+
+            .op-card strong {
+                display: block;
+                margin-top: 8px;
+                font-size: 28px;
+                color: #eef4f2
+            }
+
+            .op-card small {
+                display: block;
+                margin-top: 5px;
+                color: #53615d;
+                font-size: 7px
+            }
+
+            .op-chart {
+                grid-column: span 2;
+                min-height: 205px
+            }
+
+            .chart-bars {
+                height: 105px;
+                margin-top: 20px;
+                display: flex;
+                align-items: end;
+                gap: 8px
+            }
+
+            .chart-bars i {
+                flex: 1;
+                background: linear-gradient(var(--lime), rgba(141, 255, 207, .1));
+                animation: bars 3s ease-in-out infinite alternate
+            }
+
+            .chart-bars i:nth-child(2) {
+                height: 64%
+            }
+
+            .chart-bars i:nth-child(3) {
+                height: 92%
+            }
+
+            .chart-bars i:nth-child(4) {
+                height: 48%
+            }
+
+            .chart-bars i:nth-child(5) {
+                height: 77%
+            }
+
+            .chart-bars i:nth-child(6) {
+                height: 58%
+            }
+
+            .chart-bars i:nth-child(7) {
+                height: 88%
+            }
+
+            .chart-bars i:nth-child(8) {
+                height: 70%
+            }
+
+            .map-card {
+                min-height: 205px;
+                position: relative;
+                overflow: hidden
+            }
+
+            .map-card:before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: radial-gradient(circle, #294038 1px, transparent 1px);
+                background-size: 18px 18px
+            }
+
+            .map-pin-mini {
+                position: absolute;
+                width: 9px;
+                height: 9px;
+                border-radius: 50%;
+                background: var(--cyan);
+                box-shadow: 0 0 15px var(--cyan)
+            }
+
+            .m1 {
+                left: 28%;
+                top: 40%
+            }
+
+            .m2 {
+                right: 24%;
+                top: 30%
+            }
+
+            .m3 {
+                right: 37%;
+                bottom: 25%
+            }
+
+            @keyframes bars {
+                to {
+                    filter: brightness(1.35)
+                }
+            }
+        </style>
+
+        <!-- MODULE 10 — OPERATIONS DASHBOARD — JAVASCRIPT -->
+        <script>
+            // No module-specific JavaScript required.
+        </script>
+
+        <!-- =========================================================
          MODULE 11 — IOT USE CASES — HTML
     ========================================================= -->
-    <section class="use-smart">
+        <section class="use-smart">
             <div class="iot-shell">
                 <div class="use-head reveal">
                     <div><span class="smart-kicker"><b></b> IoT Use Cases</span>
@@ -2801,106 +2996,106 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </section>
 
-    <!-- MODULE 11 — IOT USE CASES — CSS -->
-    <style>
-/* USE CASES */
-        .use-smart {
-            padding: 125px 0;
-            background: #eef3f1
-        }
+        <!-- MODULE 11 — IOT USE CASES — CSS -->
+        <style>
+            /* USE CASES */
+            .use-smart {
+                padding: 125px 0;
+                background: #eef3f1
+            }
 
-        .use-head {
-            display: grid;
-            grid-template-columns: 1fr .8fr;
-            gap: 90px;
-            align-items: end
-        }
+            .use-head {
+                display: grid;
+                grid-template-columns: 1fr .8fr;
+                gap: 90px;
+                align-items: end
+            }
 
-        .use-grid2 {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-            margin-top: 55px
-        }
+            .use-grid2 {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 12px;
+                margin-top: 55px
+            }
 
-        .use-tile {
-            position: relative;
-            min-height: 270px;
-            padding: 24px;
-            border: 1px solid #dce5e2;
-            background: white;
-            overflow: hidden;
-            transition: .3s
-        }
+            .use-tile {
+                position: relative;
+                min-height: 270px;
+                padding: 24px;
+                border: 1px solid #dce5e2;
+                background: white;
+                overflow: hidden;
+                transition: .3s
+            }
 
-        .use-tile:after {
-            content: "";
-            position: absolute;
-            width: 130px;
-            height: 130px;
-            right: -55px;
-            top: -55px;
-            border: 1px solid #e5ecea;
-            border-radius: 50%;
-            transition: .3s
-        }
+            .use-tile:after {
+                content: "";
+                position: absolute;
+                width: 130px;
+                height: 130px;
+                right: -55px;
+                top: -55px;
+                border: 1px solid #e5ecea;
+                border-radius: 50%;
+                transition: .3s
+            }
 
-        .use-tile:hover {
-            transform: translateY(-6px);
-            background: #07100f;
-            color: white;
-            border-color: #07100f;
-            box-shadow: 0 25px 55px rgba(11, 36, 29, .12)
-        }
+            .use-tile:hover {
+                transform: translateY(-6px);
+                background: #07100f;
+                color: white;
+                border-color: #07100f;
+                box-shadow: 0 25px 55px rgba(11, 36, 29, .12)
+            }
 
-        .use-tile:hover:after {
-            border-color: #28433c;
-            transform: scale(1.35)
-        }
+            .use-tile:hover:after {
+                border-color: #28433c;
+                transform: scale(1.35)
+            }
 
-        .use-tile small {
-            color: #8b9894;
-            font-size: 7px;
-            letter-spacing: .16em
-        }
+            .use-tile small {
+                color: #8b9894;
+                font-size: 7px;
+                letter-spacing: .16em
+            }
 
-        .use-tile i {
-            display: block;
-            margin-top: 42px;
-            font-size: 20px;
-            color: #4d7167
-        }
+            .use-tile i {
+                display: block;
+                margin-top: 42px;
+                font-size: 20px;
+                color: #4d7167
+            }
 
-        .use-tile:hover i {
-            color: var(--lime)
-        }
+            .use-tile:hover i {
+                color: var(--lime)
+            }
 
-        .use-tile h3 {
-            margin: 18px 0 9px;
-            font-size: 17px;
-            letter-spacing: -.02em
-        }
+            .use-tile h3 {
+                margin: 18px 0 9px;
+                font-size: 17px;
+                letter-spacing: -.02em
+            }
 
-        .use-tile p {
-            color: #74817e;
-            font-size: 10px;
-            line-height: 1.75
-        }
+            .use-tile p {
+                color: #74817e;
+                font-size: 10px;
+                line-height: 1.75
+            }
 
-        .use-tile:hover p {
-            color: #899792
-        }
-    </style>
+            .use-tile:hover p {
+                color: #899792
+            }
+        </style>
 
-    <!-- MODULE 11 — IOT USE CASES — JAVASCRIPT -->
-    <script>
-        // No module-specific JavaScript required.
-    </script>
+        <!-- MODULE 11 — IOT USE CASES — JAVASCRIPT -->
+        <script>
+            // No module-specific JavaScript required.
+        </script>
 
-    <!-- =========================================================
+        <!-- =========================================================
          MODULE 12 — PROJECT DELIVERY — HTML
     ========================================================= -->
-    <section class="delivery-smart">
+        <section class="delivery-smart">
             <div class="iot-shell delivery-layout">
                 <div class="reveal"><span class="smart-kicker"><b></b> Project Delivery</span>
                     <h2 class="smart-title">From use case to <em>operational IoT.</em></h2>
@@ -2931,66 +3126,66 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </section>
 
-    <!-- MODULE 12 — PROJECT DELIVERY — CSS -->
-    <style>
-/* DELIVERY + WHY */
-        .delivery-smart {
-            padding: 125px 0;
-            background: white
-        }
+        <!-- MODULE 12 — PROJECT DELIVERY — CSS -->
+        <style>
+            /* DELIVERY + WHY */
+            .delivery-smart {
+                padding: 125px 0;
+                background: white
+            }
 
-        .delivery-layout {
-            display: grid;
-            grid-template-columns: .82fr 1.18fr;
-            gap: 85px
-        }
+            .delivery-layout {
+                display: grid;
+                grid-template-columns: .82fr 1.18fr;
+                gap: 85px
+            }
 
-        .delivery-steps {
-            border-top: 1px solid #dce5e2
-        }
+            .delivery-steps {
+                border-top: 1px solid #dce5e2
+            }
 
-        .dstep {
-            display: grid;
-            grid-template-columns: 65px 1fr 160px;
-            gap: 20px;
-            align-items: center;
-            padding: 22px 0;
-            border-bottom: 1px solid #dce5e2;
-            transition: .25s
-        }
+            .dstep {
+                display: grid;
+                grid-template-columns: 65px 1fr 160px;
+                gap: 20px;
+                align-items: center;
+                padding: 22px 0;
+                border-bottom: 1px solid #dce5e2;
+                transition: .25s
+            }
 
-        .dstep:hover {
-            padding-left: 10px
-        }
+            .dstep:hover {
+                padding-left: 10px
+            }
 
-        .dstep>span {
-            color: #8d9996;
-            font-size: 9px;
-            font-weight: 800
-        }
+            .dstep>span {
+                color: #8d9996;
+                font-size: 9px;
+                font-weight: 800
+            }
 
-        .dstep h3 {
-            margin: 0;
-            font-size: 16px
-        }
+            .dstep h3 {
+                margin: 0;
+                font-size: 16px
+            }
 
-        .dstep small {
-            text-align: right;
-            color: #87938f;
-            font-size: 8px;
-            letter-spacing: .12em
-        }
-    </style>
+            .dstep small {
+                text-align: right;
+                color: #87938f;
+                font-size: 8px;
+                letter-spacing: .12em
+            }
+        </style>
 
-    <!-- MODULE 12 — PROJECT DELIVERY — JAVASCRIPT -->
-    <script>
-        // No module-specific JavaScript required.
-    </script>
+        <!-- MODULE 12 — PROJECT DELIVERY — JAVASCRIPT -->
+        <script>
+            // No module-specific JavaScript required.
+        </script>
 
-    <!-- =========================================================
+        <!-- =========================================================
          MODULE 13 — WHY ALPHA NUMERIC — HTML
     ========================================================= -->
-    <section class="why-smart">
+        <section class="why-smart">
             <div class="iot-shell why-layout">
                 <div class="why-constellation reveal">
                     <div class="why-core2"><strong>Alpha Numeric<br>IoT Layer</strong></div>
@@ -3018,132 +3213,132 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </section>
 
-    <!-- MODULE 13 — WHY ALPHA NUMERIC — CSS -->
-    <style>
-.why-smart {
-            padding: 125px 0;
-            background: #070a0b;
-            color: white
-        }
+        <!-- MODULE 13 — WHY ALPHA NUMERIC — CSS -->
+        <style>
+            .why-smart {
+                padding: 125px 0;
+                background: #070a0b;
+                color: white
+            }
 
-        .why-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center
-        }
+            .why-layout {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 80px;
+                align-items: center
+            }
 
-        .why-constellation {
-            position: relative;
-            min-height: 500px;
-            border: 1px solid #202a29;
-            background: radial-gradient(circle at center, rgba(141, 255, 207, .08), transparent 30%), #0a0f10
-        }
+            .why-constellation {
+                position: relative;
+                min-height: 500px;
+                border: 1px solid #202a29;
+                background: radial-gradient(circle at center, rgba(141, 255, 207, .08), transparent 30%), #0a0f10
+            }
 
-        .why-core2 {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 175px;
-            height: 175px;
-            border-radius: 50%;
-            display: grid;
-            place-items: center;
-            text-align: center;
-            border: 1px solid rgba(141, 255, 207, .38);
-            background: #0b1513;
-            color: #e8f0ed;
-            box-shadow: 0 0 65px rgba(141, 255, 207, .12)
-        }
+            .why-core2 {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 175px;
+                height: 175px;
+                border-radius: 50%;
+                display: grid;
+                place-items: center;
+                text-align: center;
+                border: 1px solid rgba(141, 255, 207, .38);
+                background: #0b1513;
+                color: #e8f0ed;
+                box-shadow: 0 0 65px rgba(141, 255, 207, .12)
+            }
 
-        .why-core2 strong {
-            font-size: 15px
-        }
+            .why-core2 strong {
+                font-size: 15px
+            }
 
-        .why-sat {
-            position: absolute;
-            padding: 12px 14px;
-            border: 1px solid #293532;
-            background: #0b1112;
-            color: #9eaaa6;
-            font-size: 8px;
-            letter-spacing: .08em
-        }
+            .why-sat {
+                position: absolute;
+                padding: 12px 14px;
+                border: 1px solid #293532;
+                background: #0b1112;
+                color: #9eaaa6;
+                font-size: 8px;
+                letter-spacing: .08em
+            }
 
-        .ws1 {
-            left: 8%;
-            top: 18%
-        }
+            .ws1 {
+                left: 8%;
+                top: 18%
+            }
 
-        .ws2 {
-            right: 8%;
-            top: 18%
-        }
+            .ws2 {
+                right: 8%;
+                top: 18%
+            }
 
-        .ws3 {
-            left: 8%;
-            bottom: 18%
-        }
+            .ws3 {
+                left: 8%;
+                bottom: 18%
+            }
 
-        .ws4 {
-            right: 8%;
-            bottom: 18%
-        }
+            .ws4 {
+                right: 8%;
+                bottom: 18%
+            }
 
-        .ws5 {
-            left: 50%;
-            top: 8%;
-            transform: translateX(-50%)
-        }
+            .ws5 {
+                left: 50%;
+                top: 8%;
+                transform: translateX(-50%)
+            }
 
-        .ws6 {
-            left: 50%;
-            bottom: 8%;
-            transform: translateX(-50%)
-        }
+            .ws6 {
+                left: 50%;
+                bottom: 8%;
+                transform: translateX(-50%)
+            }
 
-        .why-list2 {
-            margin-top: 30px;
-            border-top: 1px solid #202a29
-        }
+            .why-list2 {
+                margin-top: 30px;
+                border-top: 1px solid #202a29
+            }
 
-        .why-list2 div {
-            display: flex;
-            gap: 16px;
-            padding: 15px 0;
-            border-bottom: 1px solid #202a29;
-            color: #c5cfcc;
-            font-size: 11px
-        }
+            .why-list2 div {
+                display: flex;
+                gap: 16px;
+                padding: 15px 0;
+                border-bottom: 1px solid #202a29;
+                color: #c5cfcc;
+                font-size: 11px
+            }
 
-        .why-list2 span {
-            color: var(--lime);
-            font-size: 8px
-        }
+            .why-list2 span {
+                color: var(--lime);
+                font-size: 8px
+            }
 
-        .why-smart .smart-kicker {
-            color: #8b9793
-        }
+            .why-smart .smart-kicker {
+                color: #8b9793
+            }
 
-        .why-smart .smart-title em {
-            color: #56635f
-        }
+            .why-smart .smart-title em {
+                color: #56635f
+            }
 
-        .why-smart .smart-copy {
-            color: #83918d
-        }
-    </style>
+            .why-smart .smart-copy {
+                color: #83918d
+            }
+        </style>
 
-    <!-- MODULE 13 — WHY ALPHA NUMERIC — JAVASCRIPT -->
-    <script>
-        // No module-specific JavaScript required.
-    </script>
+        <!-- MODULE 13 — WHY ALPHA NUMERIC — JAVASCRIPT -->
+        <script>
+            // No module-specific JavaScript required.
+        </script>
 
-    <!-- =========================================================
+        <!-- =========================================================
          MODULE 14 — FINAL CTA — HTML
     ========================================================= -->
-    <section class="iot-final-cta">
+        <section class="iot-final-cta">
             <div class="iot-shell">
                 <div class="final-card reveal">
                     <h2>Connect your assets.<span>Turn data into action.</span></h2>
@@ -3157,91 +3352,91 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </section>
 
-    <!-- MODULE 14 — FINAL CTA — CSS -->
-    <style>
-/* CTA */
-        .iot-final-cta {
-            padding: 100px 0;
-            background: #f4f7f6
-        }
+        <!-- MODULE 14 — FINAL CTA — CSS -->
+        <style>
+            /* CTA */
+            .iot-final-cta {
+                padding: 100px 0;
+                background: #f4f7f6
+            }
 
-        .final-card {
-            position: relative;
-            overflow: hidden;
-            display: grid;
-            grid-template-columns: 1.35fr .65fr;
-            gap: 80px;
-            align-items: end;
-            padding: 70px;
-            background: #07100f;
-            color: white
-        }
+            .final-card {
+                position: relative;
+                overflow: hidden;
+                display: grid;
+                grid-template-columns: 1.35fr .65fr;
+                gap: 80px;
+                align-items: end;
+                padding: 70px;
+                background: #07100f;
+                color: white
+            }
 
-        .final-card:before {
-            content: "";
-            position: absolute;
-            width: 520px;
-            height: 520px;
-            border: 1px solid rgba(141, 255, 207, .12);
-            border-radius: 50%;
-            right: -180px;
-            top: -210px
-        }
+            .final-card:before {
+                content: "";
+                position: absolute;
+                width: 520px;
+                height: 520px;
+                border: 1px solid rgba(141, 255, 207, .12);
+                border-radius: 50%;
+                right: -180px;
+                top: -210px
+            }
 
-        .final-card h2 {
-            position: relative;
-            z-index: 2;
-            margin: 0;
-            font-size: clamp(54px, 6vw, 92px);
-            font-weight: 600;
-            line-height: .9;
-            letter-spacing: -.065em
-        }
+            .final-card h2 {
+                position: relative;
+                z-index: 2;
+                margin: 0;
+                font-size: clamp(54px, 6vw, 92px);
+                font-weight: 600;
+                line-height: .9;
+                letter-spacing: -.065em
+            }
 
-        .final-card h2 span {
-            display: block;
-            color: #596763;
-            font-weight: 300
-        }
+            .final-card h2 span {
+                display: block;
+                color: #596763;
+                font-weight: 300
+            }
 
-        .final-side {
-            position: relative;
-            z-index: 2
-        }
+            .final-side {
+                position: relative;
+                z-index: 2
+            }
 
-        .final-side p {
-            color: #8c9995;
-            font-size: 12px;
-            line-height: 1.8;
-            margin-bottom: 22px
-        }
-    </style>
+            .final-side p {
+                color: #8c9995;
+                font-size: 12px;
+                line-height: 1.8;
+                margin-bottom: 22px
+            }
+        </style>
 
-    <!-- MODULE 14 — FINAL CTA — JAVASCRIPT -->
-    <script>
-        // No module-specific JavaScript required.
-    </script>
+        <!-- MODULE 14 — FINAL CTA — JAVASCRIPT -->
+        <script>
+            // No module-specific JavaScript required.
+        </script>
 
-</main>
+    </main>
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE 14A — REVEAL / SCROLL BEHAVIOR — JAVASCRIPT
 ========================================================= -->
-<script>
-(function () {
-    const els = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver(es => es.forEach(e => {
-        if (e.isIntersecting) {
-            e.target.classList.add('in');
-            io.unobserve(e.target);
-        }
-    }), { threshold: .12 });
-    els.forEach(el => io.observe(el));
-})();
-</script>
+    <script>
+        (function () {
+            const els = document.querySelectorAll('.reveal');
+            const io = new IntersectionObserver(es => es.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('in');
+                    io.unobserve(e.target);
+                }
+            }), { threshold: .12 });
+            els.forEach(el => io.observe(el));
+        })();
+    </script>
 
-     
- <!-- =========================================================
+
+    <!-- =========================================================
      ALPHA NUMERIC — PREMIUM CORPORATE WHITE FOOTER
      Sharp architectural layout | No curves | No toy styling
      Complete HTML + CSS + automatic year
@@ -3510,7 +3705,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <li><a href="sensors.html"><span>Sensors</span><i>↗</i></a></li>
                             <li><a href="controllers.html"><span>Controllers</span><i>↗</i></a></li>
                             <li><a href="gateways.html"><span>Gateways</span><i>↗</i></a></li>
-                          
+
                             <li><a href="control-panels.html"><span>Control Panels</span><i>↗</i></a></li>
                             <li><a href="panel-boards.html"><span>Panel Boards</span><i>↗</i></a></li>
                             <li><a href="switchgears.html"><span>Switchgears</span><i>↗</i></a></li>
@@ -3564,7 +3759,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     All rights reserved.
                 </p>
 
-              
+
 
                 <div class="corp-footer-bottom-links">
                     <!-- <a href="#">Privacy</a>
@@ -4673,9 +4868,10 @@ document.addEventListener("DOMContentLoaded", function () {
      ========================================================= -->
 
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE 16 — BOOTSTRAP — JAVASCRIPT
 ========================================================= -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

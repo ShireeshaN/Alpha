@@ -4,21 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Solar Energy | Alpha Numeric Innovations</title>
+
     <meta name="description"
         content="Alpha Numeric Innovations delivers tailored On-Grid, Off-Grid and Ground-Mounted solar solutions for homes, businesses, industries and infrastructure projects.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
+
         /* =========================================================
            01 — GLOBAL
         ========================================================== */
+
         :root {
             --ink: #101010;
             --muted: #6e6e6e;
@@ -102,9 +110,20 @@
 
         .section-copy {
             color: #717171;
-            font-size: 14px;
+            font-size: 17px;
             line-height: 1.9;
         }
+
+
+        /* =========================================================
+           PARAGRAPH FONT UPDATE
+           ALL PARAGRAPHS = 17PX
+        ========================================================== */
+
+        p {
+            font-size: 17px !important;
+        }
+
 
         /* =========================================================
            02 — ABOUT-STYLE NAVBAR
@@ -117,9 +136,10 @@
             z-index: 9999;
         }
 
+
         /* =========================================================
-   PRODUCTS DROPDOWN
-========================================================= */
+           PRODUCTS DROPDOWN
+        ========================================================== */
 
         .product-dropdown {
             position: relative;
@@ -127,36 +147,23 @@
 
         .product-menu {
             min-width: 240px;
-
             padding: 10px 0;
-
             margin-top: 0 !important;
-
             border: 0;
-
             border-radius: 10px;
-
             background: #000;
-
             box-shadow:
                 0 20px 55px rgba(0, 0, 0, .25);
-
             overflow: hidden;
         }
 
-        .product-menu>a {
+        .product-menu > a {
             display: block;
-
             position: relative;
-
             padding: 11px 24px;
-
             color: #bdbdbd;
-
             font-size: 13.5px;
-
             font-weight: 600;
-
             text-decoration: none;
 
             transition:
@@ -165,21 +172,14 @@
                 background .25s ease;
         }
 
-        .product-menu>a::before {
+        .product-menu > a::before {
             content: "";
-
             position: absolute;
-
             left: 12px;
-
             top: 50%;
-
             width: 5px;
-
             height: 1px;
-
             background: #666;
-
             transform: translateY(-50%);
 
             transition:
@@ -187,38 +187,32 @@
                 background .25s ease;
         }
 
-        .product-menu>a:hover {
+        .product-menu > a:hover {
             color: #fff;
-
             background: #111;
-
             padding-left: 29px;
         }
 
-        .product-menu>a:hover::before {
+        .product-menu > a:hover::before {
             width: 10px;
-
             background: #fff;
         }
 
 
         /* =========================================================
-   DESKTOP HOVER
-========================================================= */
+           DESKTOP HOVER
+        ========================================================== */
 
-        @media (min-width:992px) {
+        @media (min-width: 992px) {
 
-            .product-dropdown:hover>.product-menu {
+            .product-dropdown:hover > .product-menu {
                 display: block;
             }
 
             .product-menu {
                 display: block;
-
                 opacity: 0;
-
                 visibility: hidden;
-
                 pointer-events: none;
 
                 transition:
@@ -226,43 +220,38 @@
                     visibility .2s ease;
             }
 
-            .product-dropdown:hover>.product-menu,
-            .product-dropdown>.product-menu.show {
+            .product-dropdown:hover > .product-menu,
+            .product-dropdown > .product-menu.show {
                 opacity: 1;
-
                 visibility: visible;
-
                 pointer-events: auto;
             }
+
         }
 
 
         /* =========================================================
-   MOBILE
-========================================================= */
+           MOBILE
+        ========================================================== */
 
-        @media (max-width:991px) {
+        @media (max-width: 991px) {
 
             .product-menu {
                 position: static !important;
-
                 width: 100%;
-
                 margin: 0 !important;
-
                 border-radius: 0;
-
                 box-shadow: none;
-
                 background: #000;
             }
 
-            .product-menu>a {
+            .product-menu > a {
                 padding: 10px 22px;
-
                 color: #bdbdbd;
             }
+
         }
+
 
         .navbar-logo {
             height: 58px;
@@ -338,7 +327,7 @@
             font-weight: 600;
         }
 
-        .mega-column>a {
+        .mega-column > a {
             display: block;
             position: relative;
             padding: 9px 0 9px 16px;
@@ -348,7 +337,7 @@
             transition: .25s ease;
         }
 
-        .mega-column>a::before {
+        .mega-column > a::before {
             content: "";
             position: absolute;
             left: 0;
@@ -360,12 +349,12 @@
             transition: .25s ease;
         }
 
-        .mega-column>a:hover {
+        .mega-column > a:hover {
             color: #fff;
             padding-left: 21px;
         }
 
-        .mega-column>a:hover::before {
+        .mega-column > a:hover::before {
             width: 12px;
             background: #fff;
         }
@@ -396,39 +385,42 @@
 
         @media (min-width: 992px) {
 
-            .solution-dropdown>.mega-menu,
-            .bms-dropdown>.bms-menu {
+            .solution-dropdown > .mega-menu,
+            .bms-dropdown > .bms-menu {
                 display: block;
                 opacity: 0;
                 visibility: hidden;
                 pointer-events: none;
                 transform: translateY(6px);
-                transition: opacity .22s ease, visibility .22s ease, transform .22s ease;
+                transition:
+                    opacity .22s ease,
+                    visibility .22s ease,
+                    transform .22s ease;
             }
 
-            .solution-dropdown>.mega-menu {
+            .solution-dropdown > .mega-menu {
                 transform: translateX(-50%) translateY(6px) !important;
             }
 
-            .solution-dropdown:hover>.mega-menu,
-            .solution-dropdown>.mega-menu:hover,
-            .solution-dropdown>.mega-menu.show {
+            .solution-dropdown:hover > .mega-menu,
+            .solution-dropdown > .mega-menu:hover,
+            .solution-dropdown > .mega-menu.show {
                 opacity: 1;
                 visibility: visible;
                 pointer-events: auto;
                 transform: translateX(-50%) translateY(0) !important;
             }
 
-            .bms-dropdown:hover>.bms-menu,
-            .bms-dropdown>.bms-menu:hover,
-            .bms-dropdown>.bms-menu.show {
+            .bms-dropdown:hover > .bms-menu,
+            .bms-dropdown > .bms-menu:hover,
+            .bms-dropdown > .bms-menu.show {
                 opacity: 1;
                 visibility: visible;
                 pointer-events: auto;
                 transform: translateY(0);
             }
 
-            .solution-dropdown>.mega-menu::before {
+            .solution-dropdown > .mega-menu::before {
                 content: "";
                 position: absolute;
                 left: 0;
@@ -437,11 +429,14 @@
                 height: 18px;
                 background: transparent;
             }
+
         }
+
 
         /* =========================================================
            03 — HERO
         ========================================================== */
+
         .solar-hero {
             position: relative;
             min-height: 760px;
@@ -455,14 +450,35 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(90deg, rgba(0, 0, 0, .96) 0%, rgba(0, 0, 0, .78) 42%, rgba(0, 0, 0, .22) 78%, rgba(0, 0, 0, .08) 100%), url("assets/img/energy/solar-banner.png") center/cover no-repeat;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, .96) 0%,
+                    rgba(0, 0, 0, .78) 42%,
+                    rgba(0, 0, 0, .22) 78%,
+                    rgba(0, 0, 0, .08) 100%
+                ),
+                url("assets/img/energy/solar-banner.png")
+                center / cover no-repeat;
         }
 
         .solar-hero::after {
             content: "";
             position: absolute;
             inset: 0;
-            background-image: linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
+
+            background-image:
+                linear-gradient(
+                    rgba(255, 255, 255, .04) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255, 255, 255, .04) 1px,
+                    transparent 1px
+                );
+
             background-size: 80px 80px;
             opacity: .25;
         }
@@ -470,9 +486,14 @@
         .solar-hero-inner {
             position: relative;
             z-index: 2;
+
             min-height: 760px;
+
             display: grid;
-            grid-template-columns: minmax(0, 1.2fr) 390px;
+            grid-template-columns:
+                minmax(0, 1.2fr)
+                390px;
+
             gap: 80px;
             align-items: center;
         }
@@ -480,12 +501,18 @@
         .hero-badge {
             display: inline-flex;
             align-items: center;
+
             gap: 10px;
+
             margin-bottom: 24px;
+
             color: #d5d5d5;
+
             font-size: 10px;
             font-weight: 700;
+
             letter-spacing: 2.4px;
+
             text-transform: uppercase;
         }
 
@@ -495,92 +522,140 @@
 
         .solar-hero h1 {
             max-width: 950px;
+
             margin: 0;
-            font-size: clamp(58px, 7.2vw, 108px);
+
+            font-size:
+                clamp(58px, 7.2vw, 108px);
+
             line-height: .89;
+
             letter-spacing: -6px;
+
             font-weight: 750;
+
             text-transform: uppercase;
         }
 
         .solar-hero h1 span {
             display: block;
-            color: rgba(255, 255, 255, .55);
+
+            color:
+                rgba(255, 255, 255, .55);
+
             font-weight: 300;
         }
 
         .hero-copy {
             max-width: 700px;
+
             margin-top: 30px;
+
             color: #c4c4c4;
-            font-size: 14px;
+
+            font-size: 17px;
+
             line-height: 1.9;
         }
 
         .hero-actions {
             display: flex;
             flex-wrap: wrap;
+
             gap: 12px;
+
             margin-top: 32px;
         }
 
         .btn-solar,
         .btn-outline-light-custom {
             min-height: 54px;
+
             display: inline-flex;
+
             align-items: center;
             justify-content: center;
+
             gap: 11px;
+
             padding: 0 23px;
+
             font-size: 10px;
+
             font-weight: 800;
+
             letter-spacing: 1.4px;
+
             text-transform: uppercase;
+
             transition: .3s ease;
         }
 
         .btn-solar {
             background: var(--solar);
+
             color: #111;
+
             border: 1px solid var(--solar);
         }
 
         .btn-solar:hover {
             background: #fff;
+
             border-color: #fff;
+
             color: #111;
+
             transform: translateY(-2px);
         }
 
         .btn-outline-light-custom {
-            border: 1px solid rgba(255, 255, 255, .35);
+            border:
+                1px solid
+                rgba(255, 255, 255, .35);
+
             color: #fff;
         }
 
         .btn-outline-light-custom:hover {
             border-color: #fff;
+
             background: #fff;
+
             color: #111;
         }
 
         .hero-enquiry {
             padding: 30px;
-            background: rgba(8, 8, 8, .82);
-            border: 1px solid rgba(255, 255, 255, .17);
+
+            background:
+                rgba(8, 8, 8, .82);
+
+            border:
+                1px solid
+                rgba(255, 255, 255, .17);
+
             backdrop-filter: blur(12px);
         }
 
         .hero-enquiry small {
             color: var(--solar);
+
             font-size: 9px;
+
             font-weight: 800;
+
             letter-spacing: 2px;
+
             text-transform: uppercase;
         }
 
         .hero-enquiry h3 {
-            margin: 10px 0 22px;
+            margin:
+                10px 0 22px;
+
             font-size: 25px;
+
             line-height: 1.1;
         }
 
@@ -591,12 +666,22 @@
         .hero-field input,
         .hero-field select {
             width: 100%;
+
             height: 48px;
-            padding: 0 13px;
-            border: 1px solid #343434;
+
+            padding:
+                0 13px;
+
+            border:
+                1px solid #343434;
+
             outline: 0;
-            background: rgba(255, 255, 255, .04);
+
+            background:
+                rgba(255, 255, 255, .04);
+
             color: #fff;
+
             font-size: 11px;
         }
 
@@ -606,26 +691,40 @@
 
         .hero-submit {
             width: 100%;
+
             min-height: 50px;
+
             border: 0;
+
             background: var(--solar);
+
             color: #111;
+
             font-size: 10px;
+
             font-weight: 800;
+
             letter-spacing: 1.2px;
+
             text-transform: uppercase;
         }
 
         .hero-enquiry p {
-            margin: 14px 0 0;
+            margin:
+                14px 0 0;
+
             color: #777;
-            font-size: 9px;
+
+            font-size: 17px;
+
             line-height: 1.6;
         }
+
 
         /* =========================================================
            04 — TRUST STRIP
         ========================================================== */
+
         .trust-strip {
             background: #111;
             color: #fff;
@@ -638,204 +737,318 @@
 
         .trust-item {
             min-height: 130px;
+
             padding: 27px 28px;
-            border-right: 1px solid #2c2c2c;
+
+            border-right:
+                1px solid #2c2c2c;
+
             display: flex;
+
             flex-direction: column;
-            justify-content: space-between;
+
+            justify-content:
+                space-between;
         }
 
         .trust-item:first-child {
-            border-left: 1px solid #2c2c2c;
+            border-left:
+                1px solid #2c2c2c;
         }
 
         .trust-item span {
             color: #666;
+
             font-size: 8px;
+
             font-weight: 700;
+
             letter-spacing: 2px;
+
             text-transform: uppercase;
         }
 
         .trust-item strong {
             font-size: 16px;
+
             font-weight: 550;
         }
+
 
         /* =========================================================
            05 — INTRO
         ========================================================== */
+
         .solar-intro {
             padding: 125px 0;
+
             background: #fff;
         }
 
         .solar-intro-grid {
             display: grid;
-            grid-template-columns: minmax(0, 1fr) minmax(360px, 470px);
+
+            grid-template-columns:
+                minmax(0, 1fr)
+                minmax(360px, 470px);
+
             gap: 100px;
+
             align-items: end;
         }
 
         .solar-intro-copy p {
-            margin: 0 0 20px;
+            margin:
+                0 0 20px;
+
+            font-size: 17px;
         }
 
         .intro-points {
             margin-top: 28px;
+
             display: grid;
-            grid-template-columns: 1fr 1fr;
+
+            grid-template-columns:
+                1fr 1fr;
+
             gap: 10px;
         }
 
         .intro-point {
-            padding: 16px 18px;
-            background: var(--soft);
-            border-left: 3px solid var(--solar);
+            padding:
+                16px 18px;
+
+            background:
+                var(--soft);
+
+            border-left:
+                3px solid var(--solar);
+
             font-size: 10px;
+
             font-weight: 650;
         }
+
 
         /* =========================================================
            06 — THREE SOLAR SYSTEMS
         ========================================================== */
+
         .systems-section {
-            padding: 120px 0 130px;
-            background: var(--soft);
+            padding:
+                120px 0 130px;
+
+            background:
+                var(--soft);
         }
 
         .systems-head {
             display: grid;
-            grid-template-columns: minmax(0, 1fr) minmax(300px, 430px);
+
+            grid-template-columns:
+                minmax(0, 1fr)
+                minmax(300px, 430px);
+
             gap: 80px;
+
             align-items: end;
+
             margin-bottom: 55px;
         }
 
         .systems-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 14px;
         }
 
         .system-card {
             position: relative;
+
             min-height: 580px;
+
             overflow: hidden;
+
             background: #111;
+
             color: #fff;
         }
 
         .system-card-image {
             position: absolute;
+
             inset: 0;
+
             background-size: cover;
+
             background-position: center;
-            transition: transform .6s ease;
+
+            transition:
+                transform .6s ease;
         }
 
         .system-card:hover .system-card-image {
-            transform: scale(1.04);
+            transform:
+                scale(1.04);
         }
 
         .system-card::after {
             content: "";
+
             position: absolute;
+
             inset: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, .96) 0%, rgba(0, 0, 0, .60) 35%, rgba(0, 0, 0, .1) 72%);
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(0, 0, 0, .96) 0%,
+                    rgba(0, 0, 0, .60) 35%,
+                    rgba(0, 0, 0, .1) 72%
+                );
         }
 
         .system-card.on-grid .system-card-image {
-            background-image: url("assets/img/energy/Rooftop Solar.png");
+            background-image:
+                url("assets/img/energy/Rooftop Solar.png");
         }
 
         .system-card.off-grid .system-card-image {
-            background-image: url("assets/img/energy/Solar Power Systems.png");
+            background-image:
+                url("assets/img/energy/Solar Power Systems.png");
         }
 
         .system-card.ground .system-card-image {
-            background-image: url("assets/img/energy/industrial solar.png");
+            background-image:
+                url("assets/img/energy/industrial solar.png");
         }
 
         .system-card-content {
             position: absolute;
+
             z-index: 3;
+
             left: 30px;
+
             right: 30px;
+
             bottom: 30px;
         }
 
         .system-number {
             color: var(--solar);
+
             font-size: 9px;
+
             font-weight: 800;
+
             letter-spacing: 2px;
         }
 
         .system-card h3 {
-            margin: 12px 0 13px;
+            margin:
+                12px 0 13px;
+
             font-size: 34px;
+
             letter-spacing: -1.5px;
         }
 
         .system-card p {
             margin: 0;
+
             color: #b8b8b8;
-            font-size: 11px;
+
+            font-size: 17px;
+
             line-height: 1.75;
         }
 
         .system-tags {
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 7px;
+
             margin-top: 18px;
         }
 
         .system-tags span {
-            padding: 7px 9px;
-            border: 1px solid #4a4a4a;
+            padding:
+                7px 9px;
+
+            border:
+                1px solid #4a4a4a;
+
             color: #d5d5d5;
+
             font-size: 7px;
+
             font-weight: 700;
+
             letter-spacing: 1px;
+
             text-transform: uppercase;
         }
 
         .system-link {
             display: inline-flex;
+
             align-items: center;
+
             gap: 9px;
+
             margin-top: 20px;
+
             color: #fff;
+
             font-size: 9px;
+
             font-weight: 800;
+
             letter-spacing: 1.3px;
+
             text-transform: uppercase;
         }
+
 
         /* =========================================================
            07 — DETAILED SYSTEM BLOCKS
         ========================================================== */
+
         .solution-detail {
             padding: 125px 0;
+
             background: #fff;
         }
 
         .solution-detail:nth-of-type(even) {
             background: #0e0e0e;
+
             color: #fff;
         }
 
         .solution-detail-grid {
             display: grid;
-            grid-template-columns: minmax(0, 1.1fr) minmax(360px, .9fr);
+
+            grid-template-columns:
+                minmax(0, 1.1fr)
+                minmax(360px, .9fr);
+
             gap: 90px;
+
             align-items: center;
         }
 
         .solution-detail.reverse .solution-detail-grid {
-            grid-template-columns: minmax(360px, .9fr) minmax(0, 1.1fr);
+            grid-template-columns:
+                minmax(360px, .9fr)
+                minmax(0, 1.1fr);
         }
 
         .solution-detail.reverse .detail-visual {
@@ -848,38 +1061,56 @@
 
         .detail-visual {
             min-height: 610px;
+
             position: relative;
+
             overflow: hidden;
-            background: #ddd center/cover no-repeat;
+
+            background:
+                #ddd center / cover no-repeat;
         }
 
         .detail-visual.on {
-            background-image: url("assets/img/energy/Rooftop Solar.png");
+            background-image:
+                url("assets/img/energy/Rooftop Solar.png");
         }
 
         .detail-visual.off {
-            background-image: url("assets/img/energy/Solar Power Systems.png");
+            background-image:
+                url("assets/img/energy/Solar Power Systems.png");
         }
 
         .detail-visual.ground {
-            background-image: url("assets/img/energy/industrial solar.png");
+            background-image:
+                url("assets/img/energy/industrial solar.png");
         }
 
         .detail-badge {
             position: absolute;
+
             left: 25px;
+
             top: 25px;
-            padding: 11px 14px;
+
+            padding:
+                11px 14px;
+
             background: #fff;
+
             color: #111;
+
             font-size: 8px;
+
             font-weight: 800;
+
             letter-spacing: 1.7px;
+
             text-transform: uppercase;
         }
 
         .detail-content .section-title {
-            font-size: clamp(40px, 4.7vw, 70px);
+            font-size:
+                clamp(40px, 4.7vw, 70px);
         }
 
         .solution-detail:nth-of-type(even) .section-title {
@@ -890,21 +1121,27 @@
             color: #777;
         }
 
-        .detail-content>p {
+        .detail-content > p {
             max-width: 570px;
+
             margin-top: 25px;
+
             color: #747474;
-            font-size: 13px;
+
+            font-size: 17px;
+
             line-height: 1.9;
         }
 
-        .solution-detail:nth-of-type(even) .detail-content>p {
+        .solution-detail:nth-of-type(even) .detail-content > p {
             color: #9d9d9d;
         }
 
         .detail-feature-list {
             margin-top: 32px;
-            border-top: 1px solid var(--line);
+
+            border-top:
+                1px solid var(--line);
         }
 
         .solution-detail:nth-of-type(even) .detail-feature-list {
@@ -913,11 +1150,19 @@
 
         .detail-feature {
             display: grid;
-            grid-template-columns: 42px 1fr;
+
+            grid-template-columns:
+                42px 1fr;
+
             gap: 15px;
+
             align-items: center;
-            padding: 16px 0;
-            border-bottom: 1px solid var(--line);
+
+            padding:
+                16px 0;
+
+            border-bottom:
+                1px solid var(--line);
         }
 
         .solution-detail:nth-of-type(even) .detail-feature {
@@ -926,100 +1171,149 @@
 
         .detail-feature span {
             width: 32px;
+
             height: 32px;
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
+
             background: var(--solar);
+
             color: #111;
+
             font-size: 8px;
+
             font-weight: 800;
         }
 
         .detail-feature strong {
             font-size: 11px;
+
             font-weight: 650;
         }
 
         .best-for {
             margin-top: 28px;
-            padding: 18px 20px;
-            background: var(--soft);
-            border-left: 3px solid var(--solar);
+
+            padding:
+                18px 20px;
+
+            background:
+                var(--soft);
+
+            border-left:
+                3px solid var(--solar);
+
             color: #333;
-            font-size: 10px;
+
+            font-size: 17px;
+
             line-height: 1.7;
         }
 
         .solution-detail:nth-of-type(even) .best-for {
             background: #181818;
+
             color: #bbb;
         }
+
 
         /* =========================================================
            08 — COMPARISON
         ========================================================== */
+
         .comparison-section {
             padding: 125px 0;
-            background: var(--soft);
+
+            background:
+                var(--soft);
         }
 
         .comparison-head {
             max-width: 950px;
+
             margin-bottom: 50px;
         }
 
         .comparison-table-wrap {
             overflow-x: auto;
+
             background: #fff;
-            border: 1px solid #ddd;
+
+            border:
+                1px solid #ddd;
         }
 
         .comparison-table {
             width: 100%;
+
             min-width: 850px;
+
             border-collapse: collapse;
         }
 
         .comparison-table th,
         .comparison-table td {
-            padding: 20px 22px;
-            border-right: 1px solid #e5e5e5;
-            border-bottom: 1px solid #e5e5e5;
+            padding:
+                20px 22px;
+
+            border-right:
+                1px solid #e5e5e5;
+
+            border-bottom:
+                1px solid #e5e5e5;
+
             text-align: left;
+
             vertical-align: top;
         }
 
         .comparison-table th {
             background: #111;
+
             color: #fff;
+
             font-size: 11px;
+
             letter-spacing: 1.1px;
+
             text-transform: uppercase;
         }
 
         .comparison-table th:first-child {
-            background: var(--solar);
+            background:
+                var(--solar);
+
             color: #111;
         }
 
         .comparison-table td:first-child {
             font-weight: 700;
+
             color: #111;
         }
 
         .comparison-table td {
             color: #666;
+
             font-size: 11px;
+
             line-height: 1.6;
         }
+
 
         /* =========================================================
            09 — EPC PROCESS
         ========================================================== */
+
         .process-section {
             padding: 130px 0;
+
             background: #111;
+
             color: #fff;
         }
 
@@ -1029,9 +1323,15 @@
 
         .process-head {
             display: grid;
-            grid-template-columns: minmax(0, 1fr) minmax(300px, 430px);
+
+            grid-template-columns:
+                minmax(0, 1fr)
+                minmax(300px, 430px);
+
             gap: 80px;
+
             align-items: end;
+
             margin-bottom: 60px;
         }
 
@@ -1041,40 +1341,61 @@
 
         .process-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            border-top: 1px solid #303030;
-            border-left: 1px solid #303030;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            border-top:
+                1px solid #303030;
+
+            border-left:
+                1px solid #303030;
         }
 
         .process-card {
             min-height: 290px;
+
             padding: 28px;
-            border-right: 1px solid #303030;
-            border-bottom: 1px solid #303030;
+
+            border-right:
+                1px solid #303030;
+
+            border-bottom:
+                1px solid #303030;
+
             transition: .3s ease;
         }
 
         .process-card:hover {
             background: #fff;
+
             color: #111;
         }
 
         .process-card span {
             color: var(--solar);
+
             font-size: 9px;
+
             font-weight: 800;
+
             letter-spacing: 2px;
         }
 
         .process-card h3 {
-            margin: 75px 0 12px;
+            margin:
+                75px 0 12px;
+
             font-size: 18px;
         }
 
         .process-card p {
             margin: 0;
+
             color: #858585;
-            font-size: 10px;
+
+            font-size: 17px;
+
             line-height: 1.75;
         }
 
@@ -1082,81 +1403,124 @@
             color: #666;
         }
 
+
         /* =========================================================
            10 — APPLICATIONS
         ========================================================== */
+
         .applications-section {
             padding: 125px 0;
+
             background: #fff;
         }
 
         .applications-grid {
             margin-top: 55px;
+
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
             gap: 12px;
         }
 
         .application-card {
             min-height: 230px;
+
             padding: 28px;
-            background: var(--soft);
-            border: 1px solid #e6e6e6;
+
+            background:
+                var(--soft);
+
+            border:
+                1px solid #e6e6e6;
+
             transition: .3s ease;
         }
 
         .application-card:hover {
-            transform: translateY(-5px);
+            transform:
+                translateY(-5px);
+
             border-color: #111;
         }
 
         .application-card i {
             font-size: 24px;
+
             margin-bottom: 45px;
         }
 
         .application-card h3 {
             font-size: 15px;
+
             margin-bottom: 10px;
         }
 
         .application-card p {
             color: #747474;
-            font-size: 10px;
+
+            font-size: 17px;
+
             line-height: 1.7;
         }
+
 
         /* =========================================================
            11 — WHY ALPHA
         ========================================================== */
+
         .why-section {
             padding: 120px 0;
-            background: #f3f3ef;
+
+            background:
+                #f3f3ef;
         }
 
         .why-grid {
             display: grid;
-            grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+
+            grid-template-columns:
+                minmax(0, .9fr)
+                minmax(0, 1.1fr);
+
             gap: 90px;
+
             align-items: center;
         }
 
         .why-visual {
             min-height: 600px;
-            background: url("assets/img/energy/epc-execution.png") center/cover no-repeat;
+
+            background:
+                url("assets/img/energy/epc-execution.png")
+                center / cover no-repeat;
+
             position: relative;
         }
 
         .why-visual::after {
-            content: "BUILT FOR LASTING PERFORMANCE";
+            content:
+                "BUILT FOR LASTING PERFORMANCE";
+
             position: absolute;
+
             left: 25px;
+
             bottom: 25px;
-            padding: 12px 15px;
+
+            padding:
+                12px 15px;
+
             background: #111;
+
             color: #fff;
+
             font-size: 8px;
+
             font-weight: 800;
+
             letter-spacing: 1.7px;
         }
 
@@ -1166,109 +1530,168 @@
 
         .why-item {
             display: grid;
-            grid-template-columns: 45px 1fr;
+
+            grid-template-columns:
+                45px 1fr;
+
             gap: 15px;
-            padding: 18px 0;
-            border-bottom: 1px solid #d6d6d6;
+
+            padding:
+                18px 0;
+
+            border-bottom:
+                1px solid #d6d6d6;
         }
 
         .why-item span {
             color: #aaa;
+
             font-size: 10px;
+
             font-weight: 800;
         }
 
         .why-item strong {
             display: block;
+
             font-size: 13px;
+
             margin-bottom: 5px;
         }
 
         .why-item p {
             margin: 0;
+
             color: #777;
-            font-size: 10px;
+
+            font-size: 17px;
+
             line-height: 1.7;
         }
+
 
         /* =========================================================
            12 — FINAL CTA
         ========================================================== */
+
         .solar-cta {
             padding: 110px 0;
+
             background: #fff;
         }
 
         .solar-cta-inner {
             position: relative;
+
             overflow: hidden;
+
             min-height: 410px;
+
             display: grid;
-            grid-template-columns: 1.2fr .8fr;
+
+            grid-template-columns:
+                1.2fr .8fr;
+
             align-items: center;
+
             padding: 60px;
+
             color: #fff;
-            background: linear-gradient(90deg, rgba(0, 0, 0, .94), rgba(0, 0, 0, .45)), url("assets/img/solar-cta.jpg") center/cover no-repeat;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, .94),
+                    rgba(0, 0, 0, .45)
+                ),
+                url("assets/img/solar-cta.jpg")
+                center / cover no-repeat;
         }
 
         .solar-cta-inner h2 {
             max-width: 820px;
+
             margin: 0;
-            font-size: clamp(42px, 5.5vw, 80px);
+
+            font-size:
+                clamp(42px, 5.5vw, 80px);
+
             line-height: .95;
+
             letter-spacing: -4px;
         }
 
         .solar-cta-inner h2 span {
             color: #8b8b8b;
+
             font-weight: 300;
         }
 
         .cta-side {
             padding-left: 35px;
-            border-left: 1px solid #494949;
+
+            border-left:
+                1px solid #494949;
         }
 
         .cta-side p {
             color: #aaa;
-            font-size: 12px;
+
+            font-size: 17px;
+
             line-height: 1.85;
         }
+
 
         /* =========================================================
            13 — FOOTER
         ========================================================== */
+
         .main-footer {
             background: #050505;
+
             color: #fff;
-            padding: 75px 7% 25px;
+
+            padding:
+                75px 7% 25px;
         }
 
         .footer-logo img {
             height: 55px;
+
             width: auto;
+
             margin-bottom: 22px;
         }
 
         .footer-description {
             max-width: 370px;
+
             color: #888;
-            font-size: 12px;
+
+            font-size: 17px;
+
             line-height: 1.9;
         }
 
         .footer-heading {
             color: #fff;
+
             font-size: 12px;
+
             font-weight: 600;
+
             letter-spacing: 1.5px;
+
             margin-bottom: 22px;
         }
 
         .footer-links,
         .footer-contact {
             list-style: none;
+
             padding: 0;
+
             margin: 0;
         }
 
@@ -1279,45 +1702,66 @@
         .footer-links a,
         .footer-contact li {
             color: #888;
+
             font-size: 12px;
+
             line-height: 1.8;
         }
 
         .footer-contact li {
             display: flex;
+
             gap: 12px;
+
             margin-bottom: 15px;
         }
 
         .footer-contact i {
             width: 18px;
+
             color: #fff;
+
             margin-top: 4px;
         }
 
         .footer-bottom {
             margin-top: 55px;
+
             padding-top: 20px;
-            border-top: 1px solid #222;
+
+            border-top:
+                1px solid #222;
+
             display: flex;
-            justify-content: space-between;
+
+            justify-content:
+                space-between;
+
             gap: 20px;
+
             color: #666;
+
             font-size: 10px;
         }
 
         .footer-bottom strong {
             color: #fff;
+
             font-weight: 500;
         }
+
 
         /* =========================================================
            14 — RESPONSIVE
         ========================================================== */
+
         @media (max-width: 1100px) {
+
             .solar-hero-inner {
                 grid-template-columns: 1fr;
+
                 padding-top: 70px;
+
                 padding-bottom: 70px;
             }
 
@@ -1326,23 +1770,30 @@
             }
 
             .systems-grid {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns:
+                    1fr 1fr;
             }
 
             .system-card:last-child {
-                grid-column: 1 / -1;
+                grid-column:
+                    1 / -1;
             }
 
             .applications-grid {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns:
+                    1fr 1fr;
             }
 
             .process-grid {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns:
+                    1fr 1fr;
             }
+
         }
 
+
         @media (max-width: 991px) {
+
             .main-navbar {
                 padding: 8px 0;
             }
@@ -1353,26 +1804,47 @@
 
             .main-navbar .navbar-toggler {
                 color: #17243b;
-                border-color: rgba(23, 36, 59, .2);
+
+                border-color:
+                    rgba(23, 36, 59, .2);
             }
 
             .navbar-collapse {
-                max-height: calc(100vh - 76px);
+                max-height:
+                    calc(100vh - 76px);
+
                 overflow-y: auto;
+
                 margin-top: 10px;
-                padding: 15px 10px 22px;
-                border-top: 1px solid #edf0f5;
+
+                padding:
+                    15px 10px 22px;
+
+                border-top:
+                    1px solid #edf0f5;
+
                 background: #fff;
             }
 
             .mega-menu {
-                position: static !important;
-                transform: none !important;
+                position:
+                    static !important;
+
+                transform:
+                    none !important;
+
                 width: 100%;
-                margin: 0 !important;
+
+                margin:
+                    0 !important;
+
                 box-shadow: none;
-                border-left: 2px solid #000;
+
+                border-left:
+                    2px solid #000;
+
                 border-radius: 0;
+
                 overflow: visible;
             }
 
@@ -1382,13 +1854,18 @@
 
             .mega-column {
                 min-height: 0;
+
                 padding: 18px;
+
                 border-right: 0;
-                border-bottom: 1px solid #242424;
+
+                border-bottom:
+                    1px solid #242424;
             }
 
             .bms-dropdown .bms-menu {
                 border-radius: 0;
+
                 box-shadow: none;
             }
 
@@ -1409,15 +1886,23 @@
 
             .cta-side {
                 padding-left: 0;
+
                 padding-top: 30px;
+
                 border-left: 0;
-                border-top: 1px solid #494949;
+
+                border-top:
+                    1px solid #494949;
             }
+
         }
 
+
         @media (max-width: 767px) {
+
             .solar-container {
-                width: calc(100% - 40px);
+                width:
+                    calc(100% - 40px);
             }
 
             .solar-hero {
@@ -1426,6 +1911,7 @@
 
             .solar-hero h1 {
                 font-size: 54px;
+
                 letter-spacing: -3px;
             }
 
@@ -1445,8 +1931,11 @@
             }
 
             .trust-item {
-                border-left: 1px solid #2c2c2c;
-                border-bottom: 1px solid #2c2c2c;
+                border-left:
+                    1px solid #2c2c2c;
+
+                border-bottom:
+                    1px solid #2c2c2c;
             }
 
             .solar-intro,
@@ -1458,11 +1947,13 @@
             .why-section,
             .solar-cta {
                 padding-top: 85px;
+
                 padding-bottom: 85px;
             }
 
             .section-title {
                 font-size: 44px;
+
                 letter-spacing: -2px;
             }
 
@@ -1476,532 +1967,2140 @@
             }
 
             .solar-cta-inner {
-                padding: 38px 28px;
+                padding:
+                    38px 28px;
             }
 
             .footer-bottom {
                 flex-direction: column;
             }
+
+            p {
+                font-size: 17px !important;
+            }
+
         }
+
     </style>
+
 </head>
 
 <body>
 
+
     <!-- =========================================================
          MODULE 01 — NAVBAR
     ========================================================== -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
+
+    <nav
+        class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled"
+        id="mainNav"
+    >
+
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="index.html">
-                <img src="assets/img/lll1.png" id="logoWhite" class="navbar-logo" alt="Alpha Numeric Innovations"
-                    style="display:none;">
-                <img src="assets/img/lll1.png" id="logoDark" class="navbar-logo" alt="Alpha Numeric Innovations">
+
+            <a
+                class="navbar-brand"
+                href="index.html"
+            >
+
+                <img
+                    src="assets/img/lll1.png"
+                    id="logoWhite"
+                    class="navbar-logo"
+                    alt="Alpha Numeric Innovations"
+                    style="display:none;"
+                >
+
+                <img
+                    src="assets/img/lll1.png"
+                    id="logoDark"
+                    class="navbar-logo"
+                    alt="Alpha Numeric Innovations"
+                >
+
             </a>
 
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-                Menu <i class="fas fa-bars ms-1"></i>
+
+            <button
+                class="navbar-toggler navbar-toggler-right"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+
+                Menu
+
+                <i class="fas fa-bars ms-1"></i>
+
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
 
-                    <li class="nav-item dropdown solution-dropdown position-static">
-                        <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button"
-                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Solutions</a>
-                        <div class="dropdown-menu mega-menu" aria-labelledby="solutionsDropdown">
-                            <div class="mega-menu-inner">
-                                <div class="mega-column">
-                                    <div class="mega-heading"><span>Renewable Energy</span></div>
-                                    <a href="solar-energy.html">Solar</a>
-                                </div>
-                                <div class="mega-column">
-                                    <div class="mega-heading"><span>Power</span></div>
-                                    <a href="lt.html">LT</a>
-                                    <a href="ht.html">HT</a>
-                                    <a href="eht.html">EHT</a>
-                                    <!-- <a href="control-panels.html">Control Panels</a>
-                                    <a href="panel-boards.html">Panel Boards</a> -->
-                                </div>
-                                <div class="mega-column">
-                                    <div class="mega-heading"><span>Lighting</span></div>
-                                    <a href="residential-lighting.html">Residential Lighting</a>
-                                    <a href="commercial-lighting.html">Commercial Lighting</a>
-                                    <a href="industrial-lighting.html">Industrial Lighting</a>
-                                    <a href="outdoor-lighting.html">Outdoor Lighting</a>
-                                </div>
-                                <div class="mega-column">
-                                    <div class="mega-heading"><span>Automation</span></div>
-                                    <a href="home-automation.html">Home Automation</a>
-                                    <a href="commercial-automation.html">Commercial Automation</a>
-                                    <a href="industrial-automation.html">Industrial Automation</a>
-                                    <a href="hospital-automation.html">Hospital Automation</a>
-                                    <a href="hotel-automation.html">Hotel Automation</a>
-                                </div>
-                                <div class="mega-column">
-                                    <div class="mega-heading"><span>R&amp;D</span></div>
-                                    <!-- <a href="smart-pole-r&d.html">Smart Pole</a>
-                                    <a href="smart-bollard-r&d.html">Smart Bollard</a>
-                                    <a href="smart_conference_table.html">Smart Conference Table</a>
-                                    <a href="smart_bar_counter.html">Smart Bar Counter</a>
-                                    <a href="smart_window_leafac.html">Smart Window Leaf AC</a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+            <div
+                class="collapse navbar-collapse"
+                id="navbarResponsive"
+            >
 
-                    <li class="nav-item dropdown bms-dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="bmsDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">IoT</a>
-                        <ul class="dropdown-menu bms-menu" aria-labelledby="bmsDropdown">
-                             <li><a class="dropdown-item" href="bms.html">BMS</a></li>
-                            <li><a class="dropdown-item" href="iot.html">IoT</a></li>
-                           
-                            <li><a class="dropdown-item" href="iot_bms.html">BMS+IOT</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown product-dropdown">
+                <ul
+                    class="navbar-nav ms-auto align-items-lg-center"
+                >
 
-                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
-                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                            Products
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="index.html"
+                        >
+                            Home
                         </a>
 
-                        <div class="dropdown-menu product-menu" aria-labelledby="productsDropdown">
+                    </li>
 
-                            <a href="power-products.html">Sensors</a>
 
-                            <a href="power-products.html">Controllers</a>
+                    <li class="nav-item">
 
-                            <a href="power-products.html">Gateways</a>
+                        <a
+                            class="nav-link"
+                            href="about.html"
+                        >
+                            About
+                        </a>
 
-                          
+                    </li>
 
-                            <a href="power-products.html">Control Panels</a>
 
-                            <a href="power-products.html">Panel Boards</a>
+                    <li
+                        class="nav-item dropdown solution-dropdown position-static"
+                    >
 
-                            <a href="power-products.html">Switchgears</a>
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="solutionsDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            data-bs-auto-close="outside"
+                            aria-expanded="false"
+                        >
+                            Solutions
+                        </a>
+
+
+                        <div
+                            class="dropdown-menu mega-menu"
+                            aria-labelledby="solutionsDropdown"
+                        >
+
+                            <div class="mega-menu-inner">
+
+
+                                <div class="mega-column">
+
+                                    <div class="mega-heading">
+
+                                        <span>
+                                            Renewable Energy
+                                        </span>
+
+                                    </div>
+
+                                    <a
+                                        href="solar-energy.html"
+                                    >
+                                        Solar
+                                    </a>
+
+                                </div>
+
+
+                                <div class="mega-column">
+
+                                    <div class="mega-heading">
+
+                                        <span>
+                                            Power
+                                        </span>
+
+                                    </div>
+
+                                    <a href="lt.html">
+                                        LT
+                                    </a>
+
+                                    <a href="ht.html">
+                                        HT
+                                    </a>
+
+                                    <a href="eht.html">
+                                        EHT
+                                    </a>
+
+                                </div>
+
+
+                                <div class="mega-column">
+
+                                    <div class="mega-heading">
+
+                                        <span>
+                                            Lighting
+                                        </span>
+
+                                    </div>
+
+                                    <a
+                                        href="residential-lighting.html"
+                                    >
+                                        Residential Lighting
+                                    </a>
+
+                                    <a
+                                        href="commercial-lighting.html"
+                                    >
+                                        Commercial Lighting
+                                    </a>
+
+                                    <a
+                                        href="industrial-lighting.html"
+                                    >
+                                        Industrial Lighting
+                                    </a>
+
+                                    <a
+                                        href="outdoor-lighting.html"
+                                    >
+                                        Outdoor Lighting
+                                    </a>
+
+                                </div>
+
+
+                                <div class="mega-column">
+
+                                    <div class="mega-heading">
+
+                                        <span>
+                                            Automation
+                                        </span>
+
+                                    </div>
+
+                                    <a
+                                        href="home-automation.html"
+                                    >
+                                        Home Automation
+                                    </a>
+
+                                    <a
+                                        href="commercial-automation.html"
+                                    >
+                                        Commercial Automation
+                                    </a>
+
+                                    <a
+                                        href="industrial-automation.html"
+                                    >
+                                        Industrial Automation
+                                    </a>
+
+                                    <a
+                                        href="hospital-automation.html"
+                                    >
+                                        Hospital Automation
+                                    </a>
+
+                                    <a
+                                        href="hotel-automation.html"
+                                    >
+                                        Hotel Automation
+                                    </a>
+
+                                </div>
+
+
+                                <div class="mega-column">
+
+                                    <div class="mega-heading">
+
+                                        <span>
+                                            R&amp;D
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
 
                         </div>
 
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="why.html">Why</a></li>
-<li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+
+                    <li
+                        class="nav-item dropdown bms-dropdown"
+                    >
+
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="bmsDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            IoT
+                        </a>
+
+
+                        <ul
+                            class="dropdown-menu bms-menu"
+                            aria-labelledby="bmsDropdown"
+                        >
+
+                            <li>
+
+                                <a
+                                    class="dropdown-item"
+                                    href="bms.html"
+                                >
+                                    BMS
+                                </a>
+
+                            </li>
+
+
+                            <li>
+
+                                <a
+                                    class="dropdown-item"
+                                    href="iot.html"
+                                >
+                                    IoT
+                                </a>
+
+                            </li>
+
+
+                            <li>
+
+                                <a
+                                    class="dropdown-item"
+                                    href="iot_bms.html"
+                                >
+                                    BMS+IOT
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+                    <li
+                        class="nav-item dropdown product-dropdown"
+                    >
+
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="productsDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            data-bs-auto-close="outside"
+                            aria-expanded="false"
+                        >
+
+                            Products
+
+                        </a>
+
+
+                        <div
+                            class="dropdown-menu product-menu"
+                            aria-labelledby="productsDropdown"
+                        >
+
+                            <a href="power-products.html">
+                                Sensors
+                            </a>
+
+                            <a href="power-products.html">
+                                Controllers
+                            </a>
+
+                            <a href="power-products.html">
+                                Gateways
+                            </a>
+
+                            <a href="power-products.html">
+                                Control Panels
+                            </a>
+
+                            <a href="power-products.html">
+                                Panel Boards
+                            </a>
+
+                            <a href="power-products.html">
+                                Switchgears
+                            </a>
+
+                        </div>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="why.html"
+                        >
+                            Why
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="blogs.html"
+                        >
+                            Blogs
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="contact.html"
+                        >
+                            Contact
+                        </a>
+
+                    </li>
+
                 </ul>
+
             </div>
+
         </div>
+
     </nav>
+
 
     <!-- =========================================================
          MODULE 02 — HERO
     ========================================================== -->
+
     <header class="solar-hero">
-        <div class="solar-container solar-hero-inner">
+
+        <div
+            class="solar-container solar-hero-inner"
+        >
+
             <div>
-                <div class="hero-badge"><i class="fa-solid fa-sun"></i> Solar EPC • Rooftop • Ground Mounted</div>
-                <h1>Power Your Future.<span>With The Sun.</span></h1>
-                <p class="hero-copy">Alpha Numeric Innovations develops solar systems around your actual load, roof or
-                    land, grid availability and operational needs — from efficient On-Grid rooftops to battery-backed
-                    Off-Grid systems and large Ground-Mounted plants.</p>
-                <div class="hero-actions">
-                    <a href="#solar-systems" class="btn-solar">Explore Solar Systems <i
-                            class="fa-solid fa-arrow-right"></i></a>
-                    <a href="contact.html" class="btn-outline-light-custom">Book a Site Review</a>
+
+                <div class="hero-badge">
+
+                    <i class="fa-solid fa-sun"></i>
+
+                    Solar EPC • Rooftop • Ground Mounted
+
                 </div>
+
+
+                <h1>
+
+                    Power Your Future.
+
+                    <span>
+                        With The Sun.
+                    </span>
+
+                </h1>
+
+
+                <p class="hero-copy">
+
+                    Alpha Numeric Innovations develops solar systems around your actual load,
+                    roof or land, grid availability and operational needs — from efficient
+                    On-Grid rooftops to battery-backed Off-Grid systems and large
+                    Ground-Mounted plants.
+
+                </p>
+
+
+                <div class="hero-actions">
+
+                    <a
+                        href="#solar-systems"
+                        class="btn-solar"
+                    >
+
+                        Explore Solar Systems
+
+                        <i
+                            class="fa-solid fa-arrow-right"
+                        ></i>
+
+                    </a>
+
+
+                    <a
+                        href="contact.html"
+                        class="btn-outline-light-custom"
+                    >
+                        Book a Site Review
+                    </a>
+
+                </div>
+
             </div>
 
+
             <div class="hero-enquiry">
-                <small>Expert Solar Consultation</small>
-                <h3>Tell us about your site.</h3>
-                <div class="hero-field"><input type="text" placeholder="Name"></div>
-                <div class="hero-field"><input type="tel" placeholder="Phone number"></div>
+
+                <small>
+                    Expert Solar Consultation
+                </small>
+
+
+                <h3>
+                    Tell us about your site.
+                </h3>
+
+
                 <div class="hero-field">
-                    <select>
-                        <option selected>Choose solar system</option>
-                        <option>On-Grid Solar</option>
-                        <option>Off-Grid Solar</option>
-                        <option>Ground-Mounted Solar</option>
-                    </select>
+
+                    <input
+                        type="text"
+                        placeholder="Name"
+                    >
+
                 </div>
-                <div class="hero-field"><input type="text" placeholder="Monthly bill / connected load"></div>
-                <button class="hero-submit" type="button">Request Consultation</button>
-                <p>Site feasibility, system direction and next-step recommendation can be discussed after reviewing your
-                    requirement.</p>
+
+
+                <div class="hero-field">
+
+                    <input
+                        type="tel"
+                        placeholder="Phone number"
+                    >
+
+                </div>
+
+
+                <div class="hero-field">
+
+                    <select>
+
+                        <option selected>
+                            Choose solar system
+                        </option>
+
+                        <option>
+                            On-Grid Solar
+                        </option>
+
+                        <option>
+                            Off-Grid Solar
+                        </option>
+
+                        <option>
+                            Ground-Mounted Solar
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="hero-field">
+
+                    <input
+                        type="text"
+                        placeholder="Monthly bill / connected load"
+                    >
+
+                </div>
+
+
+                <button
+                    class="hero-submit"
+                    type="button"
+                >
+                    Request Consultation
+                </button>
+
+
+                <p>
+
+                    Site feasibility, system direction and next-step recommendation
+                    can be discussed after reviewing your requirement.
+
+                </p>
+
             </div>
+
         </div>
+
     </header>
+
 
     <!-- =========================================================
          MODULE 03 — TRUST STRIP
     ========================================================== -->
+
     <section class="trust-strip">
-        <div class="solar-container trust-grid">
-            <div class="trust-item"><span>01 / Planning</span><strong>Site-Specific Design</strong></div>
-            <div class="trust-item"><span>02 / Execution</span><strong>Complete EPC Delivery</strong></div>
-            <div class="trust-item"><span>03 / Intelligence</span><strong>Monitoring & Performance</strong></div>
-            <div class="trust-item"><span>04 / Support</span><strong>Commissioning & O&amp;M</strong></div>
+
+        <div
+            class="solar-container trust-grid"
+        >
+
+
+            <div class="trust-item">
+
+                <span>
+                    01 / Planning
+                </span>
+
+                <strong>
+                    Site-Specific Design
+                </strong>
+
+            </div>
+
+
+            <div class="trust-item">
+
+                <span>
+                    02 / Execution
+                </span>
+
+                <strong>
+                    Complete EPC Delivery
+                </strong>
+
+            </div>
+
+
+            <div class="trust-item">
+
+                <span>
+                    03 / Intelligence
+                </span>
+
+                <strong>
+                    Monitoring &amp; Performance
+                </strong>
+
+            </div>
+
+
+            <div class="trust-item">
+
+                <span>
+                    04 / Support
+                </span>
+
+                <strong>
+                    Commissioning &amp; O&amp;M
+                </strong>
+
+            </div>
+
+
         </div>
+
     </section>
+
 
     <!-- =========================================================
          MODULE 04 — INTRO
     ========================================================== -->
+
     <section class="solar-intro">
-        <div class="solar-container solar-intro-grid">
+
+        <div
+            class="solar-container solar-intro-grid"
+        >
+
             <div>
-                <span class="section-kicker">Solar Energy Solutions</span>
-                <h2 class="section-title">The right solar system starts with <span>the right design approach.</span>
+
+                <span class="section-kicker">
+
+                    Solar Energy Solutions
+
+                </span>
+
+
+                <h2 class="section-title">
+
+                    The right solar system starts with
+
+                    <span>
+                        the right design approach.
+                    </span>
+
                 </h2>
+
             </div>
-            <div class="solar-intro-copy section-copy">
-                <p>Not every site needs the same solar configuration. Grid quality, daytime consumption, backup
-                    requirement, available roof or land, tariff structure and future expansion all influence the right
-                    solution.</p>
-                <p>We simplify that decision into three core solar pathways and tailor each system for safe, practical
-                    and long-term operation.</p>
+
+
+            <div
+                class="solar-intro-copy section-copy"
+            >
+
+                <p>
+
+                    Not every site needs the same solar configuration.
+                    Grid quality, daytime consumption, backup requirement,
+                    available roof or land, tariff structure and future
+                    expansion all influence the right solution.
+
+                </p>
+
+
+                <p>
+
+                    We simplify that decision into three core solar pathways
+                    and tailor each system for safe, practical and
+                    long-term operation.
+
+                </p>
+
+
                 <div class="intro-points">
-                    <div class="intro-point">On-Grid — Savings First</div>
-                    <div class="intro-point">Off-Grid — Energy Independence</div>
-                    <div class="intro-point">Ground-Mounted — Scale & Output</div>
-                    <div class="intro-point">EPC — Design to Commissioning</div>
+
+                    <div class="intro-point">
+
+                        On-Grid — Savings First
+
+                    </div>
+
+
+                    <div class="intro-point">
+
+                        Off-Grid — Energy Independence
+
+                    </div>
+
+
+                    <div class="intro-point">
+
+                        Ground-Mounted — Scale &amp; Output
+
+                    </div>
+
+
+                    <div class="intro-point">
+
+                        EPC — Design to Commissioning
+
+                    </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
+
 
     <!-- =========================================================
          MODULE 05 — THREE SOLAR SYSTEMS
     ========================================================== -->
-    <section class="systems-section" id="solar-systems">
+
+    <section
+        class="systems-section"
+        id="solar-systems"
+    >
+
         <div class="solar-container">
+
+
             <div class="systems-head">
+
                 <div>
-                    <span class="section-kicker">Choose Your Solar Path</span>
-                    <h2 class="section-title">Three systems. <span>Three different energy goals.</span></h2>
+
+                    <span class="section-kicker">
+
+                        Choose Your Solar Path
+
+                    </span>
+
+
+                    <h2 class="section-title">
+
+                        Three systems.
+
+                        <span>
+                            Three different energy goals.
+                        </span>
+
+                    </h2>
+
                 </div>
-                <p class="section-copy">Compare the purpose of each system first. Then we specify capacity, components,
-                    layout and controls around your site.</p>
+
+
+                <p class="section-copy">
+
+                    Compare the purpose of each system first.
+                    Then we specify capacity, components,
+                    layout and controls around your site.
+
+                </p>
+
             </div>
+
 
             <div class="systems-grid">
-                <article class="system-card on-grid">
-                    <div class="system-card-image"></div>
-                    <div class="system-card-content">
-                        <span class="system-number">01 / ON-GRID</span>
-                        <h3>On-Grid Solar</h3>
-                        <p>Grid-connected solar designed primarily to reduce daytime electricity consumption and enable
-                            energy exchange with the utility network where applicable.</p>
-                        <div class="system-tags"><span>Rooftop</span><span>Grid-Tied</span><span>Net Metering
-                                Ready</span></div>
-                        <a class="system-link" href="#on-grid">Explore On-Grid <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </article>
 
-                <article class="system-card off-grid">
-                    <div class="system-card-image"></div>
-                    <div class="system-card-content">
-                        <span class="system-number">02 / OFF-GRID</span>
-                        <h3>Off-Grid Solar</h3>
-                        <p>Battery-backed solar for sites where power availability, backup continuity or independence
-                            from the utility grid is more important than grid export.</p>
-                        <div class="system-tags"><span>Battery Storage</span><span>Backup</span><span>Independent</span>
+
+                <article
+                    class="system-card on-grid"
+                >
+
+                    <div
+                        class="system-card-image"
+                    ></div>
+
+
+                    <div
+                        class="system-card-content"
+                    >
+
+                        <span class="system-number">
+
+                            01 / ON-GRID
+
+                        </span>
+
+
+                        <h3>
+                            On-Grid Solar
+                        </h3>
+
+
+                        <p>
+
+                            Grid-connected solar designed primarily
+                            to reduce daytime electricity consumption
+                            and enable energy exchange with the utility
+                            network where applicable.
+
+                        </p>
+
+
+                        <div class="system-tags">
+
+                            <span>
+                                Rooftop
+                            </span>
+
+                            <span>
+                                Grid-Tied
+                            </span>
+
+                            <span>
+                                Net Metering Ready
+                            </span>
+
                         </div>
-                        <a class="system-link" href="#off-grid">Explore Off-Grid <i
-                                class="fa-solid fa-arrow-right"></i></a>
+
+
+                        <a
+                            class="system-link"
+                            href="#on-grid"
+                        >
+
+                            Explore On-Grid
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                            ></i>
+
+                        </a>
+
                     </div>
+
                 </article>
 
-                <article class="system-card ground">
-                    <div class="system-card-image"></div>
-                    <div class="system-card-content">
-                        <span class="system-number">03 / GROUND-MOUNTED</span>
-                        <h3>Ground-Mounted Solar</h3>
-                        <p>High-capacity solar plants developed on open land for industries, campuses, captive power
-                            requirements and utility-scale or MW-class projects.</p>
-                        <div class="system-tags"><span>C&amp;I</span><span>MW Scale</span><span>Open Land</span></div>
-                        <a class="system-link" href="#ground-mounted">Explore Ground-Mounted <i
-                                class="fa-solid fa-arrow-right"></i></a>
+
+                <article
+                    class="system-card off-grid"
+                >
+
+                    <div
+                        class="system-card-image"
+                    ></div>
+
+
+                    <div
+                        class="system-card-content"
+                    >
+
+                        <span class="system-number">
+
+                            02 / OFF-GRID
+
+                        </span>
+
+
+                        <h3>
+                            Off-Grid Solar
+                        </h3>
+
+
+                        <p>
+
+                            Battery-backed solar for sites where
+                            power availability, backup continuity
+                            or independence from the utility grid
+                            is more important than grid export.
+
+                        </p>
+
+
+                        <div class="system-tags">
+
+                            <span>
+                                Battery Storage
+                            </span>
+
+                            <span>
+                                Backup
+                            </span>
+
+                            <span>
+                                Independent
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            class="system-link"
+                            href="#off-grid"
+                        >
+
+                            Explore Off-Grid
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                            ></i>
+
+                        </a>
+
                     </div>
+
                 </article>
+
+
+                <article
+                    class="system-card ground"
+                >
+
+                    <div
+                        class="system-card-image"
+                    ></div>
+
+
+                    <div
+                        class="system-card-content"
+                    >
+
+                        <span class="system-number">
+
+                            03 / GROUND-MOUNTED
+
+                        </span>
+
+
+                        <h3>
+
+                            Ground-Mounted Solar
+
+                        </h3>
+
+
+                        <p>
+
+                            High-capacity solar plants developed
+                            on open land for industries, campuses,
+                            captive power requirements and
+                            utility-scale or MW-class projects.
+
+                        </p>
+
+
+                        <div class="system-tags">
+
+                            <span>
+                                C&amp;I
+                            </span>
+
+                            <span>
+                                MW Scale
+                            </span>
+
+                            <span>
+                                Open Land
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            class="system-link"
+                            href="#ground-mounted"
+                        >
+
+                            Explore Ground-Mounted
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                            ></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
             </div>
+
         </div>
+
     </section>
+
 
     <!-- =========================================================
          MODULE 06 — ON-GRID DETAIL
     ========================================================== -->
-    <section class="solution-detail" id="on-grid">
-        <div class="solar-container solution-detail-grid">
-            <div class="detail-visual on"><span class="detail-badge">01 / ON-GRID SOLAR</span></div>
-            <div class="detail-content">
-                <span class="section-kicker">Grid Connected Solar</span>
-                <h2 class="section-title">Use solar first. <span>Use the grid when needed.</span></h2>
-                <p>On-Grid solar works together with the utility grid. Solar generation serves the connected loads
-                    during the day, while grid power supports demand whenever solar generation is insufficient. Where
-                    regulations permit, surplus energy can be exported through the applicable metering arrangement.</p>
-                <div class="detail-feature-list">
-                    <div class="detail-feature"><span>01</span><strong>Designed for electricity-bill reduction and
-                            daytime load offset</strong></div>
-                    <div class="detail-feature"><span>02</span><strong>No mandatory battery bank, keeping the
-                            architecture simpler</strong></div>
-                    <div class="detail-feature"><span>03</span><strong>Suitable for homes, offices, institutions and
-                            industrial rooftops</strong></div>
-                    <div class="detail-feature"><span>04</span><strong>Can include remote generation and inverter
-                            monitoring</strong></div>
-                </div>
-                <div class="best-for"><strong>Best for:</strong> Sites with reliable grid availability and a strong
-                    objective to reduce electricity cost through daytime solar generation.</div>
+
+    <section
+        class="solution-detail"
+        id="on-grid"
+    >
+
+        <div
+            class="solar-container solution-detail-grid"
+        >
+
+            <div
+                class="detail-visual on"
+            >
+
+                <span class="detail-badge">
+
+                    01 / ON-GRID SOLAR
+
+                </span>
+
             </div>
+
+
+            <div class="detail-content">
+
+                <span class="section-kicker">
+
+                    Grid Connected Solar
+
+                </span>
+
+
+                <h2 class="section-title">
+
+                    Use solar first.
+
+                    <span>
+
+                        Use the grid when needed.
+
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    On-Grid solar works together with the utility grid.
+                    Solar generation serves the connected loads during
+                    the day, while grid power supports demand whenever
+                    solar generation is insufficient. Where regulations
+                    permit, surplus energy can be exported through the
+                    applicable metering arrangement.
+
+                </p>
+
+
+                <div class="detail-feature-list">
+
+
+                    <div class="detail-feature">
+
+                        <span>
+                            01
+                        </span>
+
+                        <strong>
+
+                            Designed for electricity-bill reduction
+                            and daytime load offset
+
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-feature">
+
+                        <span>
+                            02
+                        </span>
+
+                        <strong>
+
+                            No mandatory battery bank,
+                            keeping the architecture simpler
+
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-feature">
+
+                        <span>
+                            03
+                        </span>
+
+                        <strong>
+
+                            Suitable for homes, offices,
+                            institutions and industrial rooftops
+
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-feature">
+
+                        <span>
+                            04
+                        </span>
+
+                        <strong>
+
+                            Can include remote generation
+                            and inverter monitoring
+
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="best-for">
+
+                    <strong>
+                        Best for:
+                    </strong>
+
+                    Sites with reliable grid availability and
+                    a strong objective to reduce electricity cost
+                    through daytime solar generation.
+
+                </div>
+
+            </div>
+
         </div>
+
     </section>
+
 
     <!-- =========================================================
          MODULE 07 — OFF-GRID DETAIL
     ========================================================== -->
-    <section class="solution-detail reverse" id="off-grid">
-        <div class="solar-container solution-detail-grid">
-            <div class="detail-visual off"><span class="detail-badge">02 / OFF-GRID SOLAR</span></div>
-            <div class="detail-content">
-                <span class="section-kicker">Independent Solar Power</span>
-                <h2 class="section-title">Generate. Store. <span>Use power when the grid cannot.</span></h2>
-                <p>Off-Grid solar combines solar generation with battery storage so the site can operate independently
-                    of the utility network. System sizing must consider load profile, autonomy hours, battery capacity
-                    and seasonal solar availability.</p>
-                <div class="detail-feature-list">
-                    <div class="detail-feature"><span>01</span><strong>Battery storage for night-time use and backup
-                            continuity</strong></div>
-                    <div class="detail-feature"><span>02</span><strong>Useful for remote locations and unreliable-grid
-                            environments</strong></div>
-                    <div class="detail-feature"><span>03</span><strong>Configured around essential loads and required
-                            backup duration</strong></div>
-                    <div class="detail-feature"><span>04</span><strong>Can support hybrid power architectures with
-                            additional sources</strong></div>
-                </div>
-                <div class="best-for"><strong>Best for:</strong> Remote sites, farms, facilities with frequent outages,
-                    critical loads and locations where dependable backup is the primary requirement.</div>
+
+    <section
+        class="solution-detail reverse"
+        id="off-grid"
+    >
+
+        <div
+            class="solar-container solution-detail-grid"
+        >
+
+            <div
+                class="detail-visual off"
+            >
+
+                <span class="detail-badge">
+
+                    02 / OFF-GRID SOLAR
+
+                </span>
+
             </div>
+
+
+            <div class="detail-content">
+
+                <span class="section-kicker">
+
+                    Independent Solar Power
+
+                </span>
+
+
+                <h2 class="section-title">
+
+                    Generate. Store.
+
+                    <span>
+
+                        Use power when the grid cannot.
+
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Off-Grid solar combines solar generation with
+                    battery storage so the site can operate independently
+                    of the utility network. System sizing must consider
+                    load profile, autonomy hours, battery capacity
+                    and seasonal solar availability.
+
+                </p>
+
+
+                <div class="detail-feature-list">
+
+
+                    <div class="detail-feature">
+
+                        <span>
+                            01
+                        </span>
+
+                        <strong>
+
+                            Battery storage for night-time use
+                            and backup continuity
+
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-feature">
+
+                        <span>
+                            02
+                        </span>
+
+                        <strong>
+
+                            Useful for remote locations
+                            and unreliable-grid environments
+
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-feature">
+
+                        <span>
+                            03
+                        </span>
+
+                        <strong>
+
+                            System capacity designed around
+                            essential and connected loads
+
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-feature">
+
+                        <span>
+                            04
+                        </span>
+
+                        <strong>
+
+                            Can integrate intelligent battery
+                            and energy management controls
+
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="best-for">
+
+                    <strong>
+                        Best for:
+                    </strong>
+
+                    Locations where dependable backup,
+                    energy independence or limited grid access
+                    makes battery-supported solar necessary.
+
+                </div>
+
+            </div>
+
         </div>
+
     </section>
+
 
     <!-- =========================================================
          MODULE 08 — GROUND-MOUNTED DETAIL
     ========================================================== -->
-    <section class="solution-detail" id="ground-mounted">
-        <div class="solar-container solution-detail-grid">
-            <div class="detail-visual ground"><span class="detail-badge">03 / GROUND-MOUNTED SOLAR</span></div>
-            <div class="detail-content">
-                <span class="section-kicker">Large-Scale Solar Plants</span>
-                <h2 class="section-title">When the project needs <span>space, scale and serious output.</span></h2>
-                <p>Ground-Mounted solar uses available land to build higher-capacity PV plants with carefully planned row
-                    spacing, tilt, access roads, evacuation planning, protection, monitoring and long-term
-                    maintainability in mind.</p>
-                <div class="detail-feature-list">
-                    <div class="detail-feature"><span>01</span><strong>Suitable for industrial captive use, campuses and
-                            MW-scale plants</strong></div>
-                    <div class="detail-feature"><span>02</span><strong>Layout optimized for land geometry, shading and
-                            energy yield</strong></div>
-                    <div class="detail-feature"><span>03</span><strong>Electrical evacuation, protection and SCADA
-                            options as required</strong></div>
-                    <div class="detail-feature"><span>04</span><strong>Designed for service access, cleaning and
-                            long-term O&amp;M</strong></div>
-                </div>
-                <div class="best-for"><strong>Best for:</strong> Industries, large institutions, developers and
-                    infrastructure projects with suitable land and higher energy demand.</div>
+
+    <section
+        class="solution-detail"
+        id="ground-mounted"
+    >
+
+        <div
+            class="solar-container solution-detail-grid"
+        >
+
+            <div
+                class="detail-visual ground"
+            >
+
+                <span class="detail-badge">
+
+                    03 / GROUND-MOUNTED SOLAR
+
+                </span>
+
             </div>
+
+
+            <div class="detail-content">
+
+                <span class="section-kicker">
+
+                    Large Scale Solar
+
+                </span>
+
+
+                <h2 class="section-title">
+
+                    Scale solar beyond the roof.
+
+                    <span>
+
+                        Build for higher generation.
+
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Ground-mounted solar plants use open land to create
+                    higher-capacity energy systems without the space
+                    constraints of rooftops. They are suitable for
+                    industrial campuses, captive generation projects,
+                    institutions and utility-scale developments.
+
+                </p>
+
+
+                <div class="detail-feature-list">
+
+
+                    <div class="detail-feature">
+
+                        <span>
+                            01
+                        </span>
+
+                        <strong>
+
+                            Suitable for high-capacity and
+                            MW-scale solar installations
+
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-feature">
+
+                        <span>
+                            02
+                        </span>
+
+                        <strong>
+
+                            Optimized module orientation,
+                            row spacing and land utilization
+
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-feature">
+
+                        <span>
+                            03
+                        </span>
+
+                        <strong>
+
+                            Designed around plant performance,
+                            electrical evacuation and safety
+
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-feature">
+
+                        <span>
+                            04
+                        </span>
+
+                        <strong>
+
+                            Suitable for captive,
+                            commercial and utility applications
+
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="best-for">
+
+                    <strong>
+                        Best for:
+                    </strong>
+
+                    Projects with sufficient land,
+                    larger generation targets and a requirement
+                    for scalable solar capacity.
+
+                </div>
+
+            </div>
+
         </div>
+
     </section>
 
+
     <!-- =========================================================
-         MODULE 09 — COMPARISON
+         COMPARISON
     ========================================================== -->
+
     <section class="comparison-section">
+
         <div class="solar-container">
+
+
             <div class="comparison-head">
-                <span class="section-kicker">Quick Comparison</span>
-                <h2 class="section-title">Which solar system <span>fits your site?</span></h2>
+
+                <span class="section-kicker">
+
+                    Solar System Comparison
+
+                </span>
+
+
+                <h2 class="section-title">
+
+                    Choose based on
+
+                    <span>
+                        how your site uses power.
+                    </span>
+
+                </h2>
+
             </div>
+
 
             <div class="comparison-table-wrap">
+
                 <table class="comparison-table">
+
                     <thead>
+
                         <tr>
-                            <th>Decision Factor</th>
-                            <th>On-Grid</th>
-                            <th>Off-Grid</th>
-                            <th>Ground-Mounted</th>
+
+                            <th>
+                                Criteria
+                            </th>
+
+                            <th>
+                                On-Grid
+                            </th>
+
+                            <th>
+                                Off-Grid
+                            </th>
+
+                            <th>
+                                Ground-Mounted
+                            </th>
+
                         </tr>
+
                     </thead>
+
+
                     <tbody>
+
                         <tr>
-                            <td>Main Objective</td>
-                            <td>Reduce grid electricity consumption and cost</td>
-                            <td>Backup and independent power availability</td>
-                            <td>Higher-capacity solar generation at scale</td>
+
+                            <td>
+                                Primary Goal
+                            </td>
+
+                            <td>
+                                Reduce grid electricity consumption
+                            </td>
+
+                            <td>
+                                Backup and energy independence
+                            </td>
+
+                            <td>
+                                Large-scale energy generation
+                            </td>
+
                         </tr>
+
+
                         <tr>
-                            <td>Grid Connection</td>
-                            <td>Required</td>
-                            <td>Not required for core operation</td>
-                            <td>Depends on captive / grid-connected project model</td>
+
+                            <td>
+                                Battery
+                            </td>
+
+                            <td>
+                                Normally not required
+                            </td>
+
+                            <td>
+                                Required
+                            </td>
+
+                            <td>
+                                Project dependent
+                            </td>
+
                         </tr>
+
+
                         <tr>
-                            <td>Battery Storage</td>
-                            <td>Usually not required</td>
-                            <td>Core part of the system</td>
-                            <td>Optional depending on project requirement</td>
+
+                            <td>
+                                Grid Dependency
+                            </td>
+
+                            <td>
+                                Grid connected
+                            </td>
+
+                            <td>
+                                Independent / limited
+                            </td>
+
+                            <td>
+                                Depends on project architecture
+                            </td>
+
                         </tr>
+
+
                         <tr>
-                            <td>Typical Site</td>
-                            <td>Homes, offices, commercial & industrial rooftops</td>
-                            <td>Remote / outage-prone sites</td>
-                            <td>Open land, industries, campuses, MW plants</td>
+
+                            <td>
+                                Typical Location
+                            </td>
+
+                            <td>
+                                Rooftops
+                            </td>
+
+                            <td>
+                                Remote / backup-sensitive sites
+                            </td>
+
+                            <td>
+                                Open land
+                            </td>
+
                         </tr>
+
+
                         <tr>
-                            <td>System Design Focus</td>
-                            <td>Roof, load profile, inverter, metering</td>
-                            <td>Load, autonomy, battery sizing, controls</td>
-                            <td>Land, layout, yield, evacuation, protection</td>
+
+                            <td>
+                                Suitable Scale
+                            </td>
+
+                            <td>
+                                Residential to industrial
+                            </td>
+
+                            <td>
+                                Small to medium
+                            </td>
+
+                            <td>
+                                Commercial to MW-scale
+                            </td>
+
                         </tr>
+
                     </tbody>
+
                 </table>
+
             </div>
+
         </div>
+
     </section>
 
+
     <!-- =========================================================
-         MODULE 10 — EPC PROCESS
+         EPC PROCESS
     ========================================================== -->
+
     <section class="process-section">
+
         <div class="solar-container">
+
+
             <div class="process-head">
+
                 <div>
-                    <span class="section-kicker">End-to-End Solar EPC</span>
-                    <h2 class="section-title">From site review to <span>live solar.</span></h2>
+
+                    <span class="section-kicker">
+
+                        Solar EPC Process
+
+                    </span>
+
+
+                    <h2 class="section-title">
+
+                        From site review
+
+                        <span>
+
+                            to commissioned system.
+
+                        </span>
+
+                    </h2>
+
                 </div>
-                <p class="section-copy">A solar plant performs well when design, procurement, execution and
-                    commissioning are treated as one connected process.</p>
+
+
+                <p class="section-copy">
+
+                    Every system is developed around actual site
+                    conditions, electrical requirements,
+                    generation objectives and safe execution.
+
+                </p>
+
             </div>
+
 
             <div class="process-grid">
-                <article class="process-card"><span>01 / REVIEW</span>
-                    <h3>Feasibility & Site Survey</h3>
-                    <p>We review electricity consumption, roof or land, shadows, access, structure and available
-                        electrical infrastructure.</p>
-                </article>
-                <article class="process-card"><span>02 / DESIGN</span>
-                    <h3>Design & System Sizing</h3>
-                    <p>Capacity, layout, inverter architecture, structures, protection and expected generation are
-                        planned around the site.</p>
-                </article>
-                <article class="process-card"><span>03 / BUILD</span>
-                    <h3>Procurement & EPC Execution</h3>
-                    <p>Equipment, mounting, electrical works, safety systems and integration are executed through a
-                        coordinated EPC workflow.</p>
-                </article>
-                <article class="process-card"><span>04 / OPERATE</span>
-                    <h3>Testing, Commissioning & Monitoring</h3>
-                    <p>The system is tested, energized, documented and handed over with monitoring and service support
-                        options.</p>
-                </article>
-            </div>
-        </div>
-    </section>
 
-    <!-- =========================================================
-         MODULE 11 — APPLICATIONS
-    ========================================================== -->
-    <section class="applications-section">
-        <div class="solar-container">
-            <span class="section-kicker">Where We Apply Solar</span>
-            <h2 class="section-title">Solar for every <span>serious energy user.</span></h2>
-            <div class="applications-grid">
-                <article class="application-card"><i class="fa-solid fa-house"></i>
-                    <h3>Residential</h3>
-                    <p>Rooftop solar for independent homes, villas and residential properties.</p>
-                </article>
-                <article class="application-card"><i class="fa-solid fa-building"></i>
-                    <h3>Commercial</h3>
-                    <p>Solar systems for offices, retail, hotels, hospitals and institutional buildings.</p>
-                </article>
-                <article class="application-card"><i class="fa-solid fa-industry"></i>
-                    <h3>Industrial</h3>
-                    <p>High-consumption rooftop and ground-mounted plants for factories and warehouses.</p>
-                </article>
-                <article class="application-card"><i class="fa-solid fa-solar-panel"></i>
-                    <h3>Large Solar Plants</h3>
-                    <p>Purpose-built ground-mounted installations for captive, developer and infrastructure applications.
+
+                <div class="process-card">
+
+                    <span>
+                        01
+                    </span>
+
+                    <h3>
+                        Site Assessment
+                    </h3>
+
+                    <p>
+
+                        Roof or land availability,
+                        shadow analysis, load profile,
+                        electrical infrastructure and
+                        project constraints are reviewed.
+
                     </p>
-                </article>
-            </div>
-        </div>
-    </section>
 
-    <!-- =========================================================
-         MODULE 12 — WHY ALPHA NUMERIC
-    ========================================================== -->
-    <section class="why-section">
-        <div class="solar-container why-grid">
-            <div class="why-visual"></div>
-            <div>
-                <span class="section-kicker">Why Alpha Numeric</span>
-                <h2 class="section-title">More than panels. <span>A complete, integrated energy system.</span></h2>
-                <div class="why-list">
-                    <div class="why-item"><span>01</span>
-                        <div><strong>Precision in Every Detail</strong>
-                            <p>System decisions are based on load, site conditions, electrical architecture and expected
-                                operation.</p>
-                        </div>
-                    </div>
-                    <div class="why-item"><span>02</span>
-                        <div><strong>Complete EPC Capability</strong>
-                            <p>Design, supply, installation, testing and commissioning are coordinated as one delivery
-                                scope.</p>
-                        </div>
-                    </div>
-                    <div class="why-item"><span>03</span>
-                        <div><strong>Electrical & Automation Integration</strong>
-                            <p>Solar can be aligned with existing power systems, monitoring, controls and broader energy
-                                infrastructure.</p>
-                        </div>
-                    </div>
-                    <div class="why-item"><span>04</span>
-                        <div><strong>Lifecycle Thinking</strong>
-                            <p>Access, safety, monitoring, maintainability and long-term performance are considered
-                                from the design stage.</p>
-                        </div>
-                    </div>
                 </div>
+
+
+                <div class="process-card">
+
+                    <span>
+                        02
+                    </span>
+
+                    <h3>
+                        Engineering
+                    </h3>
+
+                    <p>
+
+                        System capacity, module layout,
+                        inverter architecture,
+                        protection and electrical
+                        design are developed.
+
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <span>
+                        03
+                    </span>
+
+                    <h3>
+                        Installation
+                    </h3>
+
+                    <p>
+
+                        Structural work, modules,
+                        cabling, equipment and
+                        electrical integration
+                        are executed systematically.
+
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <span>
+                        04
+                    </span>
+
+                    <h3>
+                        Commissioning
+                    </h3>
+
+                    <p>
+
+                        Testing, configuration,
+                        safety verification,
+                        performance checks and
+                        final commissioning are completed.
+
+                    </p>
+
+                </div>
+
+
             </div>
+
         </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         APPLICATIONS
+    ========================================================== -->
+
+    <section class="applications-section">
+
+        <div class="solar-container">
+
+
+            <span class="section-kicker">
+
+                Applications
+
+            </span>
+
+
+            <h2 class="section-title">
+
+                Solar designed for
+
+                <span>
+                    different environments.
+                </span>
+
+            </h2>
+
+
+            <div class="applications-grid">
+
+
+                <div class="application-card">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <h3>
+                        Residential
+                    </h3>
+
+                    <p>
+
+                        Rooftop solar systems designed around
+                        household consumption, available roof area
+                        and electricity-saving objectives.
+
+                    </p>
+
+                </div>
+
+
+                <div class="application-card">
+
+                    <i class="fa-solid fa-building"></i>
+
+                    <h3>
+                        Commercial
+                    </h3>
+
+                    <p>
+
+                        Solar solutions for offices,
+                        retail facilities, institutions
+                        and commercial buildings.
+
+                    </p>
+
+                </div>
+
+
+                <div class="application-card">
+
+                    <i class="fa-solid fa-industry"></i>
+
+                    <h3>
+                        Industrial
+                    </h3>
+
+                    <p>
+
+                        Higher-capacity systems engineered
+                        for industrial loads,
+                        operating schedules and
+                        energy-cost optimization.
+
+                    </p>
+
+                </div>
+
+
+                <div class="application-card">
+
+                    <i class="fa-solid fa-solar-panel"></i>
+
+                    <h3>
+                        Large Scale
+                    </h3>
+
+                    <p>
+
+                        Ground-mounted and utility-scale
+                        installations for campuses,
+                        captive generation and
+                        high-output projects.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         WHY ALPHA NUMERIC
+    ========================================================== -->
+
+    <section class="why-section">
+
+        <div
+            class="solar-container why-grid"
+        >
+
+
+            <div class="why-visual"></div>
+
+
+            <div>
+
+                <span class="section-kicker">
+
+                    Why Alpha Numeric
+
+                </span>
+
+
+                <h2 class="section-title">
+
+                    Built around engineering.
+
+                    <span>
+
+                        Not just installation.
+
+                    </span>
+
+                </h2>
+
+
+                <div class="why-list">
+
+
+                    <div class="why-item">
+
+                        <span>
+                            01
+                        </span>
+
+                        <div>
+
+                            <strong>
+
+                                Site-Specific Engineering
+
+                            </strong>
+
+                            <p>
+
+                                System architecture is matched
+                                to real electrical loads,
+                                roof or land conditions
+                                and operating requirements.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="why-item">
+
+                        <span>
+                            02
+                        </span>
+
+                        <div>
+
+                            <strong>
+
+                                Integrated EPC Delivery
+
+                            </strong>
+
+                            <p>
+
+                                Design, procurement,
+                                installation, testing
+                                and commissioning are managed
+                                as one coordinated project.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="why-item">
+
+                        <span>
+                            03
+                        </span>
+
+                        <div>
+
+                            <strong>
+
+                                Performance Visibility
+
+                            </strong>
+
+                            <p>
+
+                                Monitoring can provide insight
+                                into generation,
+                                inverter status and
+                                system performance.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="why-item">
+
+                        <span>
+                            04
+                        </span>
+
+                        <div>
+
+                            <strong>
+
+                                Long-Term Support
+
+                            </strong>
+
+                            <p>
+
+                                Systems are designed
+                                for maintainability,
+                                operational reliability
+                                and future service requirements.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         FINAL CTA
+    ========================================================== -->
+
+    <section class="solar-cta">
+
+        <div
+            class="solar-container solar-cta-inner"
+        >
+
+
+            <div>
+
+                <span class="section-kicker">
+
+                    Start Your Solar Project
+
+                </span>
+
+
+                <h2>
+
+                    Turn available sunlight into
+
+                    <span>
+
+                        useful energy.
+
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="cta-side">
+
+                <p>
+
+                    Share your location,
+                    monthly electricity bill,
+                    connected load or available
+                    roof / land area.
+                    We can help determine
+                    the right solar direction
+                    for your site.
+
+                </p>
+
+
+                <a
+                    href="contact.html"
+                    class="btn-solar"
+                >
+
+                    Request a Consultation
+
+                    <i
+                        class="fa-solid fa-arrow-right"
+                    ></i>
+
+                </a>
+
+            </div>
+
+
+        </div>
+
     </section>
 
     <!-- =========================================================
-         MODULE 13 — CTA
-    ========================================================== -->
-    <section class="solar-cta">
-        <div class="solar-container solar-cta-inner">
-            <div>
-                <span class="section-kicker">Start Your Solar Project</span>
-                <h2>Tell us your roof, land or load. <span>We’ll define the right solar path.</span></h2>
-            </div>
-            <div class="cta-side">
-                <p>Whether your priority is bill savings, power backup or a large ground-mounted plant, start with a
-                    site-specific technical assessment.</p>
-                <a href="contact.html" class="btn-solar">Discuss Your Solar Project <i
-                        class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
-
-
-   <!-- =========================================================
      ALPHA NUMERIC — PREMIUM CORPORATE WHITE FOOTER
      Sharp architectural layout | No curves | No toy styling
      Complete HTML + CSS + automatic year
@@ -3428,24 +5527,7 @@
         document.getElementById("corpFooterYear").textContent = new Date().getFullYear();
     </script>
 
-    <!-- =========================================================
-     PREMIUM TECHNOLOGY FOOTER END
-     ========================================================= -->
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const nav = document.getElementById("mainNav");
-            const white = document.getElementById("logoWhite");
-            const dark = document.getElementById("logoDark");
-            if (nav) nav.classList.add("scrolled", "navbar-shrink");
-            if (white) white.style.display = "none";
-            if (dark) dark.style.display = "block";
-            const year = document.getElementById("year");
-            if (year) year.textContent = new Date().getFullYear();
-        });
-    </script>
 </body>
 
 </html>

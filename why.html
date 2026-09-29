@@ -45,7 +45,9 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+p {
+    font-size: 17px !important;
+}
         html {
             scroll-behavior: smooth;
         }
@@ -144,13 +146,13 @@
                         <a class="nav-link dropdown-toggle" href="#" id="bmsDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">IoT</a>
                         <ul class="dropdown-menu bms-menu" aria-labelledby="bmsDropdown">
-                             <li><a class="dropdown-item" href="bms.html">BMS</a></li>
+                            <li><a class="dropdown-item" href="bms.html">BMS</a></li>
                             <li><a class="dropdown-item" href="iot.html">IoT</a></li>
-                           
+
                             <li><a class="dropdown-item" href="iot_bms.html">BMS+IOT</a></li>
                         </ul>
                     </li>
-                   
+
                     <li class="nav-item dropdown product-dropdown">
 
                         <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
@@ -166,7 +168,7 @@
 
                             <a href="power-products.html">Gateways</a>
 
-                    
+
 
                             <a href="power-products.html">Control Panels</a>
 
@@ -178,7 +180,7 @@
 
                     </li>
                     <li class="nav-item"><a class="nav-link" href="why.html">Why</a></li>
-<li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -2575,9 +2577,10 @@
 
             .an-why-hero-overlay {
                 background:
-                    linear-gradient(90deg, rgba(5,5,5,.66) 0%, rgba(5,5,5,.38) 60%, rgba(5,5,5,.18) 100%),
-                    linear-gradient(180deg, rgba(5,5,5,.08), rgba(5,5,5,.18))
+                    linear-gradient(90deg, rgba(5, 5, 5, .66) 0%, rgba(5, 5, 5, .38) 60%, rgba(5, 5, 5, .18) 100%),
+                    linear-gradient(180deg, rgba(5, 5, 5, .08), rgba(5, 5, 5, .18))
             }
+
             .an-why-shell {
                 width: calc(100% - 40px)
             }
@@ -2613,7 +2616,8 @@
             .an-why-hero-meta div:last-child {
                 border-bottom: 0
             }
-.an-why-orbit {
+
+            .an-why-orbit {
                 padding: 22px 19px
             }
 
@@ -2846,7 +2850,7 @@
         .an-why-hero-v3 {
             --hero-x: 0px;
             --hero-y: 0px;
-            --hero-line: rgba(255,255,255,.20);
+            --hero-line: rgba(255, 255, 255, .20);
             position: relative;
             height: clamp(690px, 42.0155vw, 813px);
             min-height: 690px;
@@ -2876,7 +2880,7 @@
             object-position: center center;
             filter: brightness(.94) contrast(1.04) saturate(1.04);
             transform: translate3d(var(--hero-x), var(--hero-y), 0) scale(1.025);
-            transition: transform 1.4s cubic-bezier(.16,1,.3,1), filter .8s ease;
+            transition: transform 1.4s cubic-bezier(.16, 1, .3, 1), filter .8s ease;
             animation: anWhyBannerBreathe 14s ease-in-out infinite alternate;
             will-change: transform;
         }
@@ -2889,15 +2893,15 @@
             pointer-events: none;
             background:
                 linear-gradient(90deg,
-                    rgba(5,10,13,.80) 0%,
-                    rgba(5,10,13,.61) 24%,
-                    rgba(5,10,13,.35) 43%,
-                    rgba(5,10,13,.12) 64%,
-                    rgba(5,10,13,.035) 100%),
+                    rgba(5, 10, 13, .80) 0%,
+                    rgba(5, 10, 13, .61) 24%,
+                    rgba(5, 10, 13, .35) 43%,
+                    rgba(5, 10, 13, .12) 64%,
+                    rgba(5, 10, 13, .035) 100%),
                 linear-gradient(180deg,
-                    rgba(2,6,8,.05) 0%,
-                    rgba(2,6,8,.01) 56%,
-                    rgba(2,6,8,.31) 100%);
+                    rgba(2, 6, 8, .05) 0%,
+                    rgba(2, 6, 8, .01) 56%,
+                    rgba(2, 6, 8, .31) 100%);
         }
 
         .an-why-hero-v3 .an-why-hero-grid {
@@ -2907,11 +2911,11 @@
             opacity: .20;
             pointer-events: none;
             background-image:
-                linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px);
+                linear-gradient(rgba(255, 255, 255, .055) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, .055) 1px, transparent 1px);
             background-size: 96px 96px;
-            -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,.82), rgba(0,0,0,.18) 52%, transparent 92%);
-            mask-image: linear-gradient(90deg, rgba(0,0,0,.82), rgba(0,0,0,.18) 52%, transparent 92%);
+            -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, .82), rgba(0, 0, 0, .18) 52%, transparent 92%);
+            mask-image: linear-gradient(90deg, rgba(0, 0, 0, .82), rgba(0, 0, 0, .18) 52%, transparent 92%);
         }
 
         .an-why-hero-sweep {
@@ -2923,9 +2927,9 @@
             width: 22%;
             pointer-events: none;
             opacity: .55;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,.075), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .075), transparent);
             transform: skewX(-12deg);
-            animation: anWhyHeroSweep 8.5s cubic-bezier(.4,0,.2,1) infinite;
+            animation: anWhyHeroSweep 8.5s cubic-bezier(.4, 0, .2, 1) infinite;
         }
 
         .an-why-hero-beam {
@@ -2937,7 +2941,7 @@
             height: 1px;
             opacity: .62;
             pointer-events: none;
-            background: linear-gradient(90deg, rgba(255,255,255,.68), rgba(255,255,255,.12) 18%, transparent 72%);
+            background: linear-gradient(90deg, rgba(255, 255, 255, .68), rgba(255, 255, 255, .12) 18%, transparent 72%);
             transform-origin: left center;
             animation: anWhyBeam 5.4s ease-in-out infinite;
         }
@@ -2955,15 +2959,41 @@
         .an-why-hero-corner::after {
             content: "";
             position: absolute;
-            background: rgba(255,255,255,.72);
+            background: rgba(255, 255, 255, .72);
         }
 
-        .an-why-hero-corner::before { width: 70px; height: 1px; }
-        .an-why-hero-corner::after  { width: 1px; height: 70px; }
-        .an-why-hero-corner--tl { left: 34px; top: 32px; }
-        .an-why-hero-corner--tl::before, .an-why-hero-corner--tl::after { left:0; top:0; }
-        .an-why-hero-corner--br { right: 34px; bottom: 32px; transform: rotate(180deg); }
-        .an-why-hero-corner--br::before, .an-why-hero-corner--br::after { left:0; top:0; }
+        .an-why-hero-corner::before {
+            width: 70px;
+            height: 1px;
+        }
+
+        .an-why-hero-corner::after {
+            width: 1px;
+            height: 70px;
+        }
+
+        .an-why-hero-corner--tl {
+            left: 34px;
+            top: 32px;
+        }
+
+        .an-why-hero-corner--tl::before,
+        .an-why-hero-corner--tl::after {
+            left: 0;
+            top: 0;
+        }
+
+        .an-why-hero-corner--br {
+            right: 34px;
+            bottom: 32px;
+            transform: rotate(180deg);
+        }
+
+        .an-why-hero-corner--br::before,
+        .an-why-hero-corner--br::after {
+            left: 0;
+            top: 0;
+        }
 
         .an-why-hero-v3 .an-why-hero-layout {
             position: relative;
@@ -2982,11 +3012,11 @@
 
         .an-why-kicker--hero {
             margin-bottom: 22px;
-            color: rgba(255,255,255,.72);
+            color: rgba(255, 255, 255, .72);
         }
 
         .an-why-kicker--hero b {
-            color: rgba(255,255,255,.90);
+            color: rgba(255, 255, 255, .90);
             font-size: inherit;
             font-weight: 600;
         }
@@ -2999,40 +3029,45 @@
             line-height: .86;
             letter-spacing: -.072em;
             text-wrap: balance;
-            text-shadow: 0 18px 45px rgba(0,0,0,.18);
+            text-shadow: 0 18px 45px rgba(0, 0, 0, .18);
         }
 
-        .an-why-hero-v3 .an-why-hero-title > span {
+        .an-why-hero-v3 .an-why-hero-title>span {
             display: block;
-            color: rgba(255,255,255,.70);
+            color: rgba(255, 255, 255, .70);
             font-weight: 300;
         }
 
         .an-why-hero-v3 .an-why-hero-lead {
             max-width: 660px;
             margin: 27px 0 0;
-            color: rgba(255,255,255,.86);
+            color: rgba(255, 255, 255, .86);
             font-size: clamp(12px, .95vw, 15px);
             line-height: 1.82;
-            text-shadow: 0 8px 22px rgba(0,0,0,.15);
+            text-shadow: 0 8px 22px rgba(0, 0, 0, .15);
         }
 
         .an-why-hero-v3 .an-why-hero-meta {
             width: min(690px, 100%);
             margin-top: 30px;
-            border-top: 1px solid rgba(255,255,255,.24);
-            border-bottom: 1px solid rgba(255,255,255,.24);
-            background: rgba(4,9,12,.12);
+            border-top: 1px solid rgba(255, 255, 255, .24);
+            border-bottom: 1px solid rgba(255, 255, 255, .24);
+            background: rgba(4, 9, 12, .12);
             -webkit-backdrop-filter: blur(8px);
             backdrop-filter: blur(8px);
         }
 
         .an-why-hero-v3 .an-why-hero-meta div {
-            border-right-color: rgba(255,255,255,.18);
+            border-right-color: rgba(255, 255, 255, .18);
         }
 
-        .an-why-hero-v3 .an-why-hero-meta small { color: rgba(255,255,255,.55); }
-        .an-why-hero-v3 .an-why-hero-meta strong { color: #fff; }
+        .an-why-hero-v3 .an-why-hero-meta small {
+            color: rgba(255, 255, 255, .55);
+        }
+
+        .an-why-hero-v3 .an-why-hero-meta strong {
+            color: #fff;
+        }
 
         .an-why-hero-link {
             display: inline-flex;
@@ -3050,7 +3085,7 @@
         .an-why-hero-link i {
             width: 48px;
             height: 1px;
-            background: rgba(255,255,255,.58);
+            background: rgba(255, 255, 255, .58);
             transform-origin: left center;
             transition: width .35s ease, background .35s ease;
         }
@@ -3060,16 +3095,27 @@
             width: 34px;
             height: 34px;
             place-items: center;
-            border: 1px solid rgba(255,255,255,.35);
+            border: 1px solid rgba(255, 255, 255, .35);
             border-radius: 50%;
             font-size: 13px;
             font-weight: 400;
             transition: transform .35s ease, background .35s ease, color .35s ease;
         }
 
-        .an-why-hero-link:hover { color: #fff; }
-        .an-why-hero-link:hover i { width: 74px; background: #fff; }
-        .an-why-hero-link:hover b { background: #fff; color: #111; transform: translateY(4px); }
+        .an-why-hero-link:hover {
+            color: #fff;
+        }
+
+        .an-why-hero-link:hover i {
+            width: 74px;
+            background: #fff;
+        }
+
+        .an-why-hero-link:hover b {
+            background: #fff;
+            color: #111;
+            transform: translateY(4px);
+        }
 
         .an-why-hero-hud {
             position: absolute;
@@ -3078,7 +3124,7 @@
             top: 50%;
             width: 220px;
             padding: 18px 0 0;
-            border-top: 1px solid rgba(255,255,255,.30);
+            border-top: 1px solid rgba(255, 255, 255, .30);
             color: #fff;
             transform: translateY(-46%);
             pointer-events: none;
@@ -3088,7 +3134,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: rgba(255,255,255,.58);
+            color: rgba(255, 255, 255, .58);
             font-size: 6px;
             letter-spacing: .16em;
         }
@@ -3105,26 +3151,75 @@
             height: 5px;
             border-radius: 50%;
             background: #fff;
-            box-shadow: 0 0 0 5px rgba(255,255,255,.07), 0 0 16px rgba(255,255,255,.25);
+            box-shadow: 0 0 0 5px rgba(255, 255, 255, .07), 0 0 16px rgba(255, 255, 255, .25);
             animation: anWhyHudPulse 1.8s ease-in-out infinite;
         }
 
-        .an-why-hero-hud__main { padding: 25px 0 22px; }
-        .an-why-hero-hud__main small { display:block; color:rgba(255,255,255,.45); font-size:6px; letter-spacing:.15em; }
-        .an-why-hero-hud__main strong { display:block; margin:12px 0 8px; font-size:72px; font-weight:200; line-height:.75; letter-spacing:-.075em; }
-        .an-why-hero-hud__main span { color:rgba(255,255,255,.82); font-size:8px; letter-spacing:.13em; }
+        .an-why-hero-hud__main {
+            padding: 25px 0 22px;
+        }
 
-        .an-why-hero-hud__rail { display:grid; grid-template-columns:repeat(4,1fr); gap:5px; }
-        .an-why-hero-hud__rail i { height:2px; background:rgba(255,255,255,.22); overflow:hidden; position:relative; }
-        .an-why-hero-hud__rail i::after { content:""; position:absolute; inset:0; background:#fff; transform:scaleX(0); transform-origin:left; animation:anWhyHudRail 4.2s ease-in-out infinite; }
-        .an-why-hero-hud__rail i:nth-child(2)::after { animation-delay:.18s; }
-        .an-why-hero-hud__rail i:nth-child(3)::after { animation-delay:.36s; }
-        .an-why-hero-hud__rail i:nth-child(4)::after { animation-delay:.54s; }
+        .an-why-hero-hud__main small {
+            display: block;
+            color: rgba(255, 255, 255, .45);
+            font-size: 6px;
+            letter-spacing: .15em;
+        }
+
+        .an-why-hero-hud__main strong {
+            display: block;
+            margin: 12px 0 8px;
+            font-size: 72px;
+            font-weight: 200;
+            line-height: .75;
+            letter-spacing: -.075em;
+        }
+
+        .an-why-hero-hud__main span {
+            color: rgba(255, 255, 255, .82);
+            font-size: 8px;
+            letter-spacing: .13em;
+        }
+
+        .an-why-hero-hud__rail {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+        }
+
+        .an-why-hero-hud__rail i {
+            height: 2px;
+            background: rgba(255, 255, 255, .22);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .an-why-hero-hud__rail i::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: #fff;
+            transform: scaleX(0);
+            transform-origin: left;
+            animation: anWhyHudRail 4.2s ease-in-out infinite;
+        }
+
+        .an-why-hero-hud__rail i:nth-child(2)::after {
+            animation-delay: .18s;
+        }
+
+        .an-why-hero-hud__rail i:nth-child(3)::after {
+            animation-delay: .36s;
+        }
+
+        .an-why-hero-hud__rail i:nth-child(4)::after {
+            animation-delay: .54s;
+        }
 
         .an-why-hero-v3 .an-why-hero-foot {
             z-index: 7;
             bottom: 20px;
-            color: rgba(255,255,255,.62);
+            color: rgba(255, 255, 255, .62);
         }
 
         /* Strong left-to-right words only inside the hero. */
@@ -3136,49 +3231,131 @@
 
         .an-why-hero-v3 .why-word-reveal.is-in .why-word,
         .an-why-hero-v3 .why-reveal.is-in .why-word {
-            animation: anWhyHeroWord .86s cubic-bezier(.16,1,.3,1) forwards;
+            animation: anWhyHeroWord .86s cubic-bezier(.16, 1, .3, 1) forwards;
             animation-delay: calc(var(--word-index) * 78ms + 90ms);
         }
 
         @keyframes anWhyHeroWord {
-            0% { opacity:0; transform:translateX(-44px); filter:blur(4px); clip-path:inset(0 100% 0 0); }
-            58% { opacity:1; transform:translateX(4px); filter:blur(.3px); clip-path:inset(0 0 0 0); }
-            100% { opacity:1; transform:translateX(0); filter:blur(0); clip-path:inset(0 0 0 0); }
+            0% {
+                opacity: 0;
+                transform: translateX(-44px);
+                filter: blur(4px);
+                clip-path: inset(0 100% 0 0);
+            }
+
+            58% {
+                opacity: 1;
+                transform: translateX(4px);
+                filter: blur(.3px);
+                clip-path: inset(0 0 0 0);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+                filter: blur(0);
+                clip-path: inset(0 0 0 0);
+            }
         }
 
         @keyframes anWhyBannerBreathe {
-            0% { filter:brightness(.94) contrast(1.04) saturate(1.04); }
-            100% { filter:brightness(1.00) contrast(1.02) saturate(1.08); }
+            0% {
+                filter: brightness(.94) contrast(1.04) saturate(1.04);
+            }
+
+            100% {
+                filter: brightness(1.00) contrast(1.02) saturate(1.08);
+            }
         }
 
         @keyframes anWhyHeroSweep {
-            0%,18% { left:-30%; opacity:0; }
-            28% { opacity:.45; }
-            62% { opacity:.18; }
-            76%,100% { left:112%; opacity:0; }
+
+            0%,
+            18% {
+                left: -30%;
+                opacity: 0;
+            }
+
+            28% {
+                opacity: .45;
+            }
+
+            62% {
+                opacity: .18;
+            }
+
+            76%,
+            100% {
+                left: 112%;
+                opacity: 0;
+            }
         }
 
         @keyframes anWhyBeam {
-            0%,100% { transform:scaleX(.38); opacity:.18; }
-            50% { transform:scaleX(1); opacity:.62; }
+
+            0%,
+            100% {
+                transform: scaleX(.38);
+                opacity: .18;
+            }
+
+            50% {
+                transform: scaleX(1);
+                opacity: .62;
+            }
         }
 
         @keyframes anWhyHudPulse {
-            0%,100% { opacity:.4; transform:scale(.78); }
-            50% { opacity:1; transform:scale(1.08); }
+
+            0%,
+            100% {
+                opacity: .4;
+                transform: scale(.78);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.08);
+            }
         }
 
         @keyframes anWhyHudRail {
-            0%,16% { transform:scaleX(0); opacity:.15; }
-            40%,72% { transform:scaleX(1); opacity:.88; }
-            100% { transform:scaleX(1); opacity:.15; }
+
+            0%,
+            16% {
+                transform: scaleX(0);
+                opacity: .15;
+            }
+
+            40%,
+            72% {
+                transform: scaleX(1);
+                opacity: .88;
+            }
+
+            100% {
+                transform: scaleX(1);
+                opacity: .15;
+            }
         }
 
         @media (max-width: 1199px) {
-            .an-why-hero-v3 { height: clamp(690px, 51vw, 780px); }
-            .an-why-hero-v3 .an-why-hero-layout { grid-template-columns:minmax(0,700px) 1fr; }
-            .an-why-hero-hud { right: 32px; width: 185px; }
-            .an-why-hero-hud__main strong { font-size:58px; }
+            .an-why-hero-v3 {
+                height: clamp(690px, 51vw, 780px);
+            }
+
+            .an-why-hero-v3 .an-why-hero-layout {
+                grid-template-columns: minmax(0, 700px) 1fr;
+            }
+
+            .an-why-hero-hud {
+                right: 32px;
+                width: 185px;
+            }
+
+            .an-why-hero-hud__main strong {
+                font-size: 58px;
+            }
         }
 
         @media (max-width: 991px) {
@@ -3187,11 +3364,13 @@
                 min-height: 760px;
                 margin-top: 74px;
             }
+
             .an-why-hero-v3 .an-why-hero-layout {
                 min-height: 760px;
                 grid-template-columns: 1fr;
                 padding: 92px 0 100px;
             }
+
             .an-why-hero-hud {
                 right: 28px;
                 top: auto;
@@ -3200,7 +3379,10 @@
                 transform: none;
                 opacity: .86;
             }
-            .an-why-hero-v3 .an-why-hero-title { font-size:clamp(58px,9vw,84px); }
+
+            .an-why-hero-v3 .an-why-hero-title {
+                font-size: clamp(58px, 9vw, 84px);
+            }
         }
 
         @media (max-width: 767px) {
@@ -3208,42 +3390,88 @@
                 min-height: 760px;
                 margin-top: 70px;
             }
+
             .an-why-hero-v3 .an-why-hero-bg img {
                 object-position: 61% center;
                 filter: brightness(.90) contrast(1.02) saturate(1.05);
             }
+
             .an-why-hero-v3 .an-why-hero-overlay {
                 background:
-                    linear-gradient(90deg, rgba(5,10,13,.76) 0%, rgba(5,10,13,.52) 58%, rgba(5,10,13,.18) 100%),
-                    linear-gradient(180deg, rgba(3,7,9,.05), rgba(3,7,9,.20) 72%, rgba(3,7,9,.42));
+                    linear-gradient(90deg, rgba(5, 10, 13, .76) 0%, rgba(5, 10, 13, .52) 58%, rgba(5, 10, 13, .18) 100%),
+                    linear-gradient(180deg, rgba(3, 7, 9, .05), rgba(3, 7, 9, .20) 72%, rgba(3, 7, 9, .42));
             }
+
             .an-why-hero-v3 .an-why-hero-layout {
                 min-height: 760px;
                 padding: 76px 0 120px;
                 align-items: start;
             }
-            .an-why-hero-v3 .an-why-hero-copy { padding-right:0; }
-            .an-why-hero-v3 .an-why-hero-title { font-size:clamp(52px,15vw,72px); }
-            .an-why-hero-v3 .an-why-hero-lead { max-width:94%; font-size:12px; }
-            .an-why-hero-v3 .an-why-hero-meta { grid-template-columns:1fr; max-width:330px; }
+
+            .an-why-hero-v3 .an-why-hero-copy {
+                padding-right: 0;
+            }
+
+            .an-why-hero-v3 .an-why-hero-title {
+                font-size: clamp(52px, 15vw, 72px);
+            }
+
+            .an-why-hero-v3 .an-why-hero-lead {
+                max-width: 94%;
+                font-size: 12px;
+            }
+
+            .an-why-hero-v3 .an-why-hero-meta {
+                grid-template-columns: 1fr;
+                max-width: 330px;
+            }
+
             .an-why-hero-v3 .an-why-hero-meta div,
             .an-why-hero-v3 .an-why-hero-meta div:nth-child(2),
             .an-why-hero-v3 .an-why-hero-meta div:last-child {
-                padding:12px 0;
-                border-right:0;
-                border-bottom:1px solid rgba(255,255,255,.16);
+                padding: 12px 0;
+                border-right: 0;
+                border-bottom: 1px solid rgba(255, 255, 255, .16);
             }
-            .an-why-hero-v3 .an-why-hero-meta div:last-child { border-bottom:0; }
-            .an-why-hero-hud { display:none; }
-            .an-why-hero-corner { width:42px; height:42px; }
-            .an-why-hero-corner::before { width:42px; }
-            .an-why-hero-corner::after { height:42px; }
-            .an-why-hero-corner--tl { left:16px; top:16px; }
-            .an-why-hero-corner--br { right:16px; bottom:16px; }
-            .an-why-hero-v3 .an-why-hero-foot { display:none; }
+
+            .an-why-hero-v3 .an-why-hero-meta div:last-child {
+                border-bottom: 0;
+            }
+
+            .an-why-hero-hud {
+                display: none;
+            }
+
+            .an-why-hero-corner {
+                width: 42px;
+                height: 42px;
+            }
+
+            .an-why-hero-corner::before {
+                width: 42px;
+            }
+
+            .an-why-hero-corner::after {
+                height: 42px;
+            }
+
+            .an-why-hero-corner--tl {
+                left: 16px;
+                top: 16px;
+            }
+
+            .an-why-hero-corner--br {
+                right: 16px;
+                bottom: 16px;
+            }
+
+            .an-why-hero-v3 .an-why-hero-foot {
+                display: none;
+            }
         }
 
         @media (prefers-reduced-motion: reduce) {
+
             .an-why-hero-v3 .an-why-hero-bg img,
             .an-why-hero-sweep,
             .an-why-hero-beam,
@@ -3251,7 +3479,10 @@
             .an-why-hero-hud__rail i::after {
                 animation: none !important;
             }
-            .an-why-hero-v3 .an-why-hero-bg img { transform:scale(1.01) !important; }
+
+            .an-why-hero-v3 .an-why-hero-bg img {
+                transform: scale(1.01) !important;
+            }
         }
     </style>
 
@@ -3282,7 +3513,7 @@
             });
         });
     </script>
-  <!-- =========================================================
+    <!-- =========================================================
      ALPHA NUMERIC — PREMIUM CORPORATE WHITE FOOTER
      Sharp architectural layout | No curves | No toy styling
      Complete HTML + CSS + automatic year
@@ -3551,7 +3782,7 @@
                             <li><a href="sensors.html"><span>Sensors</span><i>↗</i></a></li>
                             <li><a href="controllers.html"><span>Controllers</span><i>↗</i></a></li>
                             <li><a href="gateways.html"><span>Gateways</span><i>↗</i></a></li>
-                          
+
                             <li><a href="control-panels.html"><span>Control Panels</span><i>↗</i></a></li>
                             <li><a href="panel-boards.html"><span>Panel Boards</span><i>↗</i></a></li>
                             <li><a href="switchgears.html"><span>Switchgears</span><i>↗</i></a></li>
@@ -3605,7 +3836,7 @@
                     All rights reserved.
                 </p>
 
-              
+
 
                 <div class="corp-footer-bottom-links">
                     <!-- <a href="#">Privacy</a>

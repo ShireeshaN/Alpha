@@ -20,21 +20,22 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
 
 
 </head>
+
 <body>
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE — GLOBAL BASE STYLES
 ========================================================= -->
 
-<!-- CSS -->
-<style>
+    <!-- CSS -->
+    <style>
         /* =====================================================
            GLOBAL
         ===================================================== */
@@ -43,6 +44,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        p {
+            font-size: 17px !important;
         }
 
         html {
@@ -63,23 +68,24 @@
         img {
             max-width: 100%;
         }
-</style>
+    </style>
 
-<!-- END MODULE — GLOBAL BASE STYLES -->
+    <!-- END MODULE — GLOBAL BASE STYLES -->
 
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE — NAVBAR
 ========================================================= -->
 
-<!-- HTML -->
+    <!-- HTML -->
     <!-- =========================================================
          PREMIUM GLOBAL NAVIGATION
     ========================================================= -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/img/lll1.png" id="logoWhite" class="navbar-logo" alt="Alpha Numeric Innovations" style="display:none;">
+                <img src="assets/img/lll1.png" id="logoWhite" class="navbar-logo" alt="Alpha Numeric Innovations"
+                    style="display:none;">
                 <img src="assets/img/lll1.png" id="logoDark" class="navbar-logo" alt="Alpha Numeric Innovations">
             </a>
 
@@ -144,56 +150,50 @@
 
                     <li class="nav-item dropdown bms-dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="bmsDropdown" role="button"
-                           data-bs-toggle="dropdown" aria-expanded="false">IoT</a>
+                            data-bs-toggle="dropdown" aria-expanded="false">IoT</a>
                         <ul class="dropdown-menu bms-menu" aria-labelledby="bmsDropdown">
                             <li><a class="dropdown-item" href="bms.html">BMS</a></li>
                             <li><a class="dropdown-item" href="iot.html">IoT</a></li>
-                            
+
                             <li><a class="dropdown-item" href="iot_bms.html">BMS+IOT</a></li>
                         </ul>
                     </li>
-    <li class="nav-item dropdown product-dropdown">              
+                    <li class="nav-item dropdown product-dropdown">
 
-    <a class="nav-link dropdown-toggle"
-       href="#"
-       id="productsDropdown"
-       role="button"
-       data-bs-toggle="dropdown"
-       data-bs-auto-close="outside"
-       aria-expanded="false">
-        Products
-    </a>
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
+                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            Products
+                        </a>
 
-    <div class="dropdown-menu product-menu"
-         aria-labelledby="productsDropdown">
+                        <div class="dropdown-menu product-menu" aria-labelledby="productsDropdown">
 
-        <a href="power-products.html">Sensors</a>
+                            <a href="power-products.html">Sensors</a>
 
-        <a href="power-products.html">Controllers</a>
+                            <a href="power-products.html">Controllers</a>
 
-        <a href="power-products.html">Gateways</a>
+                            <a href="power-products.html">Gateways</a>
 
-       
 
-        <a href="power-products.html">Control Panels</a>
 
-        <a href="power-products.html">Panel Boards</a>
+                            <a href="power-products.html">Control Panels</a>
 
-        <a href="power-products.html">Switchgears</a>
+                            <a href="power-products.html">Panel Boards</a>
 
-    </div>
+                            <a href="power-products.html">Switchgears</a>
 
-</li>
-<li class="nav-item"><a class="nav-link" href="why.html">Why</a></li>
-<li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+                        </div>
+
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="why.html">Why</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-<!-- CSS -->
-<style>
+    <!-- CSS -->
+    <style>
         /* =====================================================
            GLOBAL
         ===================================================== */
@@ -222,29 +222,144 @@
         img {
             max-width: 100%;
         }
+
         /* =====================================================
            PREMIUM GLOBAL NAVBAR
         ===================================================== */
 
-        .main-navbar { padding: 13px 0; background: transparent; transition: background .35s ease, padding .35s ease, box-shadow .35s ease; z-index: 9999; }
-        .main-navbar.navbar-shrink, .main-navbar.scrolled { background: #fff; padding: 8px 0; box-shadow: 0 8px 35px rgba(14,29,57,.08); }
-        .navbar-logo { height: 68px; width: auto; object-fit: contain; transition: height .3s ease; }
-        .main-navbar.navbar-shrink .navbar-logo, .main-navbar.scrolled .navbar-logo { height: 58px; }
-        .main-navbar .nav-link { position: relative; color: #fff; font-size: 14px; font-weight: 600; letter-spacing: .4px; margin: 0 5px; padding: 12px 11px !important; transition: color .3s ease; }
-        .main-navbar.navbar-shrink .nav-link, .main-navbar.scrolled .nav-link { color: #16243b; }
-        .main-navbar .nav-link:hover, .main-navbar .nav-link:focus { color: #4d73be; }
+        .main-navbar {
+            padding: 13px 0;
+            background: transparent;
+            transition: background .35s ease, padding .35s ease, box-shadow .35s ease;
+            z-index: 9999;
+        }
 
-        .solution-dropdown { position: static !important; }
-        .mega-menu { position: absolute !important; width: min(1380px, calc(100vw - 48px)); left: 50% !important; top: 100% !important; transform: translateX(-50%) !important; margin-top: 0 !important; padding: 0; border: 0; border-radius: 14px; background: #fff; box-shadow: 0 24px 70px rgba(14,29,57,.18); overflow: hidden; }
-        .mega-menu-inner { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); }
-        .mega-column { min-height: 270px; padding: 30px 30px 32px; border-right: 1px solid #e8edf5; background: #fff; }
-        .mega-column:last-child { border-right: 0; }
-        .mega-heading { display: flex; align-items: center; gap: 11px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid #edf1f7; color: #17243b; font-family: "Varela Round", sans-serif; font-size: 16px; font-weight: 600; }
-        .mega-heading i { width: 22px; color: #4d73be; font-size: 17px; }
-        .mega-column > a { display: block; position: relative; padding: 9px 0 9px 16px; color: #5d687b; font-size: 13.5px; font-weight: 600; text-decoration: none; transition: color .25s ease, padding .25s ease; }
-        .mega-column > a::before { content: ""; position: absolute; left: 0; top: 50%; width: 6px; height: 1px; background: #9eabc0; transform: translateY(-50%); transition: width .25s ease, background .25s ease; }
-        .mega-column > a:hover { color: #334a85; padding-left: 21px; }
-        .mega-column > a:hover::before { width: 12px; background: #4d73be; }
+        .main-navbar.navbar-shrink,
+        .main-navbar.scrolled {
+            background: #fff;
+            padding: 8px 0;
+            box-shadow: 0 8px 35px rgba(14, 29, 57, .08);
+        }
+
+        .navbar-logo {
+            height: 68px;
+            width: auto;
+            object-fit: contain;
+            transition: height .3s ease;
+        }
+
+        .main-navbar.navbar-shrink .navbar-logo,
+        .main-navbar.scrolled .navbar-logo {
+            height: 58px;
+        }
+
+        .main-navbar .nav-link {
+            position: relative;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: .4px;
+            margin: 0 5px;
+            padding: 12px 11px !important;
+            transition: color .3s ease;
+        }
+
+        .main-navbar.navbar-shrink .nav-link,
+        .main-navbar.scrolled .nav-link {
+            color: #16243b;
+        }
+
+        .main-navbar .nav-link:hover,
+        .main-navbar .nav-link:focus {
+            color: #4d73be;
+        }
+
+        .solution-dropdown {
+            position: static !important;
+        }
+
+        .mega-menu {
+            position: absolute !important;
+            width: min(1380px, calc(100vw - 48px));
+            left: 50% !important;
+            top: 100% !important;
+            transform: translateX(-50%) !important;
+            margin-top: 0 !important;
+            padding: 0;
+            border: 0;
+            border-radius: 14px;
+            background: #fff;
+            box-shadow: 0 24px 70px rgba(14, 29, 57, .18);
+            overflow: hidden;
+        }
+
+        .mega-menu-inner {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+        }
+
+        .mega-column {
+            min-height: 270px;
+            padding: 30px 30px 32px;
+            border-right: 1px solid #e8edf5;
+            background: #fff;
+        }
+
+        .mega-column:last-child {
+            border-right: 0;
+        }
+
+        .mega-heading {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            margin-bottom: 18px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid #edf1f7;
+            color: #17243b;
+            font-family: "Varela Round", sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .mega-heading i {
+            width: 22px;
+            color: #4d73be;
+            font-size: 17px;
+        }
+
+        .mega-column>a {
+            display: block;
+            position: relative;
+            padding: 9px 0 9px 16px;
+            color: #5d687b;
+            font-size: 13.5px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color .25s ease, padding .25s ease;
+        }
+
+        .mega-column>a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 6px;
+            height: 1px;
+            background: #9eabc0;
+            transform: translateY(-50%);
+            transition: width .25s ease, background .25s ease;
+        }
+
+        .mega-column>a:hover {
+            color: #334a85;
+            padding-left: 21px;
+        }
+
+        .mega-column>a:hover::before {
+            width: 12px;
+            background: #4d73be;
+        }
 
         /* BMS DROPDOWN */
         .bms-dropdown .bms-menu {
@@ -254,7 +369,7 @@
             border: 1px solid #1f1f1f;
             border-radius: 10px;
             background: #000000;
-            box-shadow: 0 18px 45px rgba(0,0,0,.24);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, .24);
         }
 
         .bms-dropdown .bms-menu .dropdown-item {
@@ -274,8 +389,9 @@
         }
 
         @media (min-width: 992px) {
+
             /* BMS dropdown: open on hover and stay open while hovering menu */
-            .bms-dropdown > .bms-menu {
+            .bms-dropdown>.bms-menu {
                 display: block;
                 opacity: 0;
                 visibility: hidden;
@@ -284,16 +400,16 @@
                 transition: opacity .22s ease, visibility .22s ease, transform .22s ease;
             }
 
-            .bms-dropdown:hover > .bms-menu,
-            .bms-dropdown > .bms-menu:hover,
-            .bms-dropdown > .bms-menu.show {
+            .bms-dropdown:hover>.bms-menu,
+            .bms-dropdown>.bms-menu:hover,
+            .bms-dropdown>.bms-menu.show {
                 opacity: 1;
                 visibility: visible;
                 pointer-events: auto;
                 transform: translateY(0);
             }
 
-            .solution-dropdown > .mega-menu {
+            .solution-dropdown>.mega-menu {
                 opacity: 0;
                 visibility: hidden;
                 pointer-events: none;
@@ -301,16 +417,16 @@
                 transition: opacity .22s ease, visibility .22s ease;
             }
 
-            .solution-dropdown:hover > .mega-menu,
-            .solution-dropdown.mega-open > .mega-menu,
-            .solution-dropdown > .mega-menu.show {
+            .solution-dropdown:hover>.mega-menu,
+            .solution-dropdown.mega-open>.mega-menu,
+            .solution-dropdown>.mega-menu.show {
                 opacity: 1;
                 visibility: visible;
                 pointer-events: auto;
             }
 
             /* Invisible hover bridge between Solutions and mega menu */
-            .solution-dropdown > .mega-menu::before {
+            .solution-dropdown>.mega-menu::before {
                 content: "";
                 position: absolute;
                 left: 0;
@@ -322,44 +438,121 @@
         }
 
         @media (max-width: 991px) {
-            .main-navbar { background: #fff; padding: 8px 0; }
-            .navbar-logo { height: 55px; }
-            #logoWhite { display: none !important; }
-            #logoDark { display: block !important; }
-            .main-navbar .navbar-toggler { color: #17243b; border-color: rgba(23,36,59,.2); }
-            .main-navbar .nav-link { color: #17243b; padding: 12px 7px !important; margin: 1px 0; }
-            .navbar-collapse { max-height: calc(100vh - 76px); overflow-y: auto; margin-top: 10px; padding: 15px 10px 22px; border-top: 1px solid #edf0f5; background: #fff; }
-            .mega-menu { position: static !important; transform: none !important; width: 100%; margin: 0 !important; box-shadow: none; border-left: 2px solid #334a85; border-radius: 0; overflow: visible; }
-            .mega-menu-inner { grid-template-columns: 1fr; }
-            .mega-column { min-height: 0; padding: 18px 18px 14px; border-right: 0; border-bottom: 1px solid #edf0f5; }
-            .mega-column:last-child { border-bottom: 0; }
-            .mega-heading { margin-bottom: 8px; padding-bottom: 10px; }
-            .mega-column > a { padding-top: 7px; padding-bottom: 7px; }
+            .main-navbar {
+                background: #fff;
+                padding: 8px 0;
+            }
+
+            .navbar-logo {
+                height: 55px;
+            }
+
+            #logoWhite {
+                display: none !important;
+            }
+
+            #logoDark {
+                display: block !important;
+            }
+
+            .main-navbar .navbar-toggler {
+                color: #17243b;
+                border-color: rgba(23, 36, 59, .2);
+            }
+
+            .main-navbar .nav-link {
+                color: #17243b;
+                padding: 12px 7px !important;
+                margin: 1px 0;
+            }
+
+            .navbar-collapse {
+                max-height: calc(100vh - 76px);
+                overflow-y: auto;
+                margin-top: 10px;
+                padding: 15px 10px 22px;
+                border-top: 1px solid #edf0f5;
+                background: #fff;
+            }
+
+            .mega-menu {
+                position: static !important;
+                transform: none !important;
+                width: 100%;
+                margin: 0 !important;
+                box-shadow: none;
+                border-left: 2px solid #334a85;
+                border-radius: 0;
+                overflow: visible;
+            }
+
+            .mega-menu-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .mega-column {
+                min-height: 0;
+                padding: 18px 18px 14px;
+                border-right: 0;
+                border-bottom: 1px solid #edf0f5;
+            }
+
+            .mega-column:last-child {
+                border-bottom: 0;
+            }
+
+            .mega-heading {
+                margin-bottom: 8px;
+                padding-bottom: 10px;
+            }
+
+            .mega-column>a {
+                padding-top: 7px;
+                padding-bottom: 7px;
+            }
         }
 
 
         /* ABOUT PAGE: keep Index navbar in permanent white/scrolled state */
-       
+
         .main-navbar {
             background: #fff;
             padding: 8px 0;
-            box-shadow: 0 8px 35px rgba(14,29,57,.08);
+            box-shadow: 0 8px 35px rgba(14, 29, 57, .08);
         }
-        .main-navbar .navbar-logo { height: 58px; }
-        .main-navbar .nav-link { color: #16243b; }
-        #logoWhite { display: none !important; }
-        #logoDark { display: block !important; }
+
+        .main-navbar .navbar-logo {
+            height: 58px;
+        }
+
+        .main-navbar .nav-link {
+            color: #16243b;
+        }
+
+        #logoWhite {
+            display: none !important;
+        }
+
+        #logoDark {
+            display: block !important;
+        }
+
         .main-navbar .nav-contact {
             background: #334a85;
             border-color: #334a85;
             color: #fff !important;
         }
+
         .main-navbar .nav-contact:hover {
             background: #17243b;
             border-color: #17243b;
             color: #fff !important;
         }
-        .main-navbar .nav-link.active { color: #4d73be; }
+
+        .main-navbar .nav-link.active {
+            color: #4d73be;
+        }
+
         .main-navbar .nav-link.active:not(.nav-contact)::after {
             width: calc(100% - 24px);
         }
@@ -368,515 +561,1423 @@
    PRODUCTS DROPDOWN
 ========================================================= */
 
-.product-dropdown{
-    position:relative;
-}
+        .product-dropdown {
+            position: relative;
+        }
 
-.product-menu{
-    min-width:240px;
+        .product-menu {
+            min-width: 240px;
 
-    padding:10px 0;
+            padding: 10px 0;
 
-    margin-top:0!important;
+            margin-top: 0 !important;
 
-    border:0;
+            border: 0;
 
-    border-radius:10px;
+            border-radius: 10px;
 
-    background:#000;
+            background: #000;
 
-    box-shadow:
-        0 20px 55px rgba(0,0,0,.25);
+            box-shadow:
+                0 20px 55px rgba(0, 0, 0, .25);
 
-    overflow:hidden;
-}
+            overflow: hidden;
+        }
 
-.product-menu > a{
-    display:block;
+        .product-menu>a {
+            display: block;
 
-    position:relative;
+            position: relative;
 
-    padding:11px 24px;
+            padding: 11px 24px;
 
-    color:#bdbdbd;
+            color: #bdbdbd;
 
-    font-size:13.5px;
+            font-size: 13.5px;
 
-    font-weight:600;
+            font-weight: 600;
 
-    text-decoration:none;
+            text-decoration: none;
 
-    transition:
-        color .25s ease,
-        padding-left .25s ease,
-        background .25s ease;
-}
+            transition:
+                color .25s ease,
+                padding-left .25s ease,
+                background .25s ease;
+        }
 
-.product-menu > a::before{
-    content:"";
+        .product-menu>a::before {
+            content: "";
 
-    position:absolute;
+            position: absolute;
 
-    left:12px;
+            left: 12px;
 
-    top:50%;
+            top: 50%;
 
-    width:5px;
+            width: 5px;
 
-    height:1px;
+            height: 1px;
 
-    background:#666;
+            background: #666;
 
-    transform:translateY(-50%);
+            transform: translateY(-50%);
 
-    transition:
-        width .25s ease,
-        background .25s ease;
-}
+            transition:
+                width .25s ease,
+                background .25s ease;
+        }
 
-.product-menu > a:hover{
-    color:#fff;
+        .product-menu>a:hover {
+            color: #fff;
 
-    background:#111;
+            background: #111;
 
-    padding-left:29px;
-}
+            padding-left: 29px;
+        }
 
-.product-menu > a:hover::before{
-    width:10px;
+        .product-menu>a:hover::before {
+            width: 10px;
 
-    background:#fff;
-}
+            background: #fff;
+        }
 
 
-/* =========================================================
+        /* =========================================================
    DESKTOP HOVER
 ========================================================= */
 
-@media (min-width:992px){
+        @media (min-width:992px) {
 
-    .product-dropdown:hover > .product-menu{
-        display:block;
-    }
+            .product-dropdown:hover>.product-menu {
+                display: block;
+            }
 
-    .product-menu{
-        display:block;
+            .product-menu {
+                display: block;
 
-        opacity:0;
+                opacity: 0;
 
-        visibility:hidden;
+                visibility: hidden;
 
-        pointer-events:none;
+                pointer-events: none;
 
-        transition:
-            opacity .2s ease,
-            visibility .2s ease;
-    }
+                transition:
+                    opacity .2s ease,
+                    visibility .2s ease;
+            }
 
-    .product-dropdown:hover > .product-menu,
-    .product-dropdown > .product-menu.show{
-        opacity:1;
+            .product-dropdown:hover>.product-menu,
+            .product-dropdown>.product-menu.show {
+                opacity: 1;
 
-        visibility:visible;
+                visibility: visible;
 
-        pointer-events:auto;
-    }
-}
+                pointer-events: auto;
+            }
+        }
 
 
-/* =========================================================
+        /* =========================================================
    MOBILE
 ========================================================= */
 
-@media (max-width:991px){
+        @media (max-width:991px) {
 
-    .product-menu{
-        position:static!important;
+            .product-menu {
+                position: static !important;
 
-        width:100%;
+                width: 100%;
 
-        margin:0!important;
+                margin: 0 !important;
 
-        border-radius:0;
+                border-radius: 0;
 
-        box-shadow:none;
+                box-shadow: none;
 
-        background:#000;
-    }
+                background: #000;
+            }
 
-    .product-menu > a{
-        padding:10px 22px;
+            .product-menu>a {
+                padding: 10px 22px;
 
-        color:#bdbdbd;
-    }
-}
+                color: #bdbdbd;
+            }
+        }
 
 
-        
-/* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
-.main-navbar #solutionsDropdown,
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown:active,
-.main-navbar #solutionsDropdown.show {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
 
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown.show {
-    color: #4d73be !important;
-}
-/* =========================================================
+        /* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
+        .main-navbar #solutionsDropdown,
+        .main-navbar #solutionsDropdown:hover,
+        .main-navbar #solutionsDropdown:focus,
+        .main-navbar #solutionsDropdown:active,
+        .main-navbar #solutionsDropdown.show {
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+            outline: none !important;
+        }
+
+        .main-navbar #solutionsDropdown:hover,
+        .main-navbar #solutionsDropdown:focus,
+        .main-navbar #solutionsDropdown.show {
+            color: #4d73be !important;
+        }
+
+        /* =========================================================
    NAVBAR — MONOCHROME BLACK THEME
    Keep existing layout + mega-menu behavior unchanged
 ========================================================= */
 
-/* Main nav links */
-.main-navbar .nav-link,
-.main-navbar.scrolled .nav-link,
-.main-navbar.navbar-shrink .nav-link {
-    color: #1a1a1a !important;
-}
+        /* Main nav links */
+        .main-navbar .nav-link,
+        .main-navbar.scrolled .nav-link,
+        .main-navbar.navbar-shrink .nav-link {
+            color: #1a1a1a !important;
+        }
 
-/* Normal */
-.main-navbar .nav-link {
-    font-weight: 600;
-}
+        /* Normal */
+        .main-navbar .nav-link {
+            font-weight: 600;
+        }
 
-/* Hover / focus — black only */
-.main-navbar .nav-link:hover,
-.main-navbar .nav-link:focus {
-    color: #000000 !important;
-}
+        /* Hover / focus — black only */
+        .main-navbar .nav-link:hover,
+        .main-navbar .nav-link:focus {
+            color: #000000 !important;
+        }
 
-/* Active — black + stronger weight */
-.main-navbar .nav-link.active,
-.main-navbar .nav-link.show,
-.main-navbar #solutionsDropdown.show {
-    color: #000000 !important;
-    font-weight: 800 !important;
-}
+        /* Active — black + stronger weight */
+        .main-navbar .nav-link.active,
+        .main-navbar .nav-link.show,
+        .main-navbar #solutionsDropdown.show {
+            color: #000000 !important;
+            font-weight: 800 !important;
+        }
 
-/* No colored underline */
-.main-navbar .nav-link:not(.nav-contact):not(.dropdown-toggle)::after {
-    background: #000000 !important;
-}
+        /* No colored underline */
+        .main-navbar .nav-link:not(.nav-contact):not(.dropdown-toggle)::after {
+            background: #000000 !important;
+        }
 
-/* Solutions: text only, no box */
-.main-navbar #solutionsDropdown,
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown:active,
-.main-navbar #solutionsDropdown.show {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-    color: #000000 !important;
-}
+        /* Solutions: text only, no box */
+        .main-navbar #solutionsDropdown,
+        .main-navbar #solutionsDropdown:hover,
+        .main-navbar #solutionsDropdown:focus,
+        .main-navbar #solutionsDropdown:active,
+        .main-navbar #solutionsDropdown.show {
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+            outline: none !important;
+            color: #000000 !important;
+        }
 
-/* Contact: monochrome */
-.main-navbar .nav-contact,
-.main-navbar.scrolled .nav-contact {
-    background: #000000 !important;
-    border-color: #000000 !important;
-    color: #ffffff !important;
-}
+        /* Contact: monochrome */
+        .main-navbar .nav-contact,
+        .main-navbar.scrolled .nav-contact {
+            background: #000000 !important;
+            border-color: #000000 !important;
+            color: #ffffff !important;
+        }
 
-.main-navbar .nav-contact:hover,
-.main-navbar .nav-contact:focus,
-.main-navbar.scrolled .nav-contact:hover {
-    background: #222222 !important;
-    border-color: #222222 !important;
-    color: #ffffff !important;
-}
+        .main-navbar .nav-contact:hover,
+        .main-navbar .nav-contact:focus,
+        .main-navbar.scrolled .nav-contact:hover {
+            background: #222222 !important;
+            border-color: #222222 !important;
+            color: #ffffff !important;
+        }
 
-/* =========================================================
+        /* =========================================================
    MEGA MENU — BLACK
 ========================================================= */
 
-.main-navbar .mega-menu {
-    background: #000000 !important;
-    border: 1px solid #1f1f1f !important;
-    box-shadow: 0 24px 70px rgba(0,0,0,.28) !important;
-}
+        .main-navbar .mega-menu {
+            background: #000000 !important;
+            border: 1px solid #1f1f1f !important;
+            box-shadow: 0 24px 70px rgba(0, 0, 0, .28) !important;
+        }
 
-/* Columns */
-.main-navbar .mega-column {
-    background: #000000 !important;
-    border-right-color: #242424 !important;
-}
+        /* Columns */
+        .main-navbar .mega-column {
+            background: #000000 !important;
+            border-right-color: #242424 !important;
+        }
 
-.main-navbar .mega-column:last-child {
-    border-right-color: transparent !important;
-}
+        .main-navbar .mega-column:last-child {
+            border-right-color: transparent !important;
+        }
 
-/* Headings */
-.main-navbar .mega-heading {
-    color: #ffffff !important;
-    border-bottom-color: #2a2a2a !important;
-}
+        /* Headings */
+        .main-navbar .mega-heading {
+            color: #ffffff !important;
+            border-bottom-color: #2a2a2a !important;
+        }
 
-/* Icons — monochrome */
-.main-navbar .mega-heading i {
-    color: #ffffff !important;
-}
+        /* Icons — monochrome */
+        .main-navbar .mega-heading i {
+            color: #ffffff !important;
+        }
 
-/* Menu links */
-.main-navbar .mega-column > a {
-    color: #bdbdbd !important;
-}
+        /* Menu links */
+        .main-navbar .mega-column>a {
+            color: #bdbdbd !important;
+        }
 
-/* Small line before links */
-.main-navbar .mega-column > a::before {
-    background: #666666 !important;
-}
+        /* Small line before links */
+        .main-navbar .mega-column>a::before {
+            background: #666666 !important;
+        }
 
-/* Hover inside mega menu */
-.main-navbar .mega-column > a:hover,
-.main-navbar .mega-column > a:focus {
-    color: #ffffff !important;
-}
+        /* Hover inside mega menu */
+        .main-navbar .mega-column>a:hover,
+        .main-navbar .mega-column>a:focus {
+            color: #ffffff !important;
+        }
 
-.main-navbar .mega-column > a:hover::before {
-    background: #ffffff !important;
-}
+        .main-navbar .mega-column>a:hover::before {
+            background: #ffffff !important;
+        }
 
-/* Mobile */
-@media (max-width: 991px) {
-    .main-navbar .nav-link {
-        color: #1a1a1a !important;
-    }
+        /* Mobile */
+        @media (max-width: 991px) {
+            .main-navbar .nav-link {
+                color: #1a1a1a !important;
+            }
 
-    .main-navbar .mega-menu {
-        background: #000000 !important;
-        border-left-color: #000000 !important;
-    }
+            .main-navbar .mega-menu {
+                background: #000000 !important;
+                border-left-color: #000000 !important;
+            }
 
-    .main-navbar .mega-column {
-        background: #000000 !important;
-        border-bottom-color: #242424 !important;
-    }
-}
-.main-navbar .mega-heading {
-    gap: 0 !important;
-}
-</style>
+            .main-navbar .mega-column {
+                background: #000000 !important;
+                border-bottom-color: #242424 !important;
+            }
+        }
 
-<!-- JAVASCRIPT -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const nav = document.getElementById("mainNav");
-    const white = document.getElementById("logoWhite");
-    const dark = document.getElementById("logoDark");
+        .main-navbar .mega-heading {
+            gap: 0 !important;
+        }
+    </style>
 
-    if (nav) nav.classList.add("scrolled", "navbar-shrink");
-    if (white) white.style.display = "none";
-    if (dark) dark.style.display = "block";
-});
-</script>
+    <!-- JAVASCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const nav = document.getElementById("mainNav");
+            const white = document.getElementById("logoWhite");
+            const dark = document.getElementById("logoDark");
 
-<!-- END MODULE — NAVBAR -->
+            if (nav) nav.classList.add("scrolled", "navbar-shrink");
+            if (white) white.style.display = "none";
+            if (dark) dark.style.display = "block";
+        });
+    </script>
 
-<!-- =========================================================
+    <!-- END MODULE — NAVBAR -->
+
+    <!-- =========================================================
      MODULE — COMMERCIAL LIGHTING
 ========================================================= -->
-<main class="cl-page" id="page-top">
+    <main class="cl-page" id="page-top">
 
-  <!-- HERO -->
-  <section class="cl-hero">
-    <img class="cl-hero-img" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2400&q=90" alt="Premium commercial office lighting">
-    <div class="cl-hero-shade"></div>
-    <div class="cl-wrap cl-hero-inner">
-      <div class="cl-kicker">COMMERCIAL LIGHTING <i></i> ALPHA NUMERIC INNOVATIONS</div>
-      <h1>Lighting built for<br><span>business, people & place.</span></h1>
-      <p>High-performance architectural and decorative lighting for offices, retail, hospitality, healthcare, education and public-facing commercial spaces — engineered for visual comfort, brand experience, efficiency and intelligent control.</p>
-      <div class="cl-actions"><a href="#commercial-spaces" class="cl-btn light">Explore applications <b>↘</b></a><a href="contact.html" class="cl-link">Start a commercial project <b>↗</b></a></div>
-    </div>
-    <div class="cl-hero-foot cl-wrap"><span>DESIGN / SUPPLY / EXECUTION</span><span>ARCHITECTURAL · DECORATIVE · EMERGENCY · SMART</span></div>
-  </section>
+        <!-- HERO -->
+        <section class="cl-hero">
+            <img class="cl-hero-img"
+                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2400&q=90"
+                alt="Premium commercial office lighting">
+            <div class="cl-hero-shade"></div>
+            <div class="cl-wrap cl-hero-inner">
+                <div class="cl-kicker">COMMERCIAL LIGHTING <i></i> ALPHA NUMERIC INNOVATIONS</div>
+                <h1>Lighting built for<br><span>business, people & place.</span></h1>
+                <p>High-performance architectural and decorative lighting for offices, retail, hospitality, healthcare,
+                    education and public-facing commercial spaces — engineered for visual comfort, brand experience,
+                    efficiency and intelligent control.</p>
+                <div class="cl-actions"><a href="#commercial-spaces" class="cl-btn light">Explore applications
+                        <b>↘</b></a><a href="contact.html" class="cl-link">Start a commercial project <b>↗</b></a></div>
+            </div>
+            <div class="cl-hero-foot cl-wrap"><span>DESIGN / SUPPLY / EXECUTION</span><span>ARCHITECTURAL · DECORATIVE ·
+                    EMERGENCY · SMART</span></div>
+        </section>
 
-  <!-- INTRO -->
-  <section class="cl-intro">
-    <div class="cl-wrap cl-intro-grid">
-      <div class="cl-num">01 / APPROACH</div>
-      <div><small>LIGHTING THAT PERFORMS</small><h2>Commercial light should do more<br><span>than make a space visible.</span></h2></div>
-      <p>It should support work, guide movement, strengthen brand identity, improve comfort and manage energy responsibly. Alpha Numeric Innovations coordinates lighting with architecture, interiors, operating hours, lux requirements, controls and long-term maintenance.</p>
-    </div>
-  </section>
+        <!-- INTRO -->
+        <section class="cl-intro">
+            <div class="cl-wrap cl-intro-grid">
+                <div class="cl-num">01 / APPROACH</div>
+                <div><small>LIGHTING THAT PERFORMS</small>
+                    <h2>Commercial light should do more<br><span>than make a space visible.</span></h2>
+                </div>
+                <p>It should support work, guide movement, strengthen brand identity, improve comfort and manage energy
+                    responsibly. Alpha Numeric Innovations coordinates lighting with architecture, interiors, operating
+                    hours, lux requirements, controls and long-term maintenance.</p>
+            </div>
+        </section>
 
-  <!-- APPLICATIONS -->
-  <section class="cl-spaces" id="commercial-spaces">
-    <div class="cl-wrap">
-      <div class="cl-head"><div class="cl-num">02 / APPLICATIONS</div><div><small>COMMERCIAL ENVIRONMENTS</small><h2>Lighting for every layer<br><span>of commercial life.</span></h2></div></div>
+        <!-- APPLICATIONS -->
+        <section class="cl-spaces" id="commercial-spaces">
+            <div class="cl-wrap">
+                <div class="cl-head">
+                    <div class="cl-num">02 / APPLICATIONS</div>
+                    <div><small>COMMERCIAL ENVIRONMENTS</small>
+                        <h2>Lighting for every layer<br><span>of commercial life.</span></h2>
+                    </div>
+                </div>
 
-      <div class="cl-space-grid">
-        <article class="cl-space big"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1900&q=88" alt="Corporate office lighting"><div class="cl-card-shade"></div><div class="cl-card-copy"><small>WORKPLACE / COMFORT / PRODUCTIVITY</small><h3>Corporate Offices</h3><p>Workstation, cabin, collaborative, circulation and breakout lighting designed around visual comfort and productivity.</p></div></article>
+                <div class="cl-space-grid">
+                    <article class="cl-space big"><img
+                            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1900&q=88"
+                            alt="Corporate office lighting">
+                        <div class="cl-card-shade"></div>
+                        <div class="cl-card-copy"><small>WORKPLACE / COMFORT / PRODUCTIVITY</small>
+                            <h3>Corporate Offices</h3>
+                            <p>Workstation, cabin, collaborative, circulation and breakout lighting designed around
+                                visual comfort and productivity.</p>
+                        </div>
+                    </article>
 
-        <article class="cl-space"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=88" alt="Reception lobby lighting"><div class="cl-card-shade"></div><div class="cl-card-copy"><small>ARRIVAL / BRAND / IMPRESSION</small><h3>Reception & Lobby</h3></div></article>
+                    <article class="cl-space"><img
+                            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=88"
+                            alt="Reception lobby lighting">
+                        <div class="cl-card-shade"></div>
+                        <div class="cl-card-copy"><small>ARRIVAL / BRAND / IMPRESSION</small>
+                            <h3>Reception & Lobby</h3>
+                        </div>
+                    </article>
 
-        <article class="cl-space"><img src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&w=1400&q=88" alt="Conference room lighting"><div class="cl-card-shade"></div><div class="cl-card-copy"><small>MEETING / PRESENTATION / CONTROL</small><h3>Meeting Rooms</h3></div></article>
+                    <article class="cl-space"><img
+                            src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&w=1400&q=88"
+                            alt="Conference room lighting">
+                        <div class="cl-card-shade"></div>
+                        <div class="cl-card-copy"><small>MEETING / PRESENTATION / CONTROL</small>
+                            <h3>Meeting Rooms</h3>
+                        </div>
+                    </article>
 
-        <article class="cl-space"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1400&q=88" alt="Retail showroom lighting"><div class="cl-card-shade"></div><div class="cl-card-copy"><small>MERCHANDISE / FOCUS / BRAND</small><h3>Retail & Showrooms</h3></div></article>
+                    <article class="cl-space"><img
+                            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1400&q=88"
+                            alt="Retail showroom lighting">
+                        <div class="cl-card-shade"></div>
+                        <div class="cl-card-copy"><small>MERCHANDISE / FOCUS / BRAND</small>
+                            <h3>Retail & Showrooms</h3>
+                        </div>
+                    </article>
 
-        <article class="cl-space"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=88" alt="Restaurant lighting"><div class="cl-card-shade"></div><div class="cl-card-copy"><small>AMBIENCE / EXPERIENCE / DINING</small><h3>Restaurants & Cafés</h3></div></article>
+                    <article class="cl-space"><img
+                            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=88"
+                            alt="Restaurant lighting">
+                        <div class="cl-card-shade"></div>
+                        <div class="cl-card-copy"><small>AMBIENCE / EXPERIENCE / DINING</small>
+                            <h3>Restaurants & Cafés</h3>
+                        </div>
+                    </article>
 
-        <article class="cl-space wide"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1900&q=88" alt="Hospitality lighting"><div class="cl-card-shade"></div><div class="cl-card-copy"><small>HOSPITALITY / LUXURY / EXPERIENCE</small><h3>Hotels & Hospitality</h3><p>Guest arrival, lounge, restaurant, corridor, façade and public-area lighting with a premium hospitality language.</p></div></article>
+                    <article class="cl-space wide"><img
+                            src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1900&q=88"
+                            alt="Hospitality lighting">
+                        <div class="cl-card-shade"></div>
+                        <div class="cl-card-copy"><small>HOSPITALITY / LUXURY / EXPERIENCE</small>
+                            <h3>Hotels & Hospitality</h3>
+                            <p>Guest arrival, lounge, restaurant, corridor, façade and public-area lighting with a
+                                premium hospitality language.</p>
+                        </div>
+                    </article>
 
-        <article class="cl-space"><img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=1400&q=88" alt="Shopping mall lighting"><div class="cl-card-shade"></div><div class="cl-card-copy"><small>RETAIL / WAYFINDING / SCALE</small><h3>Malls & Commercial Centres</h3></div></article>
+                    <article class="cl-space"><img
+                            src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=1400&q=88"
+                            alt="Shopping mall lighting">
+                        <div class="cl-card-shade"></div>
+                        <div class="cl-card-copy"><small>RETAIL / WAYFINDING / SCALE</small>
+                            <h3>Malls & Commercial Centres</h3>
+                        </div>
+                    </article>
 
-        <article class="cl-space"><img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1400&q=88" alt="Healthcare commercial lighting"><div class="cl-card-shade"></div><div class="cl-card-copy"><small>CARE / CLARITY / COMFORT</small><h3>Healthcare & Clinics</h3></div></article>
+                    <article class="cl-space"><img
+                            src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1400&q=88"
+                            alt="Healthcare commercial lighting">
+                        <div class="cl-card-shade"></div>
+                        <div class="cl-card-copy"><small>CARE / CLARITY / COMFORT</small>
+                            <h3>Healthcare & Clinics</h3>
+                        </div>
+                    </article>
 
-        <article class="cl-space"><img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1400&q=88" alt="Educational lighting"><div class="cl-card-shade"></div><div class="cl-card-copy"><small>LEARNING / FOCUS / EFFICIENCY</small><h3>Education & Institutions</h3></div></article>
+                    <article class="cl-space"><img
+                            src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1400&q=88"
+                            alt="Educational lighting">
+                        <div class="cl-card-shade"></div>
+                        <div class="cl-card-copy"><small>LEARNING / FOCUS / EFFICIENCY</small>
+                            <h3>Education & Institutions</h3>
+                        </div>
+                    </article>
 
-        <article class="cl-space"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1400&q=88" alt="Commercial corridor lighting"><div class="cl-card-shade"></div><div class="cl-card-copy"><small>CIRCULATION / SAFETY / CONTINUITY</small><h3>Corridors & Common Areas</h3></div></article>
+                    <article class="cl-space"><img
+                            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1400&q=88"
+                            alt="Commercial corridor lighting">
+                        <div class="cl-card-shade"></div>
+                        <div class="cl-card-copy"><small>CIRCULATION / SAFETY / CONTINUITY</small>
+                            <h3>Corridors & Common Areas</h3>
+                        </div>
+                    </article>
 
-        <article class="cl-space"><img src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&w=1400&q=88" alt="Parking lighting"><div class="cl-card-shade"></div><div class="cl-card-copy"><small>SAFETY / VISIBILITY / CONTROL</small><h3>Parking & Basements</h3></div></article>
+                    <article class="cl-space"><img
+                            src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&w=1400&q=88"
+                            alt="Parking lighting">
+                        <div class="cl-card-shade"></div>
+                        <div class="cl-card-copy"><small>SAFETY / VISIBILITY / CONTROL</small>
+                            <h3>Parking & Basements</h3>
+                        </div>
+                    </article>
 
-        <article class="cl-space wide"><img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1900&q=88" alt="Commercial facade lighting"><div class="cl-card-shade"></div><div class="cl-card-copy"><small>ARCHITECTURE / SIGNAGE / NIGHT IDENTITY</small><h3>Façade, Landscape & Signage</h3><p>Architectural exterior lighting that reinforces identity, visibility and arrival after dark.</p></div></article>
-      </div>
-    </div>
-  </section>
+                    <article class="cl-space wide"><img
+                            src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1900&q=88"
+                            alt="Commercial facade lighting">
+                        <div class="cl-card-shade"></div>
+                        <div class="cl-card-copy"><small>ARCHITECTURE / SIGNAGE / NIGHT IDENTITY</small>
+                            <h3>Façade, Landscape & Signage</h3>
+                            <p>Architectural exterior lighting that reinforces identity, visibility and arrival after
+                                dark.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-  <!-- WORKPLACE EDITORIAL -->
-  <section class="cl-editorial">
-    <div class="cl-editorial-image"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1900&q=88" alt="Modern workplace lighting"></div>
-    <div class="cl-editorial-copy">
-      <div class="cl-num pale">03 / WORKPLACE</div>
-      <small>THE MODERN OFFICE</small>
-      <h2>Light that supports<br><span>how teams work.</span></h2>
-      <p>From focused desk work to collaboration, meetings, presentations and after-hours circulation, workplace lighting must shift with the activity while maintaining comfort and visual consistency.</p>
-      <div class="cl-lines">
-        <div><b>01</b><span>Open Workstations</span></div>
-        <div><b>02</b><span>Executive Cabins</span></div>
-        <div><b>03</b><span>Meeting & Conference Rooms</span></div>
-        <div><b>04</b><span>Breakout & Collaboration Zones</span></div>
-        <div><b>05</b><span>Reception & Waiting</span></div>
-        <div><b>06</b><span>Circulation & Support Areas</span></div>
-      </div>
-    </div>
-  </section>
+        <!-- WORKPLACE EDITORIAL -->
+        <section class="cl-editorial">
+            <div class="cl-editorial-image"><img
+                    src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1900&q=88"
+                    alt="Modern workplace lighting"></div>
+            <div class="cl-editorial-copy">
+                <div class="cl-num pale">03 / WORKPLACE</div>
+                <small>THE MODERN OFFICE</small>
+                <h2>Light that supports<br><span>how teams work.</span></h2>
+                <p>From focused desk work to collaboration, meetings, presentations and after-hours circulation,
+                    workplace lighting must shift with the activity while maintaining comfort and visual consistency.
+                </p>
+                <div class="cl-lines">
+                    <div><b>01</b><span>Open Workstations</span></div>
+                    <div><b>02</b><span>Executive Cabins</span></div>
+                    <div><b>03</b><span>Meeting & Conference Rooms</span></div>
+                    <div><b>04</b><span>Breakout & Collaboration Zones</span></div>
+                    <div><b>05</b><span>Reception & Waiting</span></div>
+                    <div><b>06</b><span>Circulation & Support Areas</span></div>
+                </div>
+            </div>
+        </section>
 
-  <!-- LIGHTING SYSTEMS -->
-  <section class="cl-range">
-    <div class="cl-wrap">
-      <div class="cl-head"><div class="cl-num">04 / SYSTEMS</div><div><small>COMMERCIAL LIGHTING RANGE</small><h2>Performance where required.<br><span>Design where it matters.</span></h2></div></div>
-      <div class="cl-range-list">
-        <div class="cl-range-row"><b>01</b><h3>Linear Lighting</h3><p>Continuous suspended, recessed and surface systems for offices, corridors and modern commercial interiors.</p><i>↗</i></div>
-        <div class="cl-range-row"><b>02</b><h3>Recessed Downlights</h3><p>Precision general lighting with glare control and clean architectural integration.</p><i>↗</i></div>
-        <div class="cl-range-row"><b>03</b><h3>Track & Accent Lighting</h3><p>Flexible focus for retail merchandise, displays, galleries and feature architecture.</p><i>↗</i></div>
-        <div class="cl-range-row"><b>04</b><h3>Suspended Luminaires</h3><p>Functional and decorative workplace lighting for desks, meeting tables and collaborative areas.</p><i>↗</i></div>
-        <div class="cl-range-row"><b>05</b><h3>Decorative & Feature Lighting</h3><p>Statement fixtures for reception, hospitality, premium retail and customer-facing spaces.</p><i>↗</i></div>
-        <div class="cl-range-row"><b>06</b><h3>Wall Wash & Cove Lighting</h3><p>Indirect and vertical illumination for architectural depth, signage, branding and ambience.</p><i>↗</i></div>
-        <div class="cl-range-row"><b>07</b><h3>Emergency & Exit Lighting</h3><p>Dedicated emergency illumination, exit guidance and egress support for commercial safety.</p><i>↗</i></div>
-        <div class="cl-range-row"><b>08</b><h3>Outdoor & Façade Lighting</h3><p>Wall washers, floodlights, bollards, pathway, signage and landscape lighting.</p><i>↗</i></div>
-        <div class="cl-range-row"><b>09</b><h3>Parking & Utility Lighting</h3><p>Robust high-efficiency lighting for parking, basements, service zones and back-of-house areas.</p><i>↗</i></div>
-        <div class="cl-range-row"><b>10</b><h3>Smart Lighting Controls</h3><p>Dimming, occupancy sensing, daylight response, schedules, scenes and BMS/automation integration.</p><i>↗</i></div>
-      </div>
-    </div>
-  </section>
+        <!-- LIGHTING SYSTEMS -->
+        <section class="cl-range">
+            <div class="cl-wrap">
+                <div class="cl-head">
+                    <div class="cl-num">04 / SYSTEMS</div>
+                    <div><small>COMMERCIAL LIGHTING RANGE</small>
+                        <h2>Performance where required.<br><span>Design where it matters.</span></h2>
+                    </div>
+                </div>
+                <div class="cl-range-list">
+                    <div class="cl-range-row"><b>01</b>
+                        <h3>Linear Lighting</h3>
+                        <p>Continuous suspended, recessed and surface systems for offices, corridors and modern
+                            commercial interiors.</p><i>↗</i>
+                    </div>
+                    <div class="cl-range-row"><b>02</b>
+                        <h3>Recessed Downlights</h3>
+                        <p>Precision general lighting with glare control and clean architectural integration.</p>
+                        <i>↗</i>
+                    </div>
+                    <div class="cl-range-row"><b>03</b>
+                        <h3>Track & Accent Lighting</h3>
+                        <p>Flexible focus for retail merchandise, displays, galleries and feature architecture.</p>
+                        <i>↗</i>
+                    </div>
+                    <div class="cl-range-row"><b>04</b>
+                        <h3>Suspended Luminaires</h3>
+                        <p>Functional and decorative workplace lighting for desks, meeting tables and collaborative
+                            areas.</p><i>↗</i>
+                    </div>
+                    <div class="cl-range-row"><b>05</b>
+                        <h3>Decorative & Feature Lighting</h3>
+                        <p>Statement fixtures for reception, hospitality, premium retail and customer-facing spaces.</p>
+                        <i>↗</i>
+                    </div>
+                    <div class="cl-range-row"><b>06</b>
+                        <h3>Wall Wash & Cove Lighting</h3>
+                        <p>Indirect and vertical illumination for architectural depth, signage, branding and ambience.
+                        </p><i>↗</i>
+                    </div>
+                    <div class="cl-range-row"><b>07</b>
+                        <h3>Emergency & Exit Lighting</h3>
+                        <p>Dedicated emergency illumination, exit guidance and egress support for commercial safety.</p>
+                        <i>↗</i>
+                    </div>
+                    <div class="cl-range-row"><b>08</b>
+                        <h3>Outdoor & Façade Lighting</h3>
+                        <p>Wall washers, floodlights, bollards, pathway, signage and landscape lighting.</p><i>↗</i>
+                    </div>
+                    <div class="cl-range-row"><b>09</b>
+                        <h3>Parking & Utility Lighting</h3>
+                        <p>Robust high-efficiency lighting for parking, basements, service zones and back-of-house
+                            areas.</p><i>↗</i>
+                    </div>
+                    <div class="cl-range-row"><b>10</b>
+                        <h3>Smart Lighting Controls</h3>
+                        <p>Dimming, occupancy sensing, daylight response, schedules, scenes and BMS/automation
+                            integration.</p><i>↗</i>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- PERFORMANCE -->
-  <section class="cl-performance">
-    <div class="cl-wrap cl-performance-grid">
-      <div class="cl-performance-copy">
-        <div class="cl-num">05 / PERFORMANCE</div>
-        <small>ENGINEERED FOR COMMERCIAL REALITY</small>
-        <h2>Comfort, efficiency<br><span>and operational value.</span></h2>
-        <p>Commercial lighting is a long-term operating system. We consider maintained illuminance, glare control, uniformity, colour quality, energy consumption, controls, maintenance access and integration with the broader electrical and automation infrastructure.</p>
-      </div>
-      <div class="cl-performance-list">
-        <div><b>01</b><span>Lux & Uniformity Planning</span></div>
-        <div><b>02</b><span>UGR / Glare Control</span></div>
-        <div><b>03</b><span>Colour Temperature Strategy</span></div>
-        <div><b>04</b><span>CRI & Visual Quality</span></div>
-        <div><b>05</b><span>Energy Optimisation</span></div>
-        <div><b>06</b><span>Maintenance Accessibility</span></div>
-      </div>
-    </div>
-  </section>
+        <!-- PERFORMANCE -->
+        <section class="cl-performance">
+            <div class="cl-wrap cl-performance-grid">
+                <div class="cl-performance-copy">
+                    <div class="cl-num">05 / PERFORMANCE</div>
+                    <small>ENGINEERED FOR COMMERCIAL REALITY</small>
+                    <h2>Comfort, efficiency<br><span>and operational value.</span></h2>
+                    <p>Commercial lighting is a long-term operating system. We consider maintained illuminance, glare
+                        control, uniformity, colour quality, energy consumption, controls, maintenance access and
+                        integration with the broader electrical and automation infrastructure.</p>
+                </div>
+                <div class="cl-performance-list">
+                    <div><b>01</b><span>Lux & Uniformity Planning</span></div>
+                    <div><b>02</b><span>UGR / Glare Control</span></div>
+                    <div><b>03</b><span>Colour Temperature Strategy</span></div>
+                    <div><b>04</b><span>CRI & Visual Quality</span></div>
+                    <div><b>05</b><span>Energy Optimisation</span></div>
+                    <div><b>06</b><span>Maintenance Accessibility</span></div>
+                </div>
+            </div>
+        </section>
 
-  <!-- SMART CONTROLS -->
-  <section class="cl-smart">
-    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2400&q=90" alt="Smart commercial lighting controls">
-    <div class="cl-smart-shade"></div>
-    <div class="cl-wrap cl-smart-inner">
-      <div>
-        <div class="cl-num pale">06 / INTELLIGENCE</div>
-        <small>CONNECTED COMMERCIAL LIGHTING</small>
-        <h2>Light that responds<br><span>to occupancy, daylight & time.</span></h2>
-        <p>Integrate commercial lighting with occupancy sensors, daylight harvesting, schedules, scene control, DALI/KNX interfaces and BMS/automation platforms to reduce unnecessary energy use and simplify operations.</p>
-      </div>
-      <div class="cl-smart-list">
-        <div><b>01</b>Occupancy-Based Control</div>
-        <div><b>02</b>Daylight Harvesting</div>
-        <div><b>03</b>Scene & Dimming Control</div>
-        <div><b>04</b>Scheduling & Zoning</div>
-        <div><b>05</b>DALI / KNX Integration</div>
-        <div><b>06</b>BMS / IoT Integration</div>
-        <div><b>07</b>Energy Monitoring</div>
-      </div>
-    </div>
-  </section>
+        <!-- SMART CONTROLS -->
+        <section class="cl-smart">
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2400&q=90"
+                alt="Smart commercial lighting controls">
+            <div class="cl-smart-shade"></div>
+            <div class="cl-wrap cl-smart-inner">
+                <div>
+                    <div class="cl-num pale">06 / INTELLIGENCE</div>
+                    <small>CONNECTED COMMERCIAL LIGHTING</small>
+                    <h2>Light that responds<br><span>to occupancy, daylight & time.</span></h2>
+                    <p>Integrate commercial lighting with occupancy sensors, daylight harvesting, schedules, scene
+                        control, DALI/KNX interfaces and BMS/automation platforms to reduce unnecessary energy use and
+                        simplify operations.</p>
+                </div>
+                <div class="cl-smart-list">
+                    <div><b>01</b>Occupancy-Based Control</div>
+                    <div><b>02</b>Daylight Harvesting</div>
+                    <div><b>03</b>Scene & Dimming Control</div>
+                    <div><b>04</b>Scheduling & Zoning</div>
+                    <div><b>05</b>DALI / KNX Integration</div>
+                    <div><b>06</b>BMS / IoT Integration</div>
+                    <div><b>07</b>Energy Monitoring</div>
+                </div>
+            </div>
+        </section>
 
-  <!-- PROJECT DELIVERY -->
-  <section class="cl-process">
-    <div class="cl-wrap">
-      <div class="cl-head"><div class="cl-num">07 / DELIVERY</div><div><small>FROM DESIGN TO HANDOVER</small><h2>One commercial lighting partner.<br><span>Every stage coordinated.</span></h2></div></div>
-      <div class="cl-process-grid">
-        <div><b>01</b><small>STUDY</small><h3>Project Assessment</h3><p>Architecture, interiors, task requirements, hours and operating needs.</p></div>
-        <div><b>02</b><small>DESIGN</small><h3>Lighting Concept</h3><p>Fixture types, effects, zoning, layouts and visual hierarchy.</p></div>
-        <div><b>03</b><small>ENGINEER</small><h3>Technical Planning</h3><p>Lux, circuits, controls, loads, coordination and specifications.</p></div>
-        <div><b>04</b><small>DELIVER</small><h3>Supply & Execution</h3><p>Product supply, installation, testing, aiming and commissioning.</p></div>
-        <div><b>05</b><small>OPERATE</small><h3>Handover & Support</h3><p>Scene setup, documentation, operator handover and technical support.</p></div>
-      </div>
-    </div>
-  </section>
+        <!-- PROJECT DELIVERY -->
+        <section class="cl-process">
+            <div class="cl-wrap">
+                <div class="cl-head">
+                    <div class="cl-num">07 / DELIVERY</div>
+                    <div><small>FROM DESIGN TO HANDOVER</small>
+                        <h2>One commercial lighting partner.<br><span>Every stage coordinated.</span></h2>
+                    </div>
+                </div>
+                <div class="cl-process-grid">
+                    <div><b>01</b><small>STUDY</small>
+                        <h3>Project Assessment</h3>
+                        <p>Architecture, interiors, task requirements, hours and operating needs.</p>
+                    </div>
+                    <div><b>02</b><small>DESIGN</small>
+                        <h3>Lighting Concept</h3>
+                        <p>Fixture types, effects, zoning, layouts and visual hierarchy.</p>
+                    </div>
+                    <div><b>03</b><small>ENGINEER</small>
+                        <h3>Technical Planning</h3>
+                        <p>Lux, circuits, controls, loads, coordination and specifications.</p>
+                    </div>
+                    <div><b>04</b><small>DELIVER</small>
+                        <h3>Supply & Execution</h3>
+                        <p>Product supply, installation, testing, aiming and commissioning.</p>
+                    </div>
+                    <div><b>05</b><small>OPERATE</small>
+                        <h3>Handover & Support</h3>
+                        <p>Scene setup, documentation, operator handover and technical support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- SECTORS STRIP -->
-  <section class="cl-sector-strip">
-    <div class="cl-wrap">
-      <div class="cl-num">08 / FULL COMMERCIAL SCOPE</div>
-      <div class="cl-sector-grid">
-        <span>Offices</span><span>Business Parks</span><span>Retail</span><span>Showrooms</span><span>Restaurants</span><span>Cafés</span><span>Hotels</span><span>Resorts</span><span>Malls</span><span>Healthcare</span><span>Clinics</span><span>Education</span><span>Institutions</span><span>Parking</span><span>Façades</span><span>Signage</span><span>Warehouses</span><span>Back-of-House</span>
-      </div>
-    </div>
-  </section>
+        <!-- SECTORS STRIP -->
+        <section class="cl-sector-strip">
+            <div class="cl-wrap">
+                <div class="cl-num">08 / FULL COMMERCIAL SCOPE</div>
+                <div class="cl-sector-grid">
+                    <span>Offices</span><span>Business
+                        Parks</span><span>Retail</span><span>Showrooms</span><span>Restaurants</span><span>Cafés</span><span>Hotels</span><span>Resorts</span><span>Malls</span><span>Healthcare</span><span>Clinics</span><span>Education</span><span>Institutions</span><span>Parking</span><span>Façades</span><span>Signage</span><span>Warehouses</span><span>Back-of-House</span>
+                </div>
+            </div>
+        </section>
 
-  <!-- CTA -->
-  <section class="cl-cta">
-    <div class="cl-wrap cl-cta-grid">
-      <div class="cl-num pale">09</div>
-      <div><small>START A COMMERCIAL LIGHTING PROJECT</small><h2>Better spaces begin<br><span>with better light.</span></h2></div>
-      <div><p>Talk to Alpha Numeric Innovations about commercial lighting design, luminaires, controls, supply, execution and smart integration.</p><a href="contact.html" class="cl-btn light">Discuss your project <b>↗</b></a></div>
-    </div>
-  </section>
+        <!-- CTA -->
+        <section class="cl-cta">
+            <div class="cl-wrap cl-cta-grid">
+                <div class="cl-num pale">09</div>
+                <div><small>START A COMMERCIAL LIGHTING PROJECT</small>
+                    <h2>Better spaces begin<br><span>with better light.</span></h2>
+                </div>
+                <div>
+                    <p>Talk to Alpha Numeric Innovations about commercial lighting design, luminaires, controls, supply,
+                        execution and smart integration.</p><a href="contact.html" class="cl-btn light">Discuss your
+                        project <b>↗</b></a>
+                </div>
+            </div>
+        </section>
 
-</main>
+    </main>
 
-<style>
-.cl-page{--ink:#0b0b0b;--paper:#fff;--soft:#f3f2ee;--muted:#858585;--line:#d9d9d4;font-family:"Inter",sans-serif;color:var(--ink);background:#fff;overflow:hidden}.cl-page *{box-sizing:border-box}.cl-page img{display:block;width:100%;height:100%;object-fit:cover}.cl-wrap{width:min(1480px,calc(100% - 100px));margin:auto}.cl-kicker,.cl-page small{font-size:9px;font-weight:700;letter-spacing:.18em}.cl-kicker{display:flex;align-items:center;gap:14px;color:rgba(255,255,255,.68)}.cl-kicker i{width:38px;height:1px;background:rgba(255,255,255,.45)}.cl-num{font-size:9px;font-weight:700;letter-spacing:.14em;color:#777}.cl-num.pale{color:rgba(255,255,255,.45)}.cl-page h2{font-size:clamp(48px,5.4vw,84px);line-height:.96;font-weight:400;letter-spacing:-.06em;margin:18px 0 0}.cl-page h2 span{color:#999}
-.cl-hero{height:max(760px,100vh);min-height:760px;position:relative;color:#fff;background:#111}.cl-hero-img{position:absolute;inset:0}.cl-hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.90),rgba(0,0,0,.57) 40%,rgba(0,0,0,.08) 78%),linear-gradient(0deg,rgba(0,0,0,.44),transparent 40%)}.cl-hero-inner{position:relative;z-index:2;height:100%;display:flex;justify-content:center;flex-direction:column;padding-top:80px}.cl-hero h1{font-size:clamp(64px,7.6vw,120px);line-height:.86;font-weight:300;letter-spacing:-.075em;max-width:1100px;margin:30px 0}.cl-hero h1 span{color:rgba(255,255,255,.58)}.cl-hero p{max-width:700px;color:rgba(255,255,255,.7);font-size:14px;line-height:1.85}.cl-actions{display:flex;align-items:center;gap:32px;margin-top:35px}.cl-btn{display:inline-flex;align-items:center;justify-content:space-between;gap:38px;padding:18px 22px;min-width:250px;text-transform:uppercase;font-size:9px;font-weight:800;letter-spacing:.12em;text-decoration:none}.cl-btn.light{background:#fff;color:#111}.cl-link{color:#fff;text-decoration:none;font-size:10px;letter-spacing:.08em}.cl-link b,.cl-btn b{font-size:17px;font-weight:400;margin-left:10px}.cl-hero-foot{position:absolute;z-index:2;left:50%;transform:translateX(-50%);bottom:28px;display:flex;justify-content:space-between;color:rgba(255,255,255,.42);font-size:7px;letter-spacing:.15em}
-.cl-intro{padding:145px 0}.cl-intro-grid{display:grid;grid-template-columns:180px 1fr 420px;gap:55px;align-items:start}.cl-intro small,.cl-head small{color:#8a8a8a}.cl-intro p{font-size:13px;line-height:1.9;color:#707070;margin-top:45px}.cl-head{display:grid;grid-template-columns:180px 1fr;gap:55px;margin-bottom:70px}
-.cl-spaces{padding:140px 0;background:var(--soft)}.cl-space-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:390px;gap:12px}.cl-space{position:relative;overflow:hidden;background:#111;color:#fff}.cl-space.big{grid-column:span 2;grid-row:span 2}.cl-space.wide{grid-column:span 2}.cl-space img{transition:transform .9s ease}.cl-space:hover img{transform:scale(1.045)}.cl-card-shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.82),transparent 68%)}.cl-card-copy{position:absolute;left:28px;right:28px;bottom:28px}.cl-card-copy small{color:rgba(255,255,255,.5)}.cl-card-copy h3{font-size:clamp(28px,2.8vw,46px);font-weight:400;letter-spacing:-.045em;margin:8px 0 0}.cl-card-copy p{max-width:540px;color:rgba(255,255,255,.65);font-size:11px;line-height:1.7;margin:10px 0 0}
-.cl-editorial{display:grid;grid-template-columns:1.08fr .92fr;min-height:850px;background:#101010;color:#fff}.cl-editorial-image{min-height:850px}.cl-editorial-copy{padding:110px clamp(50px,6vw,110px);display:flex;justify-content:center;flex-direction:column}.cl-editorial-copy small,.cl-smart small,.cl-cta small{color:#777;margin-top:25px}.cl-editorial-copy h2 span,.cl-smart h2 span,.cl-cta h2 span{color:#666}.cl-editorial-copy>p{color:#888;font-size:13px;line-height:1.85;max-width:580px;margin:28px 0 0}.cl-lines{margin-top:45px;border-top:1px solid #2c2c2c}.cl-lines div{display:grid;grid-template-columns:55px 1fr;padding:18px 0;border-bottom:1px solid #292929}.cl-lines b{font-size:8px;color:#555}.cl-lines span{font-size:15px}
-.cl-range{padding:145px 0}.cl-range-list{border-top:1px solid var(--line)}.cl-range-row{display:grid;grid-template-columns:90px 1fr 1fr 45px;gap:30px;align-items:center;min-height:126px;border-bottom:1px solid var(--line);transition:.3s}.cl-range-row:hover{background:#f6f6f3;padding:0 18px}.cl-range-row b{font-size:9px;color:#999}.cl-range-row h3{font-size:clamp(28px,3vw,48px);font-weight:400;letter-spacing:-.045em;margin:0}.cl-range-row p{font-size:11px;color:#777;line-height:1.7;margin:0}.cl-range-row i{font-style:normal;font-size:20px}
-.cl-performance{padding:145px 0;background:#f4f3ef}.cl-performance-grid{display:grid;grid-template-columns:1fr 520px;gap:100px;align-items:center}.cl-performance-copy small{display:block;color:#8c8c8c;margin-top:25px}.cl-performance-copy p{max-width:650px;font-size:13px;line-height:1.9;color:#747474;margin-top:30px}.cl-performance-list{border-top:1px solid #ccc}.cl-performance-list div{display:grid;grid-template-columns:55px 1fr;padding:20px 0;border-bottom:1px solid #ccc}.cl-performance-list b{font-size:8px;color:#999}.cl-performance-list span{font-size:13px}
-.cl-smart{min-height:820px;position:relative;color:#fff;background:#111}.cl-smart>img{position:absolute;inset:0}.cl-smart-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.62) 60%,rgba(0,0,0,.2))}.cl-smart-inner{position:relative;z-index:2;min-height:820px;display:grid;grid-template-columns:1fr 490px;gap:90px;align-items:center}.cl-smart p{max-width:650px;color:#aaa;font-size:13px;line-height:1.85;margin-top:28px}.cl-smart-list{border-top:1px solid rgba(255,255,255,.2)}.cl-smart-list div{display:grid;grid-template-columns:55px 1fr;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:12px}.cl-smart-list b{font-size:8px;color:#666}
-.cl-process{padding:145px 0;background:#f5f4f0}.cl-process-grid{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid #ccc;border-bottom:1px solid #ccc}.cl-process-grid>div{min-height:310px;padding:28px 24px;border-right:1px solid #ccc}.cl-process-grid>div:last-child{border-right:0}.cl-process-grid b{display:block;font-size:8px;color:#999;margin-bottom:65px}.cl-process-grid small{color:#999}.cl-process-grid h3{font-size:24px;font-weight:400;margin:12px 0}.cl-process-grid p{font-size:10px;line-height:1.7;color:#777}
-.cl-sector-strip{padding:110px 0;background:#fff}.cl-sector-grid{display:grid;grid-template-columns:repeat(6,1fr);margin-top:38px;border-top:1px solid #d8d8d4;border-left:1px solid #d8d8d4}.cl-sector-grid span{min-height:90px;display:flex;align-items:center;padding:18px;border-right:1px solid #d8d8d4;border-bottom:1px solid #d8d8d4;font-size:11px;font-weight:600;color:#444;transition:.25s}.cl-sector-grid span:hover{background:#111;color:#fff}
-.cl-cta{padding:125px 0;background:#090909;color:#fff}.cl-cta-grid{display:grid;grid-template-columns:100px 1fr 390px;gap:60px;align-items:end}.cl-cta p{font-size:12px;line-height:1.8;color:#777;margin-bottom:28px}
-@media(max-width:1200px){.cl-sector-grid{grid-template-columns:repeat(4,1fr)}}
-@media(max-width:991px){.cl-wrap{width:calc(100% - 50px)}.cl-intro-grid{grid-template-columns:1fr}.cl-intro p{margin-top:0}.cl-space-grid{grid-template-columns:repeat(2,1fr)}.cl-space.big{grid-column:span 2;grid-row:span 1}.cl-editorial{grid-template-columns:1fr}.cl-editorial-image{min-height:560px}.cl-performance-grid,.cl-smart-inner{grid-template-columns:1fr}.cl-performance-grid{gap:55px}.cl-smart-inner{padding:100px 0}.cl-process-grid{grid-template-columns:repeat(2,1fr)}.cl-sector-grid{grid-template-columns:repeat(3,1fr)}.cl-cta-grid{grid-template-columns:1fr}}
-@media(max-width:767px){.cl-wrap{width:calc(100% - 36px)}.cl-hero{min-height:780px}.cl-hero h1{font-size:clamp(52px,15vw,72px)}.cl-actions{align-items:flex-start;flex-direction:column}.cl-hero-foot span:last-child{display:none}.cl-intro,.cl-spaces,.cl-range,.cl-performance,.cl-process,.cl-sector-strip{padding:90px 0}.cl-head{grid-template-columns:1fr;gap:25px}.cl-space-grid{display:block}.cl-space{height:430px;margin-bottom:10px}.cl-space.big,.cl-space.wide{grid-column:auto;grid-row:auto}.cl-editorial-image{min-height:470px}.cl-editorial-copy{padding:75px 22px}.cl-range-row{grid-template-columns:42px 1fr 30px;min-height:108px;gap:12px}.cl-range-row p{display:none}.cl-smart-inner{min-height:780px}.cl-process-grid{grid-template-columns:1fr}.cl-process-grid>div{min-height:auto;border-right:0;border-bottom:1px solid #ccc}.cl-process-grid b{margin-bottom:28px}.cl-sector-grid{grid-template-columns:repeat(2,1fr)}.cl-sector-grid span{min-height:72px}.cl-cta{padding:85px 0}}
-</style>
-<!-- END MODULE — COMMERCIAL LIGHTING -->
-     
- <!-- =========================================================
+    <style>
+        .cl-page {
+            --ink: #0b0b0b;
+            --paper: #fff;
+            --soft: #f3f2ee;
+            --muted: #858585;
+            --line: #d9d9d4;
+            font-family: "Inter", sans-serif;
+            color: var(--ink);
+            background: #fff;
+            overflow: hidden
+        }
+
+        .cl-page * {
+            box-sizing: border-box
+        }
+
+        .cl-page img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+
+        .cl-wrap {
+            width: min(1480px, calc(100% - 100px));
+            margin: auto
+        }
+
+        .cl-kicker,
+        .cl-page small {
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: .18em
+        }
+
+        .cl-kicker {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            color: rgba(255, 255, 255, .68)
+        }
+
+        .cl-kicker i {
+            width: 38px;
+            height: 1px;
+            background: rgba(255, 255, 255, .45)
+        }
+
+        .cl-num {
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: .14em;
+            color: #777
+        }
+
+        .cl-num.pale {
+            color: rgba(255, 255, 255, .45)
+        }
+
+        .cl-page h2 {
+            font-size: clamp(48px, 5.4vw, 84px);
+            line-height: .96;
+            font-weight: 400;
+            letter-spacing: -.06em;
+            margin: 18px 0 0
+        }
+
+        .cl-page h2 span {
+            color: #999
+        }
+
+        .cl-hero {
+            height: max(760px, 100vh);
+            min-height: 760px;
+            position: relative;
+            color: #fff;
+            background: #111
+        }
+
+        .cl-hero-img {
+            position: absolute;
+            inset: 0
+        }
+
+        .cl-hero-shade {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(0, 0, 0, .90), rgba(0, 0, 0, .57) 40%, rgba(0, 0, 0, .08) 78%), linear-gradient(0deg, rgba(0, 0, 0, .44), transparent 40%)
+        }
+
+        .cl-hero-inner {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding-top: 80px
+        }
+
+        .cl-hero h1 {
+            font-size: clamp(64px, 7.6vw, 120px);
+            line-height: .86;
+            font-weight: 300;
+            letter-spacing: -.075em;
+            max-width: 1100px;
+            margin: 30px 0
+        }
+
+        .cl-hero h1 span {
+            color: rgba(255, 255, 255, .58)
+        }
+
+        .cl-hero p {
+            max-width: 700px;
+            color: rgba(255, 255, 255, .7);
+            font-size: 14px;
+            line-height: 1.85
+        }
+
+        .cl-actions {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            margin-top: 35px
+        }
+
+        .cl-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 38px;
+            padding: 18px 22px;
+            min-width: 250px;
+            text-transform: uppercase;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: .12em;
+            text-decoration: none
+        }
+
+        .cl-btn.light {
+            background: #fff;
+            color: #111
+        }
+
+        .cl-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 10px;
+            letter-spacing: .08em
+        }
+
+        .cl-link b,
+        .cl-btn b {
+            font-size: 17px;
+            font-weight: 400;
+            margin-left: 10px
+        }
+
+        .cl-hero-foot {
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 28px;
+            display: flex;
+            justify-content: space-between;
+            color: rgba(255, 255, 255, .42);
+            font-size: 7px;
+            letter-spacing: .15em
+        }
+
+        .cl-intro {
+            padding: 145px 0
+        }
+
+        .cl-intro-grid {
+            display: grid;
+            grid-template-columns: 180px 1fr 420px;
+            gap: 55px;
+            align-items: start
+        }
+
+        .cl-intro small,
+        .cl-head small {
+            color: #8a8a8a
+        }
+
+        .cl-intro p {
+            font-size: 13px;
+            line-height: 1.9;
+            color: #707070;
+            margin-top: 45px
+        }
+
+        .cl-head {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 55px;
+            margin-bottom: 70px
+        }
+
+        .cl-spaces {
+            padding: 140px 0;
+            background: var(--soft)
+        }
+
+        .cl-space-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 390px;
+            gap: 12px
+        }
+
+        .cl-space {
+            position: relative;
+            overflow: hidden;
+            background: #111;
+            color: #fff
+        }
+
+        .cl-space.big {
+            grid-column: span 2;
+            grid-row: span 2
+        }
+
+        .cl-space.wide {
+            grid-column: span 2
+        }
+
+        .cl-space img {
+            transition: transform .9s ease
+        }
+
+        .cl-space:hover img {
+            transform: scale(1.045)
+        }
+
+        .cl-card-shade {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, .82), transparent 68%)
+        }
+
+        .cl-card-copy {
+            position: absolute;
+            left: 28px;
+            right: 28px;
+            bottom: 28px
+        }
+
+        .cl-card-copy small {
+            color: rgba(255, 255, 255, .5)
+        }
+
+        .cl-card-copy h3 {
+            font-size: clamp(28px, 2.8vw, 46px);
+            font-weight: 400;
+            letter-spacing: -.045em;
+            margin: 8px 0 0
+        }
+
+        .cl-card-copy p {
+            max-width: 540px;
+            color: rgba(255, 255, 255, .65);
+            font-size: 11px;
+            line-height: 1.7;
+            margin: 10px 0 0
+        }
+
+        .cl-editorial {
+            display: grid;
+            grid-template-columns: 1.08fr .92fr;
+            min-height: 850px;
+            background: #101010;
+            color: #fff
+        }
+
+        .cl-editorial-image {
+            min-height: 850px
+        }
+
+        .cl-editorial-copy {
+            padding: 110px clamp(50px, 6vw, 110px);
+            display: flex;
+            justify-content: center;
+            flex-direction: column
+        }
+
+        .cl-editorial-copy small,
+        .cl-smart small,
+        .cl-cta small {
+            color: #777;
+            margin-top: 25px
+        }
+
+        .cl-editorial-copy h2 span,
+        .cl-smart h2 span,
+        .cl-cta h2 span {
+            color: #666
+        }
+
+        .cl-editorial-copy>p {
+            color: #888;
+            font-size: 13px;
+            line-height: 1.85;
+            max-width: 580px;
+            margin: 28px 0 0
+        }
+
+        .cl-lines {
+            margin-top: 45px;
+            border-top: 1px solid #2c2c2c
+        }
+
+        .cl-lines div {
+            display: grid;
+            grid-template-columns: 55px 1fr;
+            padding: 18px 0;
+            border-bottom: 1px solid #292929
+        }
+
+        .cl-lines b {
+            font-size: 8px;
+            color: #555
+        }
+
+        .cl-lines span {
+            font-size: 15px
+        }
+
+        .cl-range {
+            padding: 145px 0
+        }
+
+        .cl-range-list {
+            border-top: 1px solid var(--line)
+        }
+
+        .cl-range-row {
+            display: grid;
+            grid-template-columns: 90px 1fr 1fr 45px;
+            gap: 30px;
+            align-items: center;
+            min-height: 126px;
+            border-bottom: 1px solid var(--line);
+            transition: .3s
+        }
+
+        .cl-range-row:hover {
+            background: #f6f6f3;
+            padding: 0 18px
+        }
+
+        .cl-range-row b {
+            font-size: 9px;
+            color: #999
+        }
+
+        .cl-range-row h3 {
+            font-size: clamp(28px, 3vw, 48px);
+            font-weight: 400;
+            letter-spacing: -.045em;
+            margin: 0
+        }
+
+        .cl-range-row p {
+            font-size: 11px;
+            color: #777;
+            line-height: 1.7;
+            margin: 0
+        }
+
+        .cl-range-row i {
+            font-style: normal;
+            font-size: 20px
+        }
+
+        .cl-performance {
+            padding: 145px 0;
+            background: #f4f3ef
+        }
+
+        .cl-performance-grid {
+            display: grid;
+            grid-template-columns: 1fr 520px;
+            gap: 100px;
+            align-items: center
+        }
+
+        .cl-performance-copy small {
+            display: block;
+            color: #8c8c8c;
+            margin-top: 25px
+        }
+
+        .cl-performance-copy p {
+            max-width: 650px;
+            font-size: 13px;
+            line-height: 1.9;
+            color: #747474;
+            margin-top: 30px
+        }
+
+        .cl-performance-list {
+            border-top: 1px solid #ccc
+        }
+
+        .cl-performance-list div {
+            display: grid;
+            grid-template-columns: 55px 1fr;
+            padding: 20px 0;
+            border-bottom: 1px solid #ccc
+        }
+
+        .cl-performance-list b {
+            font-size: 8px;
+            color: #999
+        }
+
+        .cl-performance-list span {
+            font-size: 16px
+        }
+
+        .cl-smart {
+            min-height: 820px;
+            position: relative;
+            color: #fff;
+            background: #111
+        }
+
+        .cl-smart>img {
+            position: absolute;
+            inset: 0
+        }
+
+        .cl-smart-shade {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(0, 0, 0, .92), rgba(0, 0, 0, .62) 60%, rgba(0, 0, 0, .2))
+        }
+
+        .cl-smart-inner {
+            position: relative;
+            z-index: 2;
+            min-height: 820px;
+            display: grid;
+            grid-template-columns: 1fr 490px;
+            gap: 90px;
+            align-items: center
+        }
+
+        .cl-smart p {
+            max-width: 650px;
+            color: #aaa;
+            font-size: 13px;
+            line-height: 1.85;
+            margin-top: 28px
+        }
+
+        .cl-smart-list {
+            border-top: 1px solid rgba(255, 255, 255, .2)
+        }
+
+        .cl-smart-list div {
+            display: grid;
+            grid-template-columns: 55px 1fr;
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, .14);
+            font-size: 16px
+        }
+
+        .cl-smart-list b {
+            font-size: 8px;
+            color: #666
+        }
+
+        .cl-process {
+            padding: 145px 0;
+            background: #f5f4f0
+        }
+
+        .cl-process-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc
+        }
+
+        .cl-process-grid>div {
+            min-height: 310px;
+            padding: 28px 24px;
+            border-right: 1px solid #ccc
+        }
+
+        .cl-process-grid>div:last-child {
+            border-right: 0
+        }
+
+        .cl-process-grid b {
+            display: block;
+            font-size: 8px;
+            color: #999;
+            margin-bottom: 65px
+        }
+
+        .cl-process-grid small {
+            color: #999
+        }
+
+        .cl-process-grid h3 {
+            font-size: 24px;
+            font-weight: 400;
+            margin: 12px 0
+        }
+
+        .cl-process-grid p {
+            font-size: 10px;
+            line-height: 1.7;
+            color: #777
+        }
+
+        .cl-sector-strip {
+            padding: 110px 0;
+            background: #fff
+        }
+
+        .cl-sector-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            margin-top: 38px;
+            border-top: 1px solid #d8d8d4;
+            border-left: 1px solid #d8d8d4
+        }
+
+        .cl-sector-grid span {
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            padding: 18px;
+            border-right: 1px solid #d8d8d4;
+            border-bottom: 1px solid #d8d8d4;
+            font-size: 16px;
+            font-weight: 600;
+            color: #444;
+            transition: .25s
+        }
+
+        .cl-sector-grid span:hover {
+            background: #111;
+            color: #fff
+        }
+
+        .cl-cta {
+            padding: 125px 0;
+            background: #090909;
+            color: #fff
+        }
+
+        .cl-cta-grid {
+            display: grid;
+            grid-template-columns: 100px 1fr 390px;
+            gap: 60px;
+            align-items: end
+        }
+
+        .cl-cta p {
+            font-size: 12px;
+            line-height: 1.8;
+            color: #777;
+            margin-bottom: 28px
+        }
+
+        @media(max-width:1200px) {
+            .cl-sector-grid {
+                grid-template-columns: repeat(4, 1fr)
+            }
+        }
+
+        @media(max-width:991px) {
+            .cl-wrap {
+                width: calc(100% - 50px)
+            }
+
+            .cl-intro-grid {
+                grid-template-columns: 1fr
+            }
+
+            .cl-intro p {
+                margin-top: 0
+            }
+
+            .cl-space-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .cl-space.big {
+                grid-column: span 2;
+                grid-row: span 1
+            }
+
+            .cl-editorial {
+                grid-template-columns: 1fr
+            }
+
+            .cl-editorial-image {
+                min-height: 560px
+            }
+
+            .cl-performance-grid,
+            .cl-smart-inner {
+                grid-template-columns: 1fr
+            }
+
+            .cl-performance-grid {
+                gap: 55px
+            }
+
+            .cl-smart-inner {
+                padding: 100px 0
+            }
+
+            .cl-process-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .cl-sector-grid {
+                grid-template-columns: repeat(3, 1fr)
+            }
+
+            .cl-cta-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        @media(max-width:767px) {
+            .cl-wrap {
+                width: calc(100% - 36px)
+            }
+
+            .cl-hero {
+                min-height: 780px
+            }
+
+            .cl-hero h1 {
+                font-size: clamp(52px, 15vw, 72px)
+            }
+
+            .cl-actions {
+                align-items: flex-start;
+                flex-direction: column
+            }
+
+            .cl-hero-foot span:last-child {
+                display: none
+            }
+
+            .cl-intro,
+            .cl-spaces,
+            .cl-range,
+            .cl-performance,
+            .cl-process,
+            .cl-sector-strip {
+                padding: 90px 0
+            }
+
+            .cl-head {
+                grid-template-columns: 1fr;
+                gap: 25px
+            }
+
+            .cl-space-grid {
+                display: block
+            }
+
+            .cl-space {
+                height: 430px;
+                margin-bottom: 10px
+            }
+
+            .cl-space.big,
+            .cl-space.wide {
+                grid-column: auto;
+                grid-row: auto
+            }
+
+            .cl-editorial-image {
+                min-height: 470px
+            }
+
+            .cl-editorial-copy {
+                padding: 75px 22px
+            }
+
+            .cl-range-row {
+                grid-template-columns: 42px 1fr 30px;
+                min-height: 108px;
+                gap: 12px
+            }
+
+            .cl-range-row p {
+                display: none
+            }
+
+            .cl-smart-inner {
+                min-height: 780px
+            }
+
+            .cl-process-grid {
+                grid-template-columns: 1fr
+            }
+
+            .cl-process-grid>div {
+                min-height: auto;
+                border-right: 0;
+                border-bottom: 1px solid #ccc
+            }
+
+            .cl-process-grid b {
+                margin-bottom: 28px
+            }
+
+            .cl-sector-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .cl-sector-grid span {
+                min-height: 72px
+            }
+
+            .cl-cta {
+                padding: 85px 0
+            }
+        }
+    </style>
+    <!-- END MODULE — COMMERCIAL LIGHTING -->
+
+    <!-- =========================================================
      ALPHA NUMERIC — PREMIUM CORPORATE WHITE FOOTER
      Sharp architectural layout | No curves | No toy styling
      Complete HTML + CSS + automatic year
@@ -1145,7 +2246,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <li><a href="sensors.html"><span>Sensors</span><i>↗</i></a></li>
                             <li><a href="controllers.html"><span>Controllers</span><i>↗</i></a></li>
                             <li><a href="gateways.html"><span>Gateways</span><i>↗</i></a></li>
-                          
+
                             <li><a href="control-panels.html"><span>Control Panels</span><i>↗</i></a></li>
                             <li><a href="panel-boards.html"><span>Panel Boards</span><i>↗</i></a></li>
                             <li><a href="switchgears.html"><span>Switchgears</span><i>↗</i></a></li>
@@ -1199,7 +2300,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     All rights reserved.
                 </p>
 
-              
+
 
                 <div class="corp-footer-bottom-links">
                     <!-- <a href="#">Privacy</a>
@@ -2309,12 +3410,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE — GLOBAL RESPONSIVE OVERRIDES
 ========================================================= -->
 
-<!-- CSS -->
-<style>
+    <!-- CSS -->
+    <style>
         /* =====================================================
            RESPONSIVE
         ===================================================== */
@@ -2456,11 +3557,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 gap: 10px;
             }
         }
-</style>
+    </style>
 
-<!-- END MODULE — GLOBAL RESPONSIVE OVERRIDES -->
+    <!-- END MODULE — GLOBAL RESPONSIVE OVERRIDES -->
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

@@ -20,21 +20,22 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
 
 
 </head>
+
 <body>
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE — GLOBAL BASE STYLES
 ========================================================= -->
 
-<!-- CSS -->
-<style>
+    <!-- CSS -->
+    <style>
         /* =====================================================
            GLOBAL
         ===================================================== */
@@ -43,6 +44,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        p {
+            font-size: 17px !important;
         }
 
         html {
@@ -63,19 +68,20 @@
         img {
             max-width: 100%;
         }
-</style>
+    </style>
 
-<!-- END MODULE — GLOBAL BASE STYLES -->
+    <!-- END MODULE — GLOBAL BASE STYLES -->
 
 
-<!-- HTML -->
+    <!-- HTML -->
     <!-- =========================================================
          PREMIUM GLOBAL NAVIGATION
     ========================================================= -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar scrolled" id="mainNav">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/img/lll1.png" id="logoWhite" class="navbar-logo" alt="Alpha Numeric Innovations" style="display:none;">
+                <img src="assets/img/lll1.png" id="logoWhite" class="navbar-logo" alt="Alpha Numeric Innovations"
+                    style="display:none;">
                 <img src="assets/img/lll1.png" id="logoDark" class="navbar-logo" alt="Alpha Numeric Innovations">
             </a>
 
@@ -115,7 +121,7 @@
                                     <div class="mega-heading"><span>Lighting</span></div>
                                     <a href="residential-lighting.html">Residential Lighting</a>
                                     <a href="commercial-lighting.html">Commercial Lighting</a>
-                                    <a href="industrial-lighting.html">Outdoor Lighting</a>
+                                    <a href="industrial-lighting.html">Industrial Lighting</a>
                                     <a href="outdoor-lighting.html">Outdoor Lighting</a>
                                 </div>
                                 <div class="mega-column">
@@ -140,57 +146,51 @@
 
                     <li class="nav-item dropdown bms-dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="bmsDropdown" role="button"
-                           data-bs-toggle="dropdown" aria-expanded="false">IoT</a>
+                            data-bs-toggle="dropdown" aria-expanded="false">IoT</a>
                         <ul class="dropdown-menu bms-menu" aria-labelledby="bmsDropdown">
                             <li><a class="dropdown-item" href="iot.html">IoT</a></li>
                             <li><a class="dropdown-item" href="bms.html">BMS</a></li>
                             <li><a class="dropdown-item" href="iot_bms.html">IoT+BMS</a></li>
                         </ul>
                     </li>
-    <li class="nav-item dropdown product-dropdown">              
+                    <li class="nav-item dropdown product-dropdown">
 
-    <a class="nav-link dropdown-toggle"
-       href="#"
-       id="productsDropdown"
-       role="button"
-       data-bs-toggle="dropdown"
-       data-bs-auto-close="outside"
-       aria-expanded="false">
-        Products
-    </a>
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
+                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            Products
+                        </a>
 
-    <div class="dropdown-menu product-menu"
-         aria-labelledby="productsDropdown">
+                        <div class="dropdown-menu product-menu" aria-labelledby="productsDropdown">
 
-        <a href="power-products.html">Sensors</a>
+                            <a href="power-products.html">Sensors</a>
 
-        <a href="power-products.html">Controllers</a>
+                            <a href="power-products.html">Controllers</a>
 
-        <a href="power-products.html">Gateways</a>
+                            <a href="power-products.html">Gateways</a>
 
-        <a href="power-products.html">Meters</a>
+                            <a href="power-products.html">Meters</a>
 
-        <a href="power-products.html">Transformers</a>
+                            <a href="power-products.html">Transformers</a>
 
-        <a href="power-products.html">Control Panels</a>
+                            <a href="power-products.html">Control Panels</a>
 
-        <a href="power-products.html">Panel Boards</a>
+                            <a href="power-products.html">Panel Boards</a>
 
-        <a href="power-products.html">Switchgears</a>
+                            <a href="power-products.html">Switchgears</a>
 
-    </div>
+                        </div>
 
-</li>
-<li class="nav-item"><a class="nav-link" href="why.html">Why</a></li>
-<li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="why.html">Why</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-<!-- CSS -->
-<style>
+    <!-- CSS -->
+    <style>
         /* =====================================================
            GLOBAL
         ===================================================== */
@@ -219,29 +219,144 @@
         img {
             max-width: 100%;
         }
+
         /* =====================================================
            PREMIUM GLOBAL NAVBAR
         ===================================================== */
 
-        .main-navbar { padding: 13px 0; background: transparent; transition: background .35s ease, padding .35s ease, box-shadow .35s ease; z-index: 9999; }
-        .main-navbar.navbar-shrink, .main-navbar.scrolled { background: #fff; padding: 8px 0; box-shadow: 0 8px 35px rgba(14,29,57,.08); }
-        .navbar-logo { height: 68px; width: auto; object-fit: contain; transition: height .3s ease; }
-        .main-navbar.navbar-shrink .navbar-logo, .main-navbar.scrolled .navbar-logo { height: 58px; }
-        .main-navbar .nav-link { position: relative; color: #fff; font-size: 14px; font-weight: 600; letter-spacing: .4px; margin: 0 5px; padding: 12px 11px !important; transition: color .3s ease; }
-        .main-navbar.navbar-shrink .nav-link, .main-navbar.scrolled .nav-link { color: #16243b; }
-        .main-navbar .nav-link:hover, .main-navbar .nav-link:focus { color: #4d73be; }
+        .main-navbar {
+            padding: 13px 0;
+            background: transparent;
+            transition: background .35s ease, padding .35s ease, box-shadow .35s ease;
+            z-index: 9999;
+        }
 
-        .solution-dropdown { position: static !important; }
-        .mega-menu { position: absolute !important; width: min(1380px, calc(100vw - 48px)); left: 50% !important; top: 100% !important; transform: translateX(-50%) !important; margin-top: 0 !important; padding: 0; border: 0; border-radius: 14px; background: #fff; box-shadow: 0 24px 70px rgba(14,29,57,.18); overflow: hidden; }
-        .mega-menu-inner { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); }
-        .mega-column { min-height: 270px; padding: 30px 30px 32px; border-right: 1px solid #e8edf5; background: #fff; }
-        .mega-column:last-child { border-right: 0; }
-        .mega-heading { display: flex; align-items: center; gap: 11px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid #edf1f7; color: #17243b; font-family: "Varela Round", sans-serif; font-size: 16px; font-weight: 600; }
-        .mega-heading i { width: 22px; color: #4d73be; font-size: 17px; }
-        .mega-column > a { display: block; position: relative; padding: 9px 0 9px 16px; color: #5d687b; font-size: 13.5px; font-weight: 600; text-decoration: none; transition: color .25s ease, padding .25s ease; }
-        .mega-column > a::before { content: ""; position: absolute; left: 0; top: 50%; width: 6px; height: 1px; background: #9eabc0; transform: translateY(-50%); transition: width .25s ease, background .25s ease; }
-        .mega-column > a:hover { color: #334a85; padding-left: 21px; }
-        .mega-column > a:hover::before { width: 12px; background: #4d73be; }
+        .main-navbar.navbar-shrink,
+        .main-navbar.scrolled {
+            background: #fff;
+            padding: 8px 0;
+            box-shadow: 0 8px 35px rgba(14, 29, 57, .08);
+        }
+
+        .navbar-logo {
+            height: 68px;
+            width: auto;
+            object-fit: contain;
+            transition: height .3s ease;
+        }
+
+        .main-navbar.navbar-shrink .navbar-logo,
+        .main-navbar.scrolled .navbar-logo {
+            height: 58px;
+        }
+
+        .main-navbar .nav-link {
+            position: relative;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: .4px;
+            margin: 0 5px;
+            padding: 12px 11px !important;
+            transition: color .3s ease;
+        }
+
+        .main-navbar.navbar-shrink .nav-link,
+        .main-navbar.scrolled .nav-link {
+            color: #16243b;
+        }
+
+        .main-navbar .nav-link:hover,
+        .main-navbar .nav-link:focus {
+            color: #4d73be;
+        }
+
+        .solution-dropdown {
+            position: static !important;
+        }
+
+        .mega-menu {
+            position: absolute !important;
+            width: min(1380px, calc(100vw - 48px));
+            left: 50% !important;
+            top: 100% !important;
+            transform: translateX(-50%) !important;
+            margin-top: 0 !important;
+            padding: 0;
+            border: 0;
+            border-radius: 14px;
+            background: #fff;
+            box-shadow: 0 24px 70px rgba(14, 29, 57, .18);
+            overflow: hidden;
+        }
+
+        .mega-menu-inner {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+        }
+
+        .mega-column {
+            min-height: 270px;
+            padding: 30px 30px 32px;
+            border-right: 1px solid #e8edf5;
+            background: #fff;
+        }
+
+        .mega-column:last-child {
+            border-right: 0;
+        }
+
+        .mega-heading {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            margin-bottom: 18px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid #edf1f7;
+            color: #17243b;
+            font-family: "Varela Round", sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .mega-heading i {
+            width: 22px;
+            color: #4d73be;
+            font-size: 17px;
+        }
+
+        .mega-column>a {
+            display: block;
+            position: relative;
+            padding: 9px 0 9px 16px;
+            color: #5d687b;
+            font-size: 13.5px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color .25s ease, padding .25s ease;
+        }
+
+        .mega-column>a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 6px;
+            height: 1px;
+            background: #9eabc0;
+            transform: translateY(-50%);
+            transition: width .25s ease, background .25s ease;
+        }
+
+        .mega-column>a:hover {
+            color: #334a85;
+            padding-left: 21px;
+        }
+
+        .mega-column>a:hover::before {
+            width: 12px;
+            background: #4d73be;
+        }
 
         /* BMS DROPDOWN */
         .bms-dropdown .bms-menu {
@@ -251,7 +366,7 @@
             border: 1px solid #1f1f1f;
             border-radius: 10px;
             background: #000000;
-            box-shadow: 0 18px 45px rgba(0,0,0,.24);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, .24);
         }
 
         .bms-dropdown .bms-menu .dropdown-item {
@@ -271,8 +386,9 @@
         }
 
         @media (min-width: 992px) {
+
             /* BMS dropdown: open on hover and stay open while hovering menu */
-            .bms-dropdown > .bms-menu {
+            .bms-dropdown>.bms-menu {
                 display: block;
                 opacity: 0;
                 visibility: hidden;
@@ -281,16 +397,16 @@
                 transition: opacity .22s ease, visibility .22s ease, transform .22s ease;
             }
 
-            .bms-dropdown:hover > .bms-menu,
-            .bms-dropdown > .bms-menu:hover,
-            .bms-dropdown > .bms-menu.show {
+            .bms-dropdown:hover>.bms-menu,
+            .bms-dropdown>.bms-menu:hover,
+            .bms-dropdown>.bms-menu.show {
                 opacity: 1;
                 visibility: visible;
                 pointer-events: auto;
                 transform: translateY(0);
             }
 
-            .solution-dropdown > .mega-menu {
+            .solution-dropdown>.mega-menu {
                 opacity: 0;
                 visibility: hidden;
                 pointer-events: none;
@@ -298,16 +414,16 @@
                 transition: opacity .22s ease, visibility .22s ease;
             }
 
-            .solution-dropdown:hover > .mega-menu,
-            .solution-dropdown.mega-open > .mega-menu,
-            .solution-dropdown > .mega-menu.show {
+            .solution-dropdown:hover>.mega-menu,
+            .solution-dropdown.mega-open>.mega-menu,
+            .solution-dropdown>.mega-menu.show {
                 opacity: 1;
                 visibility: visible;
                 pointer-events: auto;
             }
 
             /* Invisible hover bridge between Solutions and mega menu */
-            .solution-dropdown > .mega-menu::before {
+            .solution-dropdown>.mega-menu::before {
                 content: "";
                 position: absolute;
                 left: 0;
@@ -319,44 +435,121 @@
         }
 
         @media (max-width: 991px) {
-            .main-navbar { background: #fff; padding: 8px 0; }
-            .navbar-logo { height: 55px; }
-            #logoWhite { display: none !important; }
-            #logoDark { display: block !important; }
-            .main-navbar .navbar-toggler { color: #17243b; border-color: rgba(23,36,59,.2); }
-            .main-navbar .nav-link { color: #17243b; padding: 12px 7px !important; margin: 1px 0; }
-            .navbar-collapse { max-height: calc(100vh - 76px); overflow-y: auto; margin-top: 10px; padding: 15px 10px 22px; border-top: 1px solid #edf0f5; background: #fff; }
-            .mega-menu { position: static !important; transform: none !important; width: 100%; margin: 0 !important; box-shadow: none; border-left: 2px solid #334a85; border-radius: 0; overflow: visible; }
-            .mega-menu-inner { grid-template-columns: 1fr; }
-            .mega-column { min-height: 0; padding: 18px 18px 14px; border-right: 0; border-bottom: 1px solid #edf0f5; }
-            .mega-column:last-child { border-bottom: 0; }
-            .mega-heading { margin-bottom: 8px; padding-bottom: 10px; }
-            .mega-column > a { padding-top: 7px; padding-bottom: 7px; }
+            .main-navbar {
+                background: #fff;
+                padding: 8px 0;
+            }
+
+            .navbar-logo {
+                height: 55px;
+            }
+
+            #logoWhite {
+                display: none !important;
+            }
+
+            #logoDark {
+                display: block !important;
+            }
+
+            .main-navbar .navbar-toggler {
+                color: #17243b;
+                border-color: rgba(23, 36, 59, .2);
+            }
+
+            .main-navbar .nav-link {
+                color: #17243b;
+                padding: 12px 7px !important;
+                margin: 1px 0;
+            }
+
+            .navbar-collapse {
+                max-height: calc(100vh - 76px);
+                overflow-y: auto;
+                margin-top: 10px;
+                padding: 15px 10px 22px;
+                border-top: 1px solid #edf0f5;
+                background: #fff;
+            }
+
+            .mega-menu {
+                position: static !important;
+                transform: none !important;
+                width: 100%;
+                margin: 0 !important;
+                box-shadow: none;
+                border-left: 2px solid #334a85;
+                border-radius: 0;
+                overflow: visible;
+            }
+
+            .mega-menu-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .mega-column {
+                min-height: 0;
+                padding: 18px 18px 14px;
+                border-right: 0;
+                border-bottom: 1px solid #edf0f5;
+            }
+
+            .mega-column:last-child {
+                border-bottom: 0;
+            }
+
+            .mega-heading {
+                margin-bottom: 8px;
+                padding-bottom: 10px;
+            }
+
+            .mega-column>a {
+                padding-top: 7px;
+                padding-bottom: 7px;
+            }
         }
 
 
         /* ABOUT PAGE: keep Index navbar in permanent white/scrolled state */
-       
+
         .main-navbar {
             background: #fff;
             padding: 8px 0;
-            box-shadow: 0 8px 35px rgba(14,29,57,.08);
+            box-shadow: 0 8px 35px rgba(14, 29, 57, .08);
         }
-        .main-navbar .navbar-logo { height: 58px; }
-        .main-navbar .nav-link { color: #16243b; }
-        #logoWhite { display: none !important; }
-        #logoDark { display: block !important; }
+
+        .main-navbar .navbar-logo {
+            height: 58px;
+        }
+
+        .main-navbar .nav-link {
+            color: #16243b;
+        }
+
+        #logoWhite {
+            display: none !important;
+        }
+
+        #logoDark {
+            display: block !important;
+        }
+
         .main-navbar .nav-contact {
             background: #334a85;
             border-color: #334a85;
             color: #fff !important;
         }
+
         .main-navbar .nav-contact:hover {
             background: #17243b;
             border-color: #17243b;
             color: #fff !important;
         }
-        .main-navbar .nav-link.active { color: #4d73be; }
+
+        .main-navbar .nav-link.active {
+            color: #4d73be;
+        }
+
         .main-navbar .nav-link.active:not(.nav-contact)::after {
             width: calc(100% - 24px);
         }
@@ -365,482 +558,1554 @@
    PRODUCTS DROPDOWN
 ========================================================= */
 
-.product-dropdown{
-    position:relative;
-}
+        .product-dropdown {
+            position: relative;
+        }
 
-.product-menu{
-    min-width:240px;
+        .product-menu {
+            min-width: 240px;
 
-    padding:10px 0;
+            padding: 10px 0;
 
-    margin-top:0!important;
+            margin-top: 0 !important;
 
-    border:0;
+            border: 0;
 
-    border-radius:10px;
+            border-radius: 10px;
 
-    background:#000;
+            background: #000;
 
-    box-shadow:
-        0 20px 55px rgba(0,0,0,.25);
+            box-shadow:
+                0 20px 55px rgba(0, 0, 0, .25);
 
-    overflow:hidden;
-}
+            overflow: hidden;
+        }
 
-.product-menu > a{
-    display:block;
+        .product-menu>a {
+            display: block;
 
-    position:relative;
+            position: relative;
 
-    padding:11px 24px;
+            padding: 11px 24px;
 
-    color:#bdbdbd;
+            color: #bdbdbd;
 
-    font-size:13.5px;
+            font-size: 13.5px;
 
-    font-weight:600;
+            font-weight: 600;
 
-    text-decoration:none;
+            text-decoration: none;
 
-    transition:
-        color .25s ease,
-        padding-left .25s ease,
-        background .25s ease;
-}
+            transition:
+                color .25s ease,
+                padding-left .25s ease,
+                background .25s ease;
+        }
 
-.product-menu > a::before{
-    content:"";
+        .product-menu>a::before {
+            content: "";
 
-    position:absolute;
+            position: absolute;
 
-    left:12px;
+            left: 12px;
 
-    top:50%;
+            top: 50%;
 
-    width:5px;
+            width: 5px;
 
-    height:1px;
+            height: 1px;
 
-    background:#666;
+            background: #666;
 
-    transform:translateY(-50%);
+            transform: translateY(-50%);
 
-    transition:
-        width .25s ease,
-        background .25s ease;
-}
+            transition:
+                width .25s ease,
+                background .25s ease;
+        }
 
-.product-menu > a:hover{
-    color:#fff;
+        .product-menu>a:hover {
+            color: #fff;
 
-    background:#111;
+            background: #111;
 
-    padding-left:29px;
-}
+            padding-left: 29px;
+        }
 
-.product-menu > a:hover::before{
-    width:10px;
+        .product-menu>a:hover::before {
+            width: 10px;
 
-    background:#fff;
-}
+            background: #fff;
+        }
 
 
-/* =========================================================
+        /* =========================================================
    DESKTOP HOVER
 ========================================================= */
 
-@media (min-width:992px){
+        @media (min-width:992px) {
 
-    .product-dropdown:hover > .product-menu{
-        display:block;
-    }
+            .product-dropdown:hover>.product-menu {
+                display: block;
+            }
 
-    .product-menu{
-        display:block;
+            .product-menu {
+                display: block;
 
-        opacity:0;
+                opacity: 0;
 
-        visibility:hidden;
+                visibility: hidden;
 
-        pointer-events:none;
+                pointer-events: none;
 
-        transition:
-            opacity .2s ease,
-            visibility .2s ease;
-    }
+                transition:
+                    opacity .2s ease,
+                    visibility .2s ease;
+            }
 
-    .product-dropdown:hover > .product-menu,
-    .product-dropdown > .product-menu.show{
-        opacity:1;
+            .product-dropdown:hover>.product-menu,
+            .product-dropdown>.product-menu.show {
+                opacity: 1;
 
-        visibility:visible;
+                visibility: visible;
 
-        pointer-events:auto;
-    }
-}
+                pointer-events: auto;
+            }
+        }
 
 
-/* =========================================================
+        /* =========================================================
    MOBILE
 ========================================================= */
 
-@media (max-width:991px){
+        @media (max-width:991px) {
 
-    .product-menu{
-        position:static!important;
+            .product-menu {
+                position: static !important;
 
-        width:100%;
+                width: 100%;
 
-        margin:0!important;
+                margin: 0 !important;
 
-        border-radius:0;
+                border-radius: 0;
 
-        box-shadow:none;
+                box-shadow: none;
 
-        background:#000;
-    }
+                background: #000;
+            }
 
-    .product-menu > a{
-        padding:10px 22px;
+            .product-menu>a {
+                padding: 10px 22px;
 
-        color:#bdbdbd;
-    }
-}
+                color: #bdbdbd;
+            }
+        }
 
 
-        
-/* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
-.main-navbar #solutionsDropdown,
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown:active,
-.main-navbar #solutionsDropdown.show {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
 
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown.show {
-    color: #4d73be !important;
-}
-/* =========================================================
+        /* SOLUTIONS NAV LINK — TEXT COLOR ONLY, NO HOVER BOX */
+        .main-navbar #solutionsDropdown,
+        .main-navbar #solutionsDropdown:hover,
+        .main-navbar #solutionsDropdown:focus,
+        .main-navbar #solutionsDropdown:active,
+        .main-navbar #solutionsDropdown.show {
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+            outline: none !important;
+        }
+
+        .main-navbar #solutionsDropdown:hover,
+        .main-navbar #solutionsDropdown:focus,
+        .main-navbar #solutionsDropdown.show {
+            color: #4d73be !important;
+        }
+
+        /* =========================================================
    NAVBAR — MONOCHROME BLACK THEME
    Keep existing layout + mega-menu behavior unchanged
 ========================================================= */
 
-/* Main nav links */
-.main-navbar .nav-link,
-.main-navbar.scrolled .nav-link,
-.main-navbar.navbar-shrink .nav-link {
-    color: #1a1a1a !important;
-}
+        /* Main nav links */
+        .main-navbar .nav-link,
+        .main-navbar.scrolled .nav-link,
+        .main-navbar.navbar-shrink .nav-link {
+            color: #1a1a1a !important;
+        }
 
-/* Normal */
-.main-navbar .nav-link {
-    font-weight: 600;
-}
+        /* Normal */
+        .main-navbar .nav-link {
+            font-weight: 600;
+        }
 
-/* Hover / focus — black only */
-.main-navbar .nav-link:hover,
-.main-navbar .nav-link:focus {
-    color: #000000 !important;
-}
+        /* Hover / focus — black only */
+        .main-navbar .nav-link:hover,
+        .main-navbar .nav-link:focus {
+            color: #000000 !important;
+        }
 
-/* Active — black + stronger weight */
-.main-navbar .nav-link.active,
-.main-navbar .nav-link.show,
-.main-navbar #solutionsDropdown.show {
-    color: #000000 !important;
-    font-weight: 800 !important;
-}
+        /* Active — black + stronger weight */
+        .main-navbar .nav-link.active,
+        .main-navbar .nav-link.show,
+        .main-navbar #solutionsDropdown.show {
+            color: #000000 !important;
+            font-weight: 800 !important;
+        }
 
-/* No colored underline */
-.main-navbar .nav-link:not(.nav-contact):not(.dropdown-toggle)::after {
-    background: #000000 !important;
-}
+        /* No colored underline */
+        .main-navbar .nav-link:not(.nav-contact):not(.dropdown-toggle)::after {
+            background: #000000 !important;
+        }
 
-/* Solutions: text only, no box */
-.main-navbar #solutionsDropdown,
-.main-navbar #solutionsDropdown:hover,
-.main-navbar #solutionsDropdown:focus,
-.main-navbar #solutionsDropdown:active,
-.main-navbar #solutionsDropdown.show {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-    color: #000000 !important;
-}
+        /* Solutions: text only, no box */
+        .main-navbar #solutionsDropdown,
+        .main-navbar #solutionsDropdown:hover,
+        .main-navbar #solutionsDropdown:focus,
+        .main-navbar #solutionsDropdown:active,
+        .main-navbar #solutionsDropdown.show {
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+            outline: none !important;
+            color: #000000 !important;
+        }
 
-/* Contact: monochrome */
-.main-navbar .nav-contact,
-.main-navbar.scrolled .nav-contact {
-    background: #000000 !important;
-    border-color: #000000 !important;
-    color: #ffffff !important;
-}
+        /* Contact: monochrome */
+        .main-navbar .nav-contact,
+        .main-navbar.scrolled .nav-contact {
+            background: #000000 !important;
+            border-color: #000000 !important;
+            color: #ffffff !important;
+        }
 
-.main-navbar .nav-contact:hover,
-.main-navbar .nav-contact:focus,
-.main-navbar.scrolled .nav-contact:hover {
-    background: #222222 !important;
-    border-color: #222222 !important;
-    color: #ffffff !important;
-}
+        .main-navbar .nav-contact:hover,
+        .main-navbar .nav-contact:focus,
+        .main-navbar.scrolled .nav-contact:hover {
+            background: #222222 !important;
+            border-color: #222222 !important;
+            color: #ffffff !important;
+        }
 
-/* =========================================================
+        /* =========================================================
    MEGA MENU — BLACK
 ========================================================= */
 
-.main-navbar .mega-menu {
-    background: #000000 !important;
-    border: 1px solid #1f1f1f !important;
-    box-shadow: 0 24px 70px rgba(0,0,0,.28) !important;
-}
+        .main-navbar .mega-menu {
+            background: #000000 !important;
+            border: 1px solid #1f1f1f !important;
+            box-shadow: 0 24px 70px rgba(0, 0, 0, .28) !important;
+        }
 
-/* Columns */
-.main-navbar .mega-column {
-    background: #000000 !important;
-    border-right-color: #242424 !important;
-}
+        /* Columns */
+        .main-navbar .mega-column {
+            background: #000000 !important;
+            border-right-color: #242424 !important;
+        }
 
-.main-navbar .mega-column:last-child {
-    border-right-color: transparent !important;
-}
+        .main-navbar .mega-column:last-child {
+            border-right-color: transparent !important;
+        }
 
-/* Headings */
-.main-navbar .mega-heading {
-    color: #ffffff !important;
-    border-bottom-color: #2a2a2a !important;
-}
+        /* Headings */
+        .main-navbar .mega-heading {
+            color: #ffffff !important;
+            border-bottom-color: #2a2a2a !important;
+        }
 
-/* Icons — monochrome */
-.main-navbar .mega-heading i {
-    color: #ffffff !important;
-}
+        /* Icons — monochrome */
+        .main-navbar .mega-heading i {
+            color: #ffffff !important;
+        }
 
-/* Menu links */
-.main-navbar .mega-column > a {
-    color: #bdbdbd !important;
-}
+        /* Menu links */
+        .main-navbar .mega-column>a {
+            color: #bdbdbd !important;
+        }
 
-/* Small line before links */
-.main-navbar .mega-column > a::before {
-    background: #666666 !important;
-}
+        /* Small line before links */
+        .main-navbar .mega-column>a::before {
+            background: #666666 !important;
+        }
 
-/* Hover inside mega menu */
-.main-navbar .mega-column > a:hover,
-.main-navbar .mega-column > a:focus {
-    color: #ffffff !important;
-}
+        /* Hover inside mega menu */
+        .main-navbar .mega-column>a:hover,
+        .main-navbar .mega-column>a:focus {
+            color: #ffffff !important;
+        }
 
-.main-navbar .mega-column > a:hover::before {
-    background: #ffffff !important;
-}
+        .main-navbar .mega-column>a:hover::before {
+            background: #ffffff !important;
+        }
 
-/* Mobile */
-@media (max-width: 991px) {
-    .main-navbar .nav-link {
-        color: #1a1a1a !important;
-    }
+        /* Mobile */
+        @media (max-width: 991px) {
+            .main-navbar .nav-link {
+                color: #1a1a1a !important;
+            }
 
-    .main-navbar .mega-menu {
-        background: #000000 !important;
-        border-left-color: #000000 !important;
-    }
+            .main-navbar .mega-menu {
+                background: #000000 !important;
+                border-left-color: #000000 !important;
+            }
 
-    .main-navbar .mega-column {
-        background: #000000 !important;
-        border-bottom-color: #242424 !important;
-    }
-}
-.main-navbar .mega-heading {
-    gap: 0 !important;
-}
-</style>
+            .main-navbar .mega-column {
+                background: #000000 !important;
+                border-bottom-color: #242424 !important;
+            }
+        }
 
-<!-- JAVASCRIPT -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const nav = document.getElementById("mainNav");
-    const white = document.getElementById("logoWhite");
-    const dark = document.getElementById("logoDark");
+        .main-navbar .mega-heading {
+            gap: 0 !important;
+        }
+    </style>
 
-    if (nav) nav.classList.add("scrolled", "navbar-shrink");
-    if (white) white.style.display = "none";
-    if (dark) dark.style.display = "block";
-});
-</script>
+    <!-- JAVASCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const nav = document.getElementById("mainNav");
+            const white = document.getElementById("logoWhite");
+            const dark = document.getElementById("logoDark");
 
-<!-- END MODULE — NAVBAR -->
+            if (nav) nav.classList.add("scrolled", "navbar-shrink");
+            if (white) white.style.display = "none";
+            if (dark) dark.style.display = "block";
+        });
+    </script>
 
-<!-- =========================================================
+    <!-- END MODULE — NAVBAR -->
+
+    <!-- =========================================================
      MODULE — INDUSTRIAL LIGHTING
 ========================================================= -->
 
-<main class="il-page" id="page-top">
+    <main class="il-page" id="page-top">
 
-  <section class="il-hero">
-    <img class="il-hero-img" src="https://images.unsplash.com/photo-1776090188275-72957bae4ed7?auto=format&fit=crop&w=2600&q=88" alt="Industrial factory lighting with high bay luminaires">
-    <div class="il-hero-overlay"></div>
-    <div class="il-wrap il-hero-inner">
-      <div class="il-hero-copy il-reveal">
-        <div class="il-kicker">INDUSTRIAL LIGHTING <i></i> ALPHA NUMERIC INNOVATIONS</div>
-        <h1>Light engineered<br><span>for industry.</span></h1>
-        <p>High-performance lighting for factories, production floors, warehouses, process areas and industrial campuses — engineered for visibility, safety, efficiency and dependable operation.</p>
-        <div class="il-actions"><a href="#applications" class="il-btn white">Explore Applications <b>↘</b></a><a href="contact.html" class="il-link">Discuss Your Project <b>↗</b></a></div>
-      </div>
-      <div class="il-hero-meta il-reveal">
-        <div><small>DESIGNED FOR</small><strong>24/7 Operations</strong></div>
-        <div><small>FOCUS</small><strong>Safety + Efficiency</strong></div>
-        <div><small>INTEGRATION</small><strong>Controls + BMS</strong></div>
-      </div>
-    </div>
-    <div class="il-hero-foot"><span>FACTORY</span><i></i><span>WAREHOUSE</span><i></i><span>PROCESS</span><i></i><span>OUTDOOR</span></div>
-  </section>
+        <section class="il-hero">
+            <img class="il-hero-img"
+                src="https://images.unsplash.com/photo-1776090188275-72957bae4ed7?auto=format&fit=crop&w=2600&q=88"
+                alt="Industrial factory lighting with high bay luminaires">
+            <div class="il-hero-overlay"></div>
+            <div class="il-wrap il-hero-inner">
+                <div class="il-hero-copy il-reveal">
+                    <div class="il-kicker">INDUSTRIAL LIGHTING <i></i> ALPHA NUMERIC INNOVATIONS</div>
+                    <h1>Light engineered<br><span>for industry.</span></h1>
+                    <p>High-performance lighting for factories, production floors, warehouses, process areas and
+                        industrial campuses — engineered for visibility, safety, efficiency and dependable operation.
+                    </p>
+                    <div class="il-actions"><a href="#applications" class="il-btn white">Explore Applications
+                            <b>↘</b></a><a href="contact.html" class="il-link">Discuss Your Project <b>↗</b></a></div>
+                </div>
+                <div class="il-hero-meta il-reveal">
+                    <div><small>DESIGNED FOR</small><strong>24/7 Operations</strong></div>
+                    <div><small>FOCUS</small><strong>Safety + Efficiency</strong></div>
+                    <div><small>INTEGRATION</small><strong>Controls + BMS</strong></div>
+                </div>
+            </div>
+            <div class="il-hero-foot">
+                <span>FACTORY</span><i></i><span>WAREHOUSE</span><i></i><span>PROCESS</span><i></i><span>OUTDOOR</span>
+            </div>
+        </section>
 
-  <section class="il-intro">
-    <div class="il-wrap il-intro-grid">
-      <div class="il-num il-reveal">02 / APPROACH</div>
-      <div class="il-intro-title il-reveal"><small>INDUSTRIAL LIGHTING ENGINEERING</small><h2>Visibility where work happens.<br><span>Reliability where it matters.</span></h2></div>
-      <div class="il-intro-copy il-reveal"><p>Industrial environments demand more than brightness. Lighting must respond to mounting height, machinery, aisle geometry, dust, heat, vibration, maintenance access, operating hours and the visual tasks performed below.</p><p>Alpha Numeric Innovations develops complete industrial lighting solutions from lux planning and fixture selection to controls, installation, testing and commissioning.</p></div>
-    </div>
-  </section>
+        <section class="il-intro">
+            <div class="il-wrap il-intro-grid">
+                <div class="il-num il-reveal">02 / APPROACH</div>
+                <div class="il-intro-title il-reveal"><small>INDUSTRIAL LIGHTING ENGINEERING</small>
+                    <h2>Visibility where work happens.<br><span>Reliability where it matters.</span></h2>
+                </div>
+                <div class="il-intro-copy il-reveal">
+                    <p>Industrial environments demand more than brightness. Lighting must respond to mounting height,
+                        machinery, aisle geometry, dust, heat, vibration, maintenance access, operating hours and the
+                        visual tasks performed below.</p>
+                    <p>Alpha Numeric Innovations develops complete industrial lighting solutions from lux planning and
+                        fixture selection to controls, installation, testing and commissioning.</p>
+                </div>
+            </div>
+        </section>
 
-  <section class="il-feature">
-    <img src="https://images.unsplash.com/photo-1676637391167-11bc4ae5396b?auto=format&fit=crop&w=2600&q=88" alt="Modern manufacturing floor with industrial lighting">
-    <div class="il-feature-shade"></div>
-    <div class="il-wrap il-feature-copy il-reveal"><small>DESIGNED AROUND OPERATIONS</small><h2>Light that supports<br>production, precision<br><span>and safety.</span></h2></div>
-  </section>
+        <section class="il-feature">
+            <img src="https://images.unsplash.com/photo-1676637391167-11bc4ae5396b?auto=format&fit=crop&w=2600&q=88"
+                alt="Modern manufacturing floor with industrial lighting">
+            <div class="il-feature-shade"></div>
+            <div class="il-wrap il-feature-copy il-reveal"><small>DESIGNED AROUND OPERATIONS</small>
+                <h2>Light that supports<br>production, precision<br><span>and safety.</span></h2>
+            </div>
+        </section>
 
-  <section class="il-apps" id="applications">
-    <div class="il-wrap">
-      <div class="il-head il-reveal"><div class="il-num">03 / APPLICATIONS</div><div><small>WHERE WE LIGHT</small><h2>Industrial lighting across<br><span>the complete facility.</span></h2></div><p>From high-bay production halls to utility rooms and exterior yards, every zone is planned around its operating conditions and required visual performance.</p></div>
-      <div class="il-app-grid">
-        <article class="il-app big il-reveal"><img src="https://images.unsplash.com/photo-1776090188275-72957bae4ed7?auto=format&fit=crop&w=1900&q=88" alt="Factory production floor high bay lighting"><div class="il-shade"></div><div class="il-card-copy"><small>PRODUCTION / VISIBILITY / SAFETY</small><h3>Factory & Production Floors</h3><p>Uniform, low-glare illumination for machinery, work zones, assembly lines and continuous manufacturing operations.</p></div></article>
-        <article class="il-app il-reveal"><img src="https://images.unsplash.com/photo-1766021736631-d2f15082aa59?auto=format&fit=crop&w=1500&q=88" alt="Warehouse high bay lighting"><div class="il-shade"></div><div class="il-card-copy"><small>HIGH BAY / STORAGE / LOGISTICS</small><h3>Warehouses & Logistics</h3></div></article>
-        <article class="il-app il-reveal"><img src="https://images.unsplash.com/photo-1676637391167-11bc4ae5396b?auto=format&fit=crop&w=1500&q=88" alt="Industrial assembly area lighting"><div class="il-shade"></div><div class="il-card-copy"><small>ASSEMBLY / INSPECTION / DETAIL</small><h3>Assembly & Inspection</h3></div></article>
-        <article class="il-app il-reveal"><img src="https://images.unsplash.com/photo-1776090188275-72957bae4ed7?auto=format&fit=crop&w=1500&q=88" alt="Heavy industrial bay lighting"><div class="il-shade"></div><div class="il-card-copy"><small>HEAVY DUTY / MACHINERY / HEIGHT</small><h3>Heavy Engineering Bays</h3></div></article>
-        <article class="il-app il-reveal"><img src="https://images.unsplash.com/photo-1768128834406-f5b1b962af9d?auto=format&fit=crop&w=1500&q=88" alt="Process plant lighting"><div class="il-shade"></div><div class="il-card-copy"><small>PROCESS / PLANT / CONTINUITY</small><h3>Process & Utility Areas</h3></div></article>
-        <article class="il-app wide il-reveal"><img src="https://images.unsplash.com/photo-1670689334799-cdc6777db8cc?auto=format&fit=crop&w=1900&q=88" alt="Industrial plant outdoor lighting at night"><div class="il-shade"></div><div class="il-card-copy"><small>YARDS / ROADWAYS / PERIMETER</small><h3>Outdoor Industrial Areas</h3><p>Robust illumination for roads, loading zones, yards, tank farms, perimeter areas and outdoor processing facilities.</p></div></article>
-        <article class="il-app il-reveal"><img src="https://images.unsplash.com/photo-1766021736631-d2f15082aa59?auto=format&fit=crop&w=1500&q=88" alt="Distribution center lighting"><div class="il-shade"></div><div class="il-card-copy"><small>RACKING / AISLES / PICKING</small><h3>Storage & Distribution</h3></div></article>
-        <article class="il-app il-reveal"><img src="https://images.unsplash.com/photo-1676637391167-11bc4ae5396b?auto=format&fit=crop&w=1500&q=88" alt="Industrial workshop lighting"><div class="il-shade"></div><div class="il-card-copy"><small>WORKSHOP / MAINTENANCE / TASK</small><h3>Maintenance Workshops</h3></div></article>
-        <article class="il-app il-reveal"><img src="https://images.unsplash.com/photo-1768128834406-f5b1b962af9d?auto=format&fit=crop&w=1500&q=88" alt="Industrial hazardous process area lighting"><div class="il-shade"></div><div class="il-card-copy"><small>HAZARDOUS / SPECIALIZED / ROBUST</small><h3>Hazardous & Process Zones</h3></div></article>
-        <article class="il-app il-reveal"><img src="https://images.unsplash.com/photo-1647699352421-fb973ac01750?auto=format&fit=crop&w=1500&q=88" alt="Industrial campus lighting at night"><div class="il-shade"></div><div class="il-card-copy"><small>CAMPUS / SECURITY / NIGHT</small><h3>Industrial Campus & Perimeter</h3></div></article>
-      </div>
-    </div>
-  </section>
+        <section class="il-apps" id="applications">
+            <div class="il-wrap">
+                <div class="il-head il-reveal">
+                    <div class="il-num">03 / APPLICATIONS</div>
+                    <div><small>WHERE WE LIGHT</small>
+                        <h2>Industrial lighting across<br><span>the complete facility.</span></h2>
+                    </div>
+                    <p>From high-bay production halls to utility rooms and exterior yards, every zone is planned around
+                        its operating conditions and required visual performance.</p>
+                </div>
+                <div class="il-app-grid">
+                    <article class="il-app big il-reveal"><img
+                            src="https://images.unsplash.com/photo-1776090188275-72957bae4ed7?auto=format&fit=crop&w=1900&q=88"
+                            alt="Factory production floor high bay lighting">
+                        <div class="il-shade"></div>
+                        <div class="il-card-copy"><small>PRODUCTION / VISIBILITY / SAFETY</small>
+                            <h3>Factory & Production Floors</h3>
+                            <p>Uniform, low-glare illumination for machinery, work zones, assembly lines and continuous
+                                manufacturing operations.</p>
+                        </div>
+                    </article>
+                    <article class="il-app il-reveal"><img
+                            src="https://images.unsplash.com/photo-1766021736631-d2f15082aa59?auto=format&fit=crop&w=1500&q=88"
+                            alt="Warehouse high bay lighting">
+                        <div class="il-shade"></div>
+                        <div class="il-card-copy"><small>HIGH BAY / STORAGE / LOGISTICS</small>
+                            <h3>Warehouses & Logistics</h3>
+                        </div>
+                    </article>
+                    <article class="il-app il-reveal"><img
+                            src="https://images.unsplash.com/photo-1676637391167-11bc4ae5396b?auto=format&fit=crop&w=1500&q=88"
+                            alt="Industrial assembly area lighting">
+                        <div class="il-shade"></div>
+                        <div class="il-card-copy"><small>ASSEMBLY / INSPECTION / DETAIL</small>
+                            <h3>Assembly & Inspection</h3>
+                        </div>
+                    </article>
+                    <article class="il-app il-reveal"><img
+                            src="https://images.unsplash.com/photo-1776090188275-72957bae4ed7?auto=format&fit=crop&w=1500&q=88"
+                            alt="Heavy industrial bay lighting">
+                        <div class="il-shade"></div>
+                        <div class="il-card-copy"><small>HEAVY DUTY / MACHINERY / HEIGHT</small>
+                            <h3>Heavy Engineering Bays</h3>
+                        </div>
+                    </article>
+                    <article class="il-app il-reveal"><img
+                            src="https://images.unsplash.com/photo-1768128834406-f5b1b962af9d?auto=format&fit=crop&w=1500&q=88"
+                            alt="Process plant lighting">
+                        <div class="il-shade"></div>
+                        <div class="il-card-copy"><small>PROCESS / PLANT / CONTINUITY</small>
+                            <h3>Process & Utility Areas</h3>
+                        </div>
+                    </article>
+                    <article class="il-app wide il-reveal"><img
+                            src="https://images.unsplash.com/photo-1670689334799-cdc6777db8cc?auto=format&fit=crop&w=1900&q=88"
+                            alt="Industrial plant outdoor lighting at night">
+                        <div class="il-shade"></div>
+                        <div class="il-card-copy"><small>YARDS / ROADWAYS / PERIMETER</small>
+                            <h3>Outdoor Industrial Areas</h3>
+                            <p>Robust illumination for roads, loading zones, yards, tank farms, perimeter areas and
+                                outdoor processing facilities.</p>
+                        </div>
+                    </article>
+                    <article class="il-app il-reveal"><img
+                            src="https://images.unsplash.com/photo-1766021736631-d2f15082aa59?auto=format&fit=crop&w=1500&q=88"
+                            alt="Distribution center lighting">
+                        <div class="il-shade"></div>
+                        <div class="il-card-copy"><small>RACKING / AISLES / PICKING</small>
+                            <h3>Storage & Distribution</h3>
+                        </div>
+                    </article>
+                    <article class="il-app il-reveal"><img
+                            src="https://images.unsplash.com/photo-1676637391167-11bc4ae5396b?auto=format&fit=crop&w=1500&q=88"
+                            alt="Industrial workshop lighting">
+                        <div class="il-shade"></div>
+                        <div class="il-card-copy"><small>WORKSHOP / MAINTENANCE / TASK</small>
+                            <h3>Maintenance Workshops</h3>
+                        </div>
+                    </article>
+                    <article class="il-app il-reveal"><img
+                            src="https://images.unsplash.com/photo-1768128834406-f5b1b962af9d?auto=format&fit=crop&w=1500&q=88"
+                            alt="Industrial hazardous process area lighting">
+                        <div class="il-shade"></div>
+                        <div class="il-card-copy"><small>HAZARDOUS / SPECIALIZED / ROBUST</small>
+                            <h3>Hazardous & Process Zones</h3>
+                        </div>
+                    </article>
+                    <article class="il-app il-reveal"><img
+                            src="https://images.unsplash.com/photo-1647699352421-fb973ac01750?auto=format&fit=crop&w=1500&q=88"
+                            alt="Industrial campus lighting at night">
+                        <div class="il-shade"></div>
+                        <div class="il-card-copy"><small>CAMPUS / SECURITY / NIGHT</small>
+                            <h3>Industrial Campus & Perimeter</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-  <section class="il-systems">
-    <div class="il-wrap">
-      <div class="il-head il-reveal"><div class="il-num">04 / SYSTEMS</div><div><small>INDUSTRIAL LIGHTING RANGE</small><h2>Built for demanding<br><span>industrial environments.</span></h2></div><p>Our luminaire selection is based on mounting height, lux requirement, operating conditions, glare control, ingress protection, energy performance and maintenance strategy.</p></div>
-      <div class="il-system-list">
-        <div class="il-system il-reveal"><span>01</span><strong>LED High-Bay Lighting</strong><p>High-output optics for production floors, warehouses and tall industrial spaces.</p></div>
-        <div class="il-system il-reveal"><span>02</span><strong>Low-Bay Industrial Lighting</strong><p>Efficient uniform lighting for lower mounting heights, workshops and service areas.</p></div>
-        <div class="il-system il-reveal"><span>03</span><strong>Linear Industrial Luminaires</strong><p>Continuous, glare-controlled lighting for lines, aisles and technical work areas.</p></div>
-        <div class="il-system il-reveal"><span>04</span><strong>Task & Machine Lighting</strong><p>Focused illumination for inspection, assembly, machining and maintenance operations.</p></div>
-        <div class="il-system il-reveal"><span>05</span><strong>Dust / Moisture Resistant Fixtures</strong><p>Sealed luminaires for harsh, dusty, humid and wash-down environments.</p></div>
-        <div class="il-system il-reveal"><span>06</span><strong>Hazardous Area Lighting</strong><p>Application-specific lighting for classified and process-sensitive industrial zones.</p></div>
-        <div class="il-system il-reveal"><span>07</span><strong>Flood & Yard Lighting</strong><p>High-performance exterior illumination for yards, loading zones and industrial roads.</p></div>
-        <div class="il-system il-reveal"><span>08</span><strong>Emergency & Exit Lighting</strong><p>Reliable egress illumination integrated into industrial safety planning.</p></div>
-        <div class="il-system il-reveal"><span>09</span><strong>Smart Industrial Controls</strong><p>Sensors, scheduling, daylight response, zoning and centralized lighting management.</p></div>
-      </div>
-    </div>
-  </section>
+        <section class="il-systems">
+            <div class="il-wrap">
+                <div class="il-head il-reveal">
+                    <div class="il-num">04 / SYSTEMS</div>
+                    <div><small>INDUSTRIAL LIGHTING RANGE</small>
+                        <h2>Built for demanding<br><span>industrial environments.</span></h2>
+                    </div>
+                    <p>Our luminaire selection is based on mounting height, lux requirement, operating conditions, glare
+                        control, ingress protection, energy performance and maintenance strategy.</p>
+                </div>
+                <div class="il-system-list">
+                    <div class="il-system il-reveal"><span>01</span><strong>LED High-Bay Lighting</strong>
+                        <p>High-output optics for production floors, warehouses and tall industrial spaces.</p>
+                    </div>
+                    <div class="il-system il-reveal"><span>02</span><strong>Low-Bay Industrial Lighting</strong>
+                        <p>Efficient uniform lighting for lower mounting heights, workshops and service areas.</p>
+                    </div>
+                    <div class="il-system il-reveal"><span>03</span><strong>Linear Industrial Luminaires</strong>
+                        <p>Continuous, glare-controlled lighting for lines, aisles and technical work areas.</p>
+                    </div>
+                    <div class="il-system il-reveal"><span>04</span><strong>Task & Machine Lighting</strong>
+                        <p>Focused illumination for inspection, assembly, machining and maintenance operations.</p>
+                    </div>
+                    <div class="il-system il-reveal"><span>05</span><strong>Dust / Moisture Resistant Fixtures</strong>
+                        <p>Sealed luminaires for harsh, dusty, humid and wash-down environments.</p>
+                    </div>
+                    <div class="il-system il-reveal"><span>06</span><strong>Hazardous Area Lighting</strong>
+                        <p>Application-specific lighting for classified and process-sensitive industrial zones.</p>
+                    </div>
+                    <div class="il-system il-reveal"><span>07</span><strong>Flood & Yard Lighting</strong>
+                        <p>High-performance exterior illumination for yards, loading zones and industrial roads.</p>
+                    </div>
+                    <div class="il-system il-reveal"><span>08</span><strong>Emergency & Exit Lighting</strong>
+                        <p>Reliable egress illumination integrated into industrial safety planning.</p>
+                    </div>
+                    <div class="il-system il-reveal"><span>09</span><strong>Smart Industrial Controls</strong>
+                        <p>Sensors, scheduling, daylight response, zoning and centralized lighting management.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section class="il-engineering">
-    <div class="il-engineer-image il-reveal"><img src="https://images.unsplash.com/photo-1766021736631-d2f15082aa59?auto=format&fit=crop&w=2000&q=88" alt="Industrial warehouse lighting engineering"></div>
-    <div class="il-engineer-copy">
-      <div class="il-num pale il-reveal">05 / ENGINEERING</div>
-      <small class="il-reveal">PERFORMANCE BY DESIGN</small>
-      <h2 class="il-reveal">Every lux level.<br>Every mounting height.<br><span>Engineered.</span></h2>
-      <p class="il-reveal">Industrial lighting is planned around actual working conditions — not fixture count alone. We coordinate illuminance, uniformity, glare, beam spread, mounting geometry, maintenance access and energy targets.</p>
-      <div class="il-spec-grid">
-        <div class="il-spec il-reveal"><span>01</span><strong>Lux Level Planning</strong></div>
-        <div class="il-spec il-reveal"><span>02</span><strong>Uniformity Analysis</strong></div>
-        <div class="il-spec il-reveal"><span>03</span><strong>Glare Control</strong></div>
-        <div class="il-spec il-reveal"><span>04</span><strong>Beam & Height Selection</strong></div>
-        <div class="il-spec il-reveal"><span>05</span><strong>IP / IK Selection</strong></div>
-        <div class="il-spec il-reveal"><span>06</span><strong>Emergency Planning</strong></div>
-      </div>
-    </div>
-  </section>
+        <section class="il-engineering">
+            <div class="il-engineer-image il-reveal"><img
+                    src="https://images.unsplash.com/photo-1766021736631-d2f15082aa59?auto=format&fit=crop&w=2000&q=88"
+                    alt="Industrial warehouse lighting engineering"></div>
+            <div class="il-engineer-copy">
+                <div class="il-num pale il-reveal">05 / ENGINEERING</div>
+                <small class="il-reveal">PERFORMANCE BY DESIGN</small>
+                <h2 class="il-reveal">Every lux level.<br>Every mounting height.<br><span>Engineered.</span></h2>
+                <p class="il-reveal">Industrial lighting is planned around actual working conditions — not fixture count
+                    alone. We coordinate illuminance, uniformity, glare, beam spread, mounting geometry, maintenance
+                    access and energy targets.</p>
+                <div class="il-spec-grid">
+                    <div class="il-spec il-reveal"><span>01</span><strong>Lux Level Planning</strong></div>
+                    <div class="il-spec il-reveal"><span>02</span><strong>Uniformity Analysis</strong></div>
+                    <div class="il-spec il-reveal"><span>03</span><strong>Glare Control</strong></div>
+                    <div class="il-spec il-reveal"><span>04</span><strong>Beam & Height Selection</strong></div>
+                    <div class="il-spec il-reveal"><span>05</span><strong>IP / IK Selection</strong></div>
+                    <div class="il-spec il-reveal"><span>06</span><strong>Emergency Planning</strong></div>
+                </div>
+            </div>
+        </section>
 
-  <section class="il-smart">
-    <img src="https://images.unsplash.com/photo-1776090188275-72957bae4ed7?auto=format&fit=crop&w=2600&q=88" alt="Smart industrial lighting controls in factory">
-    <div class="il-smart-shade"></div>
-    <div class="il-wrap il-smart-inner">
-      <div class="il-smart-copy il-reveal"><small>CONNECTED INDUSTRIAL LIGHTING</small><h2>Light only where needed.<br><span>Only when needed.</span></h2><p>Reduce operating hours and energy waste through occupancy sensing, daylight harvesting, time scheduling, zoning and integration with BMS or IoT platforms.</p></div>
-      <div class="il-control-grid">
-        <div class="il-control il-reveal"><span>01</span><strong>Occupancy Sensing</strong></div>
-        <div class="il-control il-reveal"><span>02</span><strong>Daylight Harvesting</strong></div>
-        <div class="il-control il-reveal"><span>03</span><strong>Zone Scheduling</strong></div>
-        <div class="il-control il-reveal"><span>04</span><strong>DALI Control</strong></div>
-        <div class="il-control il-reveal"><span>05</span><strong>BMS Integration</strong></div>
-        <div class="il-control il-reveal"><span>06</span><strong>IoT Monitoring</strong></div>
-      </div>
-    </div>
-  </section>
+        <section class="il-smart">
+            <img src="https://images.unsplash.com/photo-1776090188275-72957bae4ed7?auto=format&fit=crop&w=2600&q=88"
+                alt="Smart industrial lighting controls in factory">
+            <div class="il-smart-shade"></div>
+            <div class="il-wrap il-smart-inner">
+                <div class="il-smart-copy il-reveal"><small>CONNECTED INDUSTRIAL LIGHTING</small>
+                    <h2>Light only where needed.<br><span>Only when needed.</span></h2>
+                    <p>Reduce operating hours and energy waste through occupancy sensing, daylight harvesting, time
+                        scheduling, zoning and integration with BMS or IoT platforms.</p>
+                </div>
+                <div class="il-control-grid">
+                    <div class="il-control il-reveal"><span>01</span><strong>Occupancy Sensing</strong></div>
+                    <div class="il-control il-reveal"><span>02</span><strong>Daylight Harvesting</strong></div>
+                    <div class="il-control il-reveal"><span>03</span><strong>Zone Scheduling</strong></div>
+                    <div class="il-control il-reveal"><span>04</span><strong>DALI Control</strong></div>
+                    <div class="il-control il-reveal"><span>05</span><strong>BMS Integration</strong></div>
+                    <div class="il-control il-reveal"><span>06</span><strong>IoT Monitoring</strong></div>
+                </div>
+            </div>
+        </section>
 
-  <section class="il-night">
-    <div class="il-wrap il-night-grid">
-      <div class="il-night-copy il-reveal"><div class="il-num">07 / EXTERIOR</div><small>INDUSTRIAL AFTER DARK</small><h2>Safe movement.<br>Clear visibility.<br><span>Strong perimeter control.</span></h2><p>Outdoor lighting for process plants, loading areas, roads, parking, open yards and site boundaries is planned for visibility, security and operational continuity after dark.</p></div>
-      <div class="il-night-image il-reveal"><img src="https://images.unsplash.com/photo-1670689334799-cdc6777db8cc?auto=format&fit=crop&w=2000&q=88" alt="Industrial plant exterior lighting"></div>
-    </div>
-  </section>
+        <section class="il-night">
+            <div class="il-wrap il-night-grid">
+                <div class="il-night-copy il-reveal">
+                    <div class="il-num">07 / EXTERIOR</div><small>INDUSTRIAL AFTER DARK</small>
+                    <h2>Safe movement.<br>Clear visibility.<br><span>Strong perimeter control.</span></h2>
+                    <p>Outdoor lighting for process plants, loading areas, roads, parking, open yards and site
+                        boundaries is planned for visibility, security and operational continuity after dark.</p>
+                </div>
+                <div class="il-night-image il-reveal"><img
+                        src="https://images.unsplash.com/photo-1670689334799-cdc6777db8cc?auto=format&fit=crop&w=2000&q=88"
+                        alt="Industrial plant exterior lighting"></div>
+            </div>
+        </section>
 
-  <section class="il-process">
-    <div class="il-wrap">
-      <div class="il-head il-reveal"><div class="il-num">08 / DELIVERY</div><div><small>END-TO-END EXECUTION</small><h2>From lighting study<br><span>to energized facility.</span></h2></div><p>We manage the industrial lighting journey as an engineering package — survey, design, selection, supply, installation, aiming, testing and commissioning.</p></div>
-      <div class="il-process-grid">
-        <div class="il-step il-reveal"><span>01</span><small>SURVEY</small><h3>Site & Task Study</h3><p>Mounting heights, work zones, existing infrastructure and operating conditions.</p></div>
-        <div class="il-step il-reveal"><span>02</span><small>DESIGN</small><h3>Lighting Calculation</h3><p>Lux levels, uniformity, optics, fixture layout and emergency requirements.</p></div>
-        <div class="il-step il-reveal"><span>03</span><small>SELECT</small><h3>Luminaire Engineering</h3><p>Output, efficacy, ingress protection, controls and environmental suitability.</p></div>
-        <div class="il-step il-reveal"><span>04</span><small>EXECUTE</small><h3>Installation</h3><p>Safe mounting, cabling, control integration and site coordination.</p></div>
-        <div class="il-step il-reveal"><span>05</span><small>COMMISSION</small><h3>Testing & Handover</h3><p>Functional testing, aiming, scene checks and performance verification.</p></div>
-      </div>
-    </div>
-  </section>
+        <section class="il-process">
+            <div class="il-wrap">
+                <div class="il-head il-reveal">
+                    <div class="il-num">08 / DELIVERY</div>
+                    <div><small>END-TO-END EXECUTION</small>
+                        <h2>From lighting study<br><span>to energized facility.</span></h2>
+                    </div>
+                    <p>We manage the industrial lighting journey as an engineering package — survey, design, selection,
+                        supply, installation, aiming, testing and commissioning.</p>
+                </div>
+                <div class="il-process-grid">
+                    <div class="il-step il-reveal"><span>01</span><small>SURVEY</small>
+                        <h3>Site & Task Study</h3>
+                        <p>Mounting heights, work zones, existing infrastructure and operating conditions.</p>
+                    </div>
+                    <div class="il-step il-reveal"><span>02</span><small>DESIGN</small>
+                        <h3>Lighting Calculation</h3>
+                        <p>Lux levels, uniformity, optics, fixture layout and emergency requirements.</p>
+                    </div>
+                    <div class="il-step il-reveal"><span>03</span><small>SELECT</small>
+                        <h3>Luminaire Engineering</h3>
+                        <p>Output, efficacy, ingress protection, controls and environmental suitability.</p>
+                    </div>
+                    <div class="il-step il-reveal"><span>04</span><small>EXECUTE</small>
+                        <h3>Installation</h3>
+                        <p>Safe mounting, cabling, control integration and site coordination.</p>
+                    </div>
+                    <div class="il-step il-reveal"><span>05</span><small>COMMISSION</small>
+                        <h3>Testing & Handover</h3>
+                        <p>Functional testing, aiming, scene checks and performance verification.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section class="il-final">
-    <img src="https://images.unsplash.com/photo-1768128834406-f5b1b962af9d?auto=format&fit=crop&w=2600&q=88" alt="Industrial facility lighting project">
-    <div class="il-final-shade"></div>
-    <div class="il-wrap il-final-inner il-reveal"><div><small>START AN INDUSTRIAL LIGHTING PROJECT</small><h2>Lighting built for<br><span>real industrial work.</span></h2></div><div><p>Talk to Alpha Numeric Innovations about high-bay, warehouse, process, outdoor and intelligent industrial lighting solutions.</p><a href="contact.html" class="il-btn white">Discuss Your Facility <b>↗</b></a></div></div>
-  </section>
+        <section class="il-final">
+            <img src="https://images.unsplash.com/photo-1768128834406-f5b1b962af9d?auto=format&fit=crop&w=2600&q=88"
+                alt="Industrial facility lighting project">
+            <div class="il-final-shade"></div>
+            <div class="il-wrap il-final-inner il-reveal">
+                <div><small>START AN INDUSTRIAL LIGHTING PROJECT</small>
+                    <h2>Lighting built for<br><span>real industrial work.</span></h2>
+                </div>
+                <div>
+                    <p>Talk to Alpha Numeric Innovations about high-bay, warehouse, process, outdoor and intelligent
+                        industrial lighting solutions.</p><a href="contact.html" class="il-btn white">Discuss Your
+                        Facility <b>↗</b></a>
+                </div>
+            </div>
+        </section>
 
-</main>
+    </main>
 
-<style>
-.il-page{--ink:#0b0b0b;--paper:#fff;--soft:#f3f2ee;--muted:#838383;--line:#d8d8d3;font-family:"Inter",sans-serif;color:var(--ink);background:#fff;overflow:hidden}.il-page *{box-sizing:border-box}.il-page img{display:block;width:100%;height:100%;object-fit:cover}.il-wrap{width:min(1480px,calc(100% - 100px));margin:auto}.il-kicker,.il-page small{font-size:9px;font-weight:700;letter-spacing:.18em}.il-kicker{display:flex;align-items:center;gap:14px;color:rgba(255,255,255,.68)}.il-kicker i{width:38px;height:1px;background:rgba(255,255,255,.45)}.il-num{font-size:9px;font-weight:700;letter-spacing:.14em;color:#777}.il-num.pale{color:rgba(255,255,255,.45)}.il-page h2{font-size:clamp(48px,5.4vw,84px);line-height:.96;font-weight:400;letter-spacing:-.06em;margin:18px 0 0}.il-page h2 span{color:#999}.il-page p{font-size:13px;line-height:1.85;color:#777}.il-btn{display:inline-flex;align-items:center;justify-content:space-between;gap:32px;padding:18px 22px;min-width:235px;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:.3s}.il-btn.white{background:#fff;color:#111}.il-btn.white:hover{background:#dedede;color:#111;transform:translateY(-2px)}.il-btn b{font-size:16px;font-weight:400}.il-link{color:rgba(255,255,255,.72);font-size:10px;letter-spacing:.06em;text-decoration:none}.il-link:hover{color:#fff}.il-link b{margin-left:12px;font-size:16px}.il-reveal{opacity:0;transform:translateY(30px);transition:opacity .85s ease,transform .95s cubic-bezier(.2,.7,.2,1)}.il-reveal.il-visible{opacity:1;transform:none}
-.il-hero{position:relative;min-height:850px;height:100vh;color:#fff;background:#080808;overflow:hidden}.il-hero-img{position:absolute;inset:0;filter:saturate(.78) contrast(1.05);transform:scale(1.03);animation:ilHero 14s ease-out forwards}.il-hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.58) 43%,rgba(0,0,0,.16) 76%),linear-gradient(0deg,rgba(0,0,0,.45),transparent 48%)}.il-hero-inner{position:relative;z-index:2;height:100%;display:grid;grid-template-columns:1fr 320px;gap:80px;align-items:center;padding:150px 0 100px}.il-hero-copy{max-width:930px}.il-hero h1{font-size:clamp(70px,8vw,126px);line-height:.84;font-weight:300;letter-spacing:-.07em;margin:30px 0}.il-hero h1 span{color:rgba(255,255,255,.5)}.il-hero-copy>p{max-width:630px;color:rgba(255,255,255,.65);font-size:14px}.il-actions{display:flex;align-items:center;gap:30px;flex-wrap:wrap;margin-top:38px}.il-hero-meta{border-top:1px solid rgba(255,255,255,.18)}.il-hero-meta>div{padding:23px 0;border-bottom:1px solid rgba(255,255,255,.14)}.il-hero-meta small{display:block;color:rgba(255,255,255,.34);font-size:7px}.il-hero-meta strong{display:block;margin-top:7px;font-size:14px;font-weight:400}.il-hero-foot{position:absolute;z-index:3;left:50%;bottom:28px;transform:translateX(-50%);width:min(1480px,calc(100% - 100px));display:flex;gap:18px;align-items:center;color:rgba(255,255,255,.42);font-size:7px;letter-spacing:.16em}.il-hero-foot i{width:32px;height:1px;background:rgba(255,255,255,.24)}
-.il-intro{padding:145px 0}.il-intro-grid{display:grid;grid-template-columns:170px 1fr 420px;gap:60px;align-items:start}.il-intro-title small,.il-head small,.il-night-copy>small{color:#999}.il-intro-copy{padding-top:38px}.il-intro-copy p{margin:0 0 18px}
-.il-feature{position:relative;height:720px;color:#fff}.il-feature>img{position:absolute;inset:0}.il-feature-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.83),rgba(0,0,0,.2) 75%)}.il-feature-copy{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center}.il-feature-copy small{color:rgba(255,255,255,.45)}.il-feature-copy h2{max-width:900px}.il-feature-copy h2 span{color:rgba(255,255,255,.47)}
-.il-apps{padding:145px 0;background:#f4f3ef}.il-head{display:grid;grid-template-columns:170px 1fr 420px;gap:60px;align-items:end;margin-bottom:70px}.il-head>p{margin:0}.il-app-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:340px;gap:10px}.il-app{position:relative;overflow:hidden;background:#111;color:#fff}.il-app.big{grid-column:span 2;grid-row:span 2}.il-app.wide{grid-column:span 2}.il-app img{transition:transform .9s cubic-bezier(.2,.7,.2,1)}.il-app:hover img{transform:scale(1.045)}.il-shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.84),rgba(0,0,0,.03) 70%)}.il-card-copy{position:absolute;z-index:2;left:25px;right:25px;bottom:25px}.il-card-copy small{color:rgba(255,255,255,.5);font-size:7px}.il-card-copy h3{margin:8px 0 0;font-size:clamp(22px,2.6vw,42px);font-weight:400;letter-spacing:-.04em}.il-card-copy p{max-width:520px;margin:10px 0 0;color:rgba(255,255,255,.63);font-size:11px}
-.il-systems{padding:145px 0}.il-system-list{border-top:1px solid var(--line)}.il-system{display:grid;grid-template-columns:80px minmax(250px,.8fr) 1fr;gap:40px;align-items:center;padding:27px 0;border-bottom:1px solid var(--line);transition:padding .3s,background .3s}.il-system:hover{padding-left:18px;background:#f7f7f4}.il-system>span{font-size:8px;color:#aaa}.il-system strong{font-size:20px;font-weight:500}.il-system p{margin:0;max-width:500px;font-size:11px}
-.il-engineering{display:grid;grid-template-columns:1.08fr .92fr;min-height:850px;background:#101010;color:#fff}.il-engineer-image{min-height:850px}.il-engineer-copy{display:flex;flex-direction:column;justify-content:center;padding:90px clamp(45px,6vw,105px)}.il-engineer-copy>small{margin-top:25px;color:rgba(255,255,255,.43)}.il-engineer-copy h2 span{color:rgba(255,255,255,.36)}.il-engineer-copy>p{max-width:580px;color:rgba(255,255,255,.53);margin-top:28px}.il-spec-grid{display:grid;grid-template-columns:1fr 1fr;margin-top:38px;border-top:1px solid rgba(255,255,255,.14)}.il-spec{display:grid;grid-template-columns:42px 1fr;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.12)}.il-spec:nth-child(odd){border-right:1px solid rgba(255,255,255,.12)}.il-spec:nth-child(even){padding-left:20px}.il-spec span{font-size:7px;color:#666}.il-spec strong{font-size:11px;font-weight:500}
-.il-smart{position:relative;min-height:800px;color:#fff;display:flex;align-items:center}.il-smart>img{position:absolute;inset:0}.il-smart-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.48) 62%,rgba(0,0,0,.2))}.il-smart-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 500px;gap:90px;align-items:end;padding:120px 0}.il-smart-copy small{color:rgba(255,255,255,.43)}.il-smart-copy h2 span{color:rgba(255,255,255,.4)}.il-smart-copy p{max-width:570px;color:rgba(255,255,255,.57);margin-top:25px}.il-control-grid{border-top:1px solid rgba(255,255,255,.18)}.il-control{display:grid;grid-template-columns:55px 1fr;padding:19px 0;border-bottom:1px solid rgba(255,255,255,.13)}.il-control span{font-size:7px;color:#666}.il-control strong{font-size:11px;font-weight:500}
-.il-night{padding:145px 0;background:#fff}.il-night-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:90px;align-items:center}.il-night-copy h2{font-size:clamp(48px,5vw,78px)}.il-night-copy p{max-width:540px;margin-top:25px}.il-night-image{height:650px}
-.il-process{padding:145px 0;background:#f3f2ee}.il-process-grid{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid #cfcfc9;border-bottom:1px solid #cfcfc9}.il-step{min-height:330px;padding:28px 24px;border-right:1px solid #cfcfc9}.il-step:last-child{border-right:0}.il-step>span{display:block;margin-bottom:65px;font-size:8px;color:#999}.il-step small{color:#999;font-size:7px}.il-step h3{margin:12px 0 14px;font-size:23px;font-weight:400;letter-spacing:-.03em}.il-step p{margin:0;font-size:10px}
-.il-final{position:relative;min-height:650px;color:#fff;display:flex;align-items:center}.il-final>img{position:absolute;inset:0}.il-final-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.58) 62%,rgba(0,0,0,.22))}.il-final-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 400px;gap:90px;align-items:end;padding:100px 0}.il-final small{color:rgba(255,255,255,.45)}.il-final h2{font-size:clamp(55px,6vw,92px)}.il-final h2 span{color:rgba(255,255,255,.42)}.il-final-inner>div:last-child p{color:rgba(255,255,255,.58);margin:0 0 28px}
-@keyframes ilHero{from{transform:scale(1.08)}to{transform:scale(1.03)}}
-@media(max-width:1200px){.il-wrap,.il-hero-foot{width:calc(100% - 60px)}.il-head,.il-intro-grid{grid-template-columns:130px 1fr 330px;gap:35px}.il-app-grid{grid-auto-rows:300px}.il-system{grid-template-columns:60px 280px 1fr}.il-process-grid{grid-template-columns:repeat(5,1fr)}.il-step{padding:24px 16px}}
-@media(max-width:991px){.il-hero{height:auto;min-height:900px}.il-hero-inner{grid-template-columns:1fr;padding:155px 0 120px}.il-hero-meta{max-width:520px}.il-head,.il-intro-grid{grid-template-columns:1fr;gap:28px}.il-intro-copy{padding-top:0}.il-app-grid{grid-template-columns:repeat(2,1fr)}.il-app.big{grid-column:span 2;grid-row:span 1}.il-app.wide{grid-column:span 2}.il-engineering{grid-template-columns:1fr}.il-engineer-image{min-height:600px}.il-smart-inner{grid-template-columns:1fr;gap:60px}.il-control-grid{max-width:650px}.il-night-grid{grid-template-columns:1fr}.il-process-grid{grid-template-columns:repeat(2,1fr)}.il-step{border-bottom:1px solid #cfcfc9}.il-final-inner{grid-template-columns:1fr;gap:50px}}
-@media(max-width:767px){.il-wrap,.il-hero-foot{width:calc(100% - 36px)}.il-hero{min-height:790px}.il-hero-inner{padding:125px 0 105px}.il-hero h1{font-size:clamp(56px,16vw,78px);line-height:.88}.il-hero-meta{display:none}.il-hero-foot{gap:9px;flex-wrap:wrap}.il-intro,.il-apps,.il-systems,.il-night,.il-process{padding:90px 0}.il-feature{height:570px}.il-page h2{font-size:clamp(42px,12vw,58px)}.il-app-grid{display:block}.il-app{height:420px;margin-bottom:9px}.il-system{grid-template-columns:38px 1fr;gap:12px;padding:22px 0}.il-system p{grid-column:2}.il-engineer-image{min-height:480px}.il-engineer-copy{padding:75px 22px}.il-spec-grid{grid-template-columns:1fr}.il-spec:nth-child(odd){border-right:0}.il-spec:nth-child(even){padding-left:0}.il-smart-inner{padding:90px 0}.il-night-image{height:480px}.il-process-grid{grid-template-columns:1fr}.il-step{min-height:auto;border-right:0;padding:28px 5px}.il-step>span{margin-bottom:30px}.il-final{min-height:650px}.il-final-inner{padding:90px 0}}
-@media(prefers-reduced-motion:reduce){.il-page *,.il-page *::before,.il-page *::after{animation:none!important;transition:none!important}.il-reveal{opacity:1!important;transform:none!important}}
-</style>
+    <style>
+        .il-page {
+            --ink: #0b0b0b;
+            --paper: #fff;
+            --soft: #f3f2ee;
+            --muted: #838383;
+            --line: #d8d8d3;
+            font-family: "Inter", sans-serif;
+            color: var(--ink);
+            background: #fff;
+            overflow: hidden
+        }
 
-<script>
-document.addEventListener("DOMContentLoaded",function(){const items=document.querySelectorAll(".il-reveal");if("IntersectionObserver" in window){const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("il-visible");io.unobserve(e.target)}})},{threshold:.1});items.forEach(x=>io.observe(x))}else{items.forEach(x=>x.classList.add("il-visible"))}});
-</script>
+        .il-page * {
+            box-sizing: border-box
+        }
 
-<!-- END MODULE — INDUSTRIAL LIGHTING -->
-     
- <!-- =========================================================
+        .il-page img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+
+        .il-wrap {
+            width: min(1480px, calc(100% - 100px));
+            margin: auto
+        }
+
+        .il-kicker,
+        .il-page small {
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: .18em
+        }
+
+        .il-kicker {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            color: rgba(255, 255, 255, .68)
+        }
+
+        .il-kicker i {
+            width: 38px;
+            height: 1px;
+            background: rgba(255, 255, 255, .45)
+        }
+
+        .il-num {
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: .14em;
+            color: #777
+        }
+
+        .il-num.pale {
+            color: rgba(255, 255, 255, .45)
+        }
+
+        .il-page h2 {
+            font-size: clamp(48px, 5.4vw, 84px);
+            line-height: .96;
+            font-weight: 400;
+            letter-spacing: -.06em;
+            margin: 18px 0 0
+        }
+
+        .il-page h2 span {
+            color: #999
+        }
+
+        .il-page p {
+            font-size: 13px;
+            line-height: 1.85;
+            color: #777
+        }
+
+        .il-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
+            padding: 18px 22px;
+            min-width: 235px;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: .3s
+        }
+
+        .il-btn.white {
+            background: #fff;
+            color: #111
+        }
+
+        .il-btn.white:hover {
+            background: #dedede;
+            color: #111;
+            transform: translateY(-2px)
+        }
+
+        .il-btn b {
+            font-size: 16px;
+            font-weight: 400
+        }
+
+        .il-link {
+            color: rgba(255, 255, 255, .72);
+            font-size: 10px;
+            letter-spacing: .06em;
+            text-decoration: none
+        }
+
+        .il-link:hover {
+            color: #fff
+        }
+
+        .il-link b {
+            margin-left: 12px;
+            font-size: 16px
+        }
+
+        .il-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity .85s ease, transform .95s cubic-bezier(.2, .7, .2, 1)
+        }
+
+        .il-reveal.il-visible {
+            opacity: 1;
+            transform: none
+        }
+
+        .il-hero {
+            position: relative;
+            min-height: 850px;
+            height: 100vh;
+            color: #fff;
+            background: #080808;
+            overflow: hidden
+        }
+
+        .il-hero-img {
+            position: absolute;
+            inset: 0;
+            filter: saturate(.78) contrast(1.05);
+            transform: scale(1.03);
+            animation: ilHero 14s ease-out forwards
+        }
+
+        .il-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(0, 0, 0, .9), rgba(0, 0, 0, .58) 43%, rgba(0, 0, 0, .16) 76%), linear-gradient(0deg, rgba(0, 0, 0, .45), transparent 48%)
+        }
+
+        .il-hero-inner {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 80px;
+            align-items: center;
+            padding: 150px 0 100px
+        }
+
+        .il-hero-copy {
+            max-width: 930px
+        }
+
+        .il-hero h1 {
+            font-size: clamp(70px, 8vw, 126px);
+            line-height: .84;
+            font-weight: 300;
+            letter-spacing: -.07em;
+            margin: 30px 0
+        }
+
+        .il-hero h1 span {
+            color: rgba(255, 255, 255, .5)
+        }
+
+        .il-hero-copy>p {
+            max-width: 630px;
+            color: rgba(255, 255, 255, .65);
+            font-size: 14px
+        }
+
+        .il-actions {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 38px
+        }
+
+        .il-hero-meta {
+            border-top: 1px solid rgba(255, 255, 255, .18)
+        }
+
+        .il-hero-meta>div {
+            padding: 23px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, .14)
+        }
+
+        .il-hero-meta small {
+            display: block;
+            color: rgba(255, 255, 255, .34);
+            font-size: 7px
+        }
+
+        .il-hero-meta strong {
+            display: block;
+            margin-top: 7px;
+            font-size: 16px;
+            font-weight: 400
+        }
+
+        .il-hero-foot {
+            position: absolute;
+            z-index: 3;
+            left: 50%;
+            bottom: 28px;
+            transform: translateX(-50%);
+            width: min(1480px, calc(100% - 100px));
+            display: flex;
+            gap: 18px;
+            align-items: center;
+            color: rgba(255, 255, 255, .42);
+            font-size: 7px;
+            letter-spacing: .16em
+        }
+
+        .il-hero-foot i {
+            width: 32px;
+            height: 1px;
+            background: rgba(255, 255, 255, .24)
+        }
+
+        .il-intro {
+            padding: 145px 0
+        }
+
+        .il-intro-grid {
+            display: grid;
+            grid-template-columns: 170px 1fr 420px;
+            gap: 60px;
+            align-items: start
+        }
+
+        .il-intro-title small,
+        .il-head small,
+        .il-night-copy>small {
+            color: #999
+        }
+
+        .il-intro-copy {
+            padding-top: 38px
+        }
+
+        .il-intro-copy p {
+            margin: 0 0 18px
+        }
+
+        .il-feature {
+            position: relative;
+            height: 720px;
+            color: #fff
+        }
+
+        .il-feature>img {
+            position: absolute;
+            inset: 0
+        }
+
+        .il-feature-shade {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(0, 0, 0, .83), rgba(0, 0, 0, .2) 75%)
+        }
+
+        .il-feature-copy {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center
+        }
+
+        .il-feature-copy small {
+            color: rgba(255, 255, 255, .45)
+        }
+
+        .il-feature-copy h2 {
+            max-width: 900px
+        }
+
+        .il-feature-copy h2 span {
+            color: rgba(255, 255, 255, .47)
+        }
+
+        .il-apps {
+            padding: 145px 0;
+            background: #f4f3ef
+        }
+
+        .il-head {
+            display: grid;
+            grid-template-columns: 170px 1fr 420px;
+            gap: 60px;
+            align-items: end;
+            margin-bottom: 70px
+        }
+
+        .il-head>p {
+            margin: 0
+        }
+
+        .il-app-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 340px;
+            gap: 10px
+        }
+
+        .il-app {
+            position: relative;
+            overflow: hidden;
+            background: #111;
+            color: #fff
+        }
+
+        .il-app.big {
+            grid-column: span 2;
+            grid-row: span 2
+        }
+
+        .il-app.wide {
+            grid-column: span 2
+        }
+
+        .il-app img {
+            transition: transform .9s cubic-bezier(.2, .7, .2, 1)
+        }
+
+        .il-app:hover img {
+            transform: scale(1.045)
+        }
+
+        .il-shade {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, .84), rgba(0, 0, 0, .03) 70%)
+        }
+
+        .il-card-copy {
+            position: absolute;
+            z-index: 2;
+            left: 25px;
+            right: 25px;
+            bottom: 25px
+        }
+
+        .il-card-copy small {
+            color: rgba(255, 255, 255, .5);
+            font-size: 7px
+        }
+
+        .il-card-copy h3 {
+            margin: 8px 0 0;
+            font-size: clamp(22px, 2.6vw, 42px);
+            font-weight: 400;
+            letter-spacing: -.04em
+        }
+
+        .il-card-copy p {
+            max-width: 520px;
+            margin: 10px 0 0;
+            color: rgba(255, 255, 255, .63);
+            font-size: 11px
+        }
+
+        .il-systems {
+            padding: 145px 0
+        }
+
+        .il-system-list {
+            border-top: 1px solid var(--line)
+        }
+
+        .il-system {
+            display: grid;
+            grid-template-columns: 80px minmax(250px, .8fr) 1fr;
+            gap: 40px;
+            align-items: center;
+            padding: 27px 0;
+            border-bottom: 1px solid var(--line);
+            transition: padding .3s, background .3s
+        }
+
+        .il-system:hover {
+            padding-left: 18px;
+            background: #f7f7f4
+        }
+
+        .il-system>span {
+            font-size: 8px;
+            color: #aaa
+        }
+
+        .il-system strong {
+            font-size: 20px;
+            font-weight: 500
+        }
+
+        .il-system p {
+            margin: 0;
+            max-width: 500px;
+            font-size: 11px
+        }
+
+        .il-engineering {
+            display: grid;
+            grid-template-columns: 1.08fr .92fr;
+            min-height: 850px;
+            background: #101010;
+            color: #fff
+        }
+
+        .il-engineer-image {
+            min-height: 850px
+        }
+
+        .il-engineer-copy {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 90px clamp(45px, 6vw, 105px)
+        }
+
+        .il-engineer-copy>small {
+            margin-top: 25px;
+            color: rgba(255, 255, 255, .43)
+        }
+
+        .il-engineer-copy h2 span {
+            color: rgba(255, 255, 255, .36)
+        }
+
+        .il-engineer-copy>p {
+            max-width: 580px;
+            color: rgba(255, 255, 255, .53);
+            margin-top: 28px
+        }
+
+        .il-spec-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 38px;
+            border-top: 1px solid rgba(255, 255, 255, .14)
+        }
+
+        .il-spec {
+            display: grid;
+            grid-template-columns: 42px 1fr;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, .12)
+        }
+
+        .il-spec:nth-child(odd) {
+            border-right: 1px solid rgba(255, 255, 255, .12)
+        }
+
+        .il-spec:nth-child(even) {
+            padding-left: 20px
+        }
+
+        .il-spec span {
+            font-size: 7px;
+            color: #666
+        }
+
+        .il-spec strong {
+            font-size: 11px;
+            font-weight: 500
+        }
+
+        .il-smart {
+            position: relative;
+            min-height: 800px;
+            color: #fff;
+            display: flex;
+            align-items: center
+        }
+
+        .il-smart>img {
+            position: absolute;
+            inset: 0
+        }
+
+        .il-smart-shade {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(0, 0, 0, .88), rgba(0, 0, 0, .48) 62%, rgba(0, 0, 0, .2))
+        }
+
+        .il-smart-inner {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 500px;
+            gap: 90px;
+            align-items: end;
+            padding: 120px 0
+        }
+
+        .il-smart-copy small {
+            color: rgba(255, 255, 255, .43)
+        }
+
+        .il-smart-copy h2 span {
+            color: rgba(255, 255, 255, .4)
+        }
+
+        .il-smart-copy p {
+            max-width: 570px;
+            color: rgba(255, 255, 255, .57);
+            margin-top: 25px
+        }
+
+        .il-control-grid {
+            border-top: 1px solid rgba(255, 255, 255, .18)
+        }
+
+        .il-control {
+            display: grid;
+            grid-template-columns: 55px 1fr;
+            padding: 19px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, .13)
+        }
+
+        .il-control span {
+            font-size: 7px;
+            color: #666
+        }
+
+        .il-control strong {
+            font-size: 16px;
+            font-weight: 500
+        }
+
+        .il-night {
+            padding: 145px 0;
+            background: #fff
+        }
+
+        .il-night-grid {
+            display: grid;
+            grid-template-columns: .78fr 1.22fr;
+            gap: 90px;
+            align-items: center
+        }
+
+        .il-night-copy h2 {
+            font-size: clamp(48px, 5vw, 78px)
+        }
+
+        .il-night-copy p {
+            max-width: 540px;
+            margin-top: 25px
+        }
+
+        .il-night-image {
+            height: 650px
+        }
+
+        .il-process {
+            padding: 145px 0;
+            background: #f3f2ee
+        }
+
+        .il-process-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            border-top: 1px solid #cfcfc9;
+            border-bottom: 1px solid #cfcfc9
+        }
+
+        .il-step {
+            min-height: 330px;
+            padding: 28px 24px;
+            border-right: 1px solid #cfcfc9
+        }
+
+        .il-step:last-child {
+            border-right: 0
+        }
+
+        .il-step>span {
+            display: block;
+            margin-bottom: 65px;
+            font-size: 8px;
+            color: #999
+        }
+
+        .il-step small {
+            color: #999;
+            font-size: 7px
+        }
+
+        .il-step h3 {
+            margin: 12px 0 14px;
+            font-size: 23px;
+            font-weight: 400;
+            letter-spacing: -.03em
+        }
+
+        .il-step p {
+            margin: 0;
+            font-size: 10px
+        }
+
+        .il-final {
+            position: relative;
+            min-height: 650px;
+            color: #fff;
+            display: flex;
+            align-items: center
+        }
+
+        .il-final>img {
+            position: absolute;
+            inset: 0
+        }
+
+        .il-final-shade {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(0, 0, 0, .9), rgba(0, 0, 0, .58) 62%, rgba(0, 0, 0, .22))
+        }
+
+        .il-final-inner {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 90px;
+            align-items: end;
+            padding: 100px 0
+        }
+
+        .il-final small {
+            color: rgba(255, 255, 255, .45)
+        }
+
+        .il-final h2 {
+            font-size: clamp(55px, 6vw, 92px)
+        }
+
+        .il-final h2 span {
+            color: rgba(255, 255, 255, .42)
+        }
+
+        .il-final-inner>div:last-child p {
+            color: rgba(255, 255, 255, .58);
+            margin: 0 0 28px
+        }
+
+        @keyframes ilHero {
+            from {
+                transform: scale(1.08)
+            }
+
+            to {
+                transform: scale(1.03)
+            }
+        }
+
+        @media(max-width:1200px) {
+
+            .il-wrap,
+            .il-hero-foot {
+                width: calc(100% - 60px)
+            }
+
+            .il-head,
+            .il-intro-grid {
+                grid-template-columns: 130px 1fr 330px;
+                gap: 35px
+            }
+
+            .il-app-grid {
+                grid-auto-rows: 300px
+            }
+
+            .il-system {
+                grid-template-columns: 60px 280px 1fr
+            }
+
+            .il-process-grid {
+                grid-template-columns: repeat(5, 1fr)
+            }
+
+            .il-step {
+                padding: 24px 16px
+            }
+        }
+
+        @media(max-width:991px) {
+            .il-hero {
+                height: auto;
+                min-height: 900px
+            }
+
+            .il-hero-inner {
+                grid-template-columns: 1fr;
+                padding: 155px 0 120px
+            }
+
+            .il-hero-meta {
+                max-width: 520px
+            }
+
+            .il-head,
+            .il-intro-grid {
+                grid-template-columns: 1fr;
+                gap: 28px
+            }
+
+            .il-intro-copy {
+                padding-top: 0
+            }
+
+            .il-app-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .il-app.big {
+                grid-column: span 2;
+                grid-row: span 1
+            }
+
+            .il-app.wide {
+                grid-column: span 2
+            }
+
+            .il-engineering {
+                grid-template-columns: 1fr
+            }
+
+            .il-engineer-image {
+                min-height: 600px
+            }
+
+            .il-smart-inner {
+                grid-template-columns: 1fr;
+                gap: 60px
+            }
+
+            .il-control-grid {
+                max-width: 650px
+            }
+
+            .il-night-grid {
+                grid-template-columns: 1fr
+            }
+
+            .il-process-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .il-step {
+                border-bottom: 1px solid #cfcfc9
+            }
+
+            .il-final-inner {
+                grid-template-columns: 1fr;
+                gap: 50px
+            }
+        }
+
+        @media(max-width:767px) {
+
+            .il-wrap,
+            .il-hero-foot {
+                width: calc(100% - 36px)
+            }
+
+            .il-hero {
+                min-height: 790px
+            }
+
+            .il-hero-inner {
+                padding: 125px 0 105px
+            }
+
+            .il-hero h1 {
+                font-size: clamp(56px, 16vw, 78px);
+                line-height: .88
+            }
+
+            .il-hero-meta {
+                display: none
+            }
+
+            .il-hero-foot {
+                gap: 9px;
+                flex-wrap: wrap
+            }
+
+            .il-intro,
+            .il-apps,
+            .il-systems,
+            .il-night,
+            .il-process {
+                padding: 90px 0
+            }
+
+            .il-feature {
+                height: 570px
+            }
+
+            .il-page h2 {
+                font-size: clamp(42px, 12vw, 58px)
+            }
+
+            .il-app-grid {
+                display: block
+            }
+
+            .il-app {
+                height: 420px;
+                margin-bottom: 9px
+            }
+
+            .il-system {
+                grid-template-columns: 38px 1fr;
+                gap: 12px;
+                padding: 22px 0
+            }
+
+            .il-system p {
+                grid-column: 2
+            }
+
+            .il-engineer-image {
+                min-height: 480px
+            }
+
+            .il-engineer-copy {
+                padding: 75px 22px
+            }
+
+            .il-spec-grid {
+                grid-template-columns: 1fr
+            }
+
+            .il-spec:nth-child(odd) {
+                border-right: 0
+            }
+
+            .il-spec:nth-child(even) {
+                padding-left: 0
+            }
+
+            .il-smart-inner {
+                padding: 90px 0
+            }
+
+            .il-night-image {
+                height: 480px
+            }
+
+            .il-process-grid {
+                grid-template-columns: 1fr
+            }
+
+            .il-step {
+                min-height: auto;
+                border-right: 0;
+                padding: 28px 5px
+            }
+
+            .il-step>span {
+                margin-bottom: 30px
+            }
+
+            .il-final {
+                min-height: 650px
+            }
+
+            .il-final-inner {
+                padding: 90px 0
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+
+            .il-page *,
+            .il-page *::before,
+            .il-page *::after {
+                animation: none !important;
+                transition: none !important
+            }
+
+            .il-reveal {
+                opacity: 1 !important;
+                transform: none !important
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () { const items = document.querySelectorAll(".il-reveal"); if ("IntersectionObserver" in window) { const io = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("il-visible"); io.unobserve(e.target) } }) }, { threshold: .1 }); items.forEach(x => io.observe(x)) } else { items.forEach(x => x.classList.add("il-visible")) } });
+    </script>
+
+    <!-- END MODULE — INDUSTRIAL LIGHTING -->
+
+    <!-- =========================================================
      ALPHA NUMERIC — PREMIUM CORPORATE WHITE FOOTER
      Sharp architectural layout | No curves | No toy styling
      Complete HTML + CSS + automatic year
@@ -1109,7 +2374,7 @@ document.addEventListener("DOMContentLoaded",function(){const items=document.que
                             <li><a href="sensors.html"><span>Sensors</span><i>↗</i></a></li>
                             <li><a href="controllers.html"><span>Controllers</span><i>↗</i></a></li>
                             <li><a href="gateways.html"><span>Gateways</span><i>↗</i></a></li>
-                          
+
                             <li><a href="control-panels.html"><span>Control Panels</span><i>↗</i></a></li>
                             <li><a href="panel-boards.html"><span>Panel Boards</span><i>↗</i></a></li>
                             <li><a href="switchgears.html"><span>Switchgears</span><i>↗</i></a></li>
@@ -1163,7 +2428,7 @@ document.addEventListener("DOMContentLoaded",function(){const items=document.que
                     All rights reserved.
                 </p>
 
-              
+
 
                 <div class="corp-footer-bottom-links">
                     <!-- <a href="#">Privacy</a>
@@ -2272,12 +3537,12 @@ document.addEventListener("DOMContentLoaded",function(){const items=document.que
      ========================================================= -->
 
 
-<!-- =========================================================
+    <!-- =========================================================
      MODULE — GLOBAL RESPONSIVE OVERRIDES
 ========================================================= -->
 
-<!-- CSS -->
-<style>
+    <!-- CSS -->
+    <style>
         /* =====================================================
            RESPONSIVE
         ===================================================== */
@@ -2419,11 +3684,12 @@ document.addEventListener("DOMContentLoaded",function(){const items=document.que
                 gap: 10px;
             }
         }
-</style>
+    </style>
 
-<!-- END MODULE — GLOBAL RESPONSIVE OVERRIDES -->
+    <!-- END MODULE — GLOBAL RESPONSIVE OVERRIDES -->
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
